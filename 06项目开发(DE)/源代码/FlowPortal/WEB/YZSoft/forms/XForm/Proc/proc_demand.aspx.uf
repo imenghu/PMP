@@ -1,0 +1,308 @@
+﻿{
+  "generateAt": "2019-09-30T00:00:39.2900166+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "XTextBox26": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox26",
+          "runat": "server",
+          "fieldname": "公司",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand.CompanyName"
+        }
+      },
+      "XTextBox10": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox10",
+          "runat": "server",
+          "fieldname": "部门",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand.DeptName"
+        }
+      },
+      "XTextBox25": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox25",
+          "runat": "server",
+          "fieldname": "提交人",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand.CreateUserName"
+        }
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "fieldname": "备注",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand.demand_remarks",
+          "textmode": "MultiLine",
+          "rows": "5"
+        }
+      },
+      "XDataBrowserButton2": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton2",
+          "runat": "server",
+          "text": "选择物料",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "datamap": "mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec",
+          "multiselect": "True"
+        }
+      },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "fieldname": "物料名称",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "120px",
+          "xdatabind": "SFDATA:proc_demand_detail.mat_code"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "datamap": "mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec"
+        }
+      },
+      "XTextBox3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox3",
+          "runat": "server",
+          "fieldname": "物料编码",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.mat_name"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "fieldname": "规格",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.mat_spec"
+        }
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "fieldname": "采购单位",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.plan_pnum_unit"
+        }
+      },
+      "XTextBox6": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox6",
+          "runat": "server",
+          "fieldname": "采购数量",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.plan_pnum"
+        }
+      },
+      "XTextBox7": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox7",
+          "runat": "server",
+          "fieldname": "计划单价",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.plan_price"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "fieldname": "是否紧急",
+          "xdatabind": "SFDATA:proc_demand_detail.if_urg",
+          "width": "100%"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "selected": "True",
+              "innerhtml": "否"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "是"
+            }
+          }
+        ]
+      },
+      "XTextBox9": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox9",
+          "runat": "server",
+          "fieldname": "用途",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.uses"
+        }
+      },
+      "XTextBox11": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox11",
+          "runat": "server",
+          "fieldname": "备注",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.demand_detail_remarks"
+        }
+      },
+      "tbDetail": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "1000",
+          "id": "tbDetail",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": "1,1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox2",
+          "XDataBrowserButton1",
+          "XTextBox3",
+          "XTextBox4",
+          "XTextBox5",
+          "XTextBox6",
+          "XTextBox7",
+          "XDropDownList1",
+          "XTextBox9",
+          "XTextBox11"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 1,
+          "rows": 1
+        }
+      },
+      "XTextBox8": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox8",
+          "onclick": "WdatePicker({dateFmt:'yyyy'})",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand.CreateUser"
+        }
+      },
+      "XTextBox27": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox27",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "varState",
+          "innerhtml": "1"
+        }
+      },
+      "XTextBox28": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox28",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "130px",
+          "xdatabind": "SFDATA:proc_demand.Company"
+        }
+      },
+      "XTextBox29": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox29",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "130px",
+          "xdatabind": "SFDATA:proc_demand.Dept"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "100%",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox8",
+          "XTextBox27",
+          "XTextBox28",
+          "XTextBox29"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "XTextBox26",
+      "XTextBox10",
+      "XTextBox25",
+      "XTextBox1",
+      "XDataBrowserButton2",
+      "tbDetail",
+      "table1"
+    ]
+  }
+}

@@ -1,0 +1,220 @@
+﻿{
+  "generateAt": "2019-10-14T10:04:37.4399272+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlprod_test1sample_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlprod_test1sample_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.sample_date"
+        }
+      },
+      "ctrlprod_test1analyze_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlprod_test1analyze_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.analyze_date"
+        }
+      },
+      "ctrlprod_test1mat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1mat_name",
+          "runat": "server",
+          "width": "80%",
+          "xdatabind": "SFDATA:prod_test1.mat_name"
+        }
+      },
+      "ctrlprod_test1tank_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1tank_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.tank_id"
+        }
+      },
+      "ctrlprod_test1alcohol": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1alcohol",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.alcohol"
+        }
+      },
+      "ctrlprod_test1real_ferment": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1real_ferment",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.real_ferment"
+        }
+      },
+      "ctrlprod_test1wort_concent": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1wort_concent",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.wort_concent"
+        }
+      },
+      "ctrlprod_test1true_concent": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1true_concent",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.true_concent"
+        }
+      },
+      "ctrlprod_test1total_acid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1total_acid",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.total_acid"
+        }
+      },
+      "ctrlprod_test1dis_oxygen": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1dis_oxygen",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.dis_oxygen"
+        }
+      },
+      "ctrlprod_test1chroma_ebc": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1chroma_ebc",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.chroma_ebc"
+        }
+      },
+      "ctrlprod_test1ph": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1ph",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.ph"
+        }
+      },
+      "ctrlprod_test1bitter_bu": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1bitter_bu",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.bitter_bu"
+        }
+      },
+      "ctrlprod_test1operator_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1operator_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.operator_name"
+        }
+      },
+      "ctrlprod_test1memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1memo",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.memo",
+          "textmode": "MultiLine"
+        }
+      },
+      "ctrlprod_test1mat_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1mat_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.mat_id"
+        }
+      },
+      "ctrlprod_test1DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1DeptName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.DeptName"
+        }
+      },
+      "ctrlprod_test1Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1Company",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.Company"
+        }
+      },
+      "ctrlprod_test1CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test1CompanyName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.CompanyName"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlprod_test1mat_id",
+          "ctrlprod_test1DeptName",
+          "ctrlprod_test1Company",
+          "ctrlprod_test1CompanyName"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlprod_test1sample_date",
+      "ctrlprod_test1analyze_date",
+      "ctrlprod_test1mat_name",
+      "ctrlprod_test1tank_id",
+      "ctrlprod_test1alcohol",
+      "ctrlprod_test1real_ferment",
+      "ctrlprod_test1wort_concent",
+      "ctrlprod_test1true_concent",
+      "ctrlprod_test1total_acid",
+      "ctrlprod_test1dis_oxygen",
+      "ctrlprod_test1chroma_ebc",
+      "ctrlprod_test1ph",
+      "ctrlprod_test1bitter_bu",
+      "ctrlprod_test1operator_name",
+      "ctrlprod_test1memo",
+      "table1"
+    ]
+  }
+}

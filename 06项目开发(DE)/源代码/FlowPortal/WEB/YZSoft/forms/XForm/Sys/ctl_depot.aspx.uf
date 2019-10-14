@@ -1,0 +1,81 @@
+﻿{
+  "generateAt": "2019-10-10T20:28:15.5716173+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlctl_depotCompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_depotCompanyName",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_depot.CompanyName",
+          "width": "100%",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_depotDeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_depotDeptName",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_depot.DeptName",
+          "width": "100%",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_depotdepot_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_depotdepot_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_depot.depot_name",
+          "width": "100%"
+        }
+      },
+      "ctrlctl_depotCompany": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_depotCompany",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_depot.Company",
+          "width": "100%"
+        }
+      },
+      "ctrlctl_depotDept": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_depotDept",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_depot.Dept",
+          "width": "100%"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlctl_depotCompany",
+          "ctrlctl_depotDept"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlctl_depotCompanyName",
+      "ctrlctl_depotDeptName",
+      "ctrlctl_depotdepot_name",
+      "table1"
+    ]
+  }
+}

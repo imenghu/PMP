@@ -1,0 +1,314 @@
+﻿{
+  "generateAt": "2019-10-12T21:34:35.0467949+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlprod_report4mat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4mat_name",
+          "runat": "server",
+          "fieldname": "品名",
+          "xdatabind": "SFDATA:prod_report4.mat_name",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlprod_report4date",
+          "runat": "server",
+          "fieldname": "日期",
+          "xdatabind": "SFDATA:prod_report4.date",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4Sac_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4Sac_id",
+          "runat": "server",
+          "fieldname": "糖化批次",
+          "xdatabind": "SFDATA:prod_report4.Sac_id",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4Boiler": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4Boiler",
+          "runat": "server",
+          "fieldname": "锅次",
+          "xdatabind": "SFDATA:prod_report4.Boiler",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4malt_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4malt_kg",
+          "runat": "server",
+          "fieldname": "大麦芽",
+          "xdatabind": "SFDATA:prod_report4.malt_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4caramelmalt_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4caramelmalt_kg",
+          "runat": "server",
+          "fieldname": "焦香麦芽",
+          "xdatabind": "SFDATA:prod_report4.caramelmalt_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4smallmalt_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4smallmalt_kg",
+          "runat": "server",
+          "fieldname": "小麦芽",
+          "xdatabind": "SFDATA:prod_report4.smallmalt_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4syrup_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4syrup_kg",
+          "runat": "server",
+          "fieldname": "糖浆kg",
+          "xdatabind": "SFDATA:prod_report4.syrup_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4sum_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4sum_kg",
+          "runat": "server",
+          "fieldname": "总kg",
+          "xdatabind": "SFDATA:prod_report4.sum_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4Australian_malt": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4Australian_malt",
+          "runat": "server",
+          "fieldname": "澳麦芽",
+          "xdatabind": "SFDATA:prod_report4.Australian_malt",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4coldwort_kl": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4coldwort_kl",
+          "runat": "server",
+          "fieldname": "冷麦汁KL",
+          "xdatabind": "SFDATA:prod_report4.coldwort_kl",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4wort_concent": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4wort_concent",
+          "runat": "server",
+          "fieldname": "原麦汁浓度OP",
+          "xdatabind": "SFDATA:prod_report4.wort_concent",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4convert11_kl": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4convert11_kl",
+          "runat": "server",
+          "fieldname": "折11冷k",
+          "xdatabind": "SFDATA:prod_report4.convert11_kl",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4convert11_loss_kl": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4convert11_loss_kl",
+          "runat": "server",
+          "fieldname": "折11粮耗kg/kl",
+          "xdatabind": "SFDATA:prod_report4.convert11_loss_kl",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4Tannin_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4Tannin_kg",
+          "runat": "server",
+          "fieldname": "单宁kg",
+          "xdatabind": "SFDATA:prod_report4.Tannin_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4carrageenan_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4carrageenan_kg",
+          "runat": "server",
+          "fieldname": "卡拉胶kg",
+          "xdatabind": "SFDATA:prod_report4.carrageenan_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4compound_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4compound_kg",
+          "runat": "server",
+          "fieldname": "复合酶kg",
+          "xdatabind": "SFDATA:prod_report4.compound_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4gypsum_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4gypsum_kg",
+          "runat": "server",
+          "fieldname": "石膏kg",
+          "xdatabind": "SFDATA:prod_report4.gypsum_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4lactic_acid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4lactic_acid",
+          "runat": "server",
+          "fieldname": "乳酸L",
+          "xdatabind": "SFDATA:prod_report4.lactic_acid",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4calcium_chloride_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4calcium_chloride_kg",
+          "runat": "server",
+          "fieldname": "氯化钙kg",
+          "xdatabind": "SFDATA:prod_report4.calcium_chloride_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4zinc_sulfate_g": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4zinc_sulfate_g",
+          "runat": "server",
+          "fieldname": "硫酸锌kg",
+          "xdatabind": "SFDATA:prod_report4.zinc_sulfate_g",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4hops_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4hops_kg",
+          "runat": "server",
+          "fieldname": "国产酒花kg",
+          "xdatabind": "SFDATA:prod_report4.hops_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4imported_bitter_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4imported_bitter_kg",
+          "runat": "server",
+          "fieldname": "进口苦花哈拉道kg",
+          "xdatabind": "SFDATA:prod_report4.imported_bitter_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4imported_fragrant_kg": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4imported_fragrant_kg",
+          "runat": "server",
+          "fieldname": "进口香花卡斯卡特kg",
+          "xdatabind": "SFDATA:prod_report4.imported_fragrant_kg",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report4memo",
+          "runat": "server",
+          "fieldname": "备注",
+          "xdatabind": "SFDATA:prod_report4.memo",
+          "width": "100%"
+        }
+      },
+      "ctrlprod_report4create_time": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlprod_report4create_time",
+          "runat": "server",
+          "fieldname": "创建时间",
+          "xdatabind": "SFDATA:prod_report4.create_time",
+          "width": "100%"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": []
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlprod_report4mat_name",
+      "ctrlprod_report4date",
+      "ctrlprod_report4Sac_id",
+      "ctrlprod_report4Boiler",
+      "ctrlprod_report4malt_kg",
+      "ctrlprod_report4caramelmalt_kg",
+      "ctrlprod_report4smallmalt_kg",
+      "ctrlprod_report4syrup_kg",
+      "ctrlprod_report4sum_kg",
+      "ctrlprod_report4Australian_malt",
+      "ctrlprod_report4coldwort_kl",
+      "ctrlprod_report4wort_concent",
+      "ctrlprod_report4convert11_kl",
+      "ctrlprod_report4convert11_loss_kl",
+      "ctrlprod_report4Tannin_kg",
+      "ctrlprod_report4carrageenan_kg",
+      "ctrlprod_report4compound_kg",
+      "ctrlprod_report4gypsum_kg",
+      "ctrlprod_report4lactic_acid",
+      "ctrlprod_report4calcium_chloride_kg",
+      "ctrlprod_report4zinc_sulfate_g",
+      "ctrlprod_report4hops_kg",
+      "ctrlprod_report4imported_bitter_kg",
+      "ctrlprod_report4imported_fragrant_kg",
+      "ctrlprod_report4memo",
+      "ctrlprod_report4create_time",
+      "table1"
+    ]
+  }
+}

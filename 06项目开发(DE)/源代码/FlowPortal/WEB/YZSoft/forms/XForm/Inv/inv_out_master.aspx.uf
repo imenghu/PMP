@@ -1,0 +1,242 @@
+﻿{
+  "generateAt": "2019-10-10T20:26:01.5080349+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlinv_out_masterCompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_masterCompanyName",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_master.CompanyName",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_masterDeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_masterDeptName",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_master.DeptName",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_masterCreateUserName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_masterCreateUserName",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_master.CreateUserName",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_masterreq_org_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_masterreq_org_id",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_master.req_org_id",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_masterreq_userid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_masterreq_userid",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_master.req_userid",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_masterattachments": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_masterattachments",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_master.attachments",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_masteroutmaster_remarks": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_masteroutmaster_remarks",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_master.outmaster_remarks",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_detaildepot_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_detaildepot_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_detail.depot_name",
+          "width": "100%"
+        }
+      },
+      "ctrl_inv_out_detaildepot_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_out_detaildepot_id",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_out_detail.depot_id",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrl_inv_out_detailvendor_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_out_detailvendor_id",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_out_detail.vendor_id",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrlinv_out_detailvendor_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_detailvendor_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_detail.vendor_name",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_detailmat_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_detailmat_code",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_detail.mat_code",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_detailmat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_detailmat_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_detail.mat_name",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_detailmat_spec": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_detailmat_spec",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_detail.mat_spec",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_detailout_stnum": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_detailout_stnum",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_detail.out_stnum",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_detailout_stnum_unit": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_detailout_stnum_unit",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_detail.out_stnum_unit",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_detailout_time": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlinv_out_detailout_time",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_detail.out_time",
+          "width": "100%"
+        }
+      },
+      "table1": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "960",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": " 1,1 ",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlinv_out_detaildepot_name",
+          "ctrl_inv_out_detaildepot_id",
+          "ctrl_inv_out_detailvendor_id",
+          "ctrlinv_out_detailvendor_name",
+          "ctrlinv_out_detailmat_code",
+          "ctrlinv_out_detailmat_name",
+          "ctrlinv_out_detailmat_spec",
+          "ctrlinv_out_detailout_stnum",
+          "ctrlinv_out_detailout_stnum_unit",
+          "ctrlinv_out_detailout_time"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 1,
+          "rows": 1
+        }
+      },
+      "ctrlinv_out_masterorg_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_masterorg_id",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_master.org_id",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_out_masterout_userid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_out_masterout_userid",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_out_master.out_userid",
+          "width": "100%"
+        }
+      },
+      "table2": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table2"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlinv_out_masterorg_id",
+          "ctrlinv_out_masterout_userid"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlinv_out_masterCompanyName",
+      "ctrlinv_out_masterDeptName",
+      "ctrlinv_out_masterCreateUserName",
+      "ctrlinv_out_masterreq_org_id",
+      "ctrlinv_out_masterreq_userid",
+      "ctrlinv_out_masterattachments",
+      "ctrlinv_out_masteroutmaster_remarks",
+      "table1",
+      "table2"
+    ]
+  }
+}

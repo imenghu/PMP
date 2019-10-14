@@ -1,0 +1,35 @@
+
+本项目总计6台虚机，2台Centos，4台windows，对应内网IP：
+CentOS： 10.192.0.190 -191
+Windows: 10.192.0.192-195
+
+
+
+
+公网对内网三台机器，两台CentOS作为应用出口，一台windows作为远程使用
+
+应用公网端口8088：CentOS：221.1.221.178:8088  对应 10.192.0.190：8080        用户名密码：root/passwd/Info&Cosmo@5892
+应用公网端口8089：CentOS：221.1.221.178:8089  对应 10.192.0.191：8089        用户名密码：root/passwd/Info&Cosmo@5892
+
+windows远程公网IP、端口、用户名，密码：
+Windows: 221.1.221.178:4389  对应 10.192.0.192：3389    用户名密码：admin/Uid&ShuiFa@841
+
+
+Windows：10.192.0.192:3389    用户名密码： admin/Uid&ShuiFa@841
+Windows：10.192.0.193:3389    用户名密码： chenxiangmeng/Info&Sys@cxm@820/Info&Sys@cm@9427   
+Windows：10.192.0.194:3389    用户名密码：Administrator/Info&Sys&Cosmo@341
+Windows：10.192.0.195:3389    用户名密码：Administrator/Info&Sys&Cosmo@341
+
+数据库（测试库）：IP:10.192.0.190  端口：3306  用户名密码：root/Cosmo_123
+
+数据库（生产库）：IP:10.192.0.194  端口：3306  用户名密码：root/Cosmo_123
+
+
+VPN：easyconnect：https://221.1.221.178:4433  cloud/cloud@123
+虚机控制台：http://59.206.14.2:8080/cas/login   shuifa/shuifa@123
+
+
+
+
+
+

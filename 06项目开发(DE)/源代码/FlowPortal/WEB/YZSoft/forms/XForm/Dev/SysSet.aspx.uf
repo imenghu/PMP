@@ -1,0 +1,236 @@
+﻿{
+  "generateAt": "2019-10-09T17:00:37.9110841+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysSet.SetId",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox3",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysSet.SetName",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XCheckBox1": {
+        "ctype": "aspxform:xcheckbox",
+        "attrs": {
+          "id": "XCheckBox1",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysSet.IsUse",
+          "checked": "True"
+        }
+      },
+      "XTextBox11": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox11",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysSet.Description",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XExcelDataImportButton3": {
+        "ctype": "aspxform:xexceldataimportbutton",
+        "attrs": {
+          "id": "XExcelDataImportButton3",
+          "runat": "server",
+          "xclass": "YZSoft.Forms.Field.ExcelDataImportButton",
+          "datamap": "A->DevDATA:SysItem.ItemId;B->DevDATA:SysItem.ItemName;C->DevDATA:SysItem.ItemType;D->DevDATA:SysItem.ItemLength;E->DevDATA:SysItem.ItemDecimal;F->DevDATA:SysItem.Description",
+          "columncount": "6",
+          "usesubmitbehavior": "False",
+          "popupwndheight": "-1",
+          "popupwndwidth": "-1",
+          "text": "Excel导入",
+          "width": "71px"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysItem.ItemId",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysItem.ItemName",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysItem.ItemType",
+          "width": "100%"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "bit"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "char"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "date"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "datetime"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "decimal"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "int"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "selected": "True",
+              "innerhtml": "nvarchar"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "text"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "varchar"
+            }
+          }
+        ]
+      },
+      "XTextBox7": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox7",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysItem.ItemLength",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "textmode": "Number",
+          "innerhtml": "50"
+        }
+      },
+      "XTextBox8": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox8",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysItem.ItemDecimal",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "textmode": "Number",
+          "innerhtml": "0"
+        }
+      },
+      "XTextBox9": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox9",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysItem.Description",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XCheckBox2": {
+        "ctype": "aspxform:xcheckbox",
+        "attrs": {
+          "id": "XCheckBox2",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysItem.IsUse",
+          "checked": "True"
+        }
+      },
+      "table1": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "800",
+          "align": "left",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": "2,1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox4",
+          "XTextBox5",
+          "XDropDownList1",
+          "XTextBox7",
+          "XTextBox8",
+          "XTextBox9",
+          "XCheckBox2"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 2,
+          "rows": 1
+        }
+      }
+    },
+    "validators": {},
+    "items": [
+      "XTextBox2",
+      "XTextBox3",
+      "XCheckBox1",
+      "XTextBox11",
+      "XExcelDataImportButton3",
+      "table1"
+    ]
+  }
+}

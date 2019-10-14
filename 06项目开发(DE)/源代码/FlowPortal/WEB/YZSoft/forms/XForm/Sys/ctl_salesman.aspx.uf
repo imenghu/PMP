@@ -1,0 +1,154 @@
+﻿{
+  "generateAt": "2019-10-11T13:44:19.2642029+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlctl_salesmanCompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmanCompanyName",
+          "runat": "server",
+          "disableexpress": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.CompanyName"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.province_id",
+          "prompttext": "--请选择--",
+          "displaycolumn": "name",
+          "valuecolumn": "id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1"
+        }
+      },
+      "XDropDownList2": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList2",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.city_id",
+          "prompttext": "--请选择--",
+          "displaycolumn": "name",
+          "valuecolumn": "id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_salesman.province_id"
+        }
+      },
+      "ctrlctl_salesmansalesman_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmansalesman_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_name"
+        }
+      },
+      "ctrlctl_salesmansalesman_tel": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmansalesman_tel",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_tel"
+        }
+      },
+      "ctrlctl_salesmansalesman_email": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmansalesman_email",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_email"
+        }
+      },
+      "ctrlctl_salesmansalesman_addr": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmansalesman_addr",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_addr"
+        }
+      },
+      "ctrlctl_salesmansalesman_remarks": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmansalesman_remarks",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_remarks",
+          "rows": "5",
+          "textmode": "MultiLine"
+        }
+      },
+      "ctrlctl_salesmanSalesmanAccount": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmanSalesmanAccount",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.SalesmanAccount"
+        }
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "var1",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "innerhtml": "1"
+        }
+      },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "var2",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "innerhtml": "2"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlctl_salesmanSalesmanAccount",
+          "XTextBox1",
+          "XTextBox2"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlctl_salesmanCompanyName",
+      "XDropDownList1",
+      "XDropDownList2",
+      "ctrlctl_salesmansalesman_name",
+      "ctrlctl_salesmansalesman_tel",
+      "ctrlctl_salesmansalesman_email",
+      "ctrlctl_salesmansalesman_addr",
+      "ctrlctl_salesmansalesman_remarks",
+      "table1"
+    ]
+  }
+}

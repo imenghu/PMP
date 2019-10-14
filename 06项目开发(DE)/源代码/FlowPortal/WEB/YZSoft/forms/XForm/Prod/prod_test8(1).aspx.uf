@@ -1,0 +1,238 @@
+﻿{
+  "generateAt": "2019-10-14T09:06:18.1951606+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlprod_test8analyze_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlprod_test8analyze_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.analyze_date",
+          "fieldname": "分析日期"
+        }
+      },
+      "ctrlprod_test8mat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8mat_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.mat_name",
+          "fieldname": "品名名称"
+        }
+      },
+      "ctrlprod_test8impurity": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8impurity",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.impurity",
+          "fieldname": "夹杂物 %"
+        }
+      },
+      "ctrlprod_test8moisture": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8moisture",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.moisture",
+          "fieldname": "水份 %"
+        }
+      },
+      "ctrlprod_test8leach_rate": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8leach_rate",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.leach_rate",
+          "fieldname": "无水浸出率 %"
+        }
+      },
+      "ctrlprod_test8sac_time": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8sac_time",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.sac_time",
+          "fieldname": "糖化时间/分"
+        }
+      },
+      "ctrlprod_test8sac_WK": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8sac_WK",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.sac_WK",
+          "fieldname": "糖化酵素力 WK"
+        }
+      },
+      "ctrlprod_test8a_nitrogen": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8a_nitrogen",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.a_nitrogen",
+          "fieldname": "α－氨基氮 mg/L"
+        }
+      },
+      "ctrlprod_test8total_acid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8total_acid",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.total_acid",
+          "fieldname": "总酸ml/100ml"
+        }
+      },
+      "ctrlprod_test8sprout": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8sprout",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.sprout",
+          "fieldname": "发芽率%"
+        }
+      },
+      "ctrlprod_test8powdery": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8powdery",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.powdery",
+          "fieldname": "粉状粒%"
+        }
+      },
+      "ctrlprod_test8chroma_ebc": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8chroma_ebc",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.chroma_ebc",
+          "fieldname": "色度 EBC"
+        }
+      },
+      "ctrlprod_test8chroma_ebc_boil": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8chroma_ebc_boil",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.chroma_ebc_boil",
+          "fieldname": "煮沸色度 EBC"
+        }
+      },
+      "ctrlprod_test8ph": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8ph",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.ph",
+          "fieldname": "PH值"
+        }
+      },
+      "ctrlprod_test8memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8memo",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.memo",
+          "fieldname": "备注"
+        }
+      },
+      "ctrlprod_test8org_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8org_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.org_id",
+          "fieldname": "组织id"
+        }
+      },
+      "ctrlprod_test8DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8DeptName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.DeptName",
+          "fieldname": "部门名称"
+        }
+      },
+      "ctrlprod_test8Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8Company",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.Company",
+          "fieldname": "公司编码"
+        }
+      },
+      "ctrlprod_test8CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test8CompanyName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test8.CompanyName",
+          "fieldname": "公司名称"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlprod_test8org_id",
+          "ctrlprod_test8DeptName",
+          "ctrlprod_test8Company",
+          "ctrlprod_test8CompanyName"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlprod_test8analyze_date",
+      "ctrlprod_test8mat_name",
+      "ctrlprod_test8impurity",
+      "ctrlprod_test8moisture",
+      "ctrlprod_test8leach_rate",
+      "ctrlprod_test8sac_time",
+      "ctrlprod_test8sac_WK",
+      "ctrlprod_test8a_nitrogen",
+      "ctrlprod_test8total_acid",
+      "ctrlprod_test8sprout",
+      "ctrlprod_test8powdery",
+      "ctrlprod_test8chroma_ebc",
+      "ctrlprod_test8chroma_ebc_boil",
+      "ctrlprod_test8ph",
+      "ctrlprod_test8memo",
+      "table1"
+    ]
+  }
+}

@@ -1,0 +1,271 @@
+﻿{
+  "generateAt": "2019-10-11T14:32:15.812092+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlctl_salesmanCompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmanCompanyName",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.CompanyName",
+          "width": "100%",
+          "disableexpress": "1"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.province_id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1",
+          "valuecolumn": "id",
+          "displaycolumn": "name",
+          "prompttext": "--请选择--"
+        }
+      },
+      "XDropDownList2": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList2",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.city_id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_salesman.province_id",
+          "valuecolumn": "id",
+          "displaycolumn": "name",
+          "prompttext": "--请选择--"
+        }
+      },
+      "ctrlctl_salesmansalesman_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmansalesman_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_name",
+          "width": "100%"
+        }
+      },
+      "ctrlctl_salesmansalesman_tel": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmansalesman_tel",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_tel",
+          "width": "100%"
+        }
+      },
+      "ctrlctl_salesmansalesman_email": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmansalesman_email",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_email",
+          "width": "100%"
+        }
+      },
+      "ctrlctl_salesmansalesman_addr": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmansalesman_addr",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_addr",
+          "width": "100%"
+        }
+      },
+      "ctrlctl_salesmansalesman_remarks": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmansalesman_remarks",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_remarks",
+          "width": "100%",
+          "textmode": "MultiLine",
+          "rows": "5"
+        }
+      },
+      "XDataBrowserButton2": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton2",
+          "runat": "server",
+          "xclass": "YZSoft.Forms.Field.DataBrowserButton",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_dealer",
+          "width": "80px",
+          "text": "选择经销商",
+          "displaycolumns": "dealer_name:经销商名称;dealer_contact:联系人;dealer_tel:联系电话;dealer_addr:地址",
+          "datamap": "dealer_id->SFDATA:ctl_dealer_salesman.dealer_id",
+          "multiselect": "True",
+          "popupwndwidth": "-1",
+          "popupwndheight": "-1",
+          "usesubmitbehavior": "False"
+        }
+      },
+      "XTextBox3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox3",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_dealer_salesman.dealer_id",
+          "width": "120px",
+          "disableexpress": "1",
+          "datamap": "dealer_contact->varContact;dealer_tel->varTel;dealer_addr->varAddr",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_dealer;FilterColumn:dealer_id;DisplayColumn:dealer_name"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_dealer",
+          "width": "21px",
+          "displaycolumns": "dealer_name:经销商名称;dealer_contact:联系人;dealer_tel:联系电话;dealer_addr:地址",
+          "datamap": "dealer_id->SFDATA:ctl_dealer_salesman.dealer_id"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "xdatabind": "varContact",
+          "width": "100%",
+          "disableexpress": "1",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "xdatabind": "varTel",
+          "width": "100%",
+          "disableexpress": "1",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox6": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox6",
+          "runat": "server",
+          "xdatabind": "varAddr",
+          "width": "100%",
+          "disableexpress": "1",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox7": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox7",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_dealer_salesman.ds_remarks",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "table1": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "960",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": "2,1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox3",
+          "XDataBrowserButton1",
+          "XTextBox4",
+          "XTextBox5",
+          "XTextBox6",
+          "XTextBox7"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 2,
+          "rows": 1
+        }
+      },
+      "ctrlctl_salesmanSalesmanAccount": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_salesmanSalesmanAccount",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_salesman.SalesmanAccount",
+          "width": "100%"
+        }
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "xdatabind": "var1",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "innerhtml": "1"
+        }
+      },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "xdatabind": "var2",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "innerhtml": "2"
+        }
+      },
+      "table2": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table2"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlctl_salesmanSalesmanAccount",
+          "XTextBox1",
+          "XTextBox2"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlctl_salesmanCompanyName",
+      "XDropDownList1",
+      "XDropDownList2",
+      "ctrlctl_salesmansalesman_name",
+      "ctrlctl_salesmansalesman_tel",
+      "ctrlctl_salesmansalesman_email",
+      "ctrlctl_salesmansalesman_addr",
+      "ctrlctl_salesmansalesman_remarks",
+      "XDataBrowserButton2",
+      "table1",
+      "table2"
+    ]
+  }
+}

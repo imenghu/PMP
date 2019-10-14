@@ -1,0 +1,204 @@
+﻿{
+  "generateAt": "2019-10-11T11:03:18.4298014+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlinv_depot_detailmat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detailmat_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.mat_name",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_depot_detailmat_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detailmat_code",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.mat_code",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_depot_detailmat_spec": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detailmat_spec",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.mat_spec",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_depot_detaildepot_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detaildepot_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.depot_name",
+          "width": "100%"
+        }
+      },
+      "ctrl_inv_depot_detaildepot_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_depot_detaildepot_id",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_depot_detail.depot_id",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrl_inv_depot_detailvendor_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_depot_detailvendor_id",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_depot_detail.vendor_id",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrl_inv_depot_detailcreate_time": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_depot_detailcreate_time",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_depot_detail.create_time",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrl_inv_depot_detailupdate_time": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_depot_detailupdate_time",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_depot_detail.update_time",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrlinv_depot_detailvendor_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detailvendor_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.vendor_name",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_depot_detailproc_in_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detailproc_in_num",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.proc_in_num",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_depot_detailinv_out_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detailinv_out_num",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.inv_out_num",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_depot_detailrefund_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detailrefund_num",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.refund_num",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_depot_detailinv_diff_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detailinv_diff_num",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.inv_diff_num",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_depot_detaildepot_stnum_unit": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detaildepot_stnum_unit",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.depot_stnum_unit",
+          "width": "100%"
+        }
+      },
+      "table1": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "960",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": " 1,1 ",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlinv_depot_detaildepot_name",
+          "ctrl_inv_depot_detaildepot_id",
+          "ctrl_inv_depot_detailvendor_id",
+          "ctrl_inv_depot_detailcreate_time",
+          "ctrl_inv_depot_detailupdate_time",
+          "ctrlinv_depot_detailvendor_name",
+          "ctrlinv_depot_detailproc_in_num",
+          "ctrlinv_depot_detailinv_out_num",
+          "ctrlinv_depot_detailrefund_num",
+          "ctrlinv_depot_detailinv_diff_num",
+          "ctrlinv_depot_detaildepot_stnum_unit"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 1,
+          "rows": 1
+        }
+      },
+      "ctrlinv_depot_detailmat_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_depot_detailmat_id",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_depot_detail.mat_id",
+          "width": "100%"
+        }
+      },
+      "table2": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table2"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlinv_depot_detailmat_id"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlinv_depot_detailmat_name",
+      "ctrlinv_depot_detailmat_code",
+      "ctrlinv_depot_detailmat_spec",
+      "table1",
+      "table2"
+    ]
+  }
+}

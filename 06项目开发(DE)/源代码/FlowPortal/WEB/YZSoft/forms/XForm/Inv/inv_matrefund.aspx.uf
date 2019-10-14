@@ -1,0 +1,209 @@
+﻿{
+  "generateAt": "2019-10-10T17:40:20.4324066+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlinv_matrefundCompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefundCompanyName",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund.CompanyName",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefundDeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefundDeptName",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund.DeptName",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefundCreateUserName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefundCreateUserName",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund.CreateUserName",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefundref_org_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefundref_org_id",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund.ref_org_id",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefundref_userid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefundref_userid",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund.ref_userid",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefundattachments": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefundattachments",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund.attachments",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefundrefund_remarks": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefundrefund_remarks",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund.refund_remarks",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefund_detaildepot_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefund_detaildepot_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund_detail.depot_name",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefund_detailvendor_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefund_detailvendor_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund_detail.vendor_name",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefund_detailmat_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefund_detailmat_code",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund_detail.mat_code",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefund_detailmat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefund_detailmat_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund_detail.mat_name",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefund_detailmat_spec": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefund_detailmat_spec",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund_detail.mat_spec",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefund_detailrefund_stnum": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefund_detailrefund_stnum",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund_detail.refund_stnum",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefund_detailrefund_stnum_unit": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefund_detailrefund_stnum_unit",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund_detail.refund_stnum_unit",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefund_detailrefund__time": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlinv_matrefund_detailrefund__time",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund_detail.refund__time",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_matrefund_detailrefund_remarks": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_matrefund_detailrefund_remarks",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_matrefund_detail.refund_remarks",
+          "width": "100%"
+        }
+      },
+      "table1": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "960",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": " 1,1 ",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlinv_matrefund_detaildepot_name",
+          "ctrlinv_matrefund_detailvendor_name",
+          "ctrlinv_matrefund_detailmat_code",
+          "ctrlinv_matrefund_detailmat_name",
+          "ctrlinv_matrefund_detailmat_spec",
+          "ctrlinv_matrefund_detailrefund_stnum",
+          "ctrlinv_matrefund_detailrefund_stnum_unit",
+          "ctrlinv_matrefund_detailrefund__time",
+          "ctrlinv_matrefund_detailrefund_remarks"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 1,
+          "rows": 1
+        }
+      },
+      "table2": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table2"
+        },
+        "ctypeorg": "table",
+        "items": []
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlinv_matrefundCompanyName",
+      "ctrlinv_matrefundDeptName",
+      "ctrlinv_matrefundCreateUserName",
+      "ctrlinv_matrefundref_org_id",
+      "ctrlinv_matrefundref_userid",
+      "ctrlinv_matrefundattachments",
+      "ctrlinv_matrefundrefund_remarks",
+      "table1",
+      "table2"
+    ]
+  }
+}

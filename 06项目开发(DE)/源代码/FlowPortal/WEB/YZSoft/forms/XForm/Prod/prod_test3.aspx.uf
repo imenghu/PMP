@@ -1,0 +1,229 @@
+﻿{
+  "generateAt": "2019-10-11T10:19:24.6494693+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlProd_test3prod_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlProd_test3prod_date",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.prod_date",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3mat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3mat_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.mat_name",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3sac_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3sac_id",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.sac_id",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3wort_concent": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3wort_concent",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.wort_concent",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3dextrin": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3dextrin",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.dextrin",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3a_nitrogen": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3a_nitrogen",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.a_nitrogen",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3total_acid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3total_acid",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.total_acid",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3wort_filt": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3wort_filt",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.wort_filt",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3wort_transp": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3wort_transp",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.wort_transp",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3chroma_ebc": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3chroma_ebc",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.chroma_ebc",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3turbidity_ebc": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3turbidity_ebc",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.turbidity_ebc",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3ph": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3ph",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.ph",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3bitter_bu": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3bitter_bu",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.bitter_bu",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3operator_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3operator_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.operator_name",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3memo",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.memo",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3mat_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3mat_id",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.mat_id",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3org_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3org_id",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.org_id",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3DeptName",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.DeptName",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3Company",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.Company",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_test3CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test3CompanyName",
+          "runat": "server",
+          "xdatabind": "SFDATA:Prod_test3.CompanyName",
+          "width": "100%"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlProd_test3mat_id",
+          "ctrlProd_test3org_id",
+          "ctrlProd_test3DeptName",
+          "ctrlProd_test3Company",
+          "ctrlProd_test3CompanyName"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlProd_test3prod_date",
+      "ctrlProd_test3mat_name",
+      "ctrlProd_test3sac_id",
+      "ctrlProd_test3wort_concent",
+      "ctrlProd_test3dextrin",
+      "ctrlProd_test3a_nitrogen",
+      "ctrlProd_test3total_acid",
+      "ctrlProd_test3wort_filt",
+      "ctrlProd_test3wort_transp",
+      "ctrlProd_test3chroma_ebc",
+      "ctrlProd_test3turbidity_ebc",
+      "ctrlProd_test3ph",
+      "ctrlProd_test3bitter_bu",
+      "ctrlProd_test3operator_name",
+      "ctrlProd_test3memo",
+      "table1"
+    ]
+  }
+}

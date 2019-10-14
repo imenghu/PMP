@@ -1,0 +1,351 @@
+﻿{
+  "generateAt": "2019-10-10T09:53:01.4278557+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGrid.GridId"
+        }
+      },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGrid.GridTitle"
+        }
+      },
+      "XTextBox7": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox7",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGrid.ServerName",
+          "innerhtml": "SFDATA"
+        }
+      },
+      "XTextBox12": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox12",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGrid.ModuleCode"
+        }
+      },
+      "XTextBox6": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox6",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGrid.GridKeyId"
+        }
+      },
+      "XTextBox3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox3",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGrid.Description"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:DevDATA;TableName:SysSet;Filter:IsUse->varIsUse",
+          "displaycolumns": "SetId:指标集编码;SetName:指标集名称;Description:备注",
+          "datamap": "SetId->DevDATA:SysGridSet.SetId;SetName->DevDATA:SysGridSet.SetName",
+          "multiselect": "True"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "width": "220px",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGridSet.SetId",
+          "disableexpress": "1"
+        }
+      },
+      "XDataBrowserButton4": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton4",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:DevDATA;TableName:SysSet;Filter:IsUse->varIsUse",
+          "displaycolumns": "SetId:指标集编码;SetName:指标集名称;Description:备注",
+          "datamap": "SetId->DevDATA:SysGridSet.SetId;SetName->DevDATA:SysGridSet.SetName"
+        }
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGridSet.SetName"
+        }
+      },
+      "XDataBrowserButton2": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton2",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:DevDATA;TableName:SysItem;Filter:SetId->DevDATA:SysGridSet.SetId,IsUse->varIsUse;OrderBy:OrderIndex",
+          "displaycolumns": "ItemId:指标编码;ItemName:指标名称;ItemType:指标类型;ItemLength:长度;ItemDecimal:小数位;Description:备注",
+          "datamap": "ItemId->DevDATA:SysGridItem.ItemId;ItemName->DevDATA:SysGridItem.ItemName;ItemType->DevDATA:SysGridItem.ItemType",
+          "multiselect": "True"
+        }
+      },
+      "XTextBox8": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox8",
+          "runat": "server",
+          "width": "120px",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGridItem.ItemId",
+          "disableexpress": "1"
+        }
+      },
+      "XDataBrowserButton3": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton3",
+          "runat": "server",
+          "width": "20px",
+          "xdatasource": "DataSource:DevDATA;TableName:SysItem;Filter:SetId->DevDATA:SysGridSet.SetId,IsUse->varIsUse",
+          "displaycolumns": "ItemId:指标编码;ItemName:指标名称;ItemType:指标类型;ItemLength:长度;ItemDecimal:小数位;Description:备注",
+          "datamap": "ItemId->DevDATA:SysGridItem.ItemId;ItemName->DevDATA:SysGridItem.ItemName;ItemType->DevDATA:SysGridItem.ItemType"
+        }
+      },
+      "XTextBox9": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox9",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGridItem.ItemName"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysGridItem.ItemType",
+          "width": "100%",
+          "disableexpress": "1"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "bit"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "char"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "date"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "datetime"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "decimal"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "int"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "selected": "True",
+              "innerhtml": "nvarchar"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "text"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "varchar"
+            }
+          }
+        ]
+      },
+      "XTextBox13": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox13",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "DevDATA:SysGridItem.DisplayWidth",
+          "innerhtml": "100"
+        }
+      },
+      "XDropDownList2": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList2",
+          "runat": "server",
+          "xdatabind": "DevDATA:SysGridItem.DisplayFormat",
+          "width": "100%",
+          "xdatasource": "DataSource:DevDATA;TableName:SysFormat",
+          "valuecolumn": "FormatName",
+          "displaycolumn": "FormatSample",
+          "prompttext": "--请选择--"
+        }
+      },
+      "table2": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "750",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": "2,1",
+          "datamap": "ItemId->DevDATA:SysGridItem.ItemId;ItemName->DevDATA:SysGridItem.ItemName;ItemType->DevDATA:SysGridItem.ItemType",
+          "xdatasource": "DataSource:DevDATA;TableName:SysItem;Filter:SetId->DevDATA:SysGridSet.SetId,IsUse->varIsUse;OrderBy:OrderIndex",
+          "id": "table2"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox8",
+          "XDataBrowserButton3",
+          "XTextBox9",
+          "XDropDownList1",
+          "XTextBox13",
+          "XDropDownList2"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 2,
+          "rows": 1
+        }
+      },
+      "table1": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "800",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": "2,2",
+          "menudock": "Left",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox4",
+          "XDataBrowserButton4",
+          "XTextBox5",
+          "XDataBrowserButton2",
+          "table2"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 2,
+          "rows": 2
+        }
+      },
+      "XTextBox15": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox15",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "varIsUse",
+          "innerhtml": "1"
+        }
+      },
+      "table3": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table3"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox15"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "XTextBox1",
+      "XTextBox2",
+      "XTextBox7",
+      "XTextBox12",
+      "XTextBox6",
+      "XTextBox3",
+      "XDataBrowserButton1",
+      "table1",
+      "table3"
+    ]
+  }
+}

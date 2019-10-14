@@ -1,0 +1,345 @@
+﻿{
+  "generateAt": "2019-10-11T14:10:21.4420823+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlinv_inventory_masterCompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterCompanyName",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.CompanyName",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterDeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterDeptName",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.DeptName",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterCreateUserName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterCreateUserName",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.CreateUserName",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterinv_master_time": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterinv_master_time",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.inv_master_time",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterinv_master_year": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterinv_master_year",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.inv_master_year",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterinv_master_month": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterinv_master_month",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.inv_master_month",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterdepot_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterdepot_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.depot_name",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterinv_remarks": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterinv_remarks",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.inv_remarks",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_detaildepot_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_detaildepot_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_detail.depot_name",
+          "width": "100%"
+        }
+      },
+      "ctrl_inv_inventory_detaildepot_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_inventory_detaildepot_id",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_inventory_detail.depot_id",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrl_inv_inventory_detailvendor_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_inventory_detailvendor_id",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_inventory_detail.vendor_id",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrl_inv_inventory_detailvendor_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_inventory_detailvendor_code",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_inventory_detail.vendor_code",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrl_inv_inventory_detailmat_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_inventory_detailmat_id",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_inventory_detail.mat_id",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrl_inv_inventory_detailmat_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrl_inv_inventory_detailmat_code",
+          "runat": "server",
+          "xdatabind": "$formSet.ServerName:inv_inventory_detail.mat_code",
+          "width": "100%",
+          "hiddenexpress": "1"
+        }
+      },
+      "ctrlinv_inventory_detailvendor_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_detailvendor_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_detail.vendor_name",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_detailmat_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_detailmat_code",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_detail.mat_code",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_detailmat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_detailmat_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_detail.mat_name",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_detailmat_spec": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_detailmat_spec",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_detail.mat_spec",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_detailinv_stnum_unit": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_detailinv_stnum_unit",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_detail.inv_stnum_unit",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_detaildepot_mat_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_detaildepot_mat_num",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_detail.depot_mat_num",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_detailinv_depot_mat_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_detailinv_depot_mat_num",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_detail.inv_depot_mat_num",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_detailinv_diff_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_detailinv_diff_num",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_detail.inv_diff_num",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_detailinv_remarks": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_detailinv_remarks",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_detail.inv_remarks",
+          "width": "100%"
+        }
+      },
+      "table1": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "960",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": " 1,1 ",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlinv_inventory_detaildepot_name",
+          "ctrl_inv_inventory_detaildepot_id",
+          "ctrl_inv_inventory_detailvendor_id",
+          "ctrl_inv_inventory_detailvendor_code",
+          "ctrl_inv_inventory_detailmat_id",
+          "ctrl_inv_inventory_detailmat_code",
+          "ctrlinv_inventory_detailvendor_name",
+          "ctrlinv_inventory_detailmat_code",
+          "ctrlinv_inventory_detailmat_name",
+          "ctrlinv_inventory_detailmat_spec",
+          "ctrlinv_inventory_detailinv_stnum_unit",
+          "ctrlinv_inventory_detaildepot_mat_num",
+          "ctrlinv_inventory_detailinv_depot_mat_num",
+          "ctrlinv_inventory_detailinv_diff_num",
+          "ctrlinv_inventory_detailinv_remarks"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 1,
+          "rows": 1
+        }
+      },
+      "ctrlinv_inventory_masterCompany": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterCompany",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.Company",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterDept": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterDept",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.Dept",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterdepot_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterdepot_id",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.depot_id",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterCreateUser": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterCreateUser",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.CreateUser",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_mastercreate_time": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlinv_inventory_mastercreate_time",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.create_time",
+          "width": "100%"
+        }
+      },
+      "ctrlinv_inventory_masterupdate_time": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlinv_inventory_masterupdate_time",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_master.update_time",
+          "width": "100%"
+        }
+      },
+      "table2": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table2"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlinv_inventory_masterCompany",
+          "ctrlinv_inventory_masterDept",
+          "ctrlinv_inventory_masterdepot_id",
+          "ctrlinv_inventory_masterCreateUser",
+          "ctrlinv_inventory_mastercreate_time",
+          "ctrlinv_inventory_masterupdate_time"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlinv_inventory_masterCompanyName",
+      "ctrlinv_inventory_masterDeptName",
+      "ctrlinv_inventory_masterCreateUserName",
+      "ctrlinv_inventory_masterinv_master_time",
+      "ctrlinv_inventory_masterinv_master_year",
+      "ctrlinv_inventory_masterinv_master_month",
+      "ctrlinv_inventory_masterdepot_name",
+      "ctrlinv_inventory_masterinv_remarks",
+      "table1",
+      "table2"
+    ]
+  }
+}

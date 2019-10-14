@@ -1,0 +1,149 @@
+﻿{
+  "generateAt": "2019-10-12T21:21:47.3746601+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlprod_report3product_line": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report3product_line",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.product_line",
+          "fieldname": "产线"
+        }
+      },
+      "ctrlprod_report3workshop": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report3workshop",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.workshop",
+          "fieldname": "车间"
+        }
+      },
+      "ctrlprod_report3yield": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report3yield",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.yield",
+          "fieldname": "产量"
+        }
+      },
+      "ctrlprod_report3Prod_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report3Prod_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.Prod_name",
+          "fieldname": "品名"
+        }
+      },
+      "ctrlprod_report3spec": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report3spec",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.spec",
+          "fieldname": "规格"
+        }
+      },
+      "ctrlprod_report3input_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlprod_report3input_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.input_date",
+          "fieldname": "日期"
+        }
+      },
+      "ctrlprod_report3today_saka_amount": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report3today_saka_amount",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.today_saka_amount",
+          "fieldname": "本日接清酒量"
+        }
+      },
+      "ctrlprod_report3today_product_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report3today_product_num",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.today_product_num",
+          "fieldname": "本日成品量"
+        }
+      },
+      "ctrlprod_report3today_loss": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report3today_loss",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.today_loss",
+          "fieldname": "本日酒损"
+        }
+      },
+      "ctrlprod_report3memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_report3memo",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.memo",
+          "fieldname": "备注"
+        }
+      },
+      "ctrlprod_report3create_time": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlprod_report3create_time",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.create_time",
+          "fieldname": "创建时间"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": []
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlprod_report3product_line",
+      "ctrlprod_report3workshop",
+      "ctrlprod_report3yield",
+      "ctrlprod_report3Prod_name",
+      "ctrlprod_report3spec",
+      "ctrlprod_report3input_date",
+      "ctrlprod_report3today_saka_amount",
+      "ctrlprod_report3today_product_num",
+      "ctrlprod_report3today_loss",
+      "ctrlprod_report3memo",
+      "ctrlprod_report3create_time",
+      "table1"
+    ]
+  }
+}

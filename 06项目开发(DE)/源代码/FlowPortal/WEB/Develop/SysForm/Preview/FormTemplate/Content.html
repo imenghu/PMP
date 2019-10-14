@@ -1,0 +1,132 @@
+﻿##页头
+#include("Head.html")
+##全局变量
+#set($PageWidth=960)
+<!--##样式
+$Styles
+##脚本
+$Scripts-->
+<form runat="server">
+    <table width="${PageWidth}" align="center" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="200"></td>
+                <td width="400" align="center" class="header-td-title">
+                    <strong><font size="5">${FormTitle}</font></strong>
+                </td>
+                <td width="200" class="header-td-sn"></td>
+            </tr>
+        </tbody>
+    </table>
+    #foreach($formSet in $FormSetList)
+    #if($formSet.IsRepeatable==false)
+    ##主表
+    <table width="${PageWidth}" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+            #if(${formSet.IsShowHeader})
+            <tr>
+                <td height="25" class="xttl" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid" colspan="#set($ColSpan=3*2)$ColSpan">
+                    ${formSet.SetName}
+                </td>
+            </tr>
+            #end
+            #set($count=0)
+            #foreach($formItem in $FormItemList)
+            #if($formItem.FormSetId==$formSet.FormSetId)
+            ##第一个
+            #if($count%3==0)
+            <tr>
+                #end
+                #if($formItem.IsShow==true)
+                <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    $formItem.ItemName
+                </td>
+                <td width="#set($ColWidth=$formItem.Width - 100)$ColWidth" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    $formItem.GetItemString()
+                </td>
+                #set($count=$count+1)
+                #end
+                ##最后一个
+                #if($count+1%3==0)
+            </tr>
+            #end
+            #end
+            #end
+        </tbody>
+    </table>
+    #else
+    ##明细表
+    <table width="${PageWidth}" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" dynamicarea="#if(${formSet.IsShowHeader}) 2,1 #else 1,1 #end">
+        <tbody>
+            #if(${formSet.IsShowHeader})
+            <tr>
+                <td height="25" class="xttl" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid" colspan="#set($ColSpan=$FormItemList.Count+1)$ColSpan">
+                    ${formSet.SetName}
+                </td>
+            </tr>
+            #end
+            <tr>
+                <td class="xtbd" width="50" style="BORDER-TOP: medium none; BORDER-RIGHT: gray 1px solid; BORDER-BOTTOM: gray 1px solid; BORDER-LEFT: gray 1px solid; ">序号</td>
+                #foreach($formItem in $FormItemList)
+                #if($formItem.FormSetId==$formSet.FormSetId && $formItem.IsShow==true)
+                <td class="xtbd" width="$formItem.Width" style="BORDER-TOP: medium none; BORDER-RIGHT: gray 1px solid; BORDER-BOTTOM: gray 1px solid; BORDER-LEFT: gray 1px solid; ">$formItem.ItemName</td>
+                #end
+                #end
+            </tr>
+            <tr>
+                <td style="BORDER-TOP: medium none; BORDER-RIGHT: gray 1px solid; BORDER-BOTTOM: gray 1px solid; BORDER-LEFT: gray 1px solid; ">
+                    <aspxform:xgridlineno runat="server" width="100%" borderwidth="1" borderstyle="None" backcolor="White" textalign="Center">1</aspxform:xgridlineno>
+                </td>
+                #set($count=0)
+                #foreach($formItem in $FormItemList)
+                #if($formItem.FormSetId==$formSet.FormSetId && $formItem.IsShow==true)
+                <td style="BORDER-TOP: medium none; BORDER-RIGHT: gray 1px solid; BORDER-BOTTOM: gray 1px solid; BORDER-LEFT: gray 1px solid; ">
+                    $formItem.GetItemString()
+                    ##第一个单元格,存放隐藏的控件
+                    #if($count==0)
+                    #foreach($hiddenFormItem in $FormItemList)
+                    #if($hiddenFormItem.FormSetId==$formSet.FormSetId && $hiddenFormItem.IsShow==false)
+                    <aspxform:XTextBox id="ctrl_${formSet.SetId}${hiddenFormItem.ItemId}" runat="server" width="100%" HiddenExpress='1' XDataBind="#if($hiddenFormItem.IsTmp)${hiddenFormItem.ItemId}#else$formSet.ServerName:${formSet.SetId}.${hiddenFormItem.ItemId}#end"></aspxform:XTextBox>
+                    #end
+                    #end
+                    #end
+                </td>
+                #set($count=$count+1)
+                #end
+                #end
+            </tr>
+        </tbody>
+    </table>
+    #end
+    ##判断结束
+    #end
+    ##遍历结束
+    <br/>
+    #foreach($formSet in $FormSetList)
+    #if($formSet.IsRepeatable==false)
+    ##主表
+    <table width="800" hiddenexpress="1" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+            #foreach($formItem in $FormItemList)
+            #if($formItem.FormSetId==$formSet.FormSetId)
+            #if($formItem.IsShow==false)
+            <tr>
+                <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    $formItem.ItemName
+                </td>
+                <td width="#set($ColWidth=$formItem.Width - 100)$ColWidth" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    $formItem.GetItemString()
+                </td>
+            </tr>
+            #end
+            #end
+            #end
+        </tbody>
+    </table>
+    #end
+    ##判断结束
+    #end
+    ##遍历结束
+</form>
+##页头
+#include("Foot.html")

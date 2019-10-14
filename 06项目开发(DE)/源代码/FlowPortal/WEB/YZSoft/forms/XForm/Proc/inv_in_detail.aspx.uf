@@ -1,0 +1,282 @@
+﻿{
+  "generateAt": "2019-10-12T17:47:54.1731899+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {
+      "getQueryString": "function (name){\r\n            var reg = new RegExp(\"(^|&)\" + name + \"=([^&]*)(&|$)\", \"i\");\r\n            var r = window.location.search.substr(1).match(reg);\r\n            if (r != null) return unescape(r[2]); return null;\r\n        }"
+    },
+    "components": {
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.vendor_name"
+        }
+      },
+      "XTextBox10": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox10",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.mat_code"
+        }
+      },
+      "XTextBox11": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox11",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.mat_name"
+        }
+      },
+      "XTextBox3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox3",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.mat_spesc"
+        }
+      },
+      "XTextBox16": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox16",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.if_tests"
+        }
+      },
+      "XTextBox12": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox12",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.testresult"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "100%",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "SFDATA:inv_in_detail.if_tests!='是'",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox12"
+        ]
+      },
+      "XTextBox9": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox9",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.plan_in_slnum"
+        }
+      },
+      "XTextBox13": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox13",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.in_slnum"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.in_slnum_unit"
+        }
+      },
+      "XTextBox8": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox8",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.sl_st_scale"
+        }
+      },
+      "XTextBox14": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox14",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.in_stnum"
+        }
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.in_stnum_unit"
+        }
+      },
+      "XTextBox7": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox7",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.yunhuoren"
+        }
+      },
+      "XTextBox15": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox15",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.phone"
+        }
+      },
+      "XDateTimePicker1": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "XDateTimePicker1",
+          "runat": "server",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.create_time"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_in_detail.depot_name",
+          "prompttext": "请选择"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "测试"
+            }
+          }
+        ]
+      },
+      "XTextBox6": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox6",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.submit_userid"
+        }
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.in_remarks",
+          "rows": "5",
+          "textmode": "MultiLine"
+        }
+      },
+      "xtxtPurTaskId": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "xtxtPurTaskId",
+          "runat": "server",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:inv_in_detail.arrival_notice_id",
+          "valuetodisplaytext": "DataSource:SFDATA;TableName:proc_arrival_notice;FilterColumn:arrival_notice_id;DisplayColumn:arrival_notice_id",
+          "datamap": "vendor_name->SFDATA:inv_in_detail.vendor_name;mat_code->SFDATA:inv_in_detail.mat_code;mat_name->SFDATA:inv_in_detail.mat_name;mat_spesc->SFDATA:inv_in_detail.mat_spesc;arrival_slnum->SFDATA:inv_in_detail.plan_in_slnum;arrival_slnum_unit->SFDATA:inv_in_detail.in_slnum_unit;arrival_stnum->SFDATA:inv_in_detail.in_stnum;arrival_stnum_unit->SFDATA:inv_in_detail.in_stnum_unit;sl_st_scale->SFDATA:inv_in_detail.sl_st_scale;arrival_username->SFDATA:inv_in_detail.yunhuoren;arrival_usertel->SFDATA:inv_in_detail.phone;if_tests->SFDATA:inv_in_detail.if_tests"
+        }
+      },
+      "table2": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "960",
+          "align": "center",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table2"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "xtxtPurTaskId"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "XTextBox2",
+      "XTextBox10",
+      "XTextBox11",
+      "XTextBox3",
+      "XTextBox16",
+      "table1",
+      "XTextBox9",
+      "XTextBox13",
+      "XTextBox4",
+      "XTextBox8",
+      "XTextBox14",
+      "XTextBox5",
+      "XTextBox7",
+      "XTextBox15",
+      "XDateTimePicker1",
+      "XDropDownList1",
+      "XTextBox6",
+      "XTextBox1",
+      "table2"
+    ]
+  }
+}

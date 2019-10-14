@@ -1,0 +1,270 @@
+﻿{
+  "generateAt": "2019-10-11T21:16:22.7429994+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {
+      "getQueryString": "function (name){\r\n            var reg = new RegExp(\"(^|&)\" + name + \"=([^&]*)(&|$)\", \"i\");\r\n            var r = window.location.search.substr(1).match(reg);\r\n            if (r != null) return unescape(r[2]); return null;\r\n        }"
+    },
+    "components": {
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.vendor_name",
+          "width": "80%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.if_tests",
+          "prompttext": "请选择"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "1",
+              "innerhtml": "是"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "0",
+              "innerhtml": "否"
+            }
+          }
+        ]
+      },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.mat_code",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "disablebehavior": "ReadOnly"
+        }
+      },
+      "XTextBox10": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox10",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.mat_name",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "disablebehavior": "ReadOnly"
+        }
+      },
+      "XTextBox11": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox11",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.mat_spesc",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "disablebehavior": "ReadOnly"
+        }
+      },
+      "XTextBox3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox3",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_slnum",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox9": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox9",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_slnum_unit",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "disablebehavior": "ReadOnly"
+        }
+      },
+      "XTextBox12": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox12",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.plan_price",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "disablebehavior": "ReadOnly"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_stnum",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "disablebehavior": "ReadOnly"
+        }
+      },
+      "XTextBox8": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox8",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_stnum_unit",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "disablebehavior": "ReadOnly"
+        }
+      },
+      "XTextBox13": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox13",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.sl_st_scale",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "disablebehavior": "ReadOnly"
+        }
+      },
+      "XDateTimePicker1": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "XDateTimePicker1",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.plan_arrival_time",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox7": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox7",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.storename",
+          "width": "80%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox14": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox14",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.plan_arrival_price",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_username",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox6": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox6",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_usertel",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox15": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox15",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.notice_state",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "innerhtml": "0"
+        }
+      },
+      "xtxtPurTaskId": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "xtxtPurTaskId",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.pur_task_id",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "valuetodisplaytext": "DataSource:SFDATA;TableName:proc_pur_task;FilterColumn:pur_task_id;DisplayColumn:pur_task_id",
+          "datamap": "mat_code->SFDATA:proc_arrival_notice.mat_code;mat_name->SFDATA:proc_arrival_notice.mat_name;plan_price->SFDATA:proc_arrival_notice.plan_price;pur_slnum_unit->SFDATA:proc_arrival_notice.arrival_slnum_unit;pur_stnum->SFDATA:proc_arrival_notice.arrival_stnum;pur_stnum_unit->SFDATA:proc_arrival_notice.arrival_stnum_unit;sl_st_scale->SFDATA:proc_arrival_notice.sl_st_scale"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "960",
+          "align": "center",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox15",
+          "xtxtPurTaskId"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "XTextBox1",
+      "XDropDownList1",
+      "XTextBox2",
+      "XTextBox10",
+      "XTextBox11",
+      "XTextBox3",
+      "XTextBox9",
+      "XTextBox12",
+      "XTextBox4",
+      "XTextBox8",
+      "XTextBox13",
+      "XDateTimePicker1",
+      "XTextBox7",
+      "XTextBox14",
+      "XTextBox5",
+      "XTextBox6",
+      "table1"
+    ]
+  }
+}

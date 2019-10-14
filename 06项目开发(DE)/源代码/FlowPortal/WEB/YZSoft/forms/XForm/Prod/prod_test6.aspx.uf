@@ -1,0 +1,140 @@
+﻿{
+  "generateAt": "2019-10-11T14:17:40.9226603+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlprod_test6analyze_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlprod_test6analyze_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test6.analyze_date"
+        }
+      },
+      "ctrlprod_test6mat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test6mat_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test6.mat_name"
+        }
+      },
+      "ctrlprod_test6tank_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test6tank_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test6.tank_id"
+        }
+      },
+      "ctrlprod_test6ferment_days": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test6ferment_days",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test6.ferment_days"
+        }
+      },
+      "ctrlprod_test6diacetyl": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test6diacetyl",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test6.diacetyl"
+        }
+      },
+      "ctrlprod_test6operator_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test6operator_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test6.operator_name"
+        }
+      },
+      "ctrlprod_test6memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test6memo",
+          "runat": "server",
+          "width": "100%",
+          "textmode": "MultiLine",
+          "xdatabind": "SFDATA:prod_test6.memo"
+        }
+      },
+      "ctrlprod_test6org_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test6org_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test6.org_id"
+        }
+      },
+      "ctrlprod_test6DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test6DeptName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test6.DeptName"
+        }
+      },
+      "ctrlprod_test6Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test6Company",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test6.Company"
+        }
+      },
+      "ctrlprod_test6CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test6CompanyName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test6.CompanyName"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlprod_test6org_id",
+          "ctrlprod_test6DeptName",
+          "ctrlprod_test6Company",
+          "ctrlprod_test6CompanyName"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlprod_test6analyze_date",
+      "ctrlprod_test6mat_name",
+      "ctrlprod_test6tank_id",
+      "ctrlprod_test6ferment_days",
+      "ctrlprod_test6diacetyl",
+      "ctrlprod_test6operator_name",
+      "ctrlprod_test6memo",
+      "table1"
+    ]
+  }
+}

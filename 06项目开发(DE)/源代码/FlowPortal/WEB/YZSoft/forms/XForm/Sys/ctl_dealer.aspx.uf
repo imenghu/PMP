@@ -1,0 +1,199 @@
+﻿{
+  "generateAt": "2019-10-11T11:38:17.475216+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_dealer.province_id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1",
+          "valuecolumn": "id",
+          "displaycolumn": "name",
+          "prompttext": "--请选择--"
+        }
+      },
+      "XDropDownList2": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList2",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_dealer.city_id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2",
+          "valuecolumn": "id",
+          "displaycolumn": "name",
+          "prompttext": "--请选择--"
+        }
+      },
+      "ctrlctl_dealerdealer_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_dealerdealer_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_dealer.dealer_name"
+        }
+      },
+      "ctrlctl_dealertax_cer_no": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_dealertax_cer_no",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_dealer.tax_cer_no"
+        }
+      },
+      "ctrlctl_dealerdealer_contact": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_dealerdealer_contact",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_dealer.dealer_contact"
+        }
+      },
+      "ctrlctl_dealerdealer_tel": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_dealerdealer_tel",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_dealer.dealer_tel"
+        }
+      },
+      "ctrlctl_dealerdealer_email": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_dealerdealer_email",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_dealer.dealer_email"
+        }
+      },
+      "ctrlctl_dealerdealer_zipcode": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_dealerdealer_zipcode",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_dealer.dealer_zipcode"
+        }
+      },
+      "ctrlctl_dealerdealer_wechat": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_dealerdealer_wechat",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_dealer.dealer_wechat"
+        }
+      },
+      "ctrlctl_dealerdealer_qq": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_dealerdealer_qq",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_dealer.dealer_qq"
+        }
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_dealer.dealer_addr",
+          "rows": "5",
+          "textmode": "MultiLine"
+        }
+      },
+      "ctrlctl_dealerdealer_remarks": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_dealerdealer_remarks",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_dealer.dealer_remarks",
+          "rows": "5",
+          "textmode": "MultiLine"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": []
+      },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "var1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "innerhtml": "1"
+        }
+      },
+      "XTextBox3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox3",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "var2",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "innerhtml": "2"
+        }
+      },
+      "table2": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table2"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox2",
+          "XTextBox3"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "XDropDownList1",
+      "XDropDownList2",
+      "ctrlctl_dealerdealer_name",
+      "ctrlctl_dealertax_cer_no",
+      "ctrlctl_dealerdealer_contact",
+      "ctrlctl_dealerdealer_tel",
+      "ctrlctl_dealerdealer_email",
+      "ctrlctl_dealerdealer_zipcode",
+      "ctrlctl_dealerdealer_wechat",
+      "ctrlctl_dealerdealer_qq",
+      "XTextBox1",
+      "ctrlctl_dealerdealer_remarks",
+      "table1",
+      "table2"
+    ]
+  }
+}

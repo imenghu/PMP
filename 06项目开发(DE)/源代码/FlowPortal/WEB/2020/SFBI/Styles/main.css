@@ -1,0 +1,15 @@
+﻿@import url(../../../YZSoft/theme/2020/admin.css);
+
+.yz-logo {
+    width: 245px;
+    height: 40px;
+    background-image: url(ui/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+.yz-cnt-logowrap {
+     background-color: transparent; 
+}

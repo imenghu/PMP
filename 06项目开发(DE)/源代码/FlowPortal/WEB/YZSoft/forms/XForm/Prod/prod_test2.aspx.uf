@@ -1,0 +1,219 @@
+﻿{
+  "generateAt": "2019-10-10T17:29:05.297373+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlProd_test2analyze_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlProd_test2analyze_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.analyze_date"
+        }
+      },
+      "ctrlProd_test2mat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2mat_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.mat_name"
+        }
+      },
+      "ctrlProd_test2tank_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2tank_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.tank_id"
+        }
+      },
+      "ctrlProd_test2alcohol": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2alcohol",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.alcohol"
+        }
+      },
+      "ctrlProd_test2real_ferment": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2real_ferment",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.real_ferment"
+        }
+      },
+      "ctrlProd_test2wort_concent": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2wort_concent",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.wort_concent"
+        }
+      },
+      "ctrlProd_test2true_concent": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2true_concent",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.true_concent"
+        }
+      },
+      "ctrlProd_test2total_acid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2total_acid",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.total_acid"
+        }
+      },
+      "ctrlProd_test2co2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2co2",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.co2"
+        }
+      },
+      "ctrlProd_test2dis_oxygen": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2dis_oxygen",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.dis_oxygen"
+        }
+      },
+      "ctrlProd_test2chroma_ebc": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2chroma_ebc",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.chroma_ebc"
+        }
+      },
+      "ctrlProd_test2ph": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2ph",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.ph"
+        }
+      },
+      "ctrlProd_test2turbidity_ebc": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2turbidity_ebc",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.turbidity_ebc"
+        }
+      },
+      "ctrlProd_test2operator_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2operator_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.operator_name"
+        }
+      },
+      "ctrlProd_test2memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2memo",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.memo"
+        }
+      },
+      "ctrlProd_test2mat_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2mat_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.mat_id"
+        }
+      },
+      "ctrlProd_test2DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2DeptName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.DeptName"
+        }
+      },
+      "ctrlProd_test2Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2Company",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.Company"
+        }
+      },
+      "ctrlProd_test2CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test2CompanyName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.CompanyName"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlProd_test2mat_id",
+          "ctrlProd_test2DeptName",
+          "ctrlProd_test2Company",
+          "ctrlProd_test2CompanyName"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlProd_test2analyze_date",
+      "ctrlProd_test2mat_name",
+      "ctrlProd_test2tank_id",
+      "ctrlProd_test2alcohol",
+      "ctrlProd_test2real_ferment",
+      "ctrlProd_test2wort_concent",
+      "ctrlProd_test2true_concent",
+      "ctrlProd_test2total_acid",
+      "ctrlProd_test2co2",
+      "ctrlProd_test2dis_oxygen",
+      "ctrlProd_test2chroma_ebc",
+      "ctrlProd_test2ph",
+      "ctrlProd_test2turbidity_ebc",
+      "ctrlProd_test2operator_name",
+      "ctrlProd_test2memo",
+      "table1"
+    ]
+  }
+}

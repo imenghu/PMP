@@ -1,0 +1,78 @@
+
+/*地图大小*/
+#cmpa1f048,#cmp9e30fc{
+    width:100% !important;
+    height:100% !important;
+    overflow: hidden;
+}
+/*右边列表定位*/
+
+#cmp15ecad{
+    left: auto !important;
+    right: 250px !important;
+    top: 50% !important;
+    bottom: 0 !important;
+    transform: translate(0,-50%);
+}
+#cmp15ecad .panel-body{
+    background: #F6F6F7;
+}
+#cmpb617e9,#cmpb54dba,#cmp9ec316{
+    height: 30px !important;
+    line-height: 30px;
+}
+
+#cmpb617e9{
+    left: auto !important;
+    right: 90px !important;
+    top: 50% !important;
+    transform: translate(0,calc(-50% - 177px));
+}
+#cmpb54dba{
+    left:auto !important;
+    right:0 !important;
+    top: 50% !important;
+    transform: translate(0,calc(-50% - 177px));
+}
+#cmp9ec316{
+    left: auto !important;
+    right: 82px !important;
+    top: 50% !important;
+    transform: translate(0,calc(-50% - 177px));
+}
+
+#cmp60d8c5{
+    height: 30px !important;
+    width: 300px !important;
+    left: auto !important;
+    right: 250px !important;
+    top: 50% !important;
+    transform: translate(0,calc(-50% - 177px));
+    color: #000;
+    background: #f7f8f8;
+    box-shadow: 5px 4px 10px #cccccc;
+}
+#cmp60d8c5>label{
+    text-align: center;
+    font-size: 13px;
+    line-height: 30px;
+}
+#cmp60d8c5>label>b{
+    font-weight: 400;
+    font-size: 15px;
+    margin-right: 5px;
+}
+#cmp15ecad .datagrid-view2>.datagrid-body>.datagrid-btable{
+    padding:  10px 0;
+}
+#cmpb617e9,#cmpb54dba,#cmp9ec316{
+    display:none !important;
+}
+@media screen and (max-width: 1500px) {
+    #cmp60d8c5,#cmp15ecad {
+        right: 150px !important;
+    }
+}
+
+
+

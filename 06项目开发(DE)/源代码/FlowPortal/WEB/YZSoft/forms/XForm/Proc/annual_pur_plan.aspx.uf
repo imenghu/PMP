@@ -1,0 +1,430 @@
+﻿{
+  "generateAt": "2019-10-10T17:29:31.8831967+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "XTextBox26": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox26",
+          "runat": "server",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.CompanyName"
+        }
+      },
+      "XTextBox10": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox10",
+          "runat": "server",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.DeptName"
+        }
+      },
+      "XTextBox25": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox25",
+          "onclick": "WdatePicker({dateFmt:'yyyy'})",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_pur_year"
+        }
+      },
+      "XTextBox11": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox11",
+          "runat": "server",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "130px",
+          "xdatabind": "SFDATA:annual_pur_plan.mat_name"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "datamap": "mat_id->SFDATA:annual_pur_plan.mat_id;mat_code->SFDATA:annual_pur_plan.mat_code;mat_name->SFDATA:annual_pur_plan.mat_name;mat_spec->SFDATA:annual_pur_plan.mat_spec;base_unit->SFDATA:annual_pur_plan.plan_stnum_unit",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "width": "21px"
+        }
+      },
+      "XTextBox9": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox9",
+          "runat": "server",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.mat_code"
+        }
+      },
+      "XTextBox14": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox14",
+          "runat": "server",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.mat_spec"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_slnum_unit",
+          "datamap": "numerator->SFDATA:annual_pur_plan.sl_st_scale",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:annual_pur_plan.mat_id,if_base_unit->varState",
+          "width": "100%",
+          "displaycolumn": "mat_unit_name",
+          "valuecolumn": "mat_unit_id"
+        }
+      },
+      "XTextBox12": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox12",
+          "runat": "server",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_stnum_unit"
+        }
+      },
+      "XTextBox13": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox13",
+          "runat": "server",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.sl_st_scale"
+        }
+      },
+      "XTextBox7": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox7",
+          "runat": "server",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_total_num",
+          "express": "SFDATA:annual_pur_plan.plan_month_jan+SFDATA:annual_pur_plan.plan_month_feb+SFDATA:annual_pur_plan.plan_month_mar+SFDATA:annual_pur_plan.plan_month_apr+SFDATA:annual_pur_plan.plan_month_may+SFDATA:annual_pur_plan.plan_month_june+SFDATA:annual_pur_plan.plan_month_sept+SFDATA:annual_pur_plan.plan_month_aug+SFDATA:annual_pur_plan.plan_month_july+SFDATA:annual_pur_plan.plan_month_oct+SFDATA:annual_pur_plan.plan_month_nov+SFDATA:annual_pur_plan.plan_month_dec"
+        }
+      },
+      "XTextBox24": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox24",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_price"
+        }
+      },
+      "XTextBox15": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox15",
+          "runat": "server",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.total_price",
+          "express": "SFDATA:annual_pur_plan.plan_price*SFDATA:annual_pur_plan.plan_total_num*SFDATA:annual_pur_plan.sl_st_scale"
+        }
+      },
+      "XTextBox6": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox6",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_jan"
+        }
+      },
+      "XTextBox23": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox23",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_feb"
+        }
+      },
+      "XTextBox16": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox16",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_mar"
+        }
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_apr"
+        }
+      },
+      "XTextBox22": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox22",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_may"
+        }
+      },
+      "XTextBox17": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox17",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_june"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_july"
+        }
+      },
+      "XTextBox21": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox21",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_aug"
+        }
+      },
+      "XTextBox18": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox18",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_sept"
+        }
+      },
+      "XTextBox3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox3",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_oct"
+        }
+      },
+      "XTextBox20": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox20",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_nov"
+        }
+      },
+      "XTextBox19": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox19",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_dec"
+        }
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.planpur_remarks",
+          "textmode": "MultiLine",
+          "rows": "5"
+        }
+      },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.CreateUserName"
+        }
+      },
+      "XDateTimePicker1": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "XDateTimePicker1",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "xdatabind": "SFDATA:annual_pur_plan.create_time",
+          "width": "100%",
+          "displayonly": "True"
+        }
+      },
+      "XTextBox8": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox8",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "130px",
+          "xdatabind": "SFDATA:annual_pur_plan.mat_id"
+        }
+      },
+      "XTextBox27": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox27",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "varState",
+          "innerhtml": "1"
+        }
+      },
+      "XTextBox28": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox28",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "130px",
+          "xdatabind": "SFDATA:annual_pur_plan.Company"
+        }
+      },
+      "XTextBox29": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox29",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "130px",
+          "xdatabind": "SFDATA:annual_pur_plan.Dept"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "100%",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox8",
+          "XTextBox27",
+          "XTextBox28",
+          "XTextBox29"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "XTextBox26",
+      "XTextBox10",
+      "XTextBox25",
+      "XTextBox11",
+      "XDataBrowserButton1",
+      "XTextBox9",
+      "XTextBox14",
+      "XDropDownList1",
+      "XTextBox12",
+      "XTextBox13",
+      "XTextBox7",
+      "XTextBox24",
+      "XTextBox15",
+      "XTextBox6",
+      "XTextBox23",
+      "XTextBox16",
+      "XTextBox5",
+      "XTextBox22",
+      "XTextBox17",
+      "XTextBox4",
+      "XTextBox21",
+      "XTextBox18",
+      "XTextBox3",
+      "XTextBox20",
+      "XTextBox19",
+      "XTextBox1",
+      "XTextBox2",
+      "XDateTimePicker1",
+      "table1"
+    ]
+  }
+}

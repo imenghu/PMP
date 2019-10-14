@@ -1,0 +1,196 @@
+﻿{
+  "generateAt": "2019-10-14T12:03:21.5210885+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlProd_report2input_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlProd_report2input_date",
+          "runat": "server",
+          "fieldname": "日期",
+          "xdatabind": "SFDATA:Prod_report2.input_date",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2tankid_source": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2tankid_source",
+          "runat": "server",
+          "fieldname": "发酵罐号",
+          "xdatabind": "SFDATA:Prod_report2.tankid_source",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2tankid_dest": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2tankid_dest",
+          "runat": "server",
+          "fieldname": "清酒罐号",
+          "xdatabind": "SFDATA:Prod_report2.tankid_dest",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2concentration": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2concentration",
+          "runat": "server",
+          "fieldname": "浓度",
+          "xdatabind": "SFDATA:Prod_report2.concentration",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2outferment_liquor_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2outferment_liquor_num",
+          "runat": "server",
+          "fieldname": "出发酵液数量",
+          "xdatabind": "SFDATA:Prod_report2.outferment_liquor_num",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2xl_saka_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2xl_saka_num",
+          "runat": "server",
+          "fieldname": "折11度清酒数量",
+          "xdatabind": "SFDATA:Prod_report2.xl_saka_num",
+          "width": "100%",
+          "hiddeninput": "False",
+          "readonly": "True"
+        }
+      },
+      "ctrlProd_report2saka_degree": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2saka_degree",
+          "runat": "server",
+          "fieldname": "清酒度数",
+          "xdatabind": "SFDATA:Prod_report2.saka_degree",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2outsaka_actual_num": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2outsaka_actual_num",
+          "runat": "server",
+          "fieldname": "实际出清酒数量",
+          "xdatabind": "SFDATA:Prod_report2.outsaka_actual_num",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2xl_saka_actualnum": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2xl_saka_actualnum",
+          "runat": "server",
+          "fieldname": "实际出清酒折11度数量",
+          "xdatabind": "SFDATA:Prod_report2.xl_saka_actualnum",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2filter_wine_damage": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2filter_wine_damage",
+          "runat": "server",
+          "fieldname": "过滤酒损",
+          "xdatabind": "SFDATA:Prod_report2.filter_wine_damage",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2memo",
+          "runat": "server",
+          "fieldname": "备注",
+          "xdatabind": "SFDATA:Prod_report2.memo",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2DeptName",
+          "runat": "server",
+          "fieldname": "部门名称",
+          "xdatabind": "SFDATA:Prod_report2.DeptName",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2Company",
+          "runat": "server",
+          "fieldname": "公司编码",
+          "xdatabind": "SFDATA:Prod_report2.Company",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2CompanyName",
+          "runat": "server",
+          "fieldname": "公司名称",
+          "xdatabind": "SFDATA:Prod_report2.CompanyName",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report2Dept": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report2Dept",
+          "runat": "server",
+          "fieldname": "部门编码",
+          "xdatabind": "SFDATA:Prod_report2.Dept",
+          "width": "100%"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlProd_report2DeptName",
+          "ctrlProd_report2Company",
+          "ctrlProd_report2CompanyName",
+          "ctrlProd_report2Dept"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlProd_report2input_date",
+      "ctrlProd_report2tankid_source",
+      "ctrlProd_report2tankid_dest",
+      "ctrlProd_report2concentration",
+      "ctrlProd_report2outferment_liquor_num",
+      "ctrlProd_report2xl_saka_num",
+      "ctrlProd_report2saka_degree",
+      "ctrlProd_report2outsaka_actual_num",
+      "ctrlProd_report2xl_saka_actualnum",
+      "ctrlProd_report2filter_wine_damage",
+      "ctrlProd_report2memo",
+      "table1"
+    ]
+  }
+}

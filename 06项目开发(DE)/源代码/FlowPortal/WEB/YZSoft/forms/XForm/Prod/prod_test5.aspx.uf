@@ -1,0 +1,154 @@
+﻿{
+  "generateAt": "2019-10-11T11:23:53.1410056+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlprod_test5analyze_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlprod_test5analyze_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.analyze_date"
+        }
+      },
+      "ctrlprod_test5mat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5mat_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.mat_name"
+        }
+      },
+      "ctrlprod_test5tank_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5tank_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.tank_id"
+        }
+      },
+      "ctrlprod_test5dis_oxygen1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5dis_oxygen1",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.dis_oxygen1"
+        }
+      },
+      "ctrlprod_test5dis_oxygen2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5dis_oxygen2",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.dis_oxygen2"
+        }
+      },
+      "ctrlprod_test5dis_oxygen3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5dis_oxygen3",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.dis_oxygen3"
+        }
+      },
+      "ctrlprod_test5operator_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5operator_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.operator_name"
+        }
+      },
+      "ctrlprod_test5memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5memo",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.memo",
+          "max": "0",
+          "min": "0",
+          "placeholder": "",
+          "hiddeninput": "False",
+          "valuetodisplaytext": ""
+        }
+      },
+      "ctrlprod_test5DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5DeptName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.DeptName"
+        }
+      },
+      "ctrlprod_test5Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5Company",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.Company"
+        }
+      },
+      "ctrlprod_test5CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5CompanyName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.CompanyName"
+        }
+      },
+      "ctrlprod_test5org_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlprod_test5org_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test5.org_id"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlprod_test5DeptName",
+          "ctrlprod_test5Company",
+          "ctrlprod_test5CompanyName",
+          "ctrlprod_test5org_id"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlprod_test5analyze_date",
+      "ctrlprod_test5mat_name",
+      "ctrlprod_test5tank_id",
+      "ctrlprod_test5dis_oxygen1",
+      "ctrlprod_test5dis_oxygen2",
+      "ctrlprod_test5dis_oxygen3",
+      "ctrlprod_test5operator_name",
+      "ctrlprod_test5memo",
+      "table1"
+    ]
+  }
+}

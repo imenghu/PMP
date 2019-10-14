@@ -1,0 +1,303 @@
+﻿{
+  "generateAt": "2019-10-11T14:53:33.564926+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlctl_vendorvendor_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorvendor_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.vendor_name",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendortax_cer_no": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendortax_cer_no",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.tax_cer_no",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendorvendor_zipcode": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorvendor_zipcode",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.vendor_zipcode",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendorvendor_contact": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorvendor_contact",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.vendor_contact",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendorvendor_tel": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorvendor_tel",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.vendor_tel",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendorvendor_email": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorvendor_email",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.vendor_email",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendorvendor_wechat": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorvendor_wechat",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.vendor_wechat",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendorvendor_qq": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorvendor_qq",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.vendor_qq",
+          "disableexpress": "1"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_vendor.vendor_state",
+          "disableexpress": "1",
+          "prompttext": "--请选择--"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "1",
+              "innerhtml": "是"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "0",
+              "innerhtml": "否"
+            }
+          }
+        ]
+      },
+      "ctrlctl_vendorvendor_addr": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorvendor_addr",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.vendor_addr",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendorCreateUserName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorCreateUserName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.CreateUserName",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendorUpdateUserName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorUpdateUserName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.UpdateUserName",
+          "disableexpress": "1"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "xclass": "YZSoft.Forms.Field.DataBrowserButton",
+          "text": "选择物料",
+          "width": "66px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "popupwndwidth": "-1",
+          "popupwndheight": "-1",
+          "usesubmitbehavior": "False",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "multiselect": "True",
+          "datamap": "mat_code->SFDATA:ctl_vendor_mat.mat_code;mat_name->SFDATA:ctl_vendor_mat.mat_name;mat_spec->SFDATA:ctl_vendor_mat.mat_spec"
+        }
+      },
+      "ctrlctl_vendor_matmat_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendor_matmat_code",
+          "runat": "server",
+          "width": "170px",
+          "xdatabind": "SFDATA:ctl_vendor_mat.mat_code",
+          "disableexpress": "1"
+        }
+      },
+      "XDataBrowserButton2": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton2",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "datamap": "mat_code->SFDATA:ctl_vendor_mat.mat_code;mat_name->SFDATA:ctl_vendor_mat.mat_name;mat_spec->SFDATA:ctl_vendor_mat.mat_spec"
+        }
+      },
+      "ctrlctl_vendor_matmat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendor_matmat_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor_mat.mat_name",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendor_matmat_spec": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendor_matmat_spec",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor_mat.mat_spec",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendor_matCreateUserName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendor_matCreateUserName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor_mat.CreateUserName",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_vendor_matUpdateUserName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendor_matUpdateUserName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor_mat.UpdateUserName",
+          "disableexpress": "1"
+        }
+      },
+      "table1": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "960",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": " 2,1 ",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlctl_vendor_matmat_code",
+          "XDataBrowserButton2",
+          "ctrlctl_vendor_matmat_name",
+          "ctrlctl_vendor_matmat_spec",
+          "ctrlctl_vendor_matCreateUserName",
+          "ctrlctl_vendor_matUpdateUserName"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 2,
+          "rows": 1
+        }
+      },
+      "ctrlctl_vendorcreate_userid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorcreate_userid",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.create_userid"
+        }
+      },
+      "ctrlctl_vendorlastupdate_userid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_vendorlastupdate_userid",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_vendor.lastupdate_userid"
+        }
+      },
+      "table2": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table2"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlctl_vendorcreate_userid",
+          "ctrlctl_vendorlastupdate_userid"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlctl_vendorvendor_name",
+      "ctrlctl_vendortax_cer_no",
+      "ctrlctl_vendorvendor_zipcode",
+      "ctrlctl_vendorvendor_contact",
+      "ctrlctl_vendorvendor_tel",
+      "ctrlctl_vendorvendor_email",
+      "ctrlctl_vendorvendor_wechat",
+      "ctrlctl_vendorvendor_qq",
+      "XDropDownList1",
+      "ctrlctl_vendorvendor_addr",
+      "ctrlctl_vendorCreateUserName",
+      "ctrlctl_vendorUpdateUserName",
+      "XDataBrowserButton1",
+      "table1",
+      "table2"
+    ]
+  }
+}

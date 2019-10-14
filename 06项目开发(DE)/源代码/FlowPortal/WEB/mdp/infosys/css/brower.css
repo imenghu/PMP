@@ -1,0 +1,141 @@
+body {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cosui-panel {
+    display: table;
+}
+
+.cosui-panel ul {
+    display: table-cell;
+}
+
+#conSelect .l-btn-text {
+    margin: 0;
+    height: 24px;
+    line-height: 15px;
+}
+
+/*布局元件 标题字体过大显示不完全*/
+.cosui-accordion .panel-title, .cosui-tree .tree-title, .cosui-tree .tree-node, .cosui-layout .panel-title {
+    line-height: 100% !important;
+    height: auto !important;
+}
+
+/*上传控件内容间隔色*/
+.fileContainer{
+    overflow: auto;
+}
+.fileContainer li{
+    margin-top: 5px;
+    height: 20px;
+    line-height: 20px;
+}
+.fileContainer li span{
+    display: inline-block;
+}
+
+.fileContainer li:nth-child(odd){
+    background-color:#fff
+}
+.fileContainer li:nth-child(even){
+    background-color:#F9F9F9
+}
+
+.fileContainer .fileName{
+    width: 50%;
+    float: left;
+    cursor:pointer;
+    display: inline-block;
+    color: #428bca;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.fileContainer .fileRight{
+    width: 50%;
+    padding: 5px 0 0 0;
+    float: right;
+}
+.fileRight span{
+    float: right;
+    display: inline-block;
+    margin-right: 10px;
+    color: #8c8c8c;
+    cursor: pointer;
+}
+.fileRight span:hover{
+    color: #428bca;
+}
+
+/*.cosui-tree .tree-title, .cosui-tree .tree-node {*/
+/*height: auto !important;*/
+/*}*/
+
+
+.fileValue{
+    width: 100%;
+    height: 100%;
+    color: #428bca;
+    border:none;
+    background: none;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.fileValueFocus{
+    border-radius: 4px;
+    padding: 2px 4px;
+    border: 1px solid #66afe9;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 rgba(0,0,0,.075), 0 0 2px rgba(102,175,233,.6);
+}
+
+
+/*添加自定义字体*/
+@font-face {
+    font-family: 'PingFang Bold';
+    src: url('../font/PingFang Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PingFang ExtraLight';
+    src: url('../font/PingFang ExtraLight.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PingFang Heavy';
+    src: url('../font/PingFang Heavy.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PingFang Light';
+    src: url('../font/PingFang Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PingFang Medium';
+    src: url('../font/PingFang Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PingFang Regular';
+    src: url('../font/PingFang Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

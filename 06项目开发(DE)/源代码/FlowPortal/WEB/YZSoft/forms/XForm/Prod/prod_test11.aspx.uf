@@ -1,0 +1,162 @@
+﻿{
+  "generateAt": "2019-10-14T09:42:34.307316+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlProd_test11analyze_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlProd_test11analyze_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.analyze_date",
+          "fieldname": "分析日期"
+        }
+      },
+      "ctrlProd_test11mat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11mat_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.mat_name",
+          "fieldname": "品名"
+        }
+      },
+      "ctrlProd_test11spec": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11spec",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.spec",
+          "fieldname": "规格"
+        }
+      },
+      "ctrlProd_test11smell": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11smell",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.smell",
+          "fieldname": "气味"
+        }
+      },
+      "ctrlProd_test11purity": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11purity",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.purity",
+          "fieldname": "纯度"
+        }
+      },
+      "ctrlProd_test11operator_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11operator_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.operator_name",
+          "fieldname": "检验人员"
+        }
+      },
+      "ctrlProd_test11memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11memo",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.memo",
+          "fieldname": "备注",
+          "textmode": "MultiLine"
+        }
+      },
+      "ctrlProd_test11mat_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11mat_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.mat_id",
+          "fieldname": "品名编号"
+        }
+      },
+      "ctrlProd_test11DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11DeptName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.DeptName",
+          "fieldname": "部门名称"
+        }
+      },
+      "ctrlProd_test11Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11Company",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.Company",
+          "fieldname": "公司编码"
+        }
+      },
+      "ctrlProd_test11CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11CompanyName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.CompanyName",
+          "fieldname": "公司名称"
+        }
+      },
+      "ctrlProd_test11Dept": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test11Dept",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.Dept",
+          "fieldname": "部门编码"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlProd_test11mat_id",
+          "ctrlProd_test11DeptName",
+          "ctrlProd_test11Company",
+          "ctrlProd_test11CompanyName",
+          "ctrlProd_test11Dept"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlProd_test11analyze_date",
+      "ctrlProd_test11mat_name",
+      "ctrlProd_test11spec",
+      "ctrlProd_test11smell",
+      "ctrlProd_test11purity",
+      "ctrlProd_test11operator_name",
+      "ctrlProd_test11memo",
+      "table1"
+    ]
+  }
+}

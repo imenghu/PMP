@@ -1,0 +1,196 @@
+﻿{
+  "generateAt": "2019-10-11T11:37:06.7325795+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests.dept",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%"
+        }
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests.tests_userid",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%"
+        }
+      },
+      "XDateTimePicker1": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "XDateTimePicker1",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests.create_time",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1"
+        }
+      },
+      "XTextBox3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox3",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests.mat_name",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "80%"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称",
+          "datamap": "mat_code->SFDATA:proc_tests.mat_code;mat_name->SFDATA:proc_tests.mat_name",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "width": "21px"
+        }
+      },
+      "XTextBox6": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox6",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests.mat_code",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%"
+        }
+      },
+      "XTextBox9": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox9",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests.mat_spesc",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests.vendor_name",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "80%"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests.tests_class",
+          "prompttext": "请选择"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "退库化验"
+            }
+          }
+        ]
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests.tests_remarks",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "textmode": "MultiLine",
+          "rows": "5"
+        }
+      },
+      "XTextBox11": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox11",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests_value.index_name",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%"
+        }
+      },
+      "XTextBox12": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox12",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests_value.rang_value",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%"
+        }
+      },
+      "XTextBox13": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox13",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_tests_value.tests_value",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%"
+        }
+      },
+      "table1": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "960",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": "2,1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox11",
+          "XTextBox12",
+          "XTextBox13"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 2,
+          "rows": 1
+        }
+      }
+    },
+    "validators": {},
+    "items": [
+      "XTextBox2",
+      "XTextBox5",
+      "XDateTimePicker1",
+      "XTextBox3",
+      "XDataBrowserButton1",
+      "XTextBox6",
+      "XTextBox9",
+      "XTextBox4",
+      "XDropDownList1",
+      "XTextBox1",
+      "table1"
+    ]
+  }
+}

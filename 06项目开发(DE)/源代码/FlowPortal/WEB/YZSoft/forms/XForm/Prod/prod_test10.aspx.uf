@@ -1,0 +1,195 @@
+﻿{
+  "generateAt": "2019-10-14T09:38:51.7817465+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlProd_test10analyze_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlProd_test10analyze_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.analyze_date",
+          "fieldname": "分析日期"
+        }
+      },
+      "ctrlProd_test10mat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10mat_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.mat_name",
+          "fieldname": "品名"
+        }
+      },
+      "ctrlProd_test10spec": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10spec",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.spec",
+          "fieldname": "规格"
+        }
+      },
+      "ctrlProd_test10appearance": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10appearance",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.appearance",
+          "fieldname": "外观"
+        }
+      },
+      "ctrlProd_test10solid": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10solid",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.solid",
+          "fieldname": "固形物含量（≥75）"
+        }
+      },
+      "ctrlProd_test10transmit": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10transmit",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.transmit",
+          "fieldname": "透光率%（≥96）"
+        }
+      },
+      "ctrlProd_test10ph": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10ph",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.ph",
+          "fieldname": "PH（4.6-6.0）"
+        }
+      },
+      "ctrlProd_test10result": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10result",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.result",
+          "fieldname": "检验结果"
+        }
+      },
+      "ctrlProd_test10operator_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10operator_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.operator_name",
+          "fieldname": "检验人员"
+        }
+      },
+      "ctrlProd_test10memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10memo",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.memo",
+          "fieldname": "备注",
+          "textmode": "MultiLine"
+        }
+      },
+      "ctrlProd_test10mat_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10mat_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.mat_id",
+          "fieldname": "品名编号"
+        }
+      },
+      "ctrlProd_test10DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10DeptName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.DeptName",
+          "fieldname": "部门名称"
+        }
+      },
+      "ctrlProd_test10Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10Company",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.Company",
+          "fieldname": "公司编码"
+        }
+      },
+      "ctrlProd_test10CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10CompanyName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.CompanyName",
+          "fieldname": "公司名称"
+        }
+      },
+      "ctrlProd_test10Dept": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test10Dept",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test10.Dept",
+          "fieldname": "部门编码"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlProd_test10mat_id",
+          "ctrlProd_test10DeptName",
+          "ctrlProd_test10Company",
+          "ctrlProd_test10CompanyName",
+          "ctrlProd_test10Dept"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlProd_test10analyze_date",
+      "ctrlProd_test10mat_name",
+      "ctrlProd_test10spec",
+      "ctrlProd_test10appearance",
+      "ctrlProd_test10solid",
+      "ctrlProd_test10transmit",
+      "ctrlProd_test10ph",
+      "ctrlProd_test10result",
+      "ctrlProd_test10operator_name",
+      "ctrlProd_test10memo",
+      "table1"
+    ]
+  }
+}

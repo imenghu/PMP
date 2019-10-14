@@ -1,0 +1,365 @@
+﻿{
+  "generateAt": "2019-10-10T20:16:23.0649415+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "XDropDownList5": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList5",
+          "runat": "server",
+          "displaycolumn": "first_name",
+          "valuecolumn": "first_code",
+          "prompttext": "--请选择--",
+          "xdatasource": "DataSource:SFDATA;TableName:v_ctl_material_class_first",
+          "xdatabind": "SFDATA:ctl_material.first_code"
+        }
+      },
+      "XDropDownList6": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList6",
+          "runat": "server",
+          "displaycolumn": "second_name",
+          "valuecolumn": "second_code",
+          "prompttext": "--请选择--",
+          "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_second;Filter:@first_code->SFDATA:ctl_material.first_code",
+          "xdatabind": "SFDATA:ctl_material.second_code"
+        }
+      },
+      "XDropDownList7": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList7",
+          "runat": "server",
+          "displaycolumn": "third_name",
+          "valuecolumn": "third_code",
+          "prompttext": "--请选择--",
+          "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_third;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code",
+          "xdatabind": "SFDATA:ctl_material.third_code"
+        }
+      },
+      "XDropDownList8": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList8",
+          "runat": "server",
+          "displaycolumn": "fourth_name",
+          "valuecolumn": "fourth_code",
+          "prompttext": "--请选择--",
+          "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_fourth;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code,@third_code->SFDATA:ctl_material.third_code",
+          "xdatabind": "SFDATA:ctl_material.fourth_code"
+        }
+      },
+      "ctrlctl_materialmat_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_materialmat_code",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.mat_code",
+          "valuetodisplaytext": "",
+          "width": "100%",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_materialmat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_materialmat_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.mat_name",
+          "width": "100%"
+        }
+      },
+      "ctrlctl_materialmat_spec": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_materialmat_spec",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.mat_spec",
+          "width": "100%"
+        }
+      },
+      "ctrlctl_materialbase_unit": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_materialbase_unit",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.base_unit",
+          "width": "100%"
+        }
+      },
+      "XDropDownList3": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList3",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.if_drybulk"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "1",
+              "innerhtml": "是"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "selected": "True",
+              "value": "0",
+              "innerhtml": "否"
+            }
+          }
+        ]
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.if_group_pur"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "1",
+              "innerhtml": "是"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "selected": "True",
+              "value": "0",
+              "innerhtml": "否"
+            }
+          }
+        ]
+      },
+      "XDropDownList2": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList2",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.if_greement"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "1",
+              "innerhtml": "是"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "selected": "True",
+              "value": "0",
+              "innerhtml": "否"
+            }
+          }
+        ]
+      },
+      "XDropDownList4": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList4",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.mast_state"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "selected": "True",
+              "value": "1",
+              "innerhtml": "是"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "0",
+              "innerhtml": "否"
+            }
+          }
+        ]
+      },
+      "ctrlctl_materialremark": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_materialremark",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.remark",
+          "width": "100%"
+        }
+      },
+      "ctrlctl_materialCreateUserName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_materialCreateUserName",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.CreateUserName",
+          "width": "100%",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlctl_materialcreate_time": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlctl_materialcreate_time",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.create_time",
+          "width": "100%",
+          "displayonly": "True"
+        }
+      },
+      "ctrlctl_materialUpdateUserName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlctl_materialUpdateUserName",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.UpdateUserName",
+          "width": "100%",
+          "disableexpress": "1"
+        }
+      },
+      "XDateTimePicker1": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "XDateTimePicker1",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_material.update_time",
+          "width": "100%",
+          "displayonly": "True"
+        }
+      },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_mat_unit.mat_unit_name",
+          "width": "100%",
+          "disableexpress": "SFDATA:ctl_mat_unit.if_base_unit==1",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox3": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox3",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_mat_unit.numerator",
+          "width": "100%",
+          "disableexpress": "SFDATA:ctl_mat_unit.if_base_unit==1",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_mat_unit.denominator",
+          "width": "100%",
+          "disableexpress": "1",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "innerhtml": "1"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_mat_unit.base_unit_name",
+          "width": "100%",
+          "disableexpress": "1",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XDropDownList9": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList9",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_mat_unit.if_base_unit",
+          "disableexpress": "1"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "1",
+              "innerhtml": "是"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "selected": "True",
+              "value": "0",
+              "innerhtml": "否"
+            }
+          }
+        ]
+      },
+      "table1": {
+        "ctype": "grid",
+        "attrs": {
+          "width": "960",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "dynamicarea": "2,1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "XTextBox2",
+          "XTextBox3",
+          "XTextBox1",
+          "XTextBox4",
+          "XDropDownList9"
+        ],
+        "dynamicArea": {
+          "startRowIndex": 2,
+          "rows": 1
+        }
+      }
+    },
+    "validators": {},
+    "items": [
+      "XDropDownList5",
+      "XDropDownList6",
+      "XDropDownList7",
+      "XDropDownList8",
+      "ctrlctl_materialmat_code",
+      "ctrlctl_materialmat_name",
+      "ctrlctl_materialmat_spec",
+      "ctrlctl_materialbase_unit",
+      "XDropDownList3",
+      "XDropDownList1",
+      "XDropDownList2",
+      "XDropDownList4",
+      "ctrlctl_materialremark",
+      "ctrlctl_materialCreateUserName",
+      "ctrlctl_materialcreate_time",
+      "ctrlctl_materialUpdateUserName",
+      "XDateTimePicker1",
+      "table1"
+    ]
+  }
+}

@@ -1,0 +1,183 @@
+﻿{
+  "generateAt": "2019-10-11T14:54:28.0423389+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlProd_test7analyze_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlProd_test7analyze_date",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "分析日期",
+          "xdatabind": "SFDATA:Prod_test7.analyze_date"
+        }
+      },
+      "ctrlProd_test7mat_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7mat_name",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "品名名称",
+          "xdatabind": "SFDATA:Prod_test7.mat_name"
+        }
+      },
+      "ctrlProd_test7production_line": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7production_line",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "生产线",
+          "xdatabind": "SFDATA:Prod_test7.production_line"
+        }
+      },
+      "ctrlProd_test7position": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7position",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "位置",
+          "xdatabind": "SFDATA:Prod_test7.position"
+        }
+      },
+      "ctrlProd_test7steril_time": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7steril_time",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "杀菌时间",
+          "xdatabind": "SFDATA:Prod_test7.steril_time"
+        }
+      },
+      "ctrlProd_test7beer_temp": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7beer_temp",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "出口酒温oC",
+          "xdatabind": "SFDATA:Prod_test7.beer_temp"
+        }
+      },
+      "ctrlProd_test7steril_temp_max": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7steril_temp_max",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "最高杀菌温度oC",
+          "xdatabind": "SFDATA:Prod_test7.steril_temp_max"
+        }
+      },
+      "ctrlProd_test7pu50": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7pu50",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "PU（50oC）",
+          "xdatabind": "SFDATA:Prod_test7.pu50"
+        }
+      },
+      "ctrlProd_test7pu60": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7pu60",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "致死PU（60oC）",
+          "xdatabind": "SFDATA:Prod_test7.pu60"
+        }
+      },
+      "ctrlProd_test7operator_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7operator_name",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "检验人员",
+          "xdatabind": "SFDATA:Prod_test7.operator_name"
+        }
+      },
+      "ctrlProd_test7memo": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7memo",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "备注",
+          "xdatabind": "SFDATA:Prod_test7.memo"
+        }
+      },
+      "ctrlProd_test7DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7DeptName",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "部门名称",
+          "xdatabind": "SFDATA:Prod_test7.DeptName"
+        }
+      },
+      "ctrlProd_test7Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7Company",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "公司编码",
+          "xdatabind": "SFDATA:Prod_test7.Company"
+        }
+      },
+      "ctrlProd_test7CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_test7CompanyName",
+          "runat": "server",
+          "width": "100%",
+          "fieldname": "公司名称",
+          "xdatabind": "SFDATA:Prod_test7.CompanyName"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlProd_test7DeptName",
+          "ctrlProd_test7Company",
+          "ctrlProd_test7CompanyName"
+        ]
+      }
+    },
+    "validators": {},
+    "items": [
+      "ctrlProd_test7analyze_date",
+      "ctrlProd_test7mat_name",
+      "ctrlProd_test7production_line",
+      "ctrlProd_test7position",
+      "ctrlProd_test7steril_time",
+      "ctrlProd_test7beer_temp",
+      "ctrlProd_test7steril_temp_max",
+      "ctrlProd_test7pu50",
+      "ctrlProd_test7pu60",
+      "ctrlProd_test7operator_name",
+      "ctrlProd_test7memo",
+      "table1"
+    ]
+  }
+}

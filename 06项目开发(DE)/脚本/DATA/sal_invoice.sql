@@ -1,0 +1,37 @@
+truncate table sal_invoice
+set IDENTITY_INSERT sal_invoice  ON
+go
+insert INTO sal_invoice ([invoice_id]
+      ,[invoice_date]
+      ,[insert_date]
+      ,[invoice_code]
+      ,[invoice_type]
+      ,[invoice_money]
+      ,[customer_code]
+      ,[customer_name]
+      ,[name]
+      ,[finance_id]
+      ,[finance_name]
+      ,[summary]
+      ,[remark]
+      ,[create_date]
+      ,[update_date]
+      ,[state]) select [invoice_id]
+      ,[invoice_date]
+      ,[insert_date]
+      ,[invoice_code]
+      ,[invoice_type]
+      ,[invoice_money]
+      ,[customer_code]
+      ,[customer_name]
+      ,[name]
+      ,[finance_id]
+      ,[finance_name]
+      ,[summary]
+      ,[remark]
+      ,[create_date]
+      ,[update_date]
+      ,[state]
+FROM openquery(MYSQL, 'SELECT * FROM info_sys.sal_invoice') 
+set IDENTITY_INSERT sal_invoice  OFF
+go

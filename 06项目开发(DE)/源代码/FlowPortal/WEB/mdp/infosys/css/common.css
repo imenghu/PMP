@@ -1,0 +1,281 @@
+/**/
+.datagrid-cell-c3-操作{
+    width: 100px !important;
+}
+/*小手*/
+.xiaoshou{
+    cursor: pointer;
+}
+/*保存*/
+.baocun {
+    background: url(../../Project/Reports/infosys/support/image/button/baocun.png) no-repeat;
+    height: 22px;
+    width: 55px;
+    z-index: 3;
+}
+/*查询*/
+.btn_select, .btn_select:hover {
+    background: #84b9e8;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    width: auto !important;
+    width: 30px;
+    height: 28px;
+    padding: 0 6px 0 35px;
+    border: 1px solid #ffffff;
+}
+.btn_select:before {
+    content: '';
+    width: 17px;
+    height: 17px;
+    background: url(../image/button/all_select.png) no-repeat;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    background-size: 100% 100%
+}
+/*新增*/
+.btn_add,.btn_add:hover {
+    background: #84b9e8;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    width: 30px;
+    height: 28px;
+    padding: 0 6px 0 35px;
+    border: 1px solid #ffffff;
+}
+.btn_add:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: url(../image/button/all_add.png) no-repeat;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    background-size: 100% 100%
+}
+/*通知*/
+.btn_notice, .btn_notice:hover {
+    background: #84b9e8;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    width: auto !important;
+    width: 30px;
+    height: 28px;
+    padding: 0 6px 0 35px;
+    border: 1px solid #ffffff;
+}
+.btn_notice:before {
+    content: '';
+    width: 17px;
+    height: 17px;
+    background: url(../image/button/notice.png) no-repeat;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    background-size: 100% 100%
+}
+/*同意*/
+.btn_agree, .btn_agree:hover {
+    background: #84b9e8;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    width: auto !important;
+    width: 30px;
+    height: 28px;
+    padding: 0 6px 0 35px;
+    border: 1px solid #ffffff;
+}
+.btn_agree:before {
+    content: '';
+    width: 17px;
+    height: 17px;
+    background: url(../image/button/agree.png) no-repeat;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    background-size: 100% 100%
+}
+/*驳回*/
+.btn_cha, .btn_cha:hover {
+    background: #ef5b6d;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    width: auto !important;
+    width: 30px;
+    height: 28px;
+    padding: 0 6px 0 35px;
+    border: 1px solid #ffffff;
+}
+.btn_cha:before {
+    content: '';
+    width: 17px;
+    height: 17px;
+    background: url(../image/button/cha.png) no-repeat;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    background-size: 100% 100%
+}
+/*保存*/
+.btn_save, .btn_save:hover {
+    background: #84b9e8;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    width: auto !important;
+    width: 30px;
+    height: 28px;
+    padding: 0 6px 0 35px;
+    border: 1px solid #ffffff;
+}
+.btn_save:before {
+    content: '';
+    width: 17px;
+    height: 17px;
+    background: url(../image/button/all_save.png) no-repeat;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    background-size: 100% 100%
+}
+/*返回*/
+
+.btn_return, .btn_return:hover {
+    background: #84b9e8;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    width: auto !important;
+    width: 30px;
+    height: 28px;
+    padding: 0 6px 0 35px;
+    border: 1px solid #ffffff;
+}
+.btn_return:before {
+    content: '';
+    width: 17px;
+    height: 17px;
+    background: url(../image/button/all_return.png) no-repeat;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    background-size: 100% 100%
+}
+
+
+
+.datagrid-header .datagrid-cell{
+    height: 30px !important;
+    line-height: 30px;
+    background: #f5f5f5;
+    text-align: center !important;
+}
+.datagrid-header{
+border:none;
+}
+.datagrid-header .datagrid-cell>span{
+	color: #29415a;
+	font-size: 13px;
+        font-family: 微软雅黑;
+        font-weight:600;
+}
+.datagrid-header td{
+	background: #efefef !important;
+        border: 1px solid #EFEFEF;
+        border-width:1px 0px 0px 1px;
+}
+.datagrid-cell, .datagrid-cell-rownumber{
+	height: 30px !important;
+	line-height: 30px;
+ 
+}
+
+.datagrid-cell>span, .datagrid-cell-rownumber>span{
+	color: #29415a;
+	font-size: 13px;
+        font-family: 微软雅黑;
+        font-weight:400
+}
+.datagrid-td-rownumber{
+	background: #fff !important;
+}
+.datagrid-header td:first-child {
+    background: #fff !important;
+    
+}
+#cmp25975b .datagrid-header{
+	border-color: #efefef;
+}
+.datagrid-row-alt,.datagrid-row-selected{
+	background: #fff;
+	background: transparent !important;
+	
+}
+.datagrid-view1 .datagrid-header td:first-child {
+width:30px;
+ text-align: center !important;
+
+}
+.datagrid-view1 .datagrid-body td{
+width:30px;
+ border: 1px solid #EFEFEF;
+border-width:1px 0px 0px 1px;
+}
+.datagrid-view1 .datagrid-body td .datagrid-cell-rownumber{
+width:30px !important ;
+}
+.datagrid-view1 .datagrid-body td div{
+width:30px
+heiht:30px
+ line-height: 30px;
+ text-align: center!important;
+}
+.datagrid-view1 .datagrid-header td:first-child  div{
+ width:30px;
+ heiht:30px;
+ line-height: 30px;
+ text-align: center !important;
+
+}
+.datagrid-view2 .datagrid-header td{
+ border: 1px solid #EFEFEF;
+border-width:1px 0px 0px 1px;
+}
+ tr:hover td{
+background-color:#eee;
+}
+.datagrid-view2 .datagrid-body td{
+ border: 1px solid #EFEFEF;
+border-width:1px 0px 0px 1px;
+}
+.datagrid-wrap{
+border:none;
+border-right: 1px solid #EFEFEF !important;
+}
+
+.datagrid-view1 .datagrid-body .datagrid-btable td>div{
+   font-family: 微软雅黑;
+   font-weight:400
+
+}
+.textbox-label{
+font-family: 微软雅黑;
+font-size: 12px;
+color: #29415A;
+}
+.textbox{
+background: #FFFFFF;
+border: 1px solid #D1DBE9;
+border-radius: 2px;
+}
+body{
+font-family : 微软雅黑;
+font-size: 12px;
+color : #29415A;
+}

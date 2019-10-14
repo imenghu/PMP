@@ -1,0 +1,239 @@
+/*
+ * @Name：FormGray.css
+ * @Release：新域信息
+ * @Version：v1.1
+ * @LastUpdate：2019年07月10日
+ * @Desc：表单样式，灰色调通用样式文件
+ */
+/*body *{font-family: 'Microsoft YaHei' !important;}*/
+TD.xfld {
+background-color:#f6f6f6;
+text-align:center;
+}
+TD.xttl {
+background-color:#f0f0f0;
+}
+TD.xtbd {
+background-color:#f6f6f6;
+text-align:center;
+}
+.yz-xform-field-ele.yz-xform-field-ele-trans.yz-xform-field-ele-input.yz-xform-field-ele-textarea {
+    height: inherit;
+}
+
+.yz-xform-field-ele.yz-xform-field-ele-trans.yz-xform-field-ele-input {
+    height: 28px;
+}
+
+.yz-xform-textarea-cnt .yz-xform-field-wrap, .yz-xform-field-cnt, .yz-xform-field-commentstextbox, .edui-default {
+    margin: 0px 0px !important;
+}
+
+table > tbody > tr > td {
+    height: 34px;
+    padding: 0px 1px !important;
+    border-color: #d1d1d1 !important;
+}
+/*日历控件样式*/
+.yz-xform-field-ele.yz-xform-field-trigger-date {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAYAAADwMZRfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGVSURBVDhPnVGxTsMwEL0gBjYyMnZkQTAyMDAydmTMJ+QPyB80E4ykUoeM3oDNEkODhFR3qMSAkANDMzpMrYRk7s5O21QtqniS/d5dnLt7NlhE57hj3z/KFk+nU+bhcMg8mUyY6++aufTnCDAYDFikacrc6/WYkyRpcRzHzFEUOb6OrHpTrIM0NxYQhrYZ72BmpJucjylaaAfSo7tT4CLdy0OfbkMUzU81x1SkATV4ffmE59sTV6RJMqgbs+/c5HyBxSTIP/MvLHIBkD06X4Qk202bmbXGWHt25e5nz9d18HfCWNdzNIWrmVBXJYQH7nOQCayMwlQGjDEQHnX44Kq+AQlQaai1AqM1ZBHGmBcig9HDPdoRkkcibLNgEzc22dDnodWVtbJQO9rxFmgCtoLQjlpPjXYk2gn/tBPlXWRXwGCsYsX5pZ18aSfNN78CabJAi7TS1gq5xQ51X38FBukFVrXDPm39pzE+mbPQlyUzjS2KEvOaY6n8GVyyGLuGHkGaCZvlwoeAt7Op13bQnQTkycf/BMAvBi7jh/soviAAAAAASUVORK5CYII=');
+}
+
+.yz-xform-field-trigger-date {
+    width: 17px;
+    height: 26px;
+}
+
+.yz-xform-field-ele-date {
+    width: 80px;
+}
+
+.yz-inp-cnt {
+    display: inline;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+
+TABLE {
+    BORDER-COLLAPSE: collapse;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-size: 14px;
+}
+
+    TABLE.SignHistory {
+        BORDER-RIGHT: #dcdcdc 1px solid;
+        BORDER-TOP: #dcdcdc 1px solid;
+        BORDER-LEFT: #dcdcdc 1px solid;
+        BORDER-BOTTOM: #dcdcdc 1px solid;
+        BORDER-COLLAPSE: collapse;
+    }
+
+        TABLE.SignHistory TD.Col1 {
+            PADDING-RIGHT: 3px;
+            WIDTH: 30%;
+            COLOR: #CCCCCC;
+            BACKGROUND-COLOR: #ffffff;
+            TEXT-ALIGN: right;
+        }
+
+        TABLE.SignHistory TD.Col2 {
+            PADDING-RIGHT: 20px;
+            PADDING-LEFT: 3px;
+            FONT-WEIGHT: bold;
+            WIDTH: 25%;
+            BACKGROUND-COLOR: #f0f0f0;
+            TEXT-ALIGN: right;
+        }
+
+        TABLE.SignHistory TD.Col3 {
+            PADDING-RIGHT: 3px;
+            WIDTH: 15%;
+            COLOR: #CCCCCC;
+            BACKGROUND-COLOR: #ffffff;
+            TEXT-ALIGN: right;
+        }
+
+        TABLE.SignHistory TD.Col4 {
+            PADDING-RIGHT: 20px;
+            PADDING-LEFT: 3px;
+            FONT-WEIGHT: bold;
+            WIDTH: 25%;
+            BACKGROUND-COLOR: #f0f0f0;
+            TEXT-ALIGN: right;
+        }
+
+        TABLE.SignHistory INPUT.Acc {
+            BORDER-RIGHT: #dcdcdc 1px solid;
+            PADDING-RIGHT: 3px;
+            BORDER-TOP: #dcdcdc 1px solid;
+            PADDING-LEFT: 3px;
+            BORDER-LEFT: #dcdcdc 1px solid;
+            WIDTH: 100%;
+            BORDER-BOTTOM: #dcdcdc 1px solid;
+        }
+
+        TABLE.SignHistory INPUT.Date {
+            BORDER-RIGHT: #dcdcdc 1px solid;
+            PADDING-RIGHT: 3px;
+            BORDER-TOP: #dcdcdc 1px solid;
+            PADDING-LEFT: 3px;
+            BORDER-LEFT: #dcdcdc 1px solid;
+            WIDTH: 100%;
+            BORDER-BOTTOM: #dcdcdc 1px solid;
+        }
+
+TD.HeaderRow {
+    BACKGROUND: #f6f6f6;
+}
+
+TABLE.SignTraceDefault {
+    border-top: 1px solid #d1d1d1;
+    border-left: 1px solid #d1d1d1;
+    border-collapse: separate;
+    background-color: #d1d1d1;
+}
+
+    TABLE.SignTraceDefault TD {
+        border-top: white 0px solid;
+        border-left: white 0px solid;
+        border-bottom: 1px solid #999999;
+        border-right: 1px solid #999999;
+        padding: 0px 1px !important;
+    }
+
+    TABLE.SignTraceDefault TR.HeaderRow {
+        background-color: #f0f0f0;
+    }
+
+        TABLE.SignTraceDefault TR.HeaderRow TD {
+            height: 29px;
+            text-align: center;
+        }
+
+            TABLE.SignTraceDefault TR.HeaderRow TD.NoColumn {
+                width: 5%;
+                white-space: nowrap;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            TABLE.SignTraceDefault TR.HeaderRow TD.StepNameColumn {
+                width: 10%;
+                white-space: nowrap;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            TABLE.SignTraceDefault TR.HeaderRow TD.SignColumn {
+                width: 10%;
+                white-space: nowrap;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            TABLE.SignTraceDefault TR.HeaderRow TD.DateColumn {
+                width: 15%;
+                white-space: nowrap;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            TABLE.SignTraceDefault TR.HeaderRow TD.ActionColumn {
+                width: 10%;
+            }
+
+            TABLE.SignTraceDefault TR.HeaderRow TD.CommentsColumn {
+                width: 60%;
+            }
+
+    TABLE.SignTraceDefault TR.DataRow {
+        background-color: #FFFFFF;
+    }
+
+        TABLE.SignTraceDefault TR.DataRow TD {
+            height: 41px;
+            text-align: center;
+        }
+
+            TABLE.SignTraceDefault TR.DataRow TD.NoCell {
+                white-space: nowrap;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            TABLE.SignTraceDefault TR.DataRow TD.StepNameCell {
+                white-space: nowrap;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            TABLE.SignTraceDefault TR.DataRow TD.SignCell {
+                white-space: nowrap;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            TABLE.SignTraceDefault TR.DataRow TD.DateCell {
+                white-space: nowrap;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            TABLE.SignTraceDefault TR.DataRow TD.ActionColumn {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+
+            TABLE.SignTraceDefault TR.DataRow TD.CommentsCell {
+                text-align: left;
+            }
+
+    TABLE.SignTraceDefault TR.Running TD.NoCell {
+        background-color: #ffa500;
+    }
+
+    TABLE.SignTraceDefault TR.Running TD.SignCell {
+        color: #999999;
+    }
