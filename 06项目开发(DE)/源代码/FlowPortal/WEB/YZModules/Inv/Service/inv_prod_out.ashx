@@ -46,7 +46,7 @@ namespace Inv
             string keyword = request.GetString("kwd", null);
 
             //获得查询条件
-            string filter = "State='1'";
+            string filter = "inv_prod_out.State='1'";
 
             if (searchType == "QuickSearch")
             {
@@ -64,7 +64,7 @@ namespace Inv
             //获得Query
             string query = @"
             WITH X AS(
-                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,* FROM inv_prod_out {1}
+                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,inv_prod_out.*,mat_unit_name,outnum=convert(float,numerator)*out_stnum FROM inv_prod_out join v_ctl_material_prod on inv_prod_out.mat_code=v_ctl_material_prod.mat_code {1}
             ),
             Y AS(
                 SELECT count(*) AS TotalRows FROM X
@@ -105,19 +105,27 @@ namespace Inv
                                 totalRows = reader.ReadInt32("TotalRows");
                             item["prod_out_id"] =
 reader.ReadInt32("prod_out_id");
-                                                            item["mat_code"] = 
-                                                                    reader.ReadString("mat_code");
-                                                                                            item["mat_name"] = 
-                                                                    reader.ReadString("mat_name");
-                                                                                            item["mat_spec"] = 
-                                                                    reader.ReadString("mat_spec");
-                                                                                            item["out_stnum"] = 
-                                                                    reader.ReadString("out_stnum");
-                                                                                            item["out_stnum_unit"] = 
-                                                                    reader.ReadString("out_stnum_unit");
-                                                                                            item["out_time"] = 
-                                                                    reader.ReadString("out_time");
-                                                                                    }
+                            item["mat_code"] =
+                                    reader.ReadString("mat_code");
+                            item["mat_name"] =
+    reader.ReadString("mat_name");
+                            item["mat_spec"] =
+    reader.ReadString("mat_spec");
+                            item["out_stnum"] =
+    reader.ReadString("out_stnum");
+                            item["mat_unit_name"] =
+    reader.ReadString("mat_unit_name");
+                            item["outnum"] =
+    reader.ReadFloat("outnum");
+                            item["out_stnum_unit"] =
+    reader.ReadString("out_stnum_unit");
+                            item["ProdUserName"] =
+    reader.ReadString("ProdUserName");
+                            item["out_time"] =
+    reader.ReadString("out_time");
+                            item["prod_out_remarks"] =
+    reader.ReadString("prod_out_remarks");
+                        }
                         
                         rv[YZJsonProperty.total] = totalRows;
                     }

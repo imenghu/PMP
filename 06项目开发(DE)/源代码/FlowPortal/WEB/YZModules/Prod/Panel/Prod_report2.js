@@ -1,4 +1,4 @@
-﻿Ext.define('YZModules.Prod.Panel.Prod_report2', {
+﻿Ext.define('YZModules.Prod.Panel.prod_report2', {
     extend: 'Ext.panel.Panel',
     requires: [
         'YZSoft.bpm.src.ux.FormManager'

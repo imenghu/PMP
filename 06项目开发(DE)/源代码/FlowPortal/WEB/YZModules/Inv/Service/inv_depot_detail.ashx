@@ -105,8 +105,8 @@ namespace Inv
                                 totalRows = reader.ReadInt32("TotalRows");
                             item["depot_detail_id"] =
 reader.ReadInt32("depot_detail_id");
-                                                            item["org_name"] = 
-                                                                    reader.ReadString("org_name");
+                                                            item["CompanyName"] =
+                                                                    reader.ReadString("CompanyName");
                                                                                             item["mat_code"] = 
                                                                     reader.ReadString("mat_code");
                                                                                             item["mat_name"] = 

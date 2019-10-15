@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-12T21:21:47.3746601+08:00",
+  "generateAt": "2019-10-14T18:41:01.0816153+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlprod_report3product_line",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "产线",
           "xdatabind": "SFDATA:prod_report3.product_line",
-          "fieldname": "产线"
+          "width": "100%"
         }
       },
       "ctrlprod_report3workshop": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlprod_report3workshop",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "车间",
           "xdatabind": "SFDATA:prod_report3.workshop",
-          "fieldname": "车间"
+          "width": "100%"
         }
       },
       "ctrlprod_report3yield": {
@@ -29,9 +29,9 @@
         "attrs": {
           "id": "ctrlprod_report3yield",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "产量",
           "xdatabind": "SFDATA:prod_report3.yield",
-          "fieldname": "产量"
+          "width": "100%"
         }
       },
       "ctrlprod_report3Prod_name": {
@@ -39,9 +39,9 @@
         "attrs": {
           "id": "ctrlprod_report3Prod_name",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "品名",
           "xdatabind": "SFDATA:prod_report3.Prod_name",
-          "fieldname": "品名"
+          "width": "100%"
         }
       },
       "ctrlprod_report3spec": {
@@ -49,9 +49,9 @@
         "attrs": {
           "id": "ctrlprod_report3spec",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "规格",
           "xdatabind": "SFDATA:prod_report3.spec",
-          "fieldname": "规格"
+          "width": "100%"
         }
       },
       "ctrlprod_report3input_date": {
@@ -59,9 +59,9 @@
         "attrs": {
           "id": "ctrlprod_report3input_date",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "日期",
           "xdatabind": "SFDATA:prod_report3.input_date",
-          "fieldname": "日期"
+          "width": "100%"
         }
       },
       "ctrlprod_report3today_saka_amount": {
@@ -69,9 +69,9 @@
         "attrs": {
           "id": "ctrlprod_report3today_saka_amount",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "本日接清酒量",
           "xdatabind": "SFDATA:prod_report3.today_saka_amount",
-          "fieldname": "本日接清酒量"
+          "width": "100%"
         }
       },
       "ctrlprod_report3today_product_num": {
@@ -79,9 +79,9 @@
         "attrs": {
           "id": "ctrlprod_report3today_product_num",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "本日成品量",
           "xdatabind": "SFDATA:prod_report3.today_product_num",
-          "fieldname": "本日成品量"
+          "width": "100%"
         }
       },
       "ctrlprod_report3today_loss": {
@@ -89,9 +89,9 @@
         "attrs": {
           "id": "ctrlprod_report3today_loss",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "本日酒损",
           "xdatabind": "SFDATA:prod_report3.today_loss",
-          "fieldname": "本日酒损"
+          "width": "100%"
         }
       },
       "ctrlprod_report3memo": {
@@ -99,9 +99,9 @@
         "attrs": {
           "id": "ctrlprod_report3memo",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "备注",
           "xdatabind": "SFDATA:prod_report3.memo",
-          "fieldname": "备注"
+          "width": "100%"
         }
       },
       "ctrlprod_report3create_time": {
@@ -109,9 +109,9 @@
         "attrs": {
           "id": "ctrlprod_report3create_time",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "创建时间",
           "xdatabind": "SFDATA:prod_report3.create_time",
-          "fieldname": "创建时间"
+          "width": "100%"
         }
       },
       "table1": {

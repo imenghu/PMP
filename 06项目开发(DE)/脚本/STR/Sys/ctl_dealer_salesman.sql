@@ -9,9 +9,13 @@ CREATE TABLE dbo.ctl_dealer_salesman
   dealer_id int  null ,
   create_userid int  null ,
   ds_remarks nvarchar(200) null ,
-  state nchar(1) null ,
+  state nchar(1) null DEFAULT((1)),
   create_time datetime2  null ,
   update_time datetime2  null ,
+  CreateUser varchar(50) null ,
+  CreateUserName varchar(50) null ,
+  UpdateUser varchar(50) null ,
+  UpdateUserName varchar(50) null ,
   CONSTRAINT PK_ctl_dealer_salesman PRIMARY KEY  CLUSTERED
   (
     ds_id

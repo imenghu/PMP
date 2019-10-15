@@ -52,18 +52,15 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
                 },
                 items: [
                     { xtype: 'rownumberer' },
-                    { header: 'TaskID', dataIndex: 'TaskID', width: 30, hidden: true },
-                  
-                    { header: 'contract_id', dataIndex: 'contract_id', width: 30, hidden: true },
-                    { header: '公司', dataIndex: 'companyname', width: 100, align: 'left', sortable: true },
-                    { header: '部门', dataIndex: 'dept', width: 100, align: 'left', sortable: true },
+                    { header: '公司', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true },
+                    { header: '部门', dataIndex: 'DeptName', width: 100, align: 'left', sortable: true },
                     { header: "合同编码", dataIndex: 'contract_code', width: 100, align: 'left', sortable: true },
                     { header: '合同类型', dataIndex: 'contract_type', width: 100, align: 'left', sortable: true , renderer: me.Status},
                     { header: '合同名称', dataIndex: 'contract_name', minwidth: 100, align: 'left', sortable: true },
                     { header: '供应商名称', dataIndex: 'vendor_name', width: 100, align: 'center', sortable: true },
                     { header: '是否委外', dataIndex: 'if_outsource', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderYesOrNo },
                     { header: '总金额（元）', dataIndex: 'total_price', width: 100, align: 'center', sortable: true },
-                    { header: '审核状态', dataIndex: 'approval_state', flex: 1, align: 'center', sortable: true, renderer: me.renderStatus },
+                    { header: '审核状态', dataIndex: 'approval_state', flex: 1, align: 'center', sortable: true, renderer: XYSoft.Render.renderStatus },
                     { header: '操作', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.finish, listeners: { scope: me, click: me.finishClick } },
                 ]
             },
@@ -73,7 +70,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
             }),
             listeners: {
                 rowdblclick: function (grid, record, tr, rowIndex, e, eOpts) {
-                    //me.read(record);
+                    me.read(record);
                 }
             }
         });
@@ -235,38 +232,8 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
                
                 str = "订单";
                 break;
-        
-
         }
         return Ext.String.format("<font>{0}</font>", Ext.util.Format.text(str));
-    },
-    renderStatus: function (value) {
-        debugger
-        var color = "red", str = "";
-        switch (value) {
-            case '0':
-                color = "gray";
-                str = "未提报";
-                break;
-            case "1":
-                color = "blue";
-                str = "审批中";
-                break;
-            case "2":
-                color = "green";
-                str = "审批完成";
-                break;
-            case "3":
-                color = "red";
-                str = "驳回";
-                break;
-            //case "Deleted":
-            //    color = "gray";
-            //    str = "已删除";
-            //    break;
-
-        }
-        return Ext.String.format("<font color='{0}'>{1}</font>", color, Ext.util.Format.text(str));
     },
     renderRead: function (value, metaData, record) {
         return "<a href='#'>跟踪</a>";
@@ -287,26 +254,6 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
                 }
             }
         });
-        //YZSoft.bpm.src.ux.FormManager.openFormApplication('Purchase/BaseMaterial', '', 'New', Ext.apply({
-        //    sender: me,
-        //    title: '添加物料',
-        //    listeners: {
-        //        submit: function (action, data) {
-        //            me.store.reload({
-        //                loadMask: {
-        //                    msg: '保存已成功',
-        //                    start:0,
-        //                    stay: 300
-        //                },
-        //                callback: function () {
-        //                    var rec = me.store.getById(data.Key);
-        //                    if (rec)
-        //                        me.grid.getSelectionModel().select(rec);
-        //                }
-        //            });
-        //        }
-        //    }
-        //}, me.dlgCfg));
     },
 
     read: function (rec) {

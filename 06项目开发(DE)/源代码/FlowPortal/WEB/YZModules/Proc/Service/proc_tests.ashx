@@ -28,7 +28,7 @@ public class proc_tests : YZServiceHandler
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "Update proc_tests Set state='5' WHERE TaskID=@id";
+                cmd.CommandText = "Update proc_tests Set state='0' WHERE tests_id=@id";
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                 cmd.ExecuteNonQuery();
             }
@@ -48,7 +48,7 @@ public class proc_tests : YZServiceHandler
         string mat_name = request.GetString("mat_name", null);
 
         //获得查询条件
-        string filter = null;
+        string filter = "State='1'";
 
         if (searchType == "QuickSearch")
         {
@@ -121,7 +121,7 @@ public class proc_tests : YZServiceHandler
                         item["mat_code"] = reader.ReadString("mat_code");
                         item["mat_name"] = reader.ReadString("mat_name");
                         item["mat_spesc"] = reader.ReadString("mat_spesc");
-                        item["test_happen"] = reader.ReadString("test_happen");
+                        item["test_happen"] = "";
                         item["tests_result"] = reader.ReadString("tests_result");
                         item["tests_remarks"] = reader.ReadString("tests_remarks");
                   

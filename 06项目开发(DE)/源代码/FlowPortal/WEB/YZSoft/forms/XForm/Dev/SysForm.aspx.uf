@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-09T18:07:34.0671912+08:00",
+  "generateAt": "2019-10-10T16:29:31.6741868+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {
@@ -119,7 +119,7 @@
           "id": "XDataBrowserButton2",
           "runat": "server",
           "width": "21px",
-          "xdatasource": "DataSource:DevDATA;TableName:SysItem;Filter:SetId->DevDATA:SysFormSet.SetId,IsUse->varIsUse;OrderBy:DisplayOrder",
+          "xdatasource": "DataSource:DevDATA;TableName:SysItem;Filter:SetId->DevDATA:SysFormSet.SetId,IsUse->varIsUse",
           "displaycolumns": "ItemId:指标编码;ItemName:指标名称;ItemType:指标类型;ItemLength:长度;ItemDecimal:小数位;Description:备注",
           "datamap": "SetId->DevDATA:SysFormItem.SetId;ItemId->DevDATA:SysFormItem.ItemId;ItemName->DevDATA:SysFormItem.ItemName;ItemType->DevDATA:SysFormItem.ItemType;ItemLength->DevDATA:SysFormItem.ItemLength;ItemDecimal->DevDATA:SysFormItem.ItemDecimal",
           "multiselect": "True"
@@ -143,7 +143,7 @@
           "id": "XDataBrowserButton3",
           "runat": "server",
           "width": "20px",
-          "xdatasource": "DataSource:DevDATA;TableName:SysItem;Filter:SetId->DevDATA:SysFormSet.SetId,IsUse->varIsUse;OrderBy:DisplayOrder",
+          "xdatasource": "DataSource:DevDATA;TableName:SysItem;Filter:SetId->DevDATA:SysFormSet.SetId,IsUse->varIsUse",
           "displaycolumns": "ItemId:指标编码;ItemName:指标名称;ItemType:指标类型;ItemLength:长度;ItemDecimal:小数位;Description:备注",
           "datamap": "SetId->DevDATA:SysFormItem.SetId;ItemId->DevDATA:SysFormItem.ItemId;ItemName->DevDATA:SysFormItem.ItemName;ItemType->DevDATA:SysFormItem.ItemType;ItemLength->DevDATA:SysFormItem.ItemLength;ItemDecimal->DevDATA:SysFormItem.ItemDecimal"
         }
@@ -327,8 +327,6 @@
           "cellspacing": "0",
           "cellpadding": "0",
           "dynamicarea": "2,1",
-          "datamap": "SetId->DevDATA:SysFormItem.SetId;ItemId->DevDATA:SysFormItem.ItemId;ItemName->DevDATA:SysFormItem.ItemName;ItemType->DevDATA:SysFormItem.ItemType;ItemLength->DevDATA:SysFormItem.ItemLength;ItemDecimal->DevDATA:SysFormItem.ItemDecimal",
-          "xdatasource": "DataSource:DevDATA;TableName:SysItem;Filter:SetId->DevDATA:SysFormSet.SetId,IsUse->varIsUse;OrderBy:DisplayOrder",
           "id": "table2"
         },
         "ctypeorg": "table",

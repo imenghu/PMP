@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-11T21:16:22.7429994+08:00",
+  "generateAt": "2019-10-15T14:07:34.1393982+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {
@@ -13,8 +13,18 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.vendor_name",
           "width": "80%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "width": "21px",
+          "datamap": "vendor_id->SFDATA:proc_arrival_notice.vendor_id;vendor_name->SFDATA:proc_arrival_notice.vendor_name",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_vendor",
+          "displaycolumns": "vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址"
         }
       },
       "XDropDownList1": {
@@ -22,8 +32,7 @@
         "attrs": {
           "id": "XDropDownList1",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_arrival_notice.if_tests",
-          "prompttext": "请选择"
+          "xdatabind": "SFDATA:proc_arrival_notice.if_tests"
         },
         "childNodes": [
           {
@@ -36,6 +45,7 @@
           {
             "ctype": "asp:listitem",
             "attrs": {
+              "selected": "True",
               "value": "0",
               "innerhtml": "否"
             }
@@ -49,9 +59,9 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.mat_code",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
-          "disablebehavior": "ReadOnly"
+          "disablebehavior": "ReadOnly",
+          "disableexpress": "1"
         }
       },
       "XTextBox10": {
@@ -61,9 +71,9 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.mat_name",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
-          "disablebehavior": "ReadOnly"
+          "disablebehavior": "ReadOnly",
+          "disableexpress": "1"
         }
       },
       "XTextBox11": {
@@ -73,9 +83,9 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.mat_spesc",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
-          "disablebehavior": "ReadOnly"
+          "disablebehavior": "ReadOnly",
+          "disableexpress": "1"
         }
       },
       "XTextBox3": {
@@ -85,7 +95,6 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.arrival_slnum",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC"
         }
       },
@@ -96,9 +105,9 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.arrival_slnum_unit",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
-          "disablebehavior": "ReadOnly"
+          "disablebehavior": "ReadOnly",
+          "disableexpress": "1"
         }
       },
       "XTextBox12": {
@@ -108,9 +117,9 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.plan_price",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
-          "disablebehavior": "ReadOnly"
+          "disablebehavior": "ReadOnly",
+          "disableexpress": "1"
         }
       },
       "XTextBox4": {
@@ -120,9 +129,9 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.arrival_stnum",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
-          "disablebehavior": "ReadOnly"
+          "disablebehavior": "ReadOnly",
+          "disableexpress": "1"
         }
       },
       "XTextBox8": {
@@ -132,9 +141,9 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.arrival_stnum_unit",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
-          "disablebehavior": "ReadOnly"
+          "disablebehavior": "ReadOnly",
+          "disableexpress": "1"
         }
       },
       "XTextBox13": {
@@ -144,9 +153,9 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.sl_st_scale",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
-          "disablebehavior": "ReadOnly"
+          "disablebehavior": "ReadOnly",
+          "disableexpress": "1"
         }
       },
       "XDateTimePicker1": {
@@ -155,7 +164,6 @@
           "id": "XDateTimePicker1",
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.plan_arrival_time",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC"
         }
       },
@@ -164,10 +172,19 @@
         "attrs": {
           "id": "XTextBox7",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_arrival_notice.storename",
+          "xdatabind": "SFDATA:proc_arrival_notice.StoreUserName",
           "width": "80%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC"
+          "bordercolor": "#DCDCDC",
+          "disableexpress": "1"
+        }
+      },
+      "XSelectUserButton1": {
+        "ctype": "aspxform:xselectuserbutton",
+        "attrs": {
+          "id": "XSelectUserButton1",
+          "runat": "server",
+          "width": "21px",
+          "datamap": "Account->SFDATA:proc_arrival_notice.StoreUser;DisplayName->SFDATA:proc_arrival_notice.StoreUserName"
         }
       },
       "XTextBox14": {
@@ -177,7 +194,6 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.plan_arrival_price",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC"
         }
       },
@@ -188,7 +204,6 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.arrival_username",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC"
         }
       },
@@ -199,7 +214,6 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.arrival_usertel",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC"
         }
       },
@@ -210,7 +224,6 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.notice_state",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
           "innerhtml": "0"
         }
@@ -222,16 +235,37 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_arrival_notice.pur_task_id",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
           "valuetodisplaytext": "DataSource:SFDATA;TableName:proc_pur_task;FilterColumn:pur_task_id;DisplayColumn:pur_task_id",
-          "datamap": "mat_code->SFDATA:proc_arrival_notice.mat_code;mat_name->SFDATA:proc_arrival_notice.mat_name;plan_price->SFDATA:proc_arrival_notice.plan_price;pur_slnum_unit->SFDATA:proc_arrival_notice.arrival_slnum_unit;pur_stnum->SFDATA:proc_arrival_notice.arrival_stnum;pur_stnum_unit->SFDATA:proc_arrival_notice.arrival_stnum_unit;sl_st_scale->SFDATA:proc_arrival_notice.sl_st_scale"
+          "datamap": "mat_code->SFDATA:proc_arrival_notice.mat_code;mat_name->SFDATA:proc_arrival_notice.mat_name;mat_spec->SFDATA:proc_arrival_notice.mat_spesc;plan_price->SFDATA:proc_arrival_notice.plan_price;pur_slnum->SFDATA:proc_arrival_notice.arrival_slnum;pur_slnum_unit->SFDATA:proc_arrival_notice.arrival_slnum_unit;pur_stnum->SFDATA:proc_arrival_notice.arrival_stnum;pur_stnum_unit->SFDATA:proc_arrival_notice.arrival_stnum_unit;sl_st_scale->SFDATA:proc_arrival_notice.sl_st_scale"
+        }
+      },
+      "XTextBox16": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox16",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.vendor_id",
+          "width": "100%",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1"
+        }
+      },
+      "XTextBox17": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox17",
+          "runat": "server",
+          "xdatabind": "SFDATA:proc_arrival_notice.StoreUser",
+          "width": "80%",
+          "bordercolor": "#DCDCDC",
+          "disableexpress": "1"
         }
       },
       "table1": {
         "ctype": "wrap",
         "attrs": {
-          "width": "960",
+          "width": "462",
           "align": "center",
           "border": "0",
           "cellspacing": "0",
@@ -242,13 +276,16 @@
         "ctypeorg": "table",
         "items": [
           "XTextBox15",
-          "xtxtPurTaskId"
+          "xtxtPurTaskId",
+          "XTextBox16",
+          "XTextBox17"
         ]
       }
     },
     "validators": {},
     "items": [
       "XTextBox1",
+      "XDataBrowserButton1",
       "XDropDownList1",
       "XTextBox2",
       "XTextBox10",
@@ -261,6 +298,7 @@
       "XTextBox13",
       "XDateTimePicker1",
       "XTextBox7",
+      "XSelectUserButton1",
       "XTextBox14",
       "XTextBox5",
       "XTextBox6",

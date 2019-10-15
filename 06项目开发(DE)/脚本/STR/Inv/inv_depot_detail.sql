@@ -22,10 +22,17 @@ CREATE TABLE dbo.inv_depot_detail
   inv_diff_num nvarchar(60) null ,
   last_depot_mat_num nvarchar(60) null ,
   depot_mat_num nvarchar(60) null ,
-  state nchar(1) not null ,
+  state nchar(1) not null DEFAULT((1)),
   create_time datetime2  not null ,
   update_time datetime2  null ,
-  org_name nvarchar(60) null ,
+  CreateUser varchar(50) null ,
+  CreateUserName varchar(50) null ,
+  UpdateUser varchar(50) null ,
+  UpdateUserName varchar(50) null ,
+  Dept varchar(50) null ,
+  DeptName varchar(50) null ,
+  Company varchar(50) null ,
+  CompanyName varchar(50) null ,
   CONSTRAINT PK_inv_depot_detail PRIMARY KEY  CLUSTERED
   (
     depot_detail_id

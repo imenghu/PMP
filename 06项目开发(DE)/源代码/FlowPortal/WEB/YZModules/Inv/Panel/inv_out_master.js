@@ -1,7 +1,8 @@
 ﻿Ext.define('YZModules.Inv.Panel.inv_out_master', {
     extend: 'Ext.panel.Panel',
     requires: [
-        'YZSoft.bpm.src.ux.FormManager'
+        'YZSoft.bpm.src.ux.FormManager',
+        'YZSoft.bpm.taskoperation.Manager'
     ],
     title: '物料出库',
     layout: 'fit',
@@ -50,24 +51,26 @@
                 },
                 items: [
                     { xtype: 'rownumberer' },
-                                        { header: '公司名称', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
+                                        { header: '公司', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '部门名称', dataIndex: 'DeptName', width: 100, align: 'left', sortable: true
+                                        { header: '部门', dataIndex: 'DeptName', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '创建人姓名', dataIndex: 'CreateUserName', width: 100, align: 'left', sortable: true
+                                        { header: '出库人姓名', dataIndex: 'CreateUserName', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '领用人部门id', dataIndex: 'req_org_id', width: 100, align: 'left', sortable: true
+                                        { header: '领用人部门', dataIndex: 'ReqOrgName', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '领用人id', dataIndex: 'req_userid', width: 100, align: 'left', sortable: true
+                                        { header: '领用人姓名', dataIndex: 'ReqUserName', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '审批状态', dataIndex: 'out_state', width: 100, align: 'left', sortable: true
+                                        //{
+                                        //    header: '物料名称', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
+                                        //},
+                                        {
+                                            header: '审批状态', dataIndex: 'out_state', width: 100, align: 'center', sortable: true, renderer: XYSoft.Render.renderStatus
                                         },
                                         { header: '创建时间', dataIndex: 'create_time', width: 100, align: 'left', sortable: true
                                             , renderer: XYSoft.Render.renderDateYMD
                                         },
-                                        { header: '物料名称', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
-                                        },
-                                        { header: '备注', dataIndex: 'outdetail_remarks', width: 100, align: 'left', sortable: true
+                                        { header: '备注', dataIndex: 'outdetail_remarks', width: 100,flex:1, align: 'left', sortable: true
                                         },
                                         { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo} },
                 ]
@@ -135,36 +138,85 @@
             }
         });
 
+        me.menuTraceChart = Ext.create('YZSoft.src.menu.Item', {
+            text: RS.$('All_ProcessChart'),
+            glyph: 0xeae5,
+            handler: function (item) {
+                sm = me.grid.getSelectionModel();
+                recs = sm.getSelection() || [];
+
+                if (recs.length != 1)
+                    return;
+
+                me.openTrace(recs[0], 0);
+            }
+        });
+
+        me.menuTraceList = Ext.create('YZSoft.src.menu.Item', {
+            text: RS.$('All_TraceTimeline'),
+            glyph: 0xeb1e,
+            handler: function (item) {
+                var sm = me.grid.getSelectionModel(),
+                    recs = sm.getSelection() || [];
+
+                if (recs.length != 1)
+                    return;
+
+                me.openTrace(recs[0], 1);
+            }
+        });
+
+        me.btnTrace = Ext.create('YZSoft.src.button.Button', {
+            text: RS.$('All_TaskTrace'),
+            glyph: 0xeb10,
+            menu: { items: [me.menuTraceChart, me.menuTraceList] },
+            updateStatus: function () {
+                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, null, 1, 1));
+            }
+        });
+
+        me.toolBar = Ext.create('Ext.toolbar.Toolbar', {
+            cls: 'yz-tbar-module',
+            items: [
+                me.btnNew,
+                me.btnEdit,
+                me.btnDelete,
+                '|',
+                me.btnTrace,
+                me.btnExcelExport,
+                '->',
+                '搜索条件', {
+                    xclass: 'YZSoft.src.form.field.Search',
+                    store: me.store,
+                    width: 220,
+                    createSearchPanel: function () {
+                        var pnl = Ext.create({
+                            xclass: 'YZModules.Inv.Panel.inv_out_master_SearchPanel',
+                            region: 'north',
+                            store: me.store
+                        });
+
+                        me.insert(0, pnl);
+                        return pnl;
+                    }
+                }]
+        });
         cfg = {
             layout: 'border',
-            tbar: {
-                cls: 'yz-tbar-module',
-                items: [
-                    me.btnNew,
-                    me.btnEdit,
-                    me.btnDelete,
-                    '|',
-                    me.btnExcelExport,
-                    '->',
-                    '搜索条件', {
-                        xclass: 'YZSoft.src.form.field.Search',
-                        store: me.store,
-                        width: 220,
-                        createSearchPanel: function () {
-                            var pnl = Ext.create({
-                                xclass: 'YZModules.Inv.Panel.inv_out_master_SearchPanel',
-                                region: 'north',
-                                store: me.store
-                            });
-
-                            me.insert(0, pnl);
-                            return pnl;
-                        }
-                    }]
-            },
+            tbar: me.toolBar,
             items: [me.grid]
         };
 
+        me.sts = Ext.create('YZSoft.src.sts', {
+            tbar: me.toolBar,
+            store: me.store,
+            sm: me.grid.getSelectionModel(),
+            request: {
+                params: {
+                    Method: 'GetProcessingPermision'
+                }
+            }
+        });
         Ext.apply(cfg, config);
         me.callParent([cfg]);
     },

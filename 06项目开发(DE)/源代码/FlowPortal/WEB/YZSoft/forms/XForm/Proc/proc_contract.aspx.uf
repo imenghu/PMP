@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-12T21:13:34.3790093+08:00",
+  "generateAt": "2019-10-15T16:57:37.4862171+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -10,7 +10,6 @@
           "id": "XTextBox2",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "SFDATA:proc_contract.contract_code"
         }
@@ -21,7 +20,7 @@
           "id": "XDropDownList1",
           "runat": "server",
           "xdatabind": "SFDATA:proc_contract.contract_type",
-          "prompttext": "请选择"
+          "prompttext": "--请选择--"
         },
         "childNodes": [
           {
@@ -53,7 +52,6 @@
           "id": "XTextBox6",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "SFDATA:proc_contract.contract_name"
         }
@@ -64,9 +62,20 @@
           "id": "XTextBox3",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "80%",
-          "xdatabind": "SFDATA:proc_contract.vendor_name"
+          "xdatabind": "SFDATA:proc_contract.vendor_name",
+          "disableexpress": "1"
+        }
+      },
+      "XDataBrowserButton3": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton3",
+          "runat": "server",
+          "datamap": "vendor_id->SFDATA:proc_contract.vendor_id;vendor_name->SFDATA:proc_contract.vendor_name",
+          "displaycolumns": "vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_vendor;Filter:state->varState",
+          "width": "21px"
         }
       },
       "XDropDownList2": {
@@ -75,7 +84,7 @@
           "id": "XDropDownList2",
           "runat": "server",
           "xdatabind": "SFDATA:proc_contract.if_outsource",
-          "prompttext": "请选择"
+          "prompttext": "--请选择--"
         },
         "childNodes": [
           {
@@ -100,7 +109,6 @@
           "id": "XTextBox7",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "SFDATA:proc_contract.total_price"
         }
@@ -111,9 +119,9 @@
           "id": "XTextBox4",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
-          "xdatabind": "SFDATA:proc_contract.createuser"
+          "xdatabind": "SFDATA:proc_contract.CreateUserName",
+          "disableexpress": "1"
         }
       },
       "XTextBox5": {
@@ -122,9 +130,18 @@
           "id": "XTextBox5",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "80%",
-          "xdatabind": "SFDATA:proc_contract.signname"
+          "xdatabind": "SFDATA:proc_contract.SignUserName",
+          "disableexpress": "1"
+        }
+      },
+      "XSelectUserButton1": {
+        "ctype": "aspxform:xselectuserbutton",
+        "attrs": {
+          "id": "XSelectUserButton1",
+          "runat": "server",
+          "datamap": "Account->SFDATA:proc_contract.SignUserAccount;DisplayName->SFDATA:proc_contract.SignUserName",
+          "width": "21px"
         }
       },
       "XAttachments1": {
@@ -143,10 +160,10 @@
         "attrs": {
           "id": "XDataBrowserButton2",
           "runat": "server",
-          "width": "70px",
           "datamap": "pur_task_id->SFDATA:proc_contract_task.pur_task_id",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;plan_price:计划单价;pur_slnum:申购数量;pur_slnum_unit:申购单位;pur_stnum:基准数量;pur_stnum_unit:基准单位;sl_st_scale:转换比例;plan_arrival_time:计划到货时间;item_price:计划金额",
           "xdatasource": "DataSource:SFDATA;TableName:proc_pur_task",
+          "width": "70px",
           "multiselect": "True",
           "text": "添加物料"
         }
@@ -157,11 +174,10 @@
           "id": "XTextBox1",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
-          "width": "60px",
+          "width": "120px",
           "xdatabind": "varcode",
-          "valuetodisplaytext": "",
-          "enabled": "False"
+          "disableexpress": "1",
+          "valuetodisplaytext": ""
         }
       },
       "XDataBrowserButton1": {
@@ -169,10 +185,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "width": "21px",
-          "datamap": "pur_task_id->SFDATA:proc_contract_task.pur_task_id;mat_code->varcode",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称",
-          "xdatasource": "DataSource:SFDATA;TableName:proc_pur_task"
+          "datamap": "pur_task_id->SFDATA:proc_contract_task.pur_task_id",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;plan_price:计划单价;pur_slnum:申购数量;pur_slnum_unit:申购单位;pur_stnum:基准数量;pur_stnum_unit:基准单位;sl_st_scale:转换比例;plan_arrival_time:计划到货时间;item_price:计划金额",
+          "xdatasource": "DataSource:SFDATA;TableName:proc_pur_task",
+          "width": "21px"
         }
       },
       "XTextBox20": {
@@ -181,10 +197,9 @@
           "id": "XTextBox20",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "SFDATA:proc_contract_task.pur_task_id",
-          "datamap": "mat_code->varcode;mat_name->varname;mat_spec->varspec;plan_price->varprice;pur_slnum->varslnum;pur_slnum_unit->varunit;plan_arrival_time->vartime;if_urg->varurg;item_price->varsprice;pur_task_remarks->varremark",
+          "datamap": "mat_code->varcode;mat_name->varname;mat_spec->varspec;plan_price->varprice;pur_slnum->varslnum;pur_slnum_unit->varunit;pur_stnum_unit->varpriceunit;plan_arrival_time->vartime;if_urg->varurg;item_price->varsprice;pur_task_remarks->varremark",
           "valuetodisplaytext": "DataSource:SFDATA;TableName:proc_pur_task;FilterColumn:pur_task_id;DisplayColumn:pur_task_id",
           "hiddenexpress": "1"
         }
@@ -195,10 +210,9 @@
           "id": "XTextBox10",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "varname",
-          "enabled": "False"
+          "disableexpress": "1"
         }
       },
       "XTextBox11": {
@@ -207,10 +221,9 @@
           "id": "XTextBox11",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "varspec",
-          "enabled": "False"
+          "disableexpress": "1"
         }
       },
       "XTextBox12": {
@@ -219,10 +232,9 @@
           "id": "XTextBox12",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "varslnum",
-          "enabled": "False"
+          "disableexpress": "1"
         }
       },
       "XTextBox13": {
@@ -231,10 +243,9 @@
           "id": "XTextBox13",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "varunit",
-          "enabled": "False"
+          "disableexpress": "1"
         }
       },
       "XTextBox14": {
@@ -243,10 +254,20 @@
           "id": "XTextBox14",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "varprice",
-          "enabled": "False"
+          "disableexpress": "1"
+        }
+      },
+      "XTextBox15": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox15",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "varpriceunit",
+          "disableexpress": "1"
         }
       },
       "XTextBox16": {
@@ -255,35 +276,48 @@
           "id": "XTextBox16",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "varsprice",
-          "enabled": "False"
+          "disableexpress": "1"
         }
       },
-      "XTextBox17": {
-        "ctype": "aspxform:xtextbox",
+      "XDateTimePicker1": {
+        "ctype": "aspxform:xdatetimepicker",
         "attrs": {
-          "id": "XTextBox17",
+          "id": "XDateTimePicker1",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
-          "width": "100%",
           "xdatabind": "vartime",
-          "enabled": "False"
+          "width": "100%",
+          "displayonly": "True"
         }
       },
-      "XTextBox18": {
-        "ctype": "aspxform:xtextbox",
+      "XDropDownList3": {
+        "ctype": "aspxform:xdropdownlist",
         "attrs": {
-          "id": "XTextBox18",
+          "id": "XDropDownList3",
           "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
-          "width": "100%",
           "xdatabind": "varurg",
-          "enabled": "False"
-        }
+          "disableexpress": "1",
+          "width": "100%"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "selected": "True",
+              "value": "0",
+              "innerhtml": "否"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "1",
+              "innerhtml": "是"
+            }
+          }
+        ]
       },
       "XTextBox19": {
         "ctype": "aspxform:xtextbox",
@@ -291,15 +325,14 @@
           "id": "XTextBox19",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "xdatabind": "varremark",
-          "enabled": "False"
+          "disableexpress": "1"
         }
       },
       "table1": {
         "ctype": "grid",
         "attrs": {
-          "width": "960",
+          "width": "1200",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -318,48 +351,15 @@
           "XTextBox12",
           "XTextBox13",
           "XTextBox14",
+          "XTextBox15",
           "XTextBox16",
-          "XTextBox17",
-          "XTextBox18",
+          "XDateTimePicker1",
+          "XDropDownList3",
           "XTextBox19"
         ],
         "dynamicArea": {
           "startRowIndex": 1,
           "rows": 1
-        }
-      },
-      "XTextBox8": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "XTextBox8",
-          "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
-          "width": "100%",
-          "xdatabind": "SFDATA:proc_contract.companyname"
-        }
-      },
-      "XTextBox9": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "XTextBox9",
-          "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
-          "width": "100%",
-          "xdatabind": "SFDATA:proc_contract.dept"
-        }
-      },
-      "XTextBox21": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "XTextBox21",
-          "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
-          "width": "100%",
-          "xdatabind": "SFDATA:proc_contract.vendor_id",
-          "innerhtml": "1"
         }
       },
       "XTextBox22": {
@@ -368,10 +368,18 @@
           "id": "XTextBox22",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
-          "xdatabind": "SFDATA:proc_contract.sign_userid",
-          "innerhtml": "1"
+          "xdatabind": "SFDATA:proc_contract.SignUserAccount"
+        }
+      },
+      "XTextBox21": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox21",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_contract.vendor_id"
         }
       },
       "XTextBox23": {
@@ -380,16 +388,26 @@
           "id": "XTextBox23",
           "runat": "server",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
           "width": "100%",
           "xdatabind": "SFDATA:proc_contract.approval_state",
+          "innerhtml": "1"
+        }
+      },
+      "XTextBox8": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox8",
+          "runat": "server",
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "varState",
           "innerhtml": "1"
         }
       },
       "table2": {
         "ctype": "wrap",
         "attrs": {
-          "width": "960",
+          "width": "462",
           "align": "center",
           "border": "0",
           "cellspacing": "0",
@@ -399,11 +417,10 @@
         },
         "ctypeorg": "table",
         "items": [
-          "XTextBox8",
-          "XTextBox9",
-          "XTextBox21",
           "XTextBox22",
-          "XTextBox23"
+          "XTextBox21",
+          "XTextBox23",
+          "XTextBox8"
         ]
       }
     },
@@ -413,10 +430,12 @@
       "XDropDownList1",
       "XTextBox6",
       "XTextBox3",
+      "XDataBrowserButton3",
       "XDropDownList2",
       "XTextBox7",
       "XTextBox4",
       "XTextBox5",
+      "XSelectUserButton1",
       "XAttachments1",
       "XDataBrowserButton2",
       "table1",

@@ -24,7 +24,7 @@ CREATE TABLE dbo.ctl_material
   mast_state char(1) null ,
   create_userid int  null ,
   lastupdate_userid int  null ,
-  state char(1) null ,
+  state char(1) null DEFAULT((1)),
   create_time datetime  null ,
   update_time datetime  null ,
   remark varchar(100) null ,

@@ -50,17 +50,17 @@
                 },
                 items: [
                     { xtype: 'rownumberer' },
-                                        { header: '仓库公司', dataIndex: 'org_name', width: 100, align: 'left', sortable: true
+                                        { header: '公司', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '物料编码', dataIndex: 'mat_code', width: 100, align: 'left', sortable: true
+                                        { header: '物料编码', dataIndex: 'mat_code', width: 120, align: 'left', sortable: true
                                         },
-                                        { header: '物料名称', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
+                                        { header: '物料名称', dataIndex: 'mat_name',flex:1, width: 100, align: 'left', sortable: true
                                         },
                                         { header: '规格', dataIndex: 'mat_spec', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '本次库存数量', dataIndex: 'depot_mat_num', width: 100, align: 'left', sortable: true
+                                        { header: '数量', dataIndex: 'depot_mat_num', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '基准单位', dataIndex: 'depot_stnum_unit', width: 100, align: 'left', sortable: true
+                                        { header: '单位', dataIndex: 'depot_stnum_unit', width: 100, align: 'left', sortable: true
                                         },
                                         { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo} },
                 ]
@@ -75,44 +75,6 @@
                 }
             }
         });
-
-//        me.btnNew = Ext.create('Ext.button.Button', {
-//            text: '新增',
-//            glyph: 0xe61d,
-//            handler: function () {
-//                me.addNew();
-//            }
-//        });
-
-//        me.btnEdit = Ext.create('YZSoft.src.button.Button', {
-//            text: '修改',
-//            glyph: 0xe61c,
-//            sm: me.grid.getSelectionModel(),
-//            updateStatus: function () {
-//                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, '', 1, 1));
-//            },
-//            handler: function () {
-//                var sm = me.grid.getSelectionModel(),
-//                    recs = sm.getSelection() || [];
-
-//                if (recs.length != 1)
-//                    return;
-
-//                me.edit(recs[0]);
-//            }
-//        });
-
-//        me.btnDelete = Ext.create('YZSoft.src.button.Button', {
-//            text: '删除',
-//            glyph: 0xe64d,
-//            sm: me.grid.getSelectionModel(),
-//            updateStatus: function () {
-//                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, '', 1, -1));
-//            },
-//            handler: function () {
-//                me.deleteSelection();
-//            }
-//        });
 
         me.btnExcelExport = Ext.create('YZSoft.src.button.ExcelExportButton', {
             grid: me.grid,
@@ -166,10 +128,6 @@
             this.store.reload($S.loadMask.activate);
     },
 
-    renderNo: function (value, metaData, record) {
-        return Ext.String.format("<a href='#'>{0}</a>", Ext.util.Format.text(value));
-    },
-
     onClickNo: function (view, cell, recordIndex, cellIndex, e) {
         if (e.getTarget().tagName == 'A')
             this.read(this.store.getAt(recordIndex));
@@ -177,43 +135,6 @@
     renderRead: function (value, metaData, record) {
         return "<a href='#'>查看</a>";
     },
-
-//    addNew: function () {
-//        var me = this;
-
-//        YZSoft.bpm.src.ux.FormManager.openFormApplication('Inv/inv_depot_detail', '', 'New', Ext.apply({
-//            sender: me,
-//            title: '新增-库存明细',
-//            dlgModel: 'Tab', //Tab,Window,Dialog
-//            width: 600,
-//            height: 430,
-//            listeners: {
-//                submit: function (name, result) {
-//                    me.store.reload({ loadMask: false });
-//                }
-//            }
-//        }));
-//    },
-
-//    edit: function (rec) {
-//        var me = this;
-
-//        YZSoft.bpm.src.ux.FormManager.openFormApplication('Inv/inv_depot_detail', rec.data.depot_detail_id, 'Edit', Ext.apply({
-//            sender: me,
-//            title: '库存明细',
-//            listeners: {
-//                submit: function (action, data) {
-//                    me.store.reload({
-//                        loadMask: {
-//                            msg: '保存已成功',
-//                            start: 0,
-//                            stay: 300
-//                        }
-//                    });
-//                }
-//            }
-//        }, me.dlgCfg));
-//    },
     read: function (rec) {
         var me = this;
 
@@ -221,63 +142,5 @@
             sender: me,
             title: '库存明细'
         }, me.dlgCfg));
-    },
-
-//    deleteSelection: function () {
-//        var me = this,
-//            recs = me.grid.getSelectionModel().getSelection(),
-//            ids = [];
-
-//        if (recs.length == 0)
-//            return;
-
-//        Ext.each(recs, function (rec) {
-//            ids.push(rec.data.depot_detail_id);
-//        });
-
-//        Ext.Msg.show({
-//            title: '删除确认',
-//            msg: '您确定要删除选中项吗？',
-//            buttons: Ext.Msg.OKCANCEL,
-//            defaultButton: 'cancel',
-//            icon: Ext.MessageBox.INFO,
-
-//            fn: function (btn, text) {
-//                if (btn != 'ok')
-//                    return;
-
-//                YZSoft.Ajax.request({
-//                    url: YZSoft.$url(me, '../Service/inv_depot_detail.ashx'),
-//                    method: 'POST',
-//                    params: {
-//                        method: 'Delete'
-//                    },
-//                    jsonData: ids,
-//                    waitMsg: {
-//                        msg: '正在删除...',
-//                        target: me.grid
-//                    },
-//                    success: function (action) {
-//                        me.store.reload({
-//                            loadMask: {
-//                                msg: Ext.String.format('{0}个对象已删除！', recs.length),
-//                                start: 0,
-//                                stay: 300
-//                            }
-//                        });
-//                    },
-//                    failure: function (action) {
-//                        var mbox = Ext.Msg.show({
-//                            title: '错误提示',
-//                            msg: Ext.util.Format.text(action.result.errorMessage),
-//                            buttons: Ext.Msg.OK,
-//                            icon: Ext.MessageBox.WARNING
-//                        });
-
-//                        me.store.reload({ mbox: mbox });
-//                    }
-//                });
-//            }
-//        });
-//    }
+    }
 });

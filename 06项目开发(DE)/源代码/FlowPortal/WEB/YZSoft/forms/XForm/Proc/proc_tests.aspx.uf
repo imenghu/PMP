@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-11T11:38:37.5199163+08:00",
+  "generateAt": "2019-10-15T14:28:30.7331071+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -12,19 +12,42 @@
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
-          "xdatabind": "SFDATA:proc_tests.mat_name"
+          "xdatabind": "SFDATA:proc_tests.mat_name",
+          "disableexpress": "1"
         }
       },
-      "XTextBox3": {
-        "ctype": "aspxform:xtextbox",
+      "XDropDownList2": {
+        "ctype": "aspxform:xdropdownlist",
         "attrs": {
-          "id": "XTextBox3",
+          "id": "XDropDownList2",
           "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
+          "xdatabind": "SFDATA:proc_tests.tests_result",
           "width": "100%",
-          "xdatabind": "SFDATA:proc_tests.tests_result"
-        }
+          "prompttext": "--请选择--"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "1",
+              "innerhtml": "合格"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "2",
+              "innerhtml": "不合格（让步接收）"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "3",
+              "innerhtml": "不合格（不接受）"
+            }
+          }
+        ]
       },
       "XTextBox4": {
         "ctype": "aspxform:xtextbox",
@@ -34,7 +57,8 @@
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
-          "xdatabind": "SFDATA:proc_tests.tests_userid"
+          "xdatabind": "SFDATA:proc_tests.CreateUserName",
+          "disableexpress": "1"
         }
       },
       "XTextBox1": {
@@ -48,6 +72,21 @@
           "xdatabind": "SFDATA:proc_tests.tests_remarks",
           "textmode": "MultiLine",
           "rows": "5"
+        }
+      },
+      "XExcelDataImportButton1": {
+        "ctype": "aspxform:xexceldataimportbutton",
+        "attrs": {
+          "id": "XExcelDataImportButton1",
+          "runat": "server",
+          "xclass": "YZSoft.Forms.Field.ExcelDataImportButton",
+          "width": "70px",
+          "text": "Excel导入",
+          "columncount": "3",
+          "datamap": "A->SFDATA:proc_tests_value.index_name;B->SFDATA:proc_tests_value.rang_value;C->SFDATA:proc_tests_value.tests_value",
+          "popupwndwidth": "-1",
+          "popupwndheight": "-1",
+          "usesubmitbehavior": "False"
         }
       },
       "XTextBox5": {
@@ -83,17 +122,17 @@
           "xdatabind": "SFDATA:proc_tests_value.tests_value"
         }
       },
-      "table1": {
+      "tb1": {
         "ctype": "grid",
         "attrs": {
           "width": "960",
           "align": "center",
+          "id": "tb1",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
           "cellspacing": "0",
           "cellpadding": "0",
-          "dynamicarea": "2,1",
-          "id": "table1"
+          "dynamicarea": "2,1"
         },
         "ctypeorg": "table",
         "items": [
@@ -105,44 +144,16 @@
           "startRowIndex": 2,
           "rows": 1
         }
-      },
-      "XTextBox8": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "XTextBox8",
-          "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
-          "width": "100%",
-          "xdatabind": "SFDATA:proc_tests.test_happen",
-          "innerhtml": "已化验"
-        }
-      },
-      "table2": {
-        "ctype": "wrap",
-        "attrs": {
-          "width": "960",
-          "align": "center",
-          "border": "0",
-          "cellspacing": "0",
-          "cellpadding": "0",
-          "hiddenexpress": "1",
-          "id": "table2"
-        },
-        "ctypeorg": "table",
-        "items": [
-          "XTextBox8"
-        ]
       }
     },
     "validators": {},
     "items": [
       "XTextBox2",
-      "XTextBox3",
+      "XDropDownList2",
       "XTextBox4",
       "XTextBox1",
-      "table1",
-      "table2"
+      "XExcelDataImportButton1",
+      "tb1"
     ]
   }
 }

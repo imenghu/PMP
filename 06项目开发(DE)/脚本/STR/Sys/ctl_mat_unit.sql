@@ -11,7 +11,7 @@ CREATE TABLE dbo.ctl_mat_unit
   denominator nvarchar(60) null ,
   base_unit_name nvarchar(60) not null ,
   if_base_unit nchar(1) null ,
-  state nchar(1) null ,
+  state nchar(1) null DEFAULT((1)),
   create_time datetime2  null ,
   update_time datetime2  null ,
   CONSTRAINT PK_ctl_mat_unit PRIMARY KEY  CLUSTERED

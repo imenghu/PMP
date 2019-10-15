@@ -196,7 +196,6 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand', {
             this.store.reload($S.loadMask.activate);
     },
     renderStatus: function (value) {
-        debugger
         var color = "red", str = "";
         switch (value) {
             case '0':
@@ -226,7 +225,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand', {
 
     onClickNo: function (view, cell, recordIndex, cellIndex, e) {
         if (e.getTarget().tagName == 'A')
-            this.read(this.store.getAt(recordIndex));
+            this.readTask(this.store.getAt(recordIndex));
     },
 
    
@@ -249,29 +248,16 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand', {
                 }
             }
         });
-        //YZSoft.bpm.src.ux.FormManager.openFormApplication('Purchase/BaseMaterial', '', 'New', Ext.apply({
-        //    sender: me,
-        //    title: '添加物料',
-        //    listeners: {
-        //        submit: function (action, data) {
-        //            me.store.reload({
-        //                loadMask: {
-        //                    msg: '保存已成功',
-        //                    start:0,
-        //                    stay: 300
-        //                },
-        //                callback: function () {
-        //                    var rec = me.store.getById(data.Key);
-        //                    if (rec)
-        //                        me.grid.getSelectionModel().select(rec);
-        //                }
-        //            });
-        //        }
-        //    }
-        //}, me.dlgCfg));
     },
-
     read: function (rec) {
+        var me = this;
+
+        YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_demand', rec.data.demand_id, 'Read', Ext.apply({
+            sender: me,
+            title: Ext.String.format('采购需求')
+        }, me.dlgCfg));
+    },
+    readTask: function (rec) {
         var me = this;
 
         YZSoft.bpm.src.ux.FormManager.openTaskForRead(rec.data.TaskID, Ext.apply({

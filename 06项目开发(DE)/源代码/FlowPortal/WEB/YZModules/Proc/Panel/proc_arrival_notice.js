@@ -52,11 +52,7 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
                 },
                 items: [
                     { xtype: 'rownumberer' },
-                    { header: 'TaskID', dataIndex: 'TaskID', width: 20, hidden: true },
-                { header: 'arrival_notice_id', dataIndex: 'arrival_notice_id', width: 20, hidden: true },
-                    //{ header: '公司', dataIndex: 'companyname', width: 100, align: 'left', sortable: true },
-                    //{ header: '部门', dataIndex: 'dept', width: 100, align: 'left', sortable: true },
-                    { header: "供应商名称", dataIndex: 'vendor_name', width: 80, align: 'left', sortable: true },
+                    { header: "供应商名称", dataIndex: 'vendor_name',flex:1, width: 80, align: 'left', sortable: true },
                     { header: '物料名称', dataIndex: 'mat_name', width: 80, align: 'left', sortable: true },
                     { header: '物料规格', dataIndex: 'mat_spesc', minwidth: 80, align: 'left', sortable: true },
                     { header: '采购物料数量', dataIndex: 'arrival_slnum', width: 80, align: 'left', sortable: true },
@@ -77,7 +73,21 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
             }),
             listeners: {
                 rowdblclick: function (grid, record, tr, rowIndex, e, eOpts) {
-                    //me.read(record);
+                    me.read(record);
+                }
+            }
+        });
+
+        me.btnExcelExport = Ext.create('YZSoft.src.button.ExcelExportButton', {
+            grid: me.grid,
+            //templateExcel: YZSoft.$url(me, '设备清单模板.xls'), //导出模板，不设置则按缺省方式导出
+            //params: {},
+            fileName: '采购计划',
+            allowExportAll: true, //可选项，缺省使用YZSoft.EnvSetting.Excel.AllowExportAll中的设置，默认值false
+            //maxExportPages: 10, //可选项，缺省使用YZSoft.EnvSetting.Excel.MaxExportPages中的设置，默认值100
+            listeners: {
+                beforeload: function (params) {
+                    params.ReportDate = new Date()
                 }
             }
         });
@@ -85,7 +95,7 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
         me.toolBar = Ext.create('Ext.toolbar.Toolbar', {
             cls: 'yz-tbar-module',
             items: [
-
+                me.btnExcelExport,
                 '->',
                 '搜索条件', {
                     xclass: 'YZSoft.src.form.field.Search',
@@ -131,66 +141,7 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
             this.store.reload($S.loadMask.activate);
     },
 
-
-    finishClick: function (view, cell, recordIndex, cellIndex, e) {
-        var me = this,
-            recs = me.grid.getSelectionModel().getSelection(),
-            ids = [];
-
-        if (recs.length == 0)
-            return;
-
-        Ext.each(recs, function (rec) {
-            ids.push(rec.data.TaskID);
-        });
-
-        Ext.Msg.show({
-            title: '任务完成确认',
-            msg: '您确定该任务已完成吗？',
-            buttons: Ext.Msg.OKCANCEL,
-            defaultButton: 'cancel',
-            icon: Ext.MessageBox.INFO,
-
-            fn: function (btn, text) {
-                if (btn != 'ok')
-                    return;
-
-                YZSoft.Ajax.request({
-                    url: YZSoft.$url(me, '../Service/proc_arrival_notice.ashx'),
-                    method: 'POST',
-                    params: {
-                        method: 'UpStatus'
-                    },
-                    jsonData: ids,
-                    waitMsg: {
-                        msg: '正在操作...',
-                        target: me.grid
-                    },
-                    success: function (action) {
-                        me.store.reload({
-                            loadMask: {
-                                msg: Ext.String.format('{0}个对象已完成！', recs.length),
-                                start: 0,
-                                stay: 300
-                            }
-                        });
-                    },
-                    failure: function (action) {
-                        var mbox = Ext.Msg.show({
-                            title: '错误提示',
-                            msg: Ext.util.Format.text(action.result.errorMessage),
-                            buttons: Ext.Msg.OK,
-                            icon: Ext.MessageBox.WARNING
-                        });
-
-                        me.store.reload({ mbox: mbox });
-                    }
-                });
-            }
-        });
-    },
     NoticeClick: function (view, cell, recordIndex, cellIndex, e,rec) {
-        
         var me = this;
         var purtaskid = me.store.getAt(recordIndex).data.arrival_notice_id;
         if (cell.innerText == "入库") {
@@ -221,7 +172,7 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
         }
         else {
             var me = this;
-            YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/inv_in_detail_t', rec.data.in_detail_id, 'Read', Ext.apply({
+            YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/inv_in_detail', rec.data.in_detail_id, 'Read', Ext.apply({
                 sender: me,
                 title: Ext.String.format('入库单')
             }, me.dlgCfg));
@@ -230,7 +181,8 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
     },
     Status: function (value) {
  
-        var color = "red", str = "";
+        var color = "red",
+            str = "";
         switch (value) {
             case '0':
                 color = "red";
@@ -244,36 +196,15 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
         }
         return Ext.String.format("<font color='{0}'>{1}</font>",color, Ext.util.Format.text(str));
     },
-
-    finish: function (value, metaData, record) {
-        return "<a href='#'>任务完成</a>";
-    },
     Notice: function (value, metaData, record) {
         return (value == "0" ? "<a href='#'>入库</a>" : "<a href='#'>查看</a>");
     },
+    read: function (rec) {
+        var me = this;
 
-
-    //read: function (rec) {
-    //    var me = this;
-
-    //    YZSoft.bpm.src.ux.FormManager.openTaskForRead(rec.data.TaskID, Ext.apply({
-    //        sender: me,
-    //        title: Ext.String.format('采购合同审批')
-    //    }));
-    //},
-
-    openTrace: function (rec, activeTabIndex) {
-        var me = this,
-            taskid = rec.data.TaskID;
-
-        var view = YZSoft.ViewManager.addView(me, 'YZSoft.bpm.tasktrace.Panel', {
-            id: 'BPM_TaskTrace_' + taskid,
-            title: Ext.String.format('{0} - {1}', RS.$('All_TaskTrace'), rec.data.SerialNum),
-            TaskID: taskid,
-            activeTabIndex: activeTabIndex,
-            closable: true
-        });
-
-        view.traceTab.setActiveTab(activeTabIndex);
+        YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_arrival_notice', rec.data.arrival_notice_id, 'Read', Ext.apply({
+            sender: me,
+            title: Ext.String.format('到货通知')
+        }, me.dlgCfg));
     }
 });

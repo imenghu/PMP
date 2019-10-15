@@ -114,8 +114,8 @@ public class Proc_Contract : YZServiceHandler
 
                         item["TaskID"] = reader.ReadInt32("TaskID");
                         item["contract_id"] = reader.ReadInt32("contract_id");
-                        item["companyname"] = reader.ReadString("companyname");
-                        item["dept"] = reader.ReadString("dept");
+                        item["CompanyName"] = reader.ReadString("CompanyName");
+                        item["DeptName"] = reader.ReadString("DeptName");
                         item["contract_code"] = reader.ReadString("contract_code");
                         item["contract_type"] = reader.ReadString("contract_type");
                         item["contract_name"] = reader.ReadString("contract_name");

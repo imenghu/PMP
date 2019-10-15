@@ -20,8 +20,10 @@
         }
         Ext.onReady(function () {
             var purtaskid=getQueryString('proctaskid');
-            Ext.get("xtxtPurTaskId").down('.yz-xform-field-ele').dom.value = purtaskid;
-            XFormOnChange(document.getElementById("xtxtPurTaskId"));
+            if(purtaskid!=null){
+                Ext.get("xtxtPurTaskId").down('.yz-xform-field-ele').dom.value = purtaskid;
+                XFormOnChange(document.getElementById("xtxtPurTaskId"));
+            }
         })
     </script>
 </head>
@@ -33,18 +35,14 @@ $Scripts-->
             <tbody>
                 <tr>
                     <td>
-                        <table width="960" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0">
+                        <table width="960" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0">
                             <tbody>
                                 <tr>
-                                    <td width="158" height="34" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                    <td width="320" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
                                     </td>
-                                    <td width="158" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                    </td>
-                                    <td width="316" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                        <font size="4">采购询价</font></td>
-                                    <td width="158" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                    </td>
-                                    <td width="158" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                    <td width="320" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+                                        <strong><font size="5">采购询价</font></strong></td>
+                                    <td width="320" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
                                     </td>
                                 </tr>
                             </tbody>
@@ -52,192 +50,197 @@ $Scripts-->
                         <table width="960" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0">
                             <tbody>
                                 <tr>
-                                    <td width="158" height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td width="158" height="34" class="xtbd" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         公司</td>
-                                    <td width="158" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox1" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.companyname"></aspxform:XTextBox>
+                                    <td width="158" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox1" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.CompanyName" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
-                                    <td width="158" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td width="158" class="xtbd" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         部门</td>
-                                    <td width="158" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox2" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.dept"></aspxform:XTextBox>
+                                    <td width="158" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox2" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.DeptName" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
-                                    <td width="158" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td width="158" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                     </td>
-                                    <td width="158" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td width="158" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="xtbd">
+                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         物料编码</td>
-                                    <td>
-                                        <aspxform:XTextBox id="XTextBox3" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.mat_code"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox3" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.mat_code" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
-                                    <td class="xtbd">
+                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         物料名称</td>
-                                    <td>
-                                        <aspxform:XTextBox id="XTextBox6" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.mat_name"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox6" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.mat_name" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
-                                    <td class="xtbd">
+                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         规格</td>
-                                    <td>
-                                        <aspxform:XTextBox id="XTextBox10" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.mat_spec"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox10" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.mat_spec" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         申购数量</td>
-                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox4" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.pur_slnum"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox4" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.pur_slnum" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
-                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         单位</td>
-                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox7" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.pur_slnum_unit"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox7" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.pur_slnum_unit" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
-                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         转化比例</td>
-                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox11" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.sl_st_scale"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox11" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.sl_st_scale" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td height="32" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td height="32" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         基准数量</td>
-                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox5" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.pur_stnum"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox5" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.pur_stnum" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
-                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         基准单位</td>
-                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox8" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.pur_stnum_unit"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox8" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.pur_stnum_unit" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
-                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         计划单价</td>
-                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox12" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.plan_price"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox12" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.plan_price" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         计划总金额</td>
-                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox14" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.item_price"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox14" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.item_price"></aspxform:XTextBox>
                                     </td>
-                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         预计到货时间</td>
-                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox9" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.plan_arrival_time"></aspxform:XTextBox>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XDateTimePicker id="XDateTimePicker3" runat="server" BorderWidth="1" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_pur_task.plan_arrival_time"></aspxform:XDateTimePicker>
                                     </td>
-                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                    <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
                                         是否紧急</td>
-                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XDropDownList id="XDropDownList5" runat="server" XDataBind="SFDATA:proc_pur_task.if_urg" Enabled="False" PromptText="--请选择--">
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+                                        <aspxform:XDropDownList id="XDropDownList5" runat="server" XDataBind="SFDATA:proc_pur_task.if_urg" PromptText="--请选择--">
                                             <asp:ListItem Value="1">是</asp:ListItem>
                                             <asp:ListItem Value="2">否</asp:ListItem>
                                         </aspxform:XDropDownList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td height="34" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="6">
-                                        询价供应商 &nbsp; 
-                                        <aspxform:XAddBlockButton id="XAddBlockButton1" runat="server" TableName="proc_pur_enquiry" DataSource="SFDATA" Text="添加"></aspxform:XAddBlockButton>
+                                    <td height="34" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="4">
+                                        询价供应商&nbsp;&nbsp; 
+                                    </td>
+                                    <td align="right" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="2">
+                                        <aspxform:XAddBlockButton id="XAddBlockButton1" runat="server" TableName="proc_pur_enquiry" DataSource="SFDATA" Text="新增"></aspxform:XAddBlockButton>
+                                        <aspxform:XExcelDataExportButton id="XExcelDataExportButton1" runat="server" Text="导出Excel" ExportTableID="tb1"></aspxform:XExcelDataExportButton>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                         <div align="center" style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; WIDTH: 960px; WHITE-SPACE: nowrap; OVERFLOW-X: auto; BORDER-BOTTOM: 0px; MIN-HEIGHT: 200px; BORDER-LEFT: 0px">
-                            <table width="1700" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" dynamicarea="1,1">
+                            <table width="1450" align="center" id="tb1" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" dynamicarea="1,1">
                                 <tbody>
                                     <tr>
-                                        <td width="30" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        </td>
-                                        <td width="20" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                        </td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="58" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                                            序号</td>
+                                        <td width="58" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            选择</td>
+                                        <td width="150" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             供应商名称</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             联系人</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             联系方式</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             预采购时间</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             预到货时间</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             是否化验</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             报价</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             是否含税</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             税率</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             是否含运费</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             增值税发票</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             总金额</td>
-                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
+                                        <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             附件</td>
                                     </tr>
                                     <tr>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XGridLineNo id="XGridLineNo1" runat="server" BorderWidth="1" BackColor="White" TextAlign="Center" BorderStyle="None" Width="100%">1</aspxform:XGridLineNo>
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                                            <aspxform:XGridLineNo id="XGridLineNo1" runat="server" BackColor="White" TextAlign="Center" BorderStyle="None" Width="100%">1</aspxform:XGridLineNo>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XRadioButton id="XRadioButton1" runat="server"></aspxform:XRadioButton>
+                                        <td align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XCheckBox id="XCheckBox1" runat="server" Width="40px"></aspxform:XCheckBox>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox17" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="70%" XDataBind="SFDATA:proc_pur_enquiry.vendor_name"></aspxform:XTextBox>
-                                            <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px"></aspxform:XDataBrowserButton>
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XTextBox id="XTextBox17" runat="server" BorderColor="#DCDCDC" width="110px" XDataBind="SFDATA:proc_pur_enquiry.vendor_name" DisableExpress="1"></aspxform:XTextBox>
+                                            <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:ctl_vendor" DisplayColumns="vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址;vendor_wechat:微信;vendor_qq:QQ" DataMap="vendor_id->SFDATA:proc_pur_enquiry.vendor_id"></aspxform:XDataBrowserButton>
+                                            <aspxform:XTextBox id="XTextBox9" runat="server" BorderColor="#DCDCDC" width="120px" XDataBind="SFDATA:proc_pur_enquiry.vendor_id" ValueToDisplayText="DataSource:SFDATA;TableName:ctl_vendor;FilterColumn:vendor_id;DisplayColumn:vendor_id" HiddenExpress="1" DisableExpress="1" DataMap="vendor_code->SFDATA:proc_pur_enquiry.vendor_code;vendor_name->SFDATA:proc_pur_enquiry.vendor_name;vendor_contact->varContact;vendor_tel->varTel"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox16" runat="server" BorderColor="#DCDCDC" width="120px" XDataBind="SFDATA:proc_pur_enquiry.vendor_code" HiddenExpress="1" DisableExpress="1"></aspxform:XTextBox>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox18" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.contact"></aspxform:XTextBox>
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XTextBox id="XTextBox18" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="varContact" DisableExpress="1"></aspxform:XTextBox>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox19" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.phonenumber"></aspxform:XTextBox>
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XTextBox id="XTextBox19" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="varTel" DisableExpress="1"></aspxform:XTextBox>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDateTimePicker id="XDateTimePicker1" runat="server" BorderWidth="1" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_pur_enquiry.plan_pur_time"></aspxform:XDateTimePicker>
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XDateTimePicker id="XDateTimePicker1" runat="server" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_pur_enquiry.plan_pur_time"></aspxform:XDateTimePicker>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDateTimePicker id="XDateTimePicker2" runat="server" BorderWidth="1" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_pur_enquiry.plan_arrival_time"></aspxform:XDateTimePicker>
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XDateTimePicker id="XDateTimePicker2" runat="server" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_pur_enquiry.plan_arrival_time"></aspxform:XDateTimePicker>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_tests" PromptText="--请选择--">
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_tests" PromptText="--请选择--" Width="100%">
                                                 <asp:ListItem Value="1">是</asp:ListItem>
                                                 <asp:ListItem Value="2">否</asp:ListItem>
                                             </aspxform:XDropDownList>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox20" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.quotation"></aspxform:XTextBox>
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XTextBox id="XTextBox20" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.quotation"></aspxform:XTextBox>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_tax" PromptText="--请选择--">
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_tax" PromptText="--请选择--" Width="100%">
                                                 <asp:ListItem Value="1">是</asp:ListItem>
                                                 <asp:ListItem Value="2">否</asp:ListItem>
                                             </aspxform:XDropDownList>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox21" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.tax_rate"></aspxform:XTextBox>
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XTextBox id="XTextBox21" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.tax_rate"></aspxform:XTextBox>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList3" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_freight" PromptText="--请选择--">
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XDropDownList id="XDropDownList3" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_freight" PromptText="--请选择--" Width="100%">
                                                 <asp:ListItem Value="1">是</asp:ListItem>
                                                 <asp:ListItem Value="2">否</asp:ListItem>
                                             </aspxform:XDropDownList>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList4" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_vat_ticket" PromptText="--请选择--">
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XDropDownList id="XDropDownList4" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_vat_ticket" PromptText="--请选择--" Width="100%">
                                                 <asp:ListItem Value="1">是</asp:ListItem>
                                                 <asp:ListItem Value="2">否</asp:ListItem>
                                             </aspxform:XDropDownList>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox22" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.total_price"></aspxform:XTextBox>
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                            <aspxform:XTextBox id="XTextBox22" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.total_price"></aspxform:XTextBox>
                                         </td>
-                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             <aspxform:XAttachments id="XAttachments1" runat="server" width="100%" XDataBind="SFDATA:proc_pur_enquiry.attachment" FileTypes="*.doc;*.docx;*.xls;*.xlsx;*.pdf;*.png;*.jpg;*.jpeg;*.gif" FileTypesDescription="Word,Excel,Pdf"></aspxform:XAttachments>
                                         </td>
                                     </tr>
@@ -248,32 +251,21 @@ $Scripts-->
                 </tr>
             </tbody>
         </table>
-        <table width="960" align="center" border="0" cellspacing="0" cellpadding="0">
+        <br />
+        <table width="462" align="center" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
             <tbody>
                 <tr>
-                    <td width="160">
-                        <aspxform:XTextBox id="xtxtPurTaskId" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.pur_task_id" ValueToDisplayText></aspxform:XTextBox>
+                    <td width="154" height="34">
+                        <aspxform:XTextBox id="xtxtPurTaskId" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.pur_task_id" ValueToDisplayText></aspxform:XTextBox>
                     </td>
-                    <td width="160">
+                    <td width="154">
                     </td>
-                    <td width="160">
-                    </td>
-                    <td width="160">
-                    </td>
-                    <td width="160">
-                    </td>
-                    <td width="160">
+                    <td width="154">
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <aspxform:XTextBox id="XTextBox13" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.state">1</aspxform:XTextBox>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
+                    <td height="34">
+                        <aspxform:XTextBox id="XTextBox13" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.state">1</aspxform:XTextBox>
                     </td>
                     <td>
                     </td>
@@ -281,14 +273,8 @@ $Scripts-->
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <aspxform:XTextBox id="XTextBox15" runat="server" BorderWidth="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.task_state">2</aspxform:XTextBox>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
+                    <td height="34">
+                        <aspxform:XTextBox id="XTextBox15" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.task_state">2</aspxform:XTextBox>
                     </td>
                     <td>
                     </td>

@@ -46,7 +46,7 @@ namespace Inv
             string keyword = request.GetString("kwd", null);
 
             //获得查询条件
-            string filter = "State='1'";
+            string filter = "inv_prod_in.State='1'";
 
             if (searchType == "QuickSearch")
             {
@@ -64,7 +64,7 @@ namespace Inv
             //获得Query
             string query = @"
             WITH X AS(
-                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,* FROM inv_prod_in {1}
+                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,inv_prod_in.*,mat_unit_name,innum=convert(float,numerator)*in_stnum FROM inv_prod_in join v_ctl_material_prod on inv_prod_in.mat_code=v_ctl_material_prod.mat_code {1}
             ),
             Y AS(
                 SELECT count(*) AS TotalRows FROM X
@@ -114,14 +114,18 @@ namespace Inv
     reader.ReadString("mat_spec");
                             item["in_stnum"] =
     reader.ReadInt32("in_stnum");
+                            item["mat_unit_name"] =
+    reader.ReadString("mat_unit_name");
+                            item["innum"] =
+    reader.ReadFloat("innum");
                             item["in_stnum_unit"] =
     reader.ReadString("in_stnum_unit");
-                            item["prod_org_id"] =
-    reader.ReadInt32("prod_org_id");
+                            item["ProdDeptName"] =
+    reader.ReadString("ProdDeptName");
                             item["depot_name"] =
     reader.ReadString("depot_name");
-                            item["dep_userid"] =
-    reader.ReadInt32("dep_userid");
+                            item["ProdUserName"] =
+    reader.ReadString("ProdUserName");
                             item["in_time"] =
     reader.ReadDateTime("in_time");
                             item["prod_in_remarks"] =

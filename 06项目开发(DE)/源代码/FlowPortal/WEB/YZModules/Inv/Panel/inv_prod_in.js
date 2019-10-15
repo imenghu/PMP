@@ -60,11 +60,18 @@
                                         },
                                         { header: '基准单位', dataIndex: 'in_stnum_unit', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '生产部门id', dataIndex: 'prod_org_id', width: 100, align: 'left', sortable: true
+                                        {
+                                            header: '入库体积', dataIndex: 'innum', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '库房名称', dataIndex: 'depot_name', width: 100, align: 'left', sortable: true
+                                        {
+                                            header: '单位', dataIndex: 'mat_unit_name', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '入库人id', dataIndex: 'dep_userid', width: 100, align: 'left', sortable: true
+                                        {
+                                            header: '生产部门', dataIndex: 'ProdDeptName', width: 100, align: 'left', sortable: true
+                                        },
+                                        { header: '仓库名称', dataIndex: 'depot_name', width: 100, align: 'left', sortable: true
+                                        },
+                                        { header: '入库人', dataIndex: 'ProdUserName', width: 100, align: 'left', sortable: true
                                         },
                                         { header: '入库时间', dataIndex: 'in_time', width: 100, align: 'left', sortable: true
                                             , renderer: XYSoft.Render.renderDateYMD

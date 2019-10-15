@@ -46,7 +46,7 @@ namespace Purchase
             string keyword = request.GetString("kwd", null);
 
             //获得查询条件
-            string filter = null;
+            string filter = "(State='1' and demand_state<>'0')";
 
             if (searchType == "QuickSearch")
             {

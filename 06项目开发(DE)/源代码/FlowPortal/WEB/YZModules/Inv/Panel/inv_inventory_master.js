@@ -1,7 +1,8 @@
 ﻿Ext.define('YZModules.Inv.Panel.inv_inventory_master', {
     extend: 'Ext.panel.Panel',
     requires: [
-        'YZSoft.bpm.src.ux.FormManager'
+        'YZSoft.bpm.src.ux.FormManager',
+        'YZSoft.bpm.taskoperation.Manager'
     ],
     title: '物料盘存',
     layout: 'fit',
@@ -62,10 +63,11 @@
                                         },
                                         { header: '库房名称', dataIndex: 'depot_name', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '盘存时间', dataIndex: 'inv_master_time', width: 100, align: 'left', sortable: true
+                                        { header: '盘存日期', dataIndex: 'inv_master_time', width: 100, align: 'left', sortable: true
                                             , renderer: XYSoft.Render.renderDateYMD
                                         },
-                                        { header: '审批状态', dataIndex: 'inv_remarks_state', width: 100, align: 'left', sortable: true
+                                        {
+                                            header: '审批状态', dataIndex: 'inv_remarks_state', flex: 1, width: 100, align: 'center', sortable: true, renderer: XYSoft.Render.renderStatus
                                         },
                                         { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo} },
                 ]
@@ -81,8 +83,16 @@
             }
         });
 
+        me.btnExport = Ext.create('Ext.button.Button', {
+            text: '导出库存记录',
+            glyph: 0xe61d,
+            handler: function () {
+                me.onExport();
+            }
+        });
+
         me.btnNew = Ext.create('Ext.button.Button', {
-            text: '新增',
+            text: '提交盘存结果',
             glyph: 0xe61d,
             handler: function () {
                 me.addNew();
@@ -133,36 +143,85 @@
             }
         });
 
+        me.menuTraceChart = Ext.create('YZSoft.src.menu.Item', {
+            text: RS.$('All_ProcessChart'),
+            glyph: 0xeae5,
+            handler: function (item) {
+                sm = me.grid.getSelectionModel();
+                recs = sm.getSelection() || [];
+
+                if (recs.length != 1)
+                    return;
+
+                me.openTrace(recs[0], 0);
+            }
+        });
+
+        me.menuTraceList = Ext.create('YZSoft.src.menu.Item', {
+            text: RS.$('All_TraceTimeline'),
+            glyph: 0xeb1e,
+            handler: function (item) {
+                var sm = me.grid.getSelectionModel(),
+                    recs = sm.getSelection() || [];
+
+                if (recs.length != 1)
+                    return;
+
+                me.openTrace(recs[0], 1);
+            }
+        });
+
+        me.btnTrace = Ext.create('YZSoft.src.button.Button', {
+            text: RS.$('All_TaskTrace'),
+            glyph: 0xeb10,
+            menu: { items: [me.menuTraceChart, me.menuTraceList] },
+            updateStatus: function () {
+                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, null, 1, 1));
+            }
+        });
+        me.toolBar = Ext.create('Ext.toolbar.Toolbar', {
+            cls: 'yz-tbar-module',
+            items: [
+                me.btnExport,
+                me.btnNew,
+                me.btnEdit,
+                me.btnDelete,
+                '|',
+                me.btnTrace,
+                me.btnExcelExport,
+                '->',
+                '搜索条件', {
+                    xclass: 'YZSoft.src.form.field.Search',
+                    store: me.store,
+                    width: 220,
+                    createSearchPanel: function () {
+                        var pnl = Ext.create({
+                            xclass: 'YZModules.Inv.Panel.inv_inventory_master_SearchPanel',
+                            region: 'north',
+                            store: me.store
+                        });
+
+                        me.insert(0, pnl);
+                        return pnl;
+                    }
+                }]
+        });
         cfg = {
             layout: 'border',
-            tbar: {
-                cls: 'yz-tbar-module',
-                items: [
-                    me.btnNew,
-                    me.btnEdit,
-                    me.btnDelete,
-                    '|',
-                    me.btnExcelExport,
-                    '->',
-                    '搜索条件', {
-                        xclass: 'YZSoft.src.form.field.Search',
-                        store: me.store,
-                        width: 220,
-                        createSearchPanel: function () {
-                            var pnl = Ext.create({
-                                xclass: 'YZModules.Inv.Panel.inv_inventory_master_SearchPanel',
-                                region: 'north',
-                                store: me.store
-                            });
-
-                            me.insert(0, pnl);
-                            return pnl;
-                        }
-                    }]
-            },
+            tbar: me.toolBar,
             items: [me.grid]
         };
 
+        me.sts = Ext.create('YZSoft.src.sts', {
+            tbar: me.toolBar,
+            store: me.store,
+            sm: me.grid.getSelectionModel(),
+            request: {
+                params: {
+                    Method: 'GetProcessingPermision'
+                }
+            }
+        });
         Ext.apply(cfg, config);
         me.callParent([cfg]);
     },
@@ -184,6 +243,18 @@
     },
     renderRead: function (value, metaData, record) {
         return "<a href='#'>查看</a>";
+    },
+
+    onExport: function () {
+        var me = this;
+
+        YZSoft.bpm.src.ux.FormManager.openFormApplication('Inv/inv_inventory_export', '', 'New', Ext.apply({
+            sender: me,
+            title: '导出库存记录',
+            dlgModel: 'Tab', //Tab,Window,Dialog
+            width: 600,
+            height: 430
+        }));
     },
 
     addNew: function () {

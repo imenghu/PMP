@@ -7,7 +7,7 @@ CREATE TABLE dbo.ctl_depot
   depot_id int IDENTITY(1,1) not null ,
   org_id int  null ,
   depot_name nvarchar(100) null ,
-  state nchar(1) null ,
+  state nchar(1) null DEFAULT((1)),
   create_time datetime2  null ,
   update_time datetime2  null ,
   CreateUser varchar(50) null ,

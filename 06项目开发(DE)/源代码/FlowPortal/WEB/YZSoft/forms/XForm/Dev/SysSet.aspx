@@ -62,11 +62,13 @@
         <table width="800" align="left" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" dynamicarea="2,1">
             <tbody>
                 <tr>
-                    <td height="20" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid" colspan="6">
+                    <td height="20" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid" colspan="5">
                         指标明细</td>
-                    <td align="right" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="2">
-                        <aspxform:XExcelDataImportButton id="XExcelDataImportButton3" runat="server" XClass="YZSoft.Forms.Field.ExcelDataImportButton" DataMap="A->DevDATA:SysItem.ItemId;B->DevDATA:SysItem.ItemName;C->DevDATA:SysItem.ItemType;D->DevDATA:SysItem.ItemLength;E->DevDATA:SysItem.ItemDecimal;F->DevDATA:SysItem.Description" ColumnCount="6" UseSubmitBehavior="False" PopupWndHeight="-1" PopupWndWidth="-1" text="Excel导入" Width="71px"></aspxform:XExcelDataImportButton>
-                        <aspxform:XExcelDataImportButton id="XExcelDataImportButton1" runat="server" XClass="YZSoft.Forms.Field.ExcelDataImportButton" UseSubmitBehavior="False" PopupWndHeight="-1" PopupWndWidth="-1" text="Excel导出" Width="71px"></aspxform:XExcelDataImportButton>
+                    <td align="right" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="3">
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" DisplayColumns="ItemId:指标编码;ItemName:指标名称;ItemType:指标类型;ItemLength:长度;ItemDecimal:小数位;Discription:备注" XDataSource="DataSource:DevDATA;TableName:SysItemCommon" DataMap="ItemId->DevDATA:SysItem.ItemId;ItemName->DevDATA:SysItem.ItemName;ItemType->DevDATA:SysItem.ItemType;ItemLength->DevDATA:SysItem.ItemLength;ItemDecimal->DevDATA:SysItem.ItemDecimal;Discription->DevDATA:SysItem.Description" Width="21px" MultiSelect="True"></aspxform:XDataBrowserButton>
+                        <aspxform:XAddBlockButton id="XAddBlockButton1" runat="server" TableName="SysItem" DataSource="DevDATA" Text="新增"></aspxform:XAddBlockButton>
+                        <aspxform:XExcelDataImportButton id="XExcelDataImportButton3" runat="server" XClass="YZSoft.Forms.Field.ExcelDataImportButton" DataMap="A->DevDATA:SysItem.ItemId;B->DevDATA:SysItem.ItemName;C->DevDATA:SysItem.ItemType;D->DevDATA:SysItem.ItemLength;E->DevDATA:SysItem.ItemDecimal;F->DevDATA:SysItem.Description" Width="71px" ColumnCount="6" UseSubmitBehavior="False" PopupWndHeight="-1" PopupWndWidth="-1" text="Excel导入"></aspxform:XExcelDataImportButton>
+                        <aspxform:XExcelDataImportButton id="XExcelDataImportButton1" runat="server" XClass="YZSoft.Forms.Field.ExcelDataImportButton" Width="71px" UseSubmitBehavior="False" PopupWndHeight="-1" PopupWndWidth="-1" text="Excel导出"></aspxform:XExcelDataImportButton>
                     </td>
                 </tr>
                 <tr>

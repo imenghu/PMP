@@ -58,9 +58,22 @@
                                         },
                                         { header: '出库数量', dataIndex: 'out_stnum', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '数量单位', dataIndex: 'out_stnum_unit', width: 100, align: 'left', sortable: true
+                                        { header: '基准单位', dataIndex: 'out_stnum_unit', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '出库时间', dataIndex: 'out_time', width: 100, align: 'left', sortable: true
+                                        {
+                                            header: '出库体积', dataIndex: 'outnum', width: 100, align: 'left', sortable: true
+                                        },
+                                        {
+                                            header: '单位', dataIndex: 'mat_unit_name', width: 100, align: 'left', sortable: true
+                                        },
+                                        {
+                                            header: '出库人', dataIndex: 'ProdUserName', width: 100, align: 'left', sortable: true
+                                        },
+                                        {
+                                            header: '出库时间', dataIndex: 'out_time', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderDateYMD
+                                        },
+                                        {
+                                            header: '备注', dataIndex: 'prod_out_remarks', width: 100,flex:1, align: 'left', sortable: true
                                         },
                                         { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo} },
                 ]

@@ -116,9 +116,9 @@ public class proc_pur_task : YZServiceHandler
                             totalRows = reader.ReadInt32("TotalRows");
 
                         item["TaskID"] = reader.ReadInt32("TaskID");
-                        item["pur_task_id"] = reader.ReadInt32("pur_task_id");                       
-                        item["companyname"] = reader.ReadString("companyname");
-                        item["dept"] = reader.ReadString("dept");
+                        item["pur_task_id"] = reader.ReadInt32("pur_task_id");
+                        item["CompanyName"] = reader.ReadString("CompanyName");
+                        item["DeptName"] = reader.ReadString("DeptName");
                         item["mat_code"] = reader.ReadString("mat_code");
                         item["mat_name"] = reader.ReadString("mat_name");
                         item["mat_spec"] = reader.ReadString("mat_spec");
@@ -128,7 +128,7 @@ public class proc_pur_task : YZServiceHandler
                         item["item_price"] = reader.ReadString("item_price");
                         item["plan_arrival_time"] = reader.ReadDateTime("plan_arrival_time");
                         item["if_urg"] = reader.ReadString("if_urg");
-                        item["pur_task_userid_name"] = reader.ReadString("pur_task_userid_name");
+                        item["TaskUserName"] = reader.ReadString("TaskUserName");
                         item["task_state"] = reader.ReadString("task_state");
                         
                     }

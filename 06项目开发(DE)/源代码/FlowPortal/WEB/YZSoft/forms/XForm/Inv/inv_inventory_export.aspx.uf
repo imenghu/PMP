@@ -1,270 +1,262 @@
 ﻿{
-  "generateAt": "2019-10-11T15:58:34.4554974+08:00",
+  "generateAt": "2019-10-12T16:04:07.8730535+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
     "components": {
-      "ctrlinv_inventory_masterDeptName": {
+      "ctrlinv_inventory_export_masterCompanyName": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_masterDeptName",
+          "id": "ctrlinv_inventory_export_masterCompanyName",
           "runat": "server",
-          "fieldname": "盘点人部门",
-          "xdatabind": "SFDATA:inv_inventory_master.DeptName",
-          "width": "100%"
-        }
-      },
-      "ctrlinv_inventory_masterCreateUserName": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlinv_inventory_masterCreateUserName",
-          "runat": "server",
-          "fieldname": "盘点人",
-          "xdatabind": "SFDATA:inv_inventory_master.CreateUserName",
-          "width": "100%"
-        }
-      },
-      "ctrlinv_inventory_masterdepot_name": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlinv_inventory_masterdepot_name",
-          "runat": "server",
-          "fieldname": "盘点仓库",
-          "xdatabind": "SFDATA:inv_inventory_master.depot_name",
-          "width": "100%"
-        }
-      },
-      "ctrlinv_inventory_detaildepot_name": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlinv_inventory_detaildepot_name",
-          "runat": "server",
-          "fieldname": "库房名称",
-          "xdatabind": "SFDATA:inv_inventory_detail.depot_name",
-          "width": "100%"
-        }
-      },
-      "ctrl_inv_inventory_detaildepot_id": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrl_inv_inventory_detaildepot_id",
-          "runat": "server",
-          "xdatabind": "$formSet.ServerName:inv_inventory_detail.depot_id",
+          "xdatabind": "SFDATA:inv_inventory_export_master.CompanyName",
           "width": "100%",
-          "hiddenexpress": "1"
+          "disableexpress": "1"
         }
       },
-      "ctrl_inv_inventory_detailvendor_id": {
+      "ctrlinv_inventory_export_masterDeptName": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrl_inv_inventory_detailvendor_id",
+          "id": "ctrlinv_inventory_export_masterDeptName",
           "runat": "server",
-          "xdatabind": "$formSet.ServerName:inv_inventory_detail.vendor_id",
+          "xdatabind": "SFDATA:inv_inventory_export_master.DeptName",
           "width": "100%",
-          "hiddenexpress": "1"
+          "disableexpress": "1"
         }
       },
-      "ctrl_inv_inventory_detailvendor_code": {
+      "ctrlinv_inventory_export_masterCreateUserName": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrl_inv_inventory_detailvendor_code",
+          "id": "ctrlinv_inventory_export_masterCreateUserName",
           "runat": "server",
-          "xdatabind": "$formSet.ServerName:inv_inventory_detail.vendor_code",
+          "xdatabind": "SFDATA:inv_inventory_export_master.CreateUserName",
           "width": "100%",
-          "hiddenexpress": "1"
+          "disableexpress": "1"
         }
       },
-      "ctrl_inv_inventory_detailmat_id": {
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_export_master.depot_id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot",
+          "valuecolumn": "depot_id",
+          "displaycolumn": "depot_name",
+          "prompttext": "--请选择--",
+          "datamap": "depot_name->SFDATA:inv_inventory_export_master.depot_name"
+        }
+      },
+      "XTextBox1": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrl_inv_inventory_detailmat_id",
+          "id": "XTextBox1",
           "runat": "server",
-          "xdatabind": "$formSet.ServerName:inv_inventory_detail.mat_id",
+          "xdatabind": "SFDATA:inv_inventory_export_detail.vendor_id",
           "width": "100%",
-          "hiddenexpress": "1"
+          "disableexpress": "1"
         }
       },
-      "ctrlinv_inventory_detailvendor_name": {
+      "ctrlinv_inventory_export_detailvendor_name": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_detailvendor_name",
+          "id": "ctrlinv_inventory_export_detailvendor_name",
           "runat": "server",
-          "fieldname": "供应商名称",
-          "xdatabind": "SFDATA:inv_inventory_detail.vendor_name",
-          "width": "100%"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.vendor_name",
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
-      "ctrlinv_inventory_detailmat_code": {
+      "ctrlinv_inventory_export_detailmat_code": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_detailmat_code",
+          "id": "ctrlinv_inventory_export_detailmat_code",
           "runat": "server",
-          "fieldname": "物料编码",
-          "xdatabind": "SFDATA:inv_inventory_detail.mat_code",
-          "width": "100%"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.mat_code",
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
-      "ctrlinv_inventory_detailmat_name": {
+      "ctrlinv_inventory_export_detailmat_name": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_detailmat_name",
+          "id": "ctrlinv_inventory_export_detailmat_name",
           "runat": "server",
-          "fieldname": "物料名称",
-          "xdatabind": "SFDATA:inv_inventory_detail.mat_name",
-          "width": "100%"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.mat_name",
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
-      "ctrlinv_inventory_detailmat_spec": {
+      "ctrlinv_inventory_export_detailmat_spec": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_detailmat_spec",
+          "id": "ctrlinv_inventory_export_detailmat_spec",
           "runat": "server",
-          "fieldname": "规格",
-          "xdatabind": "SFDATA:inv_inventory_detail.mat_spec",
-          "width": "100%"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.mat_spec",
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
-      "ctrlinv_inventory_detailinv_stnum_unit": {
+      "ctrlinv_inventory_export_detailinv_stnum_unit": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_detailinv_stnum_unit",
+          "id": "ctrlinv_inventory_export_detailinv_stnum_unit",
           "runat": "server",
-          "fieldname": "基准单位",
-          "xdatabind": "SFDATA:inv_inventory_detail.inv_stnum_unit",
-          "width": "100%"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_stnum_unit",
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
-      "ctrlinv_inventory_detaildepot_mat_num": {
+      "ctrlinv_inventory_export_detaildepot_mat_num": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_detaildepot_mat_num",
+          "id": "ctrlinv_inventory_export_detaildepot_mat_num",
           "runat": "server",
-          "fieldname": "盘点前库存数",
-          "xdatabind": "SFDATA:inv_inventory_detail.depot_mat_num",
-          "width": "100%"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.depot_mat_num",
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
-      "ctrlinv_inventory_detailinv_depot_mat_num": {
+      "ctrlinv_inventory_export_detailinv_depot_mat_num": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_detailinv_depot_mat_num",
+          "id": "ctrlinv_inventory_export_detailinv_depot_mat_num",
           "runat": "server",
-          "fieldname": "盘点后库存数",
-          "xdatabind": "SFDATA:inv_inventory_detail.inv_depot_mat_num",
-          "width": "100%"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_depot_mat_num",
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
-      "ctrlinv_inventory_detailinv_diff_num": {
+      "ctrlinv_inventory_export_detailinv_diff_num": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_detailinv_diff_num",
+          "id": "ctrlinv_inventory_export_detailinv_diff_num",
           "runat": "server",
-          "fieldname": "盘点差值",
-          "xdatabind": "SFDATA:inv_inventory_detail.inv_diff_num",
-          "width": "100%"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_diff_num",
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
-      "ctrlinv_inventory_detailinv_remarks": {
+      "ctrlinv_inventory_export_detailinv_remarks": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_detailinv_remarks",
+          "id": "ctrlinv_inventory_export_detailinv_remarks",
           "runat": "server",
-          "fieldname": "备注",
-          "xdatabind": "SFDATA:inv_inventory_detail.inv_remarks",
-          "width": "100%"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_remarks",
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
-      "table1": {
+      "tbInv": {
         "ctype": "grid",
         "attrs": {
-          "width": "960",
+          "width": "1300",
           "align": "center",
+          "id": "tbInv",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
           "cellspacing": "0",
           "cellpadding": "0",
           "dynamicarea": " 1,1 ",
-          "id": "table1"
+          "xdatasource": "DataSource:SFDATA;TableName:inv_depot_detail;Filter:depot_id->SFDATA:inv_inventory_export_master.depot_id,state->varState",
+          "datamap": "vendor_id->SFDATA:inv_inventory_export_detail.vendor_id;vendor_name->SFDATA:inv_inventory_export_detail.vendor_name;mat_code->SFDATA:inv_inventory_export_detail.mat_code;mat_name->SFDATA:inv_inventory_export_detail.mat_name;mat_spec->SFDATA:inv_inventory_export_detail.mat_spec;depot_stnum_unit->SFDATA:inv_inventory_export_detail.inv_stnum_unit;depot_mat_num->SFDATA:inv_inventory_export_detail.depot_mat_num"
         },
         "ctypeorg": "table",
         "items": [
-          "ctrlinv_inventory_detaildepot_name",
-          "ctrl_inv_inventory_detaildepot_id",
-          "ctrl_inv_inventory_detailvendor_id",
-          "ctrl_inv_inventory_detailvendor_code",
-          "ctrl_inv_inventory_detailmat_id",
-          "ctrlinv_inventory_detailvendor_name",
-          "ctrlinv_inventory_detailmat_code",
-          "ctrlinv_inventory_detailmat_name",
-          "ctrlinv_inventory_detailmat_spec",
-          "ctrlinv_inventory_detailinv_stnum_unit",
-          "ctrlinv_inventory_detaildepot_mat_num",
-          "ctrlinv_inventory_detailinv_depot_mat_num",
-          "ctrlinv_inventory_detailinv_diff_num",
-          "ctrlinv_inventory_detailinv_remarks"
+          "XTextBox1",
+          "ctrlinv_inventory_export_detailvendor_name",
+          "ctrlinv_inventory_export_detailmat_code",
+          "ctrlinv_inventory_export_detailmat_name",
+          "ctrlinv_inventory_export_detailmat_spec",
+          "ctrlinv_inventory_export_detailinv_stnum_unit",
+          "ctrlinv_inventory_export_detaildepot_mat_num",
+          "ctrlinv_inventory_export_detailinv_depot_mat_num",
+          "ctrlinv_inventory_export_detailinv_diff_num",
+          "ctrlinv_inventory_export_detailinv_remarks"
         ],
         "dynamicArea": {
           "startRowIndex": 1,
           "rows": 1
         }
       },
-      "ctrlinv_inventory_masterDept": {
+      "ctrlinv_inventory_export_masterCompany": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_masterDept",
+          "id": "ctrlinv_inventory_export_masterCompany",
           "runat": "server",
-          "fieldname": "部门编码",
-          "xdatabind": "SFDATA:inv_inventory_master.Dept",
+          "xdatabind": "SFDATA:inv_inventory_export_master.Company",
           "width": "100%"
         }
       },
-      "ctrlinv_inventory_masterCreateUser": {
+      "ctrlinv_inventory_export_masterDept": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_masterCreateUser",
+          "id": "ctrlinv_inventory_export_masterDept",
           "runat": "server",
-          "fieldname": "创建人账号",
-          "xdatabind": "SFDATA:inv_inventory_master.CreateUser",
+          "xdatabind": "SFDATA:inv_inventory_export_master.Dept",
           "width": "100%"
         }
       },
-      "ctrlinv_inventory_masterdepot_id": {
+      "ctrlinv_inventory_export_masterdepot_id": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_inventory_masterdepot_id",
+          "id": "ctrlinv_inventory_export_masterdepot_id",
           "runat": "server",
-          "fieldname": "库房id",
-          "xdatabind": "SFDATA:inv_inventory_master.depot_id",
+          "xdatabind": "SFDATA:inv_inventory_export_master.depot_name",
           "width": "100%"
         }
       },
-      "table2": {
+      "ctrlinv_inventory_export_masterCreateUser": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlinv_inventory_export_masterCreateUser",
+          "runat": "server",
+          "xdatabind": "SFDATA:inv_inventory_export_master.CreateUser",
+          "width": "100%"
+        }
+      },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "xdatabind": "varState",
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "innerhtml": "1"
+        }
+      },
+      "table1": {
         "ctype": "wrap",
         "attrs": {
-          "width": "800",
+          "width": "790",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
           "cellspacing": "0",
           "cellpadding": "0",
           "hiddenexpress": "1",
-          "id": "table2"
+          "id": "table1"
         },
         "ctypeorg": "table",
         "items": [
-          "ctrlinv_inventory_masterDept",
-          "ctrlinv_inventory_masterCreateUser",
-          "ctrlinv_inventory_masterdepot_id"
+          "ctrlinv_inventory_export_masterCompany",
+          "ctrlinv_inventory_export_masterDept",
+          "ctrlinv_inventory_export_masterdepot_id",
+          "ctrlinv_inventory_export_masterCreateUser",
+          "XTextBox2"
         ]
       }
     },
     "validators": {},
     "items": [
-      "ctrlinv_inventory_masterDeptName",
-      "ctrlinv_inventory_masterCreateUserName",
-      "ctrlinv_inventory_masterdepot_name",
-      "table1",
-      "table2"
+      "ctrlinv_inventory_export_masterCompanyName",
+      "ctrlinv_inventory_export_masterDeptName",
+      "ctrlinv_inventory_export_masterCreateUserName",
+      "XDropDownList1",
+      "tbInv",
+      "table1"
     ]
   }
 }

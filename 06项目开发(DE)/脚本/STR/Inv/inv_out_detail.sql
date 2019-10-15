@@ -25,6 +25,7 @@ CREATE TABLE dbo.inv_out_detail
   state nchar(1) not null ,
   create_time datetime2  not null ,
   update_time datetime2  null ,
+  TaskID int  null ,
   CONSTRAINT PK_inv_out_detail PRIMARY KEY  CLUSTERED
   (
     out_detail_id
@@ -32,5 +33,13 @@ CREATE TABLE dbo.inv_out_detail
 )
 END
 
+GO
+
+/*==================inv_out_detail foreignkey ====================*/
+PRINT 'inv_out_detail:FK_inv_out_detail_inv_out_master'
+if exists (select * from sysobjects where id = object_id('dbo.FK_inv_out_detail_inv_out_master') and sysstat & 0xff = 11)
+  ALTER table inv_out_detail DROP CONSTRAINT FK_inv_out_detail_inv_out_master
+GO
+  ALTER table inv_out_detail ADD CONSTRAINT FK_inv_out_detail_inv_out_master FOREIGN KEY ( out_master_id ) REFERENCES dbo.inv_out_master ( out_master_id )
 GO
 

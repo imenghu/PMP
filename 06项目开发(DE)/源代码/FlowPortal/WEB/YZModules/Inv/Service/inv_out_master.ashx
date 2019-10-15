@@ -64,7 +64,7 @@ namespace Inv
             //获得Query
             string query = @"
             WITH X AS(
-                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,a.out_master_id,a.CompanyName,a.DeptName,a.CreateUserName,a.req_org_id,a.req_userid,a.out_state,a.create_time,b.mat_name,b.outdetail_remarks 
+                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,a.TaskID,a.out_master_id,a.CompanyName,a.DeptName,a.CreateUserName,a.ReqOrgName,a.ReqUserName,a.out_state,a.create_time,b.mat_name,b.outdetail_remarks 
                 FROM inv_out_master a left join inv_out_detail b on a.out_master_id=b.out_master_id{1}
             ),
             Y AS(
@@ -104,27 +104,30 @@ namespace Inv
 
                             if (totalRows == 0)
                                 totalRows = reader.ReadInt32("TotalRows");
+
+                            item["TaskID"] =
+reader.ReadInt32("TaskID");
                             item["out_master_id"] =
 reader.ReadInt32("out_master_id");
-                                                            item["CompanyName"] = 
-                                                                    reader.ReadString("CompanyName");
-                                                                                            item["DeptName"] = 
-                                                                    reader.ReadString("DeptName");
-                                                                                            item["CreateUserName"] = 
-                                                                    reader.ReadString("CreateUserName");
-                                                                                            item["req_org_id"] = 
-                                                                    reader.ReadInt32("req_org_id");
-                                                                                            item["req_userid"] = 
-                                                                    reader.ReadInt32("req_userid");
-                                                                                            item["out_state"] = 
-                                                                    reader.ReadString("out_state");
-                                                                                            item["create_time"] = 
-                                                                    reader.ReadDateTime("create_time");
-                                                                                            item["mat_name"] = 
-                                                                    reader.ReadString("mat_name");
-                                                                                            item["outdetail_remarks"] = 
-                                                                    reader.ReadString("outdetail_remarks");
-                                                                                    }
+                            item["CompanyName"] =
+                                    reader.ReadString("CompanyName");
+                            item["DeptName"] =
+    reader.ReadString("DeptName");
+                            item["CreateUserName"] =
+    reader.ReadString("CreateUserName");
+                            item["ReqOrgName"] =
+    reader.ReadString("ReqOrgName");
+                            item["ReqUserName"] =
+    reader.ReadString("ReqUserName");
+                            item["out_state"] =
+    reader.ReadString("out_state");
+                            item["create_time"] =
+    reader.ReadDateTime("create_time");
+                            item["mat_name"] =
+    reader.ReadString("mat_name");
+                            item["outdetail_remarks"] =
+    reader.ReadString("outdetail_remarks");
+                        }
                         
                         rv[YZJsonProperty.total] = totalRows;
                     }

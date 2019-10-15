@@ -103,25 +103,29 @@ namespace Inv
 
                             if (totalRows == 0)
                                 totalRows = reader.ReadInt32("TotalRows");
+
+
+                            item["TaskID"] =
+reader.ReadInt32("TaskID");
                             item["inv_mast_id"] =
 reader.ReadInt32("inv_mast_id");
-                                                            item["CompanyName"] = 
-                                                                    reader.ReadString("CompanyName");
-                                                                                            item["DeptName"] = 
-                                                                    reader.ReadString("DeptName");
-                                                                                            item["CreateUserName"] = 
-                                                                    reader.ReadString("CreateUserName");
-                                                                                            item["inv_master_year"] = 
-                                                                    reader.ReadString("inv_master_year");
-                                                                                            item["inv_master_month"] = 
-                                                                    reader.ReadString("inv_master_month");
-                                                                                            item["depot_name"] = 
-                                                                    reader.ReadString("depot_name");
-                                                                                            item["inv_master_time"] = 
-                                                                    reader.ReadString("inv_master_time");
-                                                                                            item["inv_remarks_state"] = 
-                                                                    reader.ReadString("inv_remarks_state");
-                                                                                    }
+                            item["CompanyName"] =
+                                    reader.ReadString("CompanyName");
+                            item["DeptName"] =
+    reader.ReadString("DeptName");
+                            item["CreateUserName"] =
+    reader.ReadString("CreateUserName");
+                            item["inv_master_year"] =
+    reader.ReadString("inv_master_year");
+                            item["inv_master_month"] =
+    reader.ReadString("inv_master_month");
+                            item["depot_name"] =
+    reader.ReadString("depot_name");
+                            item["inv_master_time"] =
+    reader.ReadString("inv_master_time");
+                            item["inv_remarks_state"] =
+    reader.ReadString("inv_remarks_state");
+                        }
                         
                         rv[YZJsonProperty.total] = totalRows;
                     }

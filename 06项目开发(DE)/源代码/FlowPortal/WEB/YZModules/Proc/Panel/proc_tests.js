@@ -57,10 +57,10 @@
                     { header: "物料编码", dataIndex: 'mat_code', width: 100, align: 'left', sortable: true },
                     { header: '物料名称', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true },
                     { header: '规格', dataIndex: 'mat_spesc', minwidth: 100, align: 'left', sortable: true },
-                    { header: '化验情况', dataIndex: 'test_happen', width: 100, align: 'center', sortable: true },
-                    { header: '化验结果', dataIndex: 'tests_result', width: 100, align: 'left', sortable: true, renderer: me.Status },
-                    { header: '备注', dataIndex: 'tests_remarks', width: 100, align: 'center', sortable: true },
-                    { header: '操作', dataIndex: 'test_happen', flex: 1, align: 'center', sortable: true, renderer: me.Notice, listeners: { scope: me, click: me.NoticeClick } },
+                    { header: '化验情况', dataIndex: 'tests_result', width: 100, align: 'center', sortable: true, renderer: me.renderState },
+                    { header: '化验结果', dataIndex: 'tests_result', width: 100, align: 'left', sortable: true, renderer: me.renderStatus },
+                    { header: '备注', dataIndex: 'tests_remarks', flex: 1, width: 100, align: 'center', sortable: true },
+                    { header: '操作', dataIndex: 'tests_result', align: 'center', sortable: true, renderer: me.renderNotice, listeners: { scope: me, click: me.onNoticeClick } }
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {
@@ -69,7 +69,7 @@
             }),
             listeners: {
                 rowdblclick: function (grid, record, tr, rowIndex, e, eOpts) {
-                    //me.read(record);
+                    me.read(record);
                 }
             }
         });
@@ -82,7 +82,7 @@
             }
         });
         me.btnEdit = Ext.create('YZSoft.src.button.Button', {
-            text: '编辑',
+            text: '修改',
             glyph: 0xe61c,
             sm: me.grid.getSelectionModel(),
             updateStatus: function () {
@@ -98,13 +98,40 @@
                 me.edit(recs[0]);
             }
         });
-      
+
+        me.btnDelete = Ext.create('YZSoft.src.button.Button', {
+            text: '删除',
+            glyph: 0xe64d,
+            sm: me.grid.getSelectionModel(),
+            updateStatus: function () {
+                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, '', 1, -1));
+            },
+            handler: function () {
+                me.deleteSelection();
+            }
+        });
+
+        me.btnExcelExport = Ext.create('YZSoft.src.button.ExcelExportButton', {
+            grid: me.grid,
+            //templateExcel: YZSoft.$url(me, '设备清单模板.xls'), //导出模板，不设置则按缺省方式导出
+            //params: {},
+            fileName: '检测化验',
+            allowExportAll: true, //可选项，缺省使用YZSoft.EnvSetting.Excel.AllowExportAll中的设置，默认值false
+            //maxExportPages: 10, //可选项，缺省使用YZSoft.EnvSetting.Excel.MaxExportPages中的设置，默认值100
+            listeners: {
+                beforeload: function (params) {
+                    params.ReportDate = new Date()
+                }
+            }
+        });
         me.toolBar = Ext.create('Ext.toolbar.Toolbar', {
             cls: 'yz-tbar-module',
             items: [
                 me.btnNew,
                 me.btnEdit,
-                
+                me.btnDelete,
+                '|',
+                me.btnExcelExport,
                 '->',
                 '搜索条件', {
                     xclass: 'YZSoft.src.form.field.Search',
@@ -150,7 +177,7 @@
             this.store.reload($S.loadMask.activate);
     },
 
-    NoticeClick: function (view, cell, recordIndex, cellIndex, e,rec) {
+    onNoticeClick: function (view, cell, recordIndex, cellIndex, e,rec) {
         var me = this;
         YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_tests_edit', rec.data.tests_id, 'Edit', Ext.apply({
             sender: me,
@@ -173,9 +200,12 @@
             }
         }, me.dlgCfg));
     },
-    Status: function (value) {
-
-        var color = "red", str = "";
+    renderState: function (value) {
+        return value == 0 ? "<font color='gray'>未化验</font>" : "已化验";
+    },
+    renderStatus: function (value) {
+        var color = "red",
+            str = "";
         switch (value) {
             case '0':
                 color = "gray";
@@ -193,13 +223,11 @@
                 color = "red";
                 str = "不合格（不接收）";
                 break;
-
-
         }
         return Ext.String.format("<font color='{0}'>{1}</font>",color, Ext.util.Format.text(str));
     },
-    Notice: function (value, metaData, record) {
-        return value=='未化验'?"<a href='#'>录入化验单</a>":"";
+    renderNotice: function (value, metaData, record) {
+        return value == 0 ? "<a href='#'>录入化验单</a>" : "<a href='#'>修改化验单</a>";
     },
 
     addNew: function () {
@@ -254,20 +282,61 @@
         }, me.dlgCfg));
     },
 
-   
-
-    openTrace: function (rec, activeTabIndex) {
+    deleteSelection: function () {
         var me = this,
-            taskid = rec.data.TaskID;
+            recs = me.grid.getSelectionModel().getSelection(),
+            ids = [];
 
-        var view = YZSoft.ViewManager.addView(me, 'YZSoft.bpm.tasktrace.Panel', {
-            id: 'BPM_TaskTrace_' + taskid,
-            title: Ext.String.format('{0} - {1}', RS.$('All_TaskTrace'), rec.data.SerialNum),
-            TaskID: taskid,
-            activeTabIndex: activeTabIndex,
-            closable: true
+        if (recs.length == 0)
+            return;
+
+        Ext.each(recs, function (rec) {
+            ids.push(rec.data.tests_id);
         });
 
-        view.traceTab.setActiveTab(activeTabIndex);
+        Ext.Msg.show({
+            title: '删除确认',
+            msg: '您确定要删除选中项吗？',
+            buttons: Ext.Msg.OKCANCEL,
+            defaultButton: 'cancel',
+            icon: Ext.MessageBox.INFO,
+
+            fn: function (btn, text) {
+                if (btn != 'ok')
+                    return;
+
+                YZSoft.Ajax.request({
+                    url: YZSoft.$url(me, '../Service/proc_tests.ashx'),
+                    method: 'POST',
+                    params: {
+                        method: 'Delete'
+                    },
+                    jsonData: ids,
+                    waitMsg: {
+                        msg: '正在删除...',
+                        target: me.grid
+                    },
+                    success: function (action) {
+                        me.store.reload({
+                            loadMask: {
+                                msg: Ext.String.format('{0}个对象已删除！', recs.length),
+                                start: 0,
+                                stay: 300
+                            }
+                        });
+                    },
+                    failure: function (action) {
+                        var mbox = Ext.Msg.show({
+                            title: '错误提示',
+                            msg: Ext.util.Format.text(action.result.errorMessage),
+                            buttons: Ext.Msg.OK,
+                            icon: Ext.MessageBox.WARNING
+                        });
+
+                        me.store.reload({ mbox: mbox });
+                    }
+                });
+            }
+        });
     }
 });

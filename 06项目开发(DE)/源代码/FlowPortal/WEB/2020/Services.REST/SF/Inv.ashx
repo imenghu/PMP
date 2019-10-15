@@ -48,6 +48,12 @@ namespace SF
                         text = "产成品出库",
                         glyph = 0xea9c,
                         xclass = "YZModules.Inv.Panel.inv_prod_out"
+                    },
+                    new {
+                        id = "inv_prod",
+                        text = "产成品库存查询",
+                        glyph = 0xea9c,
+                        xclass = "YZModules.Inv.Panel.inv_prod"
                     }
             };
 

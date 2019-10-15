@@ -11,11 +11,13 @@ CREATE TABLE dbo.ctl_vendor_mat
   mat_spec nvarchar(60) null ,
   create_userid int  null ,
   lastupdate_userid int  null ,
-  state nchar(1) not null ,
+  state nchar(1) not null DEFAULT((1)),
   create_time datetime2  null ,
   update_time datetime2  null ,
   mat_code varchar(40) null ,
+  CreateUser varchar(50) null ,
   CreateUserName varchar(50) null ,
+  UpdateUser varchar(50) null ,
   UpdateUserName varchar(50) null ,
   CONSTRAINT PK_ctl_vendor_mat PRIMARY KEY  CLUSTERED
   (

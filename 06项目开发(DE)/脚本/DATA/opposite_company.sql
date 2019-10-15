@@ -1,5 +1,5 @@
 truncate table opposite_company
-set IDENTITY_INSERT opposite_company  ON
+--set IDENTITY_INSERT opposite_company  ON
 go
 insert INTO opposite_company ([id]
       ,[code]
@@ -37,5 +37,5 @@ insert INTO opposite_company ([id]
       ,[responsible_managers]
       ,[date]
 FROM openquery(MYSQL, 'SELECT * FROM info_sys.opposite_company') 
-set IDENTITY_INSERT opposite_company  OFF
+--set IDENTITY_INSERT opposite_company  OFF
 go

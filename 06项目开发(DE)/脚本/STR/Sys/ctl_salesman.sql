@@ -14,7 +14,7 @@ CREATE TABLE dbo.ctl_salesman
   salesman_addr nvarchar(200) null ,
   create_userid int  not null ,
   salesman_remarks nvarchar(200) null ,
-  state nchar(1) not null ,
+  state nchar(1) not null DEFAULT((1)),
   create_time datetime2  not null ,
   update_time datetime2  null ,
   CreateUser varchar(50) null ,

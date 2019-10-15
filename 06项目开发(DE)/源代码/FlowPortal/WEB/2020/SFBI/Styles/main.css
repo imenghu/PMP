@@ -13,3 +13,16 @@
 .yz-cnt-logowrap {
      background-color: transparent; 
 }
+.yz-titlebar-portal {
+    background:url('ui/bg.png') no-repeat;
+}
+/***********************导航tree***********************/
+/*yz-cnt-navigator*/
+.yz-cnt-navigator .x-panel-body-default {
+    background:url('ui/bg.png') no-repeat;
+}
+/*常规*文字色*/
+.yz-tab-bar-navigator-maintop-column .x-tab-inner-default,
+.yz-tab-bar-navigator-maintop-column .x-tab-icon-el-default {
+    color: #f5f5f5;
+}

@@ -21,9 +21,10 @@ CREATE TABLE dbo.inv_inventory_detail
   inv_diff_num nvarchar(60) null ,
   inv_depot_mat_num nvarchar(60) null ,
   inv_remarks nvarchar(200) null ,
-  state nchar(1) not null ,
+  state nchar(1) not null DEFAULT((1)),
   create_time datetime2  not null ,
   update_time datetime2  null ,
+  TaskID int  null ,
   CONSTRAINT PK_inv_inventory_detail PRIMARY KEY  CLUSTERED
   (
     inv_id
@@ -31,5 +32,13 @@ CREATE TABLE dbo.inv_inventory_detail
 )
 END
 
+GO
+
+/*==================inv_inventory_detail foreignkey ====================*/
+PRINT 'inv_inventory_detail:FK_inv_inventory_detail_inv_inventory_master'
+if exists (select * from sysobjects where id = object_id('dbo.FK_inv_inventory_detail_inv_inventory_master') and sysstat & 0xff = 11)
+  ALTER table inv_inventory_detail DROP CONSTRAINT FK_inv_inventory_detail_inv_inventory_master
+GO
+  ALTER table inv_inventory_detail ADD CONSTRAINT FK_inv_inventory_detail_inv_inventory_master FOREIGN KEY ( inv_mast_id ) REFERENCES dbo.inv_inventory_master ( inv_mast_id )
 GO
 

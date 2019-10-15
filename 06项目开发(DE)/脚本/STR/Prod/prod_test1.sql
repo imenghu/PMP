@@ -26,7 +26,7 @@ CREATE TABLE dbo.prod_test1
   state nchar(1) null ,
   create_time datetime2  null ,
   update_time datetime2  null ,
-  CompanyName varbinary  null ,
+  CompanyName varchar(50) null ,
   Company varchar(50) null ,
   DeptName varchar(50) null ,
   Dept varchar(50) null ,

@@ -59,13 +59,13 @@ namespace Inv
                 filter = " WHERE " + filter;
 
             //获得排序子句
-            string order = request.GetSortString("a.create_time");
+            string order = request.GetSortString("create_time");
 
             //获得Query
             string query = @"
             WITH X AS(
-                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,a.mat_refund_id,a.CompanyName,a.DeptName,a.ref_userid,a.create_time,a.refund_state,b.mat_name,b.refund_remarks 
-                FROM inv_matrefund a left join inv_matrefund_detail b on a.mat_refund_id=b.mat_refund_id{1}
+                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,*
+                FROM inv_matrefund {1}
             ),
             Y AS(
                 SELECT count(*) AS TotalRows FROM X
@@ -104,23 +104,27 @@ namespace Inv
 
                             if (totalRows == 0)
                                 totalRows = reader.ReadInt32("TotalRows");
+
+
+                            item["TaskID"] =
+reader.ReadInt32("TaskID");
                             item["mat_refund_id"] =
 reader.ReadInt32("mat_refund_id");
-                                                            item["CompanyName"] = 
-                                                                    reader.ReadString("CompanyName");
-                                                                                            item["DeptName"] = 
-                                                                    reader.ReadString("DeptName");
-                                                                                            item["ref_userid"] = 
-                                                                    reader.ReadInt32("ref_userid");
-                                                                                            item["create_time"] = 
-                                                                    reader.ReadString("create_time");
-                                                                                            item["refund_state"] = 
-                                                                    reader.ReadString("refund_state");
-                                                                                            item["mat_name"] = 
-                                                                    reader.ReadString("mat_name");
-                                                                                            item["refund_remarks"] = 
-                                                                    reader.ReadString("refund_remarks");
-                                                                                    }
+                            item["CompanyName"] =
+                                    reader.ReadString("CompanyName");
+                            item["DeptName"] =
+    reader.ReadString("DeptName");
+                            item["RefundUserName"] =
+    reader.ReadString("RefundUserName");
+                            item["create_time"] =
+    reader.ReadString("create_time");
+                            item["refund_state"] =
+    reader.ReadString("refund_state");
+    //                        item["mat_name"] =
+    //reader.ReadString("mat_name");
+                            item["refund_remarks"] =
+    reader.ReadString("refund_remarks");
+                        }
                         
                         rv[YZJsonProperty.total] = totalRows;
                     }

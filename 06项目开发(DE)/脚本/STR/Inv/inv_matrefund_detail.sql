@@ -27,6 +27,7 @@ CREATE TABLE dbo.inv_matrefund_detail
   create_time nvarchar(100) null ,
   update_time nvarchar(100) null ,
   tests_id nvarchar(1000) null ,
+  TaskID int  null ,
   CONSTRAINT PK_inv_matrefund_detail PRIMARY KEY  CLUSTERED
   (
     matrefund_detail_id
@@ -34,5 +35,13 @@ CREATE TABLE dbo.inv_matrefund_detail
 )
 END
 
+GO
+
+/*==================inv_matrefund_detail foreignkey ====================*/
+PRINT 'inv_matrefund_detail:FK_inv_matrefund_detail_inv_matrefund'
+if exists (select * from sysobjects where id = object_id('dbo.FK_inv_matrefund_detail_inv_matrefund') and sysstat & 0xff = 11)
+  ALTER table inv_matrefund_detail DROP CONSTRAINT FK_inv_matrefund_detail_inv_matrefund
+GO
+  ALTER table inv_matrefund_detail ADD CONSTRAINT FK_inv_matrefund_detail_inv_matrefund FOREIGN KEY ( mat_refund_id ) REFERENCES dbo.inv_matrefund ( mat_refund_id )
 GO
 

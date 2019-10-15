@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-09T17:00:37.9110841+08:00",
+  "generateAt": "2019-10-09T20:20:47.8982546+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -46,6 +46,18 @@
           "bordercolor": "#DCDCDC"
         }
       },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "displaycolumns": "ItemId:指标编码;ItemName:指标名称;ItemType:指标类型;ItemLength:长度;ItemDecimal:小数位;Discription:备注",
+          "xdatasource": "DataSource:DevDATA;TableName:SysItemCommon",
+          "datamap": "ItemId->DevDATA:SysItem.ItemId;ItemName->DevDATA:SysItem.ItemName;ItemType->DevDATA:SysItem.ItemType;ItemLength->DevDATA:SysItem.ItemLength;ItemDecimal->DevDATA:SysItem.ItemDecimal;Discription->DevDATA:SysItem.Description",
+          "width": "21px",
+          "multiselect": "True"
+        }
+      },
       "XExcelDataImportButton3": {
         "ctype": "aspxform:xexceldataimportbutton",
         "attrs": {
@@ -53,12 +65,12 @@
           "runat": "server",
           "xclass": "YZSoft.Forms.Field.ExcelDataImportButton",
           "datamap": "A->DevDATA:SysItem.ItemId;B->DevDATA:SysItem.ItemName;C->DevDATA:SysItem.ItemType;D->DevDATA:SysItem.ItemLength;E->DevDATA:SysItem.ItemDecimal;F->DevDATA:SysItem.Description",
+          "width": "71px",
           "columncount": "6",
           "usesubmitbehavior": "False",
           "popupwndheight": "-1",
           "popupwndwidth": "-1",
-          "text": "Excel导入",
-          "width": "71px"
+          "text": "Excel导入"
         }
       },
       "XTextBox4": {
@@ -229,6 +241,7 @@
       "XTextBox3",
       "XCheckBox1",
       "XTextBox11",
+      "XDataBrowserButton1",
       "XExcelDataImportButton3",
       "table1"
     ]

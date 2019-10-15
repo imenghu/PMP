@@ -17,7 +17,7 @@ CREATE TABLE dbo.ctl_dealer
   dealer_wechat nvarchar(20) null ,
   dealer_qq nvarchar(20) null ,
   dealer_remarks nvarchar(200) null ,
-  state nchar(1) null ,
+  state nchar(1) null DEFAULT((1)),
   create_userid int  not null ,
   create_time datetime2  not null ,
   update_time datetime2  null ,

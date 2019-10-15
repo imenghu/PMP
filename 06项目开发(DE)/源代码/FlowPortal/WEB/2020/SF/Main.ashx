@@ -34,7 +34,7 @@ namespace BPMApp
                     title = "销售管理",
                     //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
                     navigator = new {
-                        dataURL = this.ResolveUrl(context,"../Services.REST/SF/Sales.ashx"),
+                        dataURL = this.ResolveUrl(context,"../Services.REST/SF/Sal.ashx"),
                         activeNode = "SalesOrder"
                     }
                 },

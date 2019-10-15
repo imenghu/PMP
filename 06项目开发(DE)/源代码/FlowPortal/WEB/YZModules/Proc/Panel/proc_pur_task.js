@@ -52,9 +52,8 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
                 },
                 items: [
                     { xtype: 'rownumberer' },
-                    { header: 'TaskID', dataIndex: 'TaskID', width: 20, hidden: true },
-                    { header: '公司', dataIndex: 'companyname', width: 100, align: 'left', sortable: true },
-                    { header: '部门', dataIndex: 'dept', width: 100, align: 'left', sortable: true },
+                    { header: '公司', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true },
+                    { header: '部门', dataIndex: 'DeptName', width: 100, align: 'left', sortable: true },
                     { header: "物料编码", dataIndex: 'mat_code', width: 80, align: 'left', sortable: true },
                     { header: '物料名称', dataIndex: 'mat_name', width: 80, align: 'left', sortable: true },
                     { header: '物料规格', dataIndex: 'mat_spec', minwidth: 80, align: 'left', sortable: true },
@@ -64,11 +63,10 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
                     { header: '总金额', dataIndex: 'item_price', width: 80, align: 'left', sortable: true },
                     { header: '计划到货日期', dataIndex: 'plan_arrival_time', width: 100, align: 'left', sortable: true },
                     { header: '是否紧急', dataIndex: 'if_urg', width: 80, align: 'left', sortable: true, renderer: XYSoft.Render.renderYesOrNo },
-                    { header: '任务执行人', dataIndex: 'pur_task_userid_name', width: 80, align: 'left', sortable: true },
+                    { header: '任务执行人', dataIndex: 'TaskUserName', width: 80, align: 'left', sortable: true },
                     { header: '任务情况', dataIndex: 'task_state', width: 80, align: 'left', sortable: true, renderer: me.Status },
                     { header: '操作', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.finish, listeners: { scope: me, click: me.finishClick } },
-                    { header: '操作', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.xunjia, listeners: { scope: me, click: me.XunjiaClick } },
-                    { header: '操作', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.confirm, listeners: { scope: me, click: me.confirmClick } },
+                    { header: '询价', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.xunjia, listeners: { scope: me, click: me.XunjiaClick } },
                     { header: '到货通知', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.Notice, listeners: { scope: me, click: me.NoticeClick } },
                 ]
             },
@@ -83,10 +81,23 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
             }
         });
 
+        me.btnExcelExport = Ext.create('YZSoft.src.button.ExcelExportButton', {
+            grid: me.grid,
+            //templateExcel: YZSoft.$url(me, '设备清单模板.xls'), //导出模板，不设置则按缺省方式导出
+            //params: {},
+            fileName: '我的任务',
+            allowExportAll: true, //可选项，缺省使用YZSoft.EnvSetting.Excel.AllowExportAll中的设置，默认值false
+            //maxExportPages: 10, //可选项，缺省使用YZSoft.EnvSetting.Excel.MaxExportPages中的设置，默认值100
+            listeners: {
+                beforeload: function (params) {
+                    params.ReportDate = new Date()
+                }
+            }
+        });
         me.toolBar = Ext.create('Ext.toolbar.Toolbar', {
             cls: 'yz-tbar-module',
             items: [
-                
+                me.btnExcelExport,
                 '->',
                 '搜索条件', {
                     xclass: 'YZSoft.src.form.field.Search',
@@ -272,27 +283,21 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
         }, me.dlgCfg));
     },
     Status: function (value) {
-        debugger
-        var color = "red", str = "";
+        var color = "red",
+            str = "";
         switch (value) {
             case '0':
-
                 str = "未分派任务";
                 break;
             case "1":
-
                 str = "任务执行中";
                 break;
             case "2":
-
                 str = "等待确认供应商";
                 break;
             case "3":
-
                 str = "任务已完成";
                 break;
-
-
         }
         return Ext.String.format("<font>{0}</font>", Ext.util.Format.text(str));
     },
@@ -307,30 +312,5 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
     },
     Notice: function (value, metaData, record) {
         return "<a href='#'>到货通知</a>";
-    },
-
-
-    //read: function (rec) {
-    //    var me = this;
-
-    //    YZSoft.bpm.src.ux.FormManager.openTaskForRead(rec.data.TaskID, Ext.apply({
-    //        sender: me,
-    //        title: Ext.String.format('采购合同审批')
-    //    }));
-    //},
-
-    openTrace: function (rec, activeTabIndex) {
-        var me = this,
-            taskid = rec.data.TaskID;
-
-        var view = YZSoft.ViewManager.addView(me, 'YZSoft.bpm.tasktrace.Panel', {
-            id: 'BPM_TaskTrace_' + taskid,
-            title: Ext.String.format('{0} - {1}', RS.$('All_TaskTrace'), rec.data.SerialNum),
-            TaskID: taskid,
-            activeTabIndex: activeTabIndex,
-            closable: true
-        });
-
-        view.traceTab.setActiveTab(activeTabIndex);
     }
 });
