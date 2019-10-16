@@ -21,6 +21,10 @@ CREATE TABLE dbo.prod_report1
   state nchar(1) null ,
   create_time datetime2  null ,
   update_time datetime2  null ,
+  DeptName varchar(50) null ,
+  Dept varchar(50) null ,
+  CompanyName varchar(50) null ,
+  Company varchar(50) null ,
   CONSTRAINT PK_prod_report1 PRIMARY KEY  CLUSTERED
   (
     report_id

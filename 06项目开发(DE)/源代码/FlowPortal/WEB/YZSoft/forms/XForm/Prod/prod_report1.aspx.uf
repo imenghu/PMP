@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-14T10:54:58.5798947+08:00",
+  "generateAt": "2019-10-16T17:20:12.0843744+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -11,7 +11,19 @@
           "runat": "server",
           "fieldname": "品名",
           "xdatabind": "SFDATA:Prod_report1.mat_name",
-          "width": "100%"
+          "width": "180px",
+          "disableexpress": "1"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "datamap": "mat_id->SFDATA:Prod_report1.mat_id;mat_name->SFDATA:Prod_report1.mat_name",
+          "displaycolumns": "mat_code:编码;mat_name:品名;mat_spec:规格;base_unit:单位",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->“3”,third_code->“02”,state->“1”",
+          "width": "21px"
         }
       },
       "ctrlProd_report1ferment_tankno": {
@@ -180,6 +192,7 @@
     "validators": {},
     "items": [
       "ctrlProd_report1mat_name",
+      "XDataBrowserButton1",
       "ctrlProd_report1ferment_tankno",
       "ctrlProd_report1full_tank_date",
       "ctrlProd_report1export_date",

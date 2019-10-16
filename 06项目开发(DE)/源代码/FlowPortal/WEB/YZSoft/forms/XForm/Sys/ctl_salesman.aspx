@@ -36,19 +36,19 @@ $Scripts-->
                         公司 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_salesmanCompanyName" runat="server" DisableExpress="1" width="100%" XDataBind="SFDATA:ctl_salesman.CompanyName"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmanCompanyName" runat="server" XDataBind="SFDATA:ctl_salesman.CompanyName" width="100%" DisableExpress="1"></aspxform:XTextBox>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         省 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:ctl_salesman.province_id" PromptText="--请选择--" DisplayColumn="name" ValueColumn="id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:ctl_salesman.province_id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1" ValueColumn="id" DisplayColumn="name" PromptText="--请选择--"></aspxform:XDropDownList>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         市 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:ctl_salesman.city_id" PromptText="--请选择--" DisplayColumn="name" ValueColumn="id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_salesman.province_id"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:ctl_salesman.city_id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_salesman.province_id" ValueColumn="id" DisplayColumn="name" PromptText="--请选择--"></aspxform:XDropDownList>
                     </td>
                 </tr>
                 <tr>
@@ -56,19 +56,20 @@ $Scripts-->
                         姓名 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_name" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.salesman_name"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_name" runat="server" XDataBind="SFDATA:ctl_salesman.salesman_name" width="180px" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XSelectUserButton id="XSelectUserButton1" runat="server" Width="21px" DataMap="Account->SFDATA:ctl_salesman.SalesmanAccount;DisplayName->SFDATA:ctl_salesman.salesman_name"></aspxform:XSelectUserButton>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         联系电话 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_tel" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.salesman_tel"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_tel" runat="server" XDataBind="SFDATA:ctl_salesman.salesman_tel" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         联系邮箱 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_email" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.salesman_email"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_email" runat="server" XDataBind="SFDATA:ctl_salesman.salesman_email" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -76,14 +77,14 @@ $Scripts-->
                         地址 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_addr" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.salesman_addr"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_addr" runat="server" XDataBind="SFDATA:ctl_salesman.salesman_addr" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         备注</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_remarks" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.salesman_remarks" Rows="5" TextMode="MultiLine"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_remarks" runat="server" XDataBind="SFDATA:ctl_salesman.salesman_remarks" width="100%" TextMode="MultiLine" Rows="5"></aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>
@@ -96,21 +97,21 @@ $Scripts-->
                         账号 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_salesmanSalesmanAccount" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.SalesmanAccount"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmanSalesmanAccount" runat="server" XDataBind="SFDATA:ctl_salesman.SalesmanAccount" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         省</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox1" runat="server" width="100%" XDataBind="var1" BorderWidth="1" BorderColor="#DCDCDC">1</aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="var1" width="100%" BorderColor="#DCDCDC" BorderWidth="1">1</aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         市</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox2" runat="server" width="100%" XDataBind="var2" BorderWidth="1" BorderColor="#DCDCDC">2</aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox2" runat="server" XDataBind="var2" width="100%" BorderColor="#DCDCDC" BorderWidth="1">2</aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>

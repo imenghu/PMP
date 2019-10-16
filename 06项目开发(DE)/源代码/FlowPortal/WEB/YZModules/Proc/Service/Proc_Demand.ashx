@@ -44,15 +44,21 @@ namespace Purchase
 
             string searchType = request.GetString("SearchType", null);
             string keyword = request.GetString("kwd", null);
+            string plan_pur_year = request.GetString("plan_pur_year", null);
+            string proc_status = request.GetString("proc_status", null);
 
             //获得查询条件
-            string filter = "(State='1' and demand_state<>'0')";
+            string filter = "(a.State='1' and demand_state<>'0')";
 
             if (searchType == "QuickSearch")
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%'   OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                if (!string.IsNullOrEmpty(plan_pur_year))
+                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%'", queryProvider.EncodeText(plan_pur_year)));
+                if (!string.IsNullOrEmpty(proc_status))
+                    filter = queryProvider.CombinCond(filter, String.Format("demand_state LIKE N'%{0}%' ", queryProvider.EncodeText(proc_status)));
             }
 
             if (!String.IsNullOrEmpty(filter))
@@ -64,7 +70,7 @@ namespace Purchase
             //获得Query
             string query = @"
             WITH X AS(
-                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,* FROM proc_demand {1}
+                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,a.* ,b.mat_name FROM proc_demand a left join proc_demand_detail b on a.demand_id=b.demand_id {1}
             ),
             Y AS(
                 SELECT count(*) AS TotalRows FROM X
@@ -109,6 +115,8 @@ namespace Purchase
                             item["SN"] = reader.ReadString("SN");
                             item["CompanyName"] = reader.ReadString("CompanyName");
                             item["DeptName"] = reader.ReadString("DeptName");
+                            item["mat_name"] = reader.ReadString("mat_name");
+                            item["if_urg"] = reader.ReadString("if_urg");
                             item["CreateUserName"] = reader.ReadString("CreateUserName");
                             item["total_price"] = reader.ReadString("total_price");
                             item["demand_remarks"] = reader.ReadString("demand_remarks");

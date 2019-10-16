@@ -48,7 +48,8 @@ $Scripts-->
                         半成品名称 
                     </td>
                     <td width="214" style="BORDER-TOP: #d1d1d1 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_test1mat_name" runat="server" XDataBind="SFDATA:prod_test1.mat_name" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlprod_test1mat_name" runat="server" XDataBind="SFDATA:prod_test1.mat_name" width="180px" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" XDataSource='DataSource:SFDATA;TableName:ctl_material;Filter:first_code->"3",third_code->"02",state->"1"' Width="21px" DisplayColumns="mat_code:物料编码;mat_name:半成品名称;mat_spec:规格;base_unit:单位" DataMap="mat_id->SFDATA:prod_test1.mat_id;mat_name->SFDATA:prod_test1.mat_name"></aspxform:XDataBrowserButton>
                     </td>
                 </tr>
                 <tr>
@@ -140,18 +141,18 @@ $Scripts-->
             </tbody>
         </table>
         <br />
-        <table width="800" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
+        <table width="788" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
             <tbody>
                 <tr>
-                    <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td width="99" height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         品名编号 
                     </td>
-                    <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td width="687" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlprod_test1mat_id" runat="server" XDataBind="SFDATA:prod_test1.mat_id" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         部门名称 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
@@ -159,7 +160,7 @@ $Scripts-->
                     </td>
                 </tr>
                 <tr>
-                    <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         公司编码 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
@@ -167,7 +168,7 @@ $Scripts-->
                     </td>
                 </tr>
                 <tr>
-                    <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         公司名称 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">

@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-11T13:44:19.2642029+08:00",
+  "generateAt": "2019-10-16T19:46:38.203364+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlctl_salesmanCompanyName",
           "runat": "server",
-          "disableexpress": "1",
+          "xdatabind": "SFDATA:ctl_salesman.CompanyName",
           "width": "100%",
-          "xdatabind": "SFDATA:ctl_salesman.CompanyName"
+          "disableexpress": "1"
         }
       },
       "XDropDownList1": {
@@ -20,10 +20,10 @@
           "id": "XDropDownList1",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_salesman.province_id",
-          "prompttext": "--请选择--",
-          "displaycolumn": "name",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1",
           "valuecolumn": "id",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1"
+          "displaycolumn": "name",
+          "prompttext": "--请选择--"
         }
       },
       "XDropDownList2": {
@@ -32,10 +32,10 @@
           "id": "XDropDownList2",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_salesman.city_id",
-          "prompttext": "--请选择--",
-          "displaycolumn": "name",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_salesman.province_id",
           "valuecolumn": "id",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_salesman.province_id"
+          "displaycolumn": "name",
+          "prompttext": "--请选择--"
         }
       },
       "ctrlctl_salesmansalesman_name": {
@@ -43,8 +43,18 @@
         "attrs": {
           "id": "ctrlctl_salesmansalesman_name",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_salesman.salesman_name"
+          "xdatabind": "SFDATA:ctl_salesman.salesman_name",
+          "width": "180px",
+          "disableexpress": "1"
+        }
+      },
+      "XSelectUserButton1": {
+        "ctype": "aspxform:xselectuserbutton",
+        "attrs": {
+          "id": "XSelectUserButton1",
+          "runat": "server",
+          "width": "21px",
+          "datamap": "Account->SFDATA:ctl_salesman.SalesmanAccount;DisplayName->SFDATA:ctl_salesman.salesman_name"
         }
       },
       "ctrlctl_salesmansalesman_tel": {
@@ -52,8 +62,8 @@
         "attrs": {
           "id": "ctrlctl_salesmansalesman_tel",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_salesman.salesman_tel"
+          "xdatabind": "SFDATA:ctl_salesman.salesman_tel",
+          "width": "100%"
         }
       },
       "ctrlctl_salesmansalesman_email": {
@@ -61,8 +71,8 @@
         "attrs": {
           "id": "ctrlctl_salesmansalesman_email",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_salesman.salesman_email"
+          "xdatabind": "SFDATA:ctl_salesman.salesman_email",
+          "width": "100%"
         }
       },
       "ctrlctl_salesmansalesman_addr": {
@@ -70,8 +80,8 @@
         "attrs": {
           "id": "ctrlctl_salesmansalesman_addr",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_salesman.salesman_addr"
+          "xdatabind": "SFDATA:ctl_salesman.salesman_addr",
+          "width": "100%"
         }
       },
       "ctrlctl_salesmansalesman_remarks": {
@@ -79,10 +89,10 @@
         "attrs": {
           "id": "ctrlctl_salesmansalesman_remarks",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:ctl_salesman.salesman_remarks",
-          "rows": "5",
-          "textmode": "MultiLine"
+          "width": "100%",
+          "textmode": "MultiLine",
+          "rows": "5"
         }
       },
       "ctrlctl_salesmanSalesmanAccount": {
@@ -90,8 +100,8 @@
         "attrs": {
           "id": "ctrlctl_salesmanSalesmanAccount",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_salesman.SalesmanAccount"
+          "xdatabind": "SFDATA:ctl_salesman.SalesmanAccount",
+          "width": "100%"
         }
       },
       "XTextBox1": {
@@ -99,10 +109,10 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "var1",
-          "borderwidth": "1",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
           "innerhtml": "1"
         }
       },
@@ -111,10 +121,10 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "var2",
-          "borderwidth": "1",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
           "innerhtml": "2"
         }
       },
@@ -144,6 +154,7 @@
       "XDropDownList1",
       "XDropDownList2",
       "ctrlctl_salesmansalesman_name",
+      "XSelectUserButton1",
       "ctrlctl_salesmansalesman_tel",
       "ctrlctl_salesmansalesman_email",
       "ctrlctl_salesmansalesman_addr",

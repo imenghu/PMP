@@ -68,7 +68,7 @@ $Scripts-->
                         折11度清酒数量 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2xl_saka_num" runat="server" FieldName="折11度清酒数量" XDataBind="SFDATA:Prod_report2.xl_saka_num" width="100%" HiddenInput="False" ReadOnly="True"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2xl_saka_num" runat="server" FieldName="折11度清酒数量" XDataBind="SFDATA:Prod_report2.xl_saka_num" width="100%" Express="(SFDATA:prod_report2.concentration*SFDATA:prod_report2.outferment_liquor_num)/11" HiddenInput="False" ReadOnly="True"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -88,7 +88,7 @@ $Scripts-->
                         实际出清酒折11度数量 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2xl_saka_actualnum" runat="server" FieldName="实际出清酒折11度数量" XDataBind="SFDATA:Prod_report2.xl_saka_actualnum" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2xl_saka_actualnum" runat="server" FieldName="实际出清酒折11度数量" XDataBind="SFDATA:Prod_report2.xl_saka_actualnum" width="100%" Express="(SFDATA:prod_report2.saka_degree*SFDATA:prod_report2.outsaka_actual_num)/11"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -96,7 +96,7 @@ $Scripts-->
                         过滤酒损 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2filter_wine_damage" runat="server" FieldName="过滤酒损" XDataBind="SFDATA:Prod_report2.filter_wine_damage" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2filter_wine_damage" runat="server" FieldName="过滤酒损" XDataBind="SFDATA:Prod_report2.filter_wine_damage" width="100%" Express="(SFDATA:prod_report2.xl_saka_num-SFDATA:prod_report2.xl_saka_actualnum)/SFDATA:prod_report2.xl_saka_num*100"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         备注 

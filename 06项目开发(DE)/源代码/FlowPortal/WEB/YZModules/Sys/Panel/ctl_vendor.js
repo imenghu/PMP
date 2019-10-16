@@ -51,6 +51,9 @@
                 items: [
                     { xtype: 'rownumberer' },
                                         {
+                                            header: '公司名称', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
+                                        },
+                                        {
                                             header: '供应商名称', dataIndex: 'vendor_name', flex: 1, width: 100, align: 'left', sortable: true
                                         },
                                         {
@@ -67,12 +70,6 @@
                                         },
                                         {
                                             header: '是否正式供应商', dataIndex: 'vendor_state', width: 100, align: 'left', sortable: true,renderer:XYSoft.Render.renderYesOrNo
-                                        },
-                                        {
-                                            header: '创建人', dataIndex: 'CreateUserName', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '最后更新人', dataIndex: 'UpdateUserName', width: 100, align: 'left', sortable: true
                                         },
                                         { header: '详情', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                                         { header: '物料维护', width: 100, align: 'center', sortable: true, renderer: me.renderMat, listeners: { scope: me, click: me.onClickMat } }

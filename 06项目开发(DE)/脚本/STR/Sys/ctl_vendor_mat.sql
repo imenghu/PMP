@@ -5,13 +5,13 @@ BEGIN
 CREATE TABLE dbo.ctl_vendor_mat
 (
   vendor_mat_id int IDENTITY(1,1) not null ,
-  vendor_id int  not null ,
-  mat_id int  not null ,
-  mat_name nvarchar(60) not null ,
+  vendor_id int  null ,
+  mat_id int  null ,
+  mat_name nvarchar(60) null ,
   mat_spec nvarchar(60) null ,
   create_userid int  null ,
   lastupdate_userid int  null ,
-  state nchar(1) not null DEFAULT((1)),
+  state nchar(1) null DEFAULT((1)),
   create_time datetime2  null ,
   update_time datetime2  null ,
   mat_code varchar(40) null ,

@@ -38,19 +38,19 @@ $Scripts-->
                         一级分类 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList5" runat="server" DisplayColumn="first_name" ValueColumn="first_code" PromptText="--请选择--" XDataSource="DataSource:SFDATA;TableName:v_ctl_material_class_first" XDataBind="SFDATA:ctl_material.first_code"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList5" runat="server" XDataBind="SFDATA:ctl_material.first_code" XDataSource="DataSource:SFDATA;TableName:v_ctl_material_class_first" PromptText="--请选择--" ValueColumn="first_code" DisplayColumn="first_name"></aspxform:XDropDownList>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         二级分类 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList6" runat="server" DisplayColumn="second_name" ValueColumn="second_code" PromptText="--请选择--" XDataSource="DataSource:SFDATA;ProcedureName:p_ctl_material_class_second;Filter:@first_code->SFDATA:ctl_material.first_code" XDataBind="SFDATA:ctl_material.second_code"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList6" runat="server" XDataBind="SFDATA:ctl_material.second_code" XDataSource="DataSource:SFDATA;ProcedureName:p_ctl_material_class_second;Filter:@first_code->SFDATA:ctl_material.first_code" PromptText="--请选择--" ValueColumn="second_code" DisplayColumn="second_name"></aspxform:XDropDownList>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         三级分类 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList7" runat="server" DisplayColumn="third_name" ValueColumn="third_code" PromptText="--请选择--" XDataSource="DataSource:SFDATA;ProcedureName:p_ctl_material_class_third;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code" XDataBind="SFDATA:ctl_material.third_code"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList7" runat="server" XDataBind="SFDATA:ctl_material.third_code" XDataSource="DataSource:SFDATA;ProcedureName:p_ctl_material_class_third;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code" PromptText="--请选择--" ValueColumn="third_code" DisplayColumn="third_name"></aspxform:XDropDownList>
                     </td>
                 </tr>
                 <tr>
@@ -60,13 +60,13 @@ $Scripts-->
                         四级分类 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList8" runat="server" DisplayColumn="fourth_name" ValueColumn="fourth_code" PromptText="--请选择--" XDataSource="DataSource:SFDATA;ProcedureName:p_ctl_material_class_fourth;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code,@third_code->SFDATA:ctl_material.third_code" XDataBind="SFDATA:ctl_material.fourth_code"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList8" runat="server" XDataBind="SFDATA:ctl_material.fourth_code" XDataSource="DataSource:SFDATA;ProcedureName:p_ctl_material_class_fourth;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code,@third_code->SFDATA:ctl_material.third_code" PromptText="--请选择--" ValueColumn="fourth_code" DisplayColumn="fourth_name"></aspxform:XDropDownList>
                     </td>
                     <td class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         物料编码 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_materialmat_code" runat="server" XDataBind="SFDATA:ctl_material.mat_code" ValueToDisplayText width="100%" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_materialmat_code" runat="server" XDataBind="SFDATA:ctl_material.mat_code" DisableExpress="1" width="100%" ValueToDisplayText></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         物料名称 
@@ -138,7 +138,7 @@ $Scripts-->
                         创建人 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_materialCreateUserName" runat="server" XDataBind="SFDATA:ctl_material.CreateUserName" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_materialCreateUserName" runat="server" XDataBind="SFDATA:ctl_material.CreateUserName" DisableExpress="1" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -150,7 +150,7 @@ $Scripts-->
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         最后更新人&nbsp;</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_materialUpdateUserName" runat="server" XDataBind="SFDATA:ctl_material.UpdateUserName" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_materialUpdateUserName" runat="server" XDataBind="SFDATA:ctl_material.UpdateUserName" DisableExpress="1" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         更新时间 
@@ -183,19 +183,19 @@ $Scripts-->
                 </tr>
                 <tr>
                     <td height="34" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
-                        <aspxform:XGridLineNo id="XGridLineNo1" runat="server" BackColor="Transparent" BorderWidth="1" TextAlign="Center" BorderStyle="None" Width="100%">1</aspxform:XGridLineNo>
+                        <aspxform:XGridLineNo id="XGridLineNo1" runat="server" Width="100%" BorderStyle="None" TextAlign="Center" BorderWidth="1" BackColor="Transparent">1</aspxform:XGridLineNo>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox2" runat="server" XDataBind="SFDATA:ctl_mat_unit.mat_unit_name" width="100%" DisableExpress="SFDATA:ctl_mat_unit.if_base_unit==1" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox2" runat="server" XDataBind="SFDATA:ctl_mat_unit.mat_unit_name" DisableExpress="SFDATA:ctl_mat_unit.if_base_unit==1" width="100%" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox3" runat="server" XDataBind="SFDATA:ctl_mat_unit.numerator" width="100%" DisableExpress="SFDATA:ctl_mat_unit.if_base_unit==1" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox3" runat="server" XDataBind="SFDATA:ctl_mat_unit.numerator" DisableExpress="SFDATA:ctl_mat_unit.if_base_unit==1" width="100%" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="SFDATA:ctl_mat_unit.denominator" width="100%" DisableExpress="1" BorderWidth="1" BorderColor="#DCDCDC">1</aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="SFDATA:ctl_mat_unit.denominator" DisableExpress="1" width="100%" BorderWidth="1" BorderColor="#DCDCDC">1</aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox4" runat="server" XDataBind="SFDATA:ctl_mat_unit.base_unit_name" width="100%" DisableExpress="1" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox4" runat="server" XDataBind="SFDATA:ctl_mat_unit.base_unit_name" DisableExpress="1" width="100%" BorderWidth="1" BorderColor="#DCDCDC" Express="SFDATA:ctl_material.base_unit"></aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XDropDownList id="XDropDownList9" runat="server" XDataBind="SFDATA:ctl_mat_unit.if_base_unit" DisableExpress="1">

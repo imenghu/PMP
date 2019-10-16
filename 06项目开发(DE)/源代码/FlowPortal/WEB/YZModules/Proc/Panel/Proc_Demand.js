@@ -56,6 +56,8 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand', {
                     { header: '部门', dataIndex: 'DeptName', width: 100, align: 'left', sortable: true },
                     { header: "单号", dataIndex: 'SN', width: 130, align: 'left', sortable: true, renderer: me.renderNo, listeners: { scope: me, click: me.onClickNo } },
                     { header: '提交人', dataIndex: 'CreateUserName', width: 80, align: 'left', sortable: true },
+                    { header: '物料名称', dataIndex: 'mat_name', width: 80, align: 'left', sortable: true },
+                    { header: '是否紧急', dataIndex: 'if_urg', width: 80, align: 'left', sortable: true, renderer: XYSoft.Render.renderYesOrNo },
                     { header: '总金额（元）', dataIndex: 'total_price', minwidth: 120, align: 'left', sortable: true },
                     { header: '备注', dataIndex: 'demand_remarks', flex: 1, width: 60, align: 'center', sortable: true },
                     { header: '提交时间', dataIndex: 'create_time', width: 120, align: 'left', sortable: true },

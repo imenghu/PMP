@@ -18,9 +18,9 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract_SearchPanel', {
             fields: ['name', 'value'],
             data: [
                 { name: RS.$('All_SearchAll'), value: '' },
-                { name: "框架合同", value: '框架合同' },
-                { name: "普通合同", value: '普通合同' },
-                { name: "订单", value: '订单' }
+                { name: "框架合同", value: '1' },
+                { name: "普通合同", value: '2' },
+                { name: "订单", value: '3' }
             ]
         });
 
@@ -49,11 +49,10 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract_SearchPanel', {
             fields: ['name', 'value'],
             data: [
                 { name: RS.$('All_SearchAll'), value: '' },
-                { name: "审批中", value: '审批中' },
-                { name: "已同意", value: '已同意' },
-                { name: "已拒绝", value: '已拒绝' },
-                { name: "已撤销", value: '已撤销' },
-                { name: "已删除", value: '已删除' }
+                { name: "未提报", value: '0' },
+                { name: "审批中", value: '1' },
+                { name: "审批完成", value: '2' },
+                { name: "驳回", value: '3' }
               
 
             ]

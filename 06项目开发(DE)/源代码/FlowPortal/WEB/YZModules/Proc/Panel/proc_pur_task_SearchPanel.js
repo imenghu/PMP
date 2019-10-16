@@ -69,8 +69,8 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task_SearchPanel', {
             fields: ['name', 'value'],
             data: [
                 { name: RS.$('All_SearchAll'), value: '' },
-                { name: "任务执行中", value: '任务执行中' },
-                { name: "任务已完成", value: '任务已完成' },
+                { name: "任务执行中", value: '1' },
+                { name: "任务已完成", value: '3' },
           
 
 

@@ -104,26 +104,28 @@ namespace Sys
                             if (totalRows == 0)
                                 totalRows = reader.ReadInt32("TotalRows");
 
-                                                            item["vendor_name"] = 
-                                                                    reader.ReadString("vendor_name");
-                                                                                            item["tax_cer_no"] = 
-                                                                    reader.ReadString("tax_cer_no");
-                                                                                            item["vendor_contact"] = 
-                                                                    reader.ReadString("vendor_contact");
-                                                                                            item["vendor_tel"] = 
-                                                                    reader.ReadString("vendor_tel");
-                                                                                            item["vendor_addr"] = 
-                                                                    reader.ReadString("vendor_addr");
-                                                                                            item["vendor_state"] = 
-                                                                    reader.ReadString("vendor_state");
-                                                                                            item["CreateUserName"] = 
-                                                                    reader.ReadString("CreateUserName");
-                                                                                            item["UpdateUserName"] = 
-                                                                    reader.ReadString("UpdateUserName");
-                                                                                            item["vendor_id"] = 
-                                                                    reader.ReadInt32("vendor_id");
-                                                                                    }
-                        
+                            item["CompanyName"] =
+                                    reader.ReadString("CompanyName");
+                            item["vendor_name"] =
+                                    reader.ReadString("vendor_name");
+                            item["tax_cer_no"] =
+    reader.ReadString("tax_cer_no");
+                            item["vendor_contact"] =
+    reader.ReadString("vendor_contact");
+                            item["vendor_tel"] =
+    reader.ReadString("vendor_tel");
+                            item["vendor_addr"] =
+    reader.ReadString("vendor_addr");
+                            item["vendor_state"] =
+    reader.ReadString("vendor_state");
+                            item["CreateUserName"] =
+    reader.ReadString("CreateUserName");
+                            item["UpdateUserName"] =
+    reader.ReadString("UpdateUserName");
+                            item["vendor_id"] =
+    reader.ReadInt32("vendor_id");
+                        }
+
                         rv[YZJsonProperty.total] = totalRows;
                     }
                 }

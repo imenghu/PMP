@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-10T20:16:23.0649415+08:00",
+  "generateAt": "2019-10-16T18:47:29.5052618+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,11 +9,11 @@
         "attrs": {
           "id": "XDropDownList5",
           "runat": "server",
-          "displaycolumn": "first_name",
-          "valuecolumn": "first_code",
-          "prompttext": "--请选择--",
+          "xdatabind": "SFDATA:ctl_material.first_code",
           "xdatasource": "DataSource:SFDATA;TableName:v_ctl_material_class_first",
-          "xdatabind": "SFDATA:ctl_material.first_code"
+          "prompttext": "--请选择--",
+          "valuecolumn": "first_code",
+          "displaycolumn": "first_name"
         }
       },
       "XDropDownList6": {
@@ -21,11 +21,11 @@
         "attrs": {
           "id": "XDropDownList6",
           "runat": "server",
-          "displaycolumn": "second_name",
-          "valuecolumn": "second_code",
-          "prompttext": "--请选择--",
+          "xdatabind": "SFDATA:ctl_material.second_code",
           "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_second;Filter:@first_code->SFDATA:ctl_material.first_code",
-          "xdatabind": "SFDATA:ctl_material.second_code"
+          "prompttext": "--请选择--",
+          "valuecolumn": "second_code",
+          "displaycolumn": "second_name"
         }
       },
       "XDropDownList7": {
@@ -33,11 +33,11 @@
         "attrs": {
           "id": "XDropDownList7",
           "runat": "server",
-          "displaycolumn": "third_name",
-          "valuecolumn": "third_code",
-          "prompttext": "--请选择--",
+          "xdatabind": "SFDATA:ctl_material.third_code",
           "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_third;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code",
-          "xdatabind": "SFDATA:ctl_material.third_code"
+          "prompttext": "--请选择--",
+          "valuecolumn": "third_code",
+          "displaycolumn": "third_name"
         }
       },
       "XDropDownList8": {
@@ -45,11 +45,11 @@
         "attrs": {
           "id": "XDropDownList8",
           "runat": "server",
-          "displaycolumn": "fourth_name",
-          "valuecolumn": "fourth_code",
-          "prompttext": "--请选择--",
+          "xdatabind": "SFDATA:ctl_material.fourth_code",
           "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_fourth;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code,@third_code->SFDATA:ctl_material.third_code",
-          "xdatabind": "SFDATA:ctl_material.fourth_code"
+          "prompttext": "--请选择--",
+          "valuecolumn": "fourth_code",
+          "displaycolumn": "fourth_name"
         }
       },
       "ctrlctl_materialmat_code": {
@@ -58,9 +58,9 @@
           "id": "ctrlctl_materialmat_code",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_material.mat_code",
-          "valuetodisplaytext": "",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "valuetodisplaytext": ""
         }
       },
       "ctrlctl_materialmat_name": {
@@ -205,8 +205,8 @@
           "id": "ctrlctl_materialCreateUserName",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_material.CreateUserName",
-          "width": "100%",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "width": "100%"
         }
       },
       "ctrlctl_materialcreate_time": {
@@ -225,8 +225,8 @@
           "id": "ctrlctl_materialUpdateUserName",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_material.UpdateUserName",
-          "width": "100%",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "width": "100%"
         }
       },
       "XDateTimePicker1": {
@@ -245,8 +245,8 @@
           "id": "XTextBox2",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_mat_unit.mat_unit_name",
-          "width": "100%",
           "disableexpress": "SFDATA:ctl_mat_unit.if_base_unit==1",
+          "width": "100%",
           "borderwidth": "1",
           "bordercolor": "#DCDCDC"
         }
@@ -257,8 +257,8 @@
           "id": "XTextBox3",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_mat_unit.numerator",
-          "width": "100%",
           "disableexpress": "SFDATA:ctl_mat_unit.if_base_unit==1",
+          "width": "100%",
           "borderwidth": "1",
           "bordercolor": "#DCDCDC"
         }
@@ -269,8 +269,8 @@
           "id": "XTextBox1",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_mat_unit.denominator",
-          "width": "100%",
           "disableexpress": "1",
+          "width": "100%",
           "borderwidth": "1",
           "bordercolor": "#DCDCDC",
           "innerhtml": "1"
@@ -282,10 +282,11 @@
           "id": "XTextBox4",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_mat_unit.base_unit_name",
-          "width": "100%",
           "disableexpress": "1",
+          "width": "100%",
           "borderwidth": "1",
-          "bordercolor": "#DCDCDC"
+          "bordercolor": "#DCDCDC",
+          "express": "SFDATA:ctl_material.base_unit"
         }
       },
       "XDropDownList9": {

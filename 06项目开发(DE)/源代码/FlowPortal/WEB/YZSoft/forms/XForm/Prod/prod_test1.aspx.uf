@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-10T16:14:05.1886431+08:00",
+  "generateAt": "2019-10-16T21:11:24.5400581+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -28,7 +28,19 @@
           "id": "ctrlprod_test1mat_name",
           "runat": "server",
           "xdatabind": "SFDATA:prod_test1.mat_name",
-          "width": "100%"
+          "width": "180px",
+          "disableexpress": "1"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->\"3\",third_code->\"02\",state->\"1\"",
+          "width": "21px",
+          "displaycolumns": "mat_code:物料编码;mat_name:半成品名称;mat_spec:规格;base_unit:单位",
+          "datamap": "mat_id->SFDATA:prod_test1.mat_id;mat_name->SFDATA:prod_test1.mat_name"
         }
       },
       "ctrlprod_test1tank_id": {
@@ -179,7 +191,7 @@
       "table1": {
         "ctype": "wrap",
         "attrs": {
-          "width": "800",
+          "width": "788",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -202,6 +214,7 @@
       "ctrlprod_test1sample_date",
       "ctrlprod_test1analyze_date",
       "ctrlprod_test1mat_name",
+      "XDataBrowserButton1",
       "ctrlprod_test1tank_id",
       "ctrlprod_test1alcohol",
       "ctrlprod_test1real_ferment",

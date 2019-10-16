@@ -45,8 +45,8 @@ Ext.define('YZModules.Proc.Panel.proc_tests_SearchPanel', {
             fields: ['name', 'value'],
             data: [
                 { name: RS.$('All_SearchAll'), value: '' },
-                { name: "已化验", value: '已化验' },
-                { name: "未化验", value: '未化验' },
+                { name: "已化验", value: '1' },
+                { name: "未化验", value: '0' },
           
 
 

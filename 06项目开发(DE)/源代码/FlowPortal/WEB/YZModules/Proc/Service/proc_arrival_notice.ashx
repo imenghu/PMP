@@ -54,7 +54,7 @@ public class proc_arrival_notice : YZServiceHandler
         {
             //应用关键字过滤
             if (!string.IsNullOrEmpty(keyword))
-                filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%' or vendor_name LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
             if (!string.IsNullOrEmpty(proc_type))
                 filter = queryProvider.CombinCond(filter, String.Format("notice_state LIKE N'%{0}%'", queryProvider.EncodeText(proc_type)));
             if (!string.IsNullOrEmpty(proc_status))

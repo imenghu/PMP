@@ -19,6 +19,11 @@ Ext.define('YZModules.Proc.Panel.Annual_Pur_Plan_SearchPanel', {
             fieldLabel: '物料名称',
             allowBlank: true
         });
+        me.edtKeyword = Ext.create('Ext.form.field.Text', {
+            fieldLabel: RS.$('All_Keyword'),
+            allowBlank: true,
+            value: config.store.getProxy().getExtraParams().kwd || ''
+        });
 
         me.btnSearch = Ext.create('Ext.button.Button', {
             text: RS.$('All_Search'),
@@ -108,9 +113,10 @@ Ext.define('YZModules.Proc.Panel.Annual_Pur_Plan_SearchPanel', {
             params = me.store.getProxy().getExtraParams();
 
         Ext.apply(params, {
-            searchType: 'AdvancedSearch',
+            searchType: 'QuickSearch',
             plan_pur_year: me.plan_pur_year.getValue(),
-            mat_name: me.mat_name.getValue()
+            mat_name: me.mat_name.getValue(),
+            kwd: me.edtKeyword.getValue(),
         });
 
         me.store.loadPage(1);
@@ -123,7 +129,12 @@ Ext.define('YZModules.Proc.Panel.Annual_Pur_Plan_SearchPanel', {
 
         me.plan_pur_year.setValue('');
         me.mat_name.setValue('');
+        me.edtKeyword.setValue('');
+        Ext.apply(params, {
+            searchType: '',
+        });
 
         me.store.loadPage(1);
+       
     }
 });

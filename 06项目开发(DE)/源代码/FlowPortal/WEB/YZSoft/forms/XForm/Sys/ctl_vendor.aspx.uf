@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-10T11:08:55.1657258+08:00",
+  "generateAt": "2019-10-16T19:06:53.223599+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,8 +9,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_name",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_name"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_name",
+          "width": "100%"
         }
       },
       "ctrlctl_vendortax_cer_no": {
@@ -18,8 +18,8 @@
         "attrs": {
           "id": "ctrlctl_vendortax_cer_no",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.tax_cer_no"
+          "xdatabind": "SFDATA:ctl_vendor.tax_cer_no",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_zipcode": {
@@ -27,8 +27,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_zipcode",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_zipcode"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_zipcode",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_contact": {
@@ -36,8 +36,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_contact",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_contact"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_contact",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_tel": {
@@ -45,8 +45,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_tel",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_tel"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_tel",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_email": {
@@ -54,8 +54,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_email",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_email"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_email",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_wechat": {
@@ -63,8 +63,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_wechat",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_wechat"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_wechat",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_qq": {
@@ -72,8 +72,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_qq",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_qq"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_qq",
+          "width": "100%"
         }
       },
       "XDropDownList1": {
@@ -106,8 +106,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_addr",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_addr"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_addr",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorCreateUserName": {
@@ -115,8 +115,9 @@
         "attrs": {
           "id": "ctrlctl_vendorCreateUserName",
           "runat": "server",
+          "xdatabind": "SFDATA:ctl_vendor.CreateUserName",
           "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.CreateUserName"
+          "disableexpress": "1"
         }
       },
       "ctrlctl_vendorUpdateUserName": {
@@ -124,45 +125,10 @@
         "attrs": {
           "id": "ctrlctl_vendorUpdateUserName",
           "runat": "server",
+          "xdatabind": "SFDATA:ctl_vendor.UpdateUserName",
           "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.UpdateUserName"
+          "disableexpress": "1"
         }
-      },
-      "ctrlctl_vendorcreate_userid": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlctl_vendorcreate_userid",
-          "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.create_userid"
-        }
-      },
-      "ctrlctl_vendorlastupdate_userid": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlctl_vendorlastupdate_userid",
-          "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.lastupdate_userid"
-        }
-      },
-      "table1": {
-        "ctype": "wrap",
-        "attrs": {
-          "width": "800",
-          "align": "center",
-          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
-          "border": "0",
-          "cellspacing": "0",
-          "cellpadding": "0",
-          "hiddenexpress": "1",
-          "id": "table1"
-        },
-        "ctypeorg": "table",
-        "items": [
-          "ctrlctl_vendorcreate_userid",
-          "ctrlctl_vendorlastupdate_userid"
-        ]
       }
     },
     "validators": {},
@@ -178,8 +144,7 @@
       "XDropDownList1",
       "ctrlctl_vendorvendor_addr",
       "ctrlctl_vendorCreateUserName",
-      "ctrlctl_vendorUpdateUserName",
-      "table1"
+      "ctrlctl_vendorUpdateUserName"
     ]
   }
 }

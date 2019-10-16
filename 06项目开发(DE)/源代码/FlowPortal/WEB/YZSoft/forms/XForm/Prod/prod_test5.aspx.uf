@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-11T11:23:53.1410056+08:00",
+  "generateAt": "2019-10-16T16:22:00.2099446+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,8 +9,8 @@
         "attrs": {
           "id": "ctrlprod_test5analyze_date",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.analyze_date"
+          "xdatabind": "SFDATA:prod_test5.analyze_date",
+          "width": "100%"
         }
       },
       "ctrlprod_test5mat_name": {
@@ -18,8 +18,19 @@
         "attrs": {
           "id": "ctrlprod_test5mat_name",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.mat_name"
+          "xdatabind": "SFDATA:prod_test5.mat_name",
+          "width": "180px"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->“2”,third_code->“21”,state->“1”",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:单位",
+          "datamap": "mat_name->SFDATA:prod_test5.mat_name"
         }
       },
       "ctrlprod_test5tank_id": {
@@ -27,8 +38,8 @@
         "attrs": {
           "id": "ctrlprod_test5tank_id",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.tank_id"
+          "xdatabind": "SFDATA:prod_test5.tank_id",
+          "width": "100%"
         }
       },
       "ctrlprod_test5dis_oxygen1": {
@@ -36,8 +47,8 @@
         "attrs": {
           "id": "ctrlprod_test5dis_oxygen1",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.dis_oxygen1"
+          "xdatabind": "SFDATA:prod_test5.dis_oxygen1",
+          "width": "100%"
         }
       },
       "ctrlprod_test5dis_oxygen2": {
@@ -45,8 +56,8 @@
         "attrs": {
           "id": "ctrlprod_test5dis_oxygen2",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.dis_oxygen2"
+          "xdatabind": "SFDATA:prod_test5.dis_oxygen2",
+          "width": "100%"
         }
       },
       "ctrlprod_test5dis_oxygen3": {
@@ -54,8 +65,8 @@
         "attrs": {
           "id": "ctrlprod_test5dis_oxygen3",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.dis_oxygen3"
+          "xdatabind": "SFDATA:prod_test5.dis_oxygen3",
+          "width": "100%"
         }
       },
       "ctrlprod_test5operator_name": {
@@ -63,8 +74,8 @@
         "attrs": {
           "id": "ctrlprod_test5operator_name",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.operator_name"
+          "xdatabind": "SFDATA:prod_test5.operator_name",
+          "width": "100%"
         }
       },
       "ctrlprod_test5memo": {
@@ -72,13 +83,14 @@
         "attrs": {
           "id": "ctrlprod_test5memo",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:prod_test5.memo",
+          "width": "100%",
           "max": "0",
           "min": "0",
-          "placeholder": "",
+          "valuetodisplaytext": "",
           "hiddeninput": "False",
-          "valuetodisplaytext": ""
+          "placeholder": "",
+          "textmode": "MultiLine"
         }
       },
       "ctrlprod_test5DeptName": {
@@ -86,8 +98,8 @@
         "attrs": {
           "id": "ctrlprod_test5DeptName",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.DeptName"
+          "xdatabind": "SFDATA:prod_test5.DeptName",
+          "width": "100%"
         }
       },
       "ctrlprod_test5Company": {
@@ -95,8 +107,8 @@
         "attrs": {
           "id": "ctrlprod_test5Company",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.Company"
+          "xdatabind": "SFDATA:prod_test5.Company",
+          "width": "100%"
         }
       },
       "ctrlprod_test5CompanyName": {
@@ -104,8 +116,8 @@
         "attrs": {
           "id": "ctrlprod_test5CompanyName",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.CompanyName"
+          "xdatabind": "SFDATA:prod_test5.CompanyName",
+          "width": "100%"
         }
       },
       "ctrlprod_test5org_id": {
@@ -113,8 +125,8 @@
         "attrs": {
           "id": "ctrlprod_test5org_id",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test5.org_id"
+          "xdatabind": "SFDATA:prod_test5.org_id",
+          "width": "100%"
         }
       },
       "table1": {
@@ -142,6 +154,7 @@
     "items": [
       "ctrlprod_test5analyze_date",
       "ctrlprod_test5mat_name",
+      "XDataBrowserButton1",
       "ctrlprod_test5tank_id",
       "ctrlprod_test5dis_oxygen1",
       "ctrlprod_test5dis_oxygen2",

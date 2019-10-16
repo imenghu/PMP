@@ -58,7 +58,7 @@ public class proc_pur_task : YZServiceHandler
             if (!string.IsNullOrEmpty(proc_type))
                 filter = queryProvider.CombinCond(filter, String.Format("companyname LIKE N'%{0}%'", queryProvider.EncodeText(proc_type)));
             if (!string.IsNullOrEmpty(proc_status))
-                filter = queryProvider.CombinCond(filter, String.Format("dept LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
+                filter = queryProvider.CombinCond(filter, String.Format("deptname LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
             if (!string.IsNullOrEmpty(vendor))
                 filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%'", queryProvider.EncodeText(vendor)));
             if (!string.IsNullOrEmpty(task_state))

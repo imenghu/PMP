@@ -104,20 +104,20 @@ namespace Biz
                         new {
                             id = "KC3",
                             text = "包装车间",
-                            glyph = 0xeac8
-                            //xclass = "YZSoft.bpm.sharetask.Panel"
+                            glyph = 0xeac8,
+                            xclass = "YZModules.Prod.Panel.prod_report3"
                         },
                         new {
                             id = "KC4",
                             text = "糖化日报",
-                            glyph = 0xeac8
-                            //xclass = "YZSoft.bpm.sharetask.Panel"
+                            glyph = 0xeac8,
+                            xclass = "YZModules.Prod.Panel.prod_report4"
                         },
                         new {
                             id = "KC5",
                             text = "产成品库存查询",
-                            glyph = 0xeac8
-                            //xclass = "YZModules.Inv.Panel.inv_prod"
+                            glyph = 0xeac8,
+                            xclass = "YZModules.Inv.Panel.inv_prod"
                         }
                     }
                 }
