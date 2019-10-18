@@ -52,7 +52,7 @@ namespace Sys
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("depot_name LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
             }
 
             if (!String.IsNullOrEmpty(filter))

@@ -86,42 +86,6 @@
                                         {
                                             header: '备注', dataIndex: 'memo', width: 100, align: 'left', sortable: true
                                         },
-                                        {
-                                            header: '公司名称', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '日期', dataIndex: 'input_date', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '发酵罐号', dataIndex: 'tankid_source', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '浓度', dataIndex: 'concentration', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '出发酵液数量', dataIndex: 'outferment_liquor_num', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '折11度清酒数量', dataIndex: 'xl_saka_num', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '清酒度数', dataIndex: 'saka_degree', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '清酒罐号', dataIndex: 'tankid_dest', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '实际出清酒数量', dataIndex: 'outsaka_actual_num', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '实际出清酒折11度数量', dataIndex: 'xl_saka_actualnum', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '过滤酒损', dataIndex: 'filter_wine_damage', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '备注', dataIndex: 'memo', width: 100, align: 'left', sortable: true
-                                        },
                                         { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },

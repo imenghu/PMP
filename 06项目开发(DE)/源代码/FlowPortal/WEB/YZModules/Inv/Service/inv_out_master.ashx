@@ -44,6 +44,9 @@ namespace Inv
 
             string searchType = request.GetString("SearchType", null);
             string keyword = request.GetString("kwd", null);
+            string proc_status = request.GetString("proc_status", null);
+
+            string Inv_out_user = request.GetString("Inv_out_user", null);
 
             //获得查询条件
             string filter = "";
@@ -52,20 +55,25 @@ namespace Inv
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("out_state LIKE N'%{0}%' OR CreateUserName LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                if (!string.IsNullOrEmpty(proc_status))
+                    filter = queryProvider.CombinCond(filter, String.Format("out_state LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
+                
+                if (!string.IsNullOrEmpty(Inv_out_user))
+                    filter = queryProvider.CombinCond(filter, String.Format("CreateUserName LIKE N'%{0}%'", queryProvider.EncodeText(Inv_out_user)));
             }
 
             if (!String.IsNullOrEmpty(filter))
                 filter = " WHERE " + filter;
 
             //获得排序子句
-            string order = request.GetSortString("a.create_time");
+            string order = request.GetSortString("out_master_id");
 
             //获得Query
             string query = @"
             WITH X AS(
-                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,a.TaskID,a.out_master_id,a.CompanyName,a.DeptName,a.CreateUserName,a.ReqOrgName,a.ReqUserName,a.out_state,a.create_time,b.mat_name,b.outdetail_remarks 
-                FROM inv_out_master a left join inv_out_detail b on a.out_master_id=b.out_master_id{1}
+                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,*
+                FROM inv_out_master {1}
             ),
             Y AS(
                 SELECT count(*) AS TotalRows FROM X
@@ -123,10 +131,8 @@ reader.ReadInt32("out_master_id");
     reader.ReadString("out_state");
                             item["create_time"] =
     reader.ReadDateTime("create_time");
-                            item["mat_name"] =
-    reader.ReadString("mat_name");
-                            item["outdetail_remarks"] =
-    reader.ReadString("outdetail_remarks");
+                            item["outmaster_remarks"] =
+    reader.ReadString("outmaster_remarks");
                         }
                         
                         rv[YZJsonProperty.total] = totalRows;

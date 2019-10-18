@@ -44,6 +44,9 @@ namespace Inv
 
             string searchType = request.GetString("SearchType", null);
             string keyword = request.GetString("kwd", null);
+            string depot_name = request.GetString("depot_name", null);
+            string inv_year = request.GetString("inv_year", null);
+            string proc_status = request.GetString("proc_status", null);
 
             //获得查询条件
             string filter = "";
@@ -52,7 +55,13 @@ namespace Inv
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("inv_master_year LIKE N'%{0}%' OR inv_master_month LIKE N'%{0}%' OR CreateUserName LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                if (!string.IsNullOrEmpty(depot_name))
+                    filter = queryProvider.CombinCond(filter, String.Format("CreateUserName LIKE N'%{0}%'", queryProvider.EncodeText(depot_name)));
+                if (!string.IsNullOrEmpty(inv_year))
+                    filter = queryProvider.CombinCond(filter, String.Format("inv_master_year LIKE N'%{0}%'", queryProvider.EncodeText(inv_year)));
+                if (!string.IsNullOrEmpty(proc_status))
+                    filter = queryProvider.CombinCond(filter, String.Format("inv_master_month LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
             }
 
             if (!String.IsNullOrEmpty(filter))

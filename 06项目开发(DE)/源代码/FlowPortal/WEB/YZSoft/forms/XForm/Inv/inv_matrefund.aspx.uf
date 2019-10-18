@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-11T21:23:35.1177469+08:00",
+  "generateAt": "2019-10-18T10:31:30.3361917+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -11,7 +11,8 @@
           "runat": "server",
           "width": "100%",
           "xdatabind": "SFDATA:inv_matrefund.CompanyName",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "fieldname": "公司名称"
         }
       },
       "ctrlinv_matrefundDeptName": {
@@ -21,7 +22,8 @@
           "runat": "server",
           "width": "100%",
           "xdatabind": "SFDATA:inv_matrefund.DeptName",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "fieldname": "部门名称"
         }
       },
       "ctrlinv_matrefundref_org_id": {
@@ -31,7 +33,8 @@
           "runat": "server",
           "width": "180px",
           "xdatabind": "SFDATA:inv_matrefund.RefundOrgName",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "fieldname": "退库部门"
         }
       },
       "XSelectOUButton1": {
@@ -50,7 +53,8 @@
           "runat": "server",
           "width": "180px",
           "xdatabind": "SFDATA:inv_matrefund.RefundUserName",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "fieldname": "退库人"
         }
       },
       "XSelectUserButton1": {
@@ -69,6 +73,7 @@
           "runat": "server",
           "width": "100%",
           "xdatabind": "SFDATA:inv_matrefund.Attachments",
+          "fieldname": "附件",
           "filetypesdescription": "Word,Excel,Pdf",
           "filetypes": "*.doc;*.docx;*.xls;*.xlsx;*.pdf;*.png;*.jpg;*.jpeg;*.gif"
         }
@@ -79,7 +84,25 @@
           "id": "ctrlinv_matrefundrefund_remarks",
           "runat": "server",
           "width": "100%",
-          "xdatabind": "SFDATA:inv_matrefund.refund_remarks"
+          "xdatabind": "SFDATA:inv_matrefund.refund_remarks",
+          "fieldname": "备注"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "xclass": "YZSoft.Forms.Field.DataBrowserButton",
+          "width": "63px",
+          "datamap": "tests_id->SFDATA:inv_matrefund_detail.tests_id;vendor_id->SFDATA:inv_matrefund_detail.vendor_id;vendor_code->SFDATA:inv_matrefund_detail.vendor_code;vendor_name->SFDATA:inv_matrefund_detail.vendor_name;mat_id->SFDATA:inv_matrefund_detail.mat_id;mat_code->SFDATA:inv_matrefund_detail.mat_code;mat_name->SFDATA:inv_matrefund_detail.mat_name;mat_spesc->SFDATA:inv_matrefund_detail.mat_spesc",
+          "usesubmitbehavior": "False",
+          "popupwndheight": "-1",
+          "popupwndwidth": "-1",
+          "multiselect": "True",
+          "displaycolumns": "vendor_name:供应商名称;mat_code:物料编码;mat_name:物料名称;mat_spesc:规格",
+          "xdatasource": "DataSource:SFDATA;TableName:proc_tests;Filter:tests_class->varTestClass,Company->SFDATA:inv_matrefund.Company",
+          "text": "选择物料"
         }
       },
       "XDropDownList1": {
@@ -90,8 +113,8 @@
           "xdatabind": "SFDATA:inv_matrefund_detail.depot_id",
           "width": "100%",
           "datamap": "depot_name->SFDATA:inv_matrefund_detail.depot_name",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot;Filter:state->varState,Company->SFDATA:inv_matrefund.Company",
           "prompttext": "--请选择--",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot",
           "valuecolumn": "depot_id",
           "displaycolumn": "depot_name"
         }
@@ -103,6 +126,7 @@
           "runat": "server",
           "width": "100%",
           "xdatabind": "SFDATA:inv_matrefund_detail.depot_name",
+          "fieldname": "库房名称",
           "hiddenexpress": "1"
         }
       },
@@ -113,7 +137,18 @@
           "runat": "server",
           "width": "100%",
           "xdatabind": "SFDATA:inv_matrefund_detail.vendor_name",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "fieldname": "供应商名称"
+        }
+      },
+      "XTextBox8": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox8",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:inv_matrefund_detail.vendor_id",
+          "hiddenexpress": "1"
         }
       },
       "XTextBox3": {
@@ -126,6 +161,17 @@
           "hiddenexpress": "1"
         }
       },
+      "XTextBox9": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox9",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:inv_matrefund_detail.mat_id",
+          "disableexpress": "1",
+          "hiddenexpress": "1"
+        }
+      },
       "ctrlinv_matrefund_detailmat_code": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
@@ -133,7 +179,10 @@
           "runat": "server",
           "width": "100%",
           "xdatabind": "SFDATA:inv_matrefund_detail.mat_code",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "fieldname": "物料编码",
+          "datamap": "base_unit->SFDATA:inv_matrefund_detail.refund_stnum_unit",
+          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_material;FilterColumn:mat_code;DisplayColumn:mat_code"
         }
       },
       "ctrlinv_matrefund_detailmat_name": {
@@ -143,7 +192,8 @@
           "runat": "server",
           "width": "100%",
           "xdatabind": "SFDATA:inv_matrefund_detail.mat_name",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "fieldname": "物料名称"
         }
       },
       "ctrlinv_matrefund_detailmat_spec": {
@@ -152,8 +202,9 @@
           "id": "ctrlinv_matrefund_detailmat_spec",
           "runat": "server",
           "width": "100%",
-          "xdatabind": "SFDATA:inv_matrefund_detail.mat_spec",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_matrefund_detail.mat_spesc",
+          "disableexpress": "1",
+          "fieldname": "规格"
         }
       },
       "ctrlinv_matrefund_detailrefund_stnum": {
@@ -163,7 +214,7 @@
           "runat": "server",
           "width": "100%",
           "xdatabind": "SFDATA:inv_matrefund_detail.refund_stnum",
-          "disableexpress": "1"
+          "fieldname": "退库物料数量"
         }
       },
       "ctrlinv_matrefund_detailrefund_stnum_unit": {
@@ -173,7 +224,8 @@
           "runat": "server",
           "width": "100%",
           "xdatabind": "SFDATA:inv_matrefund_detail.refund_stnum_unit",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "fieldname": "基准单位"
         }
       },
       "ctrlinv_matrefund_detailrefund__time": {
@@ -182,7 +234,56 @@
           "id": "ctrlinv_matrefund_detailrefund__time",
           "runat": "server",
           "width": "100%",
-          "xdatabind": "SFDATA:inv_matrefund_detail.refund__time"
+          "xdatabind": "SFDATA:inv_matrefund_detail.refund__time",
+          "fieldname": "退库时间"
+        }
+      },
+      "XDropDownList2": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList2",
+          "runat": "server",
+          "xdatabind": "varTestResult",
+          "disableexpress": "1",
+          "fieldname": "化验结果",
+          "width": "100%"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "selected": "True",
+              "value": "1",
+              "innerhtml": "合格"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "2",
+              "innerhtml": "不合格（让步接收）"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "3",
+              "innerhtml": "不合格（不接受）"
+            }
+          }
+        ]
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "width": "100%",
+          "datamap": "tests_result->varTestResult",
+          "hiddenexpress": "1",
+          "valuetodisplaytext": "DataSource:SFDATA;TableName:proc_tests;FilterColumn:tests_id;DisplayColumn:tests_result",
+          "express": "SFDATA:inv_matrefund_detail.tests_id",
+          "bordercolor": "#DCDCDC"
         }
       },
       "XChildFormLink1": {
@@ -191,6 +292,8 @@
           "id": "XChildFormLink1",
           "runat": "server",
           "xdatabind": "SFDATA:inv_matrefund_detail.tests_id",
+          "fieldname": "化验单",
+          "formapplication": "Proc/proc_tests_read",
           "innerhtml": "化验单"
         }
       },
@@ -200,7 +303,8 @@
           "id": "ctrlinv_matrefund_detailrefund_remarks",
           "runat": "server",
           "width": "100%",
-          "xdatabind": "SFDATA:inv_matrefund_detail.refund_remarks"
+          "xdatabind": "SFDATA:inv_matrefund_detail.refund_remarks",
+          "fieldname": "备注"
         }
       },
       "table1": {
@@ -220,13 +324,17 @@
           "XDropDownList1",
           "XTextBox4",
           "ctrlinv_matrefund_detailvendor_name",
+          "XTextBox8",
           "XTextBox3",
+          "XTextBox9",
           "ctrlinv_matrefund_detailmat_code",
           "ctrlinv_matrefund_detailmat_name",
           "ctrlinv_matrefund_detailmat_spec",
           "ctrlinv_matrefund_detailrefund_stnum",
           "ctrlinv_matrefund_detailrefund_stnum_unit",
           "ctrlinv_matrefund_detailrefund__time",
+          "XDropDownList2",
+          "XTextBox5",
           "XChildFormLink1",
           "ctrlinv_matrefund_detailrefund_remarks"
         ],
@@ -268,6 +376,40 @@
           "xdatabind": "SFDATA:inv_matrefund.RefundUserAccount"
         }
       },
+      "XTextBox7": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox7",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:inv_matrefund.Company",
+          "disableexpress": "1"
+        }
+      },
+      "XTextBox6": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox6",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "varTestClass",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "innerhtml": "退库化验"
+        }
+      },
+      "XTextBox10": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox10",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "varState",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "innerhtml": "1"
+        }
+      },
       "table3": {
         "ctype": "wrap",
         "attrs": {
@@ -281,11 +423,87 @@
         "ctypeorg": "table",
         "items": [
           "XTextBox1",
-          "XTextBox2"
+          "XTextBox2",
+          "XTextBox7",
+          "XTextBox6",
+          "XTextBox10"
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "controltovalidate": "XDropDownList1",
+          "errormessage": "请选择库房名称",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "库房名称"
+        }
+      },
+      "XRequiredFieldValidator6": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator6",
+          "runat": "server",
+          "controltovalidate": "ctrlinv_matrefund_detailmat_name",
+          "errormessage": "请选择物料",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "物料名称"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "controltovalidate": "ctrlinv_matrefund_detailrefund_stnum",
+          "errormessage": "请填写退库物料数量",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "退库物料数量"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "controltovalidate": "ctrlinv_matrefund_detailrefund__time",
+          "errormessage": "请选择退库时间",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "退库时间"
+        }
+      },
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "controltovalidate": "ctrlinv_matrefundref_org_id",
+          "errormessage": "请选择退库部门",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "退库部门"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "controltovalidate": "ctrlinv_matrefundref_userid",
+          "errormessage": "请选择退库人",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "退库人"
+        }
+      }
+    },
     "items": [
       "ctrlinv_matrefundCompanyName",
       "ctrlinv_matrefundDeptName",
@@ -295,6 +513,7 @@
       "XSelectUserButton1",
       "XAttachments1",
       "ctrlinv_matrefundrefund_remarks",
+      "XDataBrowserButton1",
       "table1",
       "table2",
       "table3"

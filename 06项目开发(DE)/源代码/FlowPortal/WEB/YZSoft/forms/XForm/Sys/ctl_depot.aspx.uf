@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-10T20:28:15.5716173+08:00",
+  "generateAt": "2019-10-18T11:32:17.6283266+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlctl_depotCompanyName",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_depot.CompanyName",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:ctl_depot.CompanyName"
         }
       },
       "ctrlctl_depotDeptName": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlctl_depotDeptName",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_depot.DeptName",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:ctl_depot.DeptName"
         }
       },
       "ctrlctl_depotdepot_name": {
@@ -29,8 +29,8 @@
         "attrs": {
           "id": "ctrlctl_depotdepot_name",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_depot.depot_name",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_depot.depot_name"
         }
       },
       "ctrlctl_depotCompany": {
@@ -38,8 +38,8 @@
         "attrs": {
           "id": "ctrlctl_depotCompany",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_depot.Company",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_depot.Company"
         }
       },
       "ctrlctl_depotDept": {
@@ -47,8 +47,8 @@
         "attrs": {
           "id": "ctrlctl_depotDept",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_depot.Dept",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_depot.Dept"
         }
       },
       "table1": {
@@ -70,7 +70,20 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写库房名称",
+          "controltovalidate": "ctrlctl_depotdepot_name",
+          "innerhtml": "库房名称"
+        }
+      }
+    },
     "items": [
       "ctrlctl_depotCompanyName",
       "ctrlctl_depotDeptName",

@@ -15,7 +15,6 @@
     constructor: function (config) {
         var me = this,
             cfg;
-
         //调试时显示模块的权限
         //alert(Ext.encode(config.perm));
         me.store = Ext.create('Ext.data.JsonStore', {
@@ -82,6 +81,7 @@
         me.btnNew = Ext.create('Ext.button.Button', {
             text: '新增',
             glyph: 0xe61d,
+            disabled: !config.perm['New'],
             handler: function () {
                 me.addNew();
             }
@@ -91,8 +91,9 @@
             text: '修改',
             glyph: 0xe61c,
             sm: me.grid.getSelectionModel(),
+            perm: 'Edit',
             updateStatus: function () {
-                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, '', 1, 1));
+                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(me, me.grid, this.perm, 1, 1));
             },
             handler: function () {
                 var sm = me.grid.getSelectionModel(),
@@ -109,8 +110,10 @@
             text: '删除',
             glyph: 0xe64d,
             sm: me.grid.getSelectionModel(),
+            /*---------删除按钮权限（记录权限）-------------*/
+            perm: 'Delete',
             updateStatus: function () {
-                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, '', 1, -1));
+                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(me, me.grid, this.perm, 1, -1));
             },
             handler: function () {
                 me.deleteSelection();
@@ -171,7 +174,7 @@
             cls: 'yz-tbar-module',
             items: [
                 me.btnNew,
-                me.btnEdit,
+                //me.btnEdit,
                 me.btnDelete,
                 '|',
                 me.btnTrace,
@@ -200,7 +203,7 @@
         };
 
         me.sts = Ext.create('YZSoft.src.sts', {
-            tbar: me.toolBar,
+            items: [me.btnTrace],
             store: me.store,
             sm: me.grid.getSelectionModel(),
             request: {
@@ -226,7 +229,7 @@
 
     onClickNo: function (view, cell, recordIndex, cellIndex, e) {
         if (e.getTarget().tagName == 'A')
-            this.read(this.store.getAt(recordIndex));
+            this.readTask(this.store.getAt(recordIndex));
     },
     renderRead: function (value, metaData, record) {
         return "<a href='#'>查看</a>";
@@ -235,9 +238,9 @@
     addNew: function () {
         var me = this;
 
-        YZSoft.bpm.src.ux.FormManager.openFormApplication('Inv/inv_matrefund', '', 'New', Ext.apply({
+        YZSoft.bpm.src.ux.FormManager.openPostWindow('物料退库审批', {
             sender: me,
-            title: '新增-物料退库',
+            title: '发起 - 物料退库审批',
             dlgModel: 'Tab', //Tab,Window,Dialog
             width: 600,
             height: 430,
@@ -246,7 +249,7 @@
                     me.store.reload({ loadMask: false });
                 }
             }
-        }));
+        });
     },
 
     edit: function (rec) {
@@ -275,6 +278,14 @@
             sender: me,
             title: '物料退库'
         }, me.dlgCfg));
+    },
+    readTask: function (rec) {
+        var me = this;
+
+        YZSoft.bpm.src.ux.FormManager.openTaskForRead(rec.data.TaskID, Ext.apply({
+            sender: me,
+            title: Ext.String.format('物料退库审批')
+        }));
     },
 
     deleteSelection: function () {
@@ -333,5 +344,20 @@
                 });
             }
         });
+    },
+
+    openTrace: function (rec, activeTabIndex) {
+        var me = this,
+            taskid = rec.data.TaskID;
+
+        var view = YZSoft.ViewManager.addView(me, 'YZSoft.bpm.tasktrace.Panel', {
+            id: 'BPM_TaskTrace_' + taskid,
+            title: Ext.String.format('{0} - {1}', RS.$('All_TaskTrace'), rec.data.SerialNum),
+            TaskID: taskid,
+            activeTabIndex: activeTabIndex,
+            closable: true
+        });
+
+        view.traceTab.setActiveTab(activeTabIndex);
     }
 });

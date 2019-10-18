@@ -187,9 +187,11 @@ $Scripts-->
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="XTextBox2" runat="server" XDataBind="SFDATA:ctl_mat_unit.mat_unit_name" DisableExpress="SFDATA:ctl_mat_unit.if_base_unit==1" width="100%" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" ControlToValidate="XTextBox2" ErrorMessage="请填写单位名称" ForeColor="Red" Display="None">单位名称</aspxform:XRequiredFieldValidator>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="XTextBox3" runat="server" XDataBind="SFDATA:ctl_mat_unit.numerator" DisableExpress="SFDATA:ctl_mat_unit.if_base_unit==1" width="100%" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" ControlToValidate="XTextBox3" ErrorMessage="请填写比例分子" ForeColor="Red" Display="None">比例分子</aspxform:XRequiredFieldValidator>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="SFDATA:ctl_mat_unit.denominator" DisableExpress="1" width="100%" BorderWidth="1" BorderColor="#DCDCDC">1</aspxform:XTextBox>
@@ -206,6 +208,8 @@ $Scripts-->
                 </tr>
             </tbody>
         </table>
+        <br />
+        <br />
         <br />
     </form>
 </body>

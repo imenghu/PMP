@@ -14,7 +14,7 @@ namespace BPMApp
                  new {
                     id = "BPM",
                     title = "流程管理",
-                    modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
+                    modulePerm = new YZModulePermision("08c9ac55-db78-498c-b34e-53c1a033bbcd", YZModuleDeniedBehavior.Hide),
                     navigator = new {
                         dataURL = this.ResolveUrl(context,"../Services.REST/SF/BPM.ashx"),
                         activeNode = "Worklist" //"Worklist"
@@ -23,7 +23,7 @@ namespace BPMApp
                 new {
                     id = "CG",
                     title = "采购管理",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
+                    modulePerm = new YZModulePermision("5c5b95ae-a510-4a70-b2bf-8b2c407c4316", YZModuleDeniedBehavior.Hide),
                     navigator = new {
                         dataURL = this.ResolveUrl(context,"../Services.REST/SF/Proc.ashx"),
                         activeNode = "PurchasePlan"
@@ -32,7 +32,7 @@ namespace BPMApp
                 new {
                     id = "XS",
                     title = "销售管理",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
+                    modulePerm = new YZModulePermision("57a3b1f2-f574-4ecf-848a-efa6b0ba3324", YZModuleDeniedBehavior.Hide),
                     navigator = new {
                         dataURL = this.ResolveUrl(context,"../Services.REST/SF/Sal.ashx"),
                         activeNode = "SalesOrder"
@@ -41,7 +41,7 @@ namespace BPMApp
                 new {
                     id = "SC",
                     title = "生产管理",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
+                    modulePerm = new YZModulePermision("fa6a2858-74d5-4d20-9e43-104578d8538c", YZModuleDeniedBehavior.Hide),
                     navigator = new {
                         dataURL = this.ResolveUrl(context,"../Services.REST/SF/Prod.ashx"),
                         //leafOnly = true,
@@ -51,7 +51,7 @@ namespace BPMApp
                 new {
                     id = "Inv",
                     title = "库存管理",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
+                    modulePerm = new YZModulePermision("f91f17a2-aa6f-4def-8699-bbac9214e00d", YZModuleDeniedBehavior.Hide),
                     navigator = new {
                         dataURL = this.ResolveUrl(context,"../Services.REST/SF/Inv.ashx"),
                         //leafOnly = true,
@@ -61,7 +61,7 @@ namespace BPMApp
                 new {
                     id = "Sys",
                     title = "基础数据",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
+                    modulePerm = new YZModulePermision("cb055424-0535-4af4-abaa-e4f55d7ef5fd", YZModuleDeniedBehavior.Hide),
                     navigator = new {
                         dataURL = this.ResolveUrl(context,"../Services.REST/SF/Sys.ashx"),
                         //leafOnly = true,

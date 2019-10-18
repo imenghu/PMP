@@ -24,7 +24,7 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
             pageSize: YZSoft.EnvSetting.PageSize.defaultSize,
             model: 'Ext.data.Model',
             sorters: {
-                property: 'TaskID',
+                property: 'pur_task_id',
                 direction: 'DESC'
             },
             proxy: {
@@ -65,9 +65,9 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
                     { header: '是否紧急', dataIndex: 'if_urg', width: 80, align: 'left', sortable: true, renderer: XYSoft.Render.renderYesOrNo },
                     { header: '任务执行人', dataIndex: 'TaskUserName', width: 80, align: 'left', sortable: true },
                     { header: '任务情况', dataIndex: 'task_state', width: 80, align: 'left', sortable: true, renderer: me.Status },
-                    { header: '操作', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.finish, listeners: { scope: me, click: me.finishClick } },
-                    { header: '询价', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.xunjia, listeners: { scope: me, click: me.XunjiaClick } },
-                    { header: '到货通知', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.Notice, listeners: { scope: me, click: me.NoticeClick } },
+                    { header: '操作', dataIndex: 'task_state', width: 80, align: 'center', sortable: true, renderer: me.finish, listeners: { scope: me, click: me.finishClick } },
+                    { header: '询价', dataIndex: 'task_state', width: 80, align: 'center', sortable: true, renderer: me.xunjia, listeners: { scope: me, click: me.XunjiaClick } },
+                    { header: '到货通知', dataIndex: 'task_state', width: 80, align: 'center', sortable: true, renderer: me.Notice, listeners: { scope: me, click: me.NoticeClick } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {
@@ -142,64 +142,55 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
         else
             this.store.reload($S.loadMask.activate);
     },
-
-
+    
     finishClick: function (view, cell, recordIndex, cellIndex, e) {
-        var me = this,
-            recs = me.grid.getSelectionModel().getSelection(),
-            ids = [];
+        var me = this;
+        var rec = me.store.getAt(recordIndex).data;
+        if (rec.task_state == '1') {
+            Ext.Msg.show({
+                title: '任务完成确认',
+                msg: '您确定该任务已完成吗？',
+                buttons: Ext.Msg.OKCANCEL,
+                defaultButton: 'cancel',
+                icon: Ext.MessageBox.INFO,
 
-        if (recs.length == 0)
-            return;
+                fn: function (btn, text) {
+                    if (btn != 'ok')
+                        return;
+                    YZSoft.Ajax.request({
+                        url: YZSoft.$url(me, '../Service/proc_pur_task.ashx'),
+                        method: 'POST',
+                        params: {
+                            method: 'UpStatus',
+                            purtaskid: rec.pur_task_id
+                        },
+                        waitMsg: {
+                            msg: '正在操作...',
+                            target: me.grid
+                        },
+                        success: function (action) {
+                            me.store.reload({
+                                loadMask: {
+                                    msg: Ext.String.format('{0}个对象已完成！', recs.length),
+                                    start: 0,
+                                    stay: 300
+                                }
+                            });
+                        },
+                        failure: function (action) {
+                            var mbox = Ext.Msg.show({
+                                title: '错误提示',
+                                msg: Ext.util.Format.text(action.result.errorMessage),
+                                buttons: Ext.Msg.OK,
+                                icon: Ext.MessageBox.WARNING
+                            });
 
-        Ext.each(recs, function (rec) {
-            ids.push(rec.data.TaskID);
-        });
-
-        Ext.Msg.show({
-            title: '任务完成确认',
-            msg: '您确定该任务已完成吗？',
-            buttons: Ext.Msg.OKCANCEL,
-            defaultButton: 'cancel',
-            icon: Ext.MessageBox.INFO,
-
-            fn: function (btn, text) {
-                if (btn != 'ok')
-                    return;
-
-                YZSoft.Ajax.request({
-                    url: YZSoft.$url(me, '../Service/proc_pur_task.ashx'),
-                    method: 'POST',
-                    params: {
-                        method: 'UpStatus'
-                    },
-                    jsonData: ids,
-                    waitMsg: {
-                        msg: '正在操作...',
-                        target: me.grid
-                    },
-                    success: function (action) {
-                        me.store.reload({
-                            loadMask: {
-                                msg: Ext.String.format('{0}个对象已完成！', recs.length),
-                                start: 0,
-                                stay: 300
-                            }
-                        });
-                    },
-                    failure: function (action) {
-                        var mbox = Ext.Msg.show({
-                            title: '错误提示',
-                            msg: Ext.util.Format.text(action.result.errorMessage),
-                            buttons: Ext.Msg.OK,
-                            icon: Ext.MessageBox.WARNING
-                        });
-
-                        me.store.reload({ mbox: mbox });
-                    }
-                });
-            }
-        });
+                            me.store.reload({ mbox: mbox });
+                        }
+                    });
+                }
+            });
+        }
     },
     NoticeClick: function (view, cell, recordIndex, cellIndex, e) {
         var me = this;
@@ -230,57 +221,39 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
     },
     XunjiaClick: function (view, cell, recordIndex, cellIndex, e) {
         var me = this;
-        var purtaskid = me.store.getAt(recordIndex).data.pur_task_id;
-        YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_pur_enquiry', purtaskid, 'Edit', Ext.apply({
-            sender: me,
-            title: '询价单',
-            params: {
-                proctaskid: purtaskid
-            },
-            listeners: {
-                submit: function (action, data) {
-                    me.store.reload({
-                        loadMask: {
-                            msg: '保存已成功',
-                            start: 0,
-                            stay: 300
-                        },
-                        callback: function () {
-                            var rec = me.store.getById(data.Key);
-                            if (rec)
-                                me.grid.getSelectionModel().select(rec);
-                        }
-                    });
+        var rec = me.store.getAt(recordIndex).data;
+        
+        if (rec.task_state == '1') {
+            YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_pur_enquiry', rec.pur_task_id, 'Edit', Ext.apply({
+                sender: me,
+                title: '询价单',
+                params: {
+                    proctaskid: rec.pur_task_id
+                },
+                listeners: {
+                    submit: function (action, data) {
+                        me.store.reload({
+                            loadMask: {
+                                msg: '保存已成功',
+                                start: 0,
+                                stay: 300
+                            },
+                            callback: function () {
+                                var rec = me.store.getById(data.Key);
+                                if (rec)
+                                    me.grid.getSelectionModel().select(rec);
+                            }
+                        });
+                    }
                 }
-            }
-        }, me.dlgCfg));
-    },
-    confirmClick: function (view, cell, recordIndex, cellIndex, e) {
-        var me = this;
-        var purtaskid = me.store.getAt(recordIndex).data.pur_task_id;
-        YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_pur_enquiry', purtaskid, 'Edit', Ext.apply({
-            sender: me,
-            title: '确认供应商',
-            params: {
-                proctaskid: purtaskid
-            },
-            listeners: {
-                submit: function (action, data) {
-                    me.store.reload({
-                        loadMask: {
-                            msg: '保存已成功',
-                            start: 0,
-                            stay: 300
-                        },
-                        callback: function () {
-                            var rec = me.store.getById(data.Key);
-                            if (rec)
-                                me.grid.getSelectionModel().select(rec);
-                        }
-                    });
-                }
-            }
-        }, me.dlgCfg));
+            }, me.dlgCfg));
+        }
+        else {
+            YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_pur_enquiry_read', rec.pur_task_id, 'Read', Ext.apply({
+                sender: me,
+                title: '查看询价单'
+            }, me.dlgCfg));
+        }
     },
     Status: function (value) {
         var color = "red",
@@ -302,10 +275,20 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
         return Ext.String.format("<font>{0}</font>", Ext.util.Format.text(str));
     },
     finish: function (value, metaData, record) {
-        return "<a href='#'>任务完成</a>";
+        if (value == '1') {
+            return "<a href='#'>任务完成</a>";
+        }
+        else {
+            return "<font color='gray'>任务完成</font>";
+        }
     },
     xunjia: function (value, metaData, record) {
-        return "<a href='#'>询价</a>";
+        if (value == '1') {
+            return "<a href='#'>询价</a>";
+        }
+        else {
+            return "<a href='#'>查看</a>";
+        }
     },
     confirm: function (value, metaData, record) {
         return "<a href='#'>确认供应商</a>";

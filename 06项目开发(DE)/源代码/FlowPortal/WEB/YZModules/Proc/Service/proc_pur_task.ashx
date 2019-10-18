@@ -17,21 +17,15 @@ public class proc_pur_task : YZServiceHandler
     public void UpStatus(HttpContext context)
     {
         YZRequest request = new YZRequest(context);
-        JArray jPost = request.GetPostData<JArray>();
-        List<int> ids = jPost.ToObject<List<int>>();
 
         using (SqlConnection cn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["SFDATA"].ConnectionString))
         {
             cn.Open();
-
-            foreach (int id in ids)
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = "Update proc_pur_task Set task_state='3' WHERE TaskID=@id";
-                cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
-                cmd.ExecuteNonQuery();
-            }
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandText = "Update proc_pur_task Set task_state='3' WHERE pur_task_id=@id";
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = request.GetString("purtaskid");
+            cmd.ExecuteNonQuery();
         }
     }
 
@@ -58,7 +52,7 @@ public class proc_pur_task : YZServiceHandler
             if (!string.IsNullOrEmpty(proc_type))
                 filter = queryProvider.CombinCond(filter, String.Format("companyname LIKE N'%{0}%'", queryProvider.EncodeText(proc_type)));
             if (!string.IsNullOrEmpty(proc_status))
-                filter = queryProvider.CombinCond(filter, String.Format("deptname LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
+                filter = queryProvider.CombinCond(filter, String.Format("dept LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
             if (!string.IsNullOrEmpty(vendor))
                 filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%'", queryProvider.EncodeText(vendor)));
             if (!string.IsNullOrEmpty(task_state))
@@ -70,7 +64,7 @@ public class proc_pur_task : YZServiceHandler
             filter = " WHERE " + filter;
 
         //获得排序子句
-        string order = request.GetSortString("TaskID");
+        string order = request.GetSortString("pur_task_id");
 
         //获得Query
         string query = @"
@@ -115,7 +109,6 @@ public class proc_pur_task : YZServiceHandler
                         if (totalRows == 0)
                             totalRows = reader.ReadInt32("TotalRows");
 
-                        item["TaskID"] = reader.ReadInt32("TaskID");
                         item["pur_task_id"] = reader.ReadInt32("pur_task_id");
                         item["CompanyName"] = reader.ReadString("CompanyName");
                         item["DeptName"] = reader.ReadString("DeptName");

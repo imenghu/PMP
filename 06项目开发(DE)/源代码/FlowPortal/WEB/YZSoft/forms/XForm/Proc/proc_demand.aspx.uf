@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-15T14:57:30.2974005+08:00",
+  "generateAt": "2019-10-17T16:19:59.4691565+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,11 +9,11 @@
         "attrs": {
           "id": "XTextBox26",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand.CompanyName",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "公司",
           "disableexpress": "1",
-          "fieldname": "公司"
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand.CompanyName"
         }
       },
       "XTextBox10": {
@@ -21,11 +21,11 @@
         "attrs": {
           "id": "XTextBox10",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand.DeptName",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "部门",
           "disableexpress": "1",
-          "fieldname": "部门"
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand.DeptName"
         }
       },
       "XTextBox25": {
@@ -33,11 +33,11 @@
         "attrs": {
           "id": "XTextBox25",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand.CreateUserName",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "提交人",
           "disableexpress": "1",
-          "fieldname": "提交人"
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand.CreateUserName"
         }
       },
       "XTextBox1": {
@@ -45,12 +45,12 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand.demand_remarks",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
           "fieldname": "备注",
-          "rows": "5",
-          "textmode": "MultiLine"
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand.demand_remarks",
+          "textmode": "MultiLine",
+          "rows": "5"
         }
       },
       "XDataBrowserButton2": {
@@ -58,11 +58,11 @@
         "attrs": {
           "id": "XDataBrowserButton2",
           "runat": "server",
-          "multiselect": "True",
-          "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "text": "选择物料",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
-          "text": "选择物料"
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit",
+          "multiselect": "True"
         }
       },
       "XTextBox2": {
@@ -70,11 +70,11 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.mat_code",
-          "width": "120px",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "物料名称",
           "disableexpress": "1",
-          "fieldname": "物料名称"
+          "bordercolor": "#DCDCDC",
+          "width": "120px",
+          "xdatabind": "SFDATA:proc_demand_detail.mat_code"
         }
       },
       "XDataBrowserButton1": {
@@ -82,9 +82,9 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit",
           "width": "21px"
         }
       },
@@ -93,11 +93,11 @@
         "attrs": {
           "id": "XTextBox15",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.mat_id",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
-          "disableexpress": "1",
           "fieldname": "物料编码",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.mat_id",
           "hiddenexpress": "1"
         }
       },
@@ -106,11 +106,11 @@
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.mat_name",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "物料编码",
           "disableexpress": "1",
-          "fieldname": "物料编码"
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.mat_name"
         }
       },
       "XTextBox4": {
@@ -118,11 +118,11 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.mat_spec",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "规格",
           "disableexpress": "1",
-          "fieldname": "规格"
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.mat_spec"
         }
       },
       "XDropDownList2": {
@@ -130,13 +130,13 @@
         "attrs": {
           "id": "XDropDownList2",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.demand_slnum_unit",
           "fieldname": "采购单位",
-          "datamap": "numerator->SFDATA:proc_demand_detail.sl_st_scale",
+          "xdatabind": "SFDATA:proc_demand_detail.demand_slnum_unit",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,if_base_unit->varState",
+          "datamap": "numerator->SFDATA:proc_demand_detail.sl_st_scale",
           "width": "100%",
-          "valuecolumn": "mat_unit_name",
-          "displaycolumn": "mat_unit_name"
+          "displaycolumn": "mat_unit_name",
+          "valuecolumn": "mat_unit_name"
         }
       },
       "XTextBox6": {
@@ -144,10 +144,10 @@
         "attrs": {
           "id": "XTextBox6",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.demand_slnum",
-          "width": "100%",
+          "fieldname": "采购数量",
           "bordercolor": "#DCDCDC",
-          "fieldname": "采购数量"
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.demand_slnum"
         }
       },
       "XTextBox5": {
@@ -155,11 +155,11 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.sl_st_scale",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "转换比例",
           "disableexpress": "1",
-          "fieldname": "转换比例"
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.sl_st_scale"
         }
       },
       "XTextBox12": {
@@ -167,11 +167,11 @@
         "attrs": {
           "id": "XTextBox12",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.demand_stnum_unit",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "基准单位",
           "disableexpress": "1",
-          "fieldname": "基准单位"
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.demand_stnum_unit"
         }
       },
       "XTextBox13": {
@@ -179,11 +179,11 @@
         "attrs": {
           "id": "XTextBox13",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.demand_stnum",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
-          "disableexpress": "1",
           "fieldname": "基准数量",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.demand_stnum",
           "express": "SFDATA:proc_demand_detail.demand_slnum*SFDATA:proc_demand_detail.sl_st_scale"
         }
       },
@@ -192,10 +192,10 @@
         "attrs": {
           "id": "XTextBox7",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.plan_price",
-          "width": "100%",
+          "fieldname": "计划单价",
           "bordercolor": "#DCDCDC",
-          "fieldname": "计划单价"
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.plan_price"
         }
       },
       "XTextBox14": {
@@ -203,11 +203,11 @@
         "attrs": {
           "id": "XTextBox14",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.item_price",
-          "width": "100%",
-          "bordercolor": "#DCDCDC",
-          "disableexpress": "1",
           "fieldname": "总金额",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.item_price",
           "express": "SFDATA:proc_demand_detail.plan_price*SFDATA:proc_demand_detail.demand_stnum"
         }
       },
@@ -216,8 +216,8 @@
         "attrs": {
           "id": "XDropDownList1",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.if_urg",
           "fieldname": "是否紧急",
+          "xdatabind": "SFDATA:proc_demand_detail.if_urg",
           "width": "100%"
         },
         "childNodes": [
@@ -225,12 +225,14 @@
             "ctype": "asp:listitem",
             "attrs": {
               "selected": "True",
+              "value": "0",
               "innerhtml": "否"
             }
           },
           {
             "ctype": "asp:listitem",
             "attrs": {
+              "value": "1",
               "innerhtml": "是"
             }
           }
@@ -241,9 +243,9 @@
         "attrs": {
           "id": "XDateTimePicker1",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.plan_arrival_time",
-          "bordercolor": "#DCDCDC",
           "fieldname": "预到货时间",
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:proc_demand_detail.plan_arrival_time",
           "width": "100%"
         }
       },
@@ -252,10 +254,10 @@
         "attrs": {
           "id": "XTextBox9",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.uses",
-          "width": "100%",
+          "fieldname": "用途",
           "bordercolor": "#DCDCDC",
-          "fieldname": "用途"
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.uses"
         }
       },
       "XTextBox11": {
@@ -263,10 +265,10 @@
         "attrs": {
           "id": "XTextBox11",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand_detail.demand_detail_remarks",
-          "width": "100%",
+          "fieldname": "备注",
           "bordercolor": "#DCDCDC",
-          "fieldname": "备注"
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand_detail.demand_detail_remarks"
         }
       },
       "tbDetail": {
@@ -309,9 +311,9 @@
         "attrs": {
           "id": "XTextBox16",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand.total_price",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_demand.total_price",
           "express": "sum(SFDATA:proc_demand_detail.item_price)"
         }
       },
@@ -321,9 +323,9 @@
           "id": "XTextBox8",
           "onclick": "WdatePicker({dateFmt:'yyyy'})",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand.CreateUser",
+          "bordercolor": "#DCDCDC",
           "width": "100%",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "SFDATA:proc_demand.CreateUser"
         }
       },
       "XTextBox27": {
@@ -331,9 +333,9 @@
         "attrs": {
           "id": "XTextBox27",
           "runat": "server",
-          "xdatabind": "varState",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "varState",
           "innerhtml": "1"
         }
       },
@@ -342,9 +344,9 @@
         "attrs": {
           "id": "XTextBox28",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand.Company",
+          "bordercolor": "#DCDCDC",
           "width": "130px",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "SFDATA:proc_demand.Company"
         }
       },
       "XTextBox29": {
@@ -352,9 +354,9 @@
         "attrs": {
           "id": "XTextBox29",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_demand.Dept",
+          "bordercolor": "#DCDCDC",
           "width": "130px",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "SFDATA:proc_demand.Dept"
         }
       },
       "table1": {

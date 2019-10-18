@@ -44,6 +44,8 @@ namespace Sys
 
             string searchType = request.GetString("SearchType", null);
             string keyword = request.GetString("kwd", null);
+            string plan_pur_year = request.GetString("plan_pur_year", null);
+            string mat_name = request.GetString("mat_name", null);
 
             //获得查询条件
             string filter = "State='1'";
@@ -52,7 +54,11 @@ namespace Sys
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%' OR mat_code LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                if (!string.IsNullOrEmpty(plan_pur_year))
+                    filter = queryProvider.CombinCond(filter, String.Format("mat_code LIKE N'%{0}%' ", queryProvider.EncodeText(plan_pur_year)));
+                if (!string.IsNullOrEmpty(mat_name))
+                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%' ", queryProvider.EncodeText(mat_name)));
             }
 
             if (!String.IsNullOrEmpty(filter))

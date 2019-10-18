@@ -171,6 +171,29 @@ Ext.apply(XYSoft, {
 		    else {
 		        return '否';
 		    }
-		}
+		},
+		renderStatus: function (value) {
+		    var color = "red",
+                str = "";
+		    switch (value) {
+		        case '0':
+		            color = "gray";
+		            str = "未提报";
+		            break;
+		        case "1":
+		            color = "blue";
+		            str = "审批中";
+		            break;
+		        case "2":
+		            color = "green";
+		            str = "审批完成";
+		            break;
+		        case "3":
+		            color = "red";
+		            str = "驳回";
+		            break;
+		    }
+		    return Ext.String.format("<font color='{0}'>{1}</font>", color, Ext.util.Format.text(str));
+		},
 	}
 });

@@ -1,17 +1,28 @@
 ﻿{
-  "generateAt": "2019-10-14T19:53:02.0834052+08:00",
+  "generateAt": "2019-10-16T20:36:57.7578474+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
     "components": {
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_name->\"产成品\"",
+          "displaycolumns": "first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:",
+          "datamap": "mat_name->SFDATA:prod_report4.mat_name"
+        }
+      },
       "ctrlprod_report4mat_name": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
           "id": "ctrlprod_report4mat_name",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "品名",
           "xdatabind": "SFDATA:prod_report4.mat_name",
-          "fieldname": "品名"
+          "width": "80%"
         }
       },
       "ctrlprod_report4date": {
@@ -19,9 +30,9 @@
         "attrs": {
           "id": "ctrlprod_report4date",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "日期",
           "xdatabind": "SFDATA:prod_report4.date",
-          "fieldname": "日期"
+          "width": "100%"
         }
       },
       "ctrlprod_report4Sac_id": {
@@ -29,9 +40,9 @@
         "attrs": {
           "id": "ctrlprod_report4Sac_id",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "糖化批次",
           "xdatabind": "SFDATA:prod_report4.Sac_id",
-          "fieldname": "糖化批次"
+          "width": "100%"
         }
       },
       "ctrlprod_report4Boiler": {
@@ -39,9 +50,9 @@
         "attrs": {
           "id": "ctrlprod_report4Boiler",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "锅次",
           "xdatabind": "SFDATA:prod_report4.Boiler",
-          "fieldname": "锅次"
+          "width": "100%"
         }
       },
       "ctrlprod_report4malt_kg": {
@@ -49,9 +60,9 @@
         "attrs": {
           "id": "ctrlprod_report4malt_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "大麦芽",
           "xdatabind": "SFDATA:prod_report4.malt_kg",
-          "fieldname": "大麦芽"
+          "width": "100%"
         }
       },
       "ctrlprod_report4caramelmalt_kg": {
@@ -59,9 +70,9 @@
         "attrs": {
           "id": "ctrlprod_report4caramelmalt_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "焦香麦芽",
           "xdatabind": "SFDATA:prod_report4.caramelmalt_kg",
-          "fieldname": "焦香麦芽"
+          "width": "100%"
         }
       },
       "ctrlprod_report4smallmalt_kg": {
@@ -69,9 +80,9 @@
         "attrs": {
           "id": "ctrlprod_report4smallmalt_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "小麦芽",
           "xdatabind": "SFDATA:prod_report4.smallmalt_kg",
-          "fieldname": "小麦芽"
+          "width": "100%"
         }
       },
       "ctrlprod_report4syrup_kg": {
@@ -79,9 +90,9 @@
         "attrs": {
           "id": "ctrlprod_report4syrup_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "糖浆kg",
           "xdatabind": "SFDATA:prod_report4.syrup_kg",
-          "fieldname": "糖浆kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4sum_kg": {
@@ -89,9 +100,9 @@
         "attrs": {
           "id": "ctrlprod_report4sum_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "总kg",
           "xdatabind": "SFDATA:prod_report4.sum_kg",
-          "fieldname": "总kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4Australian_malt": {
@@ -99,9 +110,9 @@
         "attrs": {
           "id": "ctrlprod_report4Australian_malt",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "澳麦芽",
           "xdatabind": "SFDATA:prod_report4.Australian_malt",
-          "fieldname": "澳麦芽"
+          "width": "100%"
         }
       },
       "ctrlprod_report4coldwort_kl": {
@@ -109,9 +120,9 @@
         "attrs": {
           "id": "ctrlprod_report4coldwort_kl",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "冷麦汁KL",
           "xdatabind": "SFDATA:prod_report4.coldwort_kl",
-          "fieldname": "冷麦汁KL"
+          "width": "100%"
         }
       },
       "ctrlprod_report4wort_concent": {
@@ -119,9 +130,9 @@
         "attrs": {
           "id": "ctrlprod_report4wort_concent",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "原麦汁浓度OP",
           "xdatabind": "SFDATA:prod_report4.wort_concent",
-          "fieldname": "原麦汁浓度OP"
+          "width": "100%"
         }
       },
       "ctrlprod_report4convert11_kl": {
@@ -129,9 +140,9 @@
         "attrs": {
           "id": "ctrlprod_report4convert11_kl",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "折11冷k",
           "xdatabind": "SFDATA:prod_report4.convert11_kl",
-          "fieldname": "折11冷k"
+          "width": "100%"
         }
       },
       "ctrlprod_report4convert11_loss_kl": {
@@ -139,9 +150,9 @@
         "attrs": {
           "id": "ctrlprod_report4convert11_loss_kl",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "折11粮耗kg/kl",
           "xdatabind": "SFDATA:prod_report4.convert11_loss_kl",
-          "fieldname": "折11粮耗kg/kl"
+          "width": "100%"
         }
       },
       "ctrlprod_report4Tannin_kg": {
@@ -149,9 +160,9 @@
         "attrs": {
           "id": "ctrlprod_report4Tannin_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "单宁kg",
           "xdatabind": "SFDATA:prod_report4.Tannin_kg",
-          "fieldname": "单宁kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4carrageenan_kg": {
@@ -159,9 +170,9 @@
         "attrs": {
           "id": "ctrlprod_report4carrageenan_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "卡拉胶kg",
           "xdatabind": "SFDATA:prod_report4.carrageenan_kg",
-          "fieldname": "卡拉胶kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4compound_kg": {
@@ -169,9 +180,9 @@
         "attrs": {
           "id": "ctrlprod_report4compound_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "复合酶kg",
           "xdatabind": "SFDATA:prod_report4.compound_kg",
-          "fieldname": "复合酶kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4gypsum_kg": {
@@ -179,9 +190,9 @@
         "attrs": {
           "id": "ctrlprod_report4gypsum_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "石膏kg",
           "xdatabind": "SFDATA:prod_report4.gypsum_kg",
-          "fieldname": "石膏kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4lactic_acid": {
@@ -189,9 +200,9 @@
         "attrs": {
           "id": "ctrlprod_report4lactic_acid",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "乳酸L",
           "xdatabind": "SFDATA:prod_report4.lactic_acid",
-          "fieldname": "乳酸L"
+          "width": "100%"
         }
       },
       "ctrlprod_report4calcium_chloride_kg": {
@@ -199,9 +210,9 @@
         "attrs": {
           "id": "ctrlprod_report4calcium_chloride_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "氯化钙kg",
           "xdatabind": "SFDATA:prod_report4.calcium_chloride_kg",
-          "fieldname": "氯化钙kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4zinc_sulfate_g": {
@@ -209,9 +220,9 @@
         "attrs": {
           "id": "ctrlprod_report4zinc_sulfate_g",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "硫酸锌kg",
           "xdatabind": "SFDATA:prod_report4.zinc_sulfate_g",
-          "fieldname": "硫酸锌kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4hops_kg": {
@@ -219,9 +230,9 @@
         "attrs": {
           "id": "ctrlprod_report4hops_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "国产酒花kg",
           "xdatabind": "SFDATA:prod_report4.hops_kg",
-          "fieldname": "国产酒花kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4imported_bitter_kg": {
@@ -229,9 +240,9 @@
         "attrs": {
           "id": "ctrlprod_report4imported_bitter_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "进口苦花哈拉道kg",
           "xdatabind": "SFDATA:prod_report4.imported_bitter_kg",
-          "fieldname": "进口苦花哈拉道kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4imported_fragrant_kg": {
@@ -239,9 +250,9 @@
         "attrs": {
           "id": "ctrlprod_report4imported_fragrant_kg",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "进口香花卡斯卡特kg",
           "xdatabind": "SFDATA:prod_report4.imported_fragrant_kg",
-          "fieldname": "进口香花卡斯卡特kg"
+          "width": "100%"
         }
       },
       "ctrlprod_report4memo": {
@@ -249,9 +260,9 @@
         "attrs": {
           "id": "ctrlprod_report4memo",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "备注",
           "xdatabind": "SFDATA:prod_report4.memo",
-          "fieldname": "备注"
+          "width": "100%"
         }
       },
       "ctrlprod_report4create_time": {
@@ -259,15 +270,66 @@
         "attrs": {
           "id": "ctrlprod_report4create_time",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "创建时间",
           "xdatabind": "SFDATA:prod_report4.create_time",
-          "fieldname": "创建时间"
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report1mat_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report1mat_id",
+          "runat": "server",
+          "fieldname": "品名编号",
+          "xdatabind": "SFDATA:Prod_report1.mat_id",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report1Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report1Company",
+          "runat": "server",
+          "fieldname": "公司编码",
+          "xdatabind": "SFDATA:Prod_report1.Company",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report1CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report1CompanyName",
+          "runat": "server",
+          "fieldname": "公司名称",
+          "xdatabind": "SFDATA:Prod_report1.CompanyName",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report1Dept": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report1Dept",
+          "runat": "server",
+          "fieldname": "部门编码",
+          "xdatabind": "SFDATA:Prod_report1.Dept",
+          "width": "100%"
+        }
+      },
+      "ctrlProd_report1DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report1DeptName",
+          "runat": "server",
+          "fieldname": "部门名称",
+          "xdatabind": "SFDATA:Prod_report1.DeptName",
+          "width": "100%"
         }
       },
       "table1": {
         "ctype": "wrap",
         "attrs": {
           "width": "800",
+          "tabindex": "1",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -277,11 +339,18 @@
           "id": "table1"
         },
         "ctypeorg": "table",
-        "items": []
+        "items": [
+          "ctrlProd_report1mat_id",
+          "ctrlProd_report1Company",
+          "ctrlProd_report1CompanyName",
+          "ctrlProd_report1Dept",
+          "ctrlProd_report1DeptName"
+        ]
       }
     },
     "validators": {},
     "items": [
+      "XDataBrowserButton1",
       "ctrlprod_report4mat_name",
       "ctrlprod_report4date",
       "ctrlprod_report4Sac_id",

@@ -11,15 +11,19 @@ Ext.define('YZModules.Sys.Panel.ctl_material_SearchPanel', {
             cfg;
 
         me.plan_pur_year = Ext.create('Ext.form.field.Text', {
-            fieldLabel: '物料名称',
+            fieldLabel: '物料编码',
             allowBlank: true
         });
 
         me.mat_name = Ext.create('Ext.form.field.Text', {
-            fieldLabel: '审批状态',
+            fieldLabel: '物料名称',
             allowBlank: true
         });
-
+        me.edtKeyword = Ext.create('Ext.form.field.Text', {
+            fieldLabel: RS.$('All_Keyword'),
+            allowBlank: true,
+            value: config.store.getProxy().getExtraParams().kwd || ''
+        });
         me.btnSearch = Ext.create('Ext.button.Button', {
             text: RS.$('All_Search'),
             cls: 'yz-btn-submit yz-btn-round3',
@@ -85,14 +89,7 @@ Ext.define('YZModules.Sys.Panel.ctl_material_SearchPanel', {
         Ext.apply(cfg, config);
         me.callParent([cfg]);
 
-        me.relayEvents(me.plan_pur_year, ['specialkey']);
-        me.relayEvents(me.mat_name, ['specialkey']);
-
-        me.on('specialkey', function (f, e) {
-            if (e.getKey() == e.ENTER) {
-                me.onSearchClick();
-            }
-        });
+      
 
         me.store.on({
             load: function (store, records, successful, operation, eOpts) {
@@ -108,7 +105,8 @@ Ext.define('YZModules.Sys.Panel.ctl_material_SearchPanel', {
             params = me.store.getProxy().getExtraParams();
 
         Ext.apply(params, {
-            searchType: 'AdvancedSearch',
+            searchType: 'QuickSearch',
+            kwd: me.edtKeyword.getValue(),
             plan_pur_year: me.plan_pur_year.getValue(),
             mat_name: me.mat_name.getValue()
         });
@@ -123,7 +121,10 @@ Ext.define('YZModules.Sys.Panel.ctl_material_SearchPanel', {
 
         me.plan_pur_year.setValue('');
         me.mat_name.setValue('');
-
+        me.edtKeyword.setValue('');
+        Ext.apply(params, {
+            searchType: '',
+        });
         me.store.loadPage(1);
     }
 });

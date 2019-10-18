@@ -42,7 +42,7 @@ $Scripts-->
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlProd_test11mat_name" runat="server" FieldName="品名" XDataBind="SFDATA:Prod_test11.mat_name" width="180px"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" XDataSource='DataSource:SFDATA;TableName:ctl_material;Filter:first_code->“1”,second_code->“02”,state->"1"' DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:单位" DataMap="mat_id->SFDATA:Prod_test11.mat_id;mat_name->SFDATA:Prod_test11.mat_name"></aspxform:XDataBrowserButton>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" XDataSource='DataSource:SFDATA;TableName:ctl_material;Filter:first_code->"1",second_code->"02",state->"1"' DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:单位" DataMap="mat_id->SFDATA:Prod_test11.mat_id;mat_name->SFDATA:Prod_test11.mat_name"></aspxform:XDataBrowserButton>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         规格 

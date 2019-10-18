@@ -43,7 +43,10 @@ namespace Inv
             SqlServerProvider queryProvider = new SqlServerProvider();
 
             string searchType = request.GetString("SearchType", null);
+            string in_stnum = request.GetString("in_stnum", null);
             string keyword = request.GetString("kwd", null);
+            string depot_name = request.GetString("depot_name", null);
+            string mat_name = request.GetString("mat_name", null);
 
             //获得查询条件
             string filter = "inv_prod_in.State='1'";
@@ -52,7 +55,12 @@ namespace Inv
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("ProdDeptName LIKE N'%{0}%' OR inv_prod_in.mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                
+                if (!string.IsNullOrEmpty(depot_name))
+                    filter = queryProvider.CombinCond(filter, String.Format("ProdDeptName LIKE N'%{0}%' ", queryProvider.EncodeText(depot_name)));
+                if (!string.IsNullOrEmpty(mat_name))
+                    filter = queryProvider.CombinCond(filter, String.Format("inv_prod_in.mat_name LIKE N'%{0}%'", queryProvider.EncodeText(mat_name)));
             }
 
             if (!String.IsNullOrEmpty(filter))

@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-12T10:21:25.4872419+08:00",
+  "generateAt": "2019-10-18T11:08:52.2395872+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,10 @@
         "attrs": {
           "id": "ctrlinv_out_masterCompanyName",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "SFDATA:inv_out_master.CompanyName",
-          "width": "100%"
+          "disableexpress": "1",
+          "fieldname": "出库人公司"
         }
       },
       "ctrlinv_out_masterDeptName": {
@@ -19,9 +20,10 @@
         "attrs": {
           "id": "ctrlinv_out_masterDeptName",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "SFDATA:inv_out_master.DeptName",
-          "width": "100%"
+          "disableexpress": "1",
+          "fieldname": "出库人部门"
         }
       },
       "ctrlinv_out_masterCreateUserName": {
@@ -29,9 +31,10 @@
         "attrs": {
           "id": "ctrlinv_out_masterCreateUserName",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "SFDATA:inv_out_master.CreateUserName",
-          "width": "100%"
+          "disableexpress": "1",
+          "fieldname": "出库人姓名"
         }
       },
       "ctrlinv_out_masterreq_org_id": {
@@ -39,9 +42,10 @@
         "attrs": {
           "id": "ctrlinv_out_masterreq_org_id",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "180px",
           "xdatabind": "SFDATA:inv_out_master.ReqOrgName",
-          "width": "180px"
+          "disableexpress": "1",
+          "fieldname": "领用人部门"
         }
       },
       "XSelectOUButton1": {
@@ -49,8 +53,8 @@
         "attrs": {
           "id": "XSelectOUButton1",
           "runat": "server",
-          "datamap": "OUName->SFDATA:inv_out_master.ReqOrgName;OUCode->SFDATA:inv_out_master.req_org_id",
-          "width": "21px"
+          "width": "21px",
+          "datamap": "OUName->SFDATA:inv_out_master.ReqOrgName;OUCode->SFDATA:inv_out_master.req_org_id"
         }
       },
       "ctrlinv_out_masterreq_userid": {
@@ -58,9 +62,10 @@
         "attrs": {
           "id": "ctrlinv_out_masterreq_userid",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "180px",
           "xdatabind": "SFDATA:inv_out_master.ReqUserName",
-          "width": "180px"
+          "disableexpress": "1",
+          "fieldname": "领用人"
         }
       },
       "XSelectUserButton1": {
@@ -68,8 +73,8 @@
         "attrs": {
           "id": "XSelectUserButton1",
           "runat": "server",
-          "datamap": "Account->SFDATA:inv_out_master.ReqUserAccount;DisplayName->SFDATA:inv_out_master.ReqUserName",
-          "width": "21px"
+          "width": "21px",
+          "datamap": "Account->SFDATA:inv_out_master.ReqUserAccount;DisplayName->SFDATA:inv_out_master.ReqUserName"
         }
       },
       "XAttachments1": {
@@ -77,10 +82,11 @@
         "attrs": {
           "id": "XAttachments1",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_out_master.Attachments",
           "width": "100%",
-          "filetypes": "*.*",
-          "filetypesdescription": "所有文件"
+          "xdatabind": "SFDATA:inv_out_master.Attachments",
+          "fieldname": "附件",
+          "filetypesdescription": "所有文件",
+          "filetypes": "*.*"
         }
       },
       "ctrlinv_out_masteroutmaster_remarks": {
@@ -88,8 +94,9 @@
         "attrs": {
           "id": "ctrlinv_out_masteroutmaster_remarks",
           "runat": "server",
+          "width": "100%",
           "xdatabind": "SFDATA:inv_out_master.outmaster_remarks",
-          "width": "100%"
+          "fieldname": "备注"
         }
       },
       "XDropDownList1": {
@@ -98,12 +105,12 @@
           "id": "XDropDownList1",
           "runat": "server",
           "xdatabind": "SFDATA:inv_out_detail.depot_id",
-          "datamap": "depot_name->SFDATA:inv_out_detail.depot_name",
           "width": "100px",
-          "displaycolumn": "depot_name",
+          "datamap": "depot_name->SFDATA:inv_out_detail.depot_name",
+          "prompttext": "--请选择--",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot;Filter:state->varState,Company->SFDATA:inv_out_master.Company",
           "valuecolumn": "depot_id",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot",
-          "prompttext": "--请选择--"
+          "displaycolumn": "depot_name"
         }
       },
       "ctrlinv_out_detaildepot_name": {
@@ -111,8 +118,9 @@
         "attrs": {
           "id": "ctrlinv_out_detaildepot_name",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_out_detail.depot_name",
           "width": "100%",
+          "xdatabind": "SFDATA:inv_out_detail.depot_name",
+          "fieldname": "库房名称",
           "hiddenexpress": "1"
         }
       },
@@ -121,8 +129,8 @@
         "attrs": {
           "id": "ctrl_inv_out_detailvendor_id",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_out_detail.vendor_id",
           "width": "100%",
+          "xdatabind": "SFDATA:inv_out_detail.vendor_id",
           "hiddenexpress": "1"
         }
       },
@@ -131,8 +139,8 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_out_detail.vendor_code",
           "width": "100%",
+          "xdatabind": "SFDATA:inv_out_detail.vendor_code",
           "hiddenexpress": "1"
         }
       },
@@ -141,20 +149,10 @@
         "attrs": {
           "id": "ctrlinv_out_detailvendor_name",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "SFDATA:inv_out_detail.vendor_name",
-          "width": "120px"
-        }
-      },
-      "XDataBrowserButton1": {
-        "ctype": "aspxform:xdatabrowserbutton",
-        "attrs": {
-          "id": "XDataBrowserButton1",
-          "runat": "server",
-          "datamap": "vendor_id->SFDATA:inv_out_detail.vendor_id;vendor_code->SFDATA:inv_out_detail.vendor_code;vendor_name->SFDATA:inv_out_detail.vendor_name",
-          "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_vendor",
-          "displaycolumns": "vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话"
+          "disableexpress": "1",
+          "fieldname": "供应商名称"
         }
       },
       "ctrlinv_out_detailmat_code": {
@@ -162,9 +160,33 @@
         "attrs": {
           "id": "ctrlinv_out_detailmat_code",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "120px",
           "xdatabind": "SFDATA:inv_out_detail.mat_code",
-          "width": "120px"
+          "disableexpress": "1",
+          "fieldname": "物料编码",
+          "valuetodisplaytext": ""
+        }
+      },
+      "XDataBrowserButton2": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton2",
+          "runat": "server",
+          "width": "21px",
+          "datamap": "vendor_id->SFDATA:inv_out_detail.vendor_id;vendor_code->SFDATA:inv_out_detail.vendor_code;vendor_name->SFDATA:inv_out_detail.vendor_name;mat_id->SFDATA:inv_out_detail.mat_id;mat_code->SFDATA:inv_out_detail.mat_code;mat_name->SFDATA:inv_out_detail.mat_name;mat_spec->SFDATA:inv_out_detail.mat_spec;depot_stnum_unit->SFDATA:inv_out_detail.out_stnum_unit",
+          "xdatasource": "DataSource:SFDATA;TableName:inv_depot_detail;Filter:depot_id->SFDATA:inv_out_detail.depot_id,state->varState,Company->SFDATA:inv_out_master.Company",
+          "displaycolumns": "vendor_name:供应商名称;mat_code:物料编码;mat_name:物料名称;mat_spec:规格;depot_stnum_unit:基准单位;depot_mat_num:当前库存"
+        }
+      },
+      "XTextBox6": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox6",
+          "runat": "server",
+          "width": "120px",
+          "xdatabind": "SFDATA:inv_out_detail.mat_id",
+          "disableexpress": "1",
+          "hiddenexpress": "1"
         }
       },
       "ctrlinv_out_detailmat_name": {
@@ -172,9 +194,10 @@
         "attrs": {
           "id": "ctrlinv_out_detailmat_name",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "SFDATA:inv_out_detail.mat_name",
-          "width": "100%"
+          "disableexpress": "1",
+          "fieldname": "物料名称"
         }
       },
       "ctrlinv_out_detailmat_spec": {
@@ -182,9 +205,10 @@
         "attrs": {
           "id": "ctrlinv_out_detailmat_spec",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "SFDATA:inv_out_detail.mat_spec",
-          "width": "100%"
+          "disableexpress": "1",
+          "fieldname": "物料规格"
         }
       },
       "ctrlinv_out_detailout_stnum_unit": {
@@ -192,9 +216,34 @@
         "attrs": {
           "id": "ctrlinv_out_detailout_stnum_unit",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "SFDATA:inv_out_detail.out_stnum_unit",
-          "width": "100%"
+          "disableexpress": "1",
+          "fieldname": "基准单位"
+        }
+      },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "varmatnum",
+          "disableexpress": "1",
+          "fieldname": "当前库存",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XDropDownList2": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList2",
+          "runat": "server",
+          "datamap": "depot_mat_num->varmatnum",
+          "xdatasource": "DataSource:SFDATA;TableName:inv_depot_detail;Filter:depot_id->SFDATA:inv_out_detail.depot_id,vendor_id->SFDATA:inv_out_detail.vendor_id,mat_code->SFDATA:inv_out_detail.mat_code,state->varState",
+          "valuecolumn": "depot_mat_num",
+          "displaycolumn": "depot_mat_num",
+          "hiddenexpress": "1"
         }
       },
       "ctrlinv_out_detailout_stnum": {
@@ -202,8 +251,9 @@
         "attrs": {
           "id": "ctrlinv_out_detailout_stnum",
           "runat": "server",
+          "width": "100%",
           "xdatabind": "SFDATA:inv_out_detail.out_stnum",
-          "width": "100%"
+          "fieldname": "出库物料数量"
         }
       },
       "ctrlinv_out_detailout_time": {
@@ -211,8 +261,9 @@
         "attrs": {
           "id": "ctrlinv_out_detailout_time",
           "runat": "server",
+          "width": "100%",
           "xdatabind": "SFDATA:inv_out_detail.out_time",
-          "width": "100%"
+          "fieldname": "出库时间"
         }
       },
       "XTextBox3": {
@@ -220,9 +271,9 @@
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_out_detail.outdetail_remarks",
           "width": "100%",
-          "borderwidth": "1",
+          "xdatabind": "SFDATA:inv_out_detail.outdetail_remarks",
+          "fieldname": "备注",
           "bordercolor": "#DCDCDC"
         }
       },
@@ -236,7 +287,6 @@
           "cellspacing": "0",
           "cellpadding": "0",
           "dynamicarea": " 1,1 ",
-          "menudock": "Left",
           "id": "table1"
         },
         "ctypeorg": "table",
@@ -246,11 +296,14 @@
           "ctrl_inv_out_detailvendor_id",
           "XTextBox1",
           "ctrlinv_out_detailvendor_name",
-          "XDataBrowserButton1",
           "ctrlinv_out_detailmat_code",
+          "XDataBrowserButton2",
+          "XTextBox6",
           "ctrlinv_out_detailmat_name",
           "ctrlinv_out_detailmat_spec",
           "ctrlinv_out_detailout_stnum_unit",
+          "XTextBox2",
+          "XDropDownList2",
           "ctrlinv_out_detailout_stnum",
           "ctrlinv_out_detailout_time",
           "XTextBox3"
@@ -265,8 +318,8 @@
         "attrs": {
           "id": "ctrlinv_out_masterorg_id",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_out_master.req_org_id",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:inv_out_master.req_org_id"
         }
       },
       "ctrlinv_out_masterout_userid": {
@@ -274,8 +327,31 @@
         "attrs": {
           "id": "ctrlinv_out_masterout_userid",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_out_master.ReqUserAccount",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:inv_out_master.ReqUserAccount"
+        }
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:inv_out_master.Company",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "varState",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "innerhtml": "1"
         }
       },
       "table2": {
@@ -293,11 +369,86 @@
         "ctypeorg": "table",
         "items": [
           "ctrlinv_out_masterorg_id",
-          "ctrlinv_out_masterout_userid"
+          "ctrlinv_out_masterout_userid",
+          "XTextBox5",
+          "XTextBox4"
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "controltovalidate": "XDropDownList1",
+          "errormessage": "请选择库房名称",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "库房名称"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "controltovalidate": "ctrlinv_out_detailmat_code",
+          "errormessage": "请选择物料编码",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "物料编码"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "controltovalidate": "ctrlinv_out_detailout_stnum",
+          "errormessage": "请填写出库物料数量",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "出库物料数量"
+        }
+      },
+      "XRequiredFieldValidator6": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator6",
+          "runat": "server",
+          "controltovalidate": "ctrlinv_out_detailout_time",
+          "errormessage": "请选择出库时间",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "出库时间"
+        }
+      },
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "controltovalidate": "ctrlinv_out_masterreq_org_id",
+          "errormessage": "请选择领用人部门",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "领用人部门"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "controltovalidate": "ctrlinv_out_masterout_userid",
+          "errormessage": "请选择领用人",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "领用人"
+        }
+      }
+    },
     "items": [
       "ctrlinv_out_masterCompanyName",
       "ctrlinv_out_masterDeptName",

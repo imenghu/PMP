@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-10T19:23:05.9475352+08:00",
+  "generateAt": "2019-10-18T14:41:07.4532657+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,12 +9,12 @@
         "attrs": {
           "id": "XDropDownList5",
           "runat": "server",
-          "displaycolumn": "first_name",
-          "valuecolumn": "first_code",
-          "prompttext": "--请选择--",
-          "xdatasource": "DataSource:SFDATA;TableName:v_ctl_material_class_first",
+          "xdatabind": "SFDATA:ctl_material.first_code",
           "datamap": "first_name->SFDATA:ctl_material.first_name",
-          "xdatabind": "SFDATA:ctl_material.first_code"
+          "xdatasource": "DataSource:SFDATA;TableName:v_ctl_material_class_first",
+          "prompttext": "--请选择--",
+          "valuecolumn": "first_code",
+          "displaycolumn": "first_name"
         }
       },
       "XDropDownList6": {
@@ -22,12 +22,12 @@
         "attrs": {
           "id": "XDropDownList6",
           "runat": "server",
-          "displaycolumn": "second_name",
-          "valuecolumn": "second_code",
-          "prompttext": "--请选择--",
-          "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_second;Filter:@first_code->SFDATA:ctl_material.first_code",
+          "xdatabind": "SFDATA:ctl_material.second_code",
           "datamap": "second_name->SFDATA:ctl_material.second_name",
-          "xdatabind": "SFDATA:ctl_material.second_code"
+          "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_second;Filter:@first_code->SFDATA:ctl_material.first_code",
+          "prompttext": "--请选择--",
+          "valuecolumn": "second_code",
+          "displaycolumn": "second_name"
         }
       },
       "XDropDownList7": {
@@ -35,12 +35,12 @@
         "attrs": {
           "id": "XDropDownList7",
           "runat": "server",
-          "displaycolumn": "third_name",
-          "valuecolumn": "third_code",
-          "prompttext": "--请选择--",
-          "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_third;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code",
+          "xdatabind": "SFDATA:ctl_material.third_code",
           "datamap": "third_name->SFDATA:ctl_material.third_name",
-          "xdatabind": "SFDATA:ctl_material.third_code"
+          "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_third;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code",
+          "prompttext": "--请选择--",
+          "valuecolumn": "third_code",
+          "displaycolumn": "third_name"
         }
       },
       "XDropDownList8": {
@@ -48,12 +48,12 @@
         "attrs": {
           "id": "XDropDownList8",
           "runat": "server",
-          "displaycolumn": "fourth_name",
-          "valuecolumn": "fourth_code",
-          "prompttext": "--请选择--",
-          "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_fourth;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code,@third_code->SFDATA:ctl_material.third_code",
+          "xdatabind": "SFDATA:ctl_material.fourth_code",
           "datamap": "fourth_name->SFDATA:ctl_material.fourth_name",
-          "xdatabind": "SFDATA:ctl_material.fourth_code"
+          "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_class_fourth;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code,@third_code->SFDATA:ctl_material.third_code",
+          "prompttext": "--请选择--",
+          "valuecolumn": "fourth_code",
+          "displaycolumn": "fourth_name"
         }
       },
       "ctrlctl_materialmat_code": {
@@ -62,9 +62,9 @@
           "id": "ctrlctl_materialmat_code",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_material.mat_code",
-          "valuetodisplaytext": "",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "valuetodisplaytext": ""
         }
       },
       "ctrlctl_materialmat_name": {
@@ -209,8 +209,8 @@
           "id": "ctrlctl_materialCreateUserName",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_material.CreateUserName",
-          "width": "100%",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "width": "100%"
         }
       },
       "ctrlctl_materialcreate_time": {
@@ -229,8 +229,8 @@
           "id": "ctrlctl_materialUpdateUserName",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_material.UpdateUserName",
-          "width": "100%",
-          "disableexpress": "1"
+          "disableexpress": "1",
+          "width": "100%"
         }
       },
       "XDateTimePicker1": {
@@ -284,10 +284,10 @@
         "attrs": {
           "id": "XDropDownList9",
           "runat": "server",
-          "displaycolumn": "Column1",
-          "valuecolumn": "Column1",
+          "datamap": "Column1->SFDATA:ctl_material.mat_code",
           "xdatasource": "DataSource:SFDATA;ProcedureName:p_ctl_material_getcode;Filter:@first_code->SFDATA:ctl_material.first_code,@second_code->SFDATA:ctl_material.second_code,@third_code->SFDATA:ctl_material.third_code,@fourth_code->SFDATA:ctl_material.fourth_code",
-          "datamap": "Column1->SFDATA:ctl_material.mat_code"
+          "valuecolumn": "Column1",
+          "displaycolumn": "Column1"
         }
       },
       "table1": {
@@ -312,7 +312,152 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择一级分类",
+          "controltovalidate": "XDropDownList5",
+          "innerhtml": "一级分类"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择二级分类",
+          "controltovalidate": "XDropDownList6",
+          "innerhtml": "二级分类"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择三级分类",
+          "controltovalidate": "XDropDownList7",
+          "innerhtml": "三级分类"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择四级分类",
+          "controltovalidate": "XDropDownList8",
+          "innerhtml": "四级分类"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": " 请填写物料编码",
+          "controltovalidate": "ctrlctl_materialmat_code",
+          "innerhtml": "物料编码"
+        }
+      },
+      "XRequiredFieldValidator6": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator6",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写物料名称",
+          "controltovalidate": "ctrlctl_materialmat_name",
+          "innerhtml": "物料名称"
+        }
+      },
+      "XRequiredFieldValidator7": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator7",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写物料规格",
+          "controltovalidate": "ctrlctl_materialmat_spec",
+          "innerhtml": "物料规格"
+        }
+      },
+      "XRequiredFieldValidator8": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator8",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写基准单位",
+          "controltovalidate": "ctrlctl_materialbase_unit",
+          "innerhtml": "基准单位"
+        }
+      },
+      "XRequiredFieldValidator9": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator9",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择是否干散物料",
+          "controltovalidate": "XDropDownList3",
+          "innerhtml": "是否干散物料"
+        }
+      },
+      "XRequiredFieldValidator10": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator10",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择是否统一采购",
+          "controltovalidate": "XDropDownList1",
+          "innerhtml": "是否统一采购"
+        }
+      },
+      "XRequiredFieldValidator11": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator11",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择是否协议物料",
+          "controltovalidate": "XDropDownList2",
+          "innerhtml": "是否协议物料"
+        }
+      },
+      "XRequiredFieldValidator12": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator12",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择是否正式物料",
+          "controltovalidate": "XDropDownList4",
+          "innerhtml": "是否正式物料"
+        }
+      }
+    },
     "items": [
       "XDropDownList5",
       "XDropDownList6",

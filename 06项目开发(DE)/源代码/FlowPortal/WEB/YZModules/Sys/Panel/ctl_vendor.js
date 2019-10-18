@@ -22,7 +22,7 @@
             pageSize: YZSoft.EnvSetting.PageSize.defaultSize,
             model: 'Ext.data.Model',
             sorters: {
-                property: 'vendor_id',
+                property: 'n.vendor_id',
                 direction: 'DESC'
             },
             proxy: {
@@ -55,6 +55,9 @@
                                         },
                                         {
                                             header: '供应商名称', dataIndex: 'vendor_name', flex: 1, width: 100, align: 'left', sortable: true
+                                        },
+                                        {
+                                            header: '物料名称', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
                                         },
                                         {
                                             header: '纳税人登记号', dataIndex: 'tax_cer_no', width: 100, align: 'left', sortable: true

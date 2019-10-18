@@ -1,9 +1,20 @@
 ﻿{
-  "generateAt": "2019-10-16T17:20:12.0843744+08:00",
+  "generateAt": "2019-10-16T20:37:11.850605+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
     "components": {
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "displaycolumns": "first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_name->\"产成品\"",
+          "width": "21px",
+          "datamap": "mat_name->SFDATA:prod_report1.mat_name"
+        }
+      },
       "ctrlProd_report1mat_name": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
@@ -11,19 +22,7 @@
           "runat": "server",
           "fieldname": "品名",
           "xdatabind": "SFDATA:Prod_report1.mat_name",
-          "width": "180px",
-          "disableexpress": "1"
-        }
-      },
-      "XDataBrowserButton1": {
-        "ctype": "aspxform:xdatabrowserbutton",
-        "attrs": {
-          "id": "XDataBrowserButton1",
-          "runat": "server",
-          "datamap": "mat_id->SFDATA:Prod_report1.mat_id;mat_name->SFDATA:Prod_report1.mat_name",
-          "displaycolumns": "mat_code:编码;mat_name:品名;mat_spec:规格;base_unit:单位",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->“3”,third_code->“02”,state->“1”",
-          "width": "21px"
+          "width": "80%"
         }
       },
       "ctrlProd_report1ferment_tankno": {
@@ -171,6 +170,7 @@
         "ctype": "wrap",
         "attrs": {
           "width": "800",
+          "tabindex": "1",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -191,8 +191,8 @@
     },
     "validators": {},
     "items": [
-      "ctrlProd_report1mat_name",
       "XDataBrowserButton1",
+      "ctrlProd_report1mat_name",
       "ctrlProd_report1ferment_tankno",
       "ctrlProd_report1full_tank_date",
       "ctrlProd_report1export_date",

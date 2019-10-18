@@ -47,7 +47,31 @@ namespace Prod
 
             //获得查询条件
             string filter = "State='1'";
-
+            bool moduleAdmin = true;
+            using (BPMConnection cn = new BPMConnection())
+            {
+                cn.WebOpen();
+                moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "24299805-6e7a-4ca7-9191-0fe2569652d8", "Admin");
+                if (!moduleAdmin)
+                {
+                    bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "24299805-6e7a-4ca7-9191-0fe2569652d8", "Company");
+                    if (moduleCompany)
+                    {
+                        MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
+                        List<string> ls = new List<string>();
+                        foreach (Member member in positions)
+                        {
+                            OU ou = member.GetParentOU(cn);
+                            ls.Add(string.Format("Company='{0}'", ou.Code));
+                        }
+                        filter = string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray()));
+                    }
+                    else
+                    {
+                        filter = string.Format("CreateUser='{0}'", YZAuthHelper.LoginUserAccount);
+                    }
+                }
+            }
             if (searchType == "QuickSearch")
             {
                 //应用关键字过滤

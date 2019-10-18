@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-12T16:04:07.8730535+08:00",
+  "generateAt": "2019-10-18T11:09:05.7403931+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_masterCompanyName",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_master.CompanyName",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_master.CompanyName"
         }
       },
       "ctrlinv_inventory_export_masterDeptName": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_masterDeptName",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_master.DeptName",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_master.DeptName"
         }
       },
       "ctrlinv_inventory_export_masterCreateUserName": {
@@ -29,9 +29,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_masterCreateUserName",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_master.CreateUserName",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_master.CreateUserName"
         }
       },
       "XDropDownList1": {
@@ -40,11 +40,11 @@
           "id": "XDropDownList1",
           "runat": "server",
           "xdatabind": "SFDATA:inv_inventory_export_master.depot_id",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot",
-          "valuecolumn": "depot_id",
-          "displaycolumn": "depot_name",
+          "datamap": "depot_name->SFDATA:inv_inventory_export_master.depot_name",
           "prompttext": "--请选择--",
-          "datamap": "depot_name->SFDATA:inv_inventory_export_master.depot_name"
+          "displaycolumn": "depot_name",
+          "valuecolumn": "depot_id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot;Filter:state->varState,Company->SFDATA:inv_inventory_export_master.Company"
         }
       },
       "XTextBox1": {
@@ -52,9 +52,9 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_detail.vendor_id",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.vendor_id"
         }
       },
       "ctrlinv_inventory_export_detailvendor_name": {
@@ -62,9 +62,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_detailvendor_name",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_detail.vendor_name",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.vendor_name"
         }
       },
       "ctrlinv_inventory_export_detailmat_code": {
@@ -72,9 +72,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_detailmat_code",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_detail.mat_code",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.mat_code"
         }
       },
       "ctrlinv_inventory_export_detailmat_name": {
@@ -82,9 +82,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_detailmat_name",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_detail.mat_name",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.mat_name"
         }
       },
       "ctrlinv_inventory_export_detailmat_spec": {
@@ -92,9 +92,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_detailmat_spec",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_detail.mat_spec",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.mat_spec"
         }
       },
       "ctrlinv_inventory_export_detailinv_stnum_unit": {
@@ -102,9 +102,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_detailinv_stnum_unit",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_stnum_unit",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_stnum_unit"
         }
       },
       "ctrlinv_inventory_export_detaildepot_mat_num": {
@@ -112,9 +112,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_detaildepot_mat_num",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_detail.depot_mat_num",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.depot_mat_num"
         }
       },
       "ctrlinv_inventory_export_detailinv_depot_mat_num": {
@@ -122,9 +122,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_detailinv_depot_mat_num",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_depot_mat_num",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_depot_mat_num"
         }
       },
       "ctrlinv_inventory_export_detailinv_diff_num": {
@@ -132,9 +132,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_detailinv_diff_num",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_diff_num",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_diff_num"
         }
       },
       "ctrlinv_inventory_export_detailinv_remarks": {
@@ -142,9 +142,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_detailinv_remarks",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_remarks",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:inv_inventory_export_detail.inv_remarks"
         }
       },
       "tbInv": {
@@ -157,9 +157,9 @@
           "border": "0",
           "cellspacing": "0",
           "cellpadding": "0",
-          "dynamicarea": " 1,1 ",
+          "datamap": "vendor_id->SFDATA:inv_inventory_export_detail.vendor_id;vendor_name->SFDATA:inv_inventory_export_detail.vendor_name;mat_code->SFDATA:inv_inventory_export_detail.mat_code;mat_name->SFDATA:inv_inventory_export_detail.mat_name;mat_spec->SFDATA:inv_inventory_export_detail.mat_spec;depot_stnum_unit->SFDATA:inv_inventory_export_detail.inv_stnum_unit;depot_mat_num->SFDATA:inv_inventory_export_detail.depot_mat_num",
           "xdatasource": "DataSource:SFDATA;TableName:inv_depot_detail;Filter:depot_id->SFDATA:inv_inventory_export_master.depot_id,state->varState",
-          "datamap": "vendor_id->SFDATA:inv_inventory_export_detail.vendor_id;vendor_name->SFDATA:inv_inventory_export_detail.vendor_name;mat_code->SFDATA:inv_inventory_export_detail.mat_code;mat_name->SFDATA:inv_inventory_export_detail.mat_name;mat_spec->SFDATA:inv_inventory_export_detail.mat_spec;depot_stnum_unit->SFDATA:inv_inventory_export_detail.inv_stnum_unit;depot_mat_num->SFDATA:inv_inventory_export_detail.depot_mat_num"
+          "dynamicarea": " 1,1 "
         },
         "ctypeorg": "table",
         "items": [
@@ -184,17 +184,8 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_masterCompany",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_master.Company",
-          "width": "100%"
-        }
-      },
-      "ctrlinv_inventory_export_masterDept": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlinv_inventory_export_masterDept",
-          "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_master.Dept",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:inv_inventory_export_master.Company"
         }
       },
       "ctrlinv_inventory_export_masterdepot_id": {
@@ -202,17 +193,8 @@
         "attrs": {
           "id": "ctrlinv_inventory_export_masterdepot_id",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_master.depot_name",
-          "width": "100%"
-        }
-      },
-      "ctrlinv_inventory_export_masterCreateUser": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlinv_inventory_export_masterCreateUser",
-          "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_export_master.CreateUser",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:inv_inventory_export_master.depot_name"
         }
       },
       "XTextBox2": {
@@ -220,17 +202,17 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "xdatabind": "varState",
           "width": "100%",
-          "borderwidth": "1",
+          "xdatabind": "varState",
           "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
           "innerhtml": "1"
         }
       },
       "table1": {
         "ctype": "wrap",
         "attrs": {
-          "width": "790",
+          "width": "776",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -242,14 +224,25 @@
         "ctypeorg": "table",
         "items": [
           "ctrlinv_inventory_export_masterCompany",
-          "ctrlinv_inventory_export_masterDept",
           "ctrlinv_inventory_export_masterdepot_id",
-          "ctrlinv_inventory_export_masterCreateUser",
           "XTextBox2"
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "controltovalidate": "XDropDownList1",
+          "errormessage": "请选择盘点仓库",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "盘点仓库"
+        }
+      }
+    },
     "items": [
       "ctrlinv_inventory_export_masterCompanyName",
       "ctrlinv_inventory_export_masterDeptName",

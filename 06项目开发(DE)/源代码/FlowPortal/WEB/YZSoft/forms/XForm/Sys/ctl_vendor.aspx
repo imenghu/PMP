@@ -36,19 +36,19 @@ $Scripts-->
                         供应商名称 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_name" runat="server" XDataBind="SFDATA:ctl_vendor.vendor_name" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_name" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_name"></aspxform:XTextBox>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         纳税人登记号 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendortax_cer_no" runat="server" XDataBind="SFDATA:ctl_vendor.tax_cer_no" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendortax_cer_no" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.tax_cer_no"></aspxform:XTextBox>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         邮编 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_zipcode" runat="server" XDataBind="SFDATA:ctl_vendor.vendor_zipcode" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_zipcode" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_zipcode"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -56,19 +56,19 @@ $Scripts-->
                         联系人 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_contact" runat="server" XDataBind="SFDATA:ctl_vendor.vendor_contact" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_contact" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_contact"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         联系电话 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_tel" runat="server" XDataBind="SFDATA:ctl_vendor.vendor_tel" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_tel" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_tel"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         邮箱 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_email" runat="server" XDataBind="SFDATA:ctl_vendor.vendor_email" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_email" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_email"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -76,13 +76,13 @@ $Scripts-->
                         微信 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_wechat" runat="server" XDataBind="SFDATA:ctl_vendor.vendor_wechat" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_wechat" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_wechat"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         QQ 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_qq" runat="server" XDataBind="SFDATA:ctl_vendor.vendor_qq" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_qq" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_qq"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         是否正式供应商 
@@ -99,23 +99,70 @@ $Scripts-->
                         地址 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_addr" runat="server" XDataBind="SFDATA:ctl_vendor.vendor_addr" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_addr" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_addr"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         提报人</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorCreateUserName" runat="server" XDataBind="SFDATA:ctl_vendor.CreateUserName" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorCreateUserName" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.CreateUserName" DisableExpress="1"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         最后更新人</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorUpdateUserName" runat="server" XDataBind="SFDATA:ctl_vendor.UpdateUserName" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorUpdateUserName" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.UpdateUserName" DisableExpress="1"></aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <br />
+        <br />
+        <table width="800" align="center" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
+            <tbody>
+                <tr>
+                    <td width="200">
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写供应商名称" ControlToValidate="ctrlctl_vendorvendor_name">供应商名称</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td width="200">
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写纳税人登记号" ControlToValidate="ctrlctl_vendortax_cer_no">纳税人登记号</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td width="200">
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写邮编" ControlToValidate="ctrlctl_vendorvendor_zipcode">邮编</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td width="200">
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写联系人" ControlToValidate="ctrlctl_vendorvendor_contact">联系人</aspxform:XRequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator5" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写联系电话" ControlToValidate="ctrlctl_vendorvendor_tel">联系电话</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator6" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写邮箱" ControlToValidate="ctrlctl_vendorvendor_email">邮箱</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator7" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写微信" ControlToValidate="ctrlctl_vendorvendor_wechat">微信</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator8" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写QQ" ControlToValidate="ctrlctl_vendorvendor_qq">QQ</aspxform:XRequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator9" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择是否正式供应商" ControlToValidate="XDropDownList1">是否正式供应商</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator10" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写地址" ControlToValidate="ctrlctl_vendorvendor_addr">地址</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
                     </td>
                 </tr>
             </tbody>

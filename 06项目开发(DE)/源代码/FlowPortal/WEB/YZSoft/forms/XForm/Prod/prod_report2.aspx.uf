@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-16T17:20:26.3366213+08:00",
+  "generateAt": "2019-10-16T21:03:11.4433917+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlProd_report2input_date",
           "runat": "server",
-          "fieldname": "日期",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.input_date",
-          "width": "100%"
+          "fieldname": "日期"
         }
       },
       "ctrlProd_report2tankid_source": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlProd_report2tankid_source",
           "runat": "server",
-          "fieldname": "发酵罐号",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.tankid_source",
-          "width": "100%"
+          "fieldname": "发酵罐号"
         }
       },
       "ctrlProd_report2tankid_dest": {
@@ -29,9 +29,9 @@
         "attrs": {
           "id": "ctrlProd_report2tankid_dest",
           "runat": "server",
-          "fieldname": "清酒罐号",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.tankid_dest",
-          "width": "100%"
+          "fieldname": "清酒罐号"
         }
       },
       "ctrlProd_report2concentration": {
@@ -39,9 +39,9 @@
         "attrs": {
           "id": "ctrlProd_report2concentration",
           "runat": "server",
-          "fieldname": "浓度",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.concentration",
-          "width": "100%"
+          "fieldname": "浓度"
         }
       },
       "ctrlProd_report2outferment_liquor_num": {
@@ -49,9 +49,9 @@
         "attrs": {
           "id": "ctrlProd_report2outferment_liquor_num",
           "runat": "server",
-          "fieldname": "出发酵液数量",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.outferment_liquor_num",
-          "width": "100%"
+          "fieldname": "出发酵液数量"
         }
       },
       "ctrlProd_report2xl_saka_num": {
@@ -59,12 +59,10 @@
         "attrs": {
           "id": "ctrlProd_report2xl_saka_num",
           "runat": "server",
-          "fieldname": "折11度清酒数量",
-          "xdatabind": "SFDATA:Prod_report2.xl_saka_num",
           "width": "100%",
-          "express": "(SFDATA:prod_report2.concentration*SFDATA:prod_report2.outferment_liquor_num)/11",
-          "hiddeninput": "False",
-          "readonly": "True"
+          "xdatabind": "SFDATA:prod_report2.xl_saka_num",
+          "fieldname": "折11度清酒数量",
+          "hiddeninput": "False"
         }
       },
       "ctrlProd_report2saka_degree": {
@@ -72,9 +70,9 @@
         "attrs": {
           "id": "ctrlProd_report2saka_degree",
           "runat": "server",
-          "fieldname": "清酒度数",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.saka_degree",
-          "width": "100%"
+          "fieldname": "清酒度数"
         }
       },
       "ctrlProd_report2outsaka_actual_num": {
@@ -82,9 +80,9 @@
         "attrs": {
           "id": "ctrlProd_report2outsaka_actual_num",
           "runat": "server",
-          "fieldname": "实际出清酒数量",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.outsaka_actual_num",
-          "width": "100%"
+          "fieldname": "实际出清酒数量"
         }
       },
       "ctrlProd_report2xl_saka_actualnum": {
@@ -92,10 +90,9 @@
         "attrs": {
           "id": "ctrlProd_report2xl_saka_actualnum",
           "runat": "server",
-          "fieldname": "实际出清酒折11度数量",
-          "xdatabind": "SFDATA:Prod_report2.xl_saka_actualnum",
           "width": "100%",
-          "express": "(SFDATA:prod_report2.saka_degree*SFDATA:prod_report2.outsaka_actual_num)/11"
+          "xdatabind": "SFDATA:Prod_report2.xl_saka_actualnum",
+          "fieldname": "实际出清酒折11度数量"
         }
       },
       "ctrlProd_report2filter_wine_damage": {
@@ -103,10 +100,9 @@
         "attrs": {
           "id": "ctrlProd_report2filter_wine_damage",
           "runat": "server",
-          "fieldname": "过滤酒损",
-          "xdatabind": "SFDATA:Prod_report2.filter_wine_damage",
           "width": "100%",
-          "express": "(SFDATA:prod_report2.xl_saka_num-SFDATA:prod_report2.xl_saka_actualnum)/SFDATA:prod_report2.xl_saka_num*100"
+          "xdatabind": "SFDATA:Prod_report2.filter_wine_damage",
+          "fieldname": "过滤酒损"
         }
       },
       "ctrlProd_report2memo": {
@@ -114,9 +110,9 @@
         "attrs": {
           "id": "ctrlProd_report2memo",
           "runat": "server",
-          "fieldname": "备注",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.memo",
-          "width": "100%"
+          "fieldname": "备注"
         }
       },
       "ctrlProd_report2DeptName": {
@@ -124,9 +120,9 @@
         "attrs": {
           "id": "ctrlProd_report2DeptName",
           "runat": "server",
-          "fieldname": "部门名称",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.DeptName",
-          "width": "100%"
+          "fieldname": "部门名称"
         }
       },
       "ctrlProd_report2Company": {
@@ -134,9 +130,9 @@
         "attrs": {
           "id": "ctrlProd_report2Company",
           "runat": "server",
-          "fieldname": "公司编码",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.Company",
-          "width": "100%"
+          "fieldname": "公司编码"
         }
       },
       "ctrlProd_report2CompanyName": {
@@ -144,9 +140,9 @@
         "attrs": {
           "id": "ctrlProd_report2CompanyName",
           "runat": "server",
-          "fieldname": "公司名称",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.CompanyName",
-          "width": "100%"
+          "fieldname": "公司名称"
         }
       },
       "ctrlProd_report2Dept": {
@@ -154,9 +150,9 @@
         "attrs": {
           "id": "ctrlProd_report2Dept",
           "runat": "server",
-          "fieldname": "部门编码",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report2.Dept",
-          "width": "100%"
+          "fieldname": "部门编码"
         }
       },
       "table1": {

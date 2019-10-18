@@ -15,35 +15,11 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand_SearchPanel', {
             allowBlank: true
         });
 
-        me.status = Ext.create('Ext.data.JsonStore', {
-            fields: ['name', 'value'],
-            data: [
-                { name: RS.$('All_SearchAll'), value: '' },
-                { name: "未提报", value: '0' },
-                { name: "审批中", value: '1' },
-                { name: "审批完成", value: '2' },
-                { name: "驳回", value: '3' }
-
-
-            ]
+        me.mat_name = Ext.create('Ext.form.field.Text', {
+            fieldLabel: '审批状态',
+            allowBlank: true
         });
 
-        me.proc_status = Ext.create('Ext.form.field.ComboBox', {
-            fieldLabel: "审批状态",
-            queryMode: 'local',
-            store: me.status,
-            displayField: 'name',
-            valueField: 'value',
-            value: '',
-            editable: false,
-            forceSelection: true,
-            triggerAction: 'all',
-        });
-        me.edtKeyword = Ext.create('Ext.form.field.Text', {
-            fieldLabel: RS.$('All_Keyword'),
-            allowBlank: true,
-            value: config.store.getProxy().getExtraParams().kwd || ''
-        });
         me.btnSearch = Ext.create('Ext.button.Button', {
             text: RS.$('All_Search'),
             cls: 'yz-btn-submit yz-btn-round3',
@@ -88,7 +64,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand_SearchPanel', {
                     items: [me.plan_pur_year]
                 }, {
                     flex: 1,
-                    items: [me.proc_status]
+                    items: [me.mat_name]
                 }, {
                     flex: 1,
                     minWidth: 100,
@@ -110,7 +86,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand_SearchPanel', {
         me.callParent([cfg]);
 
         me.relayEvents(me.plan_pur_year, ['specialkey']);
-        me.relayEvents(me.proc_status, ['specialkey']);
+        me.relayEvents(me.mat_name, ['specialkey']);
 
         me.on('specialkey', function (f, e) {
             if (e.getKey() == e.ENTER) {
@@ -132,9 +108,9 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand_SearchPanel', {
             params = me.store.getProxy().getExtraParams();
 
         Ext.apply(params, {
-            searchType: 'QuickSearch',
+            searchType: 'AdvancedSearch',
             plan_pur_year: me.plan_pur_year.getValue(),
-            proc_status: me.proc_status.getValue()
+            mat_name: me.mat_name.getValue()
         });
 
         me.store.loadPage(1);
@@ -146,10 +122,8 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand_SearchPanel', {
             params = me.store.getProxy().getExtraParams();
 
         me.plan_pur_year.setValue('');
-        me.proc_status.setValue('');
-        Ext.apply(params, {
-            searchType: '',
-        });
+        me.mat_name.setValue('');
+
         me.store.loadPage(1);
     }
 });

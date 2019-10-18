@@ -10,16 +10,60 @@ Ext.define('YZModules.Sys.Panel.ctl_vendor_SearchPanel', {
         var me = this,
             cfg;
 
-        me.plan_pur_year = Ext.create('Ext.form.field.Text', {
+        me.vendor_store = Ext.create('Ext.data.JsonStore', {
+            remoteSort: true,
+            model: 'Ext.data.Model',
+            proxy: {
+                type: 'ajax',
+                url: YZSoft.$url(me, '../Service/ctl_vendor.ashx'),
+                extraParams: {
+                    method: 'GetValue'
+                },
+                reader: {
+                    rootProperty: 'children'
+                }
+            }
+        });
+
+        //me.status = Ext.create('Ext.data.JsonStore', {
+        //    fields: ['name', 'value'],
+        //    data: [
+        //        { name: RS.$('All_SearchAll'), value: '' },
+        //        { name: "零散供应商", value: '零散供应商' },
+        //        { name: "德清县杭翔玻璃", value: '德清县杭翔玻璃' },
+        //        { name: "济南鑫超越纸箱厂", value: '济南鑫超越纸箱厂' },
+        //        { name: "上海宝翼制罐有限公司", value: '上海宝翼制罐有限公司' },
+        //         { name: "郓城博鑫包装有限公司", value: '郓城博鑫包装有限公司' },
+        //          { name: "鲍婕测试", value: '鲍婕测试' }
+                 
+
+
+        //    ]
+        //});
+
+        me.proc_status = Ext.create('Ext.form.field.ComboBox', {
+            fieldLabel: "供应商名称",
+            queryMode: 'local',
+            store: me.vendor_store,
+            displayField: 'vendor_name',
+            valueField: 'vendor_name',
+            value: '',
+            editable: false,
+            forceSelection: true,
+            triggerAction: 'all',
+        });
+
+
+        me.mat_name = Ext.create('Ext.form.field.Text', {
             fieldLabel: '物料名称',
             allowBlank: true
         });
 
-        me.mat_name = Ext.create('Ext.form.field.Text', {
-            fieldLabel: '审批状态',
-            allowBlank: true
+        me.edtKeyword = Ext.create('Ext.form.field.Text', {
+            fieldLabel: RS.$('All_Keyword'),
+            allowBlank: true,
+            value: config.store.getProxy().getExtraParams().kwd || ''
         });
-
         me.btnSearch = Ext.create('Ext.button.Button', {
             text: RS.$('All_Search'),
             cls: 'yz-btn-submit yz-btn-round3',
@@ -61,7 +105,7 @@ Ext.define('YZModules.Sys.Panel.ctl_vendor_SearchPanel', {
             items: [{
                 items: [{
                     flex: 1,
-                    items: [me.plan_pur_year]
+                    items: [me.proc_status]
                 }, {
                     flex: 1,
                     items: [me.mat_name]
@@ -85,14 +129,7 @@ Ext.define('YZModules.Sys.Panel.ctl_vendor_SearchPanel', {
         Ext.apply(cfg, config);
         me.callParent([cfg]);
 
-        me.relayEvents(me.plan_pur_year, ['specialkey']);
-        me.relayEvents(me.mat_name, ['specialkey']);
-
-        me.on('specialkey', function (f, e) {
-            if (e.getKey() == e.ENTER) {
-                me.onSearchClick();
-            }
-        });
+        me.vendor_store.load();
 
         me.store.on({
             load: function (store, records, successful, operation, eOpts) {
@@ -108,8 +145,9 @@ Ext.define('YZModules.Sys.Panel.ctl_vendor_SearchPanel', {
             params = me.store.getProxy().getExtraParams();
 
         Ext.apply(params, {
-            searchType: 'AdvancedSearch',
-            plan_pur_year: me.plan_pur_year.getValue(),
+            searchType: 'QuickSearch',
+            kwd: me.edtKeyword.getValue(),
+            proc_status: me.proc_status.getValue(),
             mat_name: me.mat_name.getValue()
         });
 
@@ -121,9 +159,12 @@ Ext.define('YZModules.Sys.Panel.ctl_vendor_SearchPanel', {
             store = me.store,
             params = me.store.getProxy().getExtraParams();
 
-        me.plan_pur_year.setValue('');
+        me.proc_status.setValue('');
         me.mat_name.setValue('');
-
+        me.edtKeyword.setValue('');
+        Ext.apply(params, {
+            searchType: '',
+        });
         me.store.loadPage(1);
     }
 });

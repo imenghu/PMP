@@ -196,7 +196,7 @@
                     width: 220,
                     createSearchPanel: function () {
                         var pnl = Ext.create({
-                            xclass: 'YZModules.Inv.Panel.inv_inventory_master_SearchPanel',
+                            xclass: 'YZModules.Inv.Panel.inv_inventory_SearchPanel',
                             region: 'north',
                             store: me.store
                         });
@@ -239,7 +239,7 @@
 
     onClickNo: function (view, cell, recordIndex, cellIndex, e) {
         if (e.getTarget().tagName == 'A')
-            this.read(this.store.getAt(recordIndex));
+            this.readTask(this.store.getAt(recordIndex));
     },
     renderRead: function (value, metaData, record) {
         return "<a href='#'>查看</a>";
@@ -260,9 +260,9 @@
     addNew: function () {
         var me = this;
 
-        YZSoft.bpm.src.ux.FormManager.openFormApplication('Inv/inv_inventory_master', '', 'New', Ext.apply({
+        YZSoft.bpm.src.ux.FormManager.openPostWindow('物料盘存审批', {
             sender: me,
-            title: '新增-物料盘存',
+            title: '发起 - 物料盘存审批',
             dlgModel: 'Tab', //Tab,Window,Dialog
             width: 600,
             height: 430,
@@ -271,7 +271,7 @@
                     me.store.reload({ loadMask: false });
                 }
             }
-        }));
+        });
     },
 
     edit: function (rec) {
@@ -300,6 +300,14 @@
             sender: me,
             title: '物料盘存'
         }, me.dlgCfg));
+    },
+    readTask: function (rec) {
+        var me = this;
+
+        YZSoft.bpm.src.ux.FormManager.openTaskForRead(rec.data.TaskID, Ext.apply({
+            sender: me,
+            title: Ext.String.format('物料盘存审批')
+        }));
     },
 
     deleteSelection: function () {
@@ -358,5 +366,20 @@
                 });
             }
         });
+    },
+
+    openTrace: function (rec, activeTabIndex) {
+        var me = this,
+            taskid = rec.data.TaskID;
+
+        var view = YZSoft.ViewManager.addView(me, 'YZSoft.bpm.tasktrace.Panel', {
+            id: 'BPM_TaskTrace_' + taskid,
+            title: Ext.String.format('{0} - {1}', RS.$('All_TaskTrace'), rec.data.SerialNum),
+            TaskID: taskid,
+            activeTabIndex: activeTabIndex,
+            closable: true
+        });
+
+        view.traceTab.setActiveTab(activeTabIndex);
     }
 });

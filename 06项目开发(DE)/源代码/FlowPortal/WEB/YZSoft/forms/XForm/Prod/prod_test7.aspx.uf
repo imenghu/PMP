@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-16T16:40:30.4295015+08:00",
+  "generateAt": "2019-10-17T10:04:01.4206208+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlProd_test7analyze_date",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.analyze_date",
+          "width": "100%",
           "fieldname": "分析日期",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.analyze_date"
         }
       },
       "ctrlProd_test7mat_name": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlProd_test7mat_name",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.mat_name",
+          "width": "180px",
           "fieldname": "品名名称",
-          "width": "180px"
+          "xdatabind": "SFDATA:Prod_test7.mat_name"
         }
       },
       "XDataBrowserButton1": {
@@ -29,10 +29,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->“2”",
+          "datamap": "mat_name->SFDATA:Prod_test7.mat_name",
           "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:单位",
-          "datamap": "mat_name->SFDATA:Prod_test7.mat_name"
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->\"2\",state->\"1\"",
+          "width": "21px"
         }
       },
       "ctrlProd_test7production_line": {
@@ -40,9 +40,9 @@
         "attrs": {
           "id": "ctrlProd_test7production_line",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.production_line",
+          "width": "100%",
           "fieldname": "生产线",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.production_line"
         }
       },
       "ctrlProd_test7position": {
@@ -50,19 +50,20 @@
         "attrs": {
           "id": "ctrlProd_test7position",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.position",
+          "width": "100%",
           "fieldname": "位置",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.position"
         }
       },
-      "ctrlProd_test7steril_time": {
-        "ctype": "aspxform:xtextbox",
+      "XDateTimePicker1": {
+        "ctype": "aspxform:xdatetimepicker",
         "attrs": {
-          "id": "ctrlProd_test7steril_time",
+          "id": "XDateTimePicker1",
           "runat": "server",
           "xdatabind": "SFDATA:Prod_test7.steril_time",
-          "fieldname": "杀菌时间",
-          "width": "100%"
+          "width": "100%",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "0px"
         }
       },
       "ctrlProd_test7beer_temp": {
@@ -70,9 +71,9 @@
         "attrs": {
           "id": "ctrlProd_test7beer_temp",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.beer_temp",
+          "width": "100%",
           "fieldname": "出口酒温oC",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.beer_temp"
         }
       },
       "ctrlProd_test7steril_temp_max": {
@@ -80,9 +81,9 @@
         "attrs": {
           "id": "ctrlProd_test7steril_temp_max",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.steril_temp_max",
+          "width": "100%",
           "fieldname": "最高杀菌温度oC",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.steril_temp_max"
         }
       },
       "ctrlProd_test7pu50": {
@@ -90,9 +91,9 @@
         "attrs": {
           "id": "ctrlProd_test7pu50",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.pu50",
+          "width": "100%",
           "fieldname": "PU（50oC）",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.pu50"
         }
       },
       "ctrlProd_test7pu60": {
@@ -100,9 +101,9 @@
         "attrs": {
           "id": "ctrlProd_test7pu60",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.pu60",
+          "width": "100%",
           "fieldname": "致死PU（60oC）",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.pu60"
         }
       },
       "ctrlProd_test7operator_name": {
@@ -110,9 +111,9 @@
         "attrs": {
           "id": "ctrlProd_test7operator_name",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.operator_name",
+          "width": "100%",
           "fieldname": "检验人员",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.operator_name"
         }
       },
       "ctrlProd_test7memo": {
@@ -120,9 +121,9 @@
         "attrs": {
           "id": "ctrlProd_test7memo",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.memo",
+          "width": "100%",
           "fieldname": "备注",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.memo"
         }
       },
       "ctrlProd_test7DeptName": {
@@ -130,9 +131,9 @@
         "attrs": {
           "id": "ctrlProd_test7DeptName",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.DeptName",
+          "width": "100%",
           "fieldname": "部门名称",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.DeptName"
         }
       },
       "ctrlProd_test7Company": {
@@ -140,9 +141,9 @@
         "attrs": {
           "id": "ctrlProd_test7Company",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.Company",
+          "width": "100%",
           "fieldname": "公司编码",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.Company"
         }
       },
       "ctrlProd_test7CompanyName": {
@@ -150,15 +151,15 @@
         "attrs": {
           "id": "ctrlProd_test7CompanyName",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test7.CompanyName",
+          "width": "100%",
           "fieldname": "公司名称",
-          "width": "100%"
+          "xdatabind": "SFDATA:Prod_test7.CompanyName"
         }
       },
       "table1": {
         "ctype": "wrap",
         "attrs": {
-          "width": "800",
+          "width": "795",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -182,7 +183,7 @@
       "XDataBrowserButton1",
       "ctrlProd_test7production_line",
       "ctrlProd_test7position",
-      "ctrlProd_test7steril_time",
+      "XDateTimePicker1",
       "ctrlProd_test7beer_temp",
       "ctrlProd_test7steril_temp_max",
       "ctrlProd_test7pu50",

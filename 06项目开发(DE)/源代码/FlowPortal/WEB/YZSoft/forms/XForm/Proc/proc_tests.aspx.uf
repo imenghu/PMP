@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-15T14:28:30.7331071+08:00",
+  "generateAt": "2019-10-18T15:03:58.6050617+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,11 +9,11 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:proc_tests.mat_name",
-          "disableexpress": "1"
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
         }
       },
       "XDropDownList2": {
@@ -22,8 +22,8 @@
           "id": "XDropDownList2",
           "runat": "server",
           "xdatabind": "SFDATA:proc_tests.tests_result",
-          "width": "100%",
-          "prompttext": "--请选择--"
+          "prompttext": "--请选择--",
+          "width": "100%"
         },
         "childNodes": [
           {
@@ -54,11 +54,11 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
+          "disableexpress": "1",
+          "xdatabind": "SFDATA:proc_tests.UpdateUserName",
           "width": "100%",
-          "xdatabind": "SFDATA:proc_tests.CreateUserName",
-          "disableexpress": "1"
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
         }
       },
       "XTextBox1": {
@@ -66,12 +66,12 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
-          "width": "100%",
           "xdatabind": "SFDATA:proc_tests.tests_remarks",
-          "textmode": "MultiLine",
-          "rows": "5"
+          "width": "100%",
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
+          "rows": "5",
+          "textmode": "MultiLine"
         }
       },
       "XExcelDataImportButton1": {
@@ -81,12 +81,12 @@
           "runat": "server",
           "xclass": "YZSoft.Forms.Field.ExcelDataImportButton",
           "width": "70px",
-          "text": "Excel导入",
-          "columncount": "3",
-          "datamap": "A->SFDATA:proc_tests_value.index_name;B->SFDATA:proc_tests_value.rang_value;C->SFDATA:proc_tests_value.tests_value",
-          "popupwndwidth": "-1",
+          "usesubmitbehavior": "False",
           "popupwndheight": "-1",
-          "usesubmitbehavior": "False"
+          "popupwndwidth": "-1",
+          "datamap": "A->SFDATA:proc_tests_value.index_name;B->SFDATA:proc_tests_value.rang_value;C->SFDATA:proc_tests_value.tests_value",
+          "columncount": "3",
+          "text": "Excel导入"
         }
       },
       "XTextBox5": {
@@ -94,10 +94,10 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
+          "xdatabind": "SFDATA:proc_tests_value.index_name",
           "width": "100%",
-          "xdatabind": "SFDATA:proc_tests_value.index_name"
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
         }
       },
       "XTextBox6": {
@@ -105,10 +105,10 @@
         "attrs": {
           "id": "XTextBox6",
           "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
+          "xdatabind": "SFDATA:proc_tests_value.rang_value",
           "width": "100%",
-          "xdatabind": "SFDATA:proc_tests_value.rang_value"
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
         }
       },
       "XTextBox7": {
@@ -116,10 +116,10 @@
         "attrs": {
           "id": "XTextBox7",
           "runat": "server",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
+          "xdatabind": "SFDATA:proc_tests_value.tests_value",
           "width": "100%",
-          "xdatabind": "SFDATA:proc_tests_value.tests_value"
+          "borderwidth": "1",
+          "bordercolor": "#DCDCDC"
         }
       },
       "tb1": {

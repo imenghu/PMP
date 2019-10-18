@@ -38,7 +38,7 @@
                     <td width="158" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         化验人姓名</td>
                     <td width="158" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox5" runat="server" XDataBind="SFDATA:proc_tests.CreateUserName" BorderColor="#DCDCDC" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox5" runat="server" XDataBind="SFDATA:proc_tests.UpdateUserName" BorderColor="#DCDCDC" width="100%" DisableExpress="1"></aspxform:XTextBox>
                     </td>
                     <td width="158" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         化验时间</td>
@@ -74,14 +74,15 @@
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         化验类别</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:proc_tests.tests_class" Width="100%" PromptText="请选择">
+                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:proc_tests.tests_class" Width="100%" PromptText="--请选择--">
                             <asp:ListItem>退库化验</asp:ListItem>
+                            <asp:ListItem>入库化验</asp:ListItem>
                         </aspxform:XDropDownList>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         化验结果</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_tests.tests_result" Width="100%" PromptText="请选择">
+                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_tests.tests_result" Width="100%" PromptText="--请选择--">
                             <asp:ListItem Value="1">合格</asp:ListItem>
                             <asp:ListItem Value="2">不合格（让步接收）</asp:ListItem>
                             <asp:ListItem Value="3">不合格（不接受）</asp:ListItem>
@@ -130,28 +131,19 @@
             </tbody>
         </table>
         <br />
-        <table width="800" align="center" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
+        <table width="794" align="center" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
             <tbody>
                 <tr>
-                    <td width="266">
-                        物料Id</td>
-                    <td width="267">
-                        <aspxform:XTextBox id="XTextBox7" runat="server" XDataBind="SFDATA:proc_tests.mat_id" BorderColor="#DCDCDC" width="80%" DisableExpress="1"></aspxform:XTextBox>
-                    </td>
-                    <td width="267">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+                    <td width="264" height="34">
                         供应商Id</td>
-                    <td>
+                    <td width="265">
                         <aspxform:XTextBox id="XTextBox8" runat="server" XDataBind="SFDATA:proc_tests.vendor_id" BorderColor="#DCDCDC" width="80%" DisableExpress="1"></aspxform:XTextBox>
                     </td>
-                    <td>
+                    <td width="265">
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td height="34">
                     </td>
                     <td>
                     </td>

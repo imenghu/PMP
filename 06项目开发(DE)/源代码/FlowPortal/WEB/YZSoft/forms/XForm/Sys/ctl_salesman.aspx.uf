@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-16T19:46:38.203364+08:00",
+  "generateAt": "2019-10-18T14:52:21.3430316+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlctl_salesmanCompanyName",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_salesman.CompanyName",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:ctl_salesman.CompanyName"
         }
       },
       "XDropDownList1": {
@@ -20,10 +20,10 @@
           "id": "XDropDownList1",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_salesman.province_id",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1",
-          "valuecolumn": "id",
+          "prompttext": "--请选择--",
           "displaycolumn": "name",
-          "prompttext": "--请选择--"
+          "valuecolumn": "id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1"
         }
       },
       "XDropDownList2": {
@@ -32,10 +32,10 @@
           "id": "XDropDownList2",
           "runat": "server",
           "xdatabind": "SFDATA:ctl_salesman.city_id",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_salesman.province_id",
-          "valuecolumn": "id",
+          "prompttext": "--请选择--",
           "displaycolumn": "name",
-          "prompttext": "--请选择--"
+          "valuecolumn": "id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_salesman.province_id"
         }
       },
       "ctrlctl_salesmansalesman_name": {
@@ -43,9 +43,9 @@
         "attrs": {
           "id": "ctrlctl_salesmansalesman_name",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_salesman.salesman_name",
+          "disableexpress": "1",
           "width": "180px",
-          "disableexpress": "1"
+          "xdatabind": "SFDATA:ctl_salesman.salesman_name"
         }
       },
       "XSelectUserButton1": {
@@ -53,8 +53,8 @@
         "attrs": {
           "id": "XSelectUserButton1",
           "runat": "server",
-          "width": "21px",
-          "datamap": "Account->SFDATA:ctl_salesman.SalesmanAccount;DisplayName->SFDATA:ctl_salesman.salesman_name"
+          "datamap": "Account->SFDATA:ctl_salesman.SalesmanAccount;DisplayName->SFDATA:ctl_salesman.salesman_name",
+          "width": "21px"
         }
       },
       "ctrlctl_salesmansalesman_tel": {
@@ -62,8 +62,8 @@
         "attrs": {
           "id": "ctrlctl_salesmansalesman_tel",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_salesman.salesman_tel",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_tel"
         }
       },
       "ctrlctl_salesmansalesman_email": {
@@ -71,8 +71,8 @@
         "attrs": {
           "id": "ctrlctl_salesmansalesman_email",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_salesman.salesman_email",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_email"
         }
       },
       "ctrlctl_salesmansalesman_addr": {
@@ -80,8 +80,8 @@
         "attrs": {
           "id": "ctrlctl_salesmansalesman_addr",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_salesman.salesman_addr",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.salesman_addr"
         }
       },
       "ctrlctl_salesmansalesman_remarks": {
@@ -89,10 +89,10 @@
         "attrs": {
           "id": "ctrlctl_salesmansalesman_remarks",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_salesman.salesman_remarks",
           "width": "100%",
-          "textmode": "MultiLine",
-          "rows": "5"
+          "xdatabind": "SFDATA:ctl_salesman.salesman_remarks",
+          "rows": "5",
+          "textmode": "MultiLine"
         }
       },
       "ctrlctl_salesmanSalesmanAccount": {
@@ -100,8 +100,8 @@
         "attrs": {
           "id": "ctrlctl_salesmanSalesmanAccount",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_salesman.SalesmanAccount",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:ctl_salesman.SalesmanAccount"
         }
       },
       "XTextBox1": {
@@ -109,10 +109,10 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "xdatabind": "var1",
           "width": "100%",
-          "bordercolor": "#DCDCDC",
+          "xdatabind": "var1",
           "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
           "innerhtml": "1"
         }
       },
@@ -121,10 +121,10 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "xdatabind": "var2",
           "width": "100%",
-          "bordercolor": "#DCDCDC",
+          "xdatabind": "var2",
           "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
           "innerhtml": "2"
         }
       },
@@ -148,7 +148,80 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择省份",
+          "controltovalidate": "XDropDownList1",
+          "innerhtml": "省"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择城市",
+          "controltovalidate": "XDropDownList2",
+          "innerhtml": "市"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择姓名",
+          "controltovalidate": "ctrlctl_salesmansalesman_name",
+          "innerhtml": "姓名"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写联系电话",
+          "controltovalidate": "ctrlctl_salesmansalesman_tel",
+          "innerhtml": "联系电话"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写联系邮箱",
+          "controltovalidate": "ctrlctl_salesmansalesman_email",
+          "innerhtml": "联系邮箱"
+        }
+      },
+      "XRequiredFieldValidator6": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator6",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写地址",
+          "controltovalidate": "ctrlctl_salesmansalesman_addr",
+          "innerhtml": "地址"
+        }
+      }
+    },
     "items": [
       "ctrlctl_salesmanCompanyName",
       "XDropDownList1",

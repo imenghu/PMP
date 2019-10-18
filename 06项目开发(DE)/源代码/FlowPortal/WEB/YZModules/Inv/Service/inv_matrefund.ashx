@@ -44,15 +44,41 @@ namespace Inv
 
             string searchType = request.GetString("SearchType", null);
             string keyword = request.GetString("kwd", null);
+            string proc_status = request.GetString("proc_status", null);
 
             //获得查询条件
             string filter = "";
-
+            bool moduleAdmin = true;
+            using (BPMConnection cn = new BPMConnection())
+            {
+                cn.WebOpen();
+                moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "e5441a14-4ade-4aed-bdf2-abad7b68818f", "Admin");
+                if (!moduleAdmin)
+                {
+                    bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "e5441a14-4ade-4aed-bdf2-abad7b68818f", "Company");
+                    if (moduleCompany)
+                    {
+                        MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
+                        List<string> ls = new List<string>();
+                        foreach (Member member in positions)
+                        {
+                            OU ou = member.GetParentOU(cn);
+                            ls.Add(string.Format("Company='{0}'",ou.Code));
+                        }
+                        filter = string.Format("({0})",queryProvider.CombinCondOR(ls.ToArray()));
+                    }
+                    else {
+                        filter = string.Format("CreateUser='{0}'",YZAuthHelper.LoginUserAccount);
+                    }
+                }
+            }
             if (searchType == "QuickSearch")
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%' OR depot_name LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                if (!string.IsNullOrEmpty(proc_status))
+                    filter = queryProvider.CombinCond(filter, String.Format("refund_state LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
             }
 
             if (!String.IsNullOrEmpty(filter))

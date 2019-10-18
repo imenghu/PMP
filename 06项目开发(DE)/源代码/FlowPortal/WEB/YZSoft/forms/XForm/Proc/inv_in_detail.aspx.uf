@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-15T14:18:56.9087994+08:00",
+  "generateAt": "2019-10-18T17:17:37.9724164+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {
@@ -114,9 +114,9 @@
         "attrs": {
           "id": "XChildFormLink1",
           "runat": "server",
-          "xdatabind": "vartestsid",
-          "formapplication": "Proc/proc_tests_add",
-          "innerhtml": "子表单"
+          "express": "vartestsid",
+          "formapplication": "Proc/proc_tests_read",
+          "innerhtml": "化验单"
         }
       },
       "table1": {
@@ -277,7 +277,7 @@
           "width": "100%",
           "bordercolor": "#DCDCDC",
           "xdatabind": "SFDATA:inv_in_detail.arrival_notice_id",
-          "datamap": "pur_task_id->vartaskid;vendor_id->SFDATA:inv_in_detail.vendor_id;vendor_name->SFDATA:inv_in_detail.vendor_name;mat_code->SFDATA:inv_in_detail.mat_code;mat_name->SFDATA:inv_in_detail.mat_name;mat_spesc->SFDATA:inv_in_detail.mat_spesc;arrival_slnum->SFDATA:inv_in_detail.plan_in_slnum;arrival_slnum_unit->SFDATA:inv_in_detail.in_slnum_unit;arrival_stnum_unit->SFDATA:inv_in_detail.in_stnum_unit;sl_st_scale->SFDATA:inv_in_detail.sl_st_scale;arrival_username->varstorename;arrival_usertel->varstoretel;if_tests->SFDATA:inv_in_detail.if_tests",
+          "datamap": "vendor_id->SFDATA:inv_in_detail.vendor_id;vendor_name->SFDATA:inv_in_detail.vendor_name;mat_code->SFDATA:inv_in_detail.mat_code;mat_name->SFDATA:inv_in_detail.mat_name;mat_spesc->SFDATA:inv_in_detail.mat_spesc;arrival_slnum->SFDATA:inv_in_detail.plan_in_slnum;arrival_slnum_unit->SFDATA:inv_in_detail.in_slnum_unit;arrival_stnum_unit->SFDATA:inv_in_detail.in_stnum_unit;sl_st_scale->SFDATA:inv_in_detail.sl_st_scale;arrival_username->varstorename;arrival_usertel->varstoretel;if_tests->SFDATA:inv_in_detail.if_tests",
           "valuetodisplaytext": "DataSource:SFDATA;TableName:proc_arrival_notice;FilterColumn:arrival_notice_id;DisplayColumn:arrival_notice_id"
         }
       },
@@ -307,11 +307,11 @@
         "attrs": {
           "id": "XDropDownList2",
           "runat": "server",
-          "xdatabind": "vartaskid",
-          "datamap": "tests_id->vartestsid",
-          "xdatasource": "DataSource:SFDATA;TableName:proc_pur_task",
-          "valuecolumn": "pur_task_id",
-          "displaycolumn": "pur_task_id"
+          "xdatabind": "vartestsid",
+          "datamap": "tests_result->vartestresult",
+          "xdatasource": "DataSource:SFDATA;TableName:proc_tests;Filter:fore_key_id->SFDATA:inv_in_detail.arrival_notice_id,tests_class->varTestsClass",
+          "valuecolumn": "tests_id",
+          "displaycolumn": "tests_id"
         }
       },
       "XTextBox17": {
@@ -321,16 +321,15 @@
           "runat": "server",
           "width": "100%",
           "bordercolor": "#DCDCDC",
-          "express": "vartestsid",
-          "datamap": "tests_result->vartestresult",
-          "valuetodisplaytext": "DataSource:SFDATA;TableName:proc_tests;FilterColumn:tests_id;DisplayColumn:tests_id",
-          "borderwidth": "1"
+          "xdatabind": "varTestsClass",
+          "borderwidth": "1",
+          "innerhtml": "入库化验"
         }
       },
       "table2": {
         "ctype": "wrap",
         "attrs": {
-          "width": "462",
+          "width": "456",
           "align": "center",
           "border": "0",
           "cellspacing": "0",

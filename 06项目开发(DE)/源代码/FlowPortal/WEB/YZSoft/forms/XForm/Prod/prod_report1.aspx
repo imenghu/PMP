@@ -32,12 +32,12 @@ $Scripts-->
         <table width="960" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
-                    <td width="100" height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td width="100" height="50" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         品名 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report1mat_name" runat="server" FieldName="品名" XDataBind="SFDATA:Prod_report1.mat_name" width="180px" DisableExpress="1"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" DataMap="mat_id->SFDATA:Prod_report1.mat_id;mat_name->SFDATA:Prod_report1.mat_name" DisplayColumns="mat_code:编码;mat_name:品名;mat_spec:规格;base_unit:单位" XDataSource="DataSource:SFDATA;TableName:ctl_material;Filter:first_code->“3”,third_code->“02”,state->“1”" Width="21px"></aspxform:XDataBrowserButton>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" DisplayColumns="first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:" XDataSource='DataSource:SFDATA;TableName:ctl_material;Filter:first_name->"产成品"' Width="21px" DataMap="mat_name->SFDATA:prod_report1.mat_name"></aspxform:XDataBrowserButton>
+                        <aspxform:XTextBox id="ctrlProd_report1mat_name" runat="server" FieldName="品名" XDataBind="SFDATA:Prod_report1.mat_name" width="80%"></aspxform:XTextBox>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         发酵罐编号 
@@ -103,7 +103,7 @@ $Scripts-->
             </tbody>
         </table>
         <br />
-        <table width="800" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
+        <table width="800" tabindex="1" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
             <tbody>
                 <tr>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">

@@ -36,19 +36,19 @@ $Scripts-->
                         供应商名称 
                     </td>
                     <td width="216" style="BORDER-TOP: #d1d1d1 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_name" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_name" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_name" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.vendor_name" width="100%"></aspxform:XTextBox>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: #d1d1d1 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         纳税人登记号 
                     </td>
                     <td width="216" style="BORDER-TOP: #d1d1d1 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendortax_cer_no" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.tax_cer_no" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendortax_cer_no" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.tax_cer_no" width="100%"></aspxform:XTextBox>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: #d1d1d1 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         邮编 
                     </td>
                     <td width="216" style="BORDER-TOP: #d1d1d1 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_zipcode" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_zipcode" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_zipcode" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.vendor_zipcode" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -56,19 +56,19 @@ $Scripts-->
                         联系人 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_contact" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_contact" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_contact" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.vendor_contact" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         联系电话 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_tel" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_tel" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_tel" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.vendor_tel" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         邮箱 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_email" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_email" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_email" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.vendor_email" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -76,19 +76,19 @@ $Scripts-->
                         微信 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_wechat" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_wechat" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_wechat" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.vendor_wechat" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         QQ 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_qq" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_qq" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_qq" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.vendor_qq" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         是否正式供应商 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:ctl_vendor.vendor_state" DisableExpress="1" PromptText="--请选择--">
+                        <aspxform:XDropDownList id="XDropDownList1" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.vendor_state" PromptText="--请选择--">
                             <asp:ListItem Value="1">是</asp:ListItem>
                             <asp:ListItem Value="0">否</asp:ListItem>
                         </aspxform:XDropDownList>
@@ -99,7 +99,7 @@ $Scripts-->
                         地址 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="ctrlctl_vendorvendor_addr" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.vendor_addr" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorvendor_addr" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.vendor_addr" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -107,12 +107,12 @@ $Scripts-->
                         创建人 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorCreateUserName" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.CreateUserName" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorCreateUserName" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.CreateUserName" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         最后更新人</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorUpdateUserName" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.UpdateUserName" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorUpdateUserName" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor.UpdateUserName" width="100%"></aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                     </td>
@@ -128,8 +128,8 @@ $Scripts-->
                         供应商提供物料 
                     </td>
                     <td align="right" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" XClass="YZSoft.Forms.Field.DataBrowserButton" Text="选择物料" Width="66px" XDataSource="DataSource:SFDATA;TableName:ctl_material" PopupWndWidth="-1" PopupWndHeight="-1" UseSubmitBehavior="False" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位" MultiSelect="True" DataMap="mat_code->SFDATA:ctl_vendor_mat.mat_code;mat_name->SFDATA:ctl_vendor_mat.mat_name;mat_spec->SFDATA:ctl_vendor_mat.mat_spec"></aspxform:XDataBrowserButton>
-                        <aspxform:XAddBlockButton id="XAddBlockButton1" runat="server" Text="新增" DataSource="SFDATA" TableName="ctl_vendor_mat"></aspxform:XAddBlockButton>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" XClass="YZSoft.Forms.Field.DataBrowserButton" DataMap="mat_code->SFDATA:ctl_vendor_mat.mat_code;mat_name->SFDATA:ctl_vendor_mat.mat_name;mat_spec->SFDATA:ctl_vendor_mat.mat_spec" MultiSelect="True" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位" UseSubmitBehavior="False" PopupWndHeight="-1" PopupWndWidth="-1" XDataSource="DataSource:SFDATA;TableName:ctl_material" Width="66px" Text="选择物料"></aspxform:XDataBrowserButton>
+                        <aspxform:XAddBlockButton id="XAddBlockButton1" runat="server" Text="新增" TableName="ctl_vendor_mat" DataSource="SFDATA"></aspxform:XAddBlockButton>
                     </td>
                 </tr>
                 <tr>
@@ -148,23 +148,24 @@ $Scripts-->
                 </tr>
                 <tr>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: #d1d1d1 1px solid">
-                        <aspxform:xgridlineno id="XGridLineNo1" runat="server" width="100%" borderwidth="1" borderstyle="None" backcolor="White" textalign="Center">1</aspxform:xgridlineno>
+                        <aspxform:xgridlineno id="XGridLineNo1" runat="server" width="100%" textalign="Center" backcolor="White" borderstyle="None" borderwidth="1">1</aspxform:xgridlineno>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendor_matmat_code" runat="server" width="170px" XDataBind="SFDATA:ctl_vendor_mat.mat_code" DisableExpress="1"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:ctl_material" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位" DataMap="mat_code->SFDATA:ctl_vendor_mat.mat_code;mat_name->SFDATA:ctl_vendor_mat.mat_name;mat_spec->SFDATA:ctl_vendor_mat.mat_spec"></aspxform:XDataBrowserButton>
+                        <aspxform:XTextBox id="ctrlctl_vendor_matmat_code" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor_mat.mat_code" width="170px"></aspxform:XTextBox>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" DataMap="mat_code->SFDATA:ctl_vendor_mat.mat_code;mat_name->SFDATA:ctl_vendor_mat.mat_name;mat_spec->SFDATA:ctl_vendor_mat.mat_spec" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位" XDataSource="DataSource:SFDATA;TableName:ctl_material" Width="21px"></aspxform:XDataBrowserButton>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择物料编码" ControlToValidate="ctrlctl_vendor_matmat_code">物料编码</aspxform:XRequiredFieldValidator>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendor_matmat_name" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor_mat.mat_name" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendor_matmat_name" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor_mat.mat_name" width="100%"></aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendor_matmat_spec" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor_mat.mat_spec" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendor_matmat_spec" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor_mat.mat_spec" width="100%"></aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendor_matCreateUserName" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor_mat.CreateUserName" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendor_matCreateUserName" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor_mat.CreateUserName" width="100%"></aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendor_matUpdateUserName" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor_mat.UpdateUserName" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendor_matUpdateUserName" runat="server" DisableExpress="1" XDataBind="SFDATA:ctl_vendor_mat.UpdateUserName" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>
@@ -177,7 +178,7 @@ $Scripts-->
                         创建人ID 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorcreate_userid" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.create_userid"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorcreate_userid" runat="server" XDataBind="SFDATA:ctl_vendor.create_userid" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -185,7 +186,7 @@ $Scripts-->
                         最后更新人ID 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_vendorlastupdate_userid" runat="server" width="100%" XDataBind="SFDATA:ctl_vendor.lastupdate_userid"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_vendorlastupdate_userid" runat="server" XDataBind="SFDATA:ctl_vendor.lastupdate_userid" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>

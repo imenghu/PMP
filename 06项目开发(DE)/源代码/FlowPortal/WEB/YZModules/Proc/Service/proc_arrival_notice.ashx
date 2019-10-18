@@ -54,7 +54,7 @@ public class proc_arrival_notice : YZServiceHandler
         {
             //应用关键字过滤
             if (!string.IsNullOrEmpty(keyword))
-                filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%' or vendor_name LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
             if (!string.IsNullOrEmpty(proc_type))
                 filter = queryProvider.CombinCond(filter, String.Format("notice_state LIKE N'%{0}%'", queryProvider.EncodeText(proc_type)));
             if (!string.IsNullOrEmpty(proc_status))
@@ -69,7 +69,7 @@ public class proc_arrival_notice : YZServiceHandler
             filter = " WHERE " + filter;
 
         //获得排序子句
-        string order = request.GetSortString("TaskID");
+        string order = request.GetSortString("arrival_notice_id");
 
         //获得Query
         string query = @"
@@ -114,7 +114,7 @@ public class proc_arrival_notice : YZServiceHandler
                         if (totalRows == 0)
                             totalRows = reader.ReadInt32("TotalRows");
 
-                        item["TaskID"] = reader.ReadInt32("TaskID");
+                        //item["TaskID"] = reader.ReadInt32("TaskID");
                         
                         item["arrival_notice_id"] = reader.ReadInt32("arrival_notice_id");
                         item["in_detail_id"] = reader.ReadInt32("in_detail_id");
@@ -129,7 +129,6 @@ public class proc_arrival_notice : YZServiceHandler
                         item["arrival_username"] = reader.ReadString("arrival_username");
                         item["arrival_usertel"] = reader.ReadString("arrival_usertel");
                         item["plan_arrival_price"] = reader.ReadString("plan_arrival_price");
-                        item["storename"] = reader.ReadString("storename");
                         item["create_time"] = reader.ReadString("create_time");
                         item["plan_arrival_time"] = reader.ReadString("plan_arrival_time");
                         item["notice_state"] = reader.ReadString("notice_state");

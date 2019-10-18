@@ -58,7 +58,7 @@ public class proc_tests : YZServiceHandler
             if (!string.IsNullOrEmpty(proc_type))
                 filter = queryProvider.CombinCond(filter, String.Format("tests_class LIKE N'%{0}%'", queryProvider.EncodeText(proc_type)));
             if (!string.IsNullOrEmpty(proc_status))
-                filter = queryProvider.CombinCond(filter, String.Format("tests_result LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
+                filter = queryProvider.CombinCond(filter, String.Format("test_happen LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
             if (!string.IsNullOrEmpty(vendor))
                 filter = queryProvider.CombinCond(filter, String.Format("vendor_name LIKE N'%{0}%'", queryProvider.EncodeText(vendor)));
             if (!string.IsNullOrEmpty(mat_name))
@@ -121,7 +121,6 @@ public class proc_tests : YZServiceHandler
                         item["mat_code"] = reader.ReadString("mat_code");
                         item["mat_name"] = reader.ReadString("mat_name");
                         item["mat_spesc"] = reader.ReadString("mat_spesc");
-                       
                         item["tests_result"] = reader.ReadString("tests_result");
                         item["tests_remarks"] = reader.ReadString("tests_remarks");
                   

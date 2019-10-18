@@ -204,13 +204,9 @@
         return value == 0 ? "<font color='gray'>未化验</font>" : "已化验";
     },
     renderStatus: function (value) {
-        var color = "red",
+        var color = "gray",
             str = "";
         switch (value) {
-            case '0':
-                color = "gray";
-                str = "合格";
-                break;
             case "1":
                 color = "gray";
                 str = "合格";
@@ -276,7 +272,7 @@
     read: function (rec) {
         var me = this;
 
-        YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_tests_edit', rec.data.tests_id, 'Read', Ext.apply({
+        YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_tests_read', rec.data.tests_id, 'Read', Ext.apply({
             sender: me,
             title: Ext.String.format('化验单'),
         }, me.dlgCfg));

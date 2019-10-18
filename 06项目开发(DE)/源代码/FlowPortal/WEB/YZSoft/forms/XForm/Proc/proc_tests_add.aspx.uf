@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-15T14:31:36.25837+08:00",
+  "generateAt": "2019-10-18T15:20:41.5844122+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -20,7 +20,7 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.CreateUserName",
+          "xdatabind": "SFDATA:proc_tests.UpdateUserName",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "disableexpress": "1"
@@ -107,13 +107,19 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_tests.tests_class",
           "width": "100%",
-          "prompttext": "请选择"
+          "prompttext": "--请选择--"
         },
         "childNodes": [
           {
             "ctype": "asp:listitem",
             "attrs": {
               "innerhtml": "退库化验"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "入库化验"
             }
           }
         ]
@@ -125,7 +131,7 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_tests.tests_result",
           "width": "100%",
-          "prompttext": "请选择"
+          "prompttext": "--请选择--"
         },
         "childNodes": [
           {
@@ -216,17 +222,6 @@
           "rows": 1
         }
       },
-      "XTextBox7": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "XTextBox7",
-          "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.mat_id",
-          "bordercolor": "#DCDCDC",
-          "width": "80%",
-          "disableexpress": "1"
-        }
-      },
       "XTextBox8": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
@@ -241,7 +236,7 @@
       "table2": {
         "ctype": "wrap",
         "attrs": {
-          "width": "800",
+          "width": "794",
           "align": "center",
           "border": "0",
           "cellspacing": "0",
@@ -251,7 +246,6 @@
         },
         "ctypeorg": "table",
         "items": [
-          "XTextBox7",
           "XTextBox8"
         ]
       }

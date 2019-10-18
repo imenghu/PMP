@@ -104,7 +104,7 @@
                         width: 220,
                         createSearchPanel: function () {
                             var pnl = Ext.create({
-                                xclass: 'YZModules.Inv.Panel.inv_depot_detail_SearchPanel',
+                                xclass: 'YZModules.Inv.Panel.inv_depot_SearchPanel',
                                 region: 'north',
                                 store: me.store
                             });

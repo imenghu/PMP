@@ -38,19 +38,19 @@ $Scripts-->
                         公司名称 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_depotCompanyName" runat="server" XDataBind="SFDATA:ctl_depot.CompanyName" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_depotCompanyName" runat="server" DisableExpress="1" width="100%" XDataBind="SFDATA:ctl_depot.CompanyName"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         部门名称 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_depotDeptName" runat="server" XDataBind="SFDATA:ctl_depot.DeptName" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_depotDeptName" runat="server" DisableExpress="1" width="100%" XDataBind="SFDATA:ctl_depot.DeptName"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         库房名称 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_depotdepot_name" runat="server" XDataBind="SFDATA:ctl_depot.depot_name" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_depotdepot_name" runat="server" width="100%" XDataBind="SFDATA:ctl_depot.depot_name"></aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>
@@ -63,7 +63,7 @@ $Scripts-->
                         公司编码 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_depotCompany" runat="server" XDataBind="SFDATA:ctl_depot.Company" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_depotCompany" runat="server" width="100%" XDataBind="SFDATA:ctl_depot.Company"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -71,7 +71,14 @@ $Scripts-->
                         部门编码 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_depotDept" runat="server" XDataBind="SFDATA:ctl_depot.Dept" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_depotDept" runat="server" width="100%" XDataBind="SFDATA:ctl_depot.Dept"></aspxform:XTextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写库房名称" ControlToValidate="ctrlctl_depotdepot_name">库房名称</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
                     </td>
                 </tr>
             </tbody>

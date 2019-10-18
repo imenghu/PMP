@@ -34,7 +34,6 @@ CREATE TABLE dbo.proc_pur_task
   create_time datetime2  null ,
   update_time datetime2  null ,
   pur_task_userid_name nvarchar(40) null ,
-  TaskID int  null ,
   Company varchar(50) null ,
   CompanyName varchar(50) null ,
   Dept varchar(50) null ,

@@ -12,20 +12,11 @@
     <title>BPM Form</title>
     <link href="../../style/FormGray.css" rel="stylesheet" />
      <link rel="stylesheet" type="text/css" href="../../Scripts/XCommon.js" />
-    <script>
-        function getQueryString(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-            var r = window.location.search.substr(1).match(reg);
-            if (r != null) return unescape(r[2]); return null;
+     <script>
+        function getTaskState(val){
+            return val==1?"2":"1";
         }
-        Ext.onReady(function () {
-            var purtaskid=getQueryString('proctaskid');
-            if(purtaskid!=null){
-                Ext.get("xtxtPurTaskId").down('.yz-xform-field-ele').dom.value = purtaskid;
-                XFormOnChange(document.getElementById("xtxtPurTaskId"));
-            }
-        })
-    </script>
+     </script>
 </head>
 <body>
     <form runat="server">
@@ -60,9 +51,14 @@ $Scripts-->
                                     <td width="158" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         <aspxform:XTextBox id="XTextBox2" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.DeptName" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
+                                    <td width="158" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        是否提交审核</td>
                                     <td width="158" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                    </td>
-                                    <td width="158" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XDropDownList id="XDropDownList6" runat="server" XDataBind="varIsSubmit" PromptText="--请选择--">
+                                            <asp:ListItem Value="1">是</asp:ListItem>
+                                            <asp:ListItem Value="0">否</asp:ListItem>
+                                        </aspxform:XDropDownList>
+                                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择是否提交审核?选择是,会提交询价到采购部经理审核" ControlToValidate="XDropDownList6">是否提交</aspxform:XRequiredFieldValidator>
                                     </td>
                                 </tr>
                                 <tr>
@@ -120,19 +116,19 @@ $Scripts-->
                                     <td height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         计划总金额</td>
                                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox14" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.item_price"></aspxform:XTextBox>
+                                        <aspxform:XTextBox id="XTextBox14" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.item_price" DisableExpress="1"></aspxform:XTextBox>
                                     </td>
                                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         预计到货时间</td>
                                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XDateTimePicker id="XDateTimePicker3" runat="server" BorderWidth="1" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_pur_task.plan_arrival_time"></aspxform:XDateTimePicker>
+                                        <aspxform:XDateTimePicker id="XDateTimePicker3" runat="server" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_pur_task.plan_arrival_time" Width="100%" DisplayOnly="True"></aspxform:XDateTimePicker>
                                     </td>
                                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
                                         是否紧急</td>
                                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
-                                        <aspxform:XDropDownList id="XDropDownList5" runat="server" XDataBind="SFDATA:proc_pur_task.if_urg" PromptText="--请选择--">
+                                        <aspxform:XDropDownList id="XDropDownList5" runat="server" XDataBind="SFDATA:proc_pur_task.if_urg" DisableExpress="1" PromptText="--请选择--">
+                                            <asp:ListItem Value="0">否</asp:ListItem>
                                             <asp:ListItem Value="1">是</asp:ListItem>
-                                            <asp:ListItem Value="2">否</asp:ListItem>
                                         </aspxform:XDropDownList>
                                     </td>
                                 </tr>
@@ -153,8 +149,6 @@ $Scripts-->
                                     <tr>
                                         <td width="58" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                                             序号</td>
-                                        <td width="58" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            选择</td>
                                         <td width="150" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             供应商名称</td>
                                         <td width="100" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
@@ -184,16 +178,13 @@ $Scripts-->
                                     </tr>
                                     <tr>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
-                                            <aspxform:XGridLineNo id="XGridLineNo1" runat="server" BackColor="White" TextAlign="Center" BorderStyle="None" Width="100%">1</aspxform:XGridLineNo>
-                                        </td>
-                                        <td align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XCheckBox id="XCheckBox1" runat="server" Width="40px"></aspxform:XCheckBox>
+                                            <aspxform:XGridLineNo id="XGridLineNo1" runat="server" Width="100%" BackColor="White" TextAlign="Center" BorderStyle="None">1</aspxform:XGridLineNo>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             <aspxform:XTextBox id="XTextBox17" runat="server" BorderColor="#DCDCDC" width="110px" XDataBind="SFDATA:proc_pur_enquiry.vendor_name" DisableExpress="1"></aspxform:XTextBox>
                                             <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:ctl_vendor" DisplayColumns="vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址;vendor_wechat:微信;vendor_qq:QQ" DataMap="vendor_id->SFDATA:proc_pur_enquiry.vendor_id"></aspxform:XDataBrowserButton>
-                                            <aspxform:XTextBox id="XTextBox9" runat="server" BorderColor="#DCDCDC" width="120px" XDataBind="SFDATA:proc_pur_enquiry.vendor_id" ValueToDisplayText="DataSource:SFDATA;TableName:ctl_vendor;FilterColumn:vendor_id;DisplayColumn:vendor_id" HiddenExpress="1" DisableExpress="1" DataMap="vendor_code->SFDATA:proc_pur_enquiry.vendor_code;vendor_name->SFDATA:proc_pur_enquiry.vendor_name;vendor_contact->varContact;vendor_tel->varTel"></aspxform:XTextBox>
-                                            <aspxform:XTextBox id="XTextBox16" runat="server" BorderColor="#DCDCDC" width="120px" XDataBind="SFDATA:proc_pur_enquiry.vendor_code" HiddenExpress="1" DisableExpress="1"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox9" runat="server" BorderColor="#DCDCDC" width="120px" XDataBind="SFDATA:proc_pur_enquiry.vendor_id" DisableExpress="1" DataMap="vendor_code->SFDATA:proc_pur_enquiry.vendor_code;vendor_name->SFDATA:proc_pur_enquiry.vendor_name;vendor_contact->varContact;vendor_tel->varTel" ValueToDisplayText="DataSource:SFDATA;TableName:ctl_vendor;FilterColumn:vendor_id;DisplayColumn:vendor_id" HiddenExpress="1"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox16" runat="server" BorderColor="#DCDCDC" width="120px" XDataBind="SFDATA:proc_pur_enquiry.vendor_code" DisableExpress="1" HiddenExpress="1"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             <aspxform:XTextBox id="XTextBox18" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="varContact" DisableExpress="1"></aspxform:XTextBox>
@@ -208,16 +199,16 @@ $Scripts-->
                                             <aspxform:XDateTimePicker id="XDateTimePicker2" runat="server" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_pur_enquiry.plan_arrival_time"></aspxform:XDateTimePicker>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_tests" PromptText="--请选择--" Width="100%">
+                                            <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_tests" Width="100%" PromptText="--请选择--">
                                                 <asp:ListItem Value="1">是</asp:ListItem>
-                                                <asp:ListItem Value="2">否</asp:ListItem>
+                                                <asp:ListItem Value="0">否</asp:ListItem>
                                             </aspxform:XDropDownList>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                             <aspxform:XTextBox id="XTextBox20" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.quotation"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_tax" PromptText="--请选择--" Width="100%">
+                                            <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_tax" Width="100%" PromptText="--请选择--">
                                                 <asp:ListItem Value="1">是</asp:ListItem>
                                                 <asp:ListItem Value="2">否</asp:ListItem>
                                             </aspxform:XDropDownList>
@@ -226,13 +217,13 @@ $Scripts-->
                                             <aspxform:XTextBox id="XTextBox21" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.tax_rate"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList3" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_freight" PromptText="--请选择--" Width="100%">
+                                            <aspxform:XDropDownList id="XDropDownList3" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_freight" Width="100%" PromptText="--请选择--">
                                                 <asp:ListItem Value="1">是</asp:ListItem>
                                                 <asp:ListItem Value="2">否</asp:ListItem>
                                             </aspxform:XDropDownList>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList4" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_vat_ticket" PromptText="--请选择--" Width="100%">
+                                            <aspxform:XDropDownList id="XDropDownList4" runat="server" XDataBind="SFDATA:proc_pur_enquiry.if_vat_ticket" Width="100%" PromptText="--请选择--">
                                                 <asp:ListItem Value="1">是</asp:ListItem>
                                                 <asp:ListItem Value="2">否</asp:ListItem>
                                             </aspxform:XDropDownList>
@@ -256,16 +247,15 @@ $Scripts-->
             <tbody>
                 <tr>
                     <td width="154" height="34">
-                        <aspxform:XTextBox id="xtxtPurTaskId" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.pur_task_id" ValueToDisplayText></aspxform:XTextBox>
-                    </td>
+                        任务状态</td>
                     <td width="154">
+                        <aspxform:XTextBox id="XTextBox15" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.task_state" Express="javascript('getTaskState',varIsSubmit)">2</aspxform:XTextBox>
                     </td>
                     <td width="154">
                     </td>
                 </tr>
                 <tr>
                     <td height="34">
-                        <aspxform:XTextBox id="XTextBox13" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_enquiry.state">1</aspxform:XTextBox>
                     </td>
                     <td>
                     </td>
@@ -274,7 +264,14 @@ $Scripts-->
                 </tr>
                 <tr>
                     <td height="34">
-                        <aspxform:XTextBox id="XTextBox15" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_pur_task.task_state">2</aspxform:XTextBox>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                     </td>
                     <td>
                     </td>

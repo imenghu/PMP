@@ -101,7 +101,7 @@
                                     <td width="25%" class="xfld">
                                         化验单查询</td>
                                     <td width="25%">
-                                        <aspxform:XChildFormLink id="XChildFormLink1" runat="server" XDataBind="vartestsid" FormApplication="Proc/proc_tests_add">子表单</aspxform:XChildFormLink>
+                                        <aspxform:XChildFormLink id="XChildFormLink1" runat="server" Express="vartestsid" FormApplication="Proc/proc_tests_read">化验单</aspxform:XChildFormLink>
                                     </td>
                                 </tr>
                             </tbody>
@@ -185,19 +185,19 @@
             </tbody>
         </table>
         <br />
-        <table width="462" align="center" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
+        <table width="456" align="center" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
             <tbody>
                 <tr>
-                    <td width="154" height="34">
+                    <td width="152" height="34">
                         到货通知主键</td>
-                    <td width="154">
-                        <aspxform:XTextBox id="xtxtPurTaskId" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.arrival_notice_id" DataMap="pur_task_id->vartaskid;vendor_id->SFDATA:inv_in_detail.vendor_id;vendor_name->SFDATA:inv_in_detail.vendor_name;mat_code->SFDATA:inv_in_detail.mat_code;mat_name->SFDATA:inv_in_detail.mat_name;mat_spesc->SFDATA:inv_in_detail.mat_spesc;arrival_slnum->SFDATA:inv_in_detail.plan_in_slnum;arrival_slnum_unit->SFDATA:inv_in_detail.in_slnum_unit;arrival_stnum_unit->SFDATA:inv_in_detail.in_stnum_unit;sl_st_scale->SFDATA:inv_in_detail.sl_st_scale;arrival_username->varstorename;arrival_usertel->varstoretel;if_tests->SFDATA:inv_in_detail.if_tests" ValueToDisplayText="DataSource:SFDATA;TableName:proc_arrival_notice;FilterColumn:arrival_notice_id;DisplayColumn:arrival_notice_id"></aspxform:XTextBox>
+                    <td width="153">
+                        <aspxform:XTextBox id="xtxtPurTaskId" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.arrival_notice_id" DataMap="vendor_id->SFDATA:inv_in_detail.vendor_id;vendor_name->SFDATA:inv_in_detail.vendor_name;mat_code->SFDATA:inv_in_detail.mat_code;mat_name->SFDATA:inv_in_detail.mat_name;mat_spesc->SFDATA:inv_in_detail.mat_spesc;arrival_slnum->SFDATA:inv_in_detail.plan_in_slnum;arrival_slnum_unit->SFDATA:inv_in_detail.in_slnum_unit;arrival_stnum_unit->SFDATA:inv_in_detail.in_stnum_unit;sl_st_scale->SFDATA:inv_in_detail.sl_st_scale;arrival_username->varstorename;arrival_usertel->varstoretel;if_tests->SFDATA:inv_in_detail.if_tests" ValueToDisplayText="DataSource:SFDATA;TableName:proc_arrival_notice;FilterColumn:arrival_notice_id;DisplayColumn:arrival_notice_id"></aspxform:XTextBox>
                     </td>
-                    <td width="154">
+                    <td width="151">
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td height="34">
                         供应商id</td>
                     <td>
                         <aspxform:XTextBox id="XTextBox16" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.vendor_id"></aspxform:XTextBox>
@@ -206,7 +206,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td height="34">
                         仓库名称</td>
                     <td>
                         <aspxform:XTextBox id="XTextBox12" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.depot_name" BorderWidth="1"></aspxform:XTextBox>
@@ -216,18 +216,18 @@
                 </tr>
                 <tr>
                     <td height="34">
-                        关联任务获取化验单</td>
+                        获取化验单</td>
                     <td>
-                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="vartaskid" DataMap="tests_id->vartestsid" XDataSource="DataSource:SFDATA;TableName:proc_pur_task" ValueColumn="pur_task_id" DisplayColumn="pur_task_id"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="vartestsid" DataMap="tests_result->vartestresult" XDataSource="DataSource:SFDATA;TableName:proc_tests;Filter:fore_key_id->SFDATA:inv_in_detail.arrival_notice_id,tests_class->varTestsClass" ValueColumn="tests_id" DisplayColumn="tests_id"></aspxform:XDropDownList>
                     </td>
                     <td>
                     </td>
                 </tr>
                 <tr>
-                    <td height="34">
-                        关联化验单获取结果</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox17" runat="server" width="100%" BorderColor="#DCDCDC" Express="vartestsid" DataMap="tests_result->vartestresult" ValueToDisplayText="DataSource:SFDATA;TableName:proc_tests;FilterColumn:tests_id;DisplayColumn:tests_id" BorderWidth="1"></aspxform:XTextBox>
+                        入库化验</td>
+                    <td>
+                        <aspxform:XTextBox id="XTextBox17" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="varTestsClass" BorderWidth="1">入库化验</aspxform:XTextBox>
                     </td>
                     <td>
                     </td>

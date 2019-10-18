@@ -61,7 +61,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
                     { header: '是否委外', dataIndex: 'if_outsource', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderYesOrNo },
                     { header: '总金额（元）', dataIndex: 'total_price', width: 100, align: 'center', sortable: true },
                     { header: '审核状态', dataIndex: 'approval_state', flex: 1, align: 'center', sortable: true, renderer: XYSoft.Render.renderStatus },
-                    { header: '操作', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.finish, listeners: { scope: me, click: me.finishClick } },
+                    { header: '操作', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {
@@ -196,17 +196,6 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
         else
             this.store.reload($S.loadMask.activate);
     },
-    finish: function (value, metaData, record) {
-        return "<a href='#'>查看</a>";
-    },
-    finishClick: function (rec, view, cell, recordIndex, cellIndex, e) {
-        var me = this;
-        YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_contract', me.store.getAt(recordIndex).data.contract_id, 'Read', Ext.apply({
-            sender: me,
-            title: '采购合同',
-         
-        }, me.dlgCfg));
-    },
 
     renderNo: function (value, metaData, record) {
         return Ext.String.format("<a href='#'>{0}</a>", Ext.util.Format.text(value));
@@ -214,7 +203,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
 
     onClickNo: function (view, cell, recordIndex, cellIndex, e) {
         if (e.getTarget().tagName == 'A')
-            this.read(this.store.getAt(recordIndex));
+            this.readTask(this.store.getAt(recordIndex));
     },
     Status: function (value) {
         debugger
@@ -236,7 +225,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
         return Ext.String.format("<font>{0}</font>", Ext.util.Format.text(str));
     },
     renderRead: function (value, metaData, record) {
-        return "<a href='#'>跟踪</a>";
+        return "<a href='#'>查看</a>";
     },
 
     addNew: function () {
@@ -258,13 +247,21 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
 
     read: function (rec) {
         var me = this;
+
+        YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_contract', rec.data.contract_id, 'Read', Ext.apply({
+            sender: me,
+            title: '采购合同'
+        }, me.dlgCfg));
+    },
+
+    readTask: function (rec) {
+        var me = this;
         //查看已发起的流程
         YZSoft.bpm.src.ux.FormManager.openTaskForRead(rec.data.TaskID, Ext.apply({
             sender: me,
             title: Ext.String.format('采购合同审批')
         }));
     },
-
     deleteSelection: function () {
         var me = this,
             recs = me.grid.getSelectionModel().getSelection(),

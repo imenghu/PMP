@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-14T18:41:01.0816153+08:00",
+  "generateAt": "2019-10-16T20:55:32.4468757+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,29 +9,54 @@
         "attrs": {
           "id": "ctrlprod_report3product_line",
           "runat": "server",
-          "fieldname": "产线",
-          "xdatabind": "SFDATA:prod_report3.product_line",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_report3.workshop",
+          "fieldname": "产线"
         }
       },
-      "ctrlprod_report3workshop": {
-        "ctype": "aspxform:xtextbox",
+      "XRadioButtonList1": {
+        "ctype": "aspxform:xradiobuttonlist",
         "attrs": {
-          "id": "ctrlprod_report3workshop",
+          "id": "XRadioButtonList1",
           "runat": "server",
-          "fieldname": "车间",
-          "xdatabind": "SFDATA:prod_report3.workshop",
-          "width": "100%"
-        }
+          "xdatabind": "SFDATA:prod_report3.product_line",
+          "repeatdirection": "Horizontal"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "瓶线"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "罐线"
+            }
+          }
+        ]
       },
       "ctrlprod_report3yield": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
           "id": "ctrlprod_report3yield",
           "runat": "server",
-          "fieldname": "产量",
+          "width": "100%",
           "xdatabind": "SFDATA:prod_report3.yield",
-          "width": "100%"
+          "fieldname": "产量"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_name->\"产成品\"",
+          "displaycolumns": "first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:;base_unit:",
+          "datamap": "mat_name->SFDATA:prod_report3.Prod_name;mat_spec->SFDATA:prod_report3.spec",
+          "appendmode": "ClearAndAppend"
         }
       },
       "ctrlprod_report3Prod_name": {
@@ -39,9 +64,9 @@
         "attrs": {
           "id": "ctrlprod_report3Prod_name",
           "runat": "server",
-          "fieldname": "品名",
+          "width": "80%",
           "xdatabind": "SFDATA:prod_report3.Prod_name",
-          "width": "100%"
+          "fieldname": "品名"
         }
       },
       "ctrlprod_report3spec": {
@@ -49,9 +74,10 @@
         "attrs": {
           "id": "ctrlprod_report3spec",
           "runat": "server",
-          "fieldname": "规格",
+          "width": "100%",
           "xdatabind": "SFDATA:prod_report3.spec",
-          "width": "100%"
+          "fieldname": "规格",
+          "readonly": "True"
         }
       },
       "ctrlprod_report3input_date": {
@@ -59,9 +85,9 @@
         "attrs": {
           "id": "ctrlprod_report3input_date",
           "runat": "server",
-          "fieldname": "日期",
+          "width": "100%",
           "xdatabind": "SFDATA:prod_report3.input_date",
-          "width": "100%"
+          "fieldname": "日期"
         }
       },
       "ctrlprod_report3today_saka_amount": {
@@ -69,9 +95,9 @@
         "attrs": {
           "id": "ctrlprod_report3today_saka_amount",
           "runat": "server",
-          "fieldname": "本日接清酒量",
+          "width": "100%",
           "xdatabind": "SFDATA:prod_report3.today_saka_amount",
-          "width": "100%"
+          "fieldname": "本日接清酒量"
         }
       },
       "ctrlprod_report3today_product_num": {
@@ -79,9 +105,9 @@
         "attrs": {
           "id": "ctrlprod_report3today_product_num",
           "runat": "server",
-          "fieldname": "本日成品量",
+          "width": "100%",
           "xdatabind": "SFDATA:prod_report3.today_product_num",
-          "width": "100%"
+          "fieldname": "本日成品量"
         }
       },
       "ctrlprod_report3today_loss": {
@@ -89,9 +115,9 @@
         "attrs": {
           "id": "ctrlprod_report3today_loss",
           "runat": "server",
-          "fieldname": "本日酒损",
+          "width": "100%",
           "xdatabind": "SFDATA:prod_report3.today_loss",
-          "width": "100%"
+          "fieldname": "本日酒损"
         }
       },
       "ctrlprod_report3memo": {
@@ -99,9 +125,9 @@
         "attrs": {
           "id": "ctrlprod_report3memo",
           "runat": "server",
-          "fieldname": "备注",
+          "width": "100%",
           "xdatabind": "SFDATA:prod_report3.memo",
-          "width": "100%"
+          "fieldname": "备注"
         }
       },
       "ctrlprod_report3create_time": {
@@ -109,15 +135,66 @@
         "attrs": {
           "id": "ctrlprod_report3create_time",
           "runat": "server",
-          "fieldname": "创建时间",
+          "width": "100%",
           "xdatabind": "SFDATA:prod_report3.create_time",
-          "width": "100%"
+          "fieldname": "创建时间"
+        }
+      },
+      "ctrlProd_report1mat_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report1mat_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_report1.mat_id",
+          "fieldname": "品名编号"
+        }
+      },
+      "ctrlProd_report1Company": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report1Company",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_report1.Company",
+          "fieldname": "公司编码"
+        }
+      },
+      "ctrlProd_report1CompanyName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report1CompanyName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_report1.CompanyName",
+          "fieldname": "公司名称"
+        }
+      },
+      "ctrlProd_report1Dept": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report1Dept",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_report1.Dept",
+          "fieldname": "部门编码"
+        }
+      },
+      "ctrlProd_report1DeptName": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlProd_report1DeptName",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_report1.DeptName",
+          "fieldname": "部门名称"
         }
       },
       "table1": {
         "ctype": "wrap",
         "attrs": {
           "width": "800",
+          "tabindex": "1",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -127,14 +204,21 @@
           "id": "table1"
         },
         "ctypeorg": "table",
-        "items": []
+        "items": [
+          "ctrlProd_report1mat_id",
+          "ctrlProd_report1Company",
+          "ctrlProd_report1CompanyName",
+          "ctrlProd_report1Dept",
+          "ctrlProd_report1DeptName"
+        ]
       }
     },
     "validators": {},
     "items": [
       "ctrlprod_report3product_line",
-      "ctrlprod_report3workshop",
+      "XRadioButtonList1",
       "ctrlprod_report3yield",
+      "XDataBrowserButton1",
       "ctrlprod_report3Prod_name",
       "ctrlprod_report3spec",
       "ctrlprod_report3input_date",

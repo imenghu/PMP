@@ -35,6 +35,10 @@ CREATE TABLE dbo.proc_arrival_notice
   StoreUserName varchar(50) null ,
   CreateUser varchar(50) null ,
   CreateUserName varchar(50) null ,
+  Company varchar(50) null ,
+  CompanyName varchar(50) null ,
+  Dept varchar(50) null ,
+  DeptName varchar(50) null ,
   CONSTRAINT PK_proc_arrival_notice PRIMARY KEY  CLUSTERED
   (
     arrival_notice_id

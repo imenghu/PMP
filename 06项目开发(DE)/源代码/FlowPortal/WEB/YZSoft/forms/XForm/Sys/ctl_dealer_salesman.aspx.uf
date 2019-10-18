@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-11T14:32:15.812092+08:00",
+  "generateAt": "2019-10-18T15:09:04.2264669+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -236,7 +236,7 @@
       "table2": {
         "ctype": "wrap",
         "attrs": {
-          "width": "800",
+          "width": "758",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -253,7 +253,20 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator7": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator7",
+          "runat": "server",
+          "controltovalidate": "XTextBox3",
+          "errormessage": "请选择经销商名称",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "经销商名称"
+        }
+      }
+    },
     "items": [
       "ctrlctl_salesmanCompanyName",
       "XDropDownList1",

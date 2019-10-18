@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-16T19:32:24.7290944+08:00",
+  "generateAt": "2019-10-18T11:27:19.1125359+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,11 +9,11 @@
         "attrs": {
           "id": "XDropDownList1",
           "runat": "server",
-          "prompttext": "--请选择--",
-          "displaycolumn": "name",
-          "valuecolumn": "id",
+          "xdatabind": "SFDATA:ctl_dealer.province_id",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1",
-          "xdatabind": "SFDATA:ctl_dealer.province_id"
+          "valuecolumn": "id",
+          "displaycolumn": "name",
+          "prompttext": "--请选择--"
         }
       },
       "XDropDownList2": {
@@ -21,11 +21,11 @@
         "attrs": {
           "id": "XDropDownList2",
           "runat": "server",
-          "prompttext": "--请选择--",
-          "displaycolumn": "name",
-          "valuecolumn": "id",
+          "xdatabind": "SFDATA:ctl_dealer.city_id",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_dealer.province_id",
-          "xdatabind": "SFDATA:ctl_dealer.city_id"
+          "valuecolumn": "id",
+          "displaycolumn": "name",
+          "prompttext": "--请选择--"
         }
       },
       "ctrlctl_dealerdealer_name": {
@@ -107,8 +107,8 @@
           "runat": "server",
           "xdatabind": "SFDATA:ctl_dealer.dealer_addr",
           "width": "100%",
-          "textmode": "MultiLine",
-          "rows": "5"
+          "rows": "5",
+          "textmode": "MultiLine"
         }
       },
       "ctrlctl_dealerdealer_remarks": {
@@ -118,8 +118,8 @@
           "runat": "server",
           "xdatabind": "SFDATA:ctl_dealer.dealer_remarks",
           "width": "100%",
-          "textmode": "MultiLine",
-          "rows": "5"
+          "rows": "5",
+          "textmode": "MultiLine"
         }
       },
       "table1": {
@@ -144,8 +144,8 @@
           "runat": "server",
           "xdatabind": "var1",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
           "innerhtml": "1"
         }
       },
@@ -156,8 +156,8 @@
           "runat": "server",
           "xdatabind": "var2",
           "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
           "innerhtml": "2"
         }
       },
@@ -179,7 +179,140 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择省份",
+          "controltovalidate": "XDropDownList1",
+          "innerhtml": "省"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择城市",
+          "controltovalidate": "XDropDownList2",
+          "innerhtml": "市"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写经销商名称",
+          "controltovalidate": "ctrlctl_dealerdealer_name",
+          "innerhtml": "经销商名称"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写纳税人登记号",
+          "controltovalidate": "ctrlctl_dealertax_cer_no",
+          "innerhtml": "纳税人登记号"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写联系人",
+          "controltovalidate": "ctrlctl_dealerdealer_contact",
+          "innerhtml": "联系人"
+        }
+      },
+      "XRequiredFieldValidator6": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator6",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写联系人电话",
+          "controltovalidate": "ctrlctl_dealerdealer_tel",
+          "innerhtml": "联系人电话"
+        }
+      },
+      "XRequiredFieldValidator7": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator7",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写联系人邮箱",
+          "controltovalidate": "ctrlctl_dealerdealer_email",
+          "innerhtml": "联系人邮箱"
+        }
+      },
+      "XRequiredFieldValidator8": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator8",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写邮编",
+          "controltovalidate": "ctrlctl_dealerdealer_zipcode",
+          "innerhtml": "邮编"
+        }
+      },
+      "XRequiredFieldValidator9": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator9",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写微信",
+          "controltovalidate": "ctrlctl_dealerdealer_wechat",
+          "innerhtml": "微信"
+        }
+      },
+      "XRequiredFieldValidator10": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator10",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写QQ ",
+          "controltovalidate": "ctrlctl_dealerdealer_qq",
+          "innerhtml": "QQ "
+        }
+      },
+      "XRequiredFieldValidator11": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator11",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写地址",
+          "controltovalidate": "XTextBox1",
+          "innerhtml": "地址"
+        }
+      }
+    },
     "items": [
       "XDropDownList1",
       "XDropDownList2",

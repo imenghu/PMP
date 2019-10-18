@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-16T18:47:29.5052618+08:00",
+  "generateAt": "2019-10-18T15:03:56.1888373+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -341,7 +341,32 @@
         }
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "controltovalidate": "XTextBox2",
+          "errormessage": "请填写单位名称",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "单位名称"
+        }
+      },
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "controltovalidate": "XTextBox3",
+          "errormessage": "请填写比例分子",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "比例分子"
+        }
+      }
+    },
     "items": [
       "XDropDownList5",
       "XDropDownList6",

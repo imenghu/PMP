@@ -28,6 +28,8 @@ CREATE TABLE dbo.proc_tests
   DeptName varchar(50) null ,
   CreateUser varchar(50) null ,
   CreateUserName varchar(50) null ,
+  UpdateUser varchar(50) null ,
+  UpdateUserName varchar(50) null ,
   CONSTRAINT PK_proc_tests_1 PRIMARY KEY  CLUSTERED
   (
     tests_id

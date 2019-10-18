@@ -23,7 +23,7 @@
             pageSize: YZSoft.EnvSetting.PageSize.defaultSize,
             model: 'Ext.data.Model',
             sorters: {
-                property: 'a.out_master_id',
+                property: 'out_master_id',
                 direction: 'DESC'
             },
             proxy: {
@@ -61,16 +61,13 @@
                                         },
                                         { header: '领用人姓名', dataIndex: 'ReqUserName', width: 100, align: 'left', sortable: true
                                         },
-                                        //{
-                                        //    header: '物料名称', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
-                                        //},
                                         {
                                             header: '审批状态', dataIndex: 'out_state', width: 100, align: 'center', sortable: true, renderer: XYSoft.Render.renderStatus
                                         },
                                         { header: '创建时间', dataIndex: 'create_time', width: 100, align: 'left', sortable: true
                                             , renderer: XYSoft.Render.renderDateYMD
                                         },
-                                        { header: '备注', dataIndex: 'outdetail_remarks', width: 100,flex:1, align: 'left', sortable: true
+                                        { header: '备注', dataIndex: 'outmaster_remarks', width: 100,flex:1, align: 'left', sortable: true
                                         },
                                         { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo} },
                 ]
@@ -234,7 +231,7 @@
 
     onClickNo: function (view, cell, recordIndex, cellIndex, e) {
         if (e.getTarget().tagName == 'A')
-            this.read(this.store.getAt(recordIndex));
+            this.readTask(this.store.getAt(recordIndex));
     },
     renderRead: function (value, metaData, record) {
         return "<a href='#'>查看</a>";
@@ -243,9 +240,9 @@
     addNew: function () {
         var me = this;
 
-        YZSoft.bpm.src.ux.FormManager.openFormApplication('Inv/inv_out_master', '', 'New', Ext.apply({
+        YZSoft.bpm.src.ux.FormManager.openPostWindow('物料出库审批', {
             sender: me,
-            title: '新增-物料出库',
+            title: '发起 - 物料出库审批',
             dlgModel: 'Tab', //Tab,Window,Dialog
             width: 600,
             height: 430,
@@ -254,7 +251,7 @@
                     me.store.reload({ loadMask: false });
                 }
             }
-        }));
+        });
     },
 
     edit: function (rec) {
@@ -283,6 +280,14 @@
             sender: me,
             title: '物料出库'
         }, me.dlgCfg));
+    },
+    readTask: function (rec) {
+        var me = this;
+
+        YZSoft.bpm.src.ux.FormManager.openTaskForRead(rec.data.TaskID, Ext.apply({
+            sender: me,
+            title: Ext.String.format('物料出库审批')
+        }));
     },
 
     deleteSelection: function () {
@@ -341,5 +346,20 @@
                 });
             }
         });
+    },
+
+    openTrace: function (rec, activeTabIndex) {
+        var me = this,
+            taskid = rec.data.TaskID;
+
+        var view = YZSoft.ViewManager.addView(me, 'YZSoft.bpm.tasktrace.Panel', {
+            id: 'BPM_TaskTrace_' + taskid,
+            title: Ext.String.format('{0} - {1}', RS.$('All_TaskTrace'), rec.data.SerialNum),
+            TaskID: taskid,
+            activeTabIndex: activeTabIndex,
+            closable: true
+        });
+
+        view.traceTab.setActiveTab(activeTabIndex);
     }
 });

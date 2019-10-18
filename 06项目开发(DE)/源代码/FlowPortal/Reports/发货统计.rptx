@@ -1,0 +1,521 @@
+﻿{
+  "author": {
+    "uid": "sf",
+    "name": "sf",
+    "createat": "2019-10-18 16:00:54"
+  },
+  "lastModifier": {
+    "uid": "sf",
+    "name": "sf",
+    "date": "2019-10-18 17:48:08"
+  },
+  "property": {
+    "hidden": false
+  },
+  "define": {
+    "datasources": {
+      "菏泽 9月1日至今销量统计": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT CONVERT(varchar(100), deliver_date, 23) 发货日期,sum(deliver_number) 发货量  FROM sal_deliver_details where state =1 and depot_name  = '菏泽仓库' group by deliver_date ORDER by deliver_date asc",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 20
+        },
+        "paramNames": []
+      },
+      "菏泽啤酒厂9月1日至今销售统计": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT\n\tCONVERT(varchar(100), deliver_date, 23) 时间,\n\tdeliver_name 销货名称,\n\tdeliver_number 销量,\nCASE\nNAME \n\tWHEN '' THEN\n\t'其他' ELSE NAME \n\tEND 销售大区,\nCASE\n\tcustomer_name \n\tWHEN '<--请选择-->' THEN\n\t'其他' ELSE customer_name \n\tEND AS 客户名称 \nFROM\n\tsal_deliver_details \nWHERE\n\tdepot_name = '菏泽仓库' \nORDER BY\n\tdeliver_date DESC",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 20
+        },
+        "paramNames": []
+      },
+      "广元啤酒厂9月1日至今销售统计": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT\n\tCONVERT(varchar(100), deliver_date, 23) 时间,\n\tdeliver_name 销货名称,\n\tdeliver_number 销量,\nCASE\nNAME \n\tWHEN '' THEN\n\t'其他' ELSE NAME \n\tEND 销售大区,\nCASE\n\tcustomer_name \n\tWHEN '<--请选择-->' THEN\n\t'其他' ELSE customer_name \n\tEND AS 客户名称 \nFROM\n\tsal_deliver_details \nWHERE\n\tdepot_name = '广元仓' \nORDER BY\n\tdeliver_date DESC",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 20
+        },
+        "paramNames": []
+      },
+      "菏泽啤酒厂啤酒销量统计(按地区)": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT case NAME when '' then '其他' else name end  销售地区\n\t,\n\tsum( deliver_number ) 发货量 \nFROM\n\tsal_deliver_details\nWHERE\n\tstate = 1 and  depot_name = '菏泽仓库'\nGROUP BY\nNAME",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 20
+        },
+        "paramNames": []
+      },
+      "广元啤酒厂9月1日至今销量统计": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT CONVERT(varchar(100), deliver_date, 23) 发货日期,sum(deliver_number) 发货量  FROM sal_deliver_details where state =1 and depot_name  = '广元仓' group by deliver_date ORDER by deliver_date asc",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 20
+        },
+        "paramNames": []
+      },
+      "广元啤酒厂啤酒销量统计(按地区)": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT case NAME when '' then '其他' else name end  销售地区\n\t,\n\tsum( deliver_number ) 发货量 \nFROM\n\tsal_deliver_details\nWHERE\n\tstate = 1 and  depot_name = '广元仓'\nGROUP BY\nNAME",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 20
+        },
+        "paramNames": []
+      }
+    },
+    "components": {
+      "chart.column1": {
+        "ctype": "chart.column",
+        "dsid": "菏泽 9月1日至今销量统计",
+        "height": 500,
+        "captions": {
+          "title": {
+            "text": "菏泽 9月1日至今销量统计",
+            "align": "center"
+          }
+        },
+        "legend": {
+          "docked": "bottom"
+        },
+        "innerPadding": {
+          "top": 30
+        },
+        "axes": [
+          {
+            "id": "yAxis",
+            "type": "numeric",
+            "rendererFormat": {
+              "thousands": true,
+              "scale": 1,
+              "unit": "箱"
+            }
+          },
+          {
+            "id": "xAxis",
+            "type": "category",
+            "fields": [
+              "发货日期"
+            ],
+            "label": {
+              "rotate": {
+                "degrees": 0
+              }
+            }
+          }
+        ],
+        "series": [
+          {
+            "type": "bar",
+            "id": "series_1",
+            "xField": "发货日期",
+            "yField": [
+              "发货量"
+            ],
+            "title": [
+              "发货量",
+              "演示数据"
+            ],
+            "xAxis": "xAxis",
+            "yAxis": "yAxis",
+            "label": {
+              "field": [
+                "发货量"
+              ]
+            },
+            "yFieldsColors": [
+              null
+            ],
+            "stacked": false,
+            "fullStack": false,
+            "style": {
+              "minBarWidth": 40,
+              "maxBarWidth": 40,
+              "inGroupGapWidth": 8
+            }
+          }
+        ],
+        "designInfo": {
+          "groups": [
+            {
+              "seriesType": "column",
+              "seriesIds": [
+                "series_1"
+              ]
+            }
+          ]
+        }
+      },
+      "chart.pie1": {
+        "ctype": "chart.pie",
+        "dsid": "菏泽啤酒厂啤酒销量统计(按地区)",
+        "height": 500,
+        "captions": {
+          "title": {
+            "text": "菏泽啤酒厂啤酒销量统计(按地区)",
+            "align": "center"
+          }
+        },
+        "legend": {
+          "docked": "right"
+        },
+        "innerPadding": 40,
+        "rendererFormat": {
+          "thousands": true,
+          "scale": 1,
+          "unit": "箱"
+        },
+        "series": [
+          {
+            "type": "pie",
+            "angleField": "发货量",
+            "rotation": 0,
+            "donut": 0,
+            "title": "发货量",
+            "label": {
+              "field": "销售地区",
+              "fontSize": 13,
+              "calloutLine": {
+                "length": 60,
+                "width": 3
+              }
+            }
+          }
+        ]
+      },
+      "layout.hbox1": {
+        "ctype": "layout.hbox",
+        "items": [
+          {
+            "flex": 1,
+            "items": [
+              "chart.column1"
+            ]
+          },
+          {
+            "flex": 1,
+            "items": [
+              "chart.pie1"
+            ]
+          }
+        ]
+      },
+      "report.grid1": {
+        "ctype": "report.grid",
+        "dsid": "菏泽啤酒厂9月1日至今销售统计",
+        "pagingBarDisplay": false,
+        "title": "菏泽啤酒厂9月1日至今销售统计",
+        "titleAlign": "center",
+        "columns": [
+          {
+            "text": "时间",
+            "dataIndex": "时间",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "销售大区",
+            "dataIndex": "销售大区",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "客户名称",
+            "dataIndex": "客户名称",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "销货名称",
+            "dataIndex": "销货名称",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "销量",
+            "dataIndex": "销量",
+            "align": "end",
+            "dataFormat": {
+              "type": "number",
+              "prefix": false,
+              "thousands": true,
+              "decimal": 2
+            },
+            "flex": 1
+          }
+        ]
+      },
+      "chart.column3d1": {
+        "ctype": "chart.column3d",
+        "dsid": "广元啤酒厂9月1日至今销量统计",
+        "height": 500,
+        "captions": {
+          "title": {
+            "text": "广元啤酒厂9月1日至今销量统计",
+            "align": "center"
+          }
+        },
+        "legend": {
+          "docked": "bottom"
+        },
+        "innerPadding": {
+          "top": 30
+        },
+        "axes": [
+          {
+            "id": "yAxis",
+            "type": "numeric3d",
+            "rendererFormat": {
+              "thousands": true,
+              "scale": 1,
+              "unit": ""
+            }
+          },
+          {
+            "id": "xAxis",
+            "type": "category3d",
+            "fields": [
+              "发货日期"
+            ],
+            "label": {
+              "rotate": {
+                "degrees": -45
+              }
+            }
+          }
+        ],
+        "series": [
+          {
+            "type": "bar3d",
+            "id": "series_1",
+            "xField": "发货日期",
+            "yField": [
+              "发货量"
+            ],
+            "title": [
+              "发货量",
+              "演示数据"
+            ],
+            "xAxis": "xAxis",
+            "yAxis": "yAxis",
+            "label": {
+              "field": [
+                "发货量"
+              ]
+            },
+            "yFieldsColors": [
+              null
+            ],
+            "stacked": false,
+            "fullStack": false,
+            "style": {
+              "minBarWidth": 40,
+              "maxBarWidth": 40,
+              "inGroupGapWidth": 3
+            }
+          }
+        ],
+        "designInfo": {
+          "groups": [
+            {
+              "seriesType": "column3d",
+              "seriesIds": [
+                "series_1"
+              ]
+            }
+          ]
+        }
+      },
+      "chart.column2": {
+        "ctype": "chart.column",
+        "dsid": "广元啤酒厂啤酒销量统计(按地区)",
+        "height": 500,
+        "captions": {
+          "title": {
+            "text": "广元啤酒厂啤酒销量统计(按地区)",
+            "align": "center"
+          }
+        },
+        "legend": {
+          "docked": "bottom"
+        },
+        "innerPadding": {
+          "top": 30
+        },
+        "axes": [
+          {
+            "id": "yAxis",
+            "type": "numeric",
+            "rendererFormat": {
+              "thousands": true,
+              "scale": 1,
+              "unit": "箱"
+            }
+          },
+          {
+            "id": "xAxis",
+            "type": "category",
+            "fields": [
+              "销售地区"
+            ],
+            "label": {
+              "rotate": {
+                "degrees": 0
+              }
+            }
+          }
+        ],
+        "series": [
+          {
+            "type": "bar",
+            "id": "series_1",
+            "xField": "销售地区",
+            "yField": [
+              "发货量"
+            ],
+            "title": [
+              "发货量",
+              "演示数据"
+            ],
+            "xAxis": "xAxis",
+            "yAxis": "yAxis",
+            "label": {
+              "field": [
+                "发货量"
+              ]
+            },
+            "yFieldsColors": [
+              null
+            ],
+            "stacked": false,
+            "fullStack": false,
+            "style": {
+              "minBarWidth": 40,
+              "maxBarWidth": 40,
+              "inGroupGapWidth": 8
+            }
+          }
+        ],
+        "designInfo": {
+          "groups": [
+            {
+              "seriesType": "column",
+              "seriesIds": [
+                "series_1"
+              ]
+            }
+          ]
+        }
+      },
+      "layout.hbox2": {
+        "ctype": "layout.hbox",
+        "items": [
+          {
+            "flex": 1,
+            "items": [
+              "chart.column3d1"
+            ]
+          },
+          {
+            "flex": 1,
+            "items": [
+              "chart.column2"
+            ]
+          }
+        ]
+      },
+      "report.grid2": {
+        "ctype": "report.grid",
+        "dsid": "广元啤酒厂9月1日至今销售统计",
+        "pagingBarDisplay": false,
+        "title": "广元啤酒厂9月1日至今销售统计",
+        "titleAlign": "center",
+        "columns": [
+          {
+            "text": "时间",
+            "dataIndex": "时间",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "销售大区",
+            "dataIndex": "销售大区",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "客户名称",
+            "dataIndex": "客户名称",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "销货名称",
+            "dataIndex": "销货名称",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "销量",
+            "dataIndex": "销量",
+            "align": "end",
+            "dataFormat": {
+              "type": "number",
+              "prefix": false,
+              "thousands": true,
+              "decimal": 2
+            },
+            "flex": 1
+          }
+        ]
+      }
+    },
+    "items": [
+      "layout.hbox1",
+      "report.grid1",
+      "layout.hbox2",
+      "report.grid2"
+    ]
+  }
+}

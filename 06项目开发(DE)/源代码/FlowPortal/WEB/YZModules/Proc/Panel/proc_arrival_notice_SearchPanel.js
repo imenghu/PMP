@@ -18,8 +18,8 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice_SearchPanel', {
             fields: ['name', 'value'],
             data: [
                 { name: RS.$('All_SearchAll'), value: '' },
-                { name: "已入库", value: '1' },
-                { name: "未入库", value: '0' },
+                { name: "已入库", value: '已入库' },
+                { name: "未入库", value: '未入库' },
 
             ]
         });

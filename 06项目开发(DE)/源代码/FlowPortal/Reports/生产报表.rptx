@@ -1,0 +1,572 @@
+﻿{
+  "author": {
+    "uid": "sf",
+    "name": "sf",
+    "createat": "2019-10-18 11:20:23"
+  },
+  "lastModifier": {
+    "uid": "sf",
+    "name": "sf",
+    "date": "2019-10-18 17:24:28"
+  },
+  "property": {
+    "hidden": false
+  },
+  "define": {
+    "datasources": {
+      "产成品分类比较": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT mat_name 产品名称,sum(in_stnum) 生产数量 FROM inv_prod_in  where state = 1 and dep_org_id  =17 group by mat_name",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 100
+        },
+        "paramNames": []
+      },
+      "菏泽啤酒厂9月1日至今生产数据监控(汇总)": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT  CONVERT(varchar(100), in_time, 23) as 入库时间,sum(in_stnum) 生产数量 FROM inv_prod_in  where state = 1 and dep_org_id  =17 group by in_time  order by in_time asc",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 100
+        },
+        "paramNames": []
+      },
+      "菏泽啤酒厂9月1日至今生产统计": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT CONVERT(varchar(100), in_time, 23) as 入库时间, mat_name 产成品名称,mat_spec  产品规格,in_stnum_unit 单位,in_stnum 入库数量   FROM inv_prod_in  where state = 1 and dep_org_id  =17 ORDER BY  in_time desc",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 20
+        },
+        "paramNames": []
+      },
+      "广元啤酒厂9月1日至今生产数量(分品种)": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT mat_name 产品名称,sum(in_stnum) 生产数量 FROM inv_prod_in  where state = 1 and dep_org_id  !=17 group by mat_name",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 100
+        },
+        "paramNames": []
+      },
+      "广元啤酒厂9月1日至今生产数据监控(汇总)": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT  CONVERT(varchar(100), in_time, 23) as 入库时间,sum(in_stnum) 生产数量 FROM inv_prod_in  where state = 1 and dep_org_id  !=17 group by in_time  order by in_time asc",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 100
+        },
+        "paramNames": []
+      },
+      "广元啤酒厂9月1日至今生产统计": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT CONVERT(varchar(100), in_time, 23) as 入库时间, mat_name 产成品名称,mat_spec  产品规格,in_stnum_unit 单位,in_stnum 入库数量   FROM inv_prod_in  where state = 1 and dep_org_id  !=17 ORDER BY  in_time desc",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 20
+        },
+        "paramNames": []
+      }
+    },
+    "components": {
+      "chart.column1": {
+        "ctype": "chart.column",
+        "dsid": "产成品分类比较",
+        "height": 500,
+        "captions": {
+          "title": {
+            "text": "菏泽啤酒厂9月1日至今产成品生产数量（分品种）",
+            "align": "center"
+          }
+        },
+        "legend": {
+          "docked": "bottom"
+        },
+        "innerPadding": {
+          "top": 50,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "axes": [
+          {
+            "id": "yAxis",
+            "type": "numeric",
+            "rendererFormat": {
+              "thousands": true,
+              "scale": 1,
+              "unit": "箱"
+            }
+          },
+          {
+            "id": "xAxis",
+            "type": "category",
+            "fields": [
+              "产品名称"
+            ],
+            "label": {
+              "rotate": {
+                "degrees": 0
+              }
+            }
+          }
+        ],
+        "series": [
+          {
+            "type": "bar",
+            "id": "series_1",
+            "xField": "产品名称",
+            "yField": [
+              "生产数量"
+            ],
+            "title": [
+              "生产数量",
+              "演示数据"
+            ],
+            "xAxis": "xAxis",
+            "yAxis": "yAxis",
+            "label": {
+              "field": [
+                "生产数量"
+              ]
+            },
+            "yFieldsColors": [
+              "#33FFFF"
+            ],
+            "stacked": false,
+            "fullStack": false,
+            "style": {
+              "minBarWidth": 20,
+              "maxBarWidth": 20,
+              "inGroupGapWidth": 4
+            }
+          }
+        ],
+        "designInfo": {
+          "groups": [
+            {
+              "seriesType": "column",
+              "seriesIds": [
+                "series_1"
+              ]
+            }
+          ]
+        }
+      },
+      "chart.column3d1": {
+        "ctype": "chart.column3d",
+        "dsid": "菏泽啤酒厂9月1日至今生产数据监控(汇总)",
+        "height": 500,
+        "captions": {
+          "title": {
+            "text": "菏泽啤酒厂9月1日至今生产数据监控(汇总)",
+            "align": "center"
+          }
+        },
+        "legend": {
+          "docked": "bottom"
+        },
+        "innerPadding": {
+          "top": 8,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "axes": [
+          {
+            "id": "yAxis",
+            "type": "numeric3d",
+            "rendererFormat": {
+              "thousands": true,
+              "scale": 1,
+              "unit": "箱"
+            }
+          },
+          {
+            "id": "xAxis",
+            "type": "category3d",
+            "fields": [
+              "入库时间"
+            ],
+            "label": {
+              "rotate": {
+                "degrees": -45
+              }
+            }
+          }
+        ],
+        "series": [
+          {
+            "type": "bar3d",
+            "id": "series_1",
+            "xField": "入库时间",
+            "yField": [
+              "生产数量"
+            ],
+            "title": [
+              "生产数量",
+              "演示数据"
+            ],
+            "xAxis": "xAxis",
+            "yAxis": "yAxis",
+            "label": {
+              "field": [
+                "生产数量"
+              ]
+            },
+            "yFieldsColors": [
+              "#5dade2"
+            ],
+            "stacked": false,
+            "fullStack": false,
+            "style": {
+              "minBarWidth": 29,
+              "maxBarWidth": 29,
+              "inGroupGapWidth": 0
+            }
+          }
+        ],
+        "designInfo": {
+          "groups": [
+            {
+              "seriesType": "column3d",
+              "seriesIds": [
+                "series_1"
+              ]
+            }
+          ]
+        }
+      },
+      "layout.hbox1": {
+        "ctype": "layout.hbox",
+        "items": [
+          {
+            "flex": 1,
+            "items": [
+              "chart.column1"
+            ]
+          },
+          {
+            "flex": 1,
+            "items": [
+              "chart.column3d1"
+            ]
+          }
+        ]
+      },
+      "report.grid1": {
+        "ctype": "report.grid",
+        "dsid": "菏泽啤酒厂9月1日至今生产统计",
+        "pagingBarDisplay": true,
+        "title": "菏泽啤酒厂9月1日至今生产统计",
+        "titleAlign": "center",
+        "columns": [
+          {
+            "text": "入库时间",
+            "dataIndex": "入库时间",
+            "align": "center",
+            "dataFormat": {
+              "type": "text"
+            },
+            "group": true,
+            "flex": 1
+          },
+          {
+            "text": "产成品名称",
+            "dataIndex": "产成品名称",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "产品规格",
+            "dataIndex": "产品规格",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "入库数量",
+            "dataIndex": "入库数量",
+            "align": "center",
+            "dataFormat": {
+              "type": "number",
+              "prefix": false,
+              "thousands": true,
+              "decimal": false
+            },
+            "flex": 1
+          },
+          {
+            "text": "单位",
+            "dataIndex": "单位",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          }
+        ]
+      },
+      "chart.column3d2": {
+        "ctype": "chart.column3d",
+        "dsid": "广元啤酒厂9月1日至今生产数量(分品种)",
+        "height": 500,
+        "captions": {
+          "title": {
+            "text": "广元啤酒厂9月1日至今生产数量(分品种)",
+            "align": "center"
+          }
+        },
+        "legend": {
+          "docked": "bottom"
+        },
+        "innerPadding": {
+          "top": 30
+        },
+        "axes": [
+          {
+            "id": "yAxis",
+            "type": "numeric3d",
+            "rendererFormat": {
+              "thousands": true,
+              "scale": 1,
+              "unit": "箱"
+            }
+          },
+          {
+            "id": "xAxis",
+            "type": "category3d",
+            "fields": [
+              "产品名称"
+            ],
+            "label": {
+              "rotate": {
+                "degrees": -45
+              }
+            }
+          }
+        ],
+        "series": [
+          {
+            "type": "bar3d",
+            "id": "series_1",
+            "xField": "产品名称",
+            "yField": [
+              "生产数量"
+            ],
+            "title": [
+              "生产数量",
+              "演示数据"
+            ],
+            "xAxis": "xAxis",
+            "yAxis": "yAxis",
+            "label": {
+              "field": [
+                "生产数量"
+              ]
+            },
+            "yFieldsColors": [
+              null
+            ],
+            "stacked": false,
+            "fullStack": true,
+            "style": {
+              "minBarWidth": 40,
+              "maxBarWidth": 40,
+              "inGroupGapWidth": 3
+            }
+          }
+        ],
+        "designInfo": {
+          "groups": [
+            {
+              "seriesType": "column3d",
+              "seriesIds": [
+                "series_1"
+              ]
+            }
+          ]
+        }
+      },
+      "chart.bar1": {
+        "ctype": "chart.bar",
+        "dsid": "广元啤酒厂9月1日至今生产数据监控(汇总)",
+        "height": 500,
+        "captions": {
+          "title": {
+            "text": "广元啤酒厂9月1日至今生产数据监控(汇总)",
+            "align": "center"
+          }
+        },
+        "legend": {
+          "docked": "bottom"
+        },
+        "innerPadding": {
+          "right": 30
+        },
+        "axes": [
+          {
+            "id": "yAxis",
+            "type": "numeric",
+            "rendererFormat": {
+              "thousands": true,
+              "scale": 1,
+              "unit": "箱"
+            }
+          },
+          {
+            "id": "xAxis",
+            "type": "category",
+            "fields": [
+              "入库时间"
+            ],
+            "label": {
+              "rotate": {
+                "degrees": 0
+              }
+            }
+          }
+        ],
+        "series": [
+          {
+            "type": "bar",
+            "id": "series_1",
+            "xField": "入库时间",
+            "yField": [
+              "生产数量"
+            ],
+            "title": [
+              "生产数量",
+              "演示数据"
+            ],
+            "xAxis": "xAxis",
+            "yAxis": "yAxis",
+            "label": {
+              "field": [
+                "生产数量"
+              ]
+            },
+            "yFieldsColors": [
+              "#FFFF00"
+            ],
+            "stacked": false,
+            "fullStack": false,
+            "style": {
+              "minBarWidth": 26,
+              "maxBarWidth": 26,
+              "inGroupGapWidth": 3
+            }
+          }
+        ],
+        "designInfo": {
+          "groups": [
+            {
+              "seriesType": "bar",
+              "seriesIds": [
+                "series_1"
+              ]
+            }
+          ]
+        }
+      },
+      "layout.hbox2": {
+        "ctype": "layout.hbox",
+        "items": [
+          {
+            "flex": 1,
+            "items": [
+              "chart.column3d2"
+            ]
+          },
+          {
+            "flex": 1,
+            "items": [
+              "chart.bar1"
+            ]
+          }
+        ]
+      },
+      "report.grid2": {
+        "ctype": "report.grid",
+        "dsid": "广元啤酒厂9月1日至今生产统计",
+        "pagingBarDisplay": true,
+        "title": "广元啤酒厂9月1日至今生产统计",
+        "titleAlign": "center",
+        "columns": [
+          {
+            "text": "入库时间",
+            "dataIndex": "入库时间",
+            "align": "center",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "产成品名称",
+            "dataIndex": "产成品名称",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "产品规格",
+            "dataIndex": "产品规格",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "入库数量",
+            "dataIndex": "入库数量",
+            "align": "center",
+            "dataFormat": {
+              "type": "number",
+              "prefix": false,
+              "thousands": true,
+              "decimal": false
+            },
+            "flex": 1
+          },
+          {
+            "text": "单位",
+            "dataIndex": "单位",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          }
+        ]
+      }
+    },
+    "items": [
+      "layout.hbox1",
+      "report.grid1",
+      "layout.hbox2",
+      "report.grid2"
+    ]
+  }
+}

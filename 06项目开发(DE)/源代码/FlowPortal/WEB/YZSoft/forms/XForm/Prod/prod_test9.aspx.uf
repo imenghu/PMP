@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-16T16:54:07.1821628+08:00",
+  "generateAt": "2019-10-17T10:18:53.7148648+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlProd_test9analyze_date",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "分析日期",
           "xdatabind": "SFDATA:Prod_test9.analyze_date",
-          "fieldname": "分析日期"
+          "width": "100%"
         }
       },
       "ctrlProd_test9mat_name": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlProd_test9mat_name",
           "runat": "server",
-          "width": "180px",
+          "fieldname": "品名",
           "xdatabind": "SFDATA:Prod_test9.mat_name",
-          "fieldname": "品名"
+          "width": "180px"
         }
       },
       "XDataBrowserButton1": {
@@ -29,10 +29,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->“1”,fourth_code->“003”,state->“1”",
+          "datamap": "mat_id->SFDATA:Prod_test9.mat_id;mat_name->SFDATA:Prod_test9.mat_name",
           "displaycolumns": "mat_code:物料编码;mat_name:品名;mat_spec:规格;base_unit:单位",
-          "datamap": "mat_id->SFDATA:Prod_test9.mat_id;mat_name->SFDATA:Prod_test9.mat_name"
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->\"1\",fourth_code->\"003\",state->\"1\"",
+          "width": "21px"
         }
       },
       "ctrlProd_test9hops_type": {
@@ -40,9 +40,9 @@
         "attrs": {
           "id": "ctrlProd_test9hops_type",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "类型",
           "xdatabind": "SFDATA:Prod_test9.hops_type",
-          "fieldname": "类型"
+          "width": "100%"
         }
       },
       "ctrlProd_test9appearance": {
@@ -50,9 +50,9 @@
         "attrs": {
           "id": "ctrlProd_test9appearance",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "外观",
           "xdatabind": "SFDATA:Prod_test9.appearance",
-          "fieldname": "外观"
+          "width": "100%"
         }
       },
       "ctrlProd_test9aroma": {
@@ -60,9 +60,9 @@
         "attrs": {
           "id": "ctrlProd_test9aroma",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "香气",
           "xdatabind": "SFDATA:Prod_test9.aroma",
-          "fieldname": "香气"
+          "width": "100%"
         }
       },
       "ctrlProd_test9moisture": {
@@ -70,9 +70,9 @@
         "attrs": {
           "id": "ctrlProd_test9moisture",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "水分",
           "xdatabind": "SFDATA:Prod_test9.moisture",
-          "fieldname": "水分"
+          "width": "100%"
         }
       },
       "ctrlProd_test9a_acid": {
@@ -80,9 +80,9 @@
         "attrs": {
           "id": "ctrlProd_test9a_acid",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "a-酸",
           "xdatabind": "SFDATA:Prod_test9.a_acid",
-          "fieldname": "a-酸"
+          "width": "100%"
         }
       },
       "ctrlProd_test9b_acid": {
@@ -90,9 +90,9 @@
         "attrs": {
           "id": "ctrlProd_test9b_acid",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "?-酸",
           "xdatabind": "SFDATA:Prod_test9.b_acid",
-          "fieldname": "?-酸"
+          "width": "100%"
         }
       },
       "ctrlProd_test9storable": {
@@ -100,9 +100,9 @@
         "attrs": {
           "id": "ctrlProd_test9storable",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "贮藏指数",
           "xdatabind": "SFDATA:Prod_test9.storable",
-          "fieldname": "贮藏指数"
+          "width": "100%"
         }
       },
       "ctrlProd_test9operator_name": {
@@ -110,9 +110,9 @@
         "attrs": {
           "id": "ctrlProd_test9operator_name",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "检验人员",
           "xdatabind": "SFDATA:Prod_test9.operator_name",
-          "fieldname": "检验人员"
+          "width": "100%"
         }
       },
       "ctrlProd_test9memo": {
@@ -120,9 +120,9 @@
         "attrs": {
           "id": "ctrlProd_test9memo",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:Prod_test9.memo",
           "fieldname": "备注",
+          "xdatabind": "SFDATA:Prod_test9.memo",
+          "width": "100%",
           "textmode": "MultiLine"
         }
       },
@@ -131,9 +131,9 @@
         "attrs": {
           "id": "ctrlProd_test9DeptName",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "部门名称",
           "xdatabind": "SFDATA:Prod_test9.DeptName",
-          "fieldname": "部门名称"
+          "width": "100%"
         }
       },
       "ctrlProd_test9Company": {
@@ -141,9 +141,9 @@
         "attrs": {
           "id": "ctrlProd_test9Company",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "公司编码",
           "xdatabind": "SFDATA:Prod_test9.Company",
-          "fieldname": "公司编码"
+          "width": "100%"
         }
       },
       "ctrlProd_test9CompanyName": {
@@ -151,9 +151,9 @@
         "attrs": {
           "id": "ctrlProd_test9CompanyName",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "公司名称",
           "xdatabind": "SFDATA:Prod_test9.CompanyName",
-          "fieldname": "公司名称"
+          "width": "100%"
         }
       },
       "ctrlProd_test9Dept": {
@@ -161,9 +161,9 @@
         "attrs": {
           "id": "ctrlProd_test9Dept",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "部门编码",
           "xdatabind": "SFDATA:Prod_test9.Dept",
-          "fieldname": "部门编码"
+          "width": "100%"
         }
       },
       "ctrlProd_test9mat_id": {
@@ -171,9 +171,9 @@
         "attrs": {
           "id": "ctrlProd_test9mat_id",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "品名编号",
           "xdatabind": "SFDATA:Prod_test9.mat_id",
-          "fieldname": "品名编号"
+          "width": "100%"
         }
       },
       "table1": {

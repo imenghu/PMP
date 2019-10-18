@@ -37,6 +37,106 @@ namespace Sys
             }
         }
         
+        public JObject GetValue(HttpContext context)
+        {
+            YZRequest request = new YZRequest(context);
+            SqlServerProvider queryProvider = new SqlServerProvider();
+
+         
+            string query = @"
+            select id,name from ctl_area where parent_id is null
+        ";
+
+           
+
+            //执行查询
+            JObject rv = new JObject();
+            using (SqlConnection cn = new SqlConnection())
+            {
+                cn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SFDATA"].ConnectionString;
+                cn.Open();
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = cn;
+                    cmd.CommandText = query;
+
+                    using (YZReader reader = new YZReader(cmd.ExecuteReader()))
+                    {
+                        //将数据转化为Json集合
+                        JArray children = new JArray();
+                        rv["children"] = children;
+                        int totalRows = 0;
+
+                        while (reader.Read())
+                        {
+                            JObject item = new JObject();
+                            children.Add(item);
+
+                            item["id"] = reader.ReadInt32("id");
+                            item["name"] = reader.ReadString("name");
+
+                            rv[YZJsonProperty.total] = totalRows;
+                        }
+                    }
+                }
+
+                return rv;
+            }
+        }
+
+
+        public JObject GetCityValue(HttpContext context)
+        {
+            YZRequest request = new YZRequest(context);
+            SqlServerProvider queryProvider = new SqlServerProvider();
+            string order = request.GetString("province",null);
+            if (order!=null)
+            {
+                string query = @"
+            select id,name from ctl_area where parent_id={0}
+        ";
+                query = String.Format(query, order);
+
+                //执行查询
+                JObject rv = new JObject();
+                using (SqlConnection cn = new SqlConnection())
+                {
+                    cn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SFDATA"].ConnectionString;
+                    cn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        cmd.Connection = cn;
+                        cmd.CommandText = query;
+
+                        using (YZReader reader = new YZReader(cmd.ExecuteReader()))
+                        {
+                            //将数据转化为Json集合
+                            JArray children = new JArray();
+                            rv["children"] = children;
+                            int totalRows = 0;
+
+                            while (reader.Read())
+                            {
+                                JObject item = new JObject();
+                                children.Add(item);
+
+                                item["id"] = reader.ReadInt32("id");
+                                item["name"] = reader.ReadString("name");
+
+                                rv[YZJsonProperty.total] = totalRows;
+                            }
+                        }
+                    }
+
+                    return rv;
+                }
+
+            }
+            return null;
+
+        }
         public JObject GetData(HttpContext context)
         {
             YZRequest request = new YZRequest(context);
@@ -44,6 +144,9 @@ namespace Sys
 
             string searchType = request.GetString("SearchType", null);
             string keyword = request.GetString("kwd", null);
+            string province = request.GetString("province", null);
+            string city = request.GetString("city", null);
+            string mat_name = request.GetString("mat_name", null);
 
             //获得查询条件
             string filter = "ctl_salesman.State='1'";
@@ -52,7 +155,13 @@ namespace Sys
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("salesman_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                if (!string.IsNullOrEmpty(province))
+                    filter = queryProvider.CombinCond(filter, String.Format("ctl_salesman.province_id LIKE N'%{0}%' ", queryProvider.EncodeText(province)));
+                if (!string.IsNullOrEmpty(city))
+                    filter = queryProvider.CombinCond(filter, String.Format("b.name LIKE N'%{0}%' ", queryProvider.EncodeText(city)));
+                if (!string.IsNullOrEmpty(mat_name))
+                    filter = queryProvider.CombinCond(filter, String.Format("salesman_name LIKE N'%{0}%' ", queryProvider.EncodeText(mat_name)));
             }
 
             if (!String.IsNullOrEmpty(filter))
@@ -106,24 +215,24 @@ namespace Sys
 
                             item["salesman_id"] =
                                     reader.ReadInt32("salesman_id");
-                                                            item["CompanyName"] = 
-                                                                    reader.ReadString("CompanyName");
-                                                                                            item["province_id"] = 
-                                                                    reader.ReadString("province");
-                                                                                            item["city_id"] = 
-                                                                    reader.ReadString("city");
-                                                                                            item["salesman_name"] = 
-                                                                    reader.ReadString("salesman_name");
-                                                                                            item["salesman_tel"] = 
-                                                                    reader.ReadString("salesman_tel");
-                                                                                            item["salesman_email"] = 
-                                                                    reader.ReadString("salesman_email");
-                                                                                            item["salesman_addr"] = 
-                                                                    reader.ReadString("salesman_addr");
-                                                                                            item["salesman_remarks"] = 
-                                                                    reader.ReadString("salesman_remarks");
-                                                                                    }
-                        
+                            item["CompanyName"] =
+                                    reader.ReadString("CompanyName");
+                            item["province_id"] =
+    reader.ReadString("province");
+                            item["city_id"] =
+    reader.ReadString("city");
+                            item["salesman_name"] =
+    reader.ReadString("salesman_name");
+                            item["salesman_tel"] =
+    reader.ReadString("salesman_tel");
+                            item["salesman_email"] =
+    reader.ReadString("salesman_email");
+                            item["salesman_addr"] =
+    reader.ReadString("salesman_addr");
+                            item["salesman_remarks"] =
+    reader.ReadString("salesman_remarks");
+                        }
+
                         rv[YZJsonProperty.total] = totalRows;
                     }
                 }

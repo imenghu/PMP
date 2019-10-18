@@ -36,19 +36,19 @@ $Scripts-->
                         公司 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_salesmanCompanyName" runat="server" XDataBind="SFDATA:ctl_salesman.CompanyName" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmanCompanyName" runat="server" DisableExpress="1" width="100%" XDataBind="SFDATA:ctl_salesman.CompanyName"></aspxform:XTextBox>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         省 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:ctl_salesman.province_id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1" ValueColumn="id" DisplayColumn="name" PromptText="--请选择--"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:ctl_salesman.province_id" PromptText="--请选择--" DisplayColumn="name" ValueColumn="id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1"></aspxform:XDropDownList>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         市 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:ctl_salesman.city_id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_salesman.province_id" ValueColumn="id" DisplayColumn="name" PromptText="--请选择--"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:ctl_salesman.city_id" PromptText="--请选择--" DisplayColumn="name" ValueColumn="id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_salesman.province_id"></aspxform:XDropDownList>
                     </td>
                 </tr>
                 <tr>
@@ -56,20 +56,20 @@ $Scripts-->
                         姓名 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_name" runat="server" XDataBind="SFDATA:ctl_salesman.salesman_name" width="180px" DisableExpress="1"></aspxform:XTextBox>
-                        <aspxform:XSelectUserButton id="XSelectUserButton1" runat="server" Width="21px" DataMap="Account->SFDATA:ctl_salesman.SalesmanAccount;DisplayName->SFDATA:ctl_salesman.salesman_name"></aspxform:XSelectUserButton>
+                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_name" runat="server" DisableExpress="1" width="180px" XDataBind="SFDATA:ctl_salesman.salesman_name"></aspxform:XTextBox>
+                        <aspxform:XSelectUserButton id="XSelectUserButton1" runat="server" DataMap="Account->SFDATA:ctl_salesman.SalesmanAccount;DisplayName->SFDATA:ctl_salesman.salesman_name" Width="21px"></aspxform:XSelectUserButton>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         联系电话 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_tel" runat="server" XDataBind="SFDATA:ctl_salesman.salesman_tel" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_tel" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.salesman_tel"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         联系邮箱 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_email" runat="server" XDataBind="SFDATA:ctl_salesman.salesman_email" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_email" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.salesman_email"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -77,14 +77,14 @@ $Scripts-->
                         地址 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_addr" runat="server" XDataBind="SFDATA:ctl_salesman.salesman_addr" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_addr" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.salesman_addr"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         备注</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_remarks" runat="server" XDataBind="SFDATA:ctl_salesman.salesman_remarks" width="100%" TextMode="MultiLine" Rows="5"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmansalesman_remarks" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.salesman_remarks" Rows="5" TextMode="MultiLine"></aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>
@@ -97,21 +97,63 @@ $Scripts-->
                         账号 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlctl_salesmanSalesmanAccount" runat="server" XDataBind="SFDATA:ctl_salesman.SalesmanAccount" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlctl_salesmanSalesmanAccount" runat="server" width="100%" XDataBind="SFDATA:ctl_salesman.SalesmanAccount"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         省</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="var1" width="100%" BorderColor="#DCDCDC" BorderWidth="1">1</aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox1" runat="server" width="100%" XDataBind="var1" BorderWidth="1" BorderColor="#DCDCDC">1</aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         市</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox2" runat="server" XDataBind="var2" width="100%" BorderColor="#DCDCDC" BorderWidth="1">2</aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox2" runat="server" width="100%" XDataBind="var2" BorderWidth="1" BorderColor="#DCDCDC">2</aspxform:XTextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择省份" ControlToValidate="XDropDownList1">省</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择城市" ControlToValidate="XDropDownList2">市</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择姓名" ControlToValidate="ctrlctl_salesmansalesman_name">姓名</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写联系电话" ControlToValidate="ctrlctl_salesmansalesman_tel">联系电话</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator5" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写联系邮箱" ControlToValidate="ctrlctl_salesmansalesman_email">联系邮箱</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator6" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写地址" ControlToValidate="ctrlctl_salesmansalesman_addr">地址</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
                     </td>
                 </tr>
             </tbody>

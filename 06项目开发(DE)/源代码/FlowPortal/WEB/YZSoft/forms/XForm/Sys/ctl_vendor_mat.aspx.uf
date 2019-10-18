@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-11T14:53:33.564926+08:00",
+  "generateAt": "2019-10-18T15:02:40.8254822+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_name",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.vendor_name",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendortax_cer_no": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlctl_vendortax_cer_no",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.tax_cer_no",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_zipcode": {
@@ -29,9 +29,9 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_zipcode",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.vendor_zipcode",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_contact": {
@@ -39,9 +39,9 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_contact",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.vendor_contact",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_tel": {
@@ -49,9 +49,9 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_tel",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.vendor_tel",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_email": {
@@ -59,9 +59,9 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_email",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.vendor_email",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_wechat": {
@@ -69,9 +69,9 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_wechat",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.vendor_wechat",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_qq": {
@@ -79,9 +79,9 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_qq",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.vendor_qq",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "XDropDownList1": {
@@ -89,8 +89,8 @@
         "attrs": {
           "id": "XDropDownList1",
           "runat": "server",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_state",
           "disableexpress": "1",
+          "xdatabind": "SFDATA:ctl_vendor.vendor_state",
           "prompttext": "--请选择--"
         },
         "childNodes": [
@@ -115,9 +115,9 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_addr",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.vendor_addr",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendorCreateUserName": {
@@ -125,9 +125,9 @@
         "attrs": {
           "id": "ctrlctl_vendorCreateUserName",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.CreateUserName",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendorUpdateUserName": {
@@ -135,9 +135,9 @@
         "attrs": {
           "id": "ctrlctl_vendorUpdateUserName",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor.UpdateUserName",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "XDataBrowserButton1": {
@@ -146,15 +146,15 @@
           "id": "XDataBrowserButton1",
           "runat": "server",
           "xclass": "YZSoft.Forms.Field.DataBrowserButton",
-          "text": "选择物料",
-          "width": "66px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
-          "popupwndwidth": "-1",
-          "popupwndheight": "-1",
-          "usesubmitbehavior": "False",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "datamap": "mat_code->SFDATA:ctl_vendor_mat.mat_code;mat_name->SFDATA:ctl_vendor_mat.mat_name;mat_spec->SFDATA:ctl_vendor_mat.mat_spec",
           "multiselect": "True",
-          "datamap": "mat_code->SFDATA:ctl_vendor_mat.mat_code;mat_name->SFDATA:ctl_vendor_mat.mat_name;mat_spec->SFDATA:ctl_vendor_mat.mat_spec"
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "usesubmitbehavior": "False",
+          "popupwndheight": "-1",
+          "popupwndwidth": "-1",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "width": "66px",
+          "text": "选择物料"
         }
       },
       "ctrlctl_vendor_matmat_code": {
@@ -162,9 +162,9 @@
         "attrs": {
           "id": "ctrlctl_vendor_matmat_code",
           "runat": "server",
-          "width": "170px",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor_mat.mat_code",
-          "disableexpress": "1"
+          "width": "170px"
         }
       },
       "XDataBrowserButton2": {
@@ -172,10 +172,10 @@
         "attrs": {
           "id": "XDataBrowserButton2",
           "runat": "server",
-          "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "datamap": "mat_code->SFDATA:ctl_vendor_mat.mat_code;mat_name->SFDATA:ctl_vendor_mat.mat_name;mat_spec->SFDATA:ctl_vendor_mat.mat_spec",
           "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
-          "datamap": "mat_code->SFDATA:ctl_vendor_mat.mat_code;mat_name->SFDATA:ctl_vendor_mat.mat_name;mat_spec->SFDATA:ctl_vendor_mat.mat_spec"
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "width": "21px"
         }
       },
       "ctrlctl_vendor_matmat_name": {
@@ -183,9 +183,9 @@
         "attrs": {
           "id": "ctrlctl_vendor_matmat_name",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor_mat.mat_name",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendor_matmat_spec": {
@@ -193,9 +193,9 @@
         "attrs": {
           "id": "ctrlctl_vendor_matmat_spec",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor_mat.mat_spec",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendor_matCreateUserName": {
@@ -203,9 +203,9 @@
         "attrs": {
           "id": "ctrlctl_vendor_matCreateUserName",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor_mat.CreateUserName",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlctl_vendor_matUpdateUserName": {
@@ -213,9 +213,9 @@
         "attrs": {
           "id": "ctrlctl_vendor_matUpdateUserName",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:ctl_vendor_mat.UpdateUserName",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "table1": {
@@ -249,8 +249,8 @@
         "attrs": {
           "id": "ctrlctl_vendorcreate_userid",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.create_userid"
+          "xdatabind": "SFDATA:ctl_vendor.create_userid",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorlastupdate_userid": {
@@ -258,8 +258,8 @@
         "attrs": {
           "id": "ctrlctl_vendorlastupdate_userid",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.lastupdate_userid"
+          "xdatabind": "SFDATA:ctl_vendor.lastupdate_userid",
+          "width": "100%"
         }
       },
       "table2": {
@@ -281,7 +281,20 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择物料编码",
+          "controltovalidate": "ctrlctl_vendor_matmat_code",
+          "innerhtml": "物料编码"
+        }
+      }
+    },
     "items": [
       "ctrlctl_vendorvendor_name",
       "ctrlctl_vendortax_cer_no",

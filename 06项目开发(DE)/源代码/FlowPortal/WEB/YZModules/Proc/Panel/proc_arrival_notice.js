@@ -24,7 +24,7 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
             pageSize: YZSoft.EnvSetting.PageSize.defaultSize,
             model: 'Ext.data.Model',
             sorters: {
-                property: 'TaskID',
+                property: 'arrival_notice_id',
                 direction: 'DESC'
             },
             proxy: {

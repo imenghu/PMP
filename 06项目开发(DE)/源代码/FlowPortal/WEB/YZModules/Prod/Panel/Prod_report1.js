@@ -83,39 +83,6 @@
                                         {
                                             header: '备注', dataIndex: 'memo', width: 100, align: 'left', sortable: true
                                         },
-                                        {
-                                            header: '公司名称', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '品名', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '发酵罐编号', dataIndex: 'ferment_tankno', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '满罐日期', dataIndex: 'full_tank_date', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '麦汁批次', dataIndex: 'wort_batch', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '满罐数量', dataIndex: 'full_tank_num', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '出发酵液数量', dataIndex: 'outferment_liquor_num', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '发酵酒损', dataIndex: 'ferment_wine_damage', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '导出日期', dataIndex: 'export_date', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '结束日期', dataIndex: 'end_date', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '备注', dataIndex: 'memo', width: 100, align: 'left', sortable: true
-                                        },
                                         { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },

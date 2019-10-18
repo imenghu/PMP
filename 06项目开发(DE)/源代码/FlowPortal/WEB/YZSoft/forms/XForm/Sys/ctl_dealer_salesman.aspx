@@ -119,6 +119,7 @@ $Scripts-->
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="XTextBox3" runat="server" XDataBind="SFDATA:ctl_dealer_salesman.dealer_id" width="120px" DisableExpress="1" DataMap="dealer_contact->varContact;dealer_tel->varTel;dealer_addr->varAddr" BorderWidth="1" BorderColor="#DCDCDC" ValueToDisplayText="DataSource:SFDATA;TableName:ctl_dealer;FilterColumn:dealer_id;DisplayColumn:dealer_name"></aspxform:XTextBox>
                         <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" XDataSource="DataSource:SFDATA;TableName:ctl_dealer" Width="21px" DisplayColumns="dealer_name:经销商名称;dealer_contact:联系人;dealer_tel:联系电话;dealer_addr:地址" DataMap="dealer_id->SFDATA:ctl_dealer_salesman.dealer_id"></aspxform:XDataBrowserButton>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator7" runat="server" ControlToValidate="XTextBox3" ErrorMessage="请选择经销商名称" ForeColor="Red" Display="None">经销商名称</aspxform:XRequiredFieldValidator>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="XTextBox4" runat="server" XDataBind="varContact" width="100%" DisableExpress="1" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
@@ -135,25 +136,25 @@ $Scripts-->
                 </tr>
             </tbody>
         </table>
-        <table width="800" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
+        <table width="758" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
             <tbody>
                 <tr>
-                    <td width="100" height="25" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td width="95" height="34" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         账号 
                     </td>
-                    <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td width="663" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlctl_salesmanSalesmanAccount" runat="server" XDataBind="SFDATA:ctl_salesman.SalesmanAccount" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td height="34">
                         省</td>
                     <td>
                         <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="var1" width="100%" BorderWidth="1" BorderColor="#DCDCDC">1</aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td height="34">
                         市</td>
                     <td>
                         <aspxform:XTextBox id="XTextBox2" runat="server" XDataBind="var2" width="100%" BorderWidth="1" BorderColor="#DCDCDC">2</aspxform:XTextBox>
