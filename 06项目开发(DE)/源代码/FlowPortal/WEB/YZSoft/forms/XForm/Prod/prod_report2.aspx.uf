@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-16T21:03:11.4433917+08:00",
+  "generateAt": "2019-10-19T12:18:16.6381164+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlProd_report2input_date",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "日期",
           "xdatabind": "SFDATA:Prod_report2.input_date",
-          "fieldname": "日期"
+          "width": "100%"
         }
       },
       "ctrlProd_report2tankid_source": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlProd_report2tankid_source",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "发酵罐号",
           "xdatabind": "SFDATA:Prod_report2.tankid_source",
-          "fieldname": "发酵罐号"
+          "width": "100%"
         }
       },
       "ctrlProd_report2tankid_dest": {
@@ -29,9 +29,9 @@
         "attrs": {
           "id": "ctrlProd_report2tankid_dest",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "清酒罐号",
           "xdatabind": "SFDATA:Prod_report2.tankid_dest",
-          "fieldname": "清酒罐号"
+          "width": "100%"
         }
       },
       "ctrlProd_report2concentration": {
@@ -39,9 +39,9 @@
         "attrs": {
           "id": "ctrlProd_report2concentration",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "浓度",
           "xdatabind": "SFDATA:Prod_report2.concentration",
-          "fieldname": "浓度"
+          "width": "100%"
         }
       },
       "ctrlProd_report2outferment_liquor_num": {
@@ -49,9 +49,9 @@
         "attrs": {
           "id": "ctrlProd_report2outferment_liquor_num",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "出发酵液数量",
           "xdatabind": "SFDATA:Prod_report2.outferment_liquor_num",
-          "fieldname": "出发酵液数量"
+          "width": "100%"
         }
       },
       "ctrlProd_report2xl_saka_num": {
@@ -59,9 +59,9 @@
         "attrs": {
           "id": "ctrlProd_report2xl_saka_num",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_report2.xl_saka_num",
           "fieldname": "折11度清酒数量",
+          "xdatabind": "SFDATA:prod_report2.xl_saka_num",
+          "width": "100%",
           "hiddeninput": "False"
         }
       },
@@ -70,9 +70,9 @@
         "attrs": {
           "id": "ctrlProd_report2saka_degree",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "清酒度数",
           "xdatabind": "SFDATA:Prod_report2.saka_degree",
-          "fieldname": "清酒度数"
+          "width": "100%"
         }
       },
       "ctrlProd_report2outsaka_actual_num": {
@@ -80,9 +80,9 @@
         "attrs": {
           "id": "ctrlProd_report2outsaka_actual_num",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "实际出清酒数量",
           "xdatabind": "SFDATA:Prod_report2.outsaka_actual_num",
-          "fieldname": "实际出清酒数量"
+          "width": "100%"
         }
       },
       "ctrlProd_report2xl_saka_actualnum": {
@@ -90,9 +90,9 @@
         "attrs": {
           "id": "ctrlProd_report2xl_saka_actualnum",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "实际出清酒折11度数量",
           "xdatabind": "SFDATA:Prod_report2.xl_saka_actualnum",
-          "fieldname": "实际出清酒折11度数量"
+          "width": "100%"
         }
       },
       "ctrlProd_report2filter_wine_damage": {
@@ -100,9 +100,9 @@
         "attrs": {
           "id": "ctrlProd_report2filter_wine_damage",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "过滤酒损",
           "xdatabind": "SFDATA:Prod_report2.filter_wine_damage",
-          "fieldname": "过滤酒损"
+          "width": "100%"
         }
       },
       "ctrlProd_report2memo": {
@@ -110,9 +110,9 @@
         "attrs": {
           "id": "ctrlProd_report2memo",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "备注",
           "xdatabind": "SFDATA:Prod_report2.memo",
-          "fieldname": "备注"
+          "width": "100%"
         }
       },
       "ctrlProd_report2DeptName": {
@@ -120,9 +120,9 @@
         "attrs": {
           "id": "ctrlProd_report2DeptName",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "部门名称",
           "xdatabind": "SFDATA:Prod_report2.DeptName",
-          "fieldname": "部门名称"
+          "width": "100%"
         }
       },
       "ctrlProd_report2Company": {
@@ -130,9 +130,9 @@
         "attrs": {
           "id": "ctrlProd_report2Company",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "公司编码",
           "xdatabind": "SFDATA:Prod_report2.Company",
-          "fieldname": "公司编码"
+          "width": "100%"
         }
       },
       "ctrlProd_report2CompanyName": {
@@ -140,9 +140,9 @@
         "attrs": {
           "id": "ctrlProd_report2CompanyName",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "公司名称",
           "xdatabind": "SFDATA:Prod_report2.CompanyName",
-          "fieldname": "公司名称"
+          "width": "100%"
         }
       },
       "ctrlProd_report2Dept": {
@@ -150,9 +150,9 @@
         "attrs": {
           "id": "ctrlProd_report2Dept",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "部门编码",
           "xdatabind": "SFDATA:Prod_report2.Dept",
-          "fieldname": "部门编码"
+          "width": "100%"
         }
       },
       "table1": {
@@ -176,7 +176,44 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择日期",
+          "controltovalidate": "ctrlProd_report2input_date",
+          "innerhtml": "日期"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写发酵罐号",
+          "controltovalidate": "ctrlProd_report2tankid_source",
+          "innerhtml": "发酵罐号"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写清酒罐号",
+          "controltovalidate": "ctrlProd_report2tankid_dest",
+          "innerhtml": "清酒罐号"
+        }
+      }
+    },
     "items": [
       "ctrlProd_report2input_date",
       "ctrlProd_report2tankid_source",

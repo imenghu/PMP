@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-10T17:29:31.8831967+08:00",
+  "generateAt": "2019-10-19T12:38:31.8858588+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,6 +9,7 @@
         "attrs": {
           "id": "XTextBox26",
           "runat": "server",
+          "fieldname": "公司",
           "disableexpress": "1",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
@@ -21,6 +22,7 @@
         "attrs": {
           "id": "XTextBox10",
           "runat": "server",
+          "fieldname": "部门",
           "disableexpress": "1",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
@@ -34,6 +36,7 @@
           "id": "XTextBox25",
           "onclick": "WdatePicker({dateFmt:'yyyy'})",
           "runat": "server",
+          "fieldname": "年份",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -45,6 +48,7 @@
         "attrs": {
           "id": "XTextBox11",
           "runat": "server",
+          "fieldname": "物料名称",
           "disableexpress": "1",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
@@ -68,6 +72,7 @@
         "attrs": {
           "id": "XTextBox9",
           "runat": "server",
+          "fieldname": "物料编码",
           "disableexpress": "1",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
@@ -80,6 +85,7 @@
         "attrs": {
           "id": "XTextBox14",
           "runat": "server",
+          "fieldname": "规格",
           "disableexpress": "1",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
@@ -92,6 +98,7 @@
         "attrs": {
           "id": "XDropDownList1",
           "runat": "server",
+          "fieldname": "单位",
           "xdatabind": "SFDATA:annual_pur_plan.plan_slnum_unit",
           "datamap": "numerator->SFDATA:annual_pur_plan.sl_st_scale",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:annual_pur_plan.mat_id,if_base_unit->varState",
@@ -105,6 +112,7 @@
         "attrs": {
           "id": "XTextBox12",
           "runat": "server",
+          "fieldname": "基准单位",
           "disableexpress": "1",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
@@ -117,6 +125,7 @@
         "attrs": {
           "id": "XTextBox13",
           "runat": "server",
+          "fieldname": "转换比例",
           "disableexpress": "1",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
@@ -129,6 +138,7 @@
         "attrs": {
           "id": "XTextBox7",
           "runat": "server",
+          "fieldname": "总数量",
           "disableexpress": "1",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
@@ -142,6 +152,7 @@
         "attrs": {
           "id": "XTextBox24",
           "runat": "server",
+          "fieldname": "计划单价",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -153,6 +164,7 @@
         "attrs": {
           "id": "XTextBox15",
           "runat": "server",
+          "fieldname": "总金额",
           "disableexpress": "1",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
@@ -166,6 +178,7 @@
         "attrs": {
           "id": "XTextBox6",
           "runat": "server",
+          "fieldname": "一月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -177,6 +190,7 @@
         "attrs": {
           "id": "XTextBox23",
           "runat": "server",
+          "fieldname": "二月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -188,6 +202,7 @@
         "attrs": {
           "id": "XTextBox16",
           "runat": "server",
+          "fieldname": "三月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -199,6 +214,7 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
+          "fieldname": "四月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -210,6 +226,7 @@
         "attrs": {
           "id": "XTextBox22",
           "runat": "server",
+          "fieldname": "五月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -221,6 +238,7 @@
         "attrs": {
           "id": "XTextBox17",
           "runat": "server",
+          "fieldname": "六月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -232,6 +250,7 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
+          "fieldname": "七月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -243,6 +262,7 @@
         "attrs": {
           "id": "XTextBox21",
           "runat": "server",
+          "fieldname": "八月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -254,6 +274,7 @@
         "attrs": {
           "id": "XTextBox18",
           "runat": "server",
+          "fieldname": "九月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -265,6 +286,7 @@
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
+          "fieldname": "十月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -276,6 +298,7 @@
         "attrs": {
           "id": "XTextBox20",
           "runat": "server",
+          "fieldname": "十一月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -287,6 +310,7 @@
         "attrs": {
           "id": "XTextBox19",
           "runat": "server",
+          "fieldname": "十二月",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -298,6 +322,7 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
+          "fieldname": "备注",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "width": "100%",
@@ -311,6 +336,7 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
+          "fieldname": "提报人",
           "disableexpress": "1",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
@@ -323,6 +349,7 @@
         "attrs": {
           "id": "XDateTimePicker1",
           "runat": "server",
+          "fieldname": "提报日期",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "xdatabind": "SFDATA:annual_pur_plan.create_time",
@@ -394,7 +421,44 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择物料名称",
+          "controltovalidate": "XTextBox11",
+          "innerhtml": "物料名称"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择单位",
+          "controltovalidate": "XDropDownList1",
+          "innerhtml": "单位"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写计划单价",
+          "controltovalidate": "XTextBox24",
+          "innerhtml": "计划单价"
+        }
+      }
+    },
     "items": [
       "XTextBox26",
       "XTextBox10",

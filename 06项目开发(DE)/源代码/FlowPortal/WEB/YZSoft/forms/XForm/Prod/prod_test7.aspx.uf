@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-17T10:04:01.4206208+08:00",
+  "generateAt": "2019-10-19T11:31:23.1058579+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlProd_test7analyze_date",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.analyze_date",
           "fieldname": "分析日期",
-          "xdatabind": "SFDATA:Prod_test7.analyze_date"
+          "width": "100%"
         }
       },
       "ctrlProd_test7mat_name": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlProd_test7mat_name",
           "runat": "server",
-          "width": "180px",
+          "xdatabind": "SFDATA:Prod_test7.mat_name",
           "fieldname": "品名名称",
-          "xdatabind": "SFDATA:Prod_test7.mat_name"
+          "width": "180px"
         }
       },
       "XDataBrowserButton1": {
@@ -29,10 +29,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "datamap": "mat_name->SFDATA:Prod_test7.mat_name",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:单位",
+          "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->\"2\",state->\"1\"",
-          "width": "21px"
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:单位",
+          "datamap": "mat_name->SFDATA:Prod_test7.mat_name"
         }
       },
       "ctrlProd_test7production_line": {
@@ -40,9 +40,9 @@
         "attrs": {
           "id": "ctrlProd_test7production_line",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.production_line",
           "fieldname": "生产线",
-          "xdatabind": "SFDATA:Prod_test7.production_line"
+          "width": "100%"
         }
       },
       "ctrlProd_test7position": {
@@ -50,9 +50,9 @@
         "attrs": {
           "id": "ctrlProd_test7position",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.position",
           "fieldname": "位置",
-          "xdatabind": "SFDATA:Prod_test7.position"
+          "width": "100%"
         }
       },
       "XDateTimePicker1": {
@@ -62,8 +62,8 @@
           "runat": "server",
           "xdatabind": "SFDATA:Prod_test7.steril_time",
           "width": "100%",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "0px"
+          "borderwidth": "0px",
+          "bordercolor": "#DCDCDC"
         }
       },
       "ctrlProd_test7beer_temp": {
@@ -71,9 +71,9 @@
         "attrs": {
           "id": "ctrlProd_test7beer_temp",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.beer_temp",
           "fieldname": "出口酒温oC",
-          "xdatabind": "SFDATA:Prod_test7.beer_temp"
+          "width": "100%"
         }
       },
       "ctrlProd_test7steril_temp_max": {
@@ -81,9 +81,9 @@
         "attrs": {
           "id": "ctrlProd_test7steril_temp_max",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.steril_temp_max",
           "fieldname": "最高杀菌温度oC",
-          "xdatabind": "SFDATA:Prod_test7.steril_temp_max"
+          "width": "100%"
         }
       },
       "ctrlProd_test7pu50": {
@@ -91,9 +91,9 @@
         "attrs": {
           "id": "ctrlProd_test7pu50",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.pu50",
           "fieldname": "PU（50oC）",
-          "xdatabind": "SFDATA:Prod_test7.pu50"
+          "width": "100%"
         }
       },
       "ctrlProd_test7pu60": {
@@ -101,9 +101,9 @@
         "attrs": {
           "id": "ctrlProd_test7pu60",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.pu60",
           "fieldname": "致死PU（60oC）",
-          "xdatabind": "SFDATA:Prod_test7.pu60"
+          "width": "100%"
         }
       },
       "ctrlProd_test7operator_name": {
@@ -111,9 +111,9 @@
         "attrs": {
           "id": "ctrlProd_test7operator_name",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.operator_name",
           "fieldname": "检验人员",
-          "xdatabind": "SFDATA:Prod_test7.operator_name"
+          "width": "100%"
         }
       },
       "ctrlProd_test7memo": {
@@ -121,9 +121,9 @@
         "attrs": {
           "id": "ctrlProd_test7memo",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.memo",
           "fieldname": "备注",
-          "xdatabind": "SFDATA:Prod_test7.memo"
+          "width": "100%"
         }
       },
       "ctrlProd_test7DeptName": {
@@ -131,9 +131,9 @@
         "attrs": {
           "id": "ctrlProd_test7DeptName",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.DeptName",
           "fieldname": "部门名称",
-          "xdatabind": "SFDATA:Prod_test7.DeptName"
+          "width": "100%"
         }
       },
       "ctrlProd_test7Company": {
@@ -141,9 +141,9 @@
         "attrs": {
           "id": "ctrlProd_test7Company",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.Company",
           "fieldname": "公司编码",
-          "xdatabind": "SFDATA:Prod_test7.Company"
+          "width": "100%"
         }
       },
       "ctrlProd_test7CompanyName": {
@@ -151,9 +151,9 @@
         "attrs": {
           "id": "ctrlProd_test7CompanyName",
           "runat": "server",
-          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test7.CompanyName",
           "fieldname": "公司名称",
-          "xdatabind": "SFDATA:Prod_test7.CompanyName"
+          "width": "100%"
         }
       },
       "table1": {
@@ -176,7 +176,68 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择分析日期",
+          "controltovalidate": "ctrlProd_test7analyze_date",
+          "innerhtml": "分析日期"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择品名名称",
+          "controltovalidate": "ctrlProd_test7mat_name",
+          "innerhtml": "品名名称"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写生产线",
+          "controltovalidate": "ctrlProd_test7production_line",
+          "innerhtml": "生产线"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择杀菌时间",
+          "controltovalidate": "XDateTimePicker1",
+          "innerhtml": "杀菌时间"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写检验人员",
+          "controltovalidate": "ctrlProd_test7operator_name",
+          "innerhtml": "检验人员"
+        }
+      }
+    },
     "items": [
       "ctrlProd_test7analyze_date",
       "ctrlProd_test7mat_name",

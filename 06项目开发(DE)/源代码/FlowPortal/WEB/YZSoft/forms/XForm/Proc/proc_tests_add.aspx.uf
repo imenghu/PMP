@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-18T15:20:41.5844122+08:00",
+  "generateAt": "2019-10-19T13:41:20.1084663+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,10 +9,10 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.DeptName",
-          "bordercolor": "#DCDCDC",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:proc_tests.DeptName"
         }
       },
       "XTextBox5": {
@@ -20,10 +20,10 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.UpdateUserName",
-          "bordercolor": "#DCDCDC",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:proc_tests.UpdateUserName"
         }
       },
       "XDateTimePicker1": {
@@ -31,8 +31,8 @@
         "attrs": {
           "id": "XDateTimePicker1",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.create_time",
-          "bordercolor": "#DCDCDC"
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:proc_tests.create_time"
         }
       },
       "XTextBox3": {
@@ -40,10 +40,10 @@
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.mat_name",
-          "bordercolor": "#DCDCDC",
+          "disableexpress": "1",
           "width": "80%",
-          "disableexpress": "1"
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:proc_tests.mat_name"
         }
       },
       "XDataBrowserButton1": {
@@ -51,10 +51,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称",
-          "datamap": "mat_code->SFDATA:proc_tests.mat_code;mat_name->SFDATA:proc_tests.mat_name;mat_spec->SFDATA:proc_tests.mat_spesc",
+          "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
-          "width": "21px"
+          "datamap": "mat_code->SFDATA:proc_tests.mat_code;mat_name->SFDATA:proc_tests.mat_name;mat_spec->SFDATA:proc_tests.mat_spesc",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称"
         }
       },
       "XTextBox6": {
@@ -62,10 +62,10 @@
         "attrs": {
           "id": "XTextBox6",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.mat_code",
-          "bordercolor": "#DCDCDC",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:proc_tests.mat_code"
         }
       },
       "XTextBox9": {
@@ -73,10 +73,10 @@
         "attrs": {
           "id": "XTextBox9",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.mat_spesc",
-          "bordercolor": "#DCDCDC",
+          "disableexpress": "1",
           "width": "100%",
-          "disableexpress": "1"
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:proc_tests.mat_spesc"
         }
       },
       "XTextBox4": {
@@ -84,9 +84,9 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.vendor_name",
+          "width": "80%",
           "bordercolor": "#DCDCDC",
-          "width": "80%"
+          "xdatabind": "SFDATA:proc_tests.vendor_name"
         }
       },
       "XDataBrowserButton2": {
@@ -94,10 +94,10 @@
         "attrs": {
           "id": "XDataBrowserButton2",
           "runat": "server",
-          "displaycolumns": "vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址",
-          "datamap": "vendor_id->SFDATA:proc_tests.vendor_id;vendor_name->SFDATA:proc_tests.vendor_name",
+          "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_vendor",
-          "width": "21px"
+          "datamap": "vendor_id->SFDATA:proc_tests.vendor_id;vendor_name->SFDATA:proc_tests.vendor_name",
+          "displaycolumns": "vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址"
         }
       },
       "XDropDownList1": {
@@ -162,11 +162,11 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.tests_remarks",
-          "bordercolor": "#DCDCDC",
           "width": "100%",
-          "textmode": "MultiLine",
-          "rows": "5"
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:proc_tests.tests_remarks",
+          "rows": "5",
+          "textmode": "MultiLine"
         }
       },
       "XTextBox11": {
@@ -174,9 +174,9 @@
         "attrs": {
           "id": "XTextBox11",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests_value.index_name",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
-          "width": "100%"
+          "xdatabind": "SFDATA:proc_tests_value.index_name"
         }
       },
       "XTextBox12": {
@@ -184,9 +184,9 @@
         "attrs": {
           "id": "XTextBox12",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests_value.rang_value",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
-          "width": "100%"
+          "xdatabind": "SFDATA:proc_tests_value.rang_value"
         }
       },
       "XTextBox13": {
@@ -194,9 +194,9 @@
         "attrs": {
           "id": "XTextBox13",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests_value.tests_value",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
-          "width": "100%"
+          "xdatabind": "SFDATA:proc_tests_value.tests_value"
         }
       },
       "table1": {
@@ -227,10 +227,10 @@
         "attrs": {
           "id": "XTextBox8",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.vendor_id",
-          "bordercolor": "#DCDCDC",
+          "disableexpress": "1",
           "width": "80%",
-          "disableexpress": "1"
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:proc_tests.vendor_id"
         }
       },
       "table2": {

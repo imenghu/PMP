@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-16T21:18:14.4870024+08:00",
+  "generateAt": "2019-10-19T11:06:59.3859512+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -209,7 +209,68 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "controltovalidate": "ctrlprod_test1sample_date",
+          "errormessage": "请选择取样日期",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "取样日期"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "controltovalidate": "ctrlprod_test1analyze_date",
+          "errormessage": "请选择分析日期",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "分析日期"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "controltovalidate": "ctrlprod_test1mat_name",
+          "errormessage": "请选择半成品名称",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "半成品名称"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "controltovalidate": "ctrlprod_test1tank_id",
+          "errormessage": "请填写罐号",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "罐号"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "controltovalidate": "ctrlprod_test1operator_name",
+          "errormessage": "请填写检验人员",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "检验人员"
+        }
+      }
+    },
     "items": [
       "ctrlprod_test1sample_date",
       "ctrlprod_test1analyze_date",

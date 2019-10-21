@@ -47,7 +47,31 @@ namespace Purchase
 
             //获得查询条件
             string filter = "State='1'";
-
+            bool moduleAdmin = true;
+            using (BPMConnection cn = new BPMConnection())
+            {
+                cn.WebOpen();
+                moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "c0ab08aa-f20b-4333-9288-948b2266ee8c", "Admin");
+                if (!moduleAdmin)
+                {
+                    bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "c0ab08aa-f20b-4333-9288-948b2266ee8c", "Company");
+                    if (moduleCompany)
+                    {
+                        MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
+                        List<string> ls = new List<string>();
+                        foreach (Member member in positions)
+                        {
+                            OU ou = member.GetParentOU(cn);
+                            ls.Add(string.Format("Company='{0}'", ou.Code));
+                        }
+                        filter = string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray()));
+                    }
+                    else
+                    {
+                        filter = string.Format("CreateUser='{0}'", YZAuthHelper.LoginUserAccount);
+                    }
+                }
+            }
             if (searchType == "QuickSearch")
             {
                 //应用关键字过滤

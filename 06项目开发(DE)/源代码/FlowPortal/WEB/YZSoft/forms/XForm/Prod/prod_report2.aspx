@@ -36,19 +36,19 @@ $Scripts-->
                         日期 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDateTimePicker id="ctrlProd_report2input_date" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.input_date" FieldName="日期"></aspxform:XDateTimePicker>
+                        <aspxform:XDateTimePicker id="ctrlProd_report2input_date" runat="server" FieldName="日期" XDataBind="SFDATA:Prod_report2.input_date" width="100%"></aspxform:XDateTimePicker>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         发酵罐号 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2tankid_source" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.tankid_source" FieldName="发酵罐号"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2tankid_source" runat="server" FieldName="发酵罐号" XDataBind="SFDATA:Prod_report2.tankid_source" width="100%"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         清酒罐号 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2tankid_dest" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.tankid_dest" FieldName="清酒罐号"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2tankid_dest" runat="server" FieldName="清酒罐号" XDataBind="SFDATA:Prod_report2.tankid_dest" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -56,19 +56,19 @@ $Scripts-->
                         浓度 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2concentration" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.concentration" FieldName="浓度"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2concentration" runat="server" FieldName="浓度" XDataBind="SFDATA:Prod_report2.concentration" width="100%"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         出发酵液数量 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2outferment_liquor_num" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.outferment_liquor_num" FieldName="出发酵液数量"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2outferment_liquor_num" runat="server" FieldName="出发酵液数量" XDataBind="SFDATA:Prod_report2.outferment_liquor_num" width="100%"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         折11度清酒数量 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2xl_saka_num" runat="server" width="100%" XDataBind="SFDATA:prod_report2.xl_saka_num" FieldName="折11度清酒数量" HiddenInput="False"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2xl_saka_num" runat="server" FieldName="折11度清酒数量" XDataBind="SFDATA:prod_report2.xl_saka_num" width="100%" HiddenInput="False"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -76,19 +76,19 @@ $Scripts-->
                         清酒度数 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2saka_degree" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.saka_degree" FieldName="清酒度数"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2saka_degree" runat="server" FieldName="清酒度数" XDataBind="SFDATA:Prod_report2.saka_degree" width="100%"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         实际出清酒数量 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2outsaka_actual_num" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.outsaka_actual_num" FieldName="实际出清酒数量"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2outsaka_actual_num" runat="server" FieldName="实际出清酒数量" XDataBind="SFDATA:Prod_report2.outsaka_actual_num" width="100%"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         实际出清酒折11度数量 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2xl_saka_actualnum" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.xl_saka_actualnum" FieldName="实际出清酒折11度数量"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2xl_saka_actualnum" runat="server" FieldName="实际出清酒折11度数量" XDataBind="SFDATA:Prod_report2.xl_saka_actualnum" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -96,13 +96,13 @@ $Scripts-->
                         过滤酒损 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2filter_wine_damage" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.filter_wine_damage" FieldName="过滤酒损"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2filter_wine_damage" runat="server" FieldName="过滤酒损" XDataBind="SFDATA:Prod_report2.filter_wine_damage" width="100%"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         备注 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="3">
-                        <aspxform:XTextBox id="ctrlProd_report2memo" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.memo" FieldName="备注"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2memo" runat="server" FieldName="备注" XDataBind="SFDATA:Prod_report2.memo" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>
@@ -115,7 +115,7 @@ $Scripts-->
                         部门名称 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2DeptName" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.DeptName" FieldName="部门名称"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2DeptName" runat="server" FieldName="部门名称" XDataBind="SFDATA:Prod_report2.DeptName" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -123,7 +123,7 @@ $Scripts-->
                         公司编码 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2Company" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.Company" FieldName="公司编码"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2Company" runat="server" FieldName="公司编码" XDataBind="SFDATA:Prod_report2.Company" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -131,7 +131,7 @@ $Scripts-->
                         公司名称 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2CompanyName" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.CompanyName" FieldName="公司名称"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2CompanyName" runat="server" FieldName="公司名称" XDataBind="SFDATA:Prod_report2.CompanyName" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -139,7 +139,28 @@ $Scripts-->
                         部门编码 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlProd_report2Dept" runat="server" width="100%" XDataBind="SFDATA:Prod_report2.Dept" FieldName="部门编码"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlProd_report2Dept" runat="server" FieldName="部门编码" XDataBind="SFDATA:Prod_report2.Dept" width="100%"></aspxform:XTextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择日期" ControlToValidate="ctrlProd_report2input_date">日期</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写发酵罐号" ControlToValidate="ctrlProd_report2tankid_source">发酵罐号</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写清酒罐号" ControlToValidate="ctrlProd_report2tankid_dest">清酒罐号</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
                     </td>
                 </tr>
             </tbody>

@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-17T10:15:41.6358849+08:00",
+  "generateAt": "2019-10-19T11:36:16.7107737+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlprod_test8analyze_date",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "分析日期",
           "xdatabind": "SFDATA:prod_test8.analyze_date",
-          "fieldname": "分析日期"
+          "width": "100%"
         }
       },
       "ctrlprod_test8mat_name": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlprod_test8mat_name",
           "runat": "server",
-          "width": "180px",
+          "fieldname": "品名名称",
           "xdatabind": "SFDATA:prod_test8.mat_name",
-          "fieldname": "品名名称"
+          "width": "180px"
         }
       },
       "XDataBrowserButton1": {
@@ -29,10 +29,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "datamap": "mat_name->SFDATA:prod_test8.mat_name",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:单位",
+          "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->\"1\",fourth_code->\"001\",state->\"1\"",
-          "width": "21px"
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:单位",
+          "datamap": "mat_name->SFDATA:prod_test8.mat_name"
         }
       },
       "ctrlprod_test8impurity": {
@@ -40,9 +40,9 @@
         "attrs": {
           "id": "ctrlprod_test8impurity",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "夹杂物 %",
           "xdatabind": "SFDATA:prod_test8.impurity",
-          "fieldname": "夹杂物 %"
+          "width": "100%"
         }
       },
       "ctrlprod_test8moisture": {
@@ -50,9 +50,9 @@
         "attrs": {
           "id": "ctrlprod_test8moisture",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "水份 %",
           "xdatabind": "SFDATA:prod_test8.moisture",
-          "fieldname": "水份 %"
+          "width": "100%"
         }
       },
       "ctrlprod_test8leach_rate": {
@@ -60,9 +60,9 @@
         "attrs": {
           "id": "ctrlprod_test8leach_rate",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "无水浸出率 %",
           "xdatabind": "SFDATA:prod_test8.leach_rate",
-          "fieldname": "无水浸出率 %"
+          "width": "100%"
         }
       },
       "ctrlprod_test8sac_time": {
@@ -70,9 +70,9 @@
         "attrs": {
           "id": "ctrlprod_test8sac_time",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "糖化时间/分",
           "xdatabind": "SFDATA:prod_test8.sac_time",
-          "fieldname": "糖化时间/分"
+          "width": "100%"
         }
       },
       "ctrlprod_test8sac_WK": {
@@ -80,9 +80,9 @@
         "attrs": {
           "id": "ctrlprod_test8sac_WK",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "糖化酵素力 WK",
           "xdatabind": "SFDATA:prod_test8.sac_WK",
-          "fieldname": "糖化酵素力 WK"
+          "width": "100%"
         }
       },
       "ctrlprod_test8a_nitrogen": {
@@ -90,9 +90,9 @@
         "attrs": {
           "id": "ctrlprod_test8a_nitrogen",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "α－氨基氮 mg/L",
           "xdatabind": "SFDATA:prod_test8.a_nitrogen",
-          "fieldname": "α－氨基氮 mg/L"
+          "width": "100%"
         }
       },
       "ctrlprod_test8total_acid": {
@@ -100,9 +100,9 @@
         "attrs": {
           "id": "ctrlprod_test8total_acid",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "总酸ml/100ml",
           "xdatabind": "SFDATA:prod_test8.total_acid",
-          "fieldname": "总酸ml/100ml"
+          "width": "100%"
         }
       },
       "ctrlprod_test8sprout": {
@@ -110,9 +110,9 @@
         "attrs": {
           "id": "ctrlprod_test8sprout",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "发芽率%",
           "xdatabind": "SFDATA:prod_test8.sprout",
-          "fieldname": "发芽率%"
+          "width": "100%"
         }
       },
       "ctrlprod_test8powdery": {
@@ -120,9 +120,9 @@
         "attrs": {
           "id": "ctrlprod_test8powdery",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "粉状粒%",
           "xdatabind": "SFDATA:prod_test8.powdery",
-          "fieldname": "粉状粒%"
+          "width": "100%"
         }
       },
       "ctrlprod_test8chroma_ebc": {
@@ -130,9 +130,9 @@
         "attrs": {
           "id": "ctrlprod_test8chroma_ebc",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "色度 EBC",
           "xdatabind": "SFDATA:prod_test8.chroma_ebc",
-          "fieldname": "色度 EBC"
+          "width": "100%"
         }
       },
       "ctrlprod_test8chroma_ebc_boil": {
@@ -140,9 +140,9 @@
         "attrs": {
           "id": "ctrlprod_test8chroma_ebc_boil",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "煮沸色度 EBC",
           "xdatabind": "SFDATA:prod_test8.chroma_ebc_boil",
-          "fieldname": "煮沸色度 EBC"
+          "width": "100%"
         }
       },
       "ctrlprod_test8ph": {
@@ -150,9 +150,9 @@
         "attrs": {
           "id": "ctrlprod_test8ph",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "PH值",
           "xdatabind": "SFDATA:prod_test8.ph",
-          "fieldname": "PH值"
+          "width": "100%"
         }
       },
       "ctrlprod_test8memo": {
@@ -160,9 +160,9 @@
         "attrs": {
           "id": "ctrlprod_test8memo",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:prod_test8.memo",
           "fieldname": "备注",
+          "xdatabind": "SFDATA:prod_test8.memo",
+          "width": "100%",
           "textmode": "MultiLine"
         }
       },
@@ -171,9 +171,9 @@
         "attrs": {
           "id": "ctrlprod_test8org_id",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "组织id",
           "xdatabind": "SFDATA:prod_test8.org_id",
-          "fieldname": "组织id"
+          "width": "100%"
         }
       },
       "ctrlprod_test8DeptName": {
@@ -181,9 +181,9 @@
         "attrs": {
           "id": "ctrlprod_test8DeptName",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "部门名称",
           "xdatabind": "SFDATA:prod_test8.DeptName",
-          "fieldname": "部门名称"
+          "width": "100%"
         }
       },
       "ctrlprod_test8Company": {
@@ -191,9 +191,9 @@
         "attrs": {
           "id": "ctrlprod_test8Company",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "公司编码",
           "xdatabind": "SFDATA:prod_test8.Company",
-          "fieldname": "公司编码"
+          "width": "100%"
         }
       },
       "ctrlprod_test8CompanyName": {
@@ -201,9 +201,9 @@
         "attrs": {
           "id": "ctrlprod_test8CompanyName",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "公司名称",
           "xdatabind": "SFDATA:prod_test8.CompanyName",
-          "fieldname": "公司名称"
+          "width": "100%"
         }
       },
       "table1": {
@@ -227,7 +227,32 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择分析日期",
+          "controltovalidate": "ctrlprod_test8analyze_date",
+          "innerhtml": "分析日期"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择品名名称",
+          "controltovalidate": "ctrlprod_test8mat_name",
+          "innerhtml": "品名名称"
+        }
+      }
+    },
     "items": [
       "ctrlprod_test8analyze_date",
       "ctrlprod_test8mat_name",

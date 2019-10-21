@@ -76,7 +76,7 @@ namespace Inv
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%' OR depot_name LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("RefundUserName LIKE N'%{0}%'  ", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(proc_status))
                     filter = queryProvider.CombinCond(filter, String.Format("refund_state LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
             }
@@ -91,7 +91,7 @@ namespace Inv
             string query = @"
             WITH X AS(
                 SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,*
-                FROM inv_matrefund {1}
+                FROM inv_matrefund  {1}
             ),
             Y AS(
                 SELECT count(*) AS TotalRows FROM X

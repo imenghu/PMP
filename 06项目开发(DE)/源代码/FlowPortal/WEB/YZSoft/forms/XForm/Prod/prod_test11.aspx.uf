@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-17T10:33:18.3637712+08:00",
+  "generateAt": "2019-10-19T11:43:14.6649982+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlProd_test11analyze_date",
           "runat": "server",
-          "fieldname": "分析日期",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_test11.analyze_date",
-          "width": "100%"
+          "fieldname": "分析日期"
         }
       },
       "ctrlProd_test11mat_name": {
@@ -19,9 +19,9 @@
         "attrs": {
           "id": "ctrlProd_test11mat_name",
           "runat": "server",
-          "fieldname": "品名",
+          "width": "180px",
           "xdatabind": "SFDATA:Prod_test11.mat_name",
-          "width": "180px"
+          "fieldname": "品名"
         }
       },
       "XDataBrowserButton1": {
@@ -29,10 +29,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->\"1\",second_code->\"02\",state->\"1\"",
+          "datamap": "mat_id->SFDATA:Prod_test11.mat_id;mat_name->SFDATA:Prod_test11.mat_name",
           "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:单位",
-          "datamap": "mat_id->SFDATA:Prod_test11.mat_id;mat_name->SFDATA:Prod_test11.mat_name"
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->\"1\",second_code->\"02\",state->\"1\"",
+          "width": "21px"
         }
       },
       "ctrlProd_test11spec": {
@@ -40,9 +40,9 @@
         "attrs": {
           "id": "ctrlProd_test11spec",
           "runat": "server",
-          "fieldname": "规格",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_test11.spec",
-          "width": "100%"
+          "fieldname": "规格"
         }
       },
       "ctrlProd_test11smell": {
@@ -50,9 +50,9 @@
         "attrs": {
           "id": "ctrlProd_test11smell",
           "runat": "server",
-          "fieldname": "气味",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_test11.smell",
-          "width": "100%"
+          "fieldname": "气味"
         }
       },
       "ctrlProd_test11purity": {
@@ -60,9 +60,9 @@
         "attrs": {
           "id": "ctrlProd_test11purity",
           "runat": "server",
-          "fieldname": "纯度",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_test11.purity",
-          "width": "100%"
+          "fieldname": "纯度"
         }
       },
       "ctrlProd_test11operator_name": {
@@ -70,9 +70,9 @@
         "attrs": {
           "id": "ctrlProd_test11operator_name",
           "runat": "server",
-          "fieldname": "检验人员",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_test11.operator_name",
-          "width": "100%"
+          "fieldname": "检验人员"
         }
       },
       "ctrlProd_test11memo": {
@@ -80,9 +80,9 @@
         "attrs": {
           "id": "ctrlProd_test11memo",
           "runat": "server",
-          "fieldname": "备注",
-          "xdatabind": "SFDATA:Prod_test11.memo",
           "width": "100%",
+          "xdatabind": "SFDATA:Prod_test11.memo",
+          "fieldname": "备注",
           "textmode": "MultiLine"
         }
       },
@@ -91,9 +91,9 @@
         "attrs": {
           "id": "ctrlProd_test11mat_id",
           "runat": "server",
-          "fieldname": "品名编号",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_test11.mat_id",
-          "width": "100%"
+          "fieldname": "品名编号"
         }
       },
       "ctrlProd_test11DeptName": {
@@ -101,9 +101,9 @@
         "attrs": {
           "id": "ctrlProd_test11DeptName",
           "runat": "server",
-          "fieldname": "部门名称",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_test11.DeptName",
-          "width": "100%"
+          "fieldname": "部门名称"
         }
       },
       "ctrlProd_test11Company": {
@@ -111,9 +111,9 @@
         "attrs": {
           "id": "ctrlProd_test11Company",
           "runat": "server",
-          "fieldname": "公司编码",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_test11.Company",
-          "width": "100%"
+          "fieldname": "公司编码"
         }
       },
       "ctrlProd_test11CompanyName": {
@@ -121,9 +121,9 @@
         "attrs": {
           "id": "ctrlProd_test11CompanyName",
           "runat": "server",
-          "fieldname": "公司名称",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_test11.CompanyName",
-          "width": "100%"
+          "fieldname": "公司名称"
         }
       },
       "ctrlProd_test11Dept": {
@@ -131,9 +131,9 @@
         "attrs": {
           "id": "ctrlProd_test11Dept",
           "runat": "server",
-          "fieldname": "部门编码",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_test11.Dept",
-          "width": "100%"
+          "fieldname": "部门编码"
         }
       },
       "table1": {
@@ -158,7 +158,44 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择分析日期",
+          "controltovalidate": "ctrlProd_test11analyze_date",
+          "innerhtml": "分析日期"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择品名",
+          "controltovalidate": "ctrlProd_test11mat_name",
+          "innerhtml": "品名"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写检验人员",
+          "controltovalidate": "ctrlProd_test11operator_name",
+          "innerhtml": "检验人员"
+        }
+      }
+    },
     "items": [
       "ctrlProd_test11analyze_date",
       "ctrlProd_test11mat_name",

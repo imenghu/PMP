@@ -43,7 +43,31 @@ public class proc_pur_task : YZServiceHandler
 
         //获得查询条件
         string filter = null;
-
+        bool moduleAdmin = true;
+        using (BPMConnection cn = new BPMConnection())
+        {
+            cn.WebOpen();
+            moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "0dfe13ee-66ae-4af1-aa7e-b919ceb79135", "Admin");
+            if (!moduleAdmin)
+            {
+                bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "0dfe13ee-66ae-4af1-aa7e-b919ceb79135", "Company");
+                if (moduleCompany)
+                {
+                    MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
+                    List<string> ls = new List<string>();
+                    foreach (Member member in positions)
+                    {
+                        OU ou = member.GetParentOU(cn);
+                        ls.Add(string.Format("Company='{0}'", ou.Code));
+                    }
+                    filter = string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray()));
+                }
+                else
+                {
+                    filter = string.Format("CreateUser='{0}'", YZAuthHelper.LoginUserAccount);
+                }
+            }
+        }
         if (searchType == "QuickSearch")
         {
             //应用关键字过滤

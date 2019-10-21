@@ -36,20 +36,20 @@ $Scripts-->
                         分析日期 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDateTimePicker id="ctrlprod_test6analyze_date" runat="server" XDataBind="SFDATA:prod_test6.analyze_date" width="100%"></aspxform:XDateTimePicker>
+                        <aspxform:XDateTimePicker id="ctrlprod_test6analyze_date" runat="server" width="100%" XDataBind="SFDATA:prod_test6.analyze_date"></aspxform:XDateTimePicker>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         品名名称 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_test6mat_name" runat="server" XDataBind="SFDATA:prod_test6.mat_name" width="180px"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" XDataSource='DataSource:SFDATA;TableName:ctl_material;Filter:first_code->"3",third_code->"02",state->"1"' DisplayColumns="mat_code:物料编码;mat_name:品名名称;mat_spec:规格;base_unit:单位" DataMap="mat_name->SFDATA:prod_test6.mat_name"></aspxform:XDataBrowserButton>
+                        <aspxform:XTextBox id="ctrlprod_test6mat_name" runat="server" width="180px" XDataBind="SFDATA:prod_test6.mat_name"></aspxform:XTextBox>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" DataMap="mat_name->SFDATA:prod_test6.mat_name" DisplayColumns="mat_code:物料编码;mat_name:品名名称;mat_spec:规格;base_unit:单位" XDataSource='DataSource:SFDATA;TableName:ctl_material;Filter:first_code->"3",third_code->"02",state->"1"' Width="21px"></aspxform:XDataBrowserButton>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         罐号 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_test6tank_id" runat="server" XDataBind="SFDATA:prod_test6.tank_id" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlprod_test6tank_id" runat="server" width="100%" XDataBind="SFDATA:prod_test6.tank_id"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -57,19 +57,19 @@ $Scripts-->
                         发酵期（天） 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_test6ferment_days" runat="server" XDataBind="SFDATA:prod_test6.ferment_days" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlprod_test6ferment_days" runat="server" width="100%" XDataBind="SFDATA:prod_test6.ferment_days"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         双乙酰（mg/L） 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_test6diacetyl" runat="server" XDataBind="SFDATA:prod_test6.diacetyl" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlprod_test6diacetyl" runat="server" width="100%" XDataBind="SFDATA:prod_test6.diacetyl"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         检验人员 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_test6operator_name" runat="server" XDataBind="SFDATA:prod_test6.operator_name" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlprod_test6operator_name" runat="server" width="100%" XDataBind="SFDATA:prod_test6.operator_name"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -77,7 +77,7 @@ $Scripts-->
                         备注(离心或稀释) 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="ctrlprod_test6memo" runat="server" XDataBind="SFDATA:prod_test6.memo" width="100%" TextMode="MultiLine"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlprod_test6memo" runat="server" width="100%" XDataBind="SFDATA:prod_test6.memo" TextMode="MultiLine"></aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>
@@ -90,7 +90,7 @@ $Scripts-->
                         组织id 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_test6org_id" runat="server" XDataBind="SFDATA:prod_test6.org_id" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlprod_test6org_id" runat="server" width="100%" XDataBind="SFDATA:prod_test6.org_id"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -98,7 +98,7 @@ $Scripts-->
                         部门名称 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_test6DeptName" runat="server" XDataBind="SFDATA:prod_test6.DeptName" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlprod_test6DeptName" runat="server" width="100%" XDataBind="SFDATA:prod_test6.DeptName"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -106,7 +106,7 @@ $Scripts-->
                         公司编码 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_test6Company" runat="server" XDataBind="SFDATA:prod_test6.Company" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlprod_test6Company" runat="server" width="100%" XDataBind="SFDATA:prod_test6.Company"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -114,7 +114,35 @@ $Scripts-->
                         公司名称 
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_test6CompanyName" runat="server" XDataBind="SFDATA:prod_test6.CompanyName" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlprod_test6CompanyName" runat="server" width="100%" XDataBind="SFDATA:prod_test6.CompanyName"></aspxform:XTextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择分析日期" ControlToValidate="ctrlprod_test6analyze_date">分析日期</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择品名名称" ControlToValidate="ctrlprod_test6mat_name">品名名称</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写罐号" ControlToValidate="ctrlprod_test6tank_id">罐号</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写检验人员" ControlToValidate="ctrlprod_test6operator_name">检验人员</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
                     </td>
                 </tr>
             </tbody>

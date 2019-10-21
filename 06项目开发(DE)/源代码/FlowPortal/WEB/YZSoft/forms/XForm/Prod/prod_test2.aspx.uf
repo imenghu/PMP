@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-16T20:59:46.5498651+08:00",
+  "generateAt": "2019-10-19T11:06:29.499439+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,8 +9,8 @@
         "attrs": {
           "id": "ctrlProd_test2analyze_date",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.analyze_date",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.analyze_date"
         }
       },
       "ctrlProd_test2mat_name": {
@@ -18,8 +18,8 @@
         "attrs": {
           "id": "ctrlProd_test2mat_name",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.mat_name",
           "width": "180px",
+          "xdatabind": "SFDATA:Prod_test2.mat_name",
           "disableexpress": "1"
         }
       },
@@ -28,10 +28,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->3,third_code->\"03\",state->1",
+          "datamap": "mat_id->SFDATA:Prod_test2.mat_id;mat_name->SFDATA:Prod_test2.mat_name",
           "displaycolumns": "mat_code:物料编码;mat_name:品名名称;mat_spec:规格;base_unit:单位",
-          "datamap": "mat_id->SFDATA:Prod_test2.mat_id;mat_name->SFDATA:Prod_test2.mat_name"
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->3,third_code->\"03\",state->1",
+          "width": "21px"
         }
       },
       "ctrlProd_test2tank_id": {
@@ -39,8 +39,8 @@
         "attrs": {
           "id": "ctrlProd_test2tank_id",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.tank_id",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.tank_id"
         }
       },
       "ctrlProd_test2alcohol": {
@@ -48,8 +48,8 @@
         "attrs": {
           "id": "ctrlProd_test2alcohol",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.alcohol",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.alcohol"
         }
       },
       "ctrlProd_test2real_ferment": {
@@ -57,8 +57,8 @@
         "attrs": {
           "id": "ctrlProd_test2real_ferment",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.real_ferment",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.real_ferment"
         }
       },
       "ctrlProd_test2wort_concent": {
@@ -66,8 +66,8 @@
         "attrs": {
           "id": "ctrlProd_test2wort_concent",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.wort_concent",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.wort_concent"
         }
       },
       "ctrlProd_test2true_concent": {
@@ -75,8 +75,8 @@
         "attrs": {
           "id": "ctrlProd_test2true_concent",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.true_concent",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.true_concent"
         }
       },
       "ctrlProd_test2total_acid": {
@@ -84,8 +84,8 @@
         "attrs": {
           "id": "ctrlProd_test2total_acid",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.total_acid",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.total_acid"
         }
       },
       "ctrlProd_test2co2": {
@@ -93,8 +93,8 @@
         "attrs": {
           "id": "ctrlProd_test2co2",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.co2",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.co2"
         }
       },
       "ctrlProd_test2dis_oxygen": {
@@ -102,8 +102,8 @@
         "attrs": {
           "id": "ctrlProd_test2dis_oxygen",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.dis_oxygen",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.dis_oxygen"
         }
       },
       "ctrlProd_test2chroma_ebc": {
@@ -111,8 +111,8 @@
         "attrs": {
           "id": "ctrlProd_test2chroma_ebc",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.chroma_ebc",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.chroma_ebc"
         }
       },
       "ctrlProd_test2ph": {
@@ -120,8 +120,8 @@
         "attrs": {
           "id": "ctrlProd_test2ph",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.ph",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.ph"
         }
       },
       "ctrlProd_test2turbidity_ebc": {
@@ -129,8 +129,8 @@
         "attrs": {
           "id": "ctrlProd_test2turbidity_ebc",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.turbidity_ebc",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.turbidity_ebc"
         }
       },
       "ctrlProd_test2operator_name": {
@@ -138,8 +138,8 @@
         "attrs": {
           "id": "ctrlProd_test2operator_name",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.operator_name",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.operator_name"
         }
       },
       "ctrlProd_test2memo": {
@@ -147,8 +147,8 @@
         "attrs": {
           "id": "ctrlProd_test2memo",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.memo",
           "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.memo",
           "textmode": "MultiLine"
         }
       },
@@ -157,8 +157,8 @@
         "attrs": {
           "id": "ctrlProd_test2mat_id",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.mat_id",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.mat_id"
         }
       },
       "ctrlProd_test2DeptName": {
@@ -166,8 +166,8 @@
         "attrs": {
           "id": "ctrlProd_test2DeptName",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.DeptName",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.DeptName"
         }
       },
       "ctrlProd_test2Company": {
@@ -175,8 +175,8 @@
         "attrs": {
           "id": "ctrlProd_test2Company",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.Company",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.Company"
         }
       },
       "ctrlProd_test2CompanyName": {
@@ -184,8 +184,8 @@
         "attrs": {
           "id": "ctrlProd_test2CompanyName",
           "runat": "server",
-          "xdatabind": "SFDATA:Prod_test2.CompanyName",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Prod_test2.CompanyName"
         }
       },
       "table1": {
@@ -209,7 +209,56 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择分析日期",
+          "controltovalidate": "ctrlProd_test2analyze_date",
+          "innerhtml": "分析日期"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择品名名称",
+          "controltovalidate": "ctrlProd_test2mat_name",
+          "innerhtml": "品名名称"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写罐号",
+          "controltovalidate": "ctrlProd_test2tank_id",
+          "innerhtml": "罐号"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写检验人员",
+          "controltovalidate": "ctrlProd_test2operator_name",
+          "innerhtml": "检验人员"
+        }
+      }
+    },
     "items": [
       "ctrlProd_test2analyze_date",
       "ctrlProd_test2mat_name",

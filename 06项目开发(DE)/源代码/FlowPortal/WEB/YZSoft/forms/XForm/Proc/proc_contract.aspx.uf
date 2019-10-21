@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-15T16:57:37.4862171+08:00",
+  "generateAt": "2019-10-19T13:36:25.3380987+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,6 +9,7 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
+          "fieldname": "合同编号",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "SFDATA:proc_contract.contract_code"
@@ -19,6 +20,7 @@
         "attrs": {
           "id": "XDropDownList1",
           "runat": "server",
+          "fieldname": "合同类型",
           "xdatabind": "SFDATA:proc_contract.contract_type",
           "prompttext": "--请选择--"
         },
@@ -51,6 +53,7 @@
         "attrs": {
           "id": "XTextBox6",
           "runat": "server",
+          "fieldname": "合同名称",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "SFDATA:proc_contract.contract_name"
@@ -61,6 +64,7 @@
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
+          "fieldname": "供应商名称",
           "bordercolor": "#DCDCDC",
           "width": "80%",
           "xdatabind": "SFDATA:proc_contract.vendor_name",
@@ -83,6 +87,7 @@
         "attrs": {
           "id": "XDropDownList2",
           "runat": "server",
+          "fieldname": "委外",
           "xdatabind": "SFDATA:proc_contract.if_outsource",
           "prompttext": "--请选择--"
         },
@@ -108,6 +113,7 @@
         "attrs": {
           "id": "XTextBox7",
           "runat": "server",
+          "fieldname": "总金额",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "SFDATA:proc_contract.total_price"
@@ -118,6 +124,7 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
+          "fieldname": "提交人",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "SFDATA:proc_contract.CreateUserName",
@@ -129,6 +136,7 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
+          "fieldname": "签订人员",
           "bordercolor": "#DCDCDC",
           "width": "80%",
           "xdatabind": "SFDATA:proc_contract.SignUserName",
@@ -149,6 +157,7 @@
         "attrs": {
           "id": "XAttachments1",
           "runat": "server",
+          "fieldname": "附件",
           "width": "100%",
           "xdatabind": "SFDATA:proc_contract.attachment",
           "filetypesdescription": "Word,Excel,Pdf",
@@ -173,6 +182,7 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
+          "fieldname": "物料编码",
           "bordercolor": "#DCDCDC",
           "width": "120px",
           "xdatabind": "varcode",
@@ -209,6 +219,7 @@
         "attrs": {
           "id": "XTextBox10",
           "runat": "server",
+          "fieldname": "物料名称",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "varname",
@@ -220,6 +231,7 @@
         "attrs": {
           "id": "XTextBox11",
           "runat": "server",
+          "fieldname": "物料规格",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "varspec",
@@ -231,6 +243,7 @@
         "attrs": {
           "id": "XTextBox12",
           "runat": "server",
+          "fieldname": "申购数量",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "varslnum",
@@ -242,6 +255,7 @@
         "attrs": {
           "id": "XTextBox13",
           "runat": "server",
+          "fieldname": "申购单位",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "varunit",
@@ -253,6 +267,7 @@
         "attrs": {
           "id": "XTextBox14",
           "runat": "server",
+          "fieldname": "计划单价",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "varprice",
@@ -264,6 +279,7 @@
         "attrs": {
           "id": "XTextBox15",
           "runat": "server",
+          "fieldname": "价格单位",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "varpriceunit",
@@ -275,6 +291,7 @@
         "attrs": {
           "id": "XTextBox16",
           "runat": "server",
+          "fieldname": "计划金额",
           "bordercolor": "#DCDCDC",
           "width": "100%",
           "xdatabind": "varsprice",
@@ -286,6 +303,7 @@
         "attrs": {
           "id": "XDateTimePicker1",
           "runat": "server",
+          "fieldname": "计划到货时间",
           "bordercolor": "#DCDCDC",
           "xdatabind": "vartime",
           "width": "100%",
@@ -297,6 +315,7 @@
         "attrs": {
           "id": "XDropDownList3",
           "runat": "server",
+          "fieldname": "是否紧急",
           "xdatabind": "varurg",
           "disableexpress": "1",
           "width": "100%"
@@ -324,6 +343,7 @@
         "attrs": {
           "id": "XTextBox19",
           "runat": "server",
+          "fieldname": "备注",
           "bordercolor": "#DCDCDC",
           "xdatabind": "varremark",
           "disableexpress": "1"
@@ -424,7 +444,80 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator6": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator6",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择物料编码",
+          "controltovalidate": "XTextBox1",
+          "innerhtml": "物料编码"
+        }
+      },
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写合同编号",
+          "controltovalidate": "XTextBox2",
+          "innerhtml": "合同编号"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择合同类型",
+          "controltovalidate": "XDropDownList1",
+          "innerhtml": "合同类型"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择供应商名称",
+          "controltovalidate": "XTextBox3",
+          "innerhtml": "供应商名称"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择是否委外",
+          "controltovalidate": "XDropDownList2",
+          "innerhtml": "委外"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择签订人员",
+          "controltovalidate": "XTextBox5",
+          "innerhtml": "签订人员"
+        }
+      }
+    },
     "items": [
       "XTextBox2",
       "XDropDownList1",

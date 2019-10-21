@@ -175,6 +175,41 @@ $Scripts-->
                         <aspxform:XTextBox id="ctrlprod_test1CompanyName" runat="server" XDataBind="SFDATA:prod_test1.CompanyName" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" ControlToValidate="ctrlprod_test1sample_date" ErrorMessage="请选择取样日期" ForeColor="Red" Display="None">取样日期</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" ControlToValidate="ctrlprod_test1analyze_date" ErrorMessage="请选择分析日期" ForeColor="Red" Display="None">分析日期</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" ControlToValidate="ctrlprod_test1mat_name" ErrorMessage="请选择半成品名称" ForeColor="Red" Display="None">半成品名称</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" ControlToValidate="ctrlprod_test1tank_id" ErrorMessage="请填写罐号" ForeColor="Red" Display="None">罐号</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator5" runat="server" ControlToValidate="ctrlprod_test1operator_name" ErrorMessage="请填写检验人员" ForeColor="Red" Display="None">检验人员</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </form>
