@@ -50,35 +50,45 @@
                 },
                 items: [
                     { xtype: 'rownumberer' },
-                                        { header: '产成品编码', dataIndex: 'mat_code', width: 100, align: 'left', sortable: true
-                                        },
-                                        { header: '产成品名称', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
-                                        },
-                                        { header: '规格', dataIndex: 'mat_spec', width: 100, align: 'left', sortable: true
-                                        },
-                                        { header: '入库数量', dataIndex: 'in_stnum', width: 100, align: 'left', sortable: true
-                                        },
-                                        { header: '基准单位', dataIndex: 'in_stnum_unit', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '入库体积', dataIndex: 'innum', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '单位', dataIndex: 'mat_unit_name', width: 100, align: 'left', sortable: true
-                                        },
-                                        {
-                                            header: '生产部门', dataIndex: 'ProdDeptName', width: 100, align: 'left', sortable: true
-                                        },
-                                        { header: '仓库名称', dataIndex: 'depot_name', width: 100, align: 'left', sortable: true
-                                        },
-                                        { header: '入库人', dataIndex: 'ProdUserName', width: 100, align: 'left', sortable: true
-                                        },
-                                        { header: '入库时间', dataIndex: 'in_time', width: 100, align: 'left', sortable: true
-                                            , renderer: XYSoft.Render.renderDateYMD
-                                        },
-                                        { header: '备注', dataIndex: 'prod_in_remarks', width: 100, align: 'left', sortable: true
-                                        },
-                                        { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo} },
+                    { header: '公司', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true },
+                    {
+                        header: '产成品编码', dataIndex: 'mat_code', width: 100, align: 'left', sortable: true
+                    },
+                    {
+                        header: '产成品名称', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
+                    },
+                    {
+                        header: '规格', dataIndex: 'mat_spec', width: 100, align: 'left', sortable: true
+                    },
+                    {
+                        header: '入库数量', dataIndex: 'in_stnum', width: 100, align: 'left', sortable: true
+                    },
+                    {
+                        header: '基准单位', dataIndex: 'in_stnum_unit', width: 100, align: 'left', sortable: true
+                    },
+                    {
+                        header: '入库体积', dataIndex: 'innum', width: 100, align: 'left', sortable: true
+                    },
+                    {
+                        header: '单位', dataIndex: 'mat_unit_name', width: 100, align: 'left', sortable: true
+                    },
+                    {
+                        header: '生产部门', dataIndex: 'ProdDeptName', width: 100, align: 'left', sortable: true
+                    },
+                    {
+                        header: '仓库名称', dataIndex: 'depot_name', width: 100, align: 'left', sortable: true
+                    },
+                    {
+                        header: '入库人', dataIndex: 'ProdUserName', width: 100, align: 'left', sortable: true
+                    },
+                    {
+                        header: '入库时间', dataIndex: 'in_time', width: 100, align: 'left', sortable: true
+                        , renderer: XYSoft.Render.renderDateYMD
+                    },
+                    {
+                        header: '备注', dataIndex: 'prod_in_remarks', width: 100, align: 'left', sortable: true
+                    },
+                    { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } }
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

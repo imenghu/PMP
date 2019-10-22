@@ -30,8 +30,8 @@ namespace Prod
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From Prod_test2 WHERE =@id";
-                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                    cmd.CommandText = "Delete From Prod_test2 WHERE test_id=@id";
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;    
                     cmd.ExecuteNonQuery();
                 }
             }

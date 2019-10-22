@@ -51,7 +51,7 @@
                 items: [
                     { xtype: 'rownumberer' },
                                         {
-                                            header: '公司', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
+                                            header: '公司名称', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
                                         },
                                         {
                                             header: '省', dataIndex: 'province_id', width: 100, align: 'left', sortable: true

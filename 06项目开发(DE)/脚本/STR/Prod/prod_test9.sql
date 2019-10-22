@@ -26,6 +26,8 @@ CREATE TABLE dbo.prod_test9
   CompanyName varchar(50) null ,
   DeptName varchar(50) null ,
   Dept varchar(50) null ,
+  CreateUser varchar(50) null ,
+  CreateUserName varchar(50) null ,
   CONSTRAINT PK_prod_test9 PRIMARY KEY  CLUSTERED
   (
     test_id

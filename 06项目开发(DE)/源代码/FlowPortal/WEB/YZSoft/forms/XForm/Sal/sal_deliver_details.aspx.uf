@@ -1,0 +1,318 @@
+﻿{
+  "generateAt": "2019-10-21T11:02:38.329164+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlSal_deliver_detaildeliver_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detaildeliver_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.deliver_name",
+          "width": "180px"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->2,state->1",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:物料规格;base_unit:单位",
+          "datamap": "mat_name->SFDATA:sal_deliver_details.deliver_name"
+        }
+      },
+      "ctrlSal_deliver_detaildepot_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detaildepot_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.depot_name",
+          "width": "180px"
+        }
+      },
+      "XDataBrowserButton2": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton2",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot;Filter:state->1",
+          "displaycolumns": "depot_name:仓库名称",
+          "datamap": "depot_name->SFDATA:sal_deliver_details.depot_name"
+        }
+      },
+      "ctrlSal_deliver_detailcustomer_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detailcustomer_name",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.customer_name",
+          "width": "180px",
+          "disableexpress": "1"
+        }
+      },
+      "XDataBrowserButton3": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton3",
+          "runat": "server",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:sal_customer",
+          "displaycolumns": "area:销售大区;customer_name:收货人;phone_number:收货手机号;receiving_address:收货地址",
+          "datamap": "area->SFDATA:sal_deliver_details.name;customer_name->SFDATA:sal_deliver_details.customer_name;phone_number->SFDATA:sal_deliver_details.receiving_mobile_phone;receiving_address->SFDATA:sal_deliver_details.receiving_address;receiver->SFDATA:sal_deliver_details.receiver"
+        }
+      },
+      "ctrlSal_deliver_detaildeliver_no": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detaildeliver_no",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.deliver_no",
+          "width": "100%"
+        }
+      },
+      "ctrlSal_deliver_detaildeliver_money": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detaildeliver_money",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.deliver_number",
+          "width": "100%"
+        }
+      },
+      "ctrlSal_deliver_detailconsignor": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detailconsignor",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.consignor",
+          "width": "100%"
+        }
+      },
+      "ctrlSal_deliver_detailname": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detailname",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.name",
+          "width": "100%",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlSal_deliver_detailreceiver": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detailreceiver",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.receiver",
+          "width": "100%",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlSal_deliver_detailreceiving_mobile_phone": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detailreceiving_mobile_phone",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.receiving_mobile_phone",
+          "width": "100%",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlSal_deliver_detailreceiving_address": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detailreceiving_address",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.receiving_address",
+          "width": "100%",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlSal_deliver_detaildeliver_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlSal_deliver_detaildeliver_date",
+          "runat": "server",
+          "xdatabind": "SFDATA:Sal_deliver_details.deliver_date",
+          "width": "100%"
+        }
+      },
+      "ctrlSal_deliver_detailcreatedate": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlSal_deliver_detailcreatedate",
+          "runat": "server",
+          "xdatabind": "SFDATA:Sal_deliver_details.createdate",
+          "width": "100%"
+        }
+      },
+      "ctrlSal_deliver_detailsummary": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detailsummary",
+          "runat": "server",
+          "xdatabind": "SFDATA:Sal_deliver_details.summary",
+          "width": "100%",
+          "textmode": "MultiLine"
+        }
+      },
+      "ctrlSal_deliver_detailcustomer_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detailcustomer_code",
+          "runat": "server",
+          "xdatabind": "SFDATA:Sal_deliver_details.customer_code",
+          "width": "100%"
+        }
+      },
+      "ctrlSal_deliver_detaildepot_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deliver_detaildepot_id",
+          "runat": "server",
+          "xdatabind": "SFDATA:Sal_deliver_details.depot_id",
+          "width": "100%"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlSal_deliver_detailcustomer_code",
+          "ctrlSal_deliver_detaildepot_id"
+        ]
+      }
+    },
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择货物名称",
+          "controltovalidate": "ctrlSal_deliver_detaildeliver_name",
+          "innerhtml": "货物名称"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择发货仓库名称",
+          "controltovalidate": "ctrlSal_deliver_detaildepot_name",
+          "innerhtml": "发货仓库名称"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择客户名称",
+          "controltovalidate": "ctrlSal_deliver_detailcustomer_name",
+          "innerhtml": "客户名称"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写货号",
+          "controltovalidate": "ctrlSal_deliver_detaildeliver_no",
+          "innerhtml": "货号"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写发货数量",
+          "controltovalidate": "ctrlSal_deliver_detaildeliver_money",
+          "innerhtml": "发货数量"
+        }
+      },
+      "XRequiredFieldValidator6": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator6",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写发货人",
+          "controltovalidate": "ctrlSal_deliver_detailconsignor",
+          "innerhtml": "发货人"
+        }
+      },
+      "XRequiredFieldValidator7": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator7",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择发货日期",
+          "controltovalidate": "ctrlSal_deliver_detaildeliver_date",
+          "innerhtml": "发货日期"
+        }
+      },
+      "XRequiredFieldValidator8": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator8",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择创建日期",
+          "controltovalidate": "ctrlSal_deliver_detailcreatedate",
+          "innerhtml": "创建日期"
+        }
+      }
+    },
+    "items": [
+      "ctrlSal_deliver_detaildeliver_name",
+      "XDataBrowserButton1",
+      "ctrlSal_deliver_detaildepot_name",
+      "XDataBrowserButton2",
+      "ctrlSal_deliver_detailcustomer_name",
+      "XDataBrowserButton3",
+      "ctrlSal_deliver_detaildeliver_no",
+      "ctrlSal_deliver_detaildeliver_money",
+      "ctrlSal_deliver_detailconsignor",
+      "ctrlSal_deliver_detailname",
+      "ctrlSal_deliver_detailreceiver",
+      "ctrlSal_deliver_detailreceiving_mobile_phone",
+      "ctrlSal_deliver_detailreceiving_address",
+      "ctrlSal_deliver_detaildeliver_date",
+      "ctrlSal_deliver_detailcreatedate",
+      "ctrlSal_deliver_detailsummary",
+      "table1"
+    ]
+  }
+}

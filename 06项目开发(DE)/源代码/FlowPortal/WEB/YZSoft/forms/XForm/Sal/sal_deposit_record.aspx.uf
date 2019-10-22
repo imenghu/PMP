@@ -1,0 +1,348 @@
+﻿{
+  "generateAt": "2019-10-21T10:47:27.4328553+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlSal_deposit_recorddeposit_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlSal_deposit_recorddeposit_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.deposit_date"
+        }
+      },
+      "ctrlSal_deposit_recordinsert_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlSal_deposit_recordinsert_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.insert_date"
+        }
+      },
+      "ctrlSal_deposit_recordfinance_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recordfinance_name",
+          "runat": "server",
+          "width": "220px",
+          "xdatabind": "SFDATA:Sal_deposit_record.finance_name"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "datamap": "finance_name->SFDATA:Sal_deposit_record.finance_name",
+          "displaycolumns": "finance_name:财务名称;finance_company:公司",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:sal_finance"
+        }
+      },
+      "ctrlSal_deposit_recordpayment_account": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recordpayment_account",
+          "runat": "server",
+          "width": "168px",
+          "xdatabind": "SFDATA:Sal_deposit_record.payment_account",
+          "max": "0",
+          "min": "0",
+          "disableexpress": "1",
+          "placeholder": "",
+          "hiddeninput": "False",
+          "valuetodisplaytext": ""
+        }
+      },
+      "XDataBrowserButton3": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton3",
+          "runat": "server",
+          "xclass": "YZSoft.Forms.Field.DataBrowserButton",
+          "datamap": "customer_code->SFDATA:Sal_deposit_record.customer_code;area->SFDATA:Sal_deposit_record.name;payment_account->SFDATA:Sal_deposit_record.payment_account;customer_name->SFDATA:Sal_deposit_record.customer_name",
+          "displaycolumns": "area:销售大区;customer_name:收货人;phone_number:收货手机号;receiving_address:收货地址",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:sal_customer",
+          "text": "...",
+          "usesubmitbehavior": "False",
+          "popupwndheight": "-1",
+          "popupwndwidth": "-1"
+        }
+      },
+      "ctrlSal_deposit_recordcustomer_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recordcustomer_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.customer_name",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlSal_deposit_recordname": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recordname",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.name",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlSal_deposit_recorddepot_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recorddepot_name",
+          "runat": "server",
+          "width": "164px",
+          "xdatabind": "SFDATA:Sal_deposit_record.depot_name",
+          "max": "0",
+          "min": "0",
+          "placeholder": "",
+          "hiddeninput": "False",
+          "valuetodisplaytext": ""
+        }
+      },
+      "XDataBrowserButton2": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton2",
+          "runat": "server",
+          "datamap": "depot_name->SFDATA:Sal_deposit_record.depot_name",
+          "displaycolumns": "depot_name:仓库名称",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot;Filter:state->1"
+        }
+      },
+      "ctrlSal_deposit_recorddeposit_money": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recorddeposit_money",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.deposit_money"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:Sal_deposit_record.deposit_flag",
+          "width": "100%",
+          "xdatasource": "",
+          "prompttext": "--请选择--"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "1",
+              "innerhtml": "增加"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "value": "0",
+              "innerhtml": "减少"
+            }
+          }
+        ]
+      },
+      "ctrlSal_deposit_recordsummary": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recordsummary",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.summary",
+          "textmode": "MultiLine"
+        }
+      },
+      "ctrlSal_deposit_recordremark": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recordremark",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.remark",
+          "textmode": "MultiLine"
+        }
+      },
+      "ctrlSal_deposit_recordcustomer_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recordcustomer_code",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.customer_code"
+        }
+      },
+      "ctrlSal_deposit_recorddeposit_initial_balance": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recorddeposit_initial_balance",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.deposit_initial_balance"
+        }
+      },
+      "ctrlSal_deposit_recorddeposit_final_balance": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recorddeposit_final_balance",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.deposit_final_balance"
+        }
+      },
+      "ctrlSal_deposit_recorddepot_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recorddepot_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.depot_id"
+        }
+      },
+      "ctrlSal_deposit_recordfinance_id": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_deposit_recordfinance_id",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deposit_record.finance_id"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "800",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlSal_deposit_recordcustomer_code",
+          "ctrlSal_deposit_recorddeposit_initial_balance",
+          "ctrlSal_deposit_recorddeposit_final_balance",
+          "ctrlSal_deposit_recorddepot_id",
+          "ctrlSal_deposit_recordfinance_id"
+        ]
+      }
+    },
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择押金日期",
+          "controltovalidate": "ctrlSal_deposit_recorddeposit_date",
+          "innerhtml": "押金日期"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择录入日期",
+          "controltovalidate": "ctrlSal_deposit_recordinsert_date",
+          "innerhtml": "录入日期"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择财务名称",
+          "controltovalidate": "ctrlSal_deposit_recordfinance_name",
+          "innerhtml": "财务名称"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择经销商",
+          "controltovalidate": "ctrlSal_deposit_recordpayment_account",
+          "innerhtml": "经销商"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择发货仓库名称",
+          "controltovalidate": "ctrlSal_deposit_recorddepot_name",
+          "innerhtml": "发货仓库名称"
+        }
+      },
+      "XRequiredFieldValidator6": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator6",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写金额",
+          "controltovalidate": "ctrlSal_deposit_recorddeposit_money",
+          "innerhtml": "金额"
+        }
+      },
+      "XRequiredFieldValidator7": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator7",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择保证金是否增加",
+          "controltovalidate": "XDropDownList1",
+          "innerhtml": "保证金增加减少"
+        }
+      }
+    },
+    "items": [
+      "ctrlSal_deposit_recorddeposit_date",
+      "ctrlSal_deposit_recordinsert_date",
+      "ctrlSal_deposit_recordfinance_name",
+      "XDataBrowserButton1",
+      "ctrlSal_deposit_recordpayment_account",
+      "XDataBrowserButton3",
+      "ctrlSal_deposit_recordcustomer_name",
+      "ctrlSal_deposit_recordname",
+      "ctrlSal_deposit_recorddepot_name",
+      "XDataBrowserButton2",
+      "ctrlSal_deposit_recorddeposit_money",
+      "XDropDownList1",
+      "ctrlSal_deposit_recordsummary",
+      "ctrlSal_deposit_recordremark",
+      "table1"
+    ]
+  }
+}

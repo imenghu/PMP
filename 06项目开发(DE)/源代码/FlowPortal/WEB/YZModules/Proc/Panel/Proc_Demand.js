@@ -290,7 +290,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand', {
                     return;
 
                 YZSoft.Ajax.request({
-                    url: YZSoft.$url(me, '../Service/TYPurchaseDemandService.ashx'),
+                    url: YZSoft.$url(me, '../Service/proc_demand.ashx'),
                     method: 'POST',
                     params: {
                         method: 'Delete'

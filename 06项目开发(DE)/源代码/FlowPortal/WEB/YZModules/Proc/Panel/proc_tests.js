@@ -51,7 +51,7 @@
                 },
                 items: [
                     { xtype: 'rownumberer' },
-                    { header: 'tests_id', dataIndex: 'tests_id', width: 30, hidden: true },
+                    { header: '公司', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true },
                     { header: '化验类型', dataIndex: 'tests_class', width: 100, align: 'left', sortable: true },
                     { header: '供应商名称', dataIndex: 'vendor_name', width: 100, align: 'left', sortable: true },
                     { header: "物料编码", dataIndex: 'mat_code', width: 100, align: 'left', sortable: true },

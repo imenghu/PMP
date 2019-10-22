@@ -52,7 +52,8 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
                 },
                 items: [
                     { xtype: 'rownumberer' },
-                    { header: "供应商名称", dataIndex: 'vendor_name',flex:1, width: 80, align: 'left', sortable: true },
+                    { header: '公司', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true },
+                    { header: "供应商名称", dataIndex: 'vendor_name',width: 100, align: 'left', sortable: true },
                     { header: '物料名称', dataIndex: 'mat_name', width: 80, align: 'left', sortable: true },
                     { header: '物料规格', dataIndex: 'mat_spesc', minwidth: 80, align: 'left', sortable: true },
                     { header: '采购物料数量', dataIndex: 'arrival_slnum', width: 80, align: 'left', sortable: true },
@@ -60,7 +61,7 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
                     { header: '运货人', dataIndex: 'arrival_username', width: 80, align: 'left', sortable: true },
                     { header: '联系电话', dataIndex: 'arrival_usertel', width: 80, align: 'left', sortable: true },
                     { header: '预估运费', dataIndex: 'plan_arrival_price', width: 100, align: 'left', sortable: true },
-                    { header: '接货人', dataIndex: 'storename', width: 80, align: 'left', sortable: true },
+                    { header: '接货人', dataIndex: 'StoreUserName', width: 80, align: 'left', sortable: true },
                     { header: '需求提报时间', dataIndex: 'create_time', width: 80, align: 'left', sortable: true },
                     { header: '预计到货时间', dataIndex: 'plan_arrival_time', width: 80, align: 'left', sortable: true },
                     { header: '完成情况', dataIndex: 'notice_state', width: 80, align: 'center', sortable: true, renderer: me.Status },

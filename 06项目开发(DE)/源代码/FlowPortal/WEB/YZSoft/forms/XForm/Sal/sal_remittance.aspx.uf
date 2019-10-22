@@ -1,0 +1,263 @@
+﻿{
+  "generateAt": "2019-10-21T11:08:59.6586825+08:00",
+  "docVersion": 1,
+  "src": {
+    "funcs": {},
+    "components": {
+      "ctrlSal_remittanceremittance_no": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_remittanceremittance_no",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_remittance.remittance_no"
+        }
+      },
+      "ctrlSal_remittancecustomer_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_remittancecustomer_name",
+          "runat": "server",
+          "width": "180px",
+          "xdatabind": "SFDATA:Sal_remittance.customer_name",
+          "disableexpress": "1"
+        }
+      },
+      "XDataBrowserButton3": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton3",
+          "runat": "server",
+          "xdatasource": "DataSource:SFDATA;TableName:sal_customer",
+          "displaycolumns": "area:销售大区;customer_name:收货人;phone_number:收货手机号;receiving_address:收货地址",
+          "datamap": "customer_code->SFDATA:Sal_remittance.customer_code;area->SFDATA:Sal_remittance.name;payment_account->SFDATA:sal_remittance.remittance_man;customer_name->SFDATA:Sal_remittance.customer_name",
+          "width": "21px"
+        }
+      },
+      "ctrlSal_remittanceremittance_money": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_remittanceremittance_money",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_remittance.remittance_money"
+        }
+      },
+      "ctrlSal_remittancecustomer_code": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_remittancecustomer_code",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_remittance.customer_code",
+          "disableexpress": "1"
+        }
+      },
+      "ctrlSal_remittanceremittance_man": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_remittanceremittance_man",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_remittance.remittance_man",
+          "disableexpress": "1",
+          "hiddeninput": "False"
+        }
+      },
+      "ctrlSal_remittancename": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_remittancename",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_remittance.name",
+          "disableexpress": "1"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatabind": "SFDATA:Sal_remittance.remittance_type",
+          "width": "100%",
+          "prompttext": "--请选择--"
+        },
+        "childNodes": [
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "电汇"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "支票"
+            }
+          },
+          {
+            "ctype": "asp:listitem",
+            "attrs": {
+              "innerhtml": "网银"
+            }
+          }
+        ]
+      },
+      "ctrlSal_remittanceremittance_date": {
+        "ctype": "aspxform:xdatetimepicker",
+        "attrs": {
+          "id": "ctrlSal_remittanceremittance_date",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_remittance.remittance_date"
+        }
+      },
+      "ctrlSal_remittanceremittance_recer": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_remittanceremittance_recer",
+          "runat": "server",
+          "width": "180px",
+          "xdatabind": "SFDATA:Sal_remittance.remittance_recer"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "xdatasource": "DataSource:SFDATA;TableName:sal_finance",
+          "displaycolumns": "finance_name:财务;finance_company:公司",
+          "datamap": "finance_name->SFDATA:Sal_remittance.remittance_recer",
+          "width": "21px"
+        }
+      },
+      "ctrlSal_remittanceremittance_effect": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_remittanceremittance_effect",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_remittance.remittance_effect",
+          "textmode": "MultiLine"
+        }
+      },
+      "ctrlSal_remittanceremittance_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlSal_remittanceremittance_name",
+          "runat": "server",
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_remittance.remittance_name"
+        }
+      },
+      "table1": {
+        "ctype": "wrap",
+        "attrs": {
+          "width": "795",
+          "align": "center",
+          "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
+          "border": "0",
+          "cellspacing": "0",
+          "cellpadding": "0",
+          "hiddenexpress": "1",
+          "id": "table1"
+        },
+        "ctypeorg": "table",
+        "items": [
+          "ctrlSal_remittanceremittance_name"
+        ]
+      }
+    },
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写订单号",
+          "controltovalidate": "ctrlSal_remittanceremittance_no",
+          "innerhtml": "订单号"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择客户名称",
+          "controltovalidate": "ctrlSal_remittancecustomer_name",
+          "innerhtml": "客户名称"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写汇款金额 ",
+          "controltovalidate": "ctrlSal_remittanceremittance_money",
+          "innerhtml": "汇款金额 "
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择类型",
+          "controltovalidate": "XDropDownList1",
+          "innerhtml": "类型"
+        }
+      },
+      "XRequiredFieldValidator5": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator5",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择汇款日期",
+          "controltovalidate": "ctrlSal_remittanceremittance_date",
+          "innerhtml": "汇款日期"
+        }
+      },
+      "XRequiredFieldValidator6": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator6",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择收款人",
+          "controltovalidate": "ctrlSal_remittanceremittance_recer",
+          "innerhtml": "收款人"
+        }
+      }
+    },
+    "items": [
+      "ctrlSal_remittanceremittance_no",
+      "ctrlSal_remittancecustomer_name",
+      "XDataBrowserButton3",
+      "ctrlSal_remittanceremittance_money",
+      "ctrlSal_remittancecustomer_code",
+      "ctrlSal_remittanceremittance_man",
+      "ctrlSal_remittancename",
+      "XDropDownList1",
+      "ctrlSal_remittanceremittance_date",
+      "ctrlSal_remittanceremittance_recer",
+      "XDataBrowserButton1",
+      "ctrlSal_remittanceremittance_effect",
+      "table1"
+    ]
+  }
+}

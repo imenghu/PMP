@@ -110,6 +110,8 @@ namespace Inv
 
                             if (totalRows == 0)
                                 totalRows = reader.ReadInt32("TotalRows");
+
+                            item["CompanyName"] = reader.ReadString("CompanyName");
                             item["prod_out_id"] =
 reader.ReadInt32("prod_out_id");
                             item["mat_code"] =

@@ -23,17 +23,23 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task_SearchPanel', {
             ]
         });
 
-        me.proc_type = Ext.create('Ext.form.field.ComboBox', {
-            fieldLabel: "公司",
-            queryMode: 'local',
-            store: me.type,
-            displayField: 'name',
-            valueField: 'value',
-            value: '',
-            editable: false,
-            forceSelection: true,
-            triggerAction: 'all',
+        //me.proc_type = Ext.create('Ext.form.field.ComboBox', {
+        //    fieldLabel: "公司",
+        //    queryMode: 'local',
+        //    store: me.type,
+        //    displayField: 'name',
+        //    valueField: 'value',
+        //    value: '',
+        //    editable: false,
+        //    forceSelection: true,
+        //    triggerAction: 'all',
+        //});
+        me.proc_type=Ext.create('Ext.form.field.Text', {
+            fieldLabel: '公司名称',
+            allowBlank: true,
+
         });
+
        
         me.edtKeyword = Ext.create('Ext.form.field.Text', {
             fieldLabel: '供应商名称',
@@ -69,8 +75,8 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task_SearchPanel', {
             fields: ['name', 'value'],
             data: [
                 { name: RS.$('All_SearchAll'), value: '' },
-                { name: "任务执行中", value: '任务执行中' },
-                { name: "任务已完成", value: '任务已完成' },
+                { name: "任务执行中", value: '1' },
+                { name: "任务已完成", value: '3' },
           
 
 
@@ -139,10 +145,7 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task_SearchPanel', {
                 items: [{
                     flex: 1,
                     items: [me.proc_type]
-                }, {
-                    flex: 1,
-                    items: [me.proc_status]
-                },
+                }, 
                 {
                     flex: 1,
                     items: [me.task_state]

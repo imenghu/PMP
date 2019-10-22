@@ -49,40 +49,16 @@ public class proc_tests : YZServiceHandler
 
         //获得查询条件
         string filter = "State='1'";
-        bool moduleAdmin = true;
-        using (BPMConnection cn = new BPMConnection())
-        {
-            cn.WebOpen();
-            moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "8f519421-6ea1-4087-bfbb-8d243786b085", "Admin");
-            if (!moduleAdmin)
-            {
-                bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "8f519421-6ea1-4087-bfbb-8d243786b085", "Company");
-                if (moduleCompany)
-                {
-                    MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
-                    List<string> ls = new List<string>();
-                    foreach (Member member in positions)
-                    {
-                        OU ou = member.GetParentOU(cn);
-                        ls.Add(string.Format("Company='{0}'", ou.Code));
-                    }
-                    filter = string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray()));
-                }
-                else
-                {
-                    filter = string.Format("CreateUser='{0}'", YZAuthHelper.LoginUserAccount);
-                }
-            }
-        }
+
         if (searchType == "QuickSearch")
         {
             //应用关键字过滤
             if (!string.IsNullOrEmpty(keyword))
-                filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' or vendor_name LIKE N'%{0}%' or mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
             if (!string.IsNullOrEmpty(proc_type))
                 filter = queryProvider.CombinCond(filter, String.Format("tests_class LIKE N'%{0}%'", queryProvider.EncodeText(proc_type)));
             if (!string.IsNullOrEmpty(proc_status))
-                filter = queryProvider.CombinCond(filter, String.Format("test_happen LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
+                filter = queryProvider.CombinCond(filter, String.Format("tests_result LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
             if (!string.IsNullOrEmpty(vendor))
                 filter = queryProvider.CombinCond(filter, String.Format("vendor_name LIKE N'%{0}%'", queryProvider.EncodeText(vendor)));
             if (!string.IsNullOrEmpty(mat_name))
@@ -140,6 +116,7 @@ public class proc_tests : YZServiceHandler
                             totalRows = reader.ReadInt32("TotalRows");
 
                         item["tests_id"] = reader.ReadInt32("tests_id");
+                        item["CompanyName"] = reader.ReadString("CompanyName");
                         item["tests_class"] = reader.ReadString("tests_class");
                         item["vendor_name"] = reader.ReadString("vendor_name");
                         item["mat_code"] = reader.ReadString("mat_code");

@@ -50,6 +50,7 @@
                 },
                 items: [
                     { xtype: 'rownumberer' },
+                    { header: '公司', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true },
                                         { header: '产成品编码', dataIndex: 'mat_code', width: 100, align: 'left', sortable: true
                                         },
                                         { header: '产成品名称', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true

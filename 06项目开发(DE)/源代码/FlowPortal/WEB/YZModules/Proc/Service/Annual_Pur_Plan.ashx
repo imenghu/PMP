@@ -44,39 +44,21 @@ namespace Purchase
 
             string searchType = request.GetString("SearchType", null);
             string keyword = request.GetString("kwd", null);
+            string plan_pur_year = request.GetString("plan_pur_year", null);
+            string mat_name = request.GetString("mat_name", null);
 
             //获得查询条件
             string filter = "State='1'";
-            bool moduleAdmin = true;
-            using (BPMConnection cn = new BPMConnection())
-            {
-                cn.WebOpen();
-                moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "c0ab08aa-f20b-4333-9288-948b2266ee8c", "Admin");
-                if (!moduleAdmin)
-                {
-                    bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "c0ab08aa-f20b-4333-9288-948b2266ee8c", "Company");
-                    if (moduleCompany)
-                    {
-                        MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
-                        List<string> ls = new List<string>();
-                        foreach (Member member in positions)
-                        {
-                            OU ou = member.GetParentOU(cn);
-                            ls.Add(string.Format("Company='{0}'", ou.Code));
-                        }
-                        filter = string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray()));
-                    }
-                    else
-                    {
-                        filter = string.Format("CreateUser='{0}'", YZAuthHelper.LoginUserAccount);
-                    }
-                }
-            }
+
             if (searchType == "QuickSearch")
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
                     filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                if (!string.IsNullOrEmpty(plan_pur_year))
+                    filter = queryProvider.CombinCond(filter, String.Format("plan_pur_year LIKE N'%{0}%'", queryProvider.EncodeText(plan_pur_year)));
+                if (!string.IsNullOrEmpty(mat_name))
+                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%' ", queryProvider.EncodeText(mat_name)));
             }
 
             if (!String.IsNullOrEmpty(filter))
