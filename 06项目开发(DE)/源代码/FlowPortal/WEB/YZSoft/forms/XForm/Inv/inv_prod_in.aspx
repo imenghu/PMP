@@ -36,20 +36,20 @@ $Scripts-->
                         产成品名称 
                     </td>
                     <td width="220" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlinv_prod_inmat_name" runat="server" DisableExpress="1" width="180px" XDataBind="SFDATA:inv_prod_in.mat_name"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" DataMap="mat_id->SFDATA:inv_prod_in.mat_id;mat_code->SFDATA:inv_prod_in.mat_code;mat_name->SFDATA:inv_prod_in.mat_name;mat_spec->SFDATA:inv_prod_in.mat_spec;base_unit->SFDATA:inv_prod_in.in_stnum_unit" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位" XDataSource="DataSource:SFDATA;TableName:v_ctl_material_prod;Filter:state->varState" Width="21px"></aspxform:XDataBrowserButton>
+                        <aspxform:XTextBox id="ctrlinv_prod_inmat_name" runat="server" XDataBind="SFDATA:inv_prod_in.mat_name" width="180px" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:v_ctl_material_prod;Filter:state->varState" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位" DataMap="mat_id->SFDATA:inv_prod_in.mat_id;mat_code->SFDATA:inv_prod_in.mat_code;mat_name->SFDATA:inv_prod_in.mat_name;mat_spec->SFDATA:inv_prod_in.mat_spec;base_unit->SFDATA:inv_prod_in.in_stnum_unit"></aspxform:XDataBrowserButton>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         规格 
                     </td>
                     <td width="220" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlinv_prod_inmat_spec" runat="server" DisableExpress="1" width="100%" XDataBind="SFDATA:inv_prod_in.mat_spec"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlinv_prod_inmat_spec" runat="server" XDataBind="SFDATA:inv_prod_in.mat_spec" width="100%" DisableExpress="1"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         产成品编码 
                     </td>
                     <td width="220" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlinv_prod_inmat_code" runat="server" DisableExpress="1" width="100%" XDataBind="SFDATA:inv_prod_in.mat_code" DataMap="mat_unit_name->varUnit;numerator->varNum" ValueToDisplayText="DataSource:SFDATA;TableName:v_ctl_material_prod;FilterColumn:mat_code;DisplayColumn:mat_code"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlinv_prod_inmat_code" runat="server" XDataBind="SFDATA:inv_prod_in.mat_code" width="100%" DisableExpress="1" DataMap="mat_unit_name->varUnit;numerator->varNum" ValueToDisplayText="DataSource:SFDATA;TableName:v_ctl_material_prod;FilterColumn:mat_code;DisplayColumn:mat_code"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -57,19 +57,19 @@ $Scripts-->
                         仓库名称 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:inv_prod_in.depot_id" DataMap="depot_name->SFDATA:inv_prod_in.depot_name" XDataSource="DataSource:SFDATA;TableName:ctl_depot" PromptText="--请选择--" DisplayColumn="depot_name" ValueColumn="depot_id"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:inv_prod_in.depot_id" XDataSource="DataSource:SFDATA;TableName:ctl_depot" DataMap="depot_name->SFDATA:inv_prod_in.depot_name" ValueColumn="depot_id" DisplayColumn="depot_name" PromptText="--请选择--"></aspxform:XDropDownList>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         基准单位 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlinv_prod_inin_stnum_unit" runat="server" DisableExpress="1" width="100%" XDataBind="SFDATA:inv_prod_in.in_stnum_unit"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlinv_prod_inin_stnum_unit" runat="server" XDataBind="SFDATA:inv_prod_in.in_stnum_unit" width="100%" DisableExpress="1"></aspxform:XTextBox>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         入库数量 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlinv_prod_inin_stnum" runat="server" width="100%" XDataBind="SFDATA:inv_prod_in.in_stnum"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlinv_prod_inin_stnum" runat="server" XDataBind="SFDATA:inv_prod_in.in_stnum" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -77,33 +77,33 @@ $Scripts-->
                         生产部门 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlinv_prod_inprod_org_id" runat="server" DisableExpress="1" width="180px" XDataBind="SFDATA:inv_prod_in.ProdDeptName"></aspxform:XTextBox>
-                        <aspxform:XSelectOUButton id="XSelectOUButton1" runat="server" DataMap="OUName->SFDATA:inv_prod_in.ProdDeptName;OUCode->SFDATA:inv_prod_in.prod_org_id" Width="21px"></aspxform:XSelectOUButton>
+                        <aspxform:XTextBox id="ctrlinv_prod_inprod_org_id" runat="server" XDataBind="SFDATA:inv_prod_in.ProdDeptName" width="180px" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XSelectOUButton id="XSelectOUButton1" runat="server" Width="21px" DataMap="OUName->SFDATA:inv_prod_in.ProdDeptName;OUCode->SFDATA:inv_prod_in.prod_org_id"></aspxform:XSelectOUButton>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         入库人 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlinv_prod_indep_userid" runat="server" DisableExpress="1" width="180px" XDataBind="SFDATA:inv_prod_in.ProdUserName"></aspxform:XTextBox>
-                        <aspxform:XSelectUserButton id="XSelectUserButton1" runat="server" DataMap="Account->SFDATA:inv_prod_in.ProdUser;DisplayName->SFDATA:inv_prod_in.ProdUserName" Width="21px"></aspxform:XSelectUserButton>
+                        <aspxform:XTextBox id="ctrlinv_prod_indep_userid" runat="server" XDataBind="SFDATA:inv_prod_in.ProdUserName" width="180px" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XSelectUserButton id="XSelectUserButton1" runat="server" Width="21px" DataMap="Account->SFDATA:inv_prod_in.ProdUser;DisplayName->SFDATA:inv_prod_in.ProdUserName"></aspxform:XSelectUserButton>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         入库日期 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDateTimePicker id="ctrlinv_prod_inin_time" runat="server" width="100%" XDataBind="SFDATA:inv_prod_in.in_time"></aspxform:XDateTimePicker>
+                        <aspxform:XDateTimePicker id="ctrlinv_prod_inin_time" runat="server" XDataBind="SFDATA:inv_prod_in.in_time" width="100%"></aspxform:XDateTimePicker>
                     </td>
                 </tr>
                 <tr>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         入库体积</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox1" runat="server" DisableExpress="1" width="100%" XDataBind="varTJ" Express="SFDATA:inv_prod_in.in_stnum*varNum" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="varTJ" width="100%" DisableExpress="1" BorderColor="#DCDCDC" BorderWidth="1" Express="SFDATA:inv_prod_in.in_stnum*varNum" BorderStyle="None"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         单位</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox2" runat="server" DisableExpress="1" width="100%" XDataBind="varUnit" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox2" runat="server" XDataBind="varUnit" width="100%" DisableExpress="1" BorderColor="#DCDCDC" BorderWidth="1" BorderStyle="None"></aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                     </td>
@@ -115,7 +115,7 @@ $Scripts-->
                         备注 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="ctrlinv_prod_inprod_in_remarks" runat="server" width="100%" XDataBind="SFDATA:inv_prod_in.prod_in_remarks" Rows="5" TextMode="MultiLine"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlinv_prod_inprod_in_remarks" runat="server" XDataBind="SFDATA:inv_prod_in.prod_in_remarks" width="100%" TextMode="MultiLine" Rows="5"></aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>
@@ -127,82 +127,82 @@ $Scripts-->
                     <td width="99" height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         物料id</td>
                     <td width="680" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlinv_prod_inmat_id" runat="server" width="100%" XDataBind="SFDATA:inv_prod_in.mat_id"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlinv_prod_inmat_id" runat="server" XDataBind="SFDATA:inv_prod_in.mat_id" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         库房名称</td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlinv_prod_indepot_id" runat="server" width="100%" XDataBind="SFDATA:inv_prod_in.depot_name"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlinv_prod_indepot_id" runat="server" XDataBind="SFDATA:inv_prod_in.depot_name" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
                         生产部门编码</td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlinv_prod_indep_org_id" runat="server" width="100%" XDataBind="SFDATA:inv_prod_in.prod_org_id"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlinv_prod_indep_org_id" runat="server" XDataBind="SFDATA:inv_prod_in.prod_org_id" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34">
                         入库人帐号</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox7" runat="server" XDataBind="SFDATA:inv_prod_in.ProdUser" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox7" runat="server" XDataBind="SFDATA:inv_prod_in.ProdUser" BorderColor="#DCDCDC" BorderWidth="1"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34">
                         varState</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox3" runat="server" XDataBind="varState" BorderWidth="1" BorderColor="#DCDCDC">1</aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox3" runat="server" XDataBind="varState" BorderColor="#DCDCDC" BorderWidth="1">1</aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34">
                         varNum</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox6" runat="server" XDataBind="varNum" BorderWidth="1" BorderColor="#DCDCDC"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox6" runat="server" XDataBind="varNum" BorderColor="#DCDCDC" BorderWidth="1"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择产成品名称" ControlToValidate="ctrlinv_prod_inmat_name">成品名称</aspxform:XRequiredFieldValidator>
-                    </td>
-                    <td>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择仓库名称" ControlToValidate="XDropDownList2">仓库名称</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" ControlToValidate="ctrlinv_prod_inmat_name" ErrorMessage="请选择产成品名称" ForeColor="Red" Display="None">成品名称</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写入库数量" ControlToValidate="ctrlinv_prod_inin_stnum">入库数量</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" ControlToValidate="XDropDownList2" ErrorMessage="请选择仓库名称" ForeColor="Red" Display="None">仓库名称</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择生产部门" ControlToValidate="ctrlinv_prod_inprod_org_id">生产部门</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" ControlToValidate="ctrlinv_prod_inin_stnum" ErrorMessage="请填写入库数量" ForeColor="Red" Display="None">入库数量</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator5" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择入库人" ControlToValidate="ctrlinv_prod_indep_userid">入库人</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" ControlToValidate="ctrlinv_prod_inprod_org_id" ErrorMessage="请选择生产部门" ForeColor="Red" Display="None">生产部门</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator6" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择入库日期" ControlToValidate="ctrlinv_prod_inin_time">入库日期</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator5" runat="server" ControlToValidate="ctrlinv_prod_indep_userid" ErrorMessage="请选择入库人" ForeColor="Red" Display="None">入库人</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator6" runat="server" ControlToValidate="ctrlinv_prod_inin_time" ErrorMessage="请选择入库日期" ForeColor="Red" Display="None">入库日期</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
                     </td>

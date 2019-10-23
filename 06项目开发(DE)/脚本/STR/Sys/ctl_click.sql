@@ -9,7 +9,11 @@ CREATE TABLE dbo.ctl_click
   click_name nvarchar(60) null ,
   state nchar(1) null ,
   create_time datetime2  null ,
-  update_time datetime2  null 
+  update_time datetime2  null ,
+  CONSTRAINT PK_ctl_click PRIMARY KEY  CLUSTERED
+  (
+    click_id
+  )
 )
 END
 

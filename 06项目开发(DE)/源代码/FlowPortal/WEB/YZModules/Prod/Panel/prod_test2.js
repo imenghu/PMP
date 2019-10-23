@@ -54,7 +54,7 @@
                                             header: '公司名称', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
                                         },
                                         {
-                                            header: '分析日期', dataIndex: 'analyze_date', width: 100, align: 'left', sortable: true
+                                            header: '分析日期', dataIndex: 'analyze_date', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderDateYMD
                                         },
                                         {
                                             header: '品名', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true

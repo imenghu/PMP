@@ -1,5 +1,4 @@
-﻿
-Ext.define('YZModules.Prod.Panel.Sal_remittance_SearchPanel', {
+﻿Ext.define('YZModules.Sal.Panel.Sal_remittance_SearchPanel', {
     extend: 'Ext.panel.Panel',
     height: 'auto',
     border: false,

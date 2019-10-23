@@ -4,7 +4,7 @@ if not exists (select * from sysobjects where id = object_id('dbo.sal_customer')
 BEGIN
 CREATE TABLE dbo.sal_customer
 (
-  customer_id int  null ,
+  customer_id int IDENTITY(1,1) not null ,
   customer_code nvarchar(500) null ,
   area nvarchar(500) null ,
   provincial_area nvarchar(500) null ,
@@ -24,7 +24,11 @@ CREATE TABLE dbo.sal_customer
   date datetime2  null ,
   state nchar(1) null ,
   crteatedate datetime2  null ,
-  updatedate datetime2  null 
+  updatedate datetime2  null ,
+  CONSTRAINT PK_sal_customer PRIMARY KEY  CLUSTERED
+  (
+    customer_id
+  )
 )
 END
 

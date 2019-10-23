@@ -35,9 +35,9 @@ namespace Inv
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("depot_name LIKE N'%{0}%' OR in_stnum LIKE N'%{0}%' OR v_inv_prod.mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("depot_name LIKE N'%{0}%' OR in_stnum LIKE N'%{0}%' OR v_inv_prod.mat_name LIKE N'%{0}%' OR CompanyName LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(in_stnum))
-                    filter = queryProvider.CombinCond(filter, String.Format("in_stnum LIKE N'%{0}%' ", queryProvider.EncodeText(in_stnum)));
+                    filter = queryProvider.CombinCond(filter, String.Format("in_stnum_unit LIKE N'%{0}%' ", queryProvider.EncodeText(in_stnum)));
                 if (!string.IsNullOrEmpty(depot_name))
                     filter = queryProvider.CombinCond(filter, String.Format("depot_name LIKE N'%{0}%' ", queryProvider.EncodeText(depot_name)));
                 if (!string.IsNullOrEmpty(mat_name))

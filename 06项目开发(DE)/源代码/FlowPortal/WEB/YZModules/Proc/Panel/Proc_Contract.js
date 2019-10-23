@@ -24,7 +24,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
             pageSize: YZSoft.EnvSetting.PageSize.defaultSize,
             model: 'Ext.data.Model',
             sorters: {
-                property: 'TaskID',
+                property: 'contract_id',
                 direction: 'DESC'
             },
             proxy: {
@@ -271,7 +271,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
             return;
 
         Ext.each(recs, function (rec) {
-            ids.push(rec.data.TaskID);
+            ids.push(rec.data.contract_id);
         });
 
         Ext.Msg.show({

@@ -147,8 +147,8 @@
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                                             <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:proc_demand_detail.if_urg" FieldName="是否紧急" Width="100%">
-                                                <asp:ListItem Selected="True" Value="0">否</asp:ListItem>
-                                                <asp:ListItem Value="1">是</asp:ListItem>
+                                                <asp:ListItem Selected="True" Value="1">否</asp:ListItem>
+                                                <asp:ListItem Value="2">是</asp:ListItem>
                                             </aspxform:XDropDownList>
                                             <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator5" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择是否紧急" ControlToValidate="XDropDownList1">是否紧急</aspxform:XRequiredFieldValidator>
                                         </td>

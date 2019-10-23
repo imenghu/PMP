@@ -1,5 +1,5 @@
 truncate table ctl_area
-set IDENTITY_INSERT ctl_area  ON
+--set IDENTITY_INSERT ctl_area  ON
 go
 insert INTO ctl_area ([id]
       ,[name]
@@ -19,5 +19,5 @@ insert INTO ctl_area ([id]
       ,[create_time]
       ,[update_time]
 FROM openquery(MYSQL, 'SELECT * FROM info_sys.ctl_area') 
-set IDENTITY_INSERT ctl_area  OFF
+--set IDENTITY_INSERT ctl_area  OFF
 go

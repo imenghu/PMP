@@ -74,7 +74,7 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task_enquiry', {
             }),
             listeners: {
                 rowdblclick: function (grid, record, tr, rowIndex, e, eOpts) {
-                    me.read(record);
+                    //me.read(record);
                 }
             }
         });

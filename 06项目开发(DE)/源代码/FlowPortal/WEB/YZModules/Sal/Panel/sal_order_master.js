@@ -192,7 +192,7 @@
                     width: 220,
                     createSearchPanel: function () {
                         var pnl = Ext.create({
-                            xclass: 'YZModules.Sal.Panel.Sal_order_master_SearchPanel',
+                            xclass: 'YZModules.Sal.Panel.sal_order_master_SearchPanel',
                             region: 'north',
                             store: me.store
                         });

@@ -50,12 +50,13 @@
                 },
                 items: [
                     { xtype: 'rownumberer' },
+                      {
+                          header: '公司名称', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
+                      },
                                         {
-                                            header: '分析日期', dataIndex: 'analyze_date', width: 100, align: 'left', sortable: true
+                                            header: '分析日期', dataIndex: 'analyze_date', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderDateYMD
                                         },
-                                        {
-                                            header: '公司名称', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
-                                        },
+                                      
                                         {
                                             header: '品名', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
                                         },
@@ -66,7 +67,7 @@
                                             header: '位置', dataIndex: 'position', width: 100, align: 'left', sortable: true
                                         },
                                         {
-                                            header: '杀菌时间', dataIndex: 'steril_time', width: 100, align: 'left', sortable: true
+                                            header: '杀菌时间', dataIndex: 'steril_time', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderDateYMD
                                         },
                                         {
                                             header: '出口酒温oC', dataIndex: 'beer_temp', width: 100, align: 'left', sortable: true

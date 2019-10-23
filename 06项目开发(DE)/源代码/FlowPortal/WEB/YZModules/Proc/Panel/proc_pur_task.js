@@ -76,7 +76,7 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
             }),
             listeners: {
                 rowdblclick: function (grid, record, tr, rowIndex, e, eOpts) {
-                    me.read(record);
+                    //me.read(record);
                 }
             }
         });
@@ -171,7 +171,6 @@ Ext.define('YZModules.Proc.Panel.proc_pur_task', {
                         success: function (action) {
                             me.store.reload({
                                 loadMask: {
-                                    msg: Ext.String.format('{0}个对象已完成！', recs.length),
                                     start: 0,
                                     stay: 300
                                 }

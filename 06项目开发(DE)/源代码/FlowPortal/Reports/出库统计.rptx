@@ -1,0 +1,306 @@
+﻿{
+  "author": null,
+  "lastModifier": {
+    "uid": "cs",
+    "name": "测试",
+    "date": "2019-10-22 17:39:04"
+  },
+  "property": {
+    "hidden": false
+  },
+  "define": {
+    "datasources": {
+      "出库数量按照时间排序": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT out_time 出库时间, sum(convert(decimal,out_stnum)) 出库数量 FROM inv_prod_out where state =1 group by out_time order by out_time desc;",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 100
+        },
+        "paramNames": []
+      },
+      "出库数量按照品名排序": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "SELECT mat_name 产成品名称, sum(convert(decimal,out_stnum)) 出库数量 FROM inv_prod_out where state =1 group by mat_name;",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 100
+        },
+        "paramNames": []
+      },
+      "出库数据明细表": {
+        "ds": {
+          "type": "query",
+          "datasourceName": "SFDATA",
+          "query": "select out_time 出库时间, mat_name 产成品名称, mat_spec 规格, depot_name 仓库名称, out_stnum 出库数量, out_stnum_unit 单位 from inv_prod_out  order by out_time desc",
+          "queryParams": [],
+          "paging": "Enable",
+          "pageSize": 100
+        },
+        "paramNames": []
+      }
+    },
+    "components": {
+      "chart.column1": {
+        "ctype": "chart.column",
+        "dsid": "出库数量按照品名排序",
+        "height": 500,
+        "captions": {
+          "title": {
+            "text": "啤酒厂9月1日至今产成品出库数量（分品种）",
+            "align": "center"
+          }
+        },
+        "legend": {
+          "docked": "bottom"
+        },
+        "innerPadding": {
+          "top": 50,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "axes": [
+          {
+            "id": "yAxis",
+            "type": "numeric",
+            "rendererFormat": {
+              "thousands": true,
+              "scale": 1,
+              "unit": "箱"
+            }
+          },
+          {
+            "id": "xAxis",
+            "type": "category",
+            "fields": [
+              "产成品名称"
+            ],
+            "label": {
+              "rotate": {
+                "degrees": 0
+              }
+            }
+          }
+        ],
+        "series": [
+          {
+            "type": "bar",
+            "id": "series_1",
+            "xField": "产成品名称",
+            "yField": [
+              "出库数量"
+            ],
+            "title": [
+              "出库数量",
+              "演示数据"
+            ],
+            "xAxis": "xAxis",
+            "yAxis": "yAxis",
+            "label": {
+              "field": [
+                "出库数量"
+              ]
+            },
+            "yFieldsColors": [
+              null
+            ],
+            "stacked": false,
+            "fullStack": false,
+            "style": {
+              "minBarWidth": 20,
+              "maxBarWidth": 20,
+              "inGroupGapWidth": 4
+            }
+          }
+        ],
+        "designInfo": {
+          "groups": [
+            {
+              "seriesType": "column",
+              "seriesIds": [
+                "series_1"
+              ]
+            }
+          ]
+        }
+      },
+      "chart.column3d1": {
+        "ctype": "chart.column3d",
+        "dsid": "出库数量按照时间排序",
+        "height": 500,
+        "captions": {
+          "title": {
+            "text": "啤酒厂9月1日至今出库数据监控(汇总)",
+            "align": "center"
+          }
+        },
+        "legend": {
+          "docked": "bottom"
+        },
+        "innerPadding": {
+          "top": 8,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "axes": [
+          {
+            "id": "yAxis",
+            "type": "numeric3d",
+            "rendererFormat": {
+              "thousands": true,
+              "scale": 1,
+              "unit": "箱"
+            }
+          },
+          {
+            "id": "xAxis",
+            "type": "category3d",
+            "fields": [
+              "出库时间"
+            ],
+            "label": {
+              "rotate": {
+                "degrees": -45
+              }
+            }
+          }
+        ],
+        "series": [
+          {
+            "type": "bar3d",
+            "id": "series_1",
+            "xField": "出库时间",
+            "yField": [
+              "出库数量"
+            ],
+            "title": [
+              "出库数量",
+              "演示数据"
+            ],
+            "xAxis": "xAxis",
+            "yAxis": "yAxis",
+            "label": {
+              "field": [
+                "出库数量"
+              ]
+            },
+            "yFieldsColors": [
+              null
+            ],
+            "stacked": false,
+            "fullStack": false,
+            "style": {
+              "minBarWidth": 29,
+              "maxBarWidth": 29,
+              "inGroupGapWidth": 0
+            }
+          }
+        ],
+        "designInfo": {
+          "groups": [
+            {
+              "seriesType": "column3d",
+              "seriesIds": [
+                "series_1"
+              ]
+            }
+          ]
+        }
+      },
+      "layout.hbox1": {
+        "ctype": "layout.hbox",
+        "items": [
+          {
+            "flex": 1,
+            "items": [
+              "chart.column1"
+            ]
+          },
+          {
+            "flex": 1,
+            "items": [
+              "chart.column3d1"
+            ]
+          }
+        ]
+      },
+      "report.grid1": {
+        "ctype": "report.grid",
+        "dsid": "出库数据明细表",
+        "pagingBarDisplay": false,
+        "title": null,
+        "titleAlign": "left",
+        "columns": [
+          {
+            "text": "出库时间",
+            "dataIndex": "出库时间",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "group": true,
+            "flex": 1
+          },
+          {
+            "text": "产成品名称",
+            "dataIndex": "产成品名称",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "规格",
+            "dataIndex": "规格",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "仓库名称",
+            "dataIndex": "仓库名称",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          },
+          {
+            "text": "出库数量",
+            "dataIndex": "出库数量",
+            "align": "end",
+            "dataFormat": {
+              "type": "number",
+              "prefix": false,
+              "thousands": true,
+              "decimal": false
+            },
+            "flex": 1
+          },
+          {
+            "text": "单位",
+            "dataIndex": "单位",
+            "align": "start",
+            "dataFormat": {
+              "type": "text"
+            },
+            "flex": 1
+          }
+        ]
+      }
+    },
+    "items": [
+      "layout.hbox1",
+      "report.grid1"
+    ]
+  }
+}

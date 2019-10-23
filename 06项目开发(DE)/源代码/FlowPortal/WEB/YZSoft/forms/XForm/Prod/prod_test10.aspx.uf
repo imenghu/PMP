@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-19T11:41:19.9651823+08:00",
+  "generateAt": "2019-10-22T13:58:38.9005744+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -19,9 +19,10 @@
         "attrs": {
           "id": "ctrlProd_test10mat_name",
           "runat": "server",
-          "width": "180px",
+          "width": "182px",
           "xdatabind": "SFDATA:Prod_test10.mat_name",
-          "fieldname": "品名"
+          "fieldname": "品名",
+          "disableexpress": "1"
         }
       },
       "XDataBrowserButton1": {
@@ -102,7 +103,8 @@
           "runat": "server",
           "width": "100%",
           "xdatabind": "SFDATA:Prod_test10.operator_name",
-          "fieldname": "检验人员"
+          "fieldname": "检验人员",
+          "disableexpress": "1"
         }
       },
       "ctrlProd_test10memo": {

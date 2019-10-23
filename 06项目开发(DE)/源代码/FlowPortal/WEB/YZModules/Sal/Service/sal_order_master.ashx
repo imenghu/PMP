@@ -30,7 +30,7 @@ namespace Sal
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From sal_order_master WHERE order_master_id=@id";
+                    cmd.CommandText = "update sal_order_master set state='0' WHERE order_master_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }

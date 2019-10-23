@@ -30,7 +30,7 @@ namespace Purchase
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Update proc_demand Set Status='Deleted' WHERE TaskID=@id";
+                    cmd.CommandText = "Update proc_demand Set state='0' WHERE demand_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }

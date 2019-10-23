@@ -30,7 +30,7 @@ namespace Sal
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From sal_invoice WHERE invoice_id=@id";
+                    cmd.CommandText = "update sal_invoice set state='0' WHERE invoice_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }
@@ -46,7 +46,7 @@ namespace Sal
             string keyword = request.GetString("kwd", null);
 
             //获得查询条件
-            string filter = "";
+            string filter = "state='1'";
             bool moduleAdmin = true;
             using (BPMConnection cn = new BPMConnection())
             {
@@ -76,7 +76,7 @@ namespace Sal
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUserName LIKE N'%{0}%' OR customer_name LIKE N'%{0}%' OR customer_code LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
             }
 
             if (!String.IsNullOrEmpty(filter))

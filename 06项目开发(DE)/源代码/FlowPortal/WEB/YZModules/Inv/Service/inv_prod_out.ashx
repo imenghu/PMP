@@ -30,7 +30,7 @@ namespace Inv
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From inv_prod_out WHERE prod_out_id=@id";
+                    cmd.CommandText = "update inv_prod_out set state='0' WHERE prod_out_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }
@@ -54,7 +54,7 @@ namespace Inv
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("inv_prod_out.depot_name LIKE N'%{0}%' OR inv_prod_out.mat_name LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("inv_prod_out.depot_name LIKE N'%{0}%' OR inv_prod_out.mat_name LIKE N'%{0}%' OR inv_prod_out.CompanyName LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
 
                 if (!string.IsNullOrEmpty(depot_name))
                     filter = queryProvider.CombinCond(filter, String.Format("inv_prod_out.depot_name LIKE N'%{0}%' ", queryProvider.EncodeText(depot_name)));

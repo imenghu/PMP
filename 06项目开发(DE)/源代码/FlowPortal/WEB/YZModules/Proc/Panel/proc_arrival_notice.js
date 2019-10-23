@@ -62,7 +62,7 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
                     { header: '联系电话', dataIndex: 'arrival_usertel', width: 80, align: 'left', sortable: true },
                     { header: '预估运费', dataIndex: 'plan_arrival_price', width: 100, align: 'left', sortable: true },
                     { header: '接货人', dataIndex: 'StoreUserName', width: 80, align: 'left', sortable: true },
-                    { header: '需求提报时间', dataIndex: 'create_time', width: 80, align: 'left', sortable: true },
+                    //{ header: '需求提报时间', dataIndex: 'create_time', width: 80, align: 'left', sortable: true },
                     { header: '预计到货时间', dataIndex: 'plan_arrival_time', width: 80, align: 'left', sortable: true },
                     { header: '完成情况', dataIndex: 'notice_state', width: 80, align: 'center', sortable: true, renderer: me.Status },
                     { header: '操作', dataIndex: 'notice_state', width: 80, align: 'center', sortable: true, renderer: me.Notice, listeners: { scope: me, click: me.NoticeClick } },

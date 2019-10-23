@@ -30,7 +30,7 @@ namespace Sys
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From ctl_dealer WHERE dealer_id=@id";
+                    cmd.CommandText = "update ctl_dealer set state='0' WHERE dealer_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }
@@ -155,7 +155,7 @@ namespace Sys
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("dealer_name LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("dealer_name LIKE N'%{0}%' or CompanyName LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(provice))
                     filter = queryProvider.CombinCond(filter, String.Format("ctl_dealer.province_id LIKE N'%{0}%' ", queryProvider.EncodeText(provice)));
                 if (!string.IsNullOrEmpty(city))

@@ -69,7 +69,7 @@
                                             header: '金额', dataIndex: 'deposit_money', width: 100, align: 'left', sortable: true
                                         },
                                         {
-                                            header: '保证金增加减少', dataIndex: 'deposit_flag', width: 100, align: 'left', sortable: true
+                                            header: '增减标志', dataIndex: 'deposit_flag', width: 100, align: 'left', sortable: true,renderer:me.renderZJ
                                         },
                                         {
                                             header: '财务名称', dataIndex: 'finance_name', width: 100, align: 'left', sortable: true
@@ -166,17 +166,18 @@
                     '搜索条件', {
                         xclass: 'YZSoft.src.form.field.Search',
                         store: me.store,
-                        width: 220,
-                        createSearchPanel: function () {
-                            var pnl = Ext.create({
-                                xclass: 'YZModules.Sal.Panel.Sal_deposit_record_SearchPanel',
-                                region: 'north',
-                                store: me.store
-                            });
+                        width: 220
+                        //,
+                        //createSearchPanel: function () {
+                        //    var pnl = Ext.create({
+                        //        xclass: 'YZModules.Sal.Panel.Sal_deposit_record_SearchPanel',
+                        //        region: 'north',
+                        //        store: me.store
+                        //    });
 
-                            me.insert(0, pnl);
-                            return pnl;
-                        }
+                        //    me.insert(0, pnl);
+                        //    return pnl;
+                        //}
                     }]
             },
             items: [me.grid]
@@ -193,6 +194,14 @@
             this.store.reload($S.loadMask.activate);
     },
 
+    renderZJ: function (value, metaData, record) {
+        if (value == 1) {
+            return "增加";
+        }
+        else {
+            return "减少";
+        }
+    },
     renderNo: function (value, metaData, record) {
         return Ext.String.format("<a href='#'>{0}</a>", Ext.util.Format.text(value));
     },

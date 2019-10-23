@@ -1,28 +1,35 @@
 ﻿{
-  "generateAt": "2019-10-19T12:27:24.963214+08:00",
+  "generateAt": "2019-10-22T20:43:40.011967+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
     "components": {
-      "XDataBrowserButton1": {
-        "ctype": "aspxform:xdatabrowserbutton",
-        "attrs": {
-          "id": "XDataBrowserButton1",
-          "runat": "server",
-          "datamap": "mat_name->SFDATA:prod_report4.mat_name",
-          "displaycolumns": "first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_name->\"产成品\"",
-          "width": "21px"
-        }
-      },
       "ctrlprod_report4mat_name": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
           "id": "ctrlprod_report4mat_name",
           "runat": "server",
-          "width": "80%",
+          "width": "88%",
           "xdatabind": "SFDATA:prod_report4.mat_name",
-          "fieldname": "品名"
+          "fieldname": "品名",
+          "readonly": "True"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "xclass": "YZSoft.Forms.Field.DataBrowserButton",
+          "height": "18px",
+          "text": "...",
+          "usesubmitbehavior": "False",
+          "popupwndheight": "-1",
+          "popupwndwidth": "-1",
+          "datamap": "mat_name->SFDATA:prod_report4.mat_name",
+          "displaycolumns": "first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_name->\"产成品\"",
+          "width": "16px"
         }
       },
       "ctrlprod_report4date": {
@@ -399,8 +406,8 @@
       }
     },
     "items": [
-      "XDataBrowserButton1",
       "ctrlprod_report4mat_name",
+      "XDataBrowserButton1",
       "ctrlprod_report4date",
       "ctrlprod_report4Sac_id",
       "ctrlprod_report4Boiler",

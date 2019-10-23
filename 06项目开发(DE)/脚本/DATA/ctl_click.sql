@@ -1,5 +1,5 @@
 truncate table ctl_click
-set IDENTITY_INSERT ctl_click  ON
+--set IDENTITY_INSERT ctl_click  ON
 go
 insert INTO ctl_click ([click_id]
       ,[click_type]
@@ -13,5 +13,5 @@ insert INTO ctl_click ([click_id]
       ,[create_time]
       ,[update_time]
 FROM openquery(MYSQL, 'SELECT * FROM info_sys.ctl_click') 
-set IDENTITY_INSERT ctl_click  OFF
+--set IDENTITY_INSERT ctl_click  OFF
 go

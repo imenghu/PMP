@@ -30,7 +30,7 @@ namespace Prod
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From Prod_report1 WHERE report_id=@id";
+                    cmd.CommandText = "Update Prod_report1 set state='0' WHERE report_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }

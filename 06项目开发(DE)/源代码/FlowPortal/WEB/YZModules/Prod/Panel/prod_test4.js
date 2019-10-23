@@ -51,6 +51,9 @@
                 items: [
                     { xtype: 'rownumberer' },
                                         {
+                                            header: '公司名称', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
+                                        },
+                                        {
                                             header: '品  名', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
                                         },
                                         {
@@ -102,7 +105,7 @@
                                             header: '瓶颈空气 ml', dataIndex: 'bottleneck', width: 100, align: 'left', sortable: true
                                         },
                                         {
-                                            header: '出酒日期', dataIndex: 'prod_date', width: 100, align: 'left', sortable: true
+                                            header: '出酒日期', dataIndex: 'prod_date', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderDateYMD
                                         },
                                         { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]

@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-19T13:27:30.2511607+08:00",
+  "generateAt": "2019-10-22T11:28:35.7208159+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -225,14 +225,14 @@
             "ctype": "asp:listitem",
             "attrs": {
               "selected": "True",
-              "value": "0",
+              "value": "1",
               "innerhtml": "否"
             }
           },
           {
             "ctype": "asp:listitem",
             "attrs": {
-              "value": "1",
+              "value": "2",
               "innerhtml": "是"
             }
           }

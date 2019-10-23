@@ -1,9 +1,9 @@
 cd /d %~dp0
 set DIR=%cd%
 echo DIR=%DIR%
-set dbhost=127.0.0.1
+set dbhost=DESKTOP-GP8TCQB\SQLEXPRESS
 set dbuser=sa
-set dbpassword=1
+set dbpassword=11111111
 set dbname=sfdata
 for /R %DIR% %%f in (*.sql) do ( 
   echo %%f

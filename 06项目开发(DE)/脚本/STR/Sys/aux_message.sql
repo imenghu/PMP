@@ -4,7 +4,7 @@ if not exists (select * from sysobjects where id = object_id('dbo.aux_message') 
 BEGIN
 CREATE TABLE dbo.aux_message
 (
-  message_id int  null ,
+  message_id int IDENTITY(1,1) not null ,
   fore_key_id int  null ,
   message_class nvarchar(60) null ,
   from_userid int  null ,
@@ -12,7 +12,11 @@ CREATE TABLE dbo.aux_message
   content nvarchar(200) null ,
   state nvarchar(1) null ,
   create_time datetime2  null ,
-  update_time datetime2  null 
+  update_time datetime2  null ,
+  CONSTRAINT PK_aux_message PRIMARY KEY  CLUSTERED
+  (
+    message_id
+  )
 )
 END
 

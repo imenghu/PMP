@@ -14,27 +14,6 @@ using Newtonsoft.Json.Linq;
 
 public class proc_arrival_notice : YZServiceHandler
 {
-    public void UpStatus(HttpContext context)
-    {
-        YZRequest request = new YZRequest(context);
-        JArray jPost = request.GetPostData<JArray>();
-        List<int> ids = jPost.ToObject<List<int>>();
-
-        using (SqlConnection cn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["SFDATA"].ConnectionString))
-        {
-            cn.Open();
-
-            foreach (int id in ids)
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = "Update proc_arrival_notice Set notice_state='入库' WHERE TaskID=@id";
-                cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
-                cmd.ExecuteNonQuery();
-            }
-        }
-    }
-
     public JObject GetData(HttpContext context)
     {
         YZRequest request = new YZRequest(context);

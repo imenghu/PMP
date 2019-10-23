@@ -231,7 +231,7 @@
 
     onClickNo: function (view, cell, recordIndex, cellIndex, e) {
         if (e.getTarget().tagName == 'A')
-            this.readTask(this.store.getAt(recordIndex));
+            this.read(this.store.getAt(recordIndex));
     },
     renderRead: function (value, metaData, record) {
         return "<a href='#'>查看</a>";

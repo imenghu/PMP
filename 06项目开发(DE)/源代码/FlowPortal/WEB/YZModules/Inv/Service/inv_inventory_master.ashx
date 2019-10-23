@@ -30,7 +30,7 @@ namespace Inv
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From inv_inventory_master WHERE inv_mast_id=@id";
+                    cmd.CommandText = "update inv_inventory_master set state='0' WHERE inv_mast_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }
@@ -49,13 +49,13 @@ namespace Inv
             string proc_status = request.GetString("proc_status", null);
 
             //获得查询条件
-            string filter = "";
+            string filter = "state=1";
 
             if (searchType == "QuickSearch")
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("inv_master_year LIKE N'%{0}%' OR inv_master_month LIKE N'%{0}%' OR CreateUserName LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("inv_master_year LIKE N'%{0}%' OR inv_master_month LIKE N'%{0}%' OR CreateUserName LIKE N'%{0}%' OR CompanyName LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(depot_name))
                     filter = queryProvider.CombinCond(filter, String.Format("CreateUserName LIKE N'%{0}%'", queryProvider.EncodeText(depot_name)));
                 if (!string.IsNullOrEmpty(inv_year))

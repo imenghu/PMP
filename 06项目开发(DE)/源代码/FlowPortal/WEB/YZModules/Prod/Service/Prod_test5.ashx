@@ -30,7 +30,7 @@ namespace Prod
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From prod_test5 WHERE test_id=@id";
+                    cmd.CommandText = "update prod_test5 set state = '0'WHERE test_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }
@@ -44,9 +44,11 @@ namespace Prod
 
             string searchType = request.GetString("SearchType", null);
             string keyword = request.GetString("kwd", null);
-
+            string mat_name = request.GetString("mat_name", null);
+            string tank_id = request.GetString("tank_id", null);
+            
             //获得查询条件
-            string filter = "";
+            string filter = "state = '1'";
             bool moduleAdmin = true;
             using (BPMConnection cn = new BPMConnection())
             {
@@ -76,7 +78,11 @@ namespace Prod
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR  mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                if (!string.IsNullOrEmpty(mat_name))
+                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%'", queryProvider.EncodeText(mat_name)));
+                if (!string.IsNullOrEmpty(tank_id))
+                    filter = queryProvider.CombinCond(filter, String.Format("tank_id LIKE N'%{0}%'", queryProvider.EncodeText(tank_id)));
             }
 
             if (!String.IsNullOrEmpty(filter))

@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-19T13:41:20.1084663+08:00",
+  "generateAt": "2019-10-22T14:10:35.5514736+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -84,6 +84,7 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
+          "disableexpress": "1",
           "width": "80%",
           "bordercolor": "#DCDCDC",
           "xdatabind": "SFDATA:proc_tests.vendor_name"
@@ -169,6 +170,21 @@
           "textmode": "MultiLine"
         }
       },
+      "XExcelDataImportButton1": {
+        "ctype": "aspxform:xexceldataimportbutton",
+        "attrs": {
+          "id": "XExcelDataImportButton1",
+          "runat": "server",
+          "xclass": "YZSoft.Forms.Field.ExcelDataImportButton",
+          "width": "70px",
+          "datamap": "A->SFDATA:proc_tests_value.index_name;B->SFDATA:proc_tests_value.rang_value;C->SFDATA:proc_tests_value.tests_value",
+          "usesubmitbehavior": "False",
+          "popupwndheight": "-1",
+          "popupwndwidth": "-1",
+          "columncount": "3",
+          "text": "Excel导入"
+        }
+      },
       "XTextBox11": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
@@ -199,17 +215,17 @@
           "xdatabind": "SFDATA:proc_tests_value.tests_value"
         }
       },
-      "table1": {
+      "tb1": {
         "ctype": "grid",
         "attrs": {
           "width": "960",
           "align": "center",
+          "id": "tb1",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
           "cellspacing": "0",
           "cellpadding": "0",
-          "dynamicarea": "2,1",
-          "id": "table1"
+          "dynamicarea": "2,1"
         },
         "ctypeorg": "table",
         "items": [
@@ -233,7 +249,7 @@
           "xdatabind": "SFDATA:proc_tests.vendor_id"
         }
       },
-      "table2": {
+      "table1": {
         "ctype": "wrap",
         "attrs": {
           "width": "794",
@@ -242,7 +258,7 @@
           "cellspacing": "0",
           "cellpadding": "0",
           "hiddenexpress": "1",
-          "id": "table2"
+          "id": "table1"
         },
         "ctypeorg": "table",
         "items": [
@@ -250,7 +266,56 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "controltovalidate": "XTextBox3",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择物料名称",
+          "innerhtml": "物料名称"
+        }
+      },
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "controltovalidate": "XTextBox4",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择供应商",
+          "innerhtml": "供应商名称"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "controltovalidate": "XDropDownList1",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择化验类别",
+          "innerhtml": "化验类别"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "controltovalidate": "XDropDownList2",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择化验结果",
+          "innerhtml": "化验结果"
+        }
+      }
+    },
     "items": [
       "XTextBox2",
       "XTextBox5",
@@ -264,8 +329,9 @@
       "XDropDownList1",
       "XDropDownList2",
       "XTextBox1",
-      "table1",
-      "table2"
+      "XExcelDataImportButton1",
+      "tb1",
+      "table1"
     ]
   }
 }

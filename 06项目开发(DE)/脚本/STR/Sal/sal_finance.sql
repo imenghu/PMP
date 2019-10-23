@@ -4,7 +4,7 @@ if not exists (select * from sysobjects where id = object_id('dbo.sal_finance') 
 BEGIN
 CREATE TABLE dbo.sal_finance
 (
-  finance_id int  not null ,
+  finance_id int IDENTITY(1,1) not null ,
   finance_name nvarchar(500) null ,
   finance_company nvarchar(500) null ,
   finance_position nvarchar(500) null ,

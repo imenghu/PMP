@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-21T10:54:37.2237045+08:00",
+  "generateAt": "2019-10-22T19:40:39.8134081+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,8 +9,8 @@
         "attrs": {
           "id": "ctrlsal_invoiceinvoice_code",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_invoice.invoice_code"
+          "xdatabind": "SFDATA:sal_invoice.invoice_code",
+          "width": "100%"
         }
       },
       "ctrlsal_invoicefinance_name": {
@@ -18,8 +18,8 @@
         "attrs": {
           "id": "ctrlsal_invoicefinance_name",
           "runat": "server",
-          "width": "180px",
           "xdatabind": "SFDATA:sal_invoice.finance_name",
+          "width": "180px",
           "disableexpress": "1"
         }
       },
@@ -28,10 +28,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "datamap": "finance_name->SFDATA:sal_invoice.finance_name",
-          "displaycolumns": "finance_name:财务;finance_company:公司",
+          "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:sal_finance",
-          "width": "21px"
+          "displaycolumns": "finance_name:财务;finance_company:公司",
+          "datamap": "finance_id->SFDATA:sal_invoice.finance_id;finance_name->SFDATA:sal_invoice.finance_name"
         }
       },
       "XDropDownList1": {
@@ -40,7 +40,7 @@
           "id": "XDropDownList1",
           "runat": "server",
           "xdatabind": "SFDATA:sal_invoice.invoice_type",
-          "width": "100%",
+          "width": "100px",
           "prompttext": "--请选择--"
         },
         "childNodes": [
@@ -65,8 +65,8 @@
         "attrs": {
           "id": "ctrlsal_invoicecustomer_name",
           "runat": "server",
-          "width": "180px",
           "xdatabind": "SFDATA:sal_invoice.customer_name",
+          "width": "180px",
           "disableexpress": "1"
         }
       },
@@ -75,10 +75,10 @@
         "attrs": {
           "id": "XDataBrowserButton3",
           "runat": "server",
-          "datamap": "customer_code->SFDATA:sal_invoice.customer_code;area->SFDATA:sal_invoice.name;customer_name->SFDATA:sal_invoice.customer_name",
-          "displaycolumns": "area:销售大区;customer_name:收货人;phone_number:收货手机号;receiving_address:收货地址",
+          "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:sal_customer",
-          "width": "21px"
+          "displaycolumns": "area:销售大区;customer_name:收货人;phone_number:收货手机号;receiving_address:收货地址",
+          "datamap": "customer_code->SFDATA:sal_invoice.customer_code;area->SFDATA:sal_invoice.name;customer_name->SFDATA:sal_invoice.customer_name"
         }
       },
       "ctrlsal_invoicename": {
@@ -86,8 +86,8 @@
         "attrs": {
           "id": "ctrlsal_invoicename",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_invoice.name",
+          "width": "100%",
           "disableexpress": "1"
         }
       },
@@ -96,8 +96,8 @@
         "attrs": {
           "id": "ctrlsal_invoicecustomer_code",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_invoice.customer_code",
+          "width": "100%",
           "disableexpress": "1"
         }
       },
@@ -106,8 +106,8 @@
         "attrs": {
           "id": "ctrlsal_invoiceinvoice_money",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_invoice.invoice_money"
+          "xdatabind": "SFDATA:sal_invoice.invoice_money",
+          "width": "100%"
         }
       },
       "ctrlsal_invoiceinvoice_date": {
@@ -115,8 +115,8 @@
         "attrs": {
           "id": "ctrlsal_invoiceinvoice_date",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_invoice.invoice_date"
+          "xdatabind": "SFDATA:sal_invoice.invoice_date",
+          "width": "100%"
         }
       },
       "ctrlsal_invoiceinsert_date": {
@@ -124,8 +124,8 @@
         "attrs": {
           "id": "ctrlsal_invoiceinsert_date",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_invoice.insert_date"
+          "xdatabind": "SFDATA:sal_invoice.insert_date",
+          "width": "100%"
         }
       },
       "ctrlsal_invoiceremark": {
@@ -133,9 +133,10 @@
         "attrs": {
           "id": "ctrlsal_invoiceremark",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_invoice.remark",
-          "textmode": "MultiLine"
+          "width": "100%",
+          "textmode": "MultiLine",
+          "rows": "5"
         }
       },
       "ctrlsal_invoicesummary": {
@@ -143,9 +144,10 @@
         "attrs": {
           "id": "ctrlsal_invoicesummary",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_invoice.summary",
-          "textmode": "MultiLine"
+          "width": "100%",
+          "textmode": "MultiLine",
+          "rows": "5"
         }
       },
       "ctrlsal_invoicefinance_id": {
@@ -153,14 +155,14 @@
         "attrs": {
           "id": "ctrlsal_invoicefinance_id",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_invoice.finance_id"
+          "xdatabind": "SFDATA:sal_invoice.finance_id",
+          "width": "100%"
         }
       },
       "table1": {
         "ctype": "wrap",
         "attrs": {
-          "width": "795",
+          "width": "791",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -181,10 +183,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator1",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写发票号",
           "controltovalidate": "ctrlsal_invoiceinvoice_code",
+          "errormessage": "请填写发票号",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "发票号"
         }
       },
@@ -193,10 +195,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator2",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择财务名称",
           "controltovalidate": "ctrlsal_invoicefinance_name",
+          "errormessage": "请选择财务名称",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "财务名称"
         }
       },
@@ -205,10 +207,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator3",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择类型 ",
           "controltovalidate": "XDropDownList1",
+          "errormessage": "请选择类型 ",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "类型 "
         }
       },
@@ -217,10 +219,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator4",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择经销商名称",
           "controltovalidate": "ctrlsal_invoicecustomer_name",
+          "errormessage": "请选择经销商名称",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "经销商名称"
         }
       },
@@ -229,10 +231,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator5",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写金额",
           "controltovalidate": "ctrlsal_invoiceinvoice_money",
+          "errormessage": "请填写金额",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "金额"
         }
       },
@@ -241,10 +243,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator6",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择票面日期",
           "controltovalidate": "ctrlsal_invoiceinvoice_date",
+          "errormessage": "请选择票面日期",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "票面日期"
         }
       },
@@ -253,10 +255,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator7",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择录入日期",
           "controltovalidate": "ctrlsal_invoiceinsert_date",
+          "errormessage": "请选择录入日期",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "录入日期"
         }
       }

@@ -38,24 +38,24 @@
                                     <td width="151" height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         公司</td>
                                     <td width="161" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox26" runat="server" FieldName="公司" DisableExpress="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand.CompanyName"></aspxform:XTextBox>
+                                        <aspxform:XTextBox id="XTextBox26" runat="server" XDataBind="SFDATA:proc_demand.CompanyName" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="公司"></aspxform:XTextBox>
                                     </td>
                                     <td width="161" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         部门</td>
                                     <td width="151" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox10" runat="server" FieldName="部门" DisableExpress="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand.DeptName"></aspxform:XTextBox>
+                                        <aspxform:XTextBox id="XTextBox10" runat="server" XDataBind="SFDATA:proc_demand.DeptName" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="部门"></aspxform:XTextBox>
                                     </td>
                                     <td width="161" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         提报人</td>
                                     <td width="161" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                                        <aspxform:XTextBox id="XTextBox25" runat="server" FieldName="提交人" DisableExpress="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand.CreateUserName"></aspxform:XTextBox>
+                                        <aspxform:XTextBox id="XTextBox25" runat="server" XDataBind="SFDATA:proc_demand.CreateUserName" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="提交人"></aspxform:XTextBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td height="84" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         备注</td>
                                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
-                                        <aspxform:XTextBox id="XTextBox1" runat="server" FieldName="备注" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand.demand_remarks" TextMode="MultiLine" Rows="5"></aspxform:XTextBox>
+                                        <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="SFDATA:proc_demand.demand_remarks" width="100%" BorderColor="#DCDCDC" FieldName="备注" Rows="5" TextMode="MultiLine"></aspxform:XTextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -105,58 +105,59 @@
                                     </tr>
                                     <tr>
                                         <td height="34" style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: #d1d1d1 1px solid">
-                                            <aspxform:XGridLineNo id="XGridLineNo1" runat="server" BackColor="Transparent" TextAlign="Center" BorderStyle="None" Width="100%">1</aspxform:XGridLineNo>
+                                            <aspxform:XGridLineNo id="XGridLineNo1" runat="server" Width="100%" BorderStyle="None" TextAlign="Center" BackColor="Transparent">1</aspxform:XGridLineNo>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox2" runat="server" FieldName="物料名称" DisableExpress="1" BorderColor="#DCDCDC" width="120px" XDataBind="SFDATA:proc_demand_detail.mat_code"></aspxform:XTextBox>
-                                            <aspxform:XTextBox id="XTextBox15" runat="server" FieldName="物料编码" DisableExpress="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.mat_id" HiddenExpress="1"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox2" runat="server" XDataBind="SFDATA:proc_demand_detail.mat_code" width="120px" BorderColor="#DCDCDC" DisableExpress="1" FieldName="物料名称"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox15" runat="server" XDataBind="SFDATA:proc_demand_detail.mat_id" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="物料编码" HiddenExpress="1"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox3" runat="server" FieldName="物料编码" DisableExpress="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.mat_name"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox3" runat="server" XDataBind="SFDATA:proc_demand_detail.mat_name" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="物料编码"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox4" runat="server" FieldName="规格" DisableExpress="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.mat_spec"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox4" runat="server" XDataBind="SFDATA:proc_demand_detail.mat_spec" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="规格"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList2" runat="server" FieldName="采购单位" XDataBind="SFDATA:proc_demand_detail.demand_slnum_unit" Width="100%" XDataSource="DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,if_base_unit->varState" DataMap="numerator->SFDATA:proc_demand_detail.sl_st_scale" DisplayColumn="mat_unit_name" ValueColumn="mat_unit_name"></aspxform:XDropDownList>
+                                            <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_demand_detail.demand_slnum_unit" FieldName="采购单位" Width="100%" ValueColumn="mat_unit_name" DisplayColumn="mat_unit_name" DataMap="numerator->SFDATA:proc_demand_detail.sl_st_scale" XDataSource="DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,if_base_unit->varState"></aspxform:XDropDownList>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox6" runat="server" FieldName="采购数量" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.demand_slnum"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox6" runat="server" XDataBind="SFDATA:proc_demand_detail.demand_slnum" width="100%" BorderColor="#DCDCDC" FieldName="采购数量"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox5" runat="server" FieldName="转换比例" DisableExpress="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.sl_st_scale"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox5" runat="server" XDataBind="SFDATA:proc_demand_detail.sl_st_scale" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="转换比例"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox12" runat="server" FieldName="基准单位" DisableExpress="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.demand_stnum_unit"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox12" runat="server" XDataBind="SFDATA:proc_demand_detail.demand_stnum_unit" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="基准单位"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox13" runat="server" FieldName="基准数量" DisableExpress="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.demand_stnum" Express="SFDATA:proc_demand_detail.demand_slnum*SFDATA:proc_demand_detail.sl_st_scale"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox13" runat="server" XDataBind="SFDATA:proc_demand_detail.demand_stnum" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="基准数量" Express="SFDATA:proc_demand_detail.demand_slnum*SFDATA:proc_demand_detail.sl_st_scale"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox7" runat="server" FieldName="计划单价" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.plan_price"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox7" runat="server" XDataBind="SFDATA:proc_demand_detail.plan_price" width="100%" BorderColor="#DCDCDC" FieldName="计划单价"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox14" runat="server" FieldName="总金额" DisableExpress="1" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.item_price" Express="SFDATA:proc_demand_detail.plan_price*SFDATA:proc_demand_detail.demand_stnum"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox14" runat="server" XDataBind="SFDATA:proc_demand_detail.item_price" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="总金额" Express="SFDATA:proc_demand_detail.plan_price*SFDATA:proc_demand_detail.demand_stnum"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList1" runat="server" FieldName="是否紧急" XDataBind="SFDATA:proc_demand_detail.if_urg" Width="100%">
+                                            <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:proc_demand_detail.if_urg" FieldName="是否紧急" Width="100%">
                                                 <asp:ListItem Selected="True" Value="0">否</asp:ListItem>
                                                 <asp:ListItem Value="1">是</asp:ListItem>
                                             </aspxform:XDropDownList>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDateTimePicker id="XDateTimePicker1" runat="server" FieldName="预到货时间" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_demand_detail.plan_arrival_time" Width="100%"></aspxform:XDateTimePicker>
+                                            <aspxform:XDateTimePicker id="XDateTimePicker1" runat="server" XDataBind="SFDATA:proc_demand_detail.plan_arrival_time" BorderColor="#DCDCDC" FieldName="预到货时间" Width="100%"></aspxform:XDateTimePicker>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox9" runat="server" FieldName="用途" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.uses"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox9" runat="server" XDataBind="SFDATA:proc_demand_detail.uses" width="100%" BorderColor="#DCDCDC" FieldName="用途"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XTextBox id="XTextBox11" runat="server" FieldName="备注" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand_detail.demand_detail_remarks"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox11" runat="server" XDataBind="SFDATA:proc_demand_detail.demand_detail_remarks" width="100%" BorderColor="#DCDCDC" FieldName="备注"></aspxform:XTextBox>
                                         </td>
                                         <td>
-                                            <aspxform:XTextBox id="XTextBox17" runat="server" DisableExpress="1" BorderColor="#DCDCDC" width="70px" XDataBind="SFDATA:proc_demand_detail.TaskUserName" BorderWidth="1"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox17" runat="server" XDataBind="SFDATA:proc_demand_detail.TaskUserName" width="70px" BorderColor="#DCDCDC" DisableExpress="1" BorderWidth="1"></aspxform:XTextBox>
                                             <aspxform:XSelectUserButton id="XSelectUserButton1" runat="server" Width="21px" DataMap="Account->SFDATA:proc_demand_detail.TaskUser;DisplayName->SFDATA:proc_demand_detail.TaskUserName"></aspxform:XSelectUserButton>
-                                            <aspxform:XTextBox id="XTextBox18" runat="server" DisableExpress="1" BorderColor="#DCDCDC" width="70px" XDataBind="SFDATA:proc_demand_detail.TaskUser" HiddenExpress="1" BorderWidth="1"></aspxform:XTextBox>
+                                            <aspxform:XTextBox id="XTextBox18" runat="server" XDataBind="SFDATA:proc_demand_detail.TaskUser" width="70px" BorderColor="#DCDCDC" DisableExpress="1" HiddenExpress="1" BorderWidth="1"></aspxform:XTextBox>
+                                            <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择任务执行人" ControlToValidate="XTextBox17">任务执行人</aspxform:XRequiredFieldValidator>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -169,7 +170,7 @@
                                     <td width="33%">
                                         总金额</td>
                                     <td width="33%">
-                                        <aspxform:XTextBox id="XTextBox16" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand.total_price" Express="sum(SFDATA:proc_demand_detail.item_price)"></aspxform:XTextBox>
+                                        <aspxform:XTextBox id="XTextBox16" runat="server" XDataBind="SFDATA:proc_demand.total_price" width="100%" BorderColor="#DCDCDC" Express="sum(SFDATA:proc_demand_detail.item_price)"></aspxform:XTextBox>
                                     </td>
                                     <td width="34%">
                                     </td>
@@ -178,7 +179,7 @@
                                     <td>
                                         CreateUser</td>
                                     <td>
-                                        <aspxform:XTextBox id="XTextBox8" onclick="WdatePicker({dateFmt:'yyyy'})" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="SFDATA:proc_demand.CreateUser"></aspxform:XTextBox>
+                                        <aspxform:XTextBox id="XTextBox8" onclick="WdatePicker({dateFmt:'yyyy'})" runat="server" XDataBind="SFDATA:proc_demand.CreateUser" width="100%" BorderColor="#DCDCDC"></aspxform:XTextBox>
                                     </td>
                                     <td>
                                     </td>
@@ -187,7 +188,7 @@
                                     <td>
                                         State</td>
                                     <td>
-                                        <aspxform:XTextBox id="XTextBox27" runat="server" BorderColor="#DCDCDC" width="100%" XDataBind="varState">1</aspxform:XTextBox>
+                                        <aspxform:XTextBox id="XTextBox27" runat="server" XDataBind="varState" width="100%" BorderColor="#DCDCDC">1</aspxform:XTextBox>
                                     </td>
                                     <td>
                                     </td>
@@ -196,7 +197,7 @@
                                     <td>
                                         Company</td>
                                     <td>
-                                        <aspxform:XTextBox id="XTextBox28" runat="server" BorderColor="#DCDCDC" width="130px" XDataBind="SFDATA:proc_demand.Company"></aspxform:XTextBox>
+                                        <aspxform:XTextBox id="XTextBox28" runat="server" XDataBind="SFDATA:proc_demand.Company" width="130px" BorderColor="#DCDCDC"></aspxform:XTextBox>
                                     </td>
                                     <td>
                                     </td>
@@ -205,7 +206,7 @@
                                     <td>
                                         Dept</td>
                                     <td>
-                                        <aspxform:XTextBox id="XTextBox29" runat="server" BorderColor="#DCDCDC" width="130px" XDataBind="SFDATA:proc_demand.Dept"></aspxform:XTextBox>
+                                        <aspxform:XTextBox id="XTextBox29" runat="server" XDataBind="SFDATA:proc_demand.Dept" width="130px" BorderColor="#DCDCDC"></aspxform:XTextBox>
                                     </td>
                                     <td>
                                     </td>

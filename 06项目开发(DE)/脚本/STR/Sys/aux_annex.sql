@@ -4,7 +4,7 @@ if not exists (select * from sysobjects where id = object_id('dbo.aux_annex') an
 BEGIN
 CREATE TABLE dbo.aux_annex
 (
-  annex_id int  null ,
+  annex_id int IDENTITY(1,1) not null ,
   fore_key_id int  null ,
   annex_class nvarchar(30) null ,
   annex_orgid int  null ,
@@ -15,7 +15,11 @@ CREATE TABLE dbo.aux_annex
   annex_suffix_name nvarchar(10) null ,
   state nchar(1) null ,
   create_time datetime2  null ,
-  update_time datetime2  null 
+  update_time datetime2  null ,
+  CONSTRAINT PK_aux_annex PRIMARY KEY  CLUSTERED
+  (
+    annex_id
+  )
 )
 END
 

@@ -28,7 +28,7 @@ public class Proc_Contract : YZServiceHandler
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "Update proc_contract Set state='5' WHERE TaskID=@id";
+                cmd.CommandText = "Update proc_contract Set state='0' WHERE contract_id=@id";
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                 cmd.ExecuteNonQuery();
             }
@@ -47,7 +47,7 @@ public class Proc_Contract : YZServiceHandler
         string vendor = request.GetString("vendor", null);
 
         //获得查询条件
-        string filter = null;
+        string filter = "state='1'";
 
         if (searchType == "QuickSearch")
         {

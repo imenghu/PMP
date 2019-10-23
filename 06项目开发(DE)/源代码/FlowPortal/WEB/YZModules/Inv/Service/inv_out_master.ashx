@@ -30,7 +30,7 @@ namespace Inv
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From inv_out_master WHERE out_master_id=@id";
+                    cmd.CommandText = "update inv_out_master set state='0' WHERE out_master_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }
@@ -49,7 +49,7 @@ namespace Inv
             string Inv_out_user = request.GetString("Inv_out_user", null);
 
             //获得查询条件
-            string filter = "";
+            string filter = "state=1";
 
             if (searchType == "QuickSearch")
             {

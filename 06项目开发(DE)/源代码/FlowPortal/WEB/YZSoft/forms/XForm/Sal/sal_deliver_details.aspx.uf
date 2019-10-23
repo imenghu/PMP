@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-21T11:02:38.329164+08:00",
+  "generateAt": "2019-10-22T20:00:56.7093792+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,6 +9,7 @@
         "attrs": {
           "id": "ctrlSal_deliver_detaildeliver_name",
           "runat": "server",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:sal_deliver_details.deliver_name",
           "width": "180px"
         }
@@ -29,6 +30,7 @@
         "attrs": {
           "id": "ctrlSal_deliver_detaildepot_name",
           "runat": "server",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:sal_deliver_details.depot_name",
           "width": "180px"
         }
@@ -41,7 +43,7 @@
           "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_depot;Filter:state->1",
           "displaycolumns": "depot_name:仓库名称",
-          "datamap": "depot_name->SFDATA:sal_deliver_details.depot_name"
+          "datamap": "depot_id->SFDATA:sal_deliver_details.depot_id;depot_name->SFDATA:sal_deliver_details.depot_name"
         }
       },
       "ctrlSal_deliver_detailcustomer_name": {
@@ -49,9 +51,9 @@
         "attrs": {
           "id": "ctrlSal_deliver_detailcustomer_name",
           "runat": "server",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:sal_deliver_details.customer_name",
-          "width": "180px",
-          "disableexpress": "1"
+          "width": "180px"
         }
       },
       "XDataBrowserButton3": {
@@ -62,7 +64,7 @@
           "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:sal_customer",
           "displaycolumns": "area:销售大区;customer_name:收货人;phone_number:收货手机号;receiving_address:收货地址",
-          "datamap": "area->SFDATA:sal_deliver_details.name;customer_name->SFDATA:sal_deliver_details.customer_name;phone_number->SFDATA:sal_deliver_details.receiving_mobile_phone;receiving_address->SFDATA:sal_deliver_details.receiving_address;receiver->SFDATA:sal_deliver_details.receiver"
+          "datamap": "customer_code->SFDATA:sal_deliver_details.customer_code;area->SFDATA:sal_deliver_details.name;customer_name->SFDATA:sal_deliver_details.customer_name;receiving_address->SFDATA:sal_deliver_details.receiving_address;receiver->SFDATA:sal_deliver_details.receiver;receiving_mobile_phone->SFDATA:sal_deliver_details.receiving_mobile_phone"
         }
       },
       "ctrlSal_deliver_detaildeliver_no": {
@@ -97,9 +99,9 @@
         "attrs": {
           "id": "ctrlSal_deliver_detailname",
           "runat": "server",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:sal_deliver_details.name",
-          "width": "100%",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlSal_deliver_detailreceiver": {
@@ -107,9 +109,9 @@
         "attrs": {
           "id": "ctrlSal_deliver_detailreceiver",
           "runat": "server",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:sal_deliver_details.receiver",
-          "width": "100%",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlSal_deliver_detailreceiving_mobile_phone": {
@@ -117,9 +119,9 @@
         "attrs": {
           "id": "ctrlSal_deliver_detailreceiving_mobile_phone",
           "runat": "server",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:sal_deliver_details.receiving_mobile_phone",
-          "width": "100%",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlSal_deliver_detailreceiving_address": {
@@ -127,9 +129,9 @@
         "attrs": {
           "id": "ctrlSal_deliver_detailreceiving_address",
           "runat": "server",
+          "disableexpress": "1",
           "xdatabind": "SFDATA:sal_deliver_details.receiving_address",
-          "width": "100%",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlSal_deliver_detaildeliver_date": {
@@ -138,7 +140,7 @@
           "id": "ctrlSal_deliver_detaildeliver_date",
           "runat": "server",
           "xdatabind": "SFDATA:Sal_deliver_details.deliver_date",
-          "width": "100%"
+          "width": "100px"
         }
       },
       "ctrlSal_deliver_detailcreatedate": {
@@ -147,6 +149,16 @@
           "id": "ctrlSal_deliver_detailcreatedate",
           "runat": "server",
           "xdatabind": "SFDATA:Sal_deliver_details.createdate",
+          "width": "100px"
+        }
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "disableexpress": "1",
+          "xdatabind": "varfinal",
           "width": "100%"
         }
       },
@@ -157,6 +169,7 @@
           "runat": "server",
           "xdatabind": "SFDATA:Sal_deliver_details.summary",
           "width": "100%",
+          "rows": "5",
           "textmode": "MultiLine"
         }
       },
@@ -178,6 +191,29 @@
           "width": "100%"
         }
       },
+      "XTextBox2": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox2",
+          "runat": "server",
+          "xdatabind": "varState",
+          "width": "100%",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "innerhtml": "1"
+        }
+      },
+      "XDropDownList1": {
+        "ctype": "aspxform:xdropdownlist",
+        "attrs": {
+          "id": "XDropDownList1",
+          "runat": "server",
+          "xdatasource": "DataSource:SFDATA;TableName:sal_deposit_record;Filter:customer_code->SFDATA:Sal_deliver_details.customer_code,state->varState",
+          "datamap": "deposit_final_balance->varfinal",
+          "valuecolumn": "deposit_id",
+          "displaycolumn": "deposit_id"
+        }
+      },
       "table1": {
         "ctype": "wrap",
         "attrs": {
@@ -193,7 +229,9 @@
         "ctypeorg": "table",
         "items": [
           "ctrlSal_deliver_detailcustomer_code",
-          "ctrlSal_deliver_detaildepot_id"
+          "ctrlSal_deliver_detaildepot_id",
+          "XTextBox2",
+          "XDropDownList1"
         ]
       }
     },
@@ -311,6 +349,7 @@
       "ctrlSal_deliver_detailreceiving_address",
       "ctrlSal_deliver_detaildeliver_date",
       "ctrlSal_deliver_detailcreatedate",
+      "XTextBox1",
       "ctrlSal_deliver_detailsummary",
       "table1"
     ]

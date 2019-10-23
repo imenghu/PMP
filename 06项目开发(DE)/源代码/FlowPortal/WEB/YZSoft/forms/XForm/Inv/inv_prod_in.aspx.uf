@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-18T11:08:24.9658223+08:00",
+  "generateAt": "2019-10-22T10:50:42.6663393+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlinv_prod_inmat_name",
           "runat": "server",
-          "disableexpress": "1",
+          "xdatabind": "SFDATA:inv_prod_in.mat_name",
           "width": "180px",
-          "xdatabind": "SFDATA:inv_prod_in.mat_name"
+          "disableexpress": "1"
         }
       },
       "XDataBrowserButton1": {
@@ -19,10 +19,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "datamap": "mat_id->SFDATA:inv_prod_in.mat_id;mat_code->SFDATA:inv_prod_in.mat_code;mat_name->SFDATA:inv_prod_in.mat_name;mat_spec->SFDATA:inv_prod_in.mat_spec;base_unit->SFDATA:inv_prod_in.in_stnum_unit",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:v_ctl_material_prod;Filter:state->varState",
-          "width": "21px"
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "datamap": "mat_id->SFDATA:inv_prod_in.mat_id;mat_code->SFDATA:inv_prod_in.mat_code;mat_name->SFDATA:inv_prod_in.mat_name;mat_spec->SFDATA:inv_prod_in.mat_spec;base_unit->SFDATA:inv_prod_in.in_stnum_unit"
         }
       },
       "ctrlinv_prod_inmat_spec": {
@@ -30,9 +30,9 @@
         "attrs": {
           "id": "ctrlinv_prod_inmat_spec",
           "runat": "server",
-          "disableexpress": "1",
+          "xdatabind": "SFDATA:inv_prod_in.mat_spec",
           "width": "100%",
-          "xdatabind": "SFDATA:inv_prod_in.mat_spec"
+          "disableexpress": "1"
         }
       },
       "ctrlinv_prod_inmat_code": {
@@ -40,9 +40,9 @@
         "attrs": {
           "id": "ctrlinv_prod_inmat_code",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "100%",
           "xdatabind": "SFDATA:inv_prod_in.mat_code",
+          "width": "100%",
+          "disableexpress": "1",
           "datamap": "mat_unit_name->varUnit;numerator->varNum",
           "valuetodisplaytext": "DataSource:SFDATA;TableName:v_ctl_material_prod;FilterColumn:mat_code;DisplayColumn:mat_code"
         }
@@ -53,11 +53,11 @@
           "id": "XDropDownList2",
           "runat": "server",
           "xdatabind": "SFDATA:inv_prod_in.depot_id",
-          "datamap": "depot_name->SFDATA:inv_prod_in.depot_name",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_depot",
-          "prompttext": "--请选择--",
+          "datamap": "depot_name->SFDATA:inv_prod_in.depot_name",
+          "valuecolumn": "depot_id",
           "displaycolumn": "depot_name",
-          "valuecolumn": "depot_id"
+          "prompttext": "--请选择--"
         }
       },
       "ctrlinv_prod_inin_stnum_unit": {
@@ -65,9 +65,9 @@
         "attrs": {
           "id": "ctrlinv_prod_inin_stnum_unit",
           "runat": "server",
-          "disableexpress": "1",
+          "xdatabind": "SFDATA:inv_prod_in.in_stnum_unit",
           "width": "100%",
-          "xdatabind": "SFDATA:inv_prod_in.in_stnum_unit"
+          "disableexpress": "1"
         }
       },
       "ctrlinv_prod_inin_stnum": {
@@ -75,8 +75,8 @@
         "attrs": {
           "id": "ctrlinv_prod_inin_stnum",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:inv_prod_in.in_stnum"
+          "xdatabind": "SFDATA:inv_prod_in.in_stnum",
+          "width": "100%"
         }
       },
       "ctrlinv_prod_inprod_org_id": {
@@ -84,9 +84,9 @@
         "attrs": {
           "id": "ctrlinv_prod_inprod_org_id",
           "runat": "server",
-          "disableexpress": "1",
+          "xdatabind": "SFDATA:inv_prod_in.ProdDeptName",
           "width": "180px",
-          "xdatabind": "SFDATA:inv_prod_in.ProdDeptName"
+          "disableexpress": "1"
         }
       },
       "XSelectOUButton1": {
@@ -94,8 +94,8 @@
         "attrs": {
           "id": "XSelectOUButton1",
           "runat": "server",
-          "datamap": "OUName->SFDATA:inv_prod_in.ProdDeptName;OUCode->SFDATA:inv_prod_in.prod_org_id",
-          "width": "21px"
+          "width": "21px",
+          "datamap": "OUName->SFDATA:inv_prod_in.ProdDeptName;OUCode->SFDATA:inv_prod_in.prod_org_id"
         }
       },
       "ctrlinv_prod_indep_userid": {
@@ -103,9 +103,9 @@
         "attrs": {
           "id": "ctrlinv_prod_indep_userid",
           "runat": "server",
-          "disableexpress": "1",
+          "xdatabind": "SFDATA:inv_prod_in.ProdUserName",
           "width": "180px",
-          "xdatabind": "SFDATA:inv_prod_in.ProdUserName"
+          "disableexpress": "1"
         }
       },
       "XSelectUserButton1": {
@@ -113,8 +113,8 @@
         "attrs": {
           "id": "XSelectUserButton1",
           "runat": "server",
-          "datamap": "Account->SFDATA:inv_prod_in.ProdUser;DisplayName->SFDATA:inv_prod_in.ProdUserName",
-          "width": "21px"
+          "width": "21px",
+          "datamap": "Account->SFDATA:inv_prod_in.ProdUser;DisplayName->SFDATA:inv_prod_in.ProdUserName"
         }
       },
       "ctrlinv_prod_inin_time": {
@@ -122,8 +122,8 @@
         "attrs": {
           "id": "ctrlinv_prod_inin_time",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:inv_prod_in.in_time"
+          "xdatabind": "SFDATA:inv_prod_in.in_time",
+          "width": "100%"
         }
       },
       "XTextBox1": {
@@ -131,12 +131,13 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "100%",
           "xdatabind": "varTJ",
-          "express": "SFDATA:inv_prod_in.in_stnum*varNum",
+          "width": "100%",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
           "borderwidth": "1",
-          "bordercolor": "#DCDCDC"
+          "express": "SFDATA:inv_prod_in.in_stnum*varNum",
+          "borderstyle": "None"
         }
       },
       "XTextBox2": {
@@ -144,11 +145,12 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "100%",
           "xdatabind": "varUnit",
+          "width": "100%",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
           "borderwidth": "1",
-          "bordercolor": "#DCDCDC"
+          "borderstyle": "None"
         }
       },
       "ctrlinv_prod_inprod_in_remarks": {
@@ -156,10 +158,10 @@
         "attrs": {
           "id": "ctrlinv_prod_inprod_in_remarks",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:inv_prod_in.prod_in_remarks",
-          "rows": "5",
-          "textmode": "MultiLine"
+          "width": "100%",
+          "textmode": "MultiLine",
+          "rows": "5"
         }
       },
       "ctrlinv_prod_inmat_id": {
@@ -167,8 +169,8 @@
         "attrs": {
           "id": "ctrlinv_prod_inmat_id",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:inv_prod_in.mat_id"
+          "xdatabind": "SFDATA:inv_prod_in.mat_id",
+          "width": "100%"
         }
       },
       "ctrlinv_prod_indepot_id": {
@@ -176,8 +178,8 @@
         "attrs": {
           "id": "ctrlinv_prod_indepot_id",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:inv_prod_in.depot_name"
+          "xdatabind": "SFDATA:inv_prod_in.depot_name",
+          "width": "100%"
         }
       },
       "ctrlinv_prod_indep_org_id": {
@@ -185,8 +187,8 @@
         "attrs": {
           "id": "ctrlinv_prod_indep_org_id",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:inv_prod_in.prod_org_id"
+          "xdatabind": "SFDATA:inv_prod_in.prod_org_id",
+          "width": "100%"
         }
       },
       "XTextBox7": {
@@ -195,8 +197,8 @@
           "id": "XTextBox7",
           "runat": "server",
           "xdatabind": "SFDATA:inv_prod_in.ProdUser",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1"
         }
       },
       "XTextBox3": {
@@ -205,8 +207,8 @@
           "id": "XTextBox3",
           "runat": "server",
           "xdatabind": "varState",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
           "innerhtml": "1"
         }
       },
@@ -216,8 +218,8 @@
           "id": "XTextBox6",
           "runat": "server",
           "xdatabind": "varNum",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1"
         }
       },
       "table1": {
@@ -249,10 +251,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator1",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择产成品名称",
           "controltovalidate": "ctrlinv_prod_inmat_name",
+          "errormessage": "请选择产成品名称",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "成品名称"
         }
       },
@@ -261,10 +263,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator2",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择仓库名称",
           "controltovalidate": "XDropDownList2",
+          "errormessage": "请选择仓库名称",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "仓库名称"
         }
       },
@@ -273,10 +275,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator3",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写入库数量",
           "controltovalidate": "ctrlinv_prod_inin_stnum",
+          "errormessage": "请填写入库数量",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "入库数量"
         }
       },
@@ -285,10 +287,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator4",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择生产部门",
           "controltovalidate": "ctrlinv_prod_inprod_org_id",
+          "errormessage": "请选择生产部门",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "生产部门"
         }
       },
@@ -297,10 +299,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator5",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择入库人",
           "controltovalidate": "ctrlinv_prod_indep_userid",
+          "errormessage": "请选择入库人",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "入库人"
         }
       },
@@ -309,10 +311,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator6",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择入库日期",
           "controltovalidate": "ctrlinv_prod_inin_time",
+          "errormessage": "请选择入库日期",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "入库日期"
         }
       }

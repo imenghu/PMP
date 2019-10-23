@@ -30,7 +30,7 @@ namespace Sys
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From ctl_material WHERE mat_id=@id";
+                    cmd.CommandText = "update ctl_material set state='0' WHERE mat_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }

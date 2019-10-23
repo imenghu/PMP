@@ -24,7 +24,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand', {
             pageSize: YZSoft.EnvSetting.PageSize.defaultSize,
             model: 'Ext.data.Model',
             sorters: {
-                property: 'TaskID',
+                property: 'demand_id',
                 direction: 'DESC'
             },
             proxy: {
@@ -60,7 +60,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand', {
                     { header: '备注', dataIndex: 'demand_remarks', flex: 1, width: 60, align: 'center', sortable: true },
                     { header: '提交时间', dataIndex: 'create_time', width: 120, align: 'left', sortable: true },
                     { header: '审核状态', dataIndex: 'demand_state', width: 120, align: 'center', sortable: true, renderer: me.renderStatus },
-                    { header: '操作', dataIndex: 'TaskID', width: 60, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
+                    { header: '操作', dataIndex: 'TaskID', width: 60, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickTrace } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {
@@ -227,7 +227,10 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand', {
         if (e.getTarget().tagName == 'A')
             this.readTask(this.store.getAt(recordIndex));
     },
-
+    onClickTrace: function (view, cell, recordIndex, cellIndex, e) {
+        if (e.getTarget().tagName == 'A')
+            this.readTrace(this.store.getAt(recordIndex));
+    },
    
     renderRead: function (value, metaData, record) {
         return "<a href='#'>跟踪</a>";
@@ -265,6 +268,14 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand', {
             title: Ext.String.format('采购需求审批')
         }));
     },
+    readTrace: function (rec) {
+        var me = this;
+
+        YZSoft.bpm.src.ux.FormManager.openFormApplication('Proc/proc_demand_trace', rec.data.demand_id, 'Read', Ext.apply({
+            sender: me,
+            title: Ext.String.format('采购需求')
+        }, me.dlgCfg));
+    },
 
     deleteSelection: function () {
         var me = this,
@@ -275,7 +286,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Demand', {
             return;
 
         Ext.each(recs, function (rec) {
-            ids.push(rec.getId());
+            ids.push(rec.data.demand_id);
         });
 
         Ext.Msg.show({

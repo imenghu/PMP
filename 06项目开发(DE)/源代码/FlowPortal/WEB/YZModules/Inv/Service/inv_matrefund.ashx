@@ -30,7 +30,7 @@ namespace Inv
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From inv_matrefund WHERE mat_refund_id=@id";
+                    cmd.CommandText = "update inv_matrefund set state='0' WHERE mat_refund_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }
@@ -47,7 +47,7 @@ namespace Inv
             string proc_status = request.GetString("proc_status", null);
 
             //获得查询条件
-            string filter = "";
+            string filter = "state=1";
             bool moduleAdmin = true;
             using (BPMConnection cn = new BPMConnection())
             {
@@ -76,7 +76,7 @@ namespace Inv
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("RefundUserName LIKE N'%{0}%'  ", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("RefundUserName LIKE N'%{0}%' or CompanyName LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(proc_status))
                     filter = queryProvider.CombinCond(filter, String.Format("refund_state LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
             }

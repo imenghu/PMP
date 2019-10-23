@@ -30,7 +30,7 @@ namespace Sal
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From Sal_deliver_details WHERE deliver_detail_id=@id";
+                    cmd.CommandText = "update Sal_deliver_details set state='0' WHERE deliver_detail_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }
@@ -46,7 +46,7 @@ namespace Sal
             string keyword = request.GetString("kwd", null);
 
             //获得查询条件
-            string filter = "";
+            string filter = "state='1'";
             bool moduleAdmin = true;
             using (BPMConnection cn = new BPMConnection())
             {
@@ -76,7 +76,7 @@ namespace Sal
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUserName LIKE N'%{0}%' OR deliver_name LIKE N'%{0}%' OR customer_name LIKE N'%{0}%' OR depot_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
             }
 
             if (!String.IsNullOrEmpty(filter))
@@ -129,34 +129,36 @@ namespace Sal
                                 totalRows = reader.ReadInt32("TotalRows");
                             item["deliver_detail_id"] =
                                                                     reader.ReadInt32("deliver_detail_id");
-                            
-                                                            item["deliver_name"] = 
-                                                                    reader.ReadString("deliver_name");
-                                                                                            item["depot_name"] = 
-                                                                    reader.ReadString("depot_name");
-                                                                                            item["name"] = 
-                                                                    reader.ReadString("name");
-                                                                                            item["customer_name"] = 
-                                                                    reader.ReadString("customer_name");
-                                                                                            item["receiver"] = 
-                                                                    reader.ReadString("receiver");
-                                                                                            item["receiving_mobile_phone"] = 
-                                                                    reader.ReadString("receiving_mobile_phone");
-                                                                                            item["receiving_address"] = 
-                                                                    reader.ReadString("receiving_address");
-                                                                                            item["deliver_no"] = 
-                                                                    reader.ReadString("deliver_no");
-                                                                                            item["deliver_number"] =
-                                                                    reader.ReadString("deliver_number");
-                                                                                            item["consignor"] = 
-                                                                    reader.ReadString("consignor");
-                                                                                            item["summary"] = 
-                                                                    reader.ReadString("summary");
-                                                                                            item["deliver_date"] = 
-                                                                    reader.ReadDateTime("deliver_date");
-                                                                                            item["createdate"] = 
-                                                                    reader.ReadDateTime("createdate");
-                                                                                    }
+
+                            item["CompanyName"] =
+                                    reader.ReadString("CompanyName");
+                            item["deliver_name"] =
+                                    reader.ReadString("deliver_name");
+                            item["depot_name"] =
+    reader.ReadString("depot_name");
+                            item["name"] =
+    reader.ReadString("name");
+                            item["customer_name"] =
+    reader.ReadString("customer_name");
+                            item["receiver"] =
+    reader.ReadString("receiver");
+                            item["receiving_mobile_phone"] =
+    reader.ReadString("receiving_mobile_phone");
+                            item["receiving_address"] =
+    reader.ReadString("receiving_address");
+                            item["deliver_no"] =
+    reader.ReadString("deliver_no");
+                            item["deliver_number"] =
+    reader.ReadFloat("deliver_number");
+                            item["consignor"] =
+    reader.ReadString("consignor");
+                            item["summary"] =
+    reader.ReadString("summary");
+                            item["deliver_date"] =
+    reader.ReadDateTime("deliver_date");
+                            item["createdate"] =
+    reader.ReadDateTime("createdate");
+                        }
                         
                         rv[YZJsonProperty.total] = totalRows;
                     }

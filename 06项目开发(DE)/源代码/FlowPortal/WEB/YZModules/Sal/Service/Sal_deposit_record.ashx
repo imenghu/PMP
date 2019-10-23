@@ -30,7 +30,7 @@ namespace Sal
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From Sal_deposit_record WHERE deposit_id=@id";
+                    cmd.CommandText = "update Sal_deposit_record set state='0' WHERE deposit_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }
@@ -46,7 +46,7 @@ namespace Sal
             string keyword = request.GetString("kwd", null);
 
             //获得查询条件
-            string filter = "";
+            string filter = "state='1'";
             bool moduleAdmin = true;
             using (BPMConnection cn = new BPMConnection())
             {
@@ -76,7 +76,7 @@ namespace Sal
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUserName LIKE N'%{0}%' OR customer_name LIKE N'%{0}%' OR customer_code LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
             }
 
             if (!String.IsNullOrEmpty(filter))
@@ -140,7 +140,7 @@ namespace Sal
                                                                                             item["depot_name"] = 
                                                                     reader.ReadString("depot_name");
                                                                                             item["deposit_money"] = 
-                                                                    reader.ReadString("deposit_money");
+                                                                    reader.ReadFloat("deposit_money");
                                                                                             item["deposit_flag"] = 
                                                                     reader.ReadInt32("deposit_flag");
                                                                                             item["finance_name"] = 

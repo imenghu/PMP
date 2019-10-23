@@ -24,6 +24,8 @@ CREATE TABLE dbo.sal_invoice
   DeptName varchar(50) null ,
   Company varchar(50) null ,
   CompanyName varchar(50) null ,
+  CreateUser varchar(50) null ,
+  CreateUserName varchar(50) null ,
   CONSTRAINT PK_sal_invoice PRIMARY KEY  CLUSTERED
   (
     invoice_id

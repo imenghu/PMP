@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-19T11:06:59.3859512+08:00",
+  "generateAt": "2019-10-22T13:58:27.8166807+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,8 +9,8 @@
         "attrs": {
           "id": "ctrlprod_test1sample_date",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.sample_date",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.sample_date"
         }
       },
       "ctrlprod_test1analyze_date": {
@@ -18,8 +18,8 @@
         "attrs": {
           "id": "ctrlprod_test1analyze_date",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.analyze_date",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.analyze_date"
         }
       },
       "ctrlprod_test1mat_name": {
@@ -27,8 +27,8 @@
         "attrs": {
           "id": "ctrlprod_test1mat_name",
           "runat": "server",
+          "width": "184px",
           "xdatabind": "SFDATA:prod_test1.mat_name",
-          "width": "180px",
           "disableexpress": "1"
         }
       },
@@ -37,10 +37,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->\"3\",third_code->\"02\",state->\"1\"",
-          "width": "21px",
+          "datamap": "mat_id->SFDATA:prod_test1.mat_id;mat_name->SFDATA:prod_test1.mat_name",
           "displaycolumns": "mat_code:物料编码;mat_name:半成品名称;mat_spec:规格;base_unit:单位",
-          "datamap": "mat_id->SFDATA:prod_test1.mat_id;mat_name->SFDATA:prod_test1.mat_name"
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->\"3\",third_code->\"02\",state->\"1\""
         }
       },
       "ctrlprod_test1tank_id": {
@@ -48,8 +48,8 @@
         "attrs": {
           "id": "ctrlprod_test1tank_id",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.tank_id",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.tank_id"
         }
       },
       "ctrlprod_test1alcohol": {
@@ -57,8 +57,8 @@
         "attrs": {
           "id": "ctrlprod_test1alcohol",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.alcohol",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.alcohol"
         }
       },
       "ctrlprod_test1real_ferment": {
@@ -66,8 +66,8 @@
         "attrs": {
           "id": "ctrlprod_test1real_ferment",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.real_ferment",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.real_ferment"
         }
       },
       "ctrlprod_test1wort_concent": {
@@ -75,8 +75,8 @@
         "attrs": {
           "id": "ctrlprod_test1wort_concent",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.wort_concent",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.wort_concent"
         }
       },
       "ctrlprod_test1true_concent": {
@@ -84,8 +84,8 @@
         "attrs": {
           "id": "ctrlprod_test1true_concent",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.true_concent",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.true_concent"
         }
       },
       "ctrlprod_test1total_acid": {
@@ -93,8 +93,8 @@
         "attrs": {
           "id": "ctrlprod_test1total_acid",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.total_acid",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.total_acid"
         }
       },
       "ctrlprod_test1dis_oxygen": {
@@ -102,8 +102,8 @@
         "attrs": {
           "id": "ctrlprod_test1dis_oxygen",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.dis_oxygen",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.dis_oxygen"
         }
       },
       "ctrlprod_test1chroma_ebc": {
@@ -111,8 +111,8 @@
         "attrs": {
           "id": "ctrlprod_test1chroma_ebc",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.chroma_ebc",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.chroma_ebc"
         }
       },
       "ctrlprod_test1ph": {
@@ -120,8 +120,8 @@
         "attrs": {
           "id": "ctrlprod_test1ph",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.ph",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.ph"
         }
       },
       "ctrlprod_test1bitter_bu": {
@@ -129,8 +129,8 @@
         "attrs": {
           "id": "ctrlprod_test1bitter_bu",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.bitter_bu",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.bitter_bu"
         }
       },
       "ctrlprod_test1operator_name": {
@@ -138,8 +138,9 @@
         "attrs": {
           "id": "ctrlprod_test1operator_name",
           "runat": "server",
+          "width": "100%",
           "xdatabind": "SFDATA:prod_test1.operator_name",
-          "width": "100%"
+          "disableexpress": "1"
         }
       },
       "ctrlprod_test1memo": {
@@ -147,8 +148,8 @@
         "attrs": {
           "id": "ctrlprod_test1memo",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.memo",
           "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.memo",
           "textmode": "MultiLine"
         }
       },
@@ -157,8 +158,8 @@
         "attrs": {
           "id": "ctrlprod_test1mat_id",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.mat_id",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.mat_id"
         }
       },
       "ctrlprod_test1DeptName": {
@@ -166,8 +167,8 @@
         "attrs": {
           "id": "ctrlprod_test1DeptName",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.DeptName",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.DeptName"
         }
       },
       "ctrlprod_test1Company": {
@@ -175,8 +176,8 @@
         "attrs": {
           "id": "ctrlprod_test1Company",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.Company",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.Company"
         }
       },
       "ctrlprod_test1CompanyName": {
@@ -184,8 +185,8 @@
         "attrs": {
           "id": "ctrlprod_test1CompanyName",
           "runat": "server",
-          "xdatabind": "SFDATA:prod_test1.CompanyName",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:prod_test1.CompanyName"
         }
       },
       "table1": {
@@ -215,10 +216,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator1",
           "runat": "server",
-          "controltovalidate": "ctrlprod_test1sample_date",
-          "errormessage": "请选择取样日期",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择取样日期",
+          "controltovalidate": "ctrlprod_test1sample_date",
           "innerhtml": "取样日期"
         }
       },
@@ -227,10 +228,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator2",
           "runat": "server",
-          "controltovalidate": "ctrlprod_test1analyze_date",
-          "errormessage": "请选择分析日期",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择分析日期",
+          "controltovalidate": "ctrlprod_test1analyze_date",
           "innerhtml": "分析日期"
         }
       },
@@ -239,10 +240,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator3",
           "runat": "server",
-          "controltovalidate": "ctrlprod_test1mat_name",
-          "errormessage": "请选择半成品名称",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择半成品名称",
+          "controltovalidate": "ctrlprod_test1mat_name",
           "innerhtml": "半成品名称"
         }
       },
@@ -251,10 +252,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator4",
           "runat": "server",
-          "controltovalidate": "ctrlprod_test1tank_id",
-          "errormessage": "请填写罐号",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写罐号",
+          "controltovalidate": "ctrlprod_test1tank_id",
           "innerhtml": "罐号"
         }
       },
@@ -263,10 +264,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator5",
           "runat": "server",
-          "controltovalidate": "ctrlprod_test1operator_name",
-          "errormessage": "请填写检验人员",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写检验人员",
+          "controltovalidate": "ctrlprod_test1operator_name",
           "innerhtml": "检验人员"
         }
       }

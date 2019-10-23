@@ -25,6 +25,8 @@ CREATE TABLE dbo.prod_report2
   Company varchar(50) null ,
   DeptName varchar(50) null ,
   Dept varchar(50) null ,
+  CreateUser varchar(50) null ,
+  CreateUserName varchar(50) null ,
   CONSTRAINT PK_prod_report2 PRIMARY KEY  CLUSTERED
   (
     report_id

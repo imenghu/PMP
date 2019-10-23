@@ -4,7 +4,7 @@ if not exists (select * from sysobjects where id = object_id('dbo.sal_record') a
 BEGIN
 CREATE TABLE dbo.sal_record
 (
-  record_id int  null ,
+  record_id int IDENTITY(1,1) not null ,
   record_date datetime2  null ,
   for_key_id int  null ,
   customer_code nvarchar(500) null ,
@@ -14,7 +14,11 @@ CREATE TABLE dbo.sal_record
   final_money float  null ,
   summary nvarchar(500) null ,
   record_flag int  null ,
-  create_time datetime2  null 
+  create_time datetime2  null ,
+  CONSTRAINT PK_sal_record PRIMARY KEY  CLUSTERED
+  (
+    record_id
+  )
 )
 END
 

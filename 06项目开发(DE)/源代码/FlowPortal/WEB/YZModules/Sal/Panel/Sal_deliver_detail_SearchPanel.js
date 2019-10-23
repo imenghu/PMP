@@ -1,5 +1,4 @@
-﻿
-Ext.define('YZModules.Prod.Panel.Sal_deposit_record_SearchPanel', {
+﻿Ext.define('YZModules.Sal.Panel.Sal_deposit_record_SearchPanel', {
     extend: 'Ext.panel.Panel',
     height: 'auto',
     border: false,

@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-19T11:36:16.7107737+08:00",
+  "generateAt": "2019-10-22T13:48:50.815393+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -21,7 +21,8 @@
           "runat": "server",
           "fieldname": "品名名称",
           "xdatabind": "SFDATA:prod_test8.mat_name",
-          "width": "180px"
+          "width": "184px",
+          "disableexpress": "1"
         }
       },
       "XDataBrowserButton1": {

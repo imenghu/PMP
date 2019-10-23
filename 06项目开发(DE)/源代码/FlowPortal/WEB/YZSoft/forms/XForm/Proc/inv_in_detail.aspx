@@ -48,7 +48,7 @@
                     <td width="158" height="34" class="xtbd" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         供应商名称</td>
                     <td width="158" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox2" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.vendor_name" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox2" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.vendor_name" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                     <td width="158" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                     </td>
@@ -63,24 +63,24 @@
                     <td height="33" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         物料编码</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox10" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.mat_code" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox10" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.mat_code" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         物料名称</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox11" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.mat_name" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox11" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.mat_name" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         规格</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox3" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.mat_spesc" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox3" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.mat_spesc" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         是否化验</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList4" runat="server" XDataBind="SFDATA:inv_in_detail.if_tests" DisableExpress="1">
+                        <aspxform:XDropDownList id="XDropDownList4" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.if_tests">
                             <asp:ListItem Selected="True" Value="0">否</asp:ListItem>
                             <asp:ListItem Value="1">是</asp:ListItem>
                         </aspxform:XDropDownList>
@@ -92,7 +92,7 @@
                                     <td width="25%" class="xtbd">
                                         化验结果</td>
                                     <td width="25%">
-                                        <aspxform:XDropDownList id="XDropDownList3" runat="server" XDataBind="vartestresult" DisableExpress="1">
+                                        <aspxform:XDropDownList id="XDropDownList3" runat="server" DisableExpress="1" XDataBind="vartestresult">
                                             <asp:ListItem Selected="True" Value="1">合格</asp:ListItem>
                                             <asp:ListItem Value="2">不合格（让步接收）</asp:ListItem>
                                             <asp:ListItem Value="3">不合格（不接受）</asp:ListItem>
@@ -101,7 +101,7 @@
                                     <td width="25%" class="xfld">
                                         化验单查询</td>
                                     <td width="25%">
-                                        <aspxform:XChildFormLink id="XChildFormLink1" runat="server" Express="vartestsid" FormApplication="Proc/proc_tests_read">化验单</aspxform:XChildFormLink>
+                                        <aspxform:XChildFormLink id="XChildFormLink1" runat="server" FormApplication="Proc/proc_tests_read" Express="vartestsid">化验单</aspxform:XChildFormLink>
                                     </td>
                                 </tr>
                             </tbody>
@@ -112,63 +112,63 @@
                     <td height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         到货数量</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox9" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.plan_in_slnum" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox9" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.plan_in_slnum" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         入库数量</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox13" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.in_slnum"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox13" runat="server" XDataBind="SFDATA:inv_in_detail.in_slnum" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         单位</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox4" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.in_slnum_unit" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox4" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.in_slnum_unit" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         转换比例</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox8" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.sl_st_scale" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox8" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.sl_st_scale" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         基准数量</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox14" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.in_stnum" DisableExpress="1" Express="SFDATA:inv_in_detail.in_slnum*SFDATA:inv_in_detail.sl_st_scale"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox14" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.in_stnum" BorderColor="#DCDCDC" width="100%" Express="SFDATA:inv_in_detail.in_slnum*SFDATA:inv_in_detail.sl_st_scale"></aspxform:XTextBox>
                     </td>
                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         基准单位</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox5" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.in_stnum_unit" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox5" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.in_stnum_unit" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         运货人</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox7" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="varstorename" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox7" runat="server" DisableExpress="1" XDataBind="varstorename" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         联系电话</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox15" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="varstoretel" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox15" runat="server" DisableExpress="1" XDataBind="varstoretel" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         入库时间</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDateTimePicker id="XDateTimePicker1" runat="server" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.create_time" DisplayOnly="True"></aspxform:XDateTimePicker>
+                        <aspxform:XDateTimePicker id="XDateTimePicker1" runat="server" XDataBind="SFDATA:inv_in_detail.create_time" BorderColor="#DCDCDC" DisplayOnly="True"></aspxform:XDateTimePicker>
                     </td>
                 </tr>
                 <tr>
                     <td height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         仓库</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:inv_in_detail.depot_id" PromptText="--请选择--" DataMap="depot_name->SFDATA:inv_in_detail.depot_name" XDataSource="DataSource:SFDATA;TableName:ctl_depot" ValueColumn="depot_id" DisplayColumn="depot_name"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:inv_in_detail.depot_id" DisplayColumn="depot_name" ValueColumn="depot_id" XDataSource="DataSource:SFDATA;TableName:ctl_depot;Filter:state->varState,Company->SFDATA:inv_in_detail.Company" DataMap="depot_name->SFDATA:inv_in_detail.depot_name" PromptText="--请选择--"></aspxform:XDropDownList>
                     </td>
                     <td class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         库管员</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox6" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.CreateUserName" DisableExpress="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox6" runat="server" DisableExpress="1" XDataBind="SFDATA:inv_in_detail.CreateUserName" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                     </td>
@@ -179,7 +179,7 @@
                     <td height="84" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         备注</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="XTextBox1" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.in_remarks" Rows="5" TextMode="MultiLine"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="SFDATA:inv_in_detail.in_remarks" BorderColor="#DCDCDC" width="100%" TextMode="MultiLine" Rows="5"></aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>
@@ -191,7 +191,7 @@
                     <td width="152" height="34">
                         到货通知主键</td>
                     <td width="153">
-                        <aspxform:XTextBox id="xtxtPurTaskId" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.arrival_notice_id" DataMap="vendor_id->SFDATA:inv_in_detail.vendor_id;vendor_name->SFDATA:inv_in_detail.vendor_name;mat_code->SFDATA:inv_in_detail.mat_code;mat_name->SFDATA:inv_in_detail.mat_name;mat_spesc->SFDATA:inv_in_detail.mat_spesc;arrival_slnum->SFDATA:inv_in_detail.plan_in_slnum;arrival_slnum_unit->SFDATA:inv_in_detail.in_slnum_unit;arrival_stnum_unit->SFDATA:inv_in_detail.in_stnum_unit;sl_st_scale->SFDATA:inv_in_detail.sl_st_scale;arrival_username->varstorename;arrival_usertel->varstoretel;if_tests->SFDATA:inv_in_detail.if_tests" ValueToDisplayText="DataSource:SFDATA;TableName:proc_arrival_notice;FilterColumn:arrival_notice_id;DisplayColumn:arrival_notice_id"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="xtxtPurTaskId" runat="server" XDataBind="SFDATA:inv_in_detail.arrival_notice_id" BorderColor="#DCDCDC" width="100%" DataMap="vendor_id->SFDATA:inv_in_detail.vendor_id;vendor_name->SFDATA:inv_in_detail.vendor_name;mat_code->SFDATA:inv_in_detail.mat_code;mat_name->SFDATA:inv_in_detail.mat_name;mat_spesc->SFDATA:inv_in_detail.mat_spesc;arrival_slnum->SFDATA:inv_in_detail.plan_in_slnum;arrival_slnum_unit->SFDATA:inv_in_detail.in_slnum_unit;arrival_stnum_unit->SFDATA:inv_in_detail.in_stnum_unit;sl_st_scale->SFDATA:inv_in_detail.sl_st_scale;arrival_username->varstorename;arrival_usertel->varstoretel;if_tests->SFDATA:inv_in_detail.if_tests" ValueToDisplayText="DataSource:SFDATA;TableName:proc_arrival_notice;FilterColumn:arrival_notice_id;DisplayColumn:arrival_notice_id"></aspxform:XTextBox>
                     </td>
                     <td width="151">
                     </td>
@@ -200,7 +200,7 @@
                     <td height="34">
                         供应商id</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox16" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.vendor_id"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox16" runat="server" XDataBind="SFDATA:inv_in_detail.vendor_id" BorderColor="#DCDCDC" width="100%"></aspxform:XTextBox>
                     </td>
                     <td>
                     </td>
@@ -209,7 +209,7 @@
                     <td height="34">
                         仓库名称</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox12" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="SFDATA:inv_in_detail.depot_name" BorderWidth="1"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox12" runat="server" XDataBind="SFDATA:inv_in_detail.depot_name" BorderColor="#DCDCDC" width="100%" BorderWidth="1"></aspxform:XTextBox>
                     </td>
                     <td>
                     </td>
@@ -218,7 +218,7 @@
                     <td height="34">
                         获取化验单</td>
                     <td>
-                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="vartestsid" DataMap="tests_result->vartestresult" XDataSource="DataSource:SFDATA;TableName:proc_tests;Filter:fore_key_id->SFDATA:inv_in_detail.arrival_notice_id,tests_class->varTestsClass" ValueColumn="tests_id" DisplayColumn="tests_id"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="vartestsid" DisplayColumn="tests_id" ValueColumn="tests_id" XDataSource="DataSource:SFDATA;TableName:proc_tests;Filter:fore_key_id->SFDATA:inv_in_detail.arrival_notice_id,tests_class->varTestsClass" DataMap="tests_result->vartestresult"></aspxform:XDropDownList>
                     </td>
                     <td>
                     </td>
@@ -227,7 +227,52 @@
                     <td>
                         入库化验</td>
                     <td>
-                        <aspxform:XTextBox id="XTextBox17" runat="server" width="100%" BorderColor="#DCDCDC" XDataBind="varTestsClass" BorderWidth="1">入库化验</aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox17" runat="server" XDataBind="varTestsClass" BorderColor="#DCDCDC" width="100%" BorderWidth="1">入库化验</aspxform:XTextBox>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        varState</td>
+                    <td>
+                        <aspxform:XTextBox id="XTextBox18" runat="server" XDataBind="varState" BorderColor="#DCDCDC" width="100%" BorderWidth="1">1</aspxform:XTextBox>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Company</td>
+                    <td>
+                        <aspxform:XTextBox id="XTextBox19" runat="server" XDataBind="SFDATA:inv_in_detail.Company" BorderColor="#DCDCDC" width="100%" BorderWidth="1"></aspxform:XTextBox>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="入库数量不能为空" ControlToValidate="XTextBox13">入库数量必填</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XCompareValidator id="XCompareValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="入库数量不能超过到货数量" ControlToValidate="XTextBox13" ValueToCompareExpress="SFDATA:inv_in_detail.plan_in_slnum" Operator="LessThanEqual">入库数量限制</aspxform:XCompareValidator>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择仓库" ControlToValidate="XDropDownList1">仓库</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
                     </td>
                     <td>
                     </td>

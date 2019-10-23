@@ -32,93 +32,108 @@ $Scripts-->
         <table width="960" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
-                    <td width="100" height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td width="100" height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         货物名称 
                     </td>
-                    <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlSal_deliver_detaildeliver_name" runat="server" XDataBind="SFDATA:sal_deliver_details.deliver_name" width="180px"></aspxform:XTextBox>
+                    <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="ctrlSal_deliver_detaildeliver_name" runat="server" DisableExpress="1" XDataBind="SFDATA:sal_deliver_details.deliver_name" width="180px"></aspxform:XTextBox>
                         <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:ctl_material;Filter:first_code->2,state->1" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:物料规格;base_unit:单位" DataMap="mat_name->SFDATA:sal_deliver_details.deliver_name"></aspxform:XDataBrowserButton>
                     </td>
-                    <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         发货仓库名称 
                     </td>
-                    <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlSal_deliver_detaildepot_name" runat="server" XDataBind="SFDATA:sal_deliver_details.depot_name" width="180px"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:ctl_depot;Filter:state->1" DisplayColumns="depot_name:仓库名称" DataMap="depot_name->SFDATA:sal_deliver_details.depot_name"></aspxform:XDataBrowserButton>
+                    <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="ctrlSal_deliver_detaildepot_name" runat="server" DisableExpress="1" XDataBind="SFDATA:sal_deliver_details.depot_name" width="180px"></aspxform:XTextBox>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:ctl_depot;Filter:state->1" DisplayColumns="depot_name:仓库名称" DataMap="depot_id->SFDATA:sal_deliver_details.depot_id;depot_name->SFDATA:sal_deliver_details.depot_name"></aspxform:XDataBrowserButton>
                     </td>
-                    <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         客户名称 
                     </td>
-                    <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlSal_deliver_detailcustomer_name" runat="server" XDataBind="SFDATA:sal_deliver_details.customer_name" width="180px" DisableExpress="1"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton3" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:sal_customer" DisplayColumns="area:销售大区;customer_name:收货人;phone_number:收货手机号;receiving_address:收货地址" DataMap="area->SFDATA:sal_deliver_details.name;customer_name->SFDATA:sal_deliver_details.customer_name;phone_number->SFDATA:sal_deliver_details.receiving_mobile_phone;receiving_address->SFDATA:sal_deliver_details.receiving_address;receiver->SFDATA:sal_deliver_details.receiver"></aspxform:XDataBrowserButton>
+                    <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="ctrlSal_deliver_detailcustomer_name" runat="server" DisableExpress="1" XDataBind="SFDATA:sal_deliver_details.customer_name" width="180px"></aspxform:XTextBox>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton3" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:sal_customer" DisplayColumns="area:销售大区;customer_name:收货人;phone_number:收货手机号;receiving_address:收货地址" DataMap="customer_code->SFDATA:sal_deliver_details.customer_code;area->SFDATA:sal_deliver_details.name;customer_name->SFDATA:sal_deliver_details.customer_name;receiving_address->SFDATA:sal_deliver_details.receiving_address;receiver->SFDATA:sal_deliver_details.receiver;receiving_mobile_phone->SFDATA:sal_deliver_details.receiving_mobile_phone"></aspxform:XDataBrowserButton>
                     </td>
                 </tr>
                 <tr>
-                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         货号 
                     </td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlSal_deliver_detaildeliver_no" runat="server" XDataBind="SFDATA:sal_deliver_details.deliver_no" width="100%"></aspxform:XTextBox>
                     </td>
-                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         发货数量</td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlSal_deliver_detaildeliver_money" runat="server" XDataBind="SFDATA:sal_deliver_details.deliver_number" width="100%"></aspxform:XTextBox>
                     </td>
-                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         发货人 
                     </td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlSal_deliver_detailconsignor" runat="server" XDataBind="SFDATA:sal_deliver_details.consignor" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         销售大区名称 
                     </td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlSal_deliver_detailname" runat="server" XDataBind="SFDATA:sal_deliver_details.name" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="ctrlSal_deliver_detailname" runat="server" DisableExpress="1" XDataBind="SFDATA:sal_deliver_details.name" width="100%"></aspxform:XTextBox>
                     </td>
-                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         收货员 
                     </td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlSal_deliver_detailreceiver" runat="server" XDataBind="SFDATA:sal_deliver_details.receiver" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="ctrlSal_deliver_detailreceiver" runat="server" DisableExpress="1" XDataBind="SFDATA:sal_deliver_details.receiver" width="100%"></aspxform:XTextBox>
                     </td>
-                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         收货手机 
                     </td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlSal_deliver_detailreceiving_mobile_phone" runat="server" XDataBind="SFDATA:sal_deliver_details.receiving_mobile_phone" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="ctrlSal_deliver_detailreceiving_mobile_phone" runat="server" DisableExpress="1" XDataBind="SFDATA:sal_deliver_details.receiving_mobile_phone" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         收货地址 
                     </td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlSal_deliver_detailreceiving_address" runat="server" XDataBind="SFDATA:sal_deliver_details.receiving_address" width="100%" DisableExpress="1"></aspxform:XTextBox>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="ctrlSal_deliver_detailreceiving_address" runat="server" DisableExpress="1" XDataBind="SFDATA:sal_deliver_details.receiving_address" width="100%"></aspxform:XTextBox>
                     </td>
-                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         发货日期 
                     </td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDateTimePicker id="ctrlSal_deliver_detaildeliver_date" runat="server" XDataBind="SFDATA:Sal_deliver_details.deliver_date" width="100%"></aspxform:XDateTimePicker>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XDateTimePicker id="ctrlSal_deliver_detaildeliver_date" runat="server" XDataBind="SFDATA:Sal_deliver_details.deliver_date" width="100px"></aspxform:XDateTimePicker>
                     </td>
-                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         创建日期 
                     </td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDateTimePicker id="ctrlSal_deliver_detailcreatedate" runat="server" XDataBind="SFDATA:Sal_deliver_details.createdate" width="100%"></aspxform:XDateTimePicker>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XDateTimePicker id="ctrlSal_deliver_detailcreatedate" runat="server" XDataBind="SFDATA:Sal_deliver_details.createdate" width="100px"></aspxform:XDateTimePicker>
                     </td>
                 </tr>
                 <tr>
-                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        期初余额</td>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="XTextBox1" runat="server" DisableExpress="1" XDataBind="varfinal" width="100%"></aspxform:XTextBox>
+                    </td>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    </td>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    </td>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    </td>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    </td>
+                </tr>
+                <tr>
+                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         摘要 
                     </td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="ctrlSal_deliver_detailsummary" runat="server" XDataBind="SFDATA:Sal_deliver_details.summary" width="100%" TextMode="MultiLine"></aspxform:XTextBox>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
+                        <aspxform:XTextBox id="ctrlSal_deliver_detailsummary" runat="server" XDataBind="SFDATA:Sal_deliver_details.summary" width="100%" Rows="5" TextMode="MultiLine"></aspxform:XTextBox>
                     </td>
                 </tr>
             </tbody>
@@ -140,6 +155,20 @@ $Scripts-->
                     </td>
                     <td style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlSal_deliver_detaildepot_id" runat="server" XDataBind="SFDATA:Sal_deliver_details.depot_id" width="100%"></aspxform:XTextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        varState</td>
+                    <td>
+                        <aspxform:XTextBox id="XTextBox2" runat="server" XDataBind="varState" width="100%" BorderColor="#DCDCDC" BorderWidth="1">1</aspxform:XTextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        获取余额</td>
+                    <td>
+                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataSource="DataSource:SFDATA;TableName:sal_deposit_record;Filter:customer_code->SFDATA:Sal_deliver_details.customer_code,state->varState" DataMap="deposit_final_balance->varfinal" ValueColumn="deposit_id" DisplayColumn="deposit_id"></aspxform:XDropDownList>
                     </td>
                 </tr>
                 <tr>

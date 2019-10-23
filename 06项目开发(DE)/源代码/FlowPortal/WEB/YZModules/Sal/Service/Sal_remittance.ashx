@@ -30,7 +30,7 @@ namespace Sal
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From Sal_remittance WHERE remittance_id=@id";
+                    cmd.CommandText = "update Sal_remittance set state='0' WHERE remittance_id=@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }
@@ -44,11 +44,9 @@ namespace Sal
 
             string searchType = request.GetString("SearchType", null);
             string keyword = request.GetString("kwd", null);
-              string plan_pur_year = request.GetString("kwd", null);
-              string mat_name = request.GetString("kwd", null);
 
             //获得查询条件
-            string filter = "";
+            string filter = "state='1'";
             bool moduleAdmin = true;
             using (BPMConnection cn = new BPMConnection())
             {
@@ -78,12 +76,7 @@ namespace Sal
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
-                
-                 if (!string.IsNullOrEmpty(plan_pur_year))
-                    filter = queryProvider.CombinCond(filter, String.Format("sale_order LIKE N'%{0}%'", queryProvider.EncodeText(plan_pur_year)));
-                if (!string.IsNullOrEmpty(mat_name))
-                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%'", queryProvider.EncodeText(mat_name)));
+                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUserName LIKE N'%{0}%' OR customer_name LIKE N'%{0}%' OR customer_code LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
             }
 
             if (!String.IsNullOrEmpty(filter))
@@ -147,7 +140,7 @@ namespace Sal
                                                                                             item["remittance_type"] = 
                                                                     reader.ReadString("remittance_type");
                                                                                             item["remittance_money"] = 
-                                                                    reader.ReadString("remittance_money");
+                                                                    reader.ReadFloat("remittance_money");
                                                                                             item["remittance_recer"] = 
                                                                     reader.ReadString("remittance_recer");
                                                                                             item["remittance_date"] = 

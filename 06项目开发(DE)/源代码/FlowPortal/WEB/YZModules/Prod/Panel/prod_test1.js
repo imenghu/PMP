@@ -54,7 +54,8 @@
                                             header: '公司名称', dataIndex: 'CompanyName', width: 100, align: 'left', sortable: true
                                         },
                                         {
-                                            header: '分析日期', dataIndex: 'analyze_date', width: 100, align: 'left', sortable: true
+                                            header: '分析日期', dataIndex: 'analyze_date', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderDateYMD
+
                                         },
                                         {
                                             header: '品名', dataIndex: 'mat_name', width: 100, align: 'left', sortable: true
@@ -96,7 +97,7 @@
                                             header: '化验员', dataIndex: 'operator_name', width: 100, align: 'left', sortable: true
                                         },
                                         {
-                                            header: '取样日期', dataIndex: 'sample_date', width: 100, align: 'left', sortable: true
+                                            header: '取样日期', dataIndex: 'sample_date', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderDateYMD
                                         },
                                         { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
@@ -181,7 +182,7 @@
                         width: 220,
                         createSearchPanel: function () {
                             var pnl = Ext.create({
-                                xclass: 'YZModules.Prod.Panel.prod_test1_SearchPanel',
+                                xclass: 'YZModules.Prod.Panel.Prod_test1_SearchPanel',
                                 region: 'north',
                                 store: me.store
                             });

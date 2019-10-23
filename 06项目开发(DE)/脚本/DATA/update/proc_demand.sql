@@ -5,7 +5,7 @@ cast(login_uid as char(20)) as login_uid
 FROM mxwi.users') as b where demand_userid=b.userid
 
 update proc_demand set SN=demand_id
-
+update proc_demand set org_id=(select top 1 org_id from proc_demand as b where demand_userid=b.demand_userid and org_id is not null) where org_id is null
 update proc_demand set Dept=proc_demand.org_id,DeptName=b.name from openquery(MYSQL, 'SELECT 
 org_id,
 cast(name as char(50)) as name

@@ -35,9 +35,9 @@ namespace Biz
                     id = "r3",
                     text = "生产监控",
                     glyph = 0xe955,
-                    xclass = "YZSoft.src.panel.IFramePanel",
+                    xclass = "YZSoft.report.Panel",
                     config = new {
-                        url = String.Format(url,"I402881fd016a9fcf9fcff2ba016aa0bffe746c16"),
+                        path = "生产报表"
                     }
                 },
                 new {
@@ -53,9 +53,18 @@ namespace Biz
                     id = "r5",
                     text = "销售分析",
                     glyph = 0xe93e,
-                    xclass = "YZSoft.src.panel.IFramePanel",
+                    xclass = "YZSoft.report.Panel",
                     config = new {
-                        url = String.Format(url,"I40280981016ad421d4212873016ad7ecf56b0ca5"),
+                        path="发货统计"
+                    }
+                },
+                new {
+                    id = "t5",
+                    text = "库存分析",
+                    glyph = 0xe93e,
+                    xclass = "YZSoft.report.Panel",
+                    config = new {
+                        path="出库统计"
                     }
                 },
                 new {

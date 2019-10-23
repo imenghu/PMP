@@ -1,5 +1,5 @@
 ﻿
-Ext.define('YZModules.Prod.Panel.Prod_test1_SearchPanel', {
+Ext.define('YZModules.Prod.Panel.prod_test6_SearchPanel', {
     extend: 'Ext.panel.Panel',
     height: 'auto',
     border: false,
@@ -10,8 +10,8 @@ Ext.define('YZModules.Prod.Panel.Prod_test1_SearchPanel', {
         var me = this,
             cfg;
 
-        me.analyze_date = Ext.create('Ext.form.field.Text', {
-            fieldLabel: '分析日期',
+        me.tank_id = Ext.create('Ext.form.field.Text', {
+            fieldLabel: '灌号',
             allowBlank: true
         });
 
@@ -61,7 +61,7 @@ Ext.define('YZModules.Prod.Panel.Prod_test1_SearchPanel', {
             items: [{
                 items: [{
                     flex: 1,
-                    items: [me.plan_pur_year]
+                    items: [me.tank_id]
                 }, {
                     flex: 1,
                     items: [me.mat_name]
@@ -85,14 +85,7 @@ Ext.define('YZModules.Prod.Panel.Prod_test1_SearchPanel', {
         Ext.apply(cfg, config);
         me.callParent([cfg]);
 
-        me.relayEvents(me.plan_pur_year, ['specialkey']);
-        me.relayEvents(me.mat_name, ['specialkey']);
-
-        me.on('specialkey', function (f, e) {
-            if (e.getKey() == e.ENTER) {
-                me.onSearchClick();
-            }
-        });
+   
 
         me.store.on({
             load: function (store, records, successful, operation, eOpts) {
@@ -108,8 +101,8 @@ Ext.define('YZModules.Prod.Panel.Prod_test1_SearchPanel', {
             params = me.store.getProxy().getExtraParams();
 
         Ext.apply(params, {
-            searchType: 'AdvancedSearch',
-            plan_pur_year: me.plan_pur_year.getValue(),
+            searchType: 'QuickSearch',
+            tank_id: me.tank_id.getValue(),
             mat_name: me.mat_name.getValue()
         });
 
@@ -121,8 +114,12 @@ Ext.define('YZModules.Prod.Panel.Prod_test1_SearchPanel', {
             store = me.store,
             params = me.store.getProxy().getExtraParams();
 
-        me.plan_pur_year.setValue('');
+        me.tank_id.setValue('');
         me.mat_name.setValue('');
+
+        Ext.apply(params, {
+            searchType: '',
+        });
 
         me.store.loadPage(1);
     }

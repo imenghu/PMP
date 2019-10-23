@@ -68,7 +68,7 @@
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         供应商名称</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="XTextBox4" runat="server" width="80%" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_tests.vendor_name"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="XTextBox4" runat="server" DisableExpress="1" width="80%" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_tests.vendor_name"></aspxform:XTextBox>
                         <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:ctl_vendor" DataMap="vendor_id->SFDATA:proc_tests.vendor_id;vendor_name->SFDATA:proc_tests.vendor_name" DisplayColumns="vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址"></aspxform:XDataBrowserButton>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
@@ -98,11 +98,16 @@
                 </tr>
             </tbody>
         </table>
-        <table width="960" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" dynamicarea="2,1">
+        <table width="960" align="center" id="tb1" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0" dynamicarea="2,1">
             <tbody>
                 <tr>
-                    <td height="34" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid" colspan="4">
+                    <td height="34" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid" colspan="3">
                         化验明细</td>
+                    <td align="right" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XAddBlockButton id="XAddBlockButton1" runat="server" TableName="proc_tests_value" DataSource="SFDATA" Text="新增"></aspxform:XAddBlockButton>
+                        <aspxform:XExcelDataImportButton id="XExcelDataImportButton1" runat="server" XClass="YZSoft.Forms.Field.ExcelDataImportButton" Width="70px" DataMap="A->SFDATA:proc_tests_value.index_name;B->SFDATA:proc_tests_value.rang_value;C->SFDATA:proc_tests_value.tests_value" UseSubmitBehavior="False" PopupWndHeight="-1" PopupWndWidth="-1" ColumnCount="3" text="Excel导入"></aspxform:XExcelDataImportButton>
+                        <aspxform:XExcelDataExportButton id="XExcelDataExportButton1" runat="server" Width="70px" Text="导出Excel" ExportTableID="tb1"></aspxform:XExcelDataExportButton>
+                    </td>
                 </tr>
                 <tr>
                     <td width="50" height="34" class="xtbd" style="BORDER-TOP: medium none; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
@@ -144,13 +149,38 @@
                 </tr>
                 <tr>
                     <td height="34">
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择物料名称">物料名称</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" ControlToValidate="XTextBox3" Display="None" ForeColor="Red" ErrorMessage="请选择物料名称">物料名称</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择化验类别">化验类别</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择化验结果">化验结果</aspxform:XRequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" ControlToValidate="XTextBox4" Display="None" ForeColor="Red" ErrorMessage="请选择供应商">供应商名称</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" ControlToValidate="XDropDownList1" Display="None" ForeColor="Red" ErrorMessage="请选择化验类别">化验类别</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" ControlToValidate="XDropDownList2" Display="None" ForeColor="Red" ErrorMessage="请选择化验结果">化验结果</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
                     </td>
                 </tr>
             </tbody>

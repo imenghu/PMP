@@ -10,8 +10,8 @@ Ext.define('YZModules.Prod.Panel.Prod_test2_SearchPanel', {
         var me = this,
             cfg;
 
-        me.analyze_date = Ext.create('Ext.form.field.Text', {
-            fieldLabel: '分析日期',
+        me.operator_name = Ext.create('Ext.form.field.Text', {
+            fieldLabel: '检验人员',
             allowBlank: true
         });
 
@@ -61,7 +61,7 @@ Ext.define('YZModules.Prod.Panel.Prod_test2_SearchPanel', {
             items: [{
                 items: [{
                     flex: 1,
-                    items: [me.plan_pur_year]
+                    items: [me.operator_name]
                 }, {
                     flex: 1,
                     items: [me.mat_name]
@@ -85,14 +85,7 @@ Ext.define('YZModules.Prod.Panel.Prod_test2_SearchPanel', {
         Ext.apply(cfg, config);
         me.callParent([cfg]);
 
-        me.relayEvents(me.plan_pur_year, ['specialkey']);
-        me.relayEvents(me.mat_name, ['specialkey']);
 
-        me.on('specialkey', function (f, e) {
-            if (e.getKey() == e.ENTER) {
-                me.onSearchClick();
-            }
-        });
 
         me.store.on({
             load: function (store, records, successful, operation, eOpts) {
@@ -108,8 +101,8 @@ Ext.define('YZModules.Prod.Panel.Prod_test2_SearchPanel', {
             params = me.store.getProxy().getExtraParams();
 
         Ext.apply(params, {
-            searchType: 'AdvancedSearch',
-            plan_pur_year: me.plan_pur_year.getValue(),
+            searchType: 'QuickSearch',
+            operator_name: me.operator_name.getValue(),
             mat_name: me.mat_name.getValue()
         });
 
@@ -121,8 +114,13 @@ Ext.define('YZModules.Prod.Panel.Prod_test2_SearchPanel', {
             store = me.store,
             params = me.store.getProxy().getExtraParams();
 
-        me.plan_pur_year.setValue('');
+        me.operator_name.setValue('');
         me.mat_name.setValue('');
+
+
+        Ext.apply(params, {
+            searchType: '',
+        });
 
         me.store.loadPage(1);
     }

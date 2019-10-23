@@ -160,17 +160,18 @@
                     '搜索条件', {
                         xclass: 'YZSoft.src.form.field.Search',
                         store: me.store,
-                        width: 220,
-                        createSearchPanel: function () {
-                            var pnl = Ext.create({
-                                xclass: 'YZModules.Sal.Panel.sal_invoice_SearchPanel',
-                                region: 'north',
-                                store: me.store
-                            });
+                        width: 220
+                        //,
+                        //createSearchPanel: function () {
+                        //    var pnl = Ext.create({
+                        //        xclass: 'YZModules.Sal.Panel.sal_invoice_SearchPanel',
+                        //        region: 'north',
+                        //        store: me.store
+                        //    });
 
-                            me.insert(0, pnl);
-                            return pnl;
-                        }
+                        //    me.insert(0, pnl);
+                        //    return pnl;
+                        //}
                     }]
             },
             items: [me.grid]

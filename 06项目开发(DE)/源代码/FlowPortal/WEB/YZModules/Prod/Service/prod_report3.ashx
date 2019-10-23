@@ -28,7 +28,7 @@ using Newtonsoft.Json.Linq;
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn;
-                    cmd.CommandText = "Delete From prod_report3 WHERE =@id";
+                    cmd.CommandText = "Update Prod_report3 set state='0' WHERE report_id =@id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     cmd.ExecuteNonQuery();
                 }

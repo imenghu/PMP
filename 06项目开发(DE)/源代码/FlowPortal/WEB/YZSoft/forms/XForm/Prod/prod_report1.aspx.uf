@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-21T15:17:54.361184+08:00",
+  "generateAt": "2019-10-22T20:08:46.666487+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,10 @@
         "attrs": {
           "id": "ctrlProd_report1mat_name",
           "runat": "server",
-          "fieldname": "品名",
+          "width": "188px",
           "xdatabind": "SFDATA:Prod_report1.mat_name",
-          "width": "80%"
+          "fieldname": "品名",
+          "readonly": "True"
         }
       },
       "XDataBrowserButton1": {
@@ -19,10 +20,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "displaycolumns": "first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:",
+          "datamap": "mat_name->SFDATA:prod_report1.mat_name",
+          "width": "18px",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_name->\"产成品\"",
-          "width": "21px",
-          "datamap": "mat_name->SFDATA:prod_report1.mat_name"
+          "displaycolumns": "first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:"
         }
       },
       "ctrlProd_report1ferment_tankno": {
@@ -30,9 +31,9 @@
         "attrs": {
           "id": "ctrlProd_report1ferment_tankno",
           "runat": "server",
-          "fieldname": "发酵罐编号",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report1.ferment_tankno",
-          "width": "100%"
+          "fieldname": "发酵罐编号"
         }
       },
       "ctrlProd_report1full_tank_date": {
@@ -40,9 +41,9 @@
         "attrs": {
           "id": "ctrlProd_report1full_tank_date",
           "runat": "server",
-          "fieldname": "满罐日期",
+          "width": "210px",
           "xdatabind": "SFDATA:Prod_report1.full_tank_date",
-          "width": "100%"
+          "fieldname": "满罐日期"
         }
       },
       "ctrlProd_report1export_date": {
@@ -50,9 +51,9 @@
         "attrs": {
           "id": "ctrlProd_report1export_date",
           "runat": "server",
-          "fieldname": "导出日期",
+          "width": "210px",
           "xdatabind": "SFDATA:Prod_report1.export_date",
-          "width": "100%"
+          "fieldname": "导出日期"
         }
       },
       "ctrlProd_report1wort_batch": {
@@ -60,9 +61,9 @@
         "attrs": {
           "id": "ctrlProd_report1wort_batch",
           "runat": "server",
-          "fieldname": "麦汁批次",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report1.wort_batch",
-          "width": "100%"
+          "fieldname": "麦汁批次"
         }
       },
       "ctrlProd_report1full_tank_num": {
@@ -70,9 +71,9 @@
         "attrs": {
           "id": "ctrlProd_report1full_tank_num",
           "runat": "server",
-          "fieldname": "满罐数量",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report1.full_tank_num",
-          "width": "100%"
+          "fieldname": "满罐数量"
         }
       },
       "ctrlProd_report1outferment_liquor_num": {
@@ -80,9 +81,9 @@
         "attrs": {
           "id": "ctrlProd_report1outferment_liquor_num",
           "runat": "server",
-          "fieldname": "出发酵液数量",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report1.outferment_liquor_num",
-          "width": "100%"
+          "fieldname": "出发酵液数量"
         }
       },
       "ctrlProd_report1ferment_wine_damage": {
@@ -90,9 +91,9 @@
         "attrs": {
           "id": "ctrlProd_report1ferment_wine_damage",
           "runat": "server",
-          "fieldname": "发酵酒损",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report1.ferment_wine_damage",
-          "width": "100%"
+          "fieldname": "发酵酒损"
         }
       },
       "ctrlProd_report1end_date": {
@@ -100,9 +101,9 @@
         "attrs": {
           "id": "ctrlProd_report1end_date",
           "runat": "server",
-          "fieldname": "结束日期",
+          "width": "210px",
           "xdatabind": "SFDATA:Prod_report1.end_date",
-          "width": "100%"
+          "fieldname": "结束日期"
         }
       },
       "ctrlProd_report1memo": {
@@ -110,9 +111,9 @@
         "attrs": {
           "id": "ctrlProd_report1memo",
           "runat": "server",
-          "fieldname": "备注",
-          "xdatabind": "SFDATA:Prod_report1.memo",
           "width": "100%",
+          "xdatabind": "SFDATA:Prod_report1.memo",
+          "fieldname": "备注",
           "textmode": "MultiLine"
         }
       },
@@ -121,9 +122,9 @@
         "attrs": {
           "id": "ctrlProd_report1mat_id",
           "runat": "server",
-          "fieldname": "品名编号",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report1.mat_id",
-          "width": "100%"
+          "fieldname": "品名编号"
         }
       },
       "ctrlProd_report1Company": {
@@ -131,9 +132,9 @@
         "attrs": {
           "id": "ctrlProd_report1Company",
           "runat": "server",
-          "fieldname": "公司编码",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report1.Company",
-          "width": "100%"
+          "fieldname": "公司编码"
         }
       },
       "ctrlProd_report1CompanyName": {
@@ -141,9 +142,9 @@
         "attrs": {
           "id": "ctrlProd_report1CompanyName",
           "runat": "server",
-          "fieldname": "公司名称",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report1.CompanyName",
-          "width": "100%"
+          "fieldname": "公司名称"
         }
       },
       "ctrlProd_report1Dept": {
@@ -151,9 +152,9 @@
         "attrs": {
           "id": "ctrlProd_report1Dept",
           "runat": "server",
-          "fieldname": "部门编码",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report1.Dept",
-          "width": "100%"
+          "fieldname": "部门编码"
         }
       },
       "ctrlProd_report1DeptName": {
@@ -161,9 +162,9 @@
         "attrs": {
           "id": "ctrlProd_report1DeptName",
           "runat": "server",
-          "fieldname": "部门名称",
+          "width": "100%",
           "xdatabind": "SFDATA:Prod_report1.DeptName",
-          "width": "100%"
+          "fieldname": "部门名称"
         }
       },
       "table1": {
@@ -195,10 +196,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator1",
           "runat": "server",
-          "controltovalidate": "ctrlProd_report1mat_name",
-          "errormessage": "请选择品名",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择品名",
+          "controltovalidate": "ctrlProd_report1mat_name",
           "innerhtml": "品名"
         }
       },
@@ -207,10 +208,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator2",
           "runat": "server",
-          "controltovalidate": "ctrlProd_report1ferment_tankno",
-          "errormessage": "请填写发酵罐编号",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写发酵罐编号",
+          "controltovalidate": "ctrlProd_report1ferment_tankno",
           "innerhtml": "发酵罐编号"
         }
       },
@@ -219,10 +220,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator3",
           "runat": "server",
-          "controltovalidate": "ctrlProd_report1full_tank_date",
-          "errormessage": "请选择满罐日期",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择满罐日期",
+          "controltovalidate": "ctrlProd_report1full_tank_date",
           "innerhtml": "满罐日期"
         }
       },
@@ -231,10 +232,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator4",
           "runat": "server",
-          "controltovalidate": "ctrlProd_report1export_date",
-          "errormessage": "请选择导出日期",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择导出日期",
+          "controltovalidate": "ctrlProd_report1export_date",
           "innerhtml": "导出日期"
         }
       },
@@ -243,10 +244,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator5",
           "runat": "server",
-          "controltovalidate": "ctrlProd_report1end_date",
-          "errormessage": "请选择结束日期",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择结束日期",
+          "controltovalidate": "ctrlProd_report1end_date",
           "innerhtml": "结束日期"
         }
       }
