@@ -1,11 +1,5 @@
 ﻿<%@ Page Language="C#" %>
 <%@ Register TagPrefix="aspxform" Namespace="XFormDesigner.Framework.Web.UI" Assembly="XFormDesigner.Framework" %>
-<script runat="server">
-
-    // Insert page code here
-    //
-
-</script>
 <html xmlns:xform="xmlns:xform">
 <head runat="server">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -42,14 +36,13 @@ $Scripts-->
                         财务名称 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlsal_invoicefinance_name" runat="server" XDataBind="SFDATA:sal_invoice.finance_name" width="180px" DisableExpress="1"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:sal_finance" DisplayColumns="finance_name:财务;finance_company:公司" DataMap="finance_id->SFDATA:sal_invoice.finance_id;finance_name->SFDATA:sal_invoice.finance_name"></aspxform:XDataBrowserButton>
+                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:sal_invoice.finance_id" DisplayColumn="finance_name" ValueColumn="finance_id" PromptText="--请选择--" XDataSource="DataSource:SFDATA;TableName:sal_finance" DataMap="finance_name->SFDATA:sal_invoice.finance_name"></aspxform:XDropDownList>
                     </td>
                     <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         类型 
                     </td>
                     <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:sal_invoice.invoice_type" Width="100px" PromptText="--请选择--">
+                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:sal_invoice.invoice_type" PromptText="--请选择--" Width="100px">
                             <asp:ListItem Value="专票">专票</asp:ListItem>
                             <asp:ListItem Value="普票">普票</asp:ListItem>
                         </aspxform:XDropDownList>
@@ -57,11 +50,11 @@ $Scripts-->
                 </tr>
                 <tr>
                     <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        经销商名称 
+                        客户名称 
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlsal_invoicecustomer_name" runat="server" XDataBind="SFDATA:sal_invoice.customer_name" width="180px" DisableExpress="1"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton3" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:sal_customer" DisplayColumns="area:销售大区;customer_name:收货人;phone_number:收货手机号;receiving_address:收货地址" DataMap="customer_code->SFDATA:sal_invoice.customer_code;area->SFDATA:sal_invoice.name;customer_name->SFDATA:sal_invoice.customer_name"></aspxform:XDataBrowserButton>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton3" runat="server" XDataSource="DataSource:SFDATA;TableName:ctl_dealer;Filter:state->1,Company->SFDATA:sal_invoice.Company" DataMap="area->SFDATA:sal_invoice.name;dealer_code->SFDATA:sal_invoice.customer_code;dealer_name->SFDATA:sal_invoice.customer_name" Width="21px" DisplayColumns="area:销售大区;dealer_code:客户编码;dealer_name:客户名称;phone_number:收货手机号;receiving_address:收货地址"></aspxform:XDataBrowserButton>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         销售大区 
@@ -70,8 +63,7 @@ $Scripts-->
                         <aspxform:XTextBox id="ctrlsal_invoicename" runat="server" XDataBind="SFDATA:sal_invoice.name" width="100%" DisableExpress="1"></aspxform:XTextBox>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        经销商编号 
-                    </td>
+                        客户编码</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlsal_invoicecustomer_code" runat="server" XDataBind="SFDATA:sal_invoice.customer_code" width="100%" DisableExpress="1"></aspxform:XTextBox>
                     </td>
@@ -119,10 +111,16 @@ $Scripts-->
             <tbody>
                 <tr>
                     <td width="101" height="34" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid">
-                        财务主键 
-                    </td>
+                        财务名称</td>
                     <td width="690" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlsal_invoicefinance_id" runat="server" XDataBind="SFDATA:sal_invoice.finance_id" width="100%"></aspxform:XTextBox>
+                        <aspxform:XTextBox id="ctrlsal_invoicefinance_id" runat="server" XDataBind="SFDATA:sal_invoice.finance_name" width="100%"></aspxform:XTextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        公司编码</td>
+                    <td>
+                        <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="SFDATA:sal_invoice.Company" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -134,7 +132,7 @@ $Scripts-->
                 </tr>
                 <tr>
                     <td height="34">
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" ControlToValidate="ctrlsal_invoicefinance_name" ErrorMessage="请选择财务名称" ForeColor="Red" Display="None">财务名称</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" ControlToValidate="XDropDownList2" ErrorMessage="请选择财务名称" ForeColor="Red" Display="None">财务名称</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
                     </td>
@@ -149,6 +147,13 @@ $Scripts-->
                 <tr>
                     <td height="34">
                         <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" ControlToValidate="ctrlsal_invoicecustomer_name" ErrorMessage="请选择经销商名称" ForeColor="Red" Display="None">经销商名称</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator8" runat="server" ControlToValidate="ctrlsal_invoicecustomer_code" ErrorMessage="请维护经销商编码" ForeColor="Red" Display="None">经销商编码</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
                     </td>

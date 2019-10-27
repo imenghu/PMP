@@ -87,29 +87,13 @@
             }
         });
 
-        me.btnEdit = Ext.create('YZSoft.src.button.Button', {
-            text: '修改',
-            glyph: 0xe61c,
-            sm: me.grid.getSelectionModel(),
-            perm: 'Edit',
-            updateStatus: function () {
-                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(me, me.grid, this.perm, 1, 1));
-            },
-            handler: function () {
-                var sm = me.grid.getSelectionModel(),
-                    recs = sm.getSelection() || [];
-
-                if (recs.length != 1)
-                    return;
-
-                me.edit(recs[0]);
-            }
-        });
+       
 
         me.btnDelete = Ext.create('YZSoft.src.button.Button', {
             text: '删除',
             glyph: 0xe64d,
             sm: me.grid.getSelectionModel(),
+            perm: 'Delete',
             /*---------删除按钮权限（记录权限）-------------*/
             perm: 'Delete',
             updateStatus: function () {

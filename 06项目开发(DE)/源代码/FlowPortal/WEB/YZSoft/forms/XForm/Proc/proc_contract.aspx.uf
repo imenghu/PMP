@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-22T14:05:31.9212592+08:00",
+  "generateAt": "2019-10-27T10:36:32.631179+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -170,7 +170,7 @@
           "id": "XDataBrowserButton2",
           "runat": "server",
           "width": "70px",
-          "xdatasource": "DataSource:SFDATA;TableName:proc_pur_task",
+          "xdatasource": "DataSource:SFDATA;TableName:v_proc_pur_task",
           "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;plan_price:计划单价;pur_slnum:申购数量;pur_slnum_unit:申购单位;pur_stnum:基准数量;pur_stnum_unit:基准单位;sl_st_scale:转换比例;plan_arrival_time:计划到货时间;item_price:计划金额",
           "datamap": "pur_task_id->SFDATA:proc_contract_task.pur_task_id",
           "text": "添加物料",

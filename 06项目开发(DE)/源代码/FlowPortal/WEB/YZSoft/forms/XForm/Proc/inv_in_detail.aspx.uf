@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-22T13:49:31.4925449+08:00",
+  "generateAt": "2019-10-26T21:24:11.0484861+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {
@@ -352,7 +352,7 @@
       "table2": {
         "ctype": "wrap",
         "attrs": {
-          "width": "456",
+          "width": "450",
           "align": "center",
           "border": "0",
           "cellspacing": "0",
@@ -373,6 +373,19 @@
       }
     },
     "validators": {
+      "XRequiredFieldValidator4": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator4",
+          "runat": "server",
+          "disableexpress": "SFDATA:inv_in_detail.if_tests==0",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "化验结果不能为空",
+          "controltovalidate": "XDropDownList3",
+          "innerhtml": "化验结果"
+        }
+      },
       "XRequiredFieldValidator1": {
         "ctype": "aspxform:xrequiredfieldvalidator",
         "attrs": {
@@ -397,6 +410,18 @@
           "valuetocompareexpress": "SFDATA:inv_in_detail.plan_in_slnum",
           "operator": "LessThanEqual",
           "innerhtml": "入库数量限制"
+        }
+      },
+      "XRequiredFieldValidator3": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator3",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "基准数量不能为空",
+          "controltovalidate": "XTextBox14",
+          "innerhtml": "基准数量"
         }
       },
       "XRequiredFieldValidator2": {

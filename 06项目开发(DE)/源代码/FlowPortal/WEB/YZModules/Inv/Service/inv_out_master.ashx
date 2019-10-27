@@ -49,18 +49,42 @@ namespace Inv
             string Inv_out_user = request.GetString("Inv_out_user", null);
 
             //获得查询条件
-            string filter = "state=1";
-
+            string filter = "state='1'";
+            bool moduleAdmin = true;
+            using (BPMConnection cn = new BPMConnection())
+            {
+                cn.WebOpen();
+                moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "4284d710-9839-425f-ba8f-6762da0f0c4c", "Admin");
+                if (!moduleAdmin)
+                {
+                    bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "4284d710-9839-425f-ba8f-6762da0f0c4c", "Company");
+                    if (moduleCompany)
+                    {
+                        MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
+                        List<string> ls = new List<string>();
+                        foreach (Member member in positions)
+                        {
+                            OU ou = member.GetParentOU(cn);
+                            ls.Add(string.Format("Company='{0}'", ou.Code));
+                        }
+                        filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
+                    }
+                    else
+                    {
+                        filter = queryProvider.CombinCond(filter, string.Format("CreateUser='{0}'", YZAuthHelper.LoginUserAccount));
+                    }
+                }
+            }
             if (searchType == "QuickSearch")
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("out_state LIKE N'%{0}%' OR CreateUserName LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("out_state LIKE N'%{0}%' OR CreateUserName LIKE N'%{0}%' OR CompanyName LIKE N'%{0}%' OR ReqUserName LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(proc_status))
                     filter = queryProvider.CombinCond(filter, String.Format("out_state LIKE N'%{0}%'", queryProvider.EncodeText(proc_status)));
                 
                 if (!string.IsNullOrEmpty(Inv_out_user))
-                    filter = queryProvider.CombinCond(filter, String.Format("CreateUserName LIKE N'%{0}%'", queryProvider.EncodeText(Inv_out_user)));
+                    filter = queryProvider.CombinCond(filter, String.Format("ReqUserName LIKE N'%{0}%'", queryProvider.EncodeText(Inv_out_user)));
             }
 
             if (!String.IsNullOrEmpty(filter))

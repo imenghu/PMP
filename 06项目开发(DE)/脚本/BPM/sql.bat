@@ -4,7 +4,7 @@ echo DIR=%DIR%
 set dbhost=127.0.0.1
 set dbuser=sa
 set dbpassword=1
-set dbname=sfdata
+set dbname=bpmdb60e
 for /R %DIR% %%f in (*.sql) do ( 
   echo %%f
   osql -S %dbhost% -U %dbuser% -P %dbpassword% -d %dbname% -i %%f

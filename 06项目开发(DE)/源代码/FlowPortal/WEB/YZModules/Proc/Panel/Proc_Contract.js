@@ -5,7 +5,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
         'YZSoft.bpm.src.ux.FormManager',
         'YZSoft.bpm.taskoperation.Manager'
     ],
-    title: '采购需求',
+    title: '采购合同',
     layout: 'fit',
     dlgCfg: {
         dlgModel: 'Tab', //Tab,Window,Dialog
@@ -78,6 +78,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
         me.btnNew = Ext.create('Ext.button.Button', {
             text: '新增',
             glyph: 0xe61d,
+            disabled: !config.perm['New'],
             handler: function () {
                 me.addNew();
             }
@@ -87,8 +88,9 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
             text: '删除',
             glyph: 0xe64d,
             sm: me.grid.getSelectionModel(),
+            perm: 'Delete',
             updateStatus: function () {
-                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, '', 1, -1));
+                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(me, me.grid, this.perm, 1, -1));
             },
             handler: function () {
                 me.deleteSelection();

@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-18T11:27:19.1125359+08:00",
+  "generateAt": "2019-10-25T11:42:34.4496114+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -28,6 +28,24 @@
           "prompttext": "--请选择--"
         }
       },
+      "XTextBox6": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox6",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_dealer.area",
+          "width": "100%"
+        }
+      },
+      "XTextBox8": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox8",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_dealer.dealer_code",
+          "width": "100%"
+        }
+      },
       "ctrlctl_dealerdealer_name": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
@@ -44,6 +62,34 @@
           "runat": "server",
           "xdatabind": "SFDATA:ctl_dealer.tax_cer_no",
           "width": "100%"
+        }
+      },
+      "XTextBox5": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox5",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_dealer.legal_preson",
+          "width": "100%"
+        }
+      },
+      "XTextBox7": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox7",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_dealer.phone_number",
+          "width": "100%"
+        }
+      },
+      "XTextBox4": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox4",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_dealer.registration_address",
+          "width": "100%",
+          "rows": "1"
         }
       },
       "ctrlctl_dealerdealer_contact": {
@@ -100,6 +146,16 @@
           "width": "100%"
         }
       },
+      "XTextBox9": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox9",
+          "runat": "server",
+          "xdatabind": "SFDATA:ctl_dealer.payment_account",
+          "width": "100%",
+          "bordercolor": "#DCDCDC"
+        }
+      },
       "XTextBox1": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
@@ -107,8 +163,7 @@
           "runat": "server",
           "xdatabind": "SFDATA:ctl_dealer.dealer_addr",
           "width": "100%",
-          "rows": "5",
-          "textmode": "MultiLine"
+          "rows": "1"
         }
       },
       "ctrlctl_dealerdealer_remarks": {
@@ -316,14 +371,20 @@
     "items": [
       "XDropDownList1",
       "XDropDownList2",
+      "XTextBox6",
+      "XTextBox8",
       "ctrlctl_dealerdealer_name",
       "ctrlctl_dealertax_cer_no",
+      "XTextBox5",
+      "XTextBox7",
+      "XTextBox4",
       "ctrlctl_dealerdealer_contact",
       "ctrlctl_dealerdealer_tel",
       "ctrlctl_dealerdealer_email",
       "ctrlctl_dealerdealer_zipcode",
       "ctrlctl_dealerdealer_wechat",
       "ctrlctl_dealerdealer_qq",
+      "XTextBox9",
       "XTextBox1",
       "ctrlctl_dealerdealer_remarks",
       "table1",

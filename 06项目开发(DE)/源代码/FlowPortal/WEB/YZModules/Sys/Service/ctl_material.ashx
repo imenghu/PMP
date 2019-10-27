@@ -49,6 +49,31 @@ namespace Sys
 
             //获得查询条件
             string filter = "State='1'";
+            //bool moduleAdmin = true;
+            //using (BPMConnection cn = new BPMConnection())
+            //{
+            //    cn.WebOpen();
+            //    moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "52e66d08-83cc-42a3-b4e3-b0b9bdc4f0d6", "Admin");
+            //    if (!moduleAdmin)
+            //    {
+            //        bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "52e66d08-83cc-42a3-b4e3-b0b9bdc4f0d6", "Company");
+            //        if (moduleCompany)
+            //        {
+            //            MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
+            //            List<string> ls = new List<string>();
+            //            foreach (Member member in positions)
+            //            {
+            //                OU ou = member.GetParentOU(cn);
+            //                ls.Add(string.Format("Company='{0}'", ou.Code));
+            //            }
+            //            filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
+            //        }
+            //        else
+            //        {
+            //            filter = queryProvider.CombinCond(filter, string.Format("CreateUser='{0}'", YZAuthHelper.LoginUserAccount));
+            //        }
+            //    }
+            //}
 
             if (searchType == "QuickSearch")
             {

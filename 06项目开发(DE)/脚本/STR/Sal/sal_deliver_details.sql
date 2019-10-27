@@ -11,6 +11,7 @@ CREATE TABLE dbo.sal_deliver_details
   depot_id int  null ,
   depot_name nvarchar(500) null ,
   name nvarchar(500) null ,
+  dealer_id int  null ,
   customer_code nvarchar(500) null ,
   customer_name nvarchar(500) null ,
   receiving_address nvarchar(500) null ,
@@ -28,6 +29,16 @@ CREATE TABLE dbo.sal_deliver_details
   CompanyName varchar(50) null ,
   CreateUser varchar(50) null ,
   CreateUserName varchar(50) null ,
+  order_detail_id int  null ,
+  sale_order nvarchar(60) null ,
+  mat_id int  null ,
+  mat_code nvarchar(60) null ,
+  mat_spesc nvarchar(60) null ,
+  deliver_stnum nvarchar(60) null ,
+  deliver_stnum_unit nvarchar(60) null ,
+  plate_number nvarchar(30) null ,
+  trans_name nvarchar(60) null ,
+  trans_mobile nvarchar(30) null ,
   CONSTRAINT PK_sal_deliver_details PRIMARY KEY  CLUSTERED
   (
     deliver_detail_id

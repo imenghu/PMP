@@ -1,18 +1,21 @@
 ﻿{
-  "generateAt": "2019-10-12T15:52:14.9442425+08:00",
+  "generateAt": "2019-10-24T10:45:46.1449458+08:00",
   "docVersion": 1,
   "src": {
-    "funcs": {},
+    "funcs": {
+      "getQueryString": "function (name){\r\n            var reg = new RegExp(\"(^|&)\" + name + \"=([^&]*)(&|$)\", \"i\");\r\n            var r = window.location.search.substr(1).match(reg);\r\n            if (r != null) return unescape(r[2]); return null;\r\n        }"
+    },
     "components": {
       "XTextBox3": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:inv_depot_detail.CompanyName",
+          "disableexpress": "1",
+          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1"
+          "xdatabind": "varcompanyname",
+          "width": "100%"
         }
       },
       "ctrlinv_depot_detailmat_name": {
@@ -20,17 +23,21 @@
         "attrs": {
           "id": "ctrlinv_depot_detailmat_name",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:inv_depot_detail.mat_name"
+          "disableexpress": "1",
+          "xdatabind": "varname",
+          "width": "100%"
         }
       },
-      "ctrlinv_depot_detailmat_code": {
+      "txtCode": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_depot_detailmat_code",
+          "id": "txtCode",
           "runat": "server",
+          "disableexpress": "1",
+          "xdatabind": "varcode",
           "width": "100%",
-          "xdatabind": "SFDATA:inv_depot_detail.mat_code"
+          "datamap": "mat_name->varname;mat_spec->varspec;base_unit->varunit",
+          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_material;FilterColumn:mat_code;DisplayColumn:mat_code"
         }
       },
       "ctrlinv_depot_detailmat_spec": {
@@ -38,8 +45,9 @@
         "attrs": {
           "id": "ctrlinv_depot_detailmat_spec",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:inv_depot_detail.mat_spec"
+          "disableexpress": "1",
+          "xdatabind": "varspec",
+          "width": "100%"
         }
       },
       "XTextBox2": {
@@ -47,10 +55,11 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:inv_depot_detail.depot_stnum_unit",
+          "disableexpress": "1",
+          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
-          "borderwidth": "1"
+          "xdatabind": "varunit",
+          "width": "100%"
         }
       },
       "ctrlinv_depot_detaildepot_name": {
@@ -58,9 +67,9 @@
         "attrs": {
           "id": "ctrlinv_depot_detaildepot_name",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "vardepot_name",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlinv_depot_detailvendor_name": {
@@ -68,9 +77,9 @@
         "attrs": {
           "id": "ctrlinv_depot_detailvendor_name",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "varvendor_name",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlinv_depot_detailproc_in_num": {
@@ -78,9 +87,9 @@
         "attrs": {
           "id": "ctrlinv_depot_detailproc_in_num",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "varproc_in_num",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlinv_depot_detailinv_out_num": {
@@ -88,9 +97,9 @@
         "attrs": {
           "id": "ctrlinv_depot_detailinv_out_num",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "varinv_out_num",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlinv_depot_detailrefund_num": {
@@ -98,9 +107,9 @@
         "attrs": {
           "id": "ctrlinv_depot_detailrefund_num",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "varrefund_num",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlinv_depot_detailinv_diff_num": {
@@ -108,9 +117,9 @@
         "attrs": {
           "id": "ctrlinv_depot_detailinv_diff_num",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "varinv_diff_num",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "ctrlinv_depot_detaildepot_stnum_unit": {
@@ -118,9 +127,9 @@
         "attrs": {
           "id": "ctrlinv_depot_detaildepot_stnum_unit",
           "runat": "server",
-          "width": "100%",
+          "disableexpress": "1",
           "xdatabind": "vardepot_stnum_unit",
-          "disableexpress": "1"
+          "width": "100%"
         }
       },
       "tb1": {
@@ -133,9 +142,9 @@
           "border": "0",
           "cellspacing": "0",
           "cellpadding": "0",
-          "dynamicarea": "2,1",
-          "xdatasource": "DataSource:SFDATA;TableName:inv_depot_detail;Filter:mat_code->SFDATA:inv_depot_detail.mat_code",
-          "datamap": "depot_name->vardepot_name;vendor_name->varvendor_name;depot_stnum_unit->vardepot_stnum_unit;proc_in_num->varproc_in_num;inv_out_num->varinv_out_num;refund_num->varrefund_num;inv_diff_num->varinv_diff_num"
+          "datamap": "depot_name->vardepot_name;vendor_name->varvendor_name;depot_stnum_unit->vardepot_stnum_unit;proc_in_num->varproc_in_num;inv_out_num->varinv_out_num;refund_num->varrefund_num;inv_diff_num->varinv_diff_num",
+          "xdatasource": "DataSource:SFDATA;TableName:inv_depot_detail;Filter:mat_code->varcode,Company->varcompany;OrderBy:depot_detail_id desc",
+          "dynamicarea": "2,1"
         },
         "ctypeorg": "table",
         "items": [
@@ -152,19 +161,21 @@
           "rows": 1
         }
       },
-      "ctrlinv_depot_detailmat_id": {
+      "txtCompany": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlinv_depot_detailmat_id",
+          "id": "txtCompany",
           "runat": "server",
+          "xdatabind": "varcompany",
           "width": "100%",
-          "xdatabind": "SFDATA:inv_depot_detail.Company"
+          "datamap": "OUName->varcompanyname",
+          "valuetodisplaytext": "TableName:V_BPMSysOUs;FilterColumn:Code;DisplayColumn:Code"
         }
       },
       "table1": {
         "ctype": "wrap",
         "attrs": {
-          "width": "800",
+          "width": "790",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -175,7 +186,7 @@
         },
         "ctypeorg": "table",
         "items": [
-          "ctrlinv_depot_detailmat_id"
+          "txtCompany"
         ]
       }
     },
@@ -183,7 +194,7 @@
     "items": [
       "XTextBox3",
       "ctrlinv_depot_detailmat_name",
-      "ctrlinv_depot_detailmat_code",
+      "txtCode",
       "ctrlinv_depot_detailmat_spec",
       "XTextBox2",
       "tb1",

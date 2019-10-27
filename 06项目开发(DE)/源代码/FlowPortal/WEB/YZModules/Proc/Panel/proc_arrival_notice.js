@@ -5,7 +5,7 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
         'YZSoft.bpm.src.ux.FormManager',
         'YZSoft.bpm.taskoperation.Manager'
     ],
-    title: '采购需求',
+    title: '到货入库',
     layout: 'fit',
     dlgCfg: {
         dlgModel: 'Tab', //Tab,Window,Dialog
@@ -78,6 +78,8 @@ Ext.define('YZModules.Proc.Panel.proc_arrival_notice', {
                 }
             }
         });
+
+       
 
         me.btnExcelExport = Ext.create('YZSoft.src.button.ExcelExportButton', {
             grid: me.grid,

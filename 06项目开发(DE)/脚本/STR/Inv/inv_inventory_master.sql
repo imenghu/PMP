@@ -10,7 +10,7 @@ CREATE TABLE dbo.inv_inventory_master
   depot_name nvarchar(100) null ,
   inv_master_userid int  null ,
   inv_master_year nchar(4) null ,
-  inv_master_month nchar(2) null ,
+  inv_master_month nchar(4) null ,
   inv_master_time nvarchar(60) null ,
   inv_remarks nvarchar(200) null ,
   piid nvarchar(100) null ,

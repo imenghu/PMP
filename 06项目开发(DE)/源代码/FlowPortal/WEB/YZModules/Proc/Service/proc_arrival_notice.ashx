@@ -27,7 +27,32 @@ public class proc_arrival_notice : YZServiceHandler
        
 
         //获得查询条件
-        string filter = null;
+        string filter = "state='1'";
+        bool moduleAdmin = true;
+        using (BPMConnection cn = new BPMConnection())
+        {
+            cn.WebOpen();
+            moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "87465539-60a2-4ac8-89c5-43529a525c9f", "Admin");
+            if (!moduleAdmin)
+            {
+                bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "87465539-60a2-4ac8-89c5-43529a525c9f", "Company");
+                if (moduleCompany)
+                {
+                    MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
+                    List<string> ls = new List<string>();
+                    foreach (Member member in positions)
+                    {
+                        OU ou = member.GetParentOU(cn);
+                        ls.Add(string.Format("Company='{0}'", ou.Code));
+                    }
+                    filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
+                }
+                else
+                {
+                    filter = queryProvider.CombinCond(filter, string.Format("CreateUser='{0}'", YZAuthHelper.LoginUserAccount));
+                }
+            }
+        }
 
         if (searchType == "QuickSearch")
         {

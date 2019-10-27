@@ -77,6 +77,7 @@
         me.btnNew = Ext.create('Ext.button.Button', {
             text: '新增',
             glyph: 0xe61d,
+            disabled: !config.perm['New'],
             handler: function () {
                 me.addNew();
             }
@@ -85,8 +86,9 @@
             text: '修改',
             glyph: 0xe61c,
             sm: me.grid.getSelectionModel(),
+            perm: 'Edit',
             updateStatus: function () {
-                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, '', 1, 1));
+                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(me, me.grid, this.perm, 1, 1));
             },
             handler: function () {
                 var sm = me.grid.getSelectionModel(),
@@ -103,8 +105,9 @@
             text: '删除',
             glyph: 0xe64d,
             sm: me.grid.getSelectionModel(),
+            perm: 'Delete',
             updateStatus: function () {
-                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, '', 1, -1));
+                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(me, me.grid, this.perm, 1, -1));
             },
             handler: function () {
                 me.deleteSelection();

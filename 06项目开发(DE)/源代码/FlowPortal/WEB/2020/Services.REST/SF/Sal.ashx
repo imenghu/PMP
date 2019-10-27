@@ -20,6 +20,13 @@ namespace SF
                     xclass = "YZModules.Sal.Panel.sal_order_master"
                 },
                 new {
+                    id = "sal_order_deliver",
+                    text = "订单发货",
+                    modulePerm = new YZModulePermision("8945d0d7-4566-497a-8101-b3c41ee6ae18", YZModuleDeniedBehavior.Hide),
+                    glyph = 0xea9c,
+                    xclass = "YZModules.Sal.Panel.sal_order_deliver"
+                },
+                new {
                     id = "sal_prod_deliver",
                     text = "订单发货",
                     modulePerm = new YZModulePermision("d7c0a77c-72c0-4b6f-9869-a4ac29a86b69", YZModuleDeniedBehavior.Hide),
@@ -59,6 +66,13 @@ namespace SF
                     modulePerm = new YZModulePermision("b013a43e-7bf9-49de-a916-05827f0c83ac", YZModuleDeniedBehavior.Hide),
                     glyph = 0xe62d,
                     xclass = "YZModules.Sal.Panel.Sal_remittance"
+                },
+                new {
+                    id = "KC5",
+                    text = "往来对账",
+                    modulePerm = new YZModulePermision("a4b35fef-cec0-4cba-8878-85aaf5117d05", YZModuleDeniedBehavior.Hide),
+                    glyph = 0xe62d,
+                    xclass = "YZModules.Sal.Panel.sal_confirmation_info"
                 }
             };
 

@@ -6,3 +6,4 @@ if exists (select * from sysobjects where id = object_id('dbo.FK_sal_order_detai
 GO
   ALTER table sal_order_detail ADD CONSTRAINT FK_sal_order_detail_sal_order_master FOREIGN KEY ( order_master_id ) REFERENCES dbo.sal_order_master ( order_master_id )
 GO
+

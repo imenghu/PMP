@@ -24,6 +24,7 @@ CREATE TABLE dbo.sal_prod_deliver
   state nchar(1) null DEFAULT((1)),
   create_time datetime2  null ,
   update_time datetime2  null ,
+  deliver_money float  null ,
   CONSTRAINT PK_sal_prod_deliver PRIMARY KEY  CLUSTERED
   (
     prod_deliver_id

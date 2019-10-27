@@ -1,9 +1,9 @@
 ﻿{
   "author": null,
   "lastModifier": {
-    "uid": "cs",
-    "name": "测试",
-    "date": "2019-10-22 17:39:04"
+    "uid": "cxm",
+    "name": "陈祥萌",
+    "date": "2019-10-26 10:01:45"
   },
   "property": {
     "hidden": false
@@ -51,7 +51,7 @@
         "height": 500,
         "captions": {
           "title": {
-            "text": "啤酒厂9月1日至今产成品出库数量（分品种）",
+            "text": "啤酒板块9月1日至今产成品出库数量（分品种）",
             "align": "center"
           }
         },
@@ -135,7 +135,7 @@
         "height": 500,
         "captions": {
           "title": {
-            "text": "啤酒厂9月1日至今出库数据监控(汇总)",
+            "text": "啤酒板块9月1日至今出库数据监控(汇总)",
             "align": "center"
           }
         },
@@ -234,8 +234,8 @@
         "ctype": "report.grid",
         "dsid": "出库数据明细表",
         "pagingBarDisplay": false,
-        "title": null,
-        "titleAlign": "left",
+        "title": "啤酒板块出库明细",
+        "titleAlign": "center",
         "columns": [
           {
             "text": "出库时间",

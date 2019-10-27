@@ -162,8 +162,6 @@ namespace Sal
     reader.ReadString("consignee_tel");
                             item["total_price"] =
     reader.ReadString("total_price");
-                            item["pay_price"] =
-    reader.ReadString("pay_price");
                             item["salesman_name"] =
     reader.ReadString("salesman_name");
                             item["salesman_tel"] =

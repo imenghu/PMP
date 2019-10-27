@@ -47,15 +47,15 @@ namespace Inv
             string proc_status = request.GetString("proc_status", null);
 
             //获得查询条件
-            string filter = "state=1";
+            string filter = "state='1'";
             bool moduleAdmin = true;
             using (BPMConnection cn = new BPMConnection())
             {
                 cn.WebOpen();
-                moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "e5441a14-4ade-4aed-bdf2-abad7b68818f", "Admin");
+                moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "b3facb0b-67be-4373-b187-17066caf95d2", "Admin");
                 if (!moduleAdmin)
                 {
-                    bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "e5441a14-4ade-4aed-bdf2-abad7b68818f", "Company");
+                    bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "b3facb0b-67be-4373-b187-17066caf95d2", "Company");
                     if (moduleCompany)
                     {
                         MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
@@ -63,12 +63,13 @@ namespace Inv
                         foreach (Member member in positions)
                         {
                             OU ou = member.GetParentOU(cn);
-                            ls.Add(string.Format("Company='{0}'",ou.Code));
+                            ls.Add(string.Format("Company='{0}'", ou.Code));
                         }
-                        filter = string.Format("({0})",queryProvider.CombinCondOR(ls.ToArray()));
+                        filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
                     }
-                    else {
-                        filter = string.Format("CreateUser='{0}'",YZAuthHelper.LoginUserAccount);
+                    else
+                    {
+                        filter = queryProvider.CombinCond(filter, string.Format("CreateUser='{0}'", YZAuthHelper.LoginUserAccount));
                     }
                 }
             }

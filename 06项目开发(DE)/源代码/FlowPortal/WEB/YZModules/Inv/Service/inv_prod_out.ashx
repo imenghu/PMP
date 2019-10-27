@@ -49,6 +49,31 @@ namespace Inv
 
             //获得查询条件
             string filter = "inv_prod_out.State='1'";
+            bool moduleAdmin = true;
+            using (BPMConnection cn = new BPMConnection())
+            {
+                cn.WebOpen();
+                moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "56f24c1b-dea4-45a8-ab6b-c04eca9e56a4", "Admin");
+                if (!moduleAdmin)
+                {
+                    bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "56f24c1b-dea4-45a8-ab6b-c04eca9e56a4", "Company");
+                    if (moduleCompany)
+                    {
+                        MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
+                        List<string> ls = new List<string>();
+                        foreach (Member member in positions)
+                        {
+                            OU ou = member.GetParentOU(cn);
+                            ls.Add(string.Format("inv_prod_out.Company='{0}'", ou.Code));
+                        }
+                        filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
+                    }
+                    else
+                    {
+                        filter = queryProvider.CombinCond(filter, string.Format("inv_prod_out.CreateUser='{0}'", YZAuthHelper.LoginUserAccount));
+                    }
+                }
+            }
 
             if (searchType == "QuickSearch")
             {

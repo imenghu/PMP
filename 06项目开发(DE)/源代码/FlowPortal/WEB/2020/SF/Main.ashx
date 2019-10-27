@@ -67,77 +67,43 @@ namespace BPMApp
                         //leafOnly = true,
                         activeNode = "QM1"
                     }
-                },
-                new {
-                    id = "CW",
-                    title = "财务管理",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
-                    navigator = new {
-                        dataURL = this.ResolveUrl(context,"../Services.REST/SF/Finance.ashx"),
-                        leafOnly = true,
-                        activeNode = "NotificationSetting"
-                    }
-                },
-                new {
-                    id = "ZC",
-                    title = "资产管理",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
-                    navigator = new {
-                        dataURL = this.ResolveUrl(context,"../Services.REST/SF/Asset.ashx"),
-                        leafOnly = true,
-                        activeNode = "NotificationSetting"
-                    }
-                },
-                new {
-                    id = "JX",
-                    title = "绩效管理",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
-                    navigator = new {
-                        dataURL = this.ResolveUrl(context,"../Services.REST/SF/Performance.ashx"),
-                        leafOnly = true,
-                        activeNode = "NotificationSetting"
-                    }
-                },
-                new {
-                    id = "DJ",
-                    title = "党建管理",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
-                    navigator = new {
-                        dataURL = this.ResolveUrl(context,"../Services.REST/SF/Party.ashx"),
-                        leafOnly = true,
-                        activeNode = "NotificationSetting"
-                    }
-                },
-                new {
-                    id = "XZ",
-                    title = "行政管理",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
-                    navigator = new {
-                        dataURL = this.ResolveUrl(context,"../Services.REST/SF/OA.ashx"),
-                        leafOnly = true,
-                        activeNode = "NotificationSetting"
-                    }
-                },
-                new {
-                    id = "RL",
-                    title = "人力资源",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
-                    navigator = new {
-                        dataURL = this.ResolveUrl(context,"../Services.REST/Biz/HR.ashx"),
-                        leafOnly = true,
-                        activeNode = "NotificationSetting"
-                    }
-                },
-                new {
-                    id = "GC",
-                    title = "工程管理",
-                    //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
-                    navigator = new {
-                        dataURL = this.ResolveUrl(context,"../Services.REST/SF/Project.ashx"),
-                        leafOnly = true,
-                        activeNode = "NotificationSetting"
-                    }
                 }
+                //,
+                //new {
+                //    id = "CW",
+                //    title = "财务管理",
+                //    xclass="YZSoft.src.panel.BuildingPanel"
+                //},
+                //new {
+                //    id = "ZC",
+                //    title = "资产管理",
+                //    xclass="YZSoft.src.panel.BuildingPanel"
+                //},
+                //new {
+                //    id = "JX",
+                //    title = "绩效管理",
+                //    xclass="YZSoft.src.panel.BuildingPanel"
+                //},
+                //new {
+                //    id = "DJ",
+                //    title = "党建管理",
+                //    xclass="YZSoft.src.panel.BuildingPanel"
+                //},
+                //new {
+                //    id = "XZ",
+                //    title = "行政管理",
+                //    xclass="YZSoft.src.panel.BuildingPanel"
+                //},
+                //new {
+                //    id = "RL",
+                //    title = "人力资源",
+                //    xclass="YZSoft.src.panel.BuildingPanel"
+                //},
+                //new {
+                //    id = "GC",
+                //    title = "工程管理",
+                //    xclass="YZSoft.src.panel.BuildingPanel"
+                //}
             };
             return YZSecurityManager.ApplayPermision(modules);
         }

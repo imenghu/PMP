@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-22T19:40:39.8134081+08:00",
+  "generateAt": "2019-10-25T12:00:56.5414217+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -13,25 +13,17 @@
           "width": "100%"
         }
       },
-      "ctrlsal_invoicefinance_name": {
-        "ctype": "aspxform:xtextbox",
+      "XDropDownList2": {
+        "ctype": "aspxform:xdropdownlist",
         "attrs": {
-          "id": "ctrlsal_invoicefinance_name",
+          "id": "XDropDownList2",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_invoice.finance_name",
-          "width": "180px",
-          "disableexpress": "1"
-        }
-      },
-      "XDataBrowserButton1": {
-        "ctype": "aspxform:xdatabrowserbutton",
-        "attrs": {
-          "id": "XDataBrowserButton1",
-          "runat": "server",
-          "width": "21px",
+          "xdatabind": "SFDATA:sal_invoice.finance_id",
+          "displaycolumn": "finance_name",
+          "valuecolumn": "finance_id",
+          "prompttext": "--请选择--",
           "xdatasource": "DataSource:SFDATA;TableName:sal_finance",
-          "displaycolumns": "finance_name:财务;finance_company:公司",
-          "datamap": "finance_id->SFDATA:sal_invoice.finance_id;finance_name->SFDATA:sal_invoice.finance_name"
+          "datamap": "finance_name->SFDATA:sal_invoice.finance_name"
         }
       },
       "XDropDownList1": {
@@ -40,8 +32,8 @@
           "id": "XDropDownList1",
           "runat": "server",
           "xdatabind": "SFDATA:sal_invoice.invoice_type",
-          "width": "100px",
-          "prompttext": "--请选择--"
+          "prompttext": "--请选择--",
+          "width": "100px"
         },
         "childNodes": [
           {
@@ -75,10 +67,10 @@
         "attrs": {
           "id": "XDataBrowserButton3",
           "runat": "server",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_dealer;Filter:state->1,Company->SFDATA:sal_invoice.Company",
+          "datamap": "area->SFDATA:sal_invoice.name;dealer_code->SFDATA:sal_invoice.customer_code;dealer_name->SFDATA:sal_invoice.customer_name",
           "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:sal_customer",
-          "displaycolumns": "area:销售大区;customer_name:收货人;phone_number:收货手机号;receiving_address:收货地址",
-          "datamap": "customer_code->SFDATA:sal_invoice.customer_code;area->SFDATA:sal_invoice.name;customer_name->SFDATA:sal_invoice.customer_name"
+          "displaycolumns": "area:销售大区;dealer_code:客户编码;dealer_name:客户名称;phone_number:收货手机号;receiving_address:收货地址"
         }
       },
       "ctrlsal_invoicename": {
@@ -155,7 +147,16 @@
         "attrs": {
           "id": "ctrlsal_invoicefinance_id",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_invoice.finance_id",
+          "xdatabind": "SFDATA:sal_invoice.finance_name",
+          "width": "100%"
+        }
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_invoice.Company",
           "width": "100%"
         }
       },
@@ -173,7 +174,8 @@
         },
         "ctypeorg": "table",
         "items": [
-          "ctrlsal_invoicefinance_id"
+          "ctrlsal_invoicefinance_id",
+          "XTextBox1"
         ]
       }
     },
@@ -195,7 +197,7 @@
         "attrs": {
           "id": "XRequiredFieldValidator2",
           "runat": "server",
-          "controltovalidate": "ctrlsal_invoicefinance_name",
+          "controltovalidate": "XDropDownList2",
           "errormessage": "请选择财务名称",
           "forecolor": "Red",
           "display": "None",
@@ -224,6 +226,18 @@
           "forecolor": "Red",
           "display": "None",
           "innerhtml": "经销商名称"
+        }
+      },
+      "XRequiredFieldValidator8": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator8",
+          "runat": "server",
+          "controltovalidate": "ctrlsal_invoicecustomer_code",
+          "errormessage": "请维护经销商编码",
+          "forecolor": "Red",
+          "display": "None",
+          "innerhtml": "经销商编码"
         }
       },
       "XRequiredFieldValidator5": {
@@ -265,8 +279,7 @@
     },
     "items": [
       "ctrlsal_invoiceinvoice_code",
-      "ctrlsal_invoicefinance_name",
-      "XDataBrowserButton1",
+      "XDropDownList2",
       "XDropDownList1",
       "ctrlsal_invoicecustomer_name",
       "XDataBrowserButton3",

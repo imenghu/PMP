@@ -45,18 +45,18 @@ Ext.define('YZModules.Inv.Panel.inv_inventory_SearchPanel', {
             fields: ['name', 'value'],
             data: [
                 { name: RS.$('All_SearchAll'), value: '' },
-                { name: "1月", value: '1月' },
-                { name: "2月", value: '2月' },
-                { name: "3月", value: '3月' },
-                { name: "4月", value: '4月' },
-                { name: "5月", value: '5月' },
-                { name: "6月", value: '6月' },
-                { name: "7月", value: '7月' },
-                { name: "8月", value: '8月' },
-                { name: "9月", value: '9月' },
-                { name: "10月", value: '10月' },
-                { name: "11月", value: '11月' },
-                { name: "12月", value: '12月' }
+                { name: "1月", value: '1' },
+                { name: "2月", value: '2' },
+                { name: "3月", value: '3' },
+                { name: "4月", value: '4' },
+                { name: "5月", value: '5' },
+                { name: "6月", value: '6' },
+                { name: "7月", value: '7' },
+                { name: "8月", value: '8' },
+                { name: "9月", value: '9' },
+                { name: "10月", value: '10' },
+                { name: "11月", value: '11' },
+                { name: "12月", value: '12' }
                 
 
 

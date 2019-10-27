@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-22T11:28:35.7208159+08:00",
+  "generateAt": "2019-10-26T20:43:41.7690861+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -58,11 +58,23 @@
         "attrs": {
           "id": "XDataBrowserButton2",
           "runat": "server",
+          "hiddenexpress": "Global.StepName!='开始'",
           "multiselect": "True",
           "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit",
           "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:state->varState",
           "text": "选择物料"
+        }
+      },
+      "XAddBlockButton2": {
+        "ctype": "aspxform:xaddblockbutton",
+        "attrs": {
+          "id": "XAddBlockButton2",
+          "runat": "server",
+          "hiddenexpress": "Global.StepName!='开始'",
+          "text": "新增",
+          "datasource": "SFDATA",
+          "tablename": "proc_demand_detail"
         }
       },
       "XTextBox2": {
@@ -74,7 +86,7 @@
           "width": "120px",
           "bordercolor": "#DCDCDC",
           "disableexpress": "1",
-          "fieldname": "物料名称"
+          "fieldname": "物料编码"
         }
       },
       "XDataBrowserButton1": {
@@ -82,9 +94,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
+          "hiddenexpress": "Global.StepName!='开始'",
           "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit",
           "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:state->varState",
           "width": "21px"
         }
       },
@@ -110,7 +123,7 @@
           "width": "100%",
           "bordercolor": "#DCDCDC",
           "disableexpress": "1",
-          "fieldname": "物料编码"
+          "fieldname": "物料名称"
         }
       },
       "XTextBox4": {
@@ -133,7 +146,7 @@
           "xdatabind": "SFDATA:proc_demand_detail.demand_slnum_unit",
           "fieldname": "采购单位",
           "datamap": "numerator->SFDATA:proc_demand_detail.sl_st_scale",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,if_base_unit->varState",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,state->varState",
           "width": "100%",
           "valuecolumn": "mat_unit_name",
           "displaycolumn": "mat_unit_name"
@@ -447,6 +460,7 @@
       "XTextBox25",
       "XTextBox1",
       "XDataBrowserButton2",
+      "XAddBlockButton2",
       "tbDetail",
       "table1"
     ]

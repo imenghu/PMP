@@ -1,9 +1,9 @@
 ﻿{
   "author": null,
   "lastModifier": {
-    "uid": "cs",
-    "name": "测试",
-    "date": "2019-10-22 17:37:36"
+    "uid": "cxm",
+    "name": "陈祥萌",
+    "date": "2019-10-27 10:28:31"
   },
   "property": {
     "hidden": false
@@ -14,7 +14,7 @@
         "ds": {
           "type": "query",
           "datasourceName": "SFDATA",
-          "query": "SELECT CONVERT(varchar(100), deliver_date, 23) 发货日期,sum(deliver_number) 发货量  FROM sal_deliver_details where state =1 and depot_name  like '菏泽仓库%' group by deliver_date ORDER by deliver_date asc",
+          "query": "SELECT CONVERT(varchar(100), deliver_date, 23) 发货日期,sum(deliver_number) 发货量  FROM sal_deliver_details where state =1 and depot_name  like '%菏泽仓库%' group by deliver_date ORDER by deliver_date asc",
           "queryParams": [],
           "paging": "Enable",
           "pageSize": 20
@@ -25,7 +25,7 @@
         "ds": {
           "type": "query",
           "datasourceName": "SFDATA",
-          "query": "SELECT\n\tCONVERT(varchar(100), deliver_date, 23) 时间,\n\tdeliver_name 销货名称,\n\tdeliver_number 销量,\nCASE\nNAME \n\tWHEN '' THEN\n\t'其他' ELSE NAME \n\tEND 销售大区,\nCASE\n\tcustomer_name \n\tWHEN '<--请选择-->' THEN\n\t'其他' ELSE customer_name \n\tEND AS 客户名称 \nFROM\n\tsal_deliver_details \nWHERE\n\tdepot_name like '菏泽仓库%' \nORDER BY\n\tdeliver_date DESC",
+          "query": "SELECT\n\tCONVERT(varchar(100), deliver_date, 23) 时间,\n\tdeliver_name 销货名称,\n\tdeliver_number 销量,\nCASE\nNAME \n\tWHEN '' THEN\n\t'其他' ELSE NAME \n\tEND 销售大区,\nCASE\n\tcustomer_name \n\tWHEN '<--请选择-->' THEN\n\t'其他' ELSE customer_name \n\tEND AS 客户名称 \nFROM\n\tsal_deliver_details \nWHERE\n\tdepot_name like '%菏泽仓库%' \nORDER BY\n\tdeliver_date DESC",
           "queryParams": [],
           "paging": "Enable",
           "pageSize": 20
@@ -36,7 +36,7 @@
         "ds": {
           "type": "query",
           "datasourceName": "SFDATA",
-          "query": "SELECT\n\tCONVERT(varchar(100), deliver_date, 23) 时间,\n\tdeliver_name 销货名称,\n\tdeliver_number 销量,\nCASE\nNAME \n\tWHEN '' THEN\n\t'其他' ELSE NAME \n\tEND 销售大区,\nCASE\n\tcustomer_name \n\tWHEN '<--请选择-->' THEN\n\t'其他' ELSE customer_name \n\tEND AS 客户名称 \nFROM\n\tsal_deliver_details \nWHERE\n\tdepot_name = '广元仓库' \nORDER BY\n\tdeliver_date DESC",
+          "query": "SELECT\n\tCONVERT(varchar(100), deliver_date, 23) 时间,\n\tdeliver_name 销货名称,\n\tdeliver_number 销量,\nCASE\nNAME \n\tWHEN '' THEN\n\t'其他' ELSE NAME \n\tEND 销售大区,\nCASE\n\tcustomer_name \n\tWHEN '<--请选择-->' THEN\n\t'其他' ELSE customer_name \n\tEND AS 客户名称 \nFROM\n\tsal_deliver_details \nWHERE\n\tdepot_name = '广元仓' \nORDER BY\n\tdeliver_date DESC",
           "queryParams": [],
           "paging": "Enable",
           "pageSize": 20
@@ -47,7 +47,7 @@
         "ds": {
           "type": "query",
           "datasourceName": "SFDATA",
-          "query": "SELECT case NAME when '' then '其他' else name end  销售地区\n\t,\n\tsum( deliver_number ) 发货量 \nFROM\n\tsal_deliver_details\nWHERE\n\tstate = 1 and  depot_name like '菏泽仓库%'\nGROUP BY\nNAME",
+          "query": "SELECT case NAME when '' then '其他' else name end  销售地区\n\t,\n\tsum( deliver_number ) 发货量 \nFROM\n\tsal_deliver_details\nWHERE\n\tstate = 1 and  depot_name like '%菏泽仓库%'\nGROUP BY\nNAME",
           "queryParams": [],
           "paging": "Enable",
           "pageSize": 20
@@ -58,7 +58,7 @@
         "ds": {
           "type": "query",
           "datasourceName": "SFDATA",
-          "query": "SELECT CONVERT(varchar(100), deliver_date, 23) 发货日期,sum(deliver_number) 发货量  FROM sal_deliver_details where state =1 and depot_name  = '广元仓库' group by deliver_date ORDER by deliver_date asc",
+          "query": "SELECT CONVERT(varchar(100), deliver_date, 23) 发货日期,sum(deliver_number) 发货量  FROM sal_deliver_details where state =1 and depot_name  ='广元仓' group by deliver_date ORDER by deliver_date asc",
           "queryParams": [],
           "paging": "Enable",
           "pageSize": 20
@@ -69,7 +69,7 @@
         "ds": {
           "type": "query",
           "datasourceName": "SFDATA",
-          "query": "SELECT case NAME when '' then '其他' else name end  销售地区\n\t,\n\tsum( deliver_number ) 发货量 \nFROM\n\tsal_deliver_details\nWHERE\n\tstate = 1 and  depot_name = '广元仓库'\nGROUP BY\nNAME",
+          "query": "SELECT case NAME when '' then '其他' else name end  销售地区\n\t,\n\tsum( deliver_number ) 发货量 \nFROM\n\tsal_deliver_details\nWHERE\n\tstate = 1 and  depot_name = '广元仓'\nGROUP BY\nNAME",
           "queryParams": [],
           "paging": "Enable",
           "pageSize": 20
@@ -84,7 +84,7 @@
         "height": 500,
         "captions": {
           "title": {
-            "text": "菏泽 9月1日至今销量统计",
+            "text": "菏泽啤酒厂9月1日至今销量统计",
             "align": "center"
           }
         },
@@ -329,7 +329,7 @@
               ]
             },
             "yFieldsColors": [
-              null
+              "#66FFFF"
             ],
             "stacked": false,
             "fullStack": false,
@@ -410,7 +410,7 @@
               ]
             },
             "yFieldsColors": [
-              null
+              "#FFB366"
             ],
             "stacked": false,
             "fullStack": false,

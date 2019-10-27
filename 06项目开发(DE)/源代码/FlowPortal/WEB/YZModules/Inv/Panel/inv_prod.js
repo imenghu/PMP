@@ -3,7 +3,7 @@
     requires: [
         'YZSoft.bpm.src.ux.FormManager'
     ],
-    title: '产成品入库',
+    title: '产成品库存查询',
     layout: 'fit',
     dlgCfg: {
         dlgModel: 'Tab', //Tab,Window,Dialog

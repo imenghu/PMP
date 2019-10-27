@@ -103,7 +103,7 @@
                                     <td height="34" align="left" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="3">
                                         任务列表</td>
                                     <td align="right" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="3">
-                                        <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" Width="70px" XDataSource="DataSource:SFDATA;TableName:proc_pur_task" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;plan_price:计划单价;pur_slnum:申购数量;pur_slnum_unit:申购单位;pur_stnum:基准数量;pur_stnum_unit:基准单位;sl_st_scale:转换比例;plan_arrival_time:计划到货时间;item_price:计划金额" DataMap="pur_task_id->SFDATA:proc_contract_task.pur_task_id" Text="添加物料" MultiSelect="True"></aspxform:XDataBrowserButton>
+                                        <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" Width="70px" XDataSource="DataSource:SFDATA;TableName:v_proc_pur_task" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;plan_price:计划单价;pur_slnum:申购数量;pur_slnum_unit:申购单位;pur_stnum:基准数量;pur_stnum_unit:基准单位;sl_st_scale:转换比例;plan_arrival_time:计划到货时间;item_price:计划金额" DataMap="pur_task_id->SFDATA:proc_contract_task.pur_task_id" Text="添加物料" MultiSelect="True"></aspxform:XDataBrowserButton>
                                         <aspxform:XAddBlockButton id="XAddBlockButton1" runat="server" Text="新增" DataSource="SFDATA" TableName="proc_contract_task"></aspxform:XAddBlockButton>
                                     </td>
                                 </tr>

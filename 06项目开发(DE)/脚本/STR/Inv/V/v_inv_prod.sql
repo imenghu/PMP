@@ -6,16 +6,24 @@ GO
 
 CREATE VIEW dbo.v_inv_prod
 AS
-WITH A AS (SELECT   depot_id, depot_name, mat_code, mat_name, mat_spec, in_stnum_unit, SUM(CONVERT(float, in_stnum)) 
-                                   AS in_stnum
-                   FROM      dbo.inv_prod_in
-                   GROUP BY depot_id, depot_name, mat_code, mat_name, mat_spec, in_stnum_unit), B AS
-    (SELECT   CompanyName, mat_code, SUM(CONVERT(float, out_stnum)) AS out_stnum
-     FROM      dbo.inv_prod_out
-     GROUP BY mat_code, CompanyName)
-    SELECT   A_1.depot_id, A_1.depot_name, A_1.mat_code, A_1.mat_name, A_1.mat_spec, A_1.in_stnum_unit, A_1.in_stnum, 
-                    B_1.CompanyName, B_1.out_stnum, A_1.in_stnum - ISNULL(B_1.out_stnum, 0) AS invnum
-    FROM      A AS A_1 LEFT OUTER JOIN
-                    B AS B_1 ON A_1.mat_code = B_1.mat_code
+WITH A AS (SELECT   Company, CompanyName, depot_id, depot_name, mat_code, - SUM(CONVERT(float, out_stnum)) 
+                                   AS out_stnum
+                   FROM      dbo.inv_prod_out
+                   GROUP BY CompanyName, Company, depot_id, depot_name, mat_code), B AS
+    (SELECT   Company, CompanyName, depot_id, depot_name, mat_code, SUM(CONVERT(float, in_stnum)) AS out_stnum
+     FROM      dbo.inv_prod_in
+     GROUP BY Company, CompanyName, depot_id, depot_name, mat_code), C AS
+    (SELECT   Company, CompanyName, depot_id, depot_name, mat_code, out_stnum
+     FROM      A AS A_1
+     UNION
+     SELECT   Company, CompanyName, depot_id, depot_name, mat_code, out_stnum
+     FROM      B AS B_1), D AS
+    (SELECT   Company, CompanyName, depot_id, depot_name, mat_code, SUM(out_stnum) AS invnum
+     FROM      C AS C_1
+     GROUP BY Company, CompanyName, depot_id, depot_name, mat_code)
+    SELECT   D_1.Company, D_1.CompanyName, D_1.depot_id, D_1.depot_name, D_1.mat_code, D_1.invnum, 
+                    dbo.ctl_material.mat_name, dbo.ctl_material.mat_spec, dbo.ctl_material.base_unit
+    FROM      D AS D_1 INNER JOIN
+                    dbo.ctl_material ON D_1.mat_code = dbo.ctl_material.mat_code
 
 GO

@@ -30,6 +30,10 @@ CREATE TABLE dbo.prod_report4
   Dept varchar(50) null ,
   CreateUser varchar(50) null ,
   CreateUserName varchar(50) null ,
+  Australian_malt nvarchar(60) null ,
+  Tannin_kg nvarchar(60) null ,
+  carrageenan_kg nvarchar(60) null ,
+  imported_fragrant_kg nvarchar(60) null ,
   CONSTRAINT PK_prod_report4 PRIMARY KEY  CLUSTERED
   (
     report_id

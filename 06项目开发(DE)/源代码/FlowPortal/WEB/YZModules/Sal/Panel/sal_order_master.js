@@ -73,10 +73,7 @@
                         header: '收货人电话', dataIndex: 'consignee_tel', width: 100, align: 'left', sortable: true
                     },
                     {
-                        header: '总金额', dataIndex: 'total_price', width: 100, align: 'left', sortable: true
-                    },
-                    {
-                        header: '已付款金额', dataIndex: 'pay_price', width: 100, align: 'left', sortable: true
+                        header: '订单金额', dataIndex: 'total_price', width: 100, align: 'left', sortable: true
                     },
                     {
                         header: '销售姓名', dataIndex: 'salesman_name', width: 100, align: 'left', sortable: true
@@ -109,6 +106,7 @@
         me.btnNew = Ext.create('Ext.button.Button', {
             text: '新增',
             glyph: 0xe61d,
+            disabled: !config.perm['New'],
             handler: function () {
                 me.addNew();
             }
@@ -120,8 +118,9 @@
             text: '删除',
             glyph: 0xe64d,
             sm: me.grid.getSelectionModel(),
+            perm: 'Delete',
             updateStatus: function () {
-                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(null, me.grid, '', 1, -1));
+                this.setDisabled(!YZSoft.UIHelper.IsOptEnable(me, me.grid, this.perm, 1, -1));
             },
             handler: function () {
                 me.deleteSelection();

@@ -185,15 +185,15 @@
             </tbody>
         </table>
         <br />
-        <table width="456" align="center" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
+        <table width="450" align="center" border="0" cellspacing="0" cellpadding="0" hiddenexpress="1">
             <tbody>
                 <tr>
-                    <td width="152" height="34">
+                    <td width="150" height="34">
                         到货通知主键</td>
-                    <td width="153">
+                    <td width="152">
                         <aspxform:XTextBox id="xtxtPurTaskId" runat="server" XDataBind="SFDATA:inv_in_detail.arrival_notice_id" BorderColor="#DCDCDC" width="100%" DataMap="vendor_id->SFDATA:inv_in_detail.vendor_id;vendor_name->SFDATA:inv_in_detail.vendor_name;mat_code->SFDATA:inv_in_detail.mat_code;mat_name->SFDATA:inv_in_detail.mat_name;mat_spesc->SFDATA:inv_in_detail.mat_spesc;arrival_slnum->SFDATA:inv_in_detail.plan_in_slnum;arrival_slnum_unit->SFDATA:inv_in_detail.in_slnum_unit;arrival_stnum_unit->SFDATA:inv_in_detail.in_stnum_unit;sl_st_scale->SFDATA:inv_in_detail.sl_st_scale;arrival_username->varstorename;arrival_usertel->varstoretel;if_tests->SFDATA:inv_in_detail.if_tests" ValueToDisplayText="DataSource:SFDATA;TableName:proc_arrival_notice;FilterColumn:arrival_notice_id;DisplayColumn:arrival_notice_id"></aspxform:XTextBox>
                     </td>
-                    <td width="151">
+                    <td width="148">
                     </td>
                 </tr>
                 <tr>
@@ -224,7 +224,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td height="34">
                         入库化验</td>
                     <td>
                         <aspxform:XTextBox id="XTextBox17" runat="server" XDataBind="varTestsClass" BorderColor="#DCDCDC" width="100%" BorderWidth="1">入库化验</aspxform:XTextBox>
@@ -233,7 +233,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td height="34">
                         varState</td>
                     <td>
                         <aspxform:XTextBox id="XTextBox18" runat="server" XDataBind="varState" BorderColor="#DCDCDC" width="100%" BorderWidth="1">1</aspxform:XTextBox>
@@ -242,7 +242,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td height="34">
                         Company</td>
                     <td>
                         <aspxform:XTextBox id="XTextBox19" runat="server" XDataBind="SFDATA:inv_in_detail.Company" BorderColor="#DCDCDC" width="100%" BorderWidth="1"></aspxform:XTextBox>
@@ -252,6 +252,15 @@
                 </tr>
                 <tr>
                     <td>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" DisableExpress="SFDATA:inv_in_detail.if_tests==0" Display="None" ForeColor="Red" ErrorMessage="化验结果不能为空" ControlToValidate="XDropDownList3">化验结果</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                        不化验不验证</td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="34">
                         <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="入库数量不能为空" ControlToValidate="XTextBox13">入库数量必填</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
@@ -260,7 +269,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td height="34">
                         <aspxform:XCompareValidator id="XCompareValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="入库数量不能超过到货数量" ControlToValidate="XTextBox13" ValueToCompareExpress="SFDATA:inv_in_detail.plan_in_slnum" Operator="LessThanEqual">入库数量限制</aspxform:XCompareValidator>
                     </td>
                     <td>
@@ -269,7 +278,16 @@
                     </td>
                 </tr>
                 <tr>
+                    <td height="34">
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" Display="None" ForeColor="Red" ErrorMessage="基准数量不能为空" ControlToValidate="XTextBox14">基准数量</aspxform:XRequiredFieldValidator>
+                    </td>
                     <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="34">
                         <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择仓库" ControlToValidate="XDropDownList1">仓库</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>

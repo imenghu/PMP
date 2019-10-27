@@ -96,7 +96,7 @@ Ext.define('2020.src.SFPortal', {
 
                 me.btnTask = Ext.create('Ext.button.Button', {
                     cls: 'yz-btn-portal-title yz-size-icon-22 yz-btn-messageindicator-task',
-                    glyph: 0xeaa7,
+                    glyph: 0xe651,
                     margin: '0 20 0 0',
                     badgeText: userInfo.TaskCount,
                     handler: function () {

@@ -3,7 +3,33 @@ Ext.define('2020.src.SFBIPortal', {
     extend: '2020.src.Abstract',
     requires: [
         'YZSoft.src.ux.Push',
-        'YZSoft.src.ux.Badge'
+        'YZSoft.src.ux.Badge',
+        'YZSoft.src.component.Headshort',
+        'YZSoft.src.tip.UserTip',
+        'YZSoft.src.button.UseEMIP',
+        'YZSoft.src.button.Language',
+        'YZSoft.src.button.SigninUser',
+        'YZSoft.frame.tab.Navigator',
+        'YZSoft.frame.tab.Base',
+        'YZSoft.src.tab.Panel',
+        'YZSoft.frame.module.Container',
+        'YZSoft.src.container.ModuleContainer',
+        'YZSoft.frame.app.Classic',
+        'YZSoft.frame.app.Abstract',
+        'YZSoft.frame.navigator.Classic',
+        'YZSoft.frame.tab.Module',
+        'YZSoft.bpm.worklist.Panel',
+        'YZSoft.bpm.src.panel.WorklistAbstract',
+        'YZSoft.bpm.src.panel.StepAbstract',
+        'YZSoft.bpm.src.ux.FormManager',
+        'YZSoft.src.ux.WindowManager',
+        'YZSoft.bpm.taskoperation.Manager',
+        'YZSoft.bpm.src.ux.Render',
+        'YZSoft.bpm.src.model.Worklist',
+        'YZSoft.src.button.Button',
+        'YZSoft.src.menu.Item',
+        'YZSoft.src.form.field.Search',
+        'YZSoft.src.sts'
     ],
 
     launch: function () {
@@ -95,7 +121,7 @@ Ext.define('2020.src.SFBIPortal', {
 
                 me.btnTask = Ext.create('Ext.button.Button', {
                     cls: 'yz-btn-portal-title yz-size-icon-22 yz-btn-messageindicator-task',
-                    glyph: 0xeaa7,
+                    glyph: 0xe651,
                     margin: '0 20 0 0',
                     badgeText: userInfo.TaskCount,
                     handler: function () {

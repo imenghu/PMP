@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-18T17:06:51.9275515+08:00",
+  "generateAt": "2019-10-26T11:58:17.574334+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {
@@ -12,10 +12,10 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.vendor_name",
+          "bordercolor": "#DCDCDC",
           "width": "80%",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "SFDATA:proc_arrival_notice.vendor_name",
+          "disableexpress": "1"
         }
       },
       "XDataBrowserButton1": {
@@ -23,10 +23,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "width": "21px",
-          "datamap": "vendor_id->SFDATA:proc_arrival_notice.vendor_id;vendor_name->SFDATA:proc_arrival_notice.vendor_name",
+          "displaycolumns": "vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_vendor",
-          "displaycolumns": "vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址"
+          "datamap": "vendor_id->SFDATA:proc_arrival_notice.vendor_id;vendor_name->SFDATA:proc_arrival_notice.vendor_name",
+          "width": "21px"
         }
       },
       "XDropDownList1": {
@@ -59,10 +59,10 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.mat_code",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.mat_code",
+          "disableexpress": "1",
           "disablebehavior": "ReadOnly"
         }
       },
@@ -71,10 +71,10 @@
         "attrs": {
           "id": "XTextBox10",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.mat_name",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.mat_name",
+          "disableexpress": "1",
           "disablebehavior": "ReadOnly"
         }
       },
@@ -83,10 +83,10 @@
         "attrs": {
           "id": "XTextBox11",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.mat_spesc",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.mat_spesc",
+          "disableexpress": "1",
           "disablebehavior": "ReadOnly"
         }
       },
@@ -95,9 +95,9 @@
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_arrival_notice.arrival_slnum",
+          "bordercolor": "#DCDCDC",
           "width": "100%",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_slnum"
         }
       },
       "XTextBox9": {
@@ -105,10 +105,10 @@
         "attrs": {
           "id": "XTextBox9",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.arrival_slnum_unit",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_slnum_unit",
+          "disableexpress": "1",
           "disablebehavior": "ReadOnly"
         }
       },
@@ -117,10 +117,10 @@
         "attrs": {
           "id": "XTextBox12",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.plan_price",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.plan_price",
+          "disableexpress": "1",
           "disablebehavior": "ReadOnly"
         }
       },
@@ -129,10 +129,10 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.arrival_stnum",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_stnum",
+          "disableexpress": "1",
           "disablebehavior": "ReadOnly"
         }
       },
@@ -141,10 +141,10 @@
         "attrs": {
           "id": "XTextBox8",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.arrival_stnum_unit",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_stnum_unit",
+          "disableexpress": "1",
           "disablebehavior": "ReadOnly"
         }
       },
@@ -153,10 +153,10 @@
         "attrs": {
           "id": "XTextBox13",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.sl_st_scale",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.sl_st_scale",
+          "disableexpress": "1",
           "disablebehavior": "ReadOnly"
         }
       },
@@ -165,8 +165,8 @@
         "attrs": {
           "id": "XDateTimePicker1",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_arrival_notice.plan_arrival_time",
-          "bordercolor": "#DCDCDC"
+          "bordercolor": "#DCDCDC",
+          "xdatabind": "SFDATA:proc_arrival_notice.plan_arrival_time"
         }
       },
       "XTextBox7": {
@@ -174,10 +174,10 @@
         "attrs": {
           "id": "XTextBox7",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.StoreUserName",
+          "bordercolor": "#DCDCDC",
           "width": "80%",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "SFDATA:proc_arrival_notice.StoreUserName",
+          "disableexpress": "1"
         }
       },
       "XSelectUserButton1": {
@@ -185,8 +185,8 @@
         "attrs": {
           "id": "XSelectUserButton1",
           "runat": "server",
-          "width": "21px",
-          "datamap": "Account->SFDATA:proc_arrival_notice.StoreUser;DisplayName->SFDATA:proc_arrival_notice.StoreUserName"
+          "datamap": "Account->SFDATA:proc_arrival_notice.StoreUser;DisplayName->SFDATA:proc_arrival_notice.StoreUserName",
+          "width": "21px"
         }
       },
       "XTextBox14": {
@@ -194,9 +194,9 @@
         "attrs": {
           "id": "XTextBox14",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_arrival_notice.plan_arrival_price",
+          "bordercolor": "#DCDCDC",
           "width": "100%",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "SFDATA:proc_arrival_notice.plan_arrival_price"
         }
       },
       "XTextBox5": {
@@ -204,9 +204,9 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_arrival_notice.arrival_username",
+          "bordercolor": "#DCDCDC",
           "width": "100%",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_username"
         }
       },
       "XTextBox6": {
@@ -214,9 +214,9 @@
         "attrs": {
           "id": "XTextBox6",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_arrival_notice.arrival_usertel",
+          "bordercolor": "#DCDCDC",
           "width": "100%",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "SFDATA:proc_arrival_notice.arrival_usertel"
         }
       },
       "XTextBox19": {
@@ -224,9 +224,9 @@
         "attrs": {
           "id": "XTextBox19",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_tests.vendor_id",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_tests.vendor_id",
           "borderwidth": "1"
         }
       },
@@ -238,10 +238,10 @@
           "border": "0",
           "cellspacing": "0",
           "cellpadding": "0",
-          "dynamicarea": "2,1",
-          "emptygrid": "KeepEmpty",
-          "xdatasource": "DataSource:SFDATA;TableName:proc_pur_task;Filter:pur_task_id->varpurtaskid",
           "hiddenexpress": "1",
+          "xdatasource": "DataSource:SFDATA;TableName:proc_pur_task;Filter:pur_task_id->varpurtaskid",
+          "emptygrid": "KeepEmpty",
+          "dynamicarea": "2,1",
           "id": "table1"
         },
         "ctypeorg": "table",
@@ -261,10 +261,10 @@
           "border": "0",
           "cellspacing": "0",
           "cellpadding": "0",
-          "dynamicarea": "2,1",
-          "emptygrid": "KeepEmpty",
-          "xdatasource": "DataSource:SFDATA;TableName:proc_pur_task;Filter:pur_task_id->varpurtaskid",
           "hiddenexpress": "1",
+          "xdatasource": "DataSource:SFDATA;TableName:proc_pur_task;Filter:pur_task_id->varpurtaskid",
+          "emptygrid": "KeepEmpty",
+          "dynamicarea": "2,1",
           "id": "table1"
         },
         "ctypeorg": "table",
@@ -277,9 +277,9 @@
         "attrs": {
           "id": "XTextBox15",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_arrival_notice.notice_state",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.notice_state",
           "innerhtml": "0"
         }
       },
@@ -288,9 +288,9 @@
         "attrs": {
           "id": "xtxtPurTaskId",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_arrival_notice.pur_task_id",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.pur_task_id",
           "datamap": "mat_code->SFDATA:proc_arrival_notice.mat_code;mat_name->SFDATA:proc_arrival_notice.mat_name;mat_spec->SFDATA:proc_arrival_notice.mat_spesc;plan_price->SFDATA:proc_arrival_notice.plan_price;pur_slnum->SFDATA:proc_arrival_notice.arrival_slnum;pur_slnum_unit->SFDATA:proc_arrival_notice.arrival_slnum_unit;pur_stnum->SFDATA:proc_arrival_notice.arrival_stnum;pur_stnum_unit->SFDATA:proc_arrival_notice.arrival_stnum_unit;sl_st_scale->SFDATA:proc_arrival_notice.sl_st_scale",
           "valuetodisplaytext": "DataSource:SFDATA;TableName:proc_pur_task;FilterColumn:pur_task_id;DisplayColumn:pur_task_id"
         }
@@ -300,9 +300,9 @@
         "attrs": {
           "id": "XTextBox16",
           "runat": "server",
-          "xdatabind": "SFDATA:proc_arrival_notice.vendor_id",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "SFDATA:proc_arrival_notice.vendor_id",
           "borderwidth": "1"
         }
       },
@@ -311,10 +311,10 @@
         "attrs": {
           "id": "XTextBox17",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:proc_arrival_notice.StoreUser",
+          "bordercolor": "#DCDCDC",
           "width": "80%",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "SFDATA:proc_arrival_notice.StoreUser",
+          "disableexpress": "1"
         }
       },
       "XTextBox18": {
@@ -322,9 +322,9 @@
         "attrs": {
           "id": "XTextBox18",
           "runat": "server",
-          "xdatabind": "varpurtaskid",
-          "width": "100%",
           "bordercolor": "#DCDCDC",
+          "width": "100%",
+          "xdatabind": "varpurtaskid",
           "borderwidth": "1",
           "express": "javascript('getTaskId',SFDATA:proc_arrival_notice.if_tests,SFDATA:proc_arrival_notice.pur_task_id)"
         }
@@ -350,7 +350,32 @@
         ]
       }
     },
-    "validators": {},
+    "validators": {
+      "XRequiredFieldValidator1": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator1",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择供应商",
+          "controltovalidate": "XTextBox1",
+          "innerhtml": "供应商名称"
+        }
+      },
+      "XRequiredFieldValidator2": {
+        "ctype": "aspxform:xrequiredfieldvalidator",
+        "attrs": {
+          "id": "XRequiredFieldValidator2",
+          "runat": "server",
+          "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择接货人",
+          "controltovalidate": "XTextBox7",
+          "innerhtml": "接货人"
+        }
+      }
+    },
     "items": [
       "XTextBox1",
       "XDataBrowserButton1",

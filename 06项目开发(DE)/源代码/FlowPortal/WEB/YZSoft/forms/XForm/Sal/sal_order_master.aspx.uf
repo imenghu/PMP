@@ -1,9 +1,9 @@
 ﻿{
-  "generateAt": "2019-10-22T15:02:28.9626757+08:00",
+  "generateAt": "2019-10-25T11:23:09.1423158+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {
-      "getAreaName": "function (val){\r\n            return val=val.substring(val.indexOf('('),val.indexOf(')'));\r\n        }"
+      "onselectechanged": "function (el){\r\n            debugger;\r\n            var ckbox=Ext.get(el).getParent().down('input').dom;\r\n            if(ckbox.value=='on'){\r\n                var txtprice=Ext.get(Ext.get(el).getParent().getParent().dom.children[6]);\r\n                var price=txtprice.down('.yz-xform-field-ele').dom;\r\n                price.value=0;\r\n                XFormOnChange(price);\r\n            }\r\n            //var txtid=Ext.get('tbVendorId').down('.yz-xform-field-ele').dom;\r\n            //txtid.value=ckbox.value;\r\n            //XFormOnChange(document.getElementById('tbVendorId'));\r\n        }"
     },
     "components": {
       "ctrlsal_order_mastersale_order": {
@@ -11,10 +11,10 @@
         "attrs": {
           "id": "ctrlsal_order_mastersale_order",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.sale_order",
           "fieldname": "订单号",
+          "xdatabind": "SFDATA:sal_order_master.sale_order",
+          "width": "100%",
+          "disableexpress": "1",
           "innerhtml": "自动生成"
         }
       },
@@ -23,10 +23,10 @@
         "attrs": {
           "id": "ctrlsal_order_masterdealer_name",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "80%",
+          "fieldname": "经销商名称",
           "xdatabind": "SFDATA:sal_order_master.dealer_name",
-          "fieldname": "经销商名称"
+          "width": "170px",
+          "disableexpress": "1"
         }
       },
       "XDataBrowserButton1": {
@@ -34,96 +34,23 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "datamap": "dealer_id->SFDATA:sal_order_master.dealer_id;dealer_name->SFDATA:sal_order_master.dealer_name;dealer_contact->SFDATA:sal_order_master.consignee_name;dealer_tel->SFDATA:sal_order_master.consignee_tel;dealer_addr->SFDATA:sal_order_master.consignee_addr",
-          "displaycolumns": "dealer_name:经销商名称;dealer_contact:联系人;dealer_tel:联系电话;dealer_addr:地址",
+          "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_dealer",
-          "width": "21px"
+          "displaycolumns": "dealer_name:经销商名称;dealer_contact:联系人;dealer_tel:联系电话;dealer_addr:地址",
+          "datamap": "dealer_id->SFDATA:sal_order_master.dealer_id;dealer_name->SFDATA:sal_order_master.dealer_name;dealer_contact->SFDATA:sal_order_master.consignee_name;dealer_tel->SFDATA:sal_order_master.consignee_tel;dealer_addr->SFDATA:sal_order_master.consignee_addr",
+          "hiddenexpress": "Global.StepName!='开始'"
         }
       },
-      "ctrlsal_order_masterpay_price": {
+      "XTextBox15": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlsal_order_masterpay_price",
+          "id": "XTextBox15",
           "runat": "server",
+          "fieldname": "纳税人登记号",
+          "xdatabind": "vartaxno",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.pay_price",
-          "fieldname": "已付款金额"
-        }
-      },
-      "ctrlsal_order_masterconsignee_name": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlsal_order_masterconsignee_name",
-          "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.consignee_name",
-          "fieldname": "收货人姓名"
-        }
-      },
-      "ctrlsal_order_masterconsignee_tel": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlsal_order_masterconsignee_tel",
-          "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.consignee_tel",
-          "fieldname": "收货人电话"
-        }
-      },
-      "ctrlsal_order_masterconsignee_addr": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlsal_order_masterconsignee_addr",
-          "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.consignee_addr",
-          "fieldname": "收货地址"
-        }
-      },
-      "ctrlsal_order_mastersalesman_name": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlsal_order_mastersalesman_name",
-          "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.salesman_name",
-          "fieldname": "销售员姓名",
-          "readonly": "True",
-          "valuetodisplaytext": ""
-        }
-      },
-      "ctrlsal_order_mastersalesman_tel": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlsal_order_mastersalesman_tel",
-          "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.salesman_tel",
-          "fieldname": "销售员电话",
-          "readonly": "True"
-        }
-      },
-      "ctrlsal_order_mastercreate_time": {
-        "ctype": "aspxform:xdatetimepicker",
-        "attrs": {
-          "id": "ctrlsal_order_mastercreate_time",
-          "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.create_time",
-          "fieldname": "订单时间"
-        }
-      },
-      "XTextBox1": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "XTextBox1",
-          "runat": "server",
           "disableexpress": "1",
-          "width": "100%",
-          "xdatabind": "vararea",
-          "fieldname": "销售区域",
-          "bordercolor": "#DCDCDC",
-          "express": "javascript('getAreaName',SFDATA:sal_order_master.DeptName)"
+          "bordercolor": "#DCDCDC"
         }
       },
       "XTextBox3": {
@@ -131,12 +58,12 @@
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "100%",
-          "xdatabind": "varprovice",
           "fieldname": "省",
-          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_area;FilterColumn:id;DisplayColumn:name",
-          "bordercolor": "#DCDCDC"
+          "xdatabind": "varprovince",
+          "width": "100%",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_area;FilterColumn:id;DisplayColumn:name"
         }
       },
       "XTextBox4": {
@@ -144,12 +71,125 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "100%",
-          "xdatabind": "varcity",
           "fieldname": "市",
-          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_area;FilterColumn:id;DisplayColumn:name",
+          "xdatabind": "varcity",
+          "width": "100%",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_area;FilterColumn:id;DisplayColumn:name"
+        }
+      },
+      "XTextBox1": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox1",
+          "runat": "server",
+          "fieldname": "销售大区",
+          "xdatabind": "vararea",
+          "width": "100%",
+          "disableexpress": "1",
           "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox16": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox16",
+          "runat": "server",
+          "fieldname": "法人",
+          "xdatabind": "varlegalperson",
+          "width": "100%",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox17": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox17",
+          "runat": "server",
+          "fieldname": "联系电话",
+          "xdatabind": "varphone",
+          "width": "100%",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "XTextBox18": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox18",
+          "runat": "server",
+          "fieldname": "注册地址",
+          "xdatabind": "varregisteraddr",
+          "width": "100%",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC"
+        }
+      },
+      "ctrlsal_order_masterconsignee_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlsal_order_masterconsignee_name",
+          "runat": "server",
+          "fieldname": "收货人姓名",
+          "xdatabind": "SFDATA:sal_order_master.consignee_name",
+          "width": "100%"
+        }
+      },
+      "ctrlsal_order_masterconsignee_tel": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlsal_order_masterconsignee_tel",
+          "runat": "server",
+          "fieldname": "收货人电话",
+          "xdatabind": "SFDATA:sal_order_master.consignee_tel",
+          "width": "100%"
+        }
+      },
+      "ctrlsal_order_masterconsignee_addr": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlsal_order_masterconsignee_addr",
+          "runat": "server",
+          "fieldname": "收货地址",
+          "xdatabind": "SFDATA:sal_order_master.consignee_addr",
+          "width": "100%"
+        }
+      },
+      "ctrlsal_order_mastersalesman_name": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlsal_order_mastersalesman_name",
+          "runat": "server",
+          "fieldname": "销售员姓名",
+          "xdatabind": "SFDATA:sal_order_master.salesman_name",
+          "width": "100%",
+          "valuetodisplaytext": "",
+          "readonly": "True"
+        }
+      },
+      "ctrlsal_order_mastersalesman_tel": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlsal_order_mastersalesman_tel",
+          "runat": "server",
+          "fieldname": "销售员电话",
+          "xdatabind": "SFDATA:sal_order_master.salesman_tel",
+          "width": "100%",
+          "readonly": "True"
+        }
+      },
+      "ctrlsal_order_masterpay_price": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlsal_order_masterpay_price",
+          "runat": "server",
+          "fieldname": "订单金额",
+          "xdatabind": "SFDATA:sal_order_master.total_price",
+          "width": "100%",
+          "disableexpress": "1",
+          "express": "sum(SFDATA:sal_order_detail.item_price)"
         }
       },
       "XAttachments1": {
@@ -157,11 +197,11 @@
         "attrs": {
           "id": "XAttachments1",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.Attachment",
           "fieldname": "附件",
-          "filetypes": "*.doc;*.docx;*.xls;*.xlsx;*.pdf;*.png;*.jpg;*.jpeg;*.gif",
-          "filetypesdescription": "Word,Excel,Pdf"
+          "xdatabind": "SFDATA:sal_order_master.Attachment",
+          "width": "100%",
+          "filetypesdescription": "Word,Excel,Pdf",
+          "filetypes": "*.doc;*.docx;*.xls;*.xlsx;*.pdf;*.png;*.jpg;*.jpeg;*.gif"
         }
       },
       "XTextBox2": {
@@ -169,13 +209,12 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.sales_remarks",
           "fieldname": "备注",
+          "xdatabind": "SFDATA:sal_order_master.sales_remarks",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
-          "rows": "5",
           "textmode": "MultiLine",
-          "borderwidth": "1"
+          "rows": "5"
         }
       },
       "XDataBrowserButton3": {
@@ -184,15 +223,27 @@
           "id": "XDataBrowserButton3",
           "runat": "server",
           "xclass": "YZSoft.Forms.Field.DataBrowserButton",
-          "datamap": "mat_id->SFDATA:sal_order_detail.mat_id;mat_code->SFDATA:sal_order_detail.mat_code;mat_name->SFDATA:sal_order_detail.mat_name;mat_spec->SFDATA:sal_order_detail.mat_spesc;base_unit->SFDATA:sal_order_detail.order_stnum_unit",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->var2,state->varState",
           "width": "70px",
-          "text": "选择物料",
-          "multiselect": "True",
-          "popupwndwidth": "-1",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->var2,state->varState",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "datamap": "mat_id->SFDATA:sal_order_detail.mat_id;mat_code->SFDATA:sal_order_detail.mat_code;mat_name->SFDATA:sal_order_detail.mat_name;mat_spec->SFDATA:sal_order_detail.mat_spesc;base_unit->SFDATA:sal_order_detail.order_stnum_unit",
+          "usesubmitbehavior": "False",
           "popupwndheight": "-1",
-          "usesubmitbehavior": "False"
+          "popupwndwidth": "-1",
+          "multiselect": "True",
+          "text": "选择物料",
+          "hiddenexpress": "Global.StepName!='开始'"
+        }
+      },
+      "XAddBlockButton1": {
+        "ctype": "aspxform:xaddblockbutton",
+        "attrs": {
+          "id": "XAddBlockButton1",
+          "runat": "server",
+          "text": "新增",
+          "datasource": "SFDATA",
+          "tablename": "sal_order_detail",
+          "hiddenexpress": "Global.StepName!='开始'"
         }
       },
       "ctrlsal_order_detailmat_name": {
@@ -200,10 +251,10 @@
         "attrs": {
           "id": "ctrlsal_order_detailmat_name",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "70px",
+          "fieldname": "物料名称",
           "xdatabind": "SFDATA:sal_order_detail.mat_name",
-          "fieldname": "物料名称"
+          "width": "70px",
+          "disableexpress": "1"
         }
       },
       "XDataBrowserButton2": {
@@ -211,10 +262,11 @@
         "attrs": {
           "id": "XDataBrowserButton2",
           "runat": "server",
-          "datamap": "mat_id->SFDATA:sal_order_detail.mat_id;mat_code->SFDATA:sal_order_detail.mat_code;mat_name->SFDATA:sal_order_detail.mat_name;mat_spec->SFDATA:sal_order_detail.mat_spesc;base_unit->SFDATA:sal_order_detail.order_stnum_unit",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "width": "21px",
           "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->var2,state->varState",
-          "width": "21px"
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
+          "datamap": "mat_id->SFDATA:sal_order_detail.mat_id;mat_code->SFDATA:sal_order_detail.mat_code;mat_name->SFDATA:sal_order_detail.mat_name;mat_spec->SFDATA:sal_order_detail.mat_spesc;base_unit->SFDATA:sal_order_detail.order_stnum_unit",
+          "hiddenexpress": "Global.StepName!='开始'"
         }
       },
       "ctrl_sal_order_detailmat_id": {
@@ -222,8 +274,8 @@
         "attrs": {
           "id": "ctrl_sal_order_detailmat_id",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_order_detail.mat_id",
+          "width": "100%",
           "hiddenexpress": "1"
         }
       },
@@ -232,10 +284,10 @@
         "attrs": {
           "id": "ctrlsal_order_detailmat_code",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "100%",
+          "fieldname": "物料编码",
           "xdatabind": "SFDATA:sal_order_detail.mat_code",
-          "fieldname": "物料编码"
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
       "ctrlsal_order_detailmat_spesc": {
@@ -243,10 +295,10 @@
         "attrs": {
           "id": "ctrlsal_order_detailmat_spesc",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "100%",
+          "fieldname": "规格",
           "xdatabind": "SFDATA:sal_order_detail.mat_spesc",
-          "fieldname": "规格"
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
       "ctrlsal_order_detailorder_stnum": {
@@ -255,9 +307,9 @@
           "id": "ctrlsal_order_detailorder_stnum",
           "style": "HEIGHT: 28px; WIDTH: 95px",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "数量",
           "xdatabind": "SFDATA:sal_order_detail.order_stnum",
-          "fieldname": "数量"
+          "width": "100%"
         }
       },
       "ctrlsal_order_detailorder_stnum_unit": {
@@ -265,10 +317,10 @@
         "attrs": {
           "id": "ctrlsal_order_detailorder_stnum_unit",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "100%",
+          "fieldname": "单位",
           "xdatabind": "SFDATA:sal_order_detail.order_stnum_unit",
-          "fieldname": "单位"
+          "width": "100%",
+          "disableexpress": "1"
         }
       },
       "XTextBox5": {
@@ -276,22 +328,10 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
-          "disableexpress": "1",
+          "fieldname": "单价",
+          "xdatabind": "SFDATA:sal_order_detail.Price",
           "width": "100%",
-          "xdatabind": "varstnum",
-          "fieldname": "体积",
-          "express": "SFDATA:sal_order_detail.order_stnum*varnum"
-        }
-      },
-      "XTextBox14": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "XTextBox14",
-          "runat": "server",
-          "xdatabind": "varnum",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1",
-          "hiddenexpress": "1"
+          "disableexpress": "SFDATA:sal_order_detail.IsFree"
         }
       },
       "XTextBox6": {
@@ -299,25 +339,21 @@
         "attrs": {
           "id": "XTextBox6",
           "runat": "server",
-          "disableexpress": "1",
-          "width": "100%",
-          "xdatabind": "varunit",
-          "fieldname": "单位",
-          "datamap": "numerator->varnum",
-          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_mat_unit;FilterColumn:mat_unit_id;DisplayColumn:mat_unit_name",
-          "innerhtml": "KL"
+          "fieldname": "税率",
+          "xdatabind": "SFDATA:sal_order_detail.TaxRate",
+          "width": "80px"
         }
       },
-      "XDropDownList1": {
-        "ctype": "aspxform:xdropdownlist",
+      "XTextBox14": {
+        "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "XDropDownList1",
+          "id": "XTextBox14",
           "runat": "server",
-          "datamap": "mat_unit_id->varunit",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:sal_order_detail.mat_id,mat_unit_name->varKL,if_base_unit->0,state->1",
-          "hiddenexpress": "1",
-          "displaycolumn": "mat_unit_name",
-          "valuecolumn": "mat_unit_id"
+          "fieldname": "税额",
+          "xdatabind": "SFDATA:sal_order_detail.TaxNum",
+          "width": "100%",
+          "disableexpress": "1",
+          "express": "SFDATA:sal_order_detail.item_price*SFDATA:sal_order_detail.TaxRate/100"
         }
       },
       "ctrlsal_order_detailitem_price": {
@@ -325,9 +361,21 @@
         "attrs": {
           "id": "ctrlsal_order_detailitem_price",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "合计",
           "xdatabind": "SFDATA:sal_order_detail.item_price",
-          "fieldname": "分项总金额"
+          "width": "100%",
+          "disableexpress": "1",
+          "express": "SFDATA:sal_order_detail.Price*SFDATA:sal_order_detail.order_stnum"
+        }
+      },
+      "XCheckBox1": {
+        "ctype": "aspxform:xcheckbox",
+        "attrs": {
+          "id": "XCheckBox1",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_order_detail.IsFree",
+          "width": "50px",
+          "onchange": "onselectechanged(this)"
         }
       },
       "ctrlsal_order_detailsales_remarks": {
@@ -335,15 +383,15 @@
         "attrs": {
           "id": "ctrlsal_order_detailsales_remarks",
           "runat": "server",
-          "width": "100%",
+          "fieldname": "备注",
           "xdatabind": "SFDATA:sal_order_detail.sales_remarks",
-          "fieldname": "备注"
+          "width": "100%"
         }
       },
       "table1": {
         "ctype": "grid",
         "attrs": {
-          "width": "960",
+          "width": "1050",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -362,10 +410,10 @@
           "ctrlsal_order_detailorder_stnum",
           "ctrlsal_order_detailorder_stnum_unit",
           "XTextBox5",
-          "XTextBox14",
           "XTextBox6",
-          "XDropDownList1",
+          "XTextBox14",
           "ctrlsal_order_detailitem_price",
+          "XCheckBox1",
           "ctrlsal_order_detailsales_remarks"
         ],
         "dynamicArea": {
@@ -378,8 +426,10 @@
         "attrs": {
           "id": "ctrlsal_order_masterdealer_id",
           "runat": "server",
+          "xdatabind": "SFDATA:sal_order_master.dealer_id",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.dealer_id"
+          "datamap": "province_id->varprovince;city_id->varcity;area->vararea;tax_cer_no->vartaxno;registration_address->varregisteraddr;legal_preson->varlegalperson;phone_number->varphone",
+          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_dealer;FilterColumn:dealer_id;DisplayColumn:dealer_id"
         }
       },
       "XTextBox12": {
@@ -387,22 +437,12 @@
         "attrs": {
           "id": "XTextBox12",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_order_master.CreateUser",
-          "datamap": "salesman_id->SFDATA:sal_order_master.salesman_id;province_id->varprovice;city_id->varcity;salesman_name->SFDATA:sal_order_master.salesman_name;salesman_tel->SFDATA:sal_order_master.salesman_tel",
-          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_salesman;FilterColumn:SalesmanAccount;DisplayColumn:SalesmanAccount",
-          "bordercolor": "#DCDCDC",
-          "borderwidth": "1"
-        }
-      },
-      "XTextBox13": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "XTextBox13",
-          "runat": "server",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_order_master.total_price",
-          "express": "sum(SFDATA:sal_order_detail.item_price)"
+          "datamap": "salesman_id->SFDATA:sal_order_master.salesman_id;salesman_name->SFDATA:sal_order_master.salesman_name;salesman_tel->SFDATA:sal_order_master.salesman_tel",
+          "bordercolor": "#DCDCDC",
+          "valuetodisplaytext": "DataSource:SFDATA;TableName:ctl_salesman;FilterColumn:SalesmanAccount;DisplayColumn:SalesmanAccount",
+          "borderwidth": "1"
         }
       },
       "XTextBox7": {
@@ -410,10 +450,10 @@
         "attrs": {
           "id": "XTextBox7",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_order_master.salesman_id",
-          "readonly": "True",
-          "valuetodisplaytext": ""
+          "width": "100%",
+          "valuetodisplaytext": "",
+          "readonly": "True"
         }
       },
       "XTextBox8": {
@@ -421,8 +461,8 @@
         "attrs": {
           "id": "XTextBox8",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_order_master.DeptName",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1"
         }
@@ -432,8 +472,8 @@
         "attrs": {
           "id": "XTextBox9",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "varKL",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "innerhtml": "KL"
@@ -444,8 +484,8 @@
         "attrs": {
           "id": "XTextBox10",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "varState",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "innerhtml": "1"
@@ -456,8 +496,8 @@
         "attrs": {
           "id": "XTextBox11",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "var2",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "innerhtml": "2"
@@ -466,7 +506,7 @@
       "table2": {
         "ctype": "wrap",
         "attrs": {
-          "width": "793",
+          "width": "786",
           "align": "center",
           "style": "BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none",
           "border": "0",
@@ -479,7 +519,6 @@
         "items": [
           "ctrlsal_order_masterdealer_id",
           "XTextBox12",
-          "XTextBox13",
           "XTextBox7",
           "XTextBox8",
           "XTextBox9",
@@ -494,10 +533,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator2",
           "runat": "server",
-          "controltovalidate": "ctrlsal_order_detailmat_name",
-          "errormessage": "请选择物料",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择物料",
+          "controltovalidate": "ctrlsal_order_detailmat_name",
           "innerhtml": "物料名称"
         }
       },
@@ -506,10 +545,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator3",
           "runat": "server",
-          "controltovalidate": "ctrlsal_order_detailorder_stnum",
-          "errormessage": "请填写数量",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写数量",
+          "controltovalidate": "ctrlsal_order_detailorder_stnum",
           "innerhtml": "数量"
         }
       },
@@ -518,11 +557,11 @@
         "attrs": {
           "id": "XRequiredFieldValidator4",
           "runat": "server",
-          "controltovalidate": "ctrlsal_order_detailitem_price",
-          "errormessage": "请填写分项总金额",
-          "forecolor": "Red",
           "display": "None",
-          "innerhtml": "分项总金额"
+          "forecolor": "Red",
+          "errormessage": "请填写单价",
+          "controltovalidate": "XTextBox5",
+          "innerhtml": "单价"
         }
       },
       "XRequiredFieldValidator1": {
@@ -530,10 +569,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator1",
           "runat": "server",
-          "controltovalidate": "ctrlsal_order_masterdealer_name",
-          "errormessage": "请选择经销商",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择经销商",
+          "controltovalidate": "ctrlsal_order_masterdealer_name",
           "innerhtml": "经销商名称"
         }
       },
@@ -542,10 +581,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator5",
           "runat": "server",
-          "controltovalidate": "ctrlsal_order_masterpay_price",
-          "errormessage": "请填写已付款金额",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写已付款金额",
+          "controltovalidate": "ctrlsal_order_masterpay_price",
           "innerhtml": "已付款金额"
         }
       }
@@ -554,19 +593,23 @@
       "ctrlsal_order_mastersale_order",
       "ctrlsal_order_masterdealer_name",
       "XDataBrowserButton1",
-      "ctrlsal_order_masterpay_price",
+      "XTextBox15",
+      "XTextBox3",
+      "XTextBox4",
+      "XTextBox1",
+      "XTextBox16",
+      "XTextBox17",
+      "XTextBox18",
       "ctrlsal_order_masterconsignee_name",
       "ctrlsal_order_masterconsignee_tel",
       "ctrlsal_order_masterconsignee_addr",
       "ctrlsal_order_mastersalesman_name",
       "ctrlsal_order_mastersalesman_tel",
-      "ctrlsal_order_mastercreate_time",
-      "XTextBox1",
-      "XTextBox3",
-      "XTextBox4",
+      "ctrlsal_order_masterpay_price",
       "XAttachments1",
       "XTextBox2",
       "XDataBrowserButton3",
+      "XAddBlockButton1",
       "table1",
       "table2"
     ]

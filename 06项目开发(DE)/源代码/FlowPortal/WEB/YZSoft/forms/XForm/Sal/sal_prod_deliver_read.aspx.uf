@@ -1,62 +1,62 @@
 ﻿{
-  "generateAt": "2019-10-19T16:15:13.0199582+08:00",
+  "generateAt": "2019-10-24T20:02:21.6490792+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
     "components": {
-      "ctrlsal_prod_deliversale_order": {
+      "ctrlsal_deliver_detailssale_order": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlsal_prod_deliversale_order",
+          "id": "ctrlsal_deliver_detailssale_order",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_detail.order_master_id",
-          "readonly": "True",
+          "datamap": "dealer_name->varname",
           "valuetodisplaytext": "DataSource:SFDATA;TableName:sal_order_master;FilterColumn:order_master_id;DisplayColumn:sale_order",
-          "datamap": "dealer_name->varname"
+          "readonly": "True",
+          "xdatabind": "SFDATA:sal_order_detail.order_master_id",
+          "width": "100%"
         }
       },
-      "ctrlsal_prod_deliverconsignee_name": {
+      "ctrlsal_deliver_detailsconsignee_name": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlsal_prod_deliverconsignee_name",
+          "id": "ctrlsal_deliver_detailsconsignee_name",
           "runat": "server",
-          "width": "100%",
+          "readonly": "True",
           "xdatabind": "varname",
-          "readonly": "True",
-          "hiddeninput": "False",
-          "disableexpress": "1"
-        }
-      },
-      "ctrlsal_prod_delivermat_code": {
-        "ctype": "aspxform:xtextbox",
-        "attrs": {
-          "id": "ctrlsal_prod_delivermat_code",
-          "runat": "server",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_order_detail.mat_name",
-          "readonly": "True",
+          "disableexpress": "1",
           "hiddeninput": "False"
         }
       },
-      "ctrlsal_prod_delivermat_name": {
+      "ctrlsal_deliver_detailsmat_code": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlsal_prod_delivermat_name",
+          "id": "ctrlsal_deliver_detailsmat_code",
           "runat": "server",
-          "width": "100%",
+          "readonly": "True",
           "xdatabind": "SFDATA:sal_order_detail.mat_name",
-          "readonly": "True"
+          "width": "100%",
+          "hiddeninput": "False"
         }
       },
-      "ctrlsal_prod_delivermat_spesc": {
+      "ctrlsal_deliver_detailsmat_name": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlsal_prod_delivermat_spesc",
+          "id": "ctrlsal_deliver_detailsmat_name",
           "runat": "server",
-          "width": "100%",
+          "readonly": "True",
+          "xdatabind": "SFDATA:sal_order_detail.mat_name",
+          "width": "100%"
+        }
+      },
+      "ctrlsal_deliver_detailsmat_spesc": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "ctrlsal_deliver_detailsmat_spesc",
+          "runat": "server",
+          "readonly": "True",
           "xdatabind": "SFDATA:sal_order_detail.mat_spesc",
-          "readonly": "True"
+          "width": "100%"
         }
       },
       "XTextBox9": {
@@ -64,23 +64,31 @@
         "attrs": {
           "id": "XTextBox9",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:sal_order_detail.order_stnum",
           "readonly": "True",
+          "xdatabind": "SFDATA:sal_order_detail.order_stnum",
+          "width": "100%",
           "hiddeninput": "False",
-          "borderstyle": "None",
+          "bordercolor": "#DCDCDC",
           "borderwidth": "1",
-          "bordercolor": "#DCDCDC"
+          "borderstyle": "None"
         }
       },
-      "ctrlsal_prod_deliverdeliver_stnum_unit": {
+      "ctrlsal_deliver_detailsdeliver_stnum_unit": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
-          "id": "ctrlsal_prod_deliverdeliver_stnum_unit",
+          "id": "ctrlsal_deliver_detailsdeliver_stnum_unit",
           "runat": "server",
-          "width": "100%",
+          "readonly": "True",
           "xdatabind": "SFDATA:sal_order_detail.order_stnum_unit",
-          "readonly": "True"
+          "width": "100%"
+        }
+      },
+      "XCheckBox1": {
+        "ctype": "aspxform:xcheckbox",
+        "attrs": {
+          "id": "XCheckBox1",
+          "runat": "server",
+          "xdatabind": "SFDATA:sal_order_detail.IsFree"
         }
       },
       "XTextBox1": {
@@ -88,13 +96,13 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_order_detail.sales_remarks",
-          "borderstyle": "None",
-          "borderwidth": "1",
+          "width": "100%",
           "bordercolor": "#DCDCDC",
-          "rows": "3",
-          "textmode": "MultiLine"
+          "borderwidth": "1",
+          "borderstyle": "None",
+          "textmode": "MultiLine",
+          "rows": "3"
         }
       },
       "XTextBox2": {
@@ -102,12 +110,12 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.deliver_stnum",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_prod_deliver.deliver_stnum",
-          "borderstyle": "None",
-          "borderwidth": "1",
+          "disableexpress": "1",
           "bordercolor": "#DCDCDC",
-          "disableexpress": "1"
+          "borderwidth": "1",
+          "borderstyle": "None"
         }
       },
       "XTextBox3": {
@@ -115,12 +123,12 @@
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.deliver_stnum_unit",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_prod_deliver.deliver_stnum_unit",
-          "borderstyle": "None",
-          "borderwidth": "1",
+          "disableexpress": "1",
           "bordercolor": "#DCDCDC",
-          "disableexpress": "1"
+          "borderwidth": "1",
+          "borderstyle": "None"
         }
       },
       "XTextBox4": {
@@ -128,12 +136,12 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.trans_name",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_prod_deliver.trans_name",
-          "borderstyle": "None",
-          "borderwidth": "1",
+          "disableexpress": "1",
           "bordercolor": "#DCDCDC",
-          "disableexpress": "1"
+          "borderwidth": "1",
+          "borderstyle": "None"
         }
       },
       "XTextBox5": {
@@ -141,12 +149,12 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.trans_mobile",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_prod_deliver.trans_mobile",
-          "borderstyle": "None",
-          "borderwidth": "1",
+          "disableexpress": "1",
           "bordercolor": "#DCDCDC",
-          "disableexpress": "1"
+          "borderwidth": "1",
+          "borderstyle": "None"
         }
       },
       "XTextBox6": {
@@ -154,12 +162,12 @@
         "attrs": {
           "id": "XTextBox6",
           "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.plate_number",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_prod_deliver.plate_number",
-          "borderstyle": "None",
-          "borderwidth": "1",
+          "disableexpress": "1",
           "bordercolor": "#DCDCDC",
-          "disableexpress": "1"
+          "borderwidth": "1",
+          "borderstyle": "None"
         }
       },
       "XTextBox7": {
@@ -167,12 +175,12 @@
         "attrs": {
           "id": "XTextBox7",
           "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.deliver_date",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_prod_deliver.deliver_time",
-          "borderstyle": "None",
-          "borderwidth": "1",
+          "disableexpress": "1",
           "bordercolor": "#DCDCDC",
-          "disableexpress": "1"
+          "borderwidth": "1",
+          "borderstyle": "None"
         }
       },
       "XTextBox8": {
@@ -180,12 +188,12 @@
         "attrs": {
           "id": "XTextBox8",
           "runat": "server",
+          "xdatabind": "SFDATA:sal_deliver_details.summary",
           "width": "100%",
-          "xdatabind": "SFDATA:sal_prod_deliver.deliver_remarks",
-          "borderstyle": "None",
-          "borderwidth": "1",
+          "disableexpress": "1",
           "bordercolor": "#DCDCDC",
-          "disableexpress": "1"
+          "borderwidth": "1",
+          "borderstyle": "None"
         }
       },
       "table1": {
@@ -233,13 +241,14 @@
     },
     "validators": {},
     "items": [
-      "ctrlsal_prod_deliversale_order",
-      "ctrlsal_prod_deliverconsignee_name",
-      "ctrlsal_prod_delivermat_code",
-      "ctrlsal_prod_delivermat_name",
-      "ctrlsal_prod_delivermat_spesc",
+      "ctrlsal_deliver_detailssale_order",
+      "ctrlsal_deliver_detailsconsignee_name",
+      "ctrlsal_deliver_detailsmat_code",
+      "ctrlsal_deliver_detailsmat_name",
+      "ctrlsal_deliver_detailsmat_spesc",
       "XTextBox9",
-      "ctrlsal_prod_deliverdeliver_stnum_unit",
+      "ctrlsal_deliver_detailsdeliver_stnum_unit",
+      "XCheckBox1",
       "XTextBox1",
       "table1",
       "table2"

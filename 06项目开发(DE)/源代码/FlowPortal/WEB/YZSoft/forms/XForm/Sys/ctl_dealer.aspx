@@ -32,25 +32,31 @@ $Scripts-->
         <table width="960" align="center" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" border="0" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
-                    <td width="100" height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td width="101" height="34" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         省 
                     </td>
-                    <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td width="215" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:ctl_dealer.province_id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1" ValueColumn="id" DisplayColumn="name" PromptText="--请选择--"></aspxform:XDropDownList>
                     </td>
-                    <td width="100" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td width="101" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         市 
                     </td>
-                    <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td width="215" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:ctl_dealer.city_id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_dealer.province_id" ValueColumn="id" DisplayColumn="name" PromptText="--请选择--"></aspxform:XDropDownList>
                     </td>
-                    <td width="100" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        &nbsp;</td>
-                    <td width="214" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td width="101" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        &nbsp;销售大区</td>
+                    <td width="215" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="XTextBox6" runat="server" XDataBind="SFDATA:ctl_dealer.area" width="100%"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        经销商编码</td>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="XTextBox8" runat="server" XDataBind="SFDATA:ctl_dealer.dealer_code" width="100%"></aspxform:XTextBox>
+                    </td>
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         经销商名称</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlctl_dealerdealer_name" runat="server" XDataBind="SFDATA:ctl_dealer.dealer_name" width="100%"></aspxform:XTextBox>
@@ -60,9 +66,22 @@ $Scripts-->
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlctl_dealertax_cer_no" runat="server" XDataBind="SFDATA:ctl_dealer.tax_cer_no" width="100%"></aspxform:XTextBox>
                     </td>
+                </tr>
+                <tr>
+                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        法人</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="XTextBox5" runat="server" XDataBind="SFDATA:ctl_dealer.legal_preson" width="100%"></aspxform:XTextBox>
                     </td>
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        联系电话</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="XTextBox7" runat="server" XDataBind="SFDATA:ctl_dealer.phone_number" width="100%"></aspxform:XTextBox>
+                    </td>
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        注册地址</td>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="XTextBox4" runat="server" XDataBind="SFDATA:ctl_dealer.registration_address" width="100%" Rows="1"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -105,14 +124,18 @@ $Scripts-->
                 </tr>
                 <tr>
                     <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        地址 
+                        账户名称</td>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        <aspxform:XTextBox id="XTextBox9" runat="server" XDataBind="SFDATA:ctl_dealer.payment_account" width="100%" BorderColor="#DCDCDC"></aspxform:XTextBox>
                     </td>
-                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
-                        <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="SFDATA:ctl_dealer.dealer_addr" width="100%" Rows="5" TextMode="MultiLine"></aspxform:XTextBox>
+                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                        收货地址</td>
+                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="3">
+                        <aspxform:XTextBox id="XTextBox1" runat="server" XDataBind="SFDATA:ctl_dealer.dealer_addr" width="100%" Rows="1"></aspxform:XTextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td height="82" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         备注</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
                         <aspxform:XTextBox id="ctrlctl_dealerdealer_remarks" runat="server" XDataBind="SFDATA:ctl_dealer.dealer_remarks" width="100%" Rows="5" TextMode="MultiLine"></aspxform:XTextBox>

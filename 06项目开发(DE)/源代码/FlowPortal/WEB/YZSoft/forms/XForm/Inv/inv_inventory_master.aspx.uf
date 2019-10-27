@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-18T11:09:21.8357776+08:00",
+  "generateAt": "2019-10-24T11:35:15.7028975+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,10 +9,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_masterCompanyName",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_master.CompanyName",
+          "fieldname": "盘点人公司",
           "width": "100%",
-          "fieldname": "盘点人公司"
+          "xdatabind": "SFDATA:inv_inventory_master.CompanyName",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_masterDeptName": {
@@ -20,10 +20,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_masterDeptName",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_master.DeptName",
+          "fieldname": "盘点人部门",
           "width": "100%",
-          "fieldname": "盘点人部门"
+          "xdatabind": "SFDATA:inv_inventory_master.DeptName",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_masterCreateUserName": {
@@ -31,10 +31,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_masterCreateUserName",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_master.CreateUserName",
+          "fieldname": "盘点人",
           "width": "100%",
-          "fieldname": "盘点人"
+          "xdatabind": "SFDATA:inv_inventory_master.CreateUserName",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_masterinv_master_time": {
@@ -42,9 +42,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_masterinv_master_time",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_master.inv_master_time",
+          "fieldname": "盘点时间",
           "width": "100%",
-          "fieldname": "盘点时间"
+          "xdatabind": "SFDATA:inv_inventory_master.inv_master_time"
         }
       },
       "ctrlinv_inventory_masterinv_master_year": {
@@ -52,10 +52,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_masterinv_master_year",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_master.inv_master_year",
+          "fieldname": "年",
           "width": "100%",
-          "fieldname": "年"
+          "xdatabind": "SFDATA:inv_inventory_master.inv_master_year",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_masterinv_master_month": {
@@ -63,10 +63,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_masterinv_master_month",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_master.inv_master_month",
+          "fieldname": "月",
           "width": "100%",
-          "fieldname": "月"
+          "xdatabind": "SFDATA:inv_inventory_master.inv_master_month",
+          "disableexpress": "1"
         }
       },
       "XDropDownList1": {
@@ -74,13 +74,13 @@
         "attrs": {
           "id": "XDropDownList1",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_master.depot_id",
           "fieldname": "盘点仓库 ",
-          "datamap": "depot_name->SFDATA:inv_inventory_master.depot_name",
-          "prompttext": "--请选择--",
-          "displaycolumn": "depot_name",
+          "xdatabind": "SFDATA:inv_inventory_master.depot_id",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot;Filter:state->varState,Company->SFDATA:inv_inventory_master.Company",
           "valuecolumn": "depot_id",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot;Filter:state->varState,Company->SFDATA:inv_inventory_master.Company"
+          "displaycolumn": "depot_name",
+          "prompttext": "--请选择--",
+          "datamap": "depot_name->SFDATA:inv_inventory_master.depot_name"
         }
       },
       "ctrlinv_inventory_masterinv_remarks": {
@@ -88,9 +88,9 @@
         "attrs": {
           "id": "ctrlinv_inventory_masterinv_remarks",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_master.inv_remarks",
+          "fieldname": "备注",
           "width": "100%",
-          "fieldname": "备注"
+          "xdatabind": "SFDATA:inv_inventory_master.inv_remarks"
         }
       },
       "XExcelDataImportButton1": {
@@ -100,12 +100,13 @@
           "runat": "server",
           "xclass": "YZSoft.Forms.Field.ExcelDataImportButton",
           "datamap": "B->SFDATA:inv_inventory_detail.vendor_id;C->SFDATA:inv_inventory_detail.vendor_name;D->SFDATA:inv_inventory_detail.mat_code;E->SFDATA:inv_inventory_detail.mat_name;F->SFDATA:inv_inventory_detail.mat_spec;G->SFDATA:inv_inventory_detail.inv_stnum_unit;H->SFDATA:inv_inventory_detail.depot_mat_num;I->SFDATA:inv_inventory_detail.inv_depot_mat_num;J->SFDATA:inv_inventory_detail.inv_diff_num;K->SFDATA:inv_inventory_detail.inv_remarks",
-          "columncount": "11",
-          "usesubmitbehavior": "False",
-          "popupwndheight": "-1",
-          "popupwndwidth": "-1",
+          "text": "盘存结果导入",
           "width": "92px",
-          "text": "盘存结果导入"
+          "popupwndwidth": "-1",
+          "popupwndheight": "-1",
+          "usesubmitbehavior": "False",
+          "columncount": "11",
+          "hiddenexpress": "Global.StepName!='开始'"
         }
       },
       "ctrl_inv_inventory_detailvendor_id": {
@@ -113,8 +114,8 @@
         "attrs": {
           "id": "ctrl_inv_inventory_detailvendor_id",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_detail.vendor_id",
           "width": "100%",
+          "xdatabind": "SFDATA:inv_inventory_detail.vendor_id",
           "hiddenexpress": "1"
         }
       },
@@ -123,10 +124,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_detailvendor_name",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_detail.vendor_name",
+          "fieldname": "供应商编码",
           "width": "100%",
-          "fieldname": "供应商编码"
+          "xdatabind": "SFDATA:inv_inventory_detail.vendor_name",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_detailmat_code": {
@@ -134,10 +135,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_detailmat_code",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_detail.mat_code",
+          "fieldname": "物料编码",
           "width": "100%",
-          "fieldname": "物料编码"
+          "xdatabind": "SFDATA:inv_inventory_detail.mat_code",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_detailmat_name": {
@@ -145,10 +146,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_detailmat_name",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_detail.mat_name",
+          "fieldname": "物料名称",
           "width": "100%",
-          "fieldname": "物料名称"
+          "xdatabind": "SFDATA:inv_inventory_detail.mat_name",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_detailmat_spec": {
@@ -156,10 +157,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_detailmat_spec",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_detail.mat_spec",
+          "fieldname": "规格",
           "width": "100%",
-          "fieldname": "规格"
+          "xdatabind": "SFDATA:inv_inventory_detail.mat_spec",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_detailinv_stnum_unit": {
@@ -167,10 +168,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_detailinv_stnum_unit",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_detail.inv_stnum_unit",
+          "fieldname": "基准单位",
           "width": "100%",
-          "fieldname": "基准单位"
+          "xdatabind": "SFDATA:inv_inventory_detail.inv_stnum_unit",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_detaildepot_mat_num": {
@@ -178,10 +179,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_detaildepot_mat_num",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_detail.depot_mat_num",
+          "fieldname": "库存数（盘点前）",
           "width": "100%",
-          "fieldname": "库存数（盘点前）"
+          "xdatabind": "SFDATA:inv_inventory_detail.depot_mat_num",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_detailinv_depot_mat_num": {
@@ -189,10 +190,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_detailinv_depot_mat_num",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_detail.inv_depot_mat_num",
+          "fieldname": "盘点库存数（盘点后）",
           "width": "100%",
-          "fieldname": "盘点库存数（盘点后）"
+          "xdatabind": "SFDATA:inv_inventory_detail.inv_depot_mat_num",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_detailinv_diff_num": {
@@ -200,10 +201,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_detailinv_diff_num",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_detail.inv_diff_num",
+          "fieldname": "盘点差值",
           "width": "100%",
-          "fieldname": "盘点差值"
+          "xdatabind": "SFDATA:inv_inventory_detail.inv_diff_num",
+          "disableexpress": "1"
         }
       },
       "ctrlinv_inventory_detailinv_remarks": {
@@ -211,10 +212,10 @@
         "attrs": {
           "id": "ctrlinv_inventory_detailinv_remarks",
           "runat": "server",
-          "disableexpress": "1",
-          "xdatabind": "SFDATA:inv_inventory_detail.inv_remarks",
+          "fieldname": "备注",
           "width": "100%",
-          "fieldname": "备注"
+          "xdatabind": "SFDATA:inv_inventory_detail.inv_remarks",
+          "disableexpress": "1"
         }
       },
       "table1": {
@@ -252,8 +253,8 @@
         "attrs": {
           "id": "ctrlinv_inventory_masterCompany",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_master.Company",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:inv_inventory_master.Company"
         }
       },
       "ctrlinv_inventory_masterdepot_id": {
@@ -261,8 +262,8 @@
         "attrs": {
           "id": "ctrlinv_inventory_masterdepot_id",
           "runat": "server",
-          "xdatabind": "SFDATA:inv_inventory_master.depot_name",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:inv_inventory_master.depot_name"
         }
       },
       "XTextBox1": {
@@ -270,10 +271,10 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "xdatabind": "varState",
           "width": "100%",
-          "bordercolor": "#DCDCDC",
+          "xdatabind": "varState",
           "borderwidth": "1",
+          "bordercolor": "#DCDCDC",
           "innerhtml": "1"
         }
       },
@@ -303,10 +304,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator5",
           "runat": "server",
-          "controltovalidate": "ctrlinv_inventory_detailmat_name",
-          "errormessage": "请导入盘存结果",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请导入盘存结果",
+          "controltovalidate": "ctrlinv_inventory_detailmat_name",
           "innerhtml": "物料名称"
         }
       },
@@ -315,10 +316,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator1",
           "runat": "server",
-          "controltovalidate": "ctrlinv_inventory_masterinv_master_time",
-          "errormessage": "请选择盘点时间",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择盘点时间",
+          "controltovalidate": "ctrlinv_inventory_masterinv_master_time",
           "innerhtml": "盘点时间"
         }
       },
@@ -327,10 +328,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator2",
           "runat": "server",
-          "controltovalidate": "ctrlinv_inventory_masterinv_master_year",
-          "errormessage": "请填写盘点年份",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写盘点年份",
+          "controltovalidate": "ctrlinv_inventory_masterinv_master_year",
           "innerhtml": "年"
         }
       },
@@ -339,10 +340,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator3",
           "runat": "server",
-          "controltovalidate": "ctrlinv_inventory_masterinv_master_month",
-          "errormessage": "请填写盘点月份",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写盘点月份",
+          "controltovalidate": "ctrlinv_inventory_masterinv_master_month",
           "innerhtml": "月"
         }
       },
@@ -351,10 +352,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator4",
           "runat": "server",
-          "controltovalidate": "XDropDownList1",
-          "errormessage": "请选择盘点仓库",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择盘点仓库",
+          "controltovalidate": "XDropDownList1",
           "innerhtml": "盘点仓库"
         }
       }

@@ -62,6 +62,10 @@ CREATE TABLE dbo.sal_order_detail
   create_time datetime2  null ,
   update_time datetime2  null ,
   TaskID int  null ,
+  Price decimal(18,2) null ,
+  TaxRate decimal(18,2) null ,
+  TaxNum decimal(18,2) null ,
+  IsFree bit  null DEFAULT((0)),
   CONSTRAINT PK_sal_order_detail PRIMARY KEY  CLUSTERED
   (
     order_detail_id

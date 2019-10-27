@@ -46,7 +46,7 @@ namespace Prod
             string keyword = request.GetString("kwd", null);
 
             //获得查询条件
-            string filter = "";
+            string filter = "State='1'";
             bool moduleAdmin = true;
             using (BPMConnection cn = new BPMConnection())
             {

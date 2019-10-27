@@ -27,7 +27,24 @@ public class proc_pur_task_enquiry : YZServiceHandler
         string task_state = request.GetString("task_state", null);
 
         //获得查询条件
-        string filter = null;
+        string filter = "1=1";
+        bool moduleAdmin = true;
+        using (BPMConnection cn = new BPMConnection())
+        {
+            cn.WebOpen();
+            moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "e026627d-3e64-4bc4-8a63-df188aa10515", "Admin");
+            if (!moduleAdmin)
+            {
+                MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
+                List<string> ls = new List<string>();
+                foreach (Member member in positions)
+                {
+                    OU ou = member.GetParentOU(cn);
+                    ls.Add(string.Format("Company='{0}'", ou.Code));
+                }
+                filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
+            }
+        }
 
         if (searchType == "QuickSearch")
         {

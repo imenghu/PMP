@@ -121,22 +121,22 @@
                 </ul>
                 <ul class="iframe-content">
                     <li class="active">
-                        <iframe src="http://218.201.160.42:8088/fwp/brower.html?objpath=/project/reports/infosys/platform/portal/tab1/asset_changes.fwp"></iframe>
+                        <iframe src="mdp/reports/asset_changes.html"></iframe>
                     </li>
                     <li>
-                        <iframe src="http://218.201.160.42:8088/fwp/brower.html?objpath=/project/reports/infosys/platform/portal/tab2/Income_change.fwp"></iframe>
+                        <iframe src="mdp/reports/income_change.html"></iframe>
                     </li>
                     <li>
-                        <iframe src="http://218.201.160.42:8088/fwp/brower.html?objpath=/project/reports/infosys/platform/portal/tab3/profit.fwp"></iframe>
+                        <iframe src="mdp/reports/profit.html"></iframe>
                     </li>
                     <li>
-                        <iframe src="http://218.201.160.42:8088/fwp/brower.html?objpath=/project/reports/infosys/platform/portal/tab4/tab4.fwp"></iframe>
+                        <iframe src="mdp/reports/tab4.html"></iframe>
                     </li>
                     <li>
-                        <iframe src="http://218.201.160.42:8088/fwp/brower.html?objpath=/project/reports/infosys/platform/portal/tab5/map1.fwp"></iframe>
+                        <iframe src="mdp/reports/map1.html"></iframe>
                     </li>
                     <li>
-                        <iframe src="http://218.201.160.42:8088/fwp/brower.html?objpath=/project/reports/infosys/platform/portal/tab6/tab6.fwp"></iframe>
+                        <iframe src="mdp/reports/tab6.html"></iframe>
                     </li>
                 </ul>
             </div>

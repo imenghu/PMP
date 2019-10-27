@@ -47,7 +47,32 @@ namespace Inv
             string mat_name = request.GetString("mat_name", null);
 
             //获得查询条件
-            string filter = "State='1'";
+            string filter = "1=1";
+            bool moduleAdmin = true;
+            using (BPMConnection cn = new BPMConnection())
+            {
+                cn.WebOpen();
+                moduleAdmin = BPM.Client.Security.UserResource.CheckPermision(cn, "ad88c9a5-58a9-4718-af38-0ad23a28d0af", "Admin");
+                if (!moduleAdmin)
+                {
+                    bool moduleCompany = BPM.Client.Security.UserResource.CheckPermision(cn, "ad88c9a5-58a9-4718-af38-0ad23a28d0af", "Company");
+                    if (moduleCompany)
+                    {
+                        MemberCollection positions = OrgSvr.GetUserPositions(cn, YZAuthHelper.LoginUserAccount);
+                        List<string> ls = new List<string>();
+                        foreach (Member member in positions)
+                        {
+                            OU ou = member.GetParentOU(cn);
+                            ls.Add(string.Format("Company='{0}'", ou.Code));
+                        }
+                        filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
+                    }
+                    else
+                    {
+                        filter = queryProvider.CombinCond(filter, string.Format("CreateUser='{0}'", YZAuthHelper.LoginUserAccount));
+                    }
+                }
+            }
 
             if (searchType == "QuickSearch")
             {
@@ -62,12 +87,12 @@ namespace Inv
                 filter = " WHERE " + filter;
 
             //获得排序子句
-            string order = request.GetSortString("depot_detail_id");
+            string order = request.GetSortString("mat_code");
 
             //获得Query
             string query = @"
             WITH X AS(
-                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,* FROM inv_depot_detail {1}
+                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,* FROM v_inv_depot {1}
             ),
             Y AS(
                 SELECT count(*) AS TotalRows FROM X
@@ -106,21 +131,22 @@ namespace Inv
 
                             if (totalRows == 0)
                                 totalRows = reader.ReadInt32("TotalRows");
-                            item["depot_detail_id"] =
-reader.ReadInt32("depot_detail_id");
-                                                            item["CompanyName"] =
-                                                                    reader.ReadString("CompanyName");
-                                                                                            item["mat_code"] = 
-                                                                    reader.ReadString("mat_code");
-                                                                                            item["mat_name"] = 
-                                                                    reader.ReadString("mat_name");
-                                                                                            item["mat_spec"] = 
-                                                                    reader.ReadString("mat_spec");
-                                                                                            item["depot_mat_num"] = 
-                                                                    reader.ReadString("depot_mat_num");
-                                                                                            item["depot_stnum_unit"] = 
-                                                                    reader.ReadString("depot_stnum_unit");
-                                                                                    }
+
+                            item["Company"] =
+                                    reader.ReadString("Company");
+                            item["CompanyName"] =
+                                    reader.ReadString("CompanyName");
+                            item["mat_code"] =
+    reader.ReadString("mat_code");
+                            item["mat_name"] =
+    reader.ReadString("mat_name");
+                            item["mat_spec"] =
+    reader.ReadString("mat_spec");
+                            item["depot_mat_num"] =
+    reader.ReadDecimal("depot_mat_num");
+                            item["depot_stnum_unit"] =
+    reader.ReadString("depot_stnum_unit");
+                        }
                         
                         rv[YZJsonProperty.total] = totalRows;
                     }

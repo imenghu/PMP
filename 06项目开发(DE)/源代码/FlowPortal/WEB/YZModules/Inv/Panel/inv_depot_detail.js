@@ -22,7 +22,7 @@
             pageSize: YZSoft.EnvSetting.PageSize.defaultSize,
             model: 'Ext.data.Model',
             sorters: {
-                property: 'depot_detail_id',
+                property: 'mat_code',
                 direction: 'DESC'
             },
             proxy: {
@@ -138,8 +138,12 @@
     read: function (rec) {
         var me = this;
 
-        YZSoft.bpm.src.ux.FormManager.openFormApplication('Inv/inv_depot_detail', rec.data.depot_detail_id, 'Read', Ext.apply({
+        YZSoft.bpm.src.ux.FormManager.openFormApplication('Inv/inv_depot_detail', 1, 'Read', Ext.apply({
             sender: me,
+            params: {
+                company: rec.data.Company,
+                code:rec.data.mat_code
+            },
             title: '库存明细'
         }, me.dlgCfg));
     }
