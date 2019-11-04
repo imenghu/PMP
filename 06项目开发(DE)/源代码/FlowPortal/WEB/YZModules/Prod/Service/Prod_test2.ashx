@@ -64,7 +64,7 @@ namespace Prod
                         List<string> ls = new List<string>();
                         foreach (Member member in positions)
                         {
-                            OU ou = member.GetParentOU(cn);
+                            OU ou = member.GetParentOU(cn, "公司");
                             ls.Add(string.Format("Company='{0}'", ou.Code));
                         }
                         filter = string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray()));

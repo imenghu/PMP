@@ -62,7 +62,7 @@ public class Proc_Contract : YZServiceHandler
                     List<string> ls = new List<string>();
                     foreach (Member member in positions)
                     {
-                        OU ou = member.GetParentOU(cn);
+                        OU ou = member.GetParentOU(cn, "公司");
                         ls.Add(string.Format("Company='{0}'", ou.Code));
                     }
                     filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
@@ -78,7 +78,7 @@ public class Proc_Contract : YZServiceHandler
         {
             //应用关键字过滤
             if (!string.IsNullOrEmpty(keyword))
-                filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' or vendor_name LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' or vendor_name LIKE N'%{0}%'  or contract_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
             if (!string.IsNullOrEmpty(proc_type))
                 filter = queryProvider.CombinCond(filter, String.Format("contract_type LIKE N'%{0}%'", queryProvider.EncodeText(proc_type)));
             if (!string.IsNullOrEmpty(proc_status))

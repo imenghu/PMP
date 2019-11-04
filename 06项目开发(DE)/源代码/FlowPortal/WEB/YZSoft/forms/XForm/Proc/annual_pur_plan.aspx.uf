@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-24T10:42:35.5816772+08:00",
+  "generateAt": "2019-11-01T17:30:32.925397+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,12 +9,12 @@
         "attrs": {
           "id": "XTextBox26",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.CompanyName",
-          "width": "100%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "公司",
           "disableexpress": "1",
-          "fieldname": "公司"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.CompanyName"
         }
       },
       "XTextBox10": {
@@ -22,12 +22,12 @@
         "attrs": {
           "id": "XTextBox10",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.DeptName",
-          "width": "100%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "部门",
           "disableexpress": "1",
-          "fieldname": "部门"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.DeptName"
         }
       },
       "XTextBox25": {
@@ -36,11 +36,11 @@
           "id": "XTextBox25",
           "onclick": "WdatePicker({dateFmt:'yyyy',minDate:new Date()})",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_pur_year",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "年份",
           "bordercolor": "#DCDCDC",
-          "fieldname": "年份"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_pur_year"
         }
       },
       "XTextBox11": {
@@ -48,23 +48,23 @@
         "attrs": {
           "id": "XTextBox11",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.mat_name",
-          "width": "130px",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "物料名称",
           "disableexpress": "1",
-          "fieldname": "物料名称"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "130px",
+          "xdatabind": "SFDATA:annual_pur_plan.mat_name"
         }
       },
-      "XDataBrowserButton1": {
-        "ctype": "aspxform:xdatabrowserbutton",
+      "XCustomBrowserButton1": {
+        "ctype": "aspxform:xcustombrowserbutton",
         "attrs": {
-          "id": "XDataBrowserButton1",
+          "id": "XCustomBrowserButton1",
           "runat": "server",
-          "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:state->varState",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
-          "datamap": "mat_id->SFDATA:annual_pur_plan.mat_id;mat_code->SFDATA:annual_pur_plan.mat_code;mat_name->SFDATA:annual_pur_plan.mat_name;mat_spec->SFDATA:annual_pur_plan.mat_spec;base_unit->SFDATA:annual_pur_plan.plan_stnum_unit"
+          "xclass": "YZSoft.forms.field.dialogs.MaterialClassButton",
+          "filter": "state->varState",
+          "datamap": "mat_id->SFDATA:annual_pur_plan.mat_id;mat_code->SFDATA:annual_pur_plan.mat_code;mat_name->SFDATA:annual_pur_plan.mat_name;mat_spec->SFDATA:annual_pur_plan.mat_spec;base_unit->SFDATA:annual_pur_plan.plan_stnum_unit",
+          "width": "21px"
         }
       },
       "XTextBox9": {
@@ -72,12 +72,12 @@
         "attrs": {
           "id": "XTextBox9",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.mat_code",
-          "width": "100%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "物料编码",
           "disableexpress": "1",
-          "fieldname": "物料编码"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.mat_code"
         }
       },
       "XTextBox14": {
@@ -85,12 +85,12 @@
         "attrs": {
           "id": "XTextBox14",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.mat_spec",
-          "width": "100%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "规格",
           "disableexpress": "1",
-          "fieldname": "规格"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.mat_spec"
         }
       },
       "XDropDownList1": {
@@ -98,13 +98,13 @@
         "attrs": {
           "id": "XDropDownList1",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_slnum_unit",
           "fieldname": "单位",
-          "width": "100%",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:annual_pur_plan.mat_id,if_base_unit->varState",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_slnum_unit",
           "datamap": "numerator->SFDATA:annual_pur_plan.sl_st_scale",
+          "width": "100%",
+          "displaycolumn": "mat_unit_name",
           "valuecolumn": "mat_unit_id",
-          "displaycolumn": "mat_unit_name"
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:annual_pur_plan.mat_id,if_base_unit->varState"
         }
       },
       "XTextBox12": {
@@ -112,12 +112,12 @@
         "attrs": {
           "id": "XTextBox12",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_stnum_unit",
-          "width": "100%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "基准单位",
           "disableexpress": "1",
-          "fieldname": "基准单位"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_stnum_unit"
         }
       },
       "XTextBox13": {
@@ -125,12 +125,12 @@
         "attrs": {
           "id": "XTextBox13",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.sl_st_scale",
-          "width": "100%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "转换比例",
           "disableexpress": "1",
-          "fieldname": "转换比例"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.sl_st_scale"
         }
       },
       "XTextBox7": {
@@ -138,12 +138,12 @@
         "attrs": {
           "id": "XTextBox7",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_total_num",
-          "width": "100%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
-          "disableexpress": "1",
           "fieldname": "总数量",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_total_num",
           "express": "SFDATA:annual_pur_plan.plan_month_jan+SFDATA:annual_pur_plan.plan_month_feb+SFDATA:annual_pur_plan.plan_month_mar+SFDATA:annual_pur_plan.plan_month_apr+SFDATA:annual_pur_plan.plan_month_may+SFDATA:annual_pur_plan.plan_month_june+SFDATA:annual_pur_plan.plan_month_sept+SFDATA:annual_pur_plan.plan_month_aug+SFDATA:annual_pur_plan.plan_month_july+SFDATA:annual_pur_plan.plan_month_oct+SFDATA:annual_pur_plan.plan_month_nov+SFDATA:annual_pur_plan.plan_month_dec"
         }
       },
@@ -152,11 +152,11 @@
         "attrs": {
           "id": "XTextBox24",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_price",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "计划单价",
           "bordercolor": "#DCDCDC",
-          "fieldname": "计划单价"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_price"
         }
       },
       "XTextBox15": {
@@ -164,12 +164,12 @@
         "attrs": {
           "id": "XTextBox15",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.total_price",
-          "width": "100%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
-          "disableexpress": "1",
           "fieldname": "总金额",
+          "disableexpress": "1",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.total_price",
           "express": "SFDATA:annual_pur_plan.plan_price*SFDATA:annual_pur_plan.plan_total_num*SFDATA:annual_pur_plan.sl_st_scale"
         }
       },
@@ -178,11 +178,11 @@
         "attrs": {
           "id": "XTextBox6",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_jan",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "一月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "一月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_jan"
         }
       },
       "XTextBox23": {
@@ -190,11 +190,11 @@
         "attrs": {
           "id": "XTextBox23",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_feb",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "二月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "二月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_feb"
         }
       },
       "XTextBox16": {
@@ -202,11 +202,11 @@
         "attrs": {
           "id": "XTextBox16",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_mar",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "三月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "三月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_mar"
         }
       },
       "XTextBox5": {
@@ -214,11 +214,11 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_apr",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "四月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "四月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_apr"
         }
       },
       "XTextBox22": {
@@ -226,11 +226,11 @@
         "attrs": {
           "id": "XTextBox22",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_may",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "五月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "五月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_may"
         }
       },
       "XTextBox17": {
@@ -238,11 +238,11 @@
         "attrs": {
           "id": "XTextBox17",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_june",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "六月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "六月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_june"
         }
       },
       "XTextBox4": {
@@ -250,11 +250,11 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_july",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "七月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "七月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_july"
         }
       },
       "XTextBox21": {
@@ -262,11 +262,11 @@
         "attrs": {
           "id": "XTextBox21",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_aug",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "八月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "八月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_aug"
         }
       },
       "XTextBox18": {
@@ -274,11 +274,11 @@
         "attrs": {
           "id": "XTextBox18",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_sept",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "九月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "九月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_sept"
         }
       },
       "XTextBox3": {
@@ -286,11 +286,11 @@
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_oct",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "十月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "十月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_oct"
         }
       },
       "XTextBox20": {
@@ -298,11 +298,11 @@
         "attrs": {
           "id": "XTextBox20",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_nov",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "十一月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "十一月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_nov"
         }
       },
       "XTextBox19": {
@@ -310,11 +310,11 @@
         "attrs": {
           "id": "XTextBox19",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.plan_month_dec",
-          "width": "100%",
-          "borderwidth": "1",
+          "fieldname": "十二月",
           "bordercolor": "#DCDCDC",
-          "fieldname": "十二月"
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.plan_month_dec"
         }
       },
       "XTextBox1": {
@@ -322,13 +322,13 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.planpur_remarks",
-          "width": "100%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
           "fieldname": "备注",
-          "rows": "5",
-          "textmode": "MultiLine"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.planpur_remarks",
+          "textmode": "MultiLine",
+          "rows": "5"
         }
       },
       "XTextBox2": {
@@ -336,12 +336,12 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.CreateUserName",
-          "width": "100%",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
+          "fieldname": "提报人",
           "disableexpress": "1",
-          "fieldname": "提报人"
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "SFDATA:annual_pur_plan.CreateUserName"
         }
       },
       "XDateTimePicker1": {
@@ -349,12 +349,23 @@
         "attrs": {
           "id": "XDateTimePicker1",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.create_time",
-          "borderwidth": "1",
-          "bordercolor": "#DCDCDC",
           "fieldname": "提报日期",
+          "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "xdatabind": "SFDATA:annual_pur_plan.create_time",
           "width": "100%",
           "displayonly": "True"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "datamap": "mat_id->SFDATA:annual_pur_plan.mat_id;mat_code->SFDATA:annual_pur_plan.mat_code;mat_name->SFDATA:annual_pur_plan.mat_name;mat_spec->SFDATA:annual_pur_plan.mat_spec;base_unit->SFDATA:annual_pur_plan.plan_stnum_unit",
+          "width": "21px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:state->varState",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位"
         }
       },
       "XTextBox8": {
@@ -362,10 +373,10 @@
         "attrs": {
           "id": "XTextBox8",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.mat_id",
-          "width": "130px",
+          "bordercolor": "#DCDCDC",
           "borderwidth": "1",
-          "bordercolor": "#DCDCDC"
+          "width": "130px",
+          "xdatabind": "SFDATA:annual_pur_plan.mat_id"
         }
       },
       "XTextBox27": {
@@ -373,10 +384,10 @@
         "attrs": {
           "id": "XTextBox27",
           "runat": "server",
-          "xdatabind": "varState",
-          "width": "100%",
-          "borderwidth": "1",
           "bordercolor": "#DCDCDC",
+          "borderwidth": "1",
+          "width": "100%",
+          "xdatabind": "varState",
           "innerhtml": "1"
         }
       },
@@ -385,10 +396,10 @@
         "attrs": {
           "id": "XTextBox28",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.Company",
-          "width": "130px",
+          "bordercolor": "#DCDCDC",
           "borderwidth": "1",
-          "bordercolor": "#DCDCDC"
+          "width": "130px",
+          "xdatabind": "SFDATA:annual_pur_plan.Company"
         }
       },
       "XTextBox29": {
@@ -396,10 +407,10 @@
         "attrs": {
           "id": "XTextBox29",
           "runat": "server",
-          "xdatabind": "SFDATA:annual_pur_plan.Dept",
-          "width": "130px",
+          "bordercolor": "#DCDCDC",
           "borderwidth": "1",
-          "bordercolor": "#DCDCDC"
+          "width": "130px",
+          "xdatabind": "SFDATA:annual_pur_plan.Dept"
         }
       },
       "table1": {
@@ -414,6 +425,7 @@
         },
         "ctypeorg": "table",
         "items": [
+          "XDataBrowserButton1",
           "XTextBox8",
           "XTextBox27",
           "XTextBox28",
@@ -427,10 +439,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator1",
           "runat": "server",
-          "controltovalidate": "XTextBox11",
-          "errormessage": "请选择物料名称",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择物料名称",
+          "controltovalidate": "XTextBox11",
           "innerhtml": "物料名称"
         }
       },
@@ -439,10 +451,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator2",
           "runat": "server",
-          "controltovalidate": "XDropDownList1",
-          "errormessage": "请选择单位",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请选择单位",
+          "controltovalidate": "XDropDownList1",
           "innerhtml": "单位"
         }
       },
@@ -451,10 +463,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator3",
           "runat": "server",
-          "controltovalidate": "XTextBox24",
-          "errormessage": "请填写计划单价",
-          "forecolor": "Red",
           "display": "None",
+          "forecolor": "Red",
+          "errormessage": "请填写计划单价",
+          "controltovalidate": "XTextBox24",
           "innerhtml": "计划单价"
         }
       }
@@ -464,7 +476,7 @@
       "XTextBox10",
       "XTextBox25",
       "XTextBox11",
-      "XDataBrowserButton1",
+      "XCustomBrowserButton1",
       "XTextBox9",
       "XTextBox14",
       "XDropDownList1",

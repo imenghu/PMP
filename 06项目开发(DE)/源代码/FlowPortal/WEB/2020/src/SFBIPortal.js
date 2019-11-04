@@ -125,7 +125,9 @@ Ext.define('2020.src.SFBIPortal', {
                     margin: '0 20 0 0',
                     badgeText: userInfo.TaskCount,
                     handler: function () {
-                        YZSoft.goto('BPM/Worklist');
+                        Ext.require('YZSoft.src.ux.AppSwitch', function () {
+                            YZSoft.src.ux.AppSwitch.openApp('2020/SF');
+                        });
                     }
                 });
 
@@ -203,8 +205,9 @@ Ext.define('2020.src.SFBIPortal', {
                         me.btnMessage,
                         //me.btnEMIP,
                         //me.btnLang,
-                        me.btnUser,
-                        me.btnApps
+                        me.btnUser
+                        //,
+                        //me.btnApps
                     ]
                 });
 

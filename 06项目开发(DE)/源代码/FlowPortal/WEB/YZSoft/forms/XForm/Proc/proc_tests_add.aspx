@@ -51,7 +51,7 @@
                         物料名称</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="XTextBox3" runat="server" DisableExpress="1" width="80%" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_tests.mat_name"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:ctl_material" DataMap="mat_code->SFDATA:proc_tests.mat_code;mat_name->SFDATA:proc_tests.mat_name;mat_spec->SFDATA:proc_tests.mat_spesc" DisplayColumns="mat_code:物料编码;mat_name:物料名称"></aspxform:XDataBrowserButton>
+                        <aspxform:XCustomBrowserButton id="XCustomBrowserButton2" runat="server" XClass="YZSoft.forms.field.dialogs.MaterialClassButton" Filter="state->1" Width="21px" DataMap="mat_code->SFDATA:proc_tests.mat_code;mat_name->SFDATA:proc_tests.mat_name;mat_spec->SFDATA:proc_tests.mat_spesc"></aspxform:XCustomBrowserButton>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         物料编码</td>
@@ -69,7 +69,7 @@
                         供应商名称</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="XTextBox4" runat="server" DisableExpress="1" width="80%" BorderColor="#DCDCDC" XDataBind="SFDATA:proc_tests.vendor_name"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" Width="21px" XDataSource="DataSource:SFDATA;TableName:ctl_vendor" DataMap="vendor_id->SFDATA:proc_tests.vendor_id;vendor_name->SFDATA:proc_tests.vendor_name" DisplayColumns="vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址"></aspxform:XDataBrowserButton>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" Width="21px" DataMap="vendor_id->SFDATA:proc_tests.vendor_id;vendor_name->SFDATA:proc_tests.vendor_name" XDataSource="DataSource:SFDATA;TableName:ctl_vendor" DisplayColumns="vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址"></aspxform:XDataBrowserButton>
                     </td>
                     <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                         化验类别</td>
@@ -154,6 +154,7 @@
                     <td>
                     </td>
                     <td>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" DataMap="mat_code->SFDATA:proc_tests.mat_code;mat_name->SFDATA:proc_tests.mat_name;mat_spec->SFDATA:proc_tests.mat_spesc" XDataSource="DataSource:SFDATA;TableName:ctl_material" DisplayColumns="mat_code:物料编码;mat_name:物料名称"></aspxform:XDataBrowserButton>
                     </td>
                 </tr>
                 <tr>

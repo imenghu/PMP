@@ -63,7 +63,7 @@ public class proc_tests : YZServiceHandler
                     List<string> ls = new List<string>();
                     foreach (Member member in positions)
                     {
-                        OU ou = member.GetParentOU(cn);
+                        OU ou = member.GetParentOU(cn, "公司");
                         ls.Add(string.Format("Company='{0}'", ou.Code));
                     }
                     filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
@@ -79,7 +79,7 @@ public class proc_tests : YZServiceHandler
         {
             //应用关键字过滤
             if (!string.IsNullOrEmpty(keyword))
-                filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' or vendor_name LIKE N'%{0}%' or mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' or vendor_name LIKE N'%{0}%' or mat_name LIKE N'%{0}%' or tests_class LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
             if (!string.IsNullOrEmpty(proc_type))
                 filter = queryProvider.CombinCond(filter, String.Format("tests_class LIKE N'%{0}%'", queryProvider.EncodeText(proc_type)));
             if (!string.IsNullOrEmpty(proc_status))

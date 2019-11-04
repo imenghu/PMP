@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-22T20:43:40.011967+08:00",
+  "generateAt": "2019-11-02T11:34:07.3193359+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,27 +9,21 @@
         "attrs": {
           "id": "ctrlprod_report4mat_name",
           "runat": "server",
-          "width": "88%",
+          "width": "85%",
           "xdatabind": "SFDATA:prod_report4.mat_name",
           "fieldname": "品名",
           "readonly": "True"
         }
       },
-      "XDataBrowserButton1": {
-        "ctype": "aspxform:xdatabrowserbutton",
+      "XCustomBrowserButton1": {
+        "ctype": "aspxform:xcustombrowserbutton",
         "attrs": {
-          "id": "XDataBrowserButton1",
+          "id": "XCustomBrowserButton1",
           "runat": "server",
-          "xclass": "YZSoft.Forms.Field.DataBrowserButton",
-          "height": "18px",
-          "text": "...",
-          "usesubmitbehavior": "False",
-          "popupwndheight": "-1",
-          "popupwndwidth": "-1",
+          "xclass": "YZSoft.forms.field.dialogs.MaterialClassButton",
+          "filter": "first_name->\"半成品\",second_name->\"啤酒\",third_name->\"麦汁\"",
           "datamap": "mat_name->SFDATA:prod_report4.mat_name",
-          "displaycolumns": "first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_name->\"产成品\"",
-          "width": "16px"
+          "width": "21px"
         }
       },
       "ctrlprod_report4date": {
@@ -332,6 +326,23 @@
           "fieldname": "部门名称"
         }
       },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "xclass": "YZSoft.Forms.Field.DataBrowserButton",
+          "datamap": "mat_name->SFDATA:prod_report4.mat_name",
+          "width": "16px",
+          "height": "18px",
+          "text": "...",
+          "usesubmitbehavior": "False",
+          "popupwndheight": "-1",
+          "popupwndwidth": "-1",
+          "displaycolumns": "first_name:一级物料名称;second_name:二级物料名称;third_name:三级物料名称;fourth_name:四级物料名称;mat_name:物料名称;mat_spec:型号",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_name->\"半成品\",second_name->\"啤酒\",third_name->\"麦汁\""
+        }
+      },
       "table1": {
         "ctype": "wrap",
         "attrs": {
@@ -351,7 +362,8 @@
           "ctrlProd_report1Company",
           "ctrlProd_report1CompanyName",
           "ctrlProd_report1Dept",
-          "ctrlProd_report1DeptName"
+          "ctrlProd_report1DeptName",
+          "XDataBrowserButton1"
         ]
       }
     },
@@ -407,7 +419,7 @@
     },
     "items": [
       "ctrlprod_report4mat_name",
-      "XDataBrowserButton1",
+      "XCustomBrowserButton1",
       "ctrlprod_report4date",
       "ctrlprod_report4Sac_id",
       "ctrlprod_report4Boiler",

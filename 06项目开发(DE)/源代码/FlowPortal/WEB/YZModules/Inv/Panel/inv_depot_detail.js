@@ -62,7 +62,7 @@
                                         },
                                         { header: '单位', dataIndex: 'depot_stnum_unit', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo} },
+                                        { header: '操作', dataIndex: 'mat_code', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

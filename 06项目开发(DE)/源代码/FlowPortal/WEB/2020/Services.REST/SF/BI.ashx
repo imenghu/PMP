@@ -22,21 +22,27 @@ namespace Biz
                     }
                 },
                 new {
-                    id = "r2",
-                    text = "集团经营",
-                    glyph = 0xeb28,
-                    xclass = "YZSoft.report.rpt.Panel",
-                    config = new {
-                        path = "D13.Excel/BPM系统利用率"
-                    }
-                },
-                new {
-                    id = "r3",
+                
                     text = "生产监控",
-                    glyph = 0xe955,
-                    xclass = "YZSoft.report.Panel",
-                    config = new {
-                        path = "生产报表"
+                    children = new object[]{
+                        new {
+                            id = "r31",
+                            text = "菏泽生产分析",
+                            glyph = 0xe610,
+                            xclass = "YZSoft.report.Panel",
+                            config = new {
+                                path="菏泽啤酒厂生产报表"
+                            }
+                        },
+		                new {
+                            id = "r32",
+                            text = "广元生产分析",
+                            glyph = 0xe610,
+                            xclass = "YZSoft.report.Panel",
+                            config = new {
+                                path="广元啤酒厂生产报表"
+                            }
+                        }
                     }
                 },
                 new {
@@ -45,7 +51,7 @@ namespace Biz
                     children = new object[]{
                         new {
                             id = "r4",
-                            text = "采购分析一",
+                            text = "采购需求分析",
                             glyph = 0xe610,
                             xclass = "YZSoft.report.Panel",
                             config = new {
@@ -54,7 +60,7 @@ namespace Biz
                         },
 		                new {
                             id = "a4",
-                            text = "采购分析二",
+                            text = "采购计划分析",
                             glyph = 0xe610,
                             xclass = "YZSoft.report.Panel",
                             config = new {
@@ -63,7 +69,7 @@ namespace Biz
                         },
 		                new {
                             id = "b4",
-                            text = "采购分析三",
+                            text = "采购合同分析",
                             glyph = 0xe610,
                             xclass = "YZSoft.report.Panel",
                             config = new {
@@ -72,7 +78,7 @@ namespace Biz
                         },
 		                new {
                             id = "c4",
-                            text = "采购分析四",
+                            text = "询价-化验分析",
                             glyph = 0xe610,
                             xclass = "YZSoft.report.Panel",
                             config = new {
@@ -86,17 +92,26 @@ namespace Biz
                     expanded = true,
                     children = new object[]{
 	                    new {
-                            id = "r5",
-                            text = "销售分析一",
+                            id = "r51",
+                            text = "菏泽销售统计",
                             glyph = 0xe93e,
                             xclass = "YZSoft.report.Panel",
                             config = new {
-                                path="发货统计"
+                                path="菏泽啤酒厂发货统计"
+                            }
+                        },
+                            new {
+                            id = "r52",
+                            text = "广元销售统计",
+                            glyph = 0xe93e,
+                            xclass = "YZSoft.report.Panel",
+                            config = new {
+                                path="广元啤酒厂发货统计"
                             }
                         },
 		                new {
                             id = "s5",
-                            text = "销售分析二",
+                            text = "经销商分析",
                             glyph = 0xe93e,
                             xclass = "YZSoft.report.Panel",
                             config = new {
@@ -112,6 +127,26 @@ namespace Biz
                     xclass = "YZSoft.report.Panel",
                     config = new {
                         path="库存分析"
+                    }
+                },
+                new{
+                    text="个人信息",
+                    expand=false,
+                    children=new object[]{
+                        new {
+                            id = "UserInfo",
+                            text = Resources.YZStrings.Module_UserInfo,
+                            glyph = 0xea98,
+                            xclass = "YZSoft.personal.UserInfoTab",
+                            tabWrap = false
+                        },
+                        new {
+                            id = "ChangePasswordPanel",
+                            text = Resources.YZStrings.All_ChangePwd,
+                            glyph = 0xea98,
+                            xclass = "YZSoft.personal.ChangePasswordPanel",
+                            tabWrap = false
+                        }
                     }
                 }
             };

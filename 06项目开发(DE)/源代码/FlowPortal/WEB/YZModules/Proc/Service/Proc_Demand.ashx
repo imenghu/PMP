@@ -63,7 +63,7 @@ namespace Purchase
                         List<string> ls = new List<string>();
                         foreach (Member member in positions)
                         {
-                            OU ou = member.GetParentOU(cn);
+                            OU ou = member.GetParentOU(cn, "公司");
                             ls.Add(string.Format("Company='{0}'", ou.Code));
                         }
                         filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
@@ -79,7 +79,7 @@ namespace Purchase
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%'   OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%'   OR CreateUserName LIKE N'%{0}%'  OR mat_name LIKE N'%{0}%'  or SN LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(plan_pur_year))
                     filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%'", queryProvider.EncodeText(plan_pur_year)));
                 if (!string.IsNullOrEmpty(proc_status))
@@ -95,7 +95,12 @@ namespace Purchase
             //获得Query
             string query = @"
             WITH X AS(
-                SELECT ROW_NUMBER() OVER(ORDER BY {0}) AS RowNum,* FROM proc_demand {1}
+                select ROW_NUMBER() OVER(ORDER BY demand_id DESC) AS RowNum,* from ( SELECT a.*,STUFF((SELECT
+','+ CONVERT(VARCHAR,b.mat_name)
+FROM proc_demand_detail b
+WHERE a.demand_id =b.demand_id
+FOR XML PATH ('')), 1, 1, '') AS mat_name
+FROM proc_demand a ) n  {1}
             ),
             Y AS(
                 SELECT count(*) AS TotalRows FROM X

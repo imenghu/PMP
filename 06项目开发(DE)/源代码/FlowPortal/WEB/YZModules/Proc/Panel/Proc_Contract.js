@@ -61,7 +61,7 @@ Ext.define('YZModules.Proc.Panel.Proc_Contract', {
                     { header: '是否委外', dataIndex: 'if_outsource', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderYesOrNo },
                     { header: '总金额（元）', dataIndex: 'total_price', width: 100, align: 'center', sortable: true },
                     { header: '审核状态', dataIndex: 'approval_state', flex: 1, align: 'center', sortable: true, renderer: XYSoft.Render.renderStatus },
-                    { header: '操作', dataIndex: '', width: 80, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
+                    { header: '操作', dataIndex: 'contract_id', width: 80, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

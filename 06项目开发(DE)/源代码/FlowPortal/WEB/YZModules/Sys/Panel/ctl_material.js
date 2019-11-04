@@ -81,8 +81,8 @@
                                             header: '是否正式物料', dataIndex: 'mast_state', width: 100, align: 'left', sortable: true
                                             , renderer: XYSoft.Render.renderYesOrNo
                                         },
-                                        { header: '详情', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
-                                        { header: '单位维护', width: 100, align: 'center', sortable: true, renderer: me.renderUnit, listeners: { scope: me, click: me.onClickUnit } }
+                                        { header: '详情', dataIndex: 'mat_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
+                                        { header: '单位维护', dataIndex: 'mat_id', width: 100, align: 'center', sortable: true, renderer: me.renderUnit, listeners: { scope: me, click: me.onClickUnit } }
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

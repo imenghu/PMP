@@ -64,7 +64,7 @@ namespace Sal
                         List<string> ls = new List<string>();
                         foreach (Member member in positions)
                         {
-                            OU ou = member.GetParentOU(cn);
+                            OU ou = member.GetParentOU(cn, "公司");
                             ls.Add(string.Format("Company='{0}'", ou.Code));
                         }
                         filter = string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray()));
@@ -79,7 +79,7 @@ namespace Sal
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%' OR consignee_name LIKE N'%{0}%'  ", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' or mat_name LIKE N'%{0}%' OR consignee_name LIKE N'%{0}%' OR sale_order LIKE N'%{0}%' OR dealer_name LIKE N'%{0}%' OR salesman_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(plan_pur_year))
                     filter = queryProvider.CombinCond(filter, String.Format("sale_order LIKE N'%{0}%'", queryProvider.EncodeText(plan_pur_year)));
                 if (!string.IsNullOrEmpty(mat_name))
@@ -103,7 +103,7 @@ namespace Sal
             FROM sal_order_detail b
             WHERE a.order_master_id=b.order_master_id
             FOR XML PATH ('')), 1, 1, '') AS mat_name
-              FROM sal_order_master a {1}) n
+              FROM sal_order_master a ) n {1}
             ),
             Y AS(
                 SELECT count(*) AS TotalRows FROM X

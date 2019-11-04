@@ -88,7 +88,7 @@
                     {
                         header: '备注', dataIndex: 'prod_in_remarks', width: 100, align: 'left', sortable: true
                     },
-                    { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } }
+                    { header: '操作', dataIndex: 'prod_in_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } }
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

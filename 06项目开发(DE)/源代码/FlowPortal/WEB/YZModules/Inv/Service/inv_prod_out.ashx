@@ -63,7 +63,7 @@ namespace Inv
                         List<string> ls = new List<string>();
                         foreach (Member member in positions)
                         {
-                            OU ou = member.GetParentOU(cn);
+                            OU ou = member.GetParentOU(cn, "公司");
                             ls.Add(string.Format("inv_prod_out.Company='{0}'", ou.Code));
                         }
                         filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
@@ -79,7 +79,7 @@ namespace Inv
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("inv_prod_out.depot_name LIKE N'%{0}%' OR inv_prod_out.mat_name LIKE N'%{0}%' OR inv_prod_out.CompanyName LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("inv_prod_out.depot_name LIKE N'%{0}%' OR inv_prod_out.mat_name LIKE N'%{0}%' OR inv_prod_out.CompanyName LIKE N'%{0}%' or ProdUserName  LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
 
                 if (!string.IsNullOrEmpty(depot_name))
                     filter = queryProvider.CombinCond(filter, String.Format("inv_prod_out.depot_name LIKE N'%{0}%' ", queryProvider.EncodeText(depot_name)));

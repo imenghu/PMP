@@ -69,7 +69,7 @@
                                         {
                                             header: '审批状态', dataIndex: 'inv_remarks_state', flex: 1, width: 100, align: 'center', sortable: true, renderer: XYSoft.Render.renderStatus
                                         },
-                                        { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo} },
+                                        { header: '操作', dataIndex: 'inv_mast_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {
@@ -188,8 +188,8 @@
             items: [
                 me.btnExport,
                 me.btnNew,
-                me.btnEdit,
-                me.btnDelete,
+                //me.btnEdit,
+                //me.btnDelete,
                 '|',
                 me.btnTrace,
                 me.btnExcelExport,

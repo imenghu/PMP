@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-25T12:03:18.1774312+08:00",
+  "generateAt": "2019-11-04T17:06:39.0896048+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,8 +9,8 @@
         "attrs": {
           "id": "ctrlSal_remittanceremittance_no",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:Sal_remittance.remittance_no"
+          "xdatabind": "SFDATA:Sal_remittance.remittance_no",
+          "width": "100%"
         }
       },
       "ctrlSal_remittancecustomer_name": {
@@ -18,8 +18,8 @@
         "attrs": {
           "id": "ctrlSal_remittancecustomer_name",
           "runat": "server",
-          "width": "180px",
           "xdatabind": "SFDATA:Sal_remittance.customer_name",
+          "width": "180px",
           "disableexpress": "1"
         }
       },
@@ -28,10 +28,10 @@
         "attrs": {
           "id": "XDataBrowserButton3",
           "runat": "server",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_dealer;Filter:state->1,Company->SFDATA:sal_remittance.Company",
-          "displaycolumns": "area:销售大区;dealer_code:客户编号;dealer_name:客户名称;phone_number:收货手机号;receiving_address:收货地址",
+          "width": "21px",
           "datamap": "area->SFDATA:Sal_remittance.name;dealer_code->SFDATA:sal_remittance.customer_code;dealer_name->SFDATA:sal_remittance.customer_name;payment_account->SFDATA:sal_remittance.remittance_man",
-          "width": "21px"
+          "displaycolumns": "area:销售大区;dealer_code:客户编号;dealer_name:客户名称;phone_number:收货手机号;receiving_address:收货地址",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_dealer;Filter:state->1,Company->SFDATA:sal_remittance.Company"
         }
       },
       "ctrlSal_remittanceremittance_money": {
@@ -39,8 +39,8 @@
         "attrs": {
           "id": "ctrlSal_remittanceremittance_money",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:Sal_remittance.remittance_money"
+          "xdatabind": "SFDATA:Sal_remittance.remittance_money",
+          "width": "100%"
         }
       },
       "ctrlSal_remittancecustomer_code": {
@@ -48,8 +48,8 @@
         "attrs": {
           "id": "ctrlSal_remittancecustomer_code",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:Sal_remittance.customer_code",
+          "width": "100%",
           "disableexpress": "1"
         }
       },
@@ -58,8 +58,8 @@
         "attrs": {
           "id": "ctrlSal_remittanceremittance_man",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_remittance.remittance_man",
+          "width": "100%",
           "disableexpress": "1",
           "hiddeninput": "False"
         }
@@ -69,8 +69,8 @@
         "attrs": {
           "id": "ctrlSal_remittancename",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:Sal_remittance.name",
+          "width": "100%",
           "disableexpress": "1"
         }
       },
@@ -109,8 +109,8 @@
         "attrs": {
           "id": "ctrlSal_remittanceremittance_date",
           "runat": "server",
-          "width": "100px",
-          "xdatabind": "SFDATA:Sal_remittance.remittance_date"
+          "xdatabind": "SFDATA:Sal_remittance.remittance_date",
+          "width": "100px"
         }
       },
       "XDropDownList2": {
@@ -121,8 +121,8 @@
           "xdatabind": "SFDATA:sal_remittance.remittance_recer",
           "xdatasource": "DataSource:SFDATA;TableName:sal_finance",
           "prompttext": "--请选择--",
-          "valuecolumn": "finance_name",
-          "displaycolumn": "finance_name"
+          "displaycolumn": "finance_name",
+          "valuecolumn": "finance_name"
         }
       },
       "ctrlSal_remittanceremittance_effect": {
@@ -130,10 +130,10 @@
         "attrs": {
           "id": "ctrlSal_remittanceremittance_effect",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:Sal_remittance.remittance_effect",
-          "rows": "5",
-          "textmode": "MultiLine"
+          "width": "100%",
+          "textmode": "MultiLine",
+          "rows": "5"
         }
       },
       "XTextBox1": {
@@ -141,8 +141,8 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:sal_remittance.Company",
+          "width": "100%",
           "disableexpress": "1"
         }
       },
@@ -170,10 +170,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator1",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写订单编号",
           "controltovalidate": "ctrlSal_remittanceremittance_no",
+          "errormessage": "请填写订单编号",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "订单编号"
         }
       },
@@ -182,10 +182,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator2",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择客户名称",
           "controltovalidate": "ctrlSal_remittancecustomer_name",
+          "errormessage": "请选择客户名称",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "客户名称"
         }
       },
@@ -194,10 +194,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator3",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写汇款金额 ",
           "controltovalidate": "ctrlSal_remittanceremittance_money",
+          "errormessage": "请填写汇款金额 ",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "汇款金额 "
         }
       },
@@ -206,23 +206,11 @@
         "attrs": {
           "id": "XRequiredFieldValidator7",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请维护客户编号 ",
           "controltovalidate": "ctrlSal_remittancecustomer_code",
-          "innerhtml": "客户编号 "
-        }
-      },
-      "XRequiredFieldValidator8": {
-        "ctype": "aspxform:xrequiredfieldvalidator",
-        "attrs": {
-          "id": "XRequiredFieldValidator8",
-          "runat": "server",
-          "display": "None",
+          "errormessage": "请维护客户编号 ",
           "forecolor": "Red",
-          "errormessage": "请维护付款人",
-          "controltovalidate": "ctrlSal_remittanceremittance_man",
-          "innerhtml": "付款人"
+          "display": "None",
+          "innerhtml": "客户编号 "
         }
       },
       "XRequiredFieldValidator4": {
@@ -230,10 +218,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator4",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择类型",
           "controltovalidate": "XDropDownList1",
+          "errormessage": "请选择类型",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "类型"
         }
       },
@@ -242,10 +230,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator5",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择汇款日期",
           "controltovalidate": "ctrlSal_remittanceremittance_date",
+          "errormessage": "请选择汇款日期",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "汇款日期"
         }
       },
@@ -254,10 +242,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator6",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择收款人",
           "controltovalidate": "XDropDownList2",
+          "errormessage": "请选择收款人",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "收款人"
         }
       }

@@ -77,7 +77,7 @@
                                         {
                                             header: '检验人员', dataIndex: 'operator_name', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
+                                        { header: '操作', dataIndex: 'test_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

@@ -62,7 +62,7 @@
                     { header: '计划单价（元）', dataIndex: 'plan_price', width: 100, align: 'left', sortable: true },
                     { header: '总金额（元）', dataIndex: 'total_price', width: 100, align: 'left', sortable: true },
                     { header: '备注', dataIndex: 'planpur_remarks', width: 100, align: 'left', sortable: true },
-                    { header: '操作', width: 100, align: 'center',flex:1, sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
+                    { header: '操作', dataIndex: 'plan_pur_id', width: 100, align: 'center', flex: 1, sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

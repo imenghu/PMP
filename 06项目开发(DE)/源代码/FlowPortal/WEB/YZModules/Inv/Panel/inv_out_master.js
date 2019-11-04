@@ -69,7 +69,7 @@
                                         },
                                         { header: '备注', dataIndex: 'outmaster_remarks', width: 100,flex:1, align: 'left', sortable: true
                                         },
-                                        { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo} },
+                                        { header: '操作', dataIndex: 'out_master_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {
@@ -179,8 +179,8 @@
             cls: 'yz-tbar-module',
             items: [
                 me.btnNew,
-                me.btnEdit,
-                me.btnDelete,
+                //me.btnEdit,
+                //me.btnDelete,
                 '|',
                 me.btnTrace,
                 me.btnExcelExport,

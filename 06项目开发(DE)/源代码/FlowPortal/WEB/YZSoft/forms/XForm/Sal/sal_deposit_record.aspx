@@ -211,7 +211,6 @@ $Scripts-->
                 </tr>
                 <tr>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择经销商" ControlToValidate="ctrlSal_deposit_recordpayment_account">经销商</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
                     </td>

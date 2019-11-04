@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-25T12:03:48.4940202+08:00",
+  "generateAt": "2019-11-04T17:05:15.1566887+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {
@@ -299,18 +299,6 @@
           "errormessage": "请选择财务名称",
           "controltovalidate": "XDropDownList4",
           "innerhtml": "财务名称"
-        }
-      },
-      "XRequiredFieldValidator4": {
-        "ctype": "aspxform:xrequiredfieldvalidator",
-        "attrs": {
-          "id": "XRequiredFieldValidator4",
-          "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择经销商",
-          "controltovalidate": "ctrlSal_deposit_recordpayment_account",
-          "innerhtml": "经销商"
         }
       },
       "XRequiredFieldValidator5": {

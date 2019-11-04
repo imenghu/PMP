@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-22T20:36:49.7162114+08:00",
+  "generateAt": "2019-11-01T17:25:50.2222273+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -58,16 +58,15 @@
           "readonly": "True"
         }
       },
-      "XDataBrowserButton1": {
-        "ctype": "aspxform:xdatabrowserbutton",
+      "XCustomBrowserButton1": {
+        "ctype": "aspxform:xcustombrowserbutton",
         "attrs": {
-          "id": "XDataBrowserButton1",
+          "id": "XCustomBrowserButton1",
           "runat": "server",
-          "width": "18px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_name->\"产成品\"",
-          "displaycolumns": "first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:;base_unit:",
+          "xclass": "YZSoft.forms.field.dialogs.MaterialClassButton",
+          "width": "21px",
           "datamap": "mat_name->SFDATA:prod_report3.Prod_name;mat_spec->SFDATA:prod_report3.spec",
-          "appendmode": "ClearAndAppend"
+          "filter": "first_name->\"产成品\""
         }
       },
       "ctrlprod_report3spec": {
@@ -191,6 +190,18 @@
           "fieldname": "部门名称"
         }
       },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "width": "18px",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_name->\"产成品\"",
+          "displaycolumns": "first_name:一级物料名称;second_name:二级物料名称;third_name:三级物料名称;fourth_name:四级物料名称;mat_name:物料名称;mat_spec:型号;base_unit:单位",
+          "datamap": "mat_name->SFDATA:prod_report3.Prod_name;mat_spec->SFDATA:prod_report3.spec",
+          "appendmode": "ClearAndAppend"
+        }
+      },
       "table1": {
         "ctype": "wrap",
         "attrs": {
@@ -210,7 +221,8 @@
           "ctrlProd_report1Company",
           "ctrlProd_report1CompanyName",
           "ctrlProd_report1Dept",
-          "ctrlProd_report1DeptName"
+          "ctrlProd_report1DeptName",
+          "XDataBrowserButton1"
         ]
       }
     },
@@ -269,7 +281,7 @@
       "XRadioButtonList1",
       "ctrlprod_report3yield",
       "ctrlprod_report3Prod_name",
-      "XDataBrowserButton1",
+      "XCustomBrowserButton1",
       "ctrlprod_report3spec",
       "ctrlprod_report3input_date",
       "ctrlprod_report3today_saka_amount",

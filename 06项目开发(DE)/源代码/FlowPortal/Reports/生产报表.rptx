@@ -1,14 +1,6 @@
 ﻿{
-  "author": {
-    "uid": "sf",
-    "name": "sf",
-    "createat": "2019-10-18 11:20:23"
-  },
-  "lastModifier": {
-    "uid": "sf",
-    "name": "sf",
-    "date": "2019-10-18 17:24:28"
-  },
+  "author": null,
+  "lastModifier": null,
   "property": {
     "hidden": false
   },

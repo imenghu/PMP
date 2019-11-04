@@ -63,7 +63,7 @@ namespace Prod
                         List<string> ls = new List<string>();
                         foreach (Member member in positions)
                         {
-                            OU ou = member.GetParentOU(cn);
+                            OU ou = member.GetParentOU(cn, "公司");
                             ls.Add(string.Format("Company='{0}'", ou.Code));
                         }
                         filter = string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray()));
@@ -78,7 +78,7 @@ namespace Prod
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR  mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR  mat_name LIKE N'%{0}%' OR  tank_id LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(mat_name))
                     filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%'", queryProvider.EncodeText(mat_name)));
                 if (!string.IsNullOrEmpty(tank_id))

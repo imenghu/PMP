@@ -159,16 +159,6 @@
             items: [me.grid]
         };
 
-        me.sts = Ext.create('YZSoft.src.sts', {
-            tbar: me.toolBar,
-            store: me.store,
-            sm: me.grid.getSelectionModel(),
-            request: {
-                params: {
-                    Method: 'GetProcessingPermision'
-                }
-            }
-        });
         Ext.apply(cfg, config);
         me.callParent([cfg]);
     },

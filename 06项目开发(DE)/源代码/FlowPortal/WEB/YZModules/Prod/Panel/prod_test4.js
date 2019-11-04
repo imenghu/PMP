@@ -107,7 +107,7 @@
                                         {
                                             header: '出酒日期', dataIndex: 'prod_date', width: 100, align: 'left', sortable: true, renderer: XYSoft.Render.renderDateYMD
                                         },
-                                        { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
+                                        { header: '操作', dataIndex: 'test_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

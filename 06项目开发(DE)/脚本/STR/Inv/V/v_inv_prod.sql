@@ -4,25 +4,28 @@ if exists (select * from sysobjects where id = object_id(N'[dbo].[v_inv_prod]') 
      drop view [dbo].[v_inv_prod]
 GO
 
-CREATE VIEW dbo.v_inv_prod
+CREATE VIEW [dbo].[v_inv_prod]
 AS
 WITH A AS (SELECT   Company, CompanyName, depot_id, depot_name, mat_code, - SUM(CONVERT(float, out_stnum)) 
                                    AS out_stnum
                    FROM      dbo.inv_prod_out
-                   GROUP BY CompanyName, Company, depot_id, depot_name, mat_code), B AS
+                   GROUP BY CompanyName, Company, depot_id, depot_name, mat_code,state having state =1), B AS
     (SELECT   Company, CompanyName, depot_id, depot_name, mat_code, SUM(CONVERT(float, in_stnum)) AS out_stnum
      FROM      dbo.inv_prod_in
-     GROUP BY Company, CompanyName, depot_id, depot_name, mat_code), C AS
+     GROUP BY Company, CompanyName, depot_id, depot_name, mat_code,state  having state =1), 
+	 C AS
     (SELECT   Company, CompanyName, depot_id, depot_name, mat_code, out_stnum
-     FROM      A AS A_1
+     FROM      A AS A_1 
      UNION
      SELECT   Company, CompanyName, depot_id, depot_name, mat_code, out_stnum
-     FROM      B AS B_1), D AS
+     FROM      B AS B_1), 
+	 D AS
     (SELECT   Company, CompanyName, depot_id, depot_name, mat_code, SUM(out_stnum) AS invnum
      FROM      C AS C_1
      GROUP BY Company, CompanyName, depot_id, depot_name, mat_code)
+
     SELECT   D_1.Company, D_1.CompanyName, D_1.depot_id, D_1.depot_name, D_1.mat_code, D_1.invnum, 
-                    dbo.ctl_material.mat_name, dbo.ctl_material.mat_spec, dbo.ctl_material.base_unit
+                    dbo.ctl_material.mat_name, dbo.ctl_material.mat_spec, dbo.ctl_material.base_unit as in_stnum_unit
     FROM      D AS D_1 INNER JOIN
                     dbo.ctl_material ON D_1.mat_code = dbo.ctl_material.mat_code
 

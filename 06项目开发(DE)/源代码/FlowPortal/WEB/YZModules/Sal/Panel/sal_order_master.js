@@ -89,7 +89,7 @@
                     },
 
 
-                    { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } }
+                    { header: '操作', dataIndex: 'order_master_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } }
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

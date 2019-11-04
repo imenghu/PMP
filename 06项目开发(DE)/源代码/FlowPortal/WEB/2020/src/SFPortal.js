@@ -179,8 +179,9 @@ Ext.define('2020.src.SFPortal', {
                         me.btnMessage,
                         //me.btnEMIP,
                         //me.btnLang,
-                        me.btnUser,
-                        me.btnApps
+                        me.btnUser
+                        //,
+                        //me.btnApps
                     ]
                 });
 

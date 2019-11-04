@@ -60,7 +60,7 @@ using Newtonsoft.Json.Linq;
                         List<string> ls = new List<string>();
                         foreach (Member member in positions)
                         {
-                            OU ou = member.GetParentOU(cn);
+                            OU ou = member.GetParentOU(cn, "公司");
                             ls.Add(string.Format("Company='{0}'", ou.Code));
                         }
                         filter = string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray()));
@@ -75,7 +75,7 @@ using Newtonsoft.Json.Linq;
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%' OR CreateUser LIKE N'%{0}%' OR plan_pur_year LIKE N'%{0}%' OR mat_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("CompanyName LIKE N'%{0}%'  OR workshop LIKE N'%{0}%' or product_line LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
             }
 
             if (!String.IsNullOrEmpty(filter))

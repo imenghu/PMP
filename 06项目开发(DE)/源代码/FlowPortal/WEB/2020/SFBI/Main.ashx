@@ -12,7 +12,7 @@ namespace BPMApp
         {
             object[] modules = new object[]{
                 new {
-                    id = "SZTY",
+                    id = "SF",
                     title = "数字天源",
                     //modulePerm = new YZModulePermision("e52e8214-6e6e-4132-9873-d33a54eb977d", YZModuleDeniedBehavior.Hide),
                     navigator = new {

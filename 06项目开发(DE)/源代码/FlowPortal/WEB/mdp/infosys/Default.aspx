@@ -215,7 +215,7 @@
     <!--        </b>-->
     <!--    </a>-->
     <!--</div>-->
-    <iframe style="display:none" src='../../fwp/brower.html?objpath=/project/reports/infosys/platform/take_bpm.fwp'></iframe>
+    <%--<iframe style="display:none" src='../../fwp/brower.html?objpath=/project/reports/infosys/platform/take_bpm.fwp'></iframe>--%>
     <script src="mdp/infosys/lib/jquery/jquery.js"></script>
     <script src="mdp/infosys/js/public.js"></script>
     <script src="mdp/infosys/js/index.js"></script>

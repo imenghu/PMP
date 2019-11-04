@@ -30,8 +30,8 @@ $Scripts-->
                         品名 
                     </td>
                     <td width="187" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XTextBox id="ctrlprod_report4mat_name" runat="server" width="88%" XDataBind="SFDATA:prod_report4.mat_name" FieldName="品名" ReadOnly="True"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" XClass="YZSoft.Forms.Field.DataBrowserButton" Height="18px" Text="..." UseSubmitBehavior="False" PopupWndHeight="-1" PopupWndWidth="-1" DataMap="mat_name->SFDATA:prod_report4.mat_name" DisplayColumns="first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:" XDataSource='DataSource:SFDATA;TableName:ctl_material;Filter:first_name->"产成品"' Width="16px"></aspxform:XDataBrowserButton>
+                        <aspxform:XTextBox id="ctrlprod_report4mat_name" runat="server" width="85%" XDataBind="SFDATA:prod_report4.mat_name" FieldName="品名" ReadOnly="True"></aspxform:XTextBox>
+                        <aspxform:XCustomBrowserButton id="XCustomBrowserButton1" runat="server" XClass="YZSoft.forms.field.dialogs.MaterialClassButton" Filter='first_name->"半成品",second_name->"啤酒",third_name->"麦汁"' DataMap="mat_name->SFDATA:prod_report4.mat_name" Width="21px"></aspxform:XCustomBrowserButton>
                     </td>
                     <td width="177" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         日期 
@@ -265,6 +265,7 @@ $Scripts-->
                 </tr>
                 <tr>
                     <td>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" XClass="YZSoft.Forms.Field.DataBrowserButton" DataMap="mat_name->SFDATA:prod_report4.mat_name" Width="16px" Height="18px" Text="..." UseSubmitBehavior="False" PopupWndHeight="-1" PopupWndWidth="-1" DisplayColumns="first_name:一级物料名称;second_name:二级物料名称;third_name:三级物料名称;fourth_name:四级物料名称;mat_name:物料名称;mat_spec:型号" XDataSource='DataSource:SFDATA;TableName:ctl_material;Filter:first_name->"半成品",second_name->"啤酒",third_name->"麦汁"'></aspxform:XDataBrowserButton>
                     </td>
                     <td>
                         <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写锅次" ControlToValidate="ctrlprod_report4Boiler">锅次</aspxform:XRequiredFieldValidator>

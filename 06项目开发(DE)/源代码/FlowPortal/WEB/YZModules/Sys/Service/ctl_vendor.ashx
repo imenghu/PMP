@@ -110,7 +110,7 @@ namespace Sys
                         List<string> ls = new List<string>();
                         foreach (Member member in positions)
                         {
-                            OU ou = member.GetParentOU(cn);
+                            OU ou = member.GetParentOU(cn, "公司");
                             ls.Add(string.Format("Company='{0}'", ou.Code));
                         }
                         filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
@@ -126,7 +126,7 @@ namespace Sys
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("vendor_name LIKE N'%{0}%' OR mat_name LIKE N'%{0}%' OR CompanyName LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("vendor_name LIKE N'%{0}%' OR mat_name LIKE N'%{0}%' OR CompanyName LIKE N'%{0}%' or vendor_contact LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(proc_status))
                     filter = queryProvider.CombinCond(filter, String.Format("vendor_name LIKE N'%{0}%' ", queryProvider.EncodeText(proc_status)));
                 if (!string.IsNullOrEmpty(mat_name))

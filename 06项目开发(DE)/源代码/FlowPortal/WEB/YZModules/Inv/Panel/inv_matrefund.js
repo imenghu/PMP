@@ -64,7 +64,7 @@
                                         },
                                         { header: '审批状态', dataIndex: 'refund_state', width: 100, align: 'center', sortable: true,renderer:XYSoft.Render.renderStatus
                                         },
-                                        { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo} }
+                                        { header: '操作', dataIndex: 'mat_refund_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } }
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {
@@ -159,7 +159,7 @@
             items: [
                 me.btnNew,
                 //me.btnEdit,
-                me.btnDelete,
+                //me.btnDelete,
                 '|',
                 me.btnTrace,
                 me.btnExcelExport,

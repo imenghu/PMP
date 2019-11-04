@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-22T11:22:31.1011825+08:00",
+  "generateAt": "2019-10-27T11:55:58.0603467+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -113,7 +113,7 @@
           "valuecolumn": "mat_unit_name",
           "displaycolumn": "mat_unit_name",
           "datamap": "numerator->SFDATA:proc_demand_detail.sl_st_scale",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,if_base_unit->varState"
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,state->varState"
         }
       },
       "XTextBox6": {
@@ -202,14 +202,14 @@
             "ctype": "asp:listitem",
             "attrs": {
               "selected": "True",
-              "value": "0",
+              "value": "1",
               "innerhtml": "否"
             }
           },
           {
             "ctype": "asp:listitem",
             "attrs": {
-              "value": "1",
+              "value": "2",
               "innerhtml": "是"
             }
           }

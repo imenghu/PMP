@@ -79,7 +79,7 @@ namespace Sys
             {
                 //应用关键字过滤
                 if (!string.IsNullOrEmpty(keyword))
-                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%' OR mat_code LIKE N'%{0}%' ", queryProvider.EncodeText(keyword)));
+                    filter = queryProvider.CombinCond(filter, String.Format("mat_name LIKE N'%{0}%' OR mat_code LIKE N'%{0}%' or first_name LIKE N'%{0}%'", queryProvider.EncodeText(keyword)));
                 if (!string.IsNullOrEmpty(plan_pur_year))
                     filter = queryProvider.CombinCond(filter, String.Format("mat_code LIKE N'%{0}%' ", queryProvider.EncodeText(plan_pur_year)));
                 if (!string.IsNullOrEmpty(mat_name))

@@ -58,7 +58,7 @@ $Scripts-->
                     </td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="ctrlprod_report3Prod_name" runat="server" width="88%" XDataBind="SFDATA:prod_report3.Prod_name" FieldName="品名" ReadOnly="True"></aspxform:XTextBox>
-                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="18px" XDataSource='DataSource:SFDATA;TableName:ctl_material;Filter:first_name->"产成品"' DisplayColumns="first_name:;second_name:;third_name:;fourth_name:;mat_name:;mat_spec:;base_unit:" DataMap="mat_name->SFDATA:prod_report3.Prod_name;mat_spec->SFDATA:prod_report3.spec" AppendMode="ClearAndAppend"></aspxform:XDataBrowserButton>
+                        <aspxform:XCustomBrowserButton id="XCustomBrowserButton1" runat="server" XClass="YZSoft.forms.field.dialogs.MaterialClassButton" Width="21px" DataMap="mat_name->SFDATA:prod_report3.Prod_name;mat_spec->SFDATA:prod_report3.spec" Filter='first_name->"产成品"'></aspxform:XCustomBrowserButton>
                     </td>
                     <td width="100" height="25" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         规格 
@@ -154,6 +154,7 @@ $Scripts-->
                         <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" ControlToValidate="ctrlprod_report3product_line" ErrorMessage="请填写车间" ForeColor="Red" Display="None">车间</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
+                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="18px" XDataSource='DataSource:SFDATA;TableName:ctl_material;Filter:first_name->"产成品"' DisplayColumns="first_name:一级物料名称;second_name:二级物料名称;third_name:三级物料名称;fourth_name:四级物料名称;mat_name:物料名称;mat_spec:型号;base_unit:单位" DataMap="mat_name->SFDATA:prod_report3.Prod_name;mat_spec->SFDATA:prod_report3.spec" AppendMode="ClearAndAppend"></aspxform:XDataBrowserButton>
                     </td>
                 </tr>
                 <tr>

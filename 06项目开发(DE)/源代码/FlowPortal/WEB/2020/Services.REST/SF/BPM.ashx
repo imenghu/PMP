@@ -31,6 +31,12 @@ namespace BPMApp
                             badgeId = "sharetaskcount",
                             badgeCls = "yz-nav-badge-sharetaskcount",
                             xclass = "YZSoft.bpm.sharetask.Panel"
+                        },
+                        new {
+                            id = "Drafts",
+                            text = Resources.YZStrings.Module_Drafts,
+                            glyph = 0xeb08,
+                            xclass = "YZSoft.bpm.draft.Panel"
                         }
                     }
                 },/* 
@@ -115,6 +121,13 @@ namespace BPMApp
                             text = Resources.YZStrings.Module_UserInfo,
                             glyph = 0xea98,
                             xclass = "YZSoft.personal.UserInfoTab",
+                            tabWrap = false
+                        },
+                        new {
+                            id = "ChangePasswordPanel",
+                            text = Resources.YZStrings.All_ChangePwd,
+                            glyph = 0xea98,
+                            xclass = "YZSoft.personal.ChangePasswordPanel",
                             tabWrap = false
                         },
                         new {

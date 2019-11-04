@@ -36,13 +36,13 @@ $Scripts-->
                         省 
                     </td>
                     <td width="215" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:ctl_dealer.province_id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1" ValueColumn="id" DisplayColumn="name" PromptText="--请选择--"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList1" runat="server" PromptText="--请选择--" DisplayColumn="name" ValueColumn="id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var1" XDataBind="SFDATA:ctl_dealer.province_id"></aspxform:XDropDownList>
                     </td>
                     <td width="101" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         市 
                     </td>
                     <td width="215" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
-                        <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:ctl_dealer.city_id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_dealer.province_id" ValueColumn="id" DisplayColumn="name" PromptText="--请选择--"></aspxform:XDropDownList>
+                        <aspxform:XDropDownList id="XDropDownList2" runat="server" PromptText="--请选择--" DisplayColumn="name" ValueColumn="id" XDataSource="DataSource:SFDATA;TableName:ctl_area;Filter:arealevel->var2,parent_id->SFDATA:ctl_dealer.province_id" XDataBind="SFDATA:ctl_dealer.city_id"></aspxform:XDropDownList>
                     </td>
                     <td width="101" class="xfld" style="BORDER-TOP: black 1px solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         &nbsp;销售大区</td>
@@ -51,7 +51,7 @@ $Scripts-->
                     </td>
                 </tr>
                 <tr>
-                    <td height="34" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                    <td height="35" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         经销商编码</td>
                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                         <aspxform:XTextBox id="XTextBox8" runat="server" XDataBind="SFDATA:ctl_dealer.dealer_code" width="100%"></aspxform:XTextBox>
@@ -170,43 +170,36 @@ $Scripts-->
                 </tr>
                 <tr>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择省份" ControlToValidate="XDropDownList1">省</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" ControlToValidate="XDropDownList1" ErrorMessage="请选择省份" ForeColor="Red" Display="None">省</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择城市" ControlToValidate="XDropDownList2">市</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" ControlToValidate="XDropDownList2" ErrorMessage="请选择城市" ForeColor="Red" Display="None">市</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写经销商名称" ControlToValidate="ctrlctl_dealerdealer_name">经销商名称</aspxform:XRequiredFieldValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator4" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写纳税人登记号" ControlToValidate="ctrlctl_dealertax_cer_no">纳税人登记号</aspxform:XRequiredFieldValidator>
-                    </td>
-                    <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator5" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写联系人" ControlToValidate="ctrlctl_dealerdealer_contact">联系人</aspxform:XRequiredFieldValidator>
-                    </td>
-                    <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator6" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写联系人电话" ControlToValidate="ctrlctl_dealerdealer_tel">联系人电话</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator3" runat="server" ControlToValidate="ctrlctl_dealerdealer_name" ErrorMessage="请填写经销商名称" ForeColor="Red" Display="None">经销商名称</aspxform:XRequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator7" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写联系人邮箱" ControlToValidate="ctrlctl_dealerdealer_email">联系人邮箱</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator8" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写邮编" ControlToValidate="ctrlctl_dealerdealer_zipcode">邮编</aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator9" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写微信" ControlToValidate="ctrlctl_dealerdealer_wechat">微信</aspxform:XRequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator10" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写QQ " ControlToValidate="ctrlctl_dealerdealer_qq">QQ </aspxform:XRequiredFieldValidator>
                     </td>
                     <td>
-                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator11" runat="server" Display="None" ForeColor="Red" ErrorMessage="请填写地址" ControlToValidate="XTextBox1">地址</aspxform:XRequiredFieldValidator>
+                        <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator8" runat="server" ControlToValidate="ctrlctl_dealerdealer_zipcode" ErrorMessage="请填写邮编" ForeColor="Red" Display="None">邮编</aspxform:XRequiredFieldValidator>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
                     </td>
                     <td>
                     </td>

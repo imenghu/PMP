@@ -83,7 +83,7 @@
                                         {
                                             header: '备注', dataIndex: 'memo', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
+                                        { header: '操作', dataIndex: 'report_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {
@@ -167,16 +167,7 @@
                         xclass: 'YZSoft.src.form.field.Search',
                         store: me.store,
                         width: 220,
-                        createSearchPanel: function () {
-                            var pnl = Ext.create({
-                                xclass: 'YZModules.Prod.Panel.Prod_report1_SearchPanel',
-                                region: 'north',
-                                store: me.store
-                            });
-
-                            me.insert(0, pnl);
-                            return pnl;
-                        }
+                      
                     }]
             },
             items: [me.grid]

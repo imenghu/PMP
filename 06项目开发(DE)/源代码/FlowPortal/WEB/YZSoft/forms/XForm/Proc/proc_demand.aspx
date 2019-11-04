@@ -52,6 +52,17 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        合计</td>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        <aspxform:XTextBox id="XTextBox17" runat="server" XDataBind="varhj" width="100%" BorderColor="#DCDCDC" Format="type:currency;.2" Express="sum(SFDATA:proc_demand_detail.item_price)"></aspxform:XTextBox>
+                                    </td>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
+                                        元</td>
+                                    <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="3">
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td height="84" class="xfld" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none">
                                         备注</td>
                                     <td style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="5">
@@ -62,9 +73,8 @@
                                     <td height="34" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="4">
                                         采购明细</td>
                                     <td align="right" class="xttl" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: medium none" colspan="2">
-                                        <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" HiddenExpress="Global.StepName!='开始'" MultiSelect="True" DataMap="mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位" XDataSource="DataSource:SFDATA;TableName:ctl_material;Filter:state->varState" Text="选择物料"></aspxform:XDataBrowserButton>
-                                        <aspxform:XAddBlockButton id="XAddBlockButton2" runat="server" HiddenExpress="Global.StepName!='开始'" Text="新增" DataSource="SFDATA" TableName="proc_demand_detail"></aspxform:XAddBlockButton>
-                                        <aspxform:XExcelDataImportButton id="XExcelDataImportButton2" runat="server" text="Excel导入"></aspxform:XExcelDataImportButton>
+                                        <aspxform:XCustomBrowserButton id="XCustomBrowserButton1" runat="server" XClass="YZSoft.forms.field.dialogs.MaterialClassMultiSelectButton" Filter="state->varState" Width="70px" DataMap="mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit" Text="选择物料"></aspxform:XCustomBrowserButton>
+                                        <aspxform:XAddBlockButton id="XAddBlockButton2" runat="server" Text="新增" DataSource="SFDATA" TableName="proc_demand_detail" HiddenExpress="Global.StepName!='开始'"></aspxform:XAddBlockButton>
                                         <aspxform:XExcelDataExportButton id="XExcelDataExportButton1" runat="server" Text="Excel导出" ExportTableID="tbDetail"></aspxform:XExcelDataExportButton>
                                     </td>
                                 </tr>
@@ -111,7 +121,7 @@
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                                             <aspxform:XTextBox id="XTextBox2" runat="server" XDataBind="SFDATA:proc_demand_detail.mat_code" width="120px" BorderColor="#DCDCDC" DisableExpress="1" FieldName="物料编码"></aspxform:XTextBox>
-                                            <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" HiddenExpress="Global.StepName!='开始'" DataMap="mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位" XDataSource="DataSource:SFDATA;TableName:ctl_material;Filter:state->varState" Width="21px"></aspxform:XDataBrowserButton>
+                                            <aspxform:XCustomBrowserButton id="XCustomBrowserButton2" runat="server" XClass="YZSoft.forms.field.dialogs.MaterialClassButton" Filter="state->varState" Width="21px" DataMap="mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit"></aspxform:XCustomBrowserButton>
                                             <aspxform:XTextBox id="XTextBox15" runat="server" XDataBind="SFDATA:proc_demand_detail.mat_id" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="物料编码" HiddenExpress="1"></aspxform:XTextBox>
                                             <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator1" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择物料名称" ControlToValidate="XTextBox2">物料名称</aspxform:XRequiredFieldValidator>
                                         </td>
@@ -122,7 +132,7 @@
                                             <aspxform:XTextBox id="XTextBox4" runat="server" XDataBind="SFDATA:proc_demand_detail.mat_spec" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="规格"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_demand_detail.demand_slnum_unit" FieldName="采购单位" DataMap="numerator->SFDATA:proc_demand_detail.sl_st_scale" XDataSource="DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,state->varState" Width="100%" ValueColumn="mat_unit_name" DisplayColumn="mat_unit_name"></aspxform:XDropDownList>
+                                            <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_demand_detail.demand_slnum_unit" FieldName="采购单位" Width="100%" DataMap="numerator->SFDATA:proc_demand_detail.sl_st_scale" ValueColumn="mat_unit_name" DisplayColumn="mat_unit_name" XDataSource="DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,state->varState"></aspxform:XDropDownList>
                                             <aspxform:XRequiredFieldValidator id="XRequiredFieldValidator2" runat="server" Display="None" ForeColor="Red" ErrorMessage="请选择采购单位" ControlToValidate="XDropDownList2">采购单位</aspxform:XRequiredFieldValidator>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
@@ -175,6 +185,7 @@
                                         <aspxform:XTextBox id="XTextBox16" runat="server" XDataBind="SFDATA:proc_demand.total_price" width="100%" BorderColor="#DCDCDC" Express="sum(SFDATA:proc_demand_detail.item_price)"></aspxform:XTextBox>
                                     </td>
                                     <td width="34%">
+                                        <aspxform:XDataBrowserButton id="XDataBrowserButton2" runat="server" DataMap="mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit" Text="选择物料" HiddenExpress="Global.StepName!='开始'" XDataSource="DataSource:SFDATA;TableName:ctl_material;Filter:state->varState" MultiSelect="True" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位"></aspxform:XDataBrowserButton>
                                     </td>
                                 </tr>
                                 <tr>
@@ -184,6 +195,7 @@
                                         <aspxform:XTextBox id="XTextBox8" onclick="WdatePicker({dateFmt:'yyyy'})" runat="server" XDataBind="SFDATA:proc_demand.CreateUser" width="100%" BorderColor="#DCDCDC"></aspxform:XTextBox>
                                     </td>
                                     <td>
+                                        <aspxform:XDataBrowserButton id="XDataBrowserButton1" runat="server" Width="21px" DataMap="mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit" HiddenExpress="Global.StepName!='开始'" XDataSource="DataSource:SFDATA;TableName:ctl_material;Filter:state->varState" DisplayColumns="mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位"></aspxform:XDataBrowserButton>
                                     </td>
                                 </tr>
                                 <tr>

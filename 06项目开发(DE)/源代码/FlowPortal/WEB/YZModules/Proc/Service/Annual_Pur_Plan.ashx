@@ -63,7 +63,7 @@ namespace Purchase
                         List<string> ls = new List<string>();
                         foreach (Member member in positions)
                         {
-                            OU ou = member.GetParentOU(cn);
+                            OU ou = member.GetParentOU(cn,"公司");
                             ls.Add(string.Format("Company='{0}'", ou.Code));
                         }
                         filter = queryProvider.CombinCond(filter, string.Format("({0})", queryProvider.CombinCondOR(ls.ToArray())));
@@ -145,8 +145,8 @@ namespace Purchase
                             item["mat_spec"] = reader.ReadString("mat_spec");
                             item["plan_total_num"] = reader.ReadDecimal("plan_total_num");
                             item["plan_stnum_unit"] = reader.ReadString("plan_stnum_unit");
-                            item["plan_price"] = reader.ReadDecimal("plan_price");
-                            item["total_price"] = reader.ReadDecimal("total_price");
+                            item["plan_price"] = reader.ReadString("plan_price");
+                            item["total_price"] = reader.ReadString("total_price");
                             item["planpur_remarks"] = reader.ReadString("planpur_remarks");
                         }
                         

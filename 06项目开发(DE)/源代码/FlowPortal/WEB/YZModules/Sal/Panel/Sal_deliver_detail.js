@@ -78,7 +78,7 @@
                                             header: '货号', dataIndex: 'deliver_no', width: 100, align: 'left', sortable: true
                                         },
                                         {
-                                            header: '发货数量', dataIndex: 'deliver_number', width: 100, align: 'left', sortable: true
+                                            header: '发货金额', dataIndex: 'deliver_number', width: 100, align: 'left', sortable: true
                                         },
                                         {
                                             header: '发货人', dataIndex: 'consignor', width: 100, align: 'left', sortable: true
@@ -92,7 +92,7 @@
                                         {
                                             header: '创建日期', dataIndex: 'createdate', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '操作', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
+                                        { header: '操作', dataIndex: 'deliver_detail_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

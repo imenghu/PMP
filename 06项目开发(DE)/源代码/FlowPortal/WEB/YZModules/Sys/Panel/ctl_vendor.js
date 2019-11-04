@@ -74,8 +74,8 @@
                                         {
                                             header: '是否正式供应商', dataIndex: 'vendor_state', width: 100, align: 'left', sortable: true,renderer:XYSoft.Render.renderYesOrNo
                                         },
-                                        { header: '详情', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
-                                        { header: '物料维护', width: 100, align: 'center', sortable: true, renderer: me.renderMat, listeners: { scope: me, click: me.onClickMat } }
+                                        { header: '详情', dataIndex: 'CompanyName', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
+                                        { header: '物料维护', dataIndex: 'CompanyName', width: 100, align: 'center', sortable: true, renderer: me.renderMat, listeners: { scope: me, click: me.onClickMat } }
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

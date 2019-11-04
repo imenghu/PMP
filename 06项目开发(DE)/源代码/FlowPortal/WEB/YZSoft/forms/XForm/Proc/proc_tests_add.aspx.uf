@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-22T14:10:35.5514736+08:00",
+  "generateAt": "2019-11-04T17:04:14.7600938+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -46,15 +46,15 @@
           "xdatabind": "SFDATA:proc_tests.mat_name"
         }
       },
-      "XDataBrowserButton1": {
-        "ctype": "aspxform:xdatabrowserbutton",
+      "XCustomBrowserButton2": {
+        "ctype": "aspxform:xcustombrowserbutton",
         "attrs": {
-          "id": "XDataBrowserButton1",
+          "id": "XCustomBrowserButton2",
           "runat": "server",
+          "xclass": "YZSoft.forms.field.dialogs.MaterialClassButton",
+          "filter": "state->1",
           "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
-          "datamap": "mat_code->SFDATA:proc_tests.mat_code;mat_name->SFDATA:proc_tests.mat_name;mat_spec->SFDATA:proc_tests.mat_spesc",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称"
+          "datamap": "mat_code->SFDATA:proc_tests.mat_code;mat_name->SFDATA:proc_tests.mat_name;mat_spec->SFDATA:proc_tests.mat_spesc"
         }
       },
       "XTextBox6": {
@@ -96,8 +96,8 @@
           "id": "XDataBrowserButton2",
           "runat": "server",
           "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_vendor",
           "datamap": "vendor_id->SFDATA:proc_tests.vendor_id;vendor_name->SFDATA:proc_tests.vendor_name",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_vendor",
           "displaycolumns": "vendor_name:供应商名称;vendor_contact:联系人;vendor_tel:联系电话;vendor_email:邮箱;vendor_addr:地址"
         }
       },
@@ -249,6 +249,17 @@
           "xdatabind": "SFDATA:proc_tests.vendor_id"
         }
       },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "width": "21px",
+          "datamap": "mat_code->SFDATA:proc_tests.mat_code;mat_name->SFDATA:proc_tests.mat_name;mat_spec->SFDATA:proc_tests.mat_spesc",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称"
+        }
+      },
       "table1": {
         "ctype": "wrap",
         "attrs": {
@@ -262,7 +273,8 @@
         },
         "ctypeorg": "table",
         "items": [
-          "XTextBox8"
+          "XTextBox8",
+          "XDataBrowserButton1"
         ]
       }
     },
@@ -321,7 +333,7 @@
       "XTextBox5",
       "XDateTimePicker1",
       "XTextBox3",
-      "XDataBrowserButton1",
+      "XCustomBrowserButton2",
       "XTextBox6",
       "XTextBox9",
       "XTextBox4",

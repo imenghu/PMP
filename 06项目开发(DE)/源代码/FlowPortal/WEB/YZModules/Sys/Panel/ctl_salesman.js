@@ -74,8 +74,8 @@
                                         {
                                             header: '备注', dataIndex: 'salesman_remarks', width: 100, align: 'left', sortable: true
                                         },
-                                        { header: '详情', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
-                                        { header: '对应经销商维护', width: 120, align: 'center', sortable: true, renderer: me.renderDealer, listeners: { scope: me, click: me.onClickDealer } }
+                                        { header: '详情', dataIndex: 'salesman_id', width: 100, align: 'center', sortable: true, renderer: me.renderRead, listeners: { scope: me, click: me.onClickNo } },
+                                        { header: '对应经销商维护', dataIndex: 'salesman_id', width: 120, align: 'center', sortable: true, renderer: me.renderDealer, listeners: { scope: me, click: me.onClickDealer } }
                 ]
             },
             bbar: Ext.create('Ext.toolbar.Paging', {

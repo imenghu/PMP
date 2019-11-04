@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-18T14:57:55.2279847+08:00",
+  "generateAt": "2019-11-01T19:34:28.4013671+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,8 +9,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_name",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_name"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_name",
+          "width": "100%"
         }
       },
       "ctrlctl_vendortax_cer_no": {
@@ -18,8 +18,8 @@
         "attrs": {
           "id": "ctrlctl_vendortax_cer_no",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.tax_cer_no"
+          "xdatabind": "SFDATA:ctl_vendor.tax_cer_no",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_zipcode": {
@@ -27,8 +27,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_zipcode",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_zipcode"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_zipcode",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_contact": {
@@ -36,8 +36,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_contact",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_contact"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_contact",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_tel": {
@@ -45,8 +45,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_tel",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_tel"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_tel",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_email": {
@@ -54,8 +54,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_email",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_email"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_email",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_wechat": {
@@ -63,8 +63,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_wechat",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_wechat"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_wechat",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorvendor_qq": {
@@ -72,8 +72,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_qq",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_qq"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_qq",
+          "width": "100%"
         }
       },
       "XDropDownList1": {
@@ -106,8 +106,8 @@
         "attrs": {
           "id": "ctrlctl_vendorvendor_addr",
           "runat": "server",
-          "width": "100%",
-          "xdatabind": "SFDATA:ctl_vendor.vendor_addr"
+          "xdatabind": "SFDATA:ctl_vendor.vendor_addr",
+          "width": "100%"
         }
       },
       "ctrlctl_vendorCreateUserName": {
@@ -115,8 +115,8 @@
         "attrs": {
           "id": "ctrlctl_vendorCreateUserName",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:ctl_vendor.CreateUserName",
+          "width": "100%",
           "disableexpress": "1"
         }
       },
@@ -125,8 +125,8 @@
         "attrs": {
           "id": "ctrlctl_vendorUpdateUserName",
           "runat": "server",
-          "width": "100%",
           "xdatabind": "SFDATA:ctl_vendor.UpdateUserName",
+          "width": "100%",
           "disableexpress": "1"
         }
       },
@@ -151,23 +151,11 @@
         "attrs": {
           "id": "XRequiredFieldValidator1",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写供应商名称",
           "controltovalidate": "ctrlctl_vendorvendor_name",
-          "innerhtml": "供应商名称"
-        }
-      },
-      "XRequiredFieldValidator2": {
-        "ctype": "aspxform:xrequiredfieldvalidator",
-        "attrs": {
-          "id": "XRequiredFieldValidator2",
-          "runat": "server",
-          "display": "None",
+          "errormessage": "请填写供应商名称",
           "forecolor": "Red",
-          "errormessage": "请填写纳税人登记号",
-          "controltovalidate": "ctrlctl_vendortax_cer_no",
-          "innerhtml": "纳税人登记号"
+          "display": "None",
+          "innerhtml": "供应商名称"
         }
       },
       "XRequiredFieldValidator3": {
@@ -175,10 +163,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator3",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写邮编",
           "controltovalidate": "ctrlctl_vendorvendor_zipcode",
+          "errormessage": "请填写邮编",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "邮编"
         }
       },
@@ -187,10 +175,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator4",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写联系人",
           "controltovalidate": "ctrlctl_vendorvendor_contact",
+          "errormessage": "请填写联系人",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "联系人"
         }
       },
@@ -199,10 +187,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator5",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写联系电话",
           "controltovalidate": "ctrlctl_vendorvendor_tel",
+          "errormessage": "请填写联系电话",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "联系电话"
         }
       },
@@ -211,10 +199,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator6",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写邮箱",
           "controltovalidate": "ctrlctl_vendorvendor_email",
+          "errormessage": "请填写邮箱",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "邮箱"
         }
       },
@@ -223,10 +211,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator7",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写微信",
           "controltovalidate": "ctrlctl_vendorvendor_wechat",
+          "errormessage": "请填写微信",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "微信"
         }
       },
@@ -235,10 +223,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator8",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写QQ",
           "controltovalidate": "ctrlctl_vendorvendor_qq",
+          "errormessage": "请填写QQ",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "QQ"
         }
       },
@@ -247,10 +235,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator9",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择是否正式供应商",
           "controltovalidate": "XDropDownList1",
+          "errormessage": "请选择是否正式供应商",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "是否正式供应商"
         }
       },
@@ -259,10 +247,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator10",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写地址",
           "controltovalidate": "ctrlctl_vendorvendor_addr",
+          "errormessage": "请填写地址",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "地址"
         }
       }

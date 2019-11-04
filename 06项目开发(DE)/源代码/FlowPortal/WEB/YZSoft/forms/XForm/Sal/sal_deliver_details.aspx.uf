@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-25T11:47:57.128502+08:00",
+  "generateAt": "2019-11-02T09:57:31.9902343+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -9,9 +9,9 @@
         "attrs": {
           "id": "ctrlSal_deliver_detailcustomer_name",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "170px",
           "xdatabind": "SFDATA:sal_deliver_details.customer_name",
-          "width": "170px"
+          "disableexpress": "1"
         }
       },
       "XDataBrowserButton3": {
@@ -19,10 +19,10 @@
         "attrs": {
           "id": "XDataBrowserButton3",
           "runat": "server",
-          "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_dealer;Filter:state->varState,Company->SFDATA:sal_deliver_details.Company",
+          "datamap": "area->SFDATA:sal_deliver_details.name;dealer_code->SFDATA:sal_deliver_details.customer_code;dealer_name->SFDATA:sal_deliver_details.customer_name;receiving_address->SFDATA:sal_deliver_details.receiving_address;dealer_contact->SFDATA:sal_deliver_details.receiver;dealer_tel->SFDATA:sal_deliver_details.receiving_mobile_phone",
           "displaycolumns": "area:销售大区;dealer_name:客户名称;phone_number:收货手机号;receiving_address:收货地址;dealer_contact:收货人",
-          "datamap": "area->SFDATA:sal_deliver_details.name;dealer_code->SFDATA:sal_deliver_details.customer_code;dealer_name->SFDATA:sal_deliver_details.customer_name;receiving_address->SFDATA:sal_deliver_details.receiving_address;dealer_contact->SFDATA:sal_deliver_details.receiver;dealer_tel->SFDATA:sal_deliver_details.receiving_mobile_phone"
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_dealer;Filter:state->varState,Company->SFDATA:sal_deliver_details.Company",
+          "width": "21px"
         }
       },
       "XTextBox12": {
@@ -30,9 +30,9 @@
         "attrs": {
           "id": "XTextBox12",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "SFDATA:sal_deliver_details.name",
-          "width": "100%"
+          "disableexpress": "1"
         }
       },
       "XTextBox13": {
@@ -40,8 +40,8 @@
         "attrs": {
           "id": "XTextBox13",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.receiver",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.receiver"
         }
       },
       "XTextBox14": {
@@ -49,8 +49,8 @@
         "attrs": {
           "id": "XTextBox14",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.receiving_mobile_phone",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.receiving_mobile_phone"
         }
       },
       "XTextBox9": {
@@ -58,8 +58,8 @@
         "attrs": {
           "id": "XTextBox9",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.receiving_address",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.receiving_address"
         }
       },
       "ctrlSal_deliver_detaildeliver_name": {
@@ -67,9 +67,9 @@
         "attrs": {
           "id": "ctrlSal_deliver_detaildeliver_name",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "170px",
           "xdatabind": "SFDATA:sal_deliver_details.deliver_name",
-          "width": "170px"
+          "disableexpress": "1"
         }
       },
       "XDataBrowserButton1": {
@@ -77,10 +77,10 @@
         "attrs": {
           "id": "XDataBrowserButton1",
           "runat": "server",
-          "width": "21px",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->2,state->1",
+          "datamap": "mat_id->SFDATA:sal_deliver_details.mat_id;mat_code->SFDATA:sal_deliver_details.mat_code;mat_name->SFDATA:sal_deliver_details.deliver_name;mat_spec->SFDATA:sal_deliver_details.mat_spesc;base_unit->SFDATA:sal_deliver_details.deliver_stnum_unit",
           "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:物料规格;base_unit:单位",
-          "datamap": "mat_id->SFDATA:sal_deliver_details.mat_id;mat_code->SFDATA:sal_deliver_details.mat_code;mat_name->SFDATA:sal_deliver_details.deliver_name;mat_spec->SFDATA:sal_deliver_details.mat_spesc;base_unit->SFDATA:sal_deliver_details.deliver_stnum_unit"
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:first_code->2,state->1",
+          "width": "21px"
         }
       },
       "XTextBox3": {
@@ -88,9 +88,9 @@
         "attrs": {
           "id": "XTextBox3",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "SFDATA:sal_deliver_details.mat_code",
-          "width": "100%"
+          "disableexpress": "1"
         }
       },
       "XTextBox4": {
@@ -98,9 +98,9 @@
         "attrs": {
           "id": "XTextBox4",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "SFDATA:sal_deliver_details.mat_spesc",
-          "width": "100%"
+          "disableexpress": "1"
         }
       },
       "XTextBox6": {
@@ -108,8 +108,8 @@
         "attrs": {
           "id": "XTextBox6",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.deliver_stnum",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.deliver_stnum"
         }
       },
       "XTextBox5": {
@@ -117,8 +117,8 @@
         "attrs": {
           "id": "XTextBox5",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.deliver_number",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.deliver_number"
         }
       },
       "XTextBox1": {
@@ -126,9 +126,9 @@
         "attrs": {
           "id": "XTextBox1",
           "runat": "server",
-          "disableexpress": "1",
+          "width": "100%",
           "xdatabind": "varfinal",
-          "width": "100%"
+          "disableexpress": "1"
         }
       },
       "XTextBox10": {
@@ -136,8 +136,8 @@
         "attrs": {
           "id": "XTextBox10",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.deliver_no",
           "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.deliver_no",
           "bordercolor": "#DCDCDC"
         }
       },
@@ -147,11 +147,11 @@
           "id": "XDropDownList1",
           "runat": "server",
           "xdatabind": "SFDATA:sal_deliver_details.depot_id",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot;Filter:state->varState,Company->SFDATA:sal_deliver_details.Company",
           "datamap": "depot_name->SFDATA:sal_deliver_details.depot_name",
-          "prompttext": "--请选择--",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_depot;Filter:state->varState,Company->SFDATA:sal_deliver_details.Company",
+          "displaycolumn": "depot_name",
           "valuecolumn": "depot_id",
-          "displaycolumn": "depot_name"
+          "prompttext": "--请选择--"
         }
       },
       "XTextBox11": {
@@ -159,8 +159,8 @@
         "attrs": {
           "id": "XTextBox11",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.consignor",
           "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.consignor",
           "bordercolor": "#DCDCDC"
         }
       },
@@ -169,8 +169,8 @@
         "attrs": {
           "id": "ctrlsal_deliver_detailstrans_name",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.trans_name",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.trans_name"
         }
       },
       "ctrlsal_deliver_detailstrans_mobile": {
@@ -178,8 +178,8 @@
         "attrs": {
           "id": "ctrlsal_deliver_detailstrans_mobile",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.trans_mobile",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.trans_mobile"
         }
       },
       "ctrlsal_deliver_detailsplate_number": {
@@ -187,8 +187,8 @@
         "attrs": {
           "id": "ctrlsal_deliver_detailsplate_number",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.plate_number",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.plate_number"
         }
       },
       "XDateTimePicker1": {
@@ -198,8 +198,8 @@
           "runat": "server",
           "xdatabind": "SFDATA:sal_deliver_details.deliver_date",
           "bordercolor": "#DCDCDC",
-          "borderstyle": "None",
-          "borderwidth": "1"
+          "borderwidth": "1",
+          "borderstyle": "None"
         }
       },
       "XTextBox7": {
@@ -207,8 +207,8 @@
         "attrs": {
           "id": "XTextBox7",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.summary",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.summary"
         }
       },
       "ctrlSal_deliver_detailcustomer_code": {
@@ -216,8 +216,8 @@
         "attrs": {
           "id": "ctrlSal_deliver_detailcustomer_code",
           "runat": "server",
-          "xdatabind": "SFDATA:Sal_deliver_details.customer_code",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:Sal_deliver_details.customer_code"
         }
       },
       "ctrlSal_deliver_detaildepot_id": {
@@ -225,8 +225,8 @@
         "attrs": {
           "id": "ctrlSal_deliver_detaildepot_id",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.depot_name",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.depot_name"
         }
       },
       "XTextBox15": {
@@ -234,8 +234,8 @@
         "attrs": {
           "id": "XTextBox15",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.mat_id",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.mat_id"
         }
       },
       "XTextBox16": {
@@ -243,8 +243,8 @@
         "attrs": {
           "id": "XTextBox16",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.deliver_stnum_unit",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.deliver_stnum_unit"
         }
       },
       "XTextBox2": {
@@ -252,8 +252,8 @@
         "attrs": {
           "id": "XTextBox2",
           "runat": "server",
-          "xdatabind": "varState",
           "width": "100%",
+          "xdatabind": "varState",
           "bordercolor": "#DCDCDC",
           "borderwidth": "1",
           "innerhtml": "1"
@@ -264,10 +264,10 @@
         "attrs": {
           "id": "XDropDownList2",
           "runat": "server",
-          "xdatasource": "DataSource:SFDATA;TableName:sal_deposit_record;Filter:customer_code->SFDATA:Sal_deliver_details.customer_code,state->varState",
           "datamap": "deposit_final_balance->varfinal",
-          "valuecolumn": "deposit_id",
-          "displaycolumn": "deposit_id"
+          "xdatasource": "DataSource:SFDATA;TableName:sal_deposit_record;Filter:customer_code->SFDATA:Sal_deliver_details.customer_code,state->varState",
+          "displaycolumn": "deposit_id",
+          "valuecolumn": "deposit_id"
         }
       },
       "XTextBox8": {
@@ -275,8 +275,8 @@
         "attrs": {
           "id": "XTextBox8",
           "runat": "server",
-          "xdatabind": "SFDATA:sal_deliver_details.Company",
-          "width": "100%"
+          "width": "100%",
+          "xdatabind": "SFDATA:sal_deliver_details.Company"
         }
       },
       "table1": {
@@ -309,10 +309,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator3",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择客户",
           "controltovalidate": "ctrlSal_deliver_detailcustomer_name",
+          "errormessage": "请选择客户",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "客户名称"
         }
       },
@@ -321,10 +321,10 @@
         "attrs": {
           "id": "XRequiredFieldValidator1",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择产品",
           "controltovalidate": "ctrlSal_deliver_detaildeliver_name",
+          "errormessage": "请选择产品",
+          "forecolor": "Red",
+          "display": "None",
           "innerhtml": "产品名称"
         }
       },
@@ -333,23 +333,11 @@
         "attrs": {
           "id": "XRequiredFieldValidator2",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请选择发货仓库",
           "controltovalidate": "XDropDownList1",
-          "innerhtml": "发货仓库"
-        }
-      },
-      "XRequiredFieldValidator4": {
-        "ctype": "aspxform:xrequiredfieldvalidator",
-        "attrs": {
-          "id": "XRequiredFieldValidator4",
-          "runat": "server",
-          "display": "None",
+          "errormessage": "请选择发货仓库",
           "forecolor": "Red",
-          "errormessage": "请填写货号",
-          "controltovalidate": "XTextBox10",
-          "innerhtml": "货号"
+          "display": "None",
+          "innerhtml": "发货仓库"
         }
       },
       "XRequiredFieldValidator5": {
@@ -357,23 +345,11 @@
         "attrs": {
           "id": "XRequiredFieldValidator5",
           "runat": "server",
-          "display": "None",
-          "forecolor": "Red",
-          "errormessage": "请填写发货数量",
           "controltovalidate": "XTextBox6",
-          "innerhtml": "发货数量"
-        }
-      },
-      "XRequiredFieldValidator6": {
-        "ctype": "aspxform:xrequiredfieldvalidator",
-        "attrs": {
-          "id": "XRequiredFieldValidator6",
-          "runat": "server",
-          "display": "None",
+          "errormessage": "请填写发货数量",
           "forecolor": "Red",
-          "errormessage": "请填写发货人",
-          "controltovalidate": "XTextBox11",
-          "innerhtml": "发货人"
+          "display": "None",
+          "innerhtml": "发货数量"
         }
       }
     },

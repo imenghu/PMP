@@ -27,14 +27,21 @@
         ie_png.fix('div, img');  //EvPNG.fix('包含透明PNG图片的标签'); 多个标签之间用英文逗号隔开。
     </script>
     <![endif]-->
-    <link rel="stylesheet" href="css/layer.css" />
+    <%--<link rel="stylesheet" href="css/layer.css" />--%>
     <style>
         @font-face {
             font-family: uc-nexus-iconfont;
             src: url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff) format('woff'),url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf) format('truetype');
         }
     </style>
-    
+    <style>
+        .layui-layer-btn0 {
+            width:60px;
+            height:28px;
+            font-size:12px;
+            text-align:center;
+        }
+    </style>
 </head>
 <body>
 <div class="wrapper">
@@ -96,7 +103,41 @@
         application = {
                 root: '<%=this.ResolveUrl("~/")%>',
                 returnUrl: htmlDecode('<%=HttpUtility.HtmlEncode(YZUtility.EncodeJsString(this.ReturnUrl))%>')
+        }
+        //升级说明弹窗------------------------
+        layer.ready(function () {
+            layer.open({
+                type: 1,
+                title: '数字化管理平台升级说明',
+                maxmin: false,
+                area: ['598px', '400px'],
+                btn: ["关闭"],
+                closeBtn: 0,
+                content: '<div style="font-size:20px;background:url(layer/bak.png) no-repeat;width:100%;height:100%"><div style="position: absolute;top:30px;left:265px">通知</div><div style="position: absolute;top:90px;"><span style="padding:10px">1、系统于10月26日进行了升级改版，后续还会有新功能逐步开放。本次升级主要变化，请<a href="layer/升级说明.pdf" target="_blank">查看</a>升级说明</span><br><span style="padding:10px">2、为防范网络安全的隐患，密码体系同步升级，请尽快加强密码（6位以上，包含数字、字符和字母）。默认密码为：123456</span><div style="position: absolute;bottom:-60px;left:400px">数字化管理平台</div></div></div>',
+                yes: function (index, layero) {
+                    if (wait == 0) {
+                        layer.close(index);
+                        clearTimeout(timer);
+                    } else {
+                        layer.msg(wait + 's后可关闭');
+                    }
+                }
+            });
+
+        });
+
+        var wait =3;
+        function time() {
+            if (wait == 0) {
+                wait = 0;
+            } else {
+                wait--;
             }
+        }
+
+        var timer = setInterval(time, 1000);
+
+        //-----------------------------------------
     </script>
     <script src="js/login.js" type="text/javascript"></script>
 </body>

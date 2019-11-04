@@ -1,5 +1,5 @@
 ﻿{
-  "generateAt": "2019-10-26T20:43:41.7690861+08:00",
+  "generateAt": "2019-11-04T16:23:01.0257188+08:00",
   "docVersion": 1,
   "src": {
     "funcs": {},
@@ -40,6 +40,18 @@
           "fieldname": "提交人"
         }
       },
+      "XTextBox17": {
+        "ctype": "aspxform:xtextbox",
+        "attrs": {
+          "id": "XTextBox17",
+          "runat": "server",
+          "xdatabind": "varhj",
+          "width": "100%",
+          "bordercolor": "#DCDCDC",
+          "format": "type:currency;.2",
+          "express": "sum(SFDATA:proc_demand_detail.item_price)"
+        }
+      },
       "XTextBox1": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
@@ -53,16 +65,15 @@
           "textmode": "MultiLine"
         }
       },
-      "XDataBrowserButton2": {
-        "ctype": "aspxform:xdatabrowserbutton",
+      "XCustomBrowserButton1": {
+        "ctype": "aspxform:xcustombrowserbutton",
         "attrs": {
-          "id": "XDataBrowserButton2",
+          "id": "XCustomBrowserButton1",
           "runat": "server",
-          "hiddenexpress": "Global.StepName!='开始'",
-          "multiselect": "True",
+          "xclass": "YZSoft.forms.field.dialogs.MaterialClassMultiSelectButton",
+          "filter": "state->varState",
+          "width": "70px",
           "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:state->varState",
           "text": "选择物料"
         }
       },
@@ -71,10 +82,10 @@
         "attrs": {
           "id": "XAddBlockButton2",
           "runat": "server",
-          "hiddenexpress": "Global.StepName!='开始'",
           "text": "新增",
           "datasource": "SFDATA",
-          "tablename": "proc_demand_detail"
+          "tablename": "proc_demand_detail",
+          "hiddenexpress": "Global.StepName!='开始'"
         }
       },
       "XTextBox2": {
@@ -89,16 +100,15 @@
           "fieldname": "物料编码"
         }
       },
-      "XDataBrowserButton1": {
-        "ctype": "aspxform:xdatabrowserbutton",
+      "XCustomBrowserButton2": {
+        "ctype": "aspxform:xcustombrowserbutton",
         "attrs": {
-          "id": "XDataBrowserButton1",
+          "id": "XCustomBrowserButton2",
           "runat": "server",
-          "hiddenexpress": "Global.StepName!='开始'",
-          "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit",
-          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:state->varState",
-          "width": "21px"
+          "xclass": "YZSoft.forms.field.dialogs.MaterialClassButton",
+          "filter": "state->varState",
+          "width": "21px",
+          "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit"
         }
       },
       "XTextBox15": {
@@ -145,11 +155,11 @@
           "runat": "server",
           "xdatabind": "SFDATA:proc_demand_detail.demand_slnum_unit",
           "fieldname": "采购单位",
-          "datamap": "numerator->SFDATA:proc_demand_detail.sl_st_scale",
-          "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,state->varState",
           "width": "100%",
+          "datamap": "numerator->SFDATA:proc_demand_detail.sl_st_scale",
           "valuecolumn": "mat_unit_name",
-          "displaycolumn": "mat_unit_name"
+          "displaycolumn": "mat_unit_name",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,state->varState"
         }
       },
       "XTextBox6": {
@@ -298,7 +308,7 @@
         "ctypeorg": "table",
         "items": [
           "XTextBox2",
-          "XDataBrowserButton1",
+          "XCustomBrowserButton2",
           "XTextBox15",
           "XTextBox3",
           "XTextBox4",
@@ -330,6 +340,19 @@
           "express": "sum(SFDATA:proc_demand_detail.item_price)"
         }
       },
+      "XDataBrowserButton2": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton2",
+          "runat": "server",
+          "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit",
+          "text": "选择物料",
+          "hiddenexpress": "Global.StepName!='开始'",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:state->varState",
+          "multiselect": "True",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位"
+        }
+      },
       "XTextBox8": {
         "ctype": "aspxform:xtextbox",
         "attrs": {
@@ -339,6 +362,18 @@
           "xdatabind": "SFDATA:proc_demand.CreateUser",
           "width": "100%",
           "bordercolor": "#DCDCDC"
+        }
+      },
+      "XDataBrowserButton1": {
+        "ctype": "aspxform:xdatabrowserbutton",
+        "attrs": {
+          "id": "XDataBrowserButton1",
+          "runat": "server",
+          "width": "21px",
+          "datamap": "mat_id->SFDATA:proc_demand_detail.mat_id;mat_code->SFDATA:proc_demand_detail.mat_code;mat_name->SFDATA:proc_demand_detail.mat_name;mat_spec->SFDATA:proc_demand_detail.mat_spec;base_unit->SFDATA:proc_demand_detail.demand_stnum_unit",
+          "hiddenexpress": "Global.StepName!='开始'",
+          "xdatasource": "DataSource:SFDATA;TableName:ctl_material;Filter:state->varState",
+          "displaycolumns": "mat_code:物料编码;mat_name:物料名称;mat_spec:规格;base_unit:基准单位"
         }
       },
       "XTextBox27": {
@@ -385,7 +420,9 @@
         "ctypeorg": "table",
         "items": [
           "XTextBox16",
+          "XDataBrowserButton2",
           "XTextBox8",
+          "XDataBrowserButton1",
           "XTextBox27",
           "XTextBox28",
           "XTextBox29"
@@ -458,8 +495,9 @@
       "XTextBox26",
       "XTextBox10",
       "XTextBox25",
+      "XTextBox17",
       "XTextBox1",
-      "XDataBrowserButton2",
+      "XCustomBrowserButton1",
       "XAddBlockButton2",
       "tbDetail",
       "table1"

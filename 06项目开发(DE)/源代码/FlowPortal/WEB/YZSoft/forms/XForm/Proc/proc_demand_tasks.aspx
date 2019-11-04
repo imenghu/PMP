@@ -118,7 +118,7 @@
                                             <aspxform:XTextBox id="XTextBox4" runat="server" XDataBind="SFDATA:proc_demand_detail.mat_spec" width="100%" BorderColor="#DCDCDC" DisableExpress="1" FieldName="规格"></aspxform:XTextBox>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
-                                            <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_demand_detail.demand_slnum_unit" FieldName="采购单位" Width="100%" ValueColumn="mat_unit_name" DisplayColumn="mat_unit_name" DataMap="numerator->SFDATA:proc_demand_detail.sl_st_scale" XDataSource="DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,if_base_unit->varState"></aspxform:XDropDownList>
+                                            <aspxform:XDropDownList id="XDropDownList2" runat="server" XDataBind="SFDATA:proc_demand_detail.demand_slnum_unit" FieldName="采购单位" Width="100%" ValueColumn="mat_unit_name" DisplayColumn="mat_unit_name" DataMap="numerator->SFDATA:proc_demand_detail.sl_st_scale" XDataSource="DataSource:SFDATA;TableName:ctl_mat_unit;Filter:mat_id->SFDATA:proc_demand_detail.mat_id,state->varState"></aspxform:XDropDownList>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                                             <aspxform:XTextBox id="XTextBox6" runat="server" XDataBind="SFDATA:proc_demand_detail.demand_slnum" width="100%" BorderColor="#DCDCDC" FieldName="采购数量"></aspxform:XTextBox>
@@ -140,8 +140,8 @@
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
                                             <aspxform:XDropDownList id="XDropDownList1" runat="server" XDataBind="SFDATA:proc_demand_detail.if_urg" FieldName="是否紧急" Width="100%">
-                                                <asp:ListItem Selected="True" Value="0">否</asp:ListItem>
-                                                <asp:ListItem Value="1">是</asp:ListItem>
+                                                <asp:ListItem Selected="True" Value="1">否</asp:ListItem>
+                                                <asp:ListItem Value="2">是</asp:ListItem>
                                             </aspxform:XDropDownList>
                                         </td>
                                         <td style="BORDER-TOP: medium none; BORDER-RIGHT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BORDER-LEFT: medium none">
